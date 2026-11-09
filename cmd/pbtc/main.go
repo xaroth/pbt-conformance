@@ -2,7 +2,8 @@
 //
 //	pbtc setup --cache <dir>
 //	pbtc pob --cache <dir> [--league <league>] [--check]
-//	pbtc compare --datasets <dir> [--league <league>]
+//	pbtc data --cache <dir>
+//	pbtc compare (--cache <dir> | --datasets <dir>) [--league <league>]
 //
 // setup builds the PoB runtime every pinned release needs (LuaJIT, lua-utf8, PoB checkouts)
 // into the cache directory, skipping what is already built. It needs git, make and cc.
@@ -11,8 +12,12 @@
 // writes each build's pob.json. With --check it writes nothing and fails when a stored
 // pob.json differs from the fresh run.
 //
+// data pulls the datasets of every pinned league from the pinned pbt-data commit into
+// <cache>/data/<commit>/<game> and prints that directory; a later run fetches nothing.
+//
 // compare computes pbt-engine's sheet for every build of a league (default: every pinned
-// league) with the pinned dataset under --datasets (one directory per dataset version) and
+// league) with the pinned dataset, from --datasets (directories of datasets, one per league or
+// per version) or else pulled into --cache as data does, and
 // compares it with the stored PoB values for the tree-only build. It lists every mismatch,
 // with its triage.json entry if one accepts it, and fails on untriaged mismatches and on
 // triage entries that match nothing.
@@ -27,6 +32,7 @@ import (
 	"maps"
 	"os"
 	"os/signal"
+	"path/filepath"
 	"slices"
 	"text/tabwriter"
 
@@ -34,13 +40,15 @@ import (
 	"github.com/xaroth/pbt-conformance/pins"
 	"github.com/xaroth/pbt-conformance/pob"
 	"github.com/xaroth/pbt-conformance/runtime"
+
+	"github.com/xaroth/pbt-engine/dataset/remote"
 )
 
 const game = "poe1"
 
 var (
 	errUsage = errors.New("usage: pbtc setup --cache <dir> | pbtc pob --cache <dir> [--league <league>] [--check] | " +
-		"pbtc compare --datasets <dir> [--league <league>]")
+		"pbtc data --cache <dir> | pbtc compare (--cache <dir> | --datasets <dir>) [--league <league>]")
 	errMismatch = errors.New("untriaged mismatches or stale triage entries")
 )
 
@@ -59,8 +67,8 @@ func run(ctx context.Context, args []string) error {
 		return errUsage
 	}
 	fs := flag.NewFlagSet(args[0], flag.ContinueOnError)
-	cache := fs.String("cache", "", "cache directory for the PoB runtime (setup, pob)")
-	datasets := fs.String("datasets", "", "directory with one dataset per version (compare)")
+	cache := fs.String("cache", "", "cache directory for the PoB runtime and pulled datasets (setup, pob, data, compare)")
+	datasets := fs.String("datasets", "", "directory of datasets to compare with instead of pulling them (compare)")
 	league := fs.String("league", "", "league to run (pob, compare; default all pinned)")
 	check := fs.Bool("check", false, "fail on stored values that differ instead of writing (pob)")
 	if err := fs.Parse(args[1:]); err != nil {
@@ -74,18 +82,69 @@ func dispatch(ctx context.Context, cmd, cache, datasets, league string, check bo
 	if err != nil {
 		return fmt.Errorf("%s: %w", cmd, err)
 	}
-	switch {
-	case cmd == "setup" && cache != "":
-		if err := runtime.Setup(ctx, cache, f); err != nil {
-			return fmt.Errorf("setup: %w", err)
-		}
-		return nil
-	case cmd == "pob" && cache != "":
-		return runPoB(ctx, f, cache, league, check)
-	case cmd == "compare" && datasets != "":
-		return runCompare(os.Stdout, f, datasets, league)
+	// Each command runs when its required flags are set.
+	commands := map[string]struct {
+		ready bool
+		run   func() error
+	}{
+		"setup":   {cache != "", func() error { return runSetup(ctx, f, cache) }},
+		"pob":     {cache != "", func() error { return runPoB(ctx, f, cache, league, check) }},
+		"data":    {cache != "", func() error { return runData(ctx, os.Stdout, f, cache) }},
+		"compare": {datasets != "" || cache != "", func() error { return runCompareFrom(ctx, f, cache, datasets, league) }},
 	}
-	return errUsage
+	c, ok := commands[cmd]
+	if !ok || !c.ready {
+		return errUsage
+	}
+	return c.run()
+}
+
+func runSetup(ctx context.Context, f *pins.File, cache string) error {
+	if err := runtime.Setup(ctx, cache, f); err != nil {
+		return fmt.Errorf("setup: %w", err)
+	}
+	return nil
+}
+
+// runData pulls the pinned datasets and prints their directory.
+func runData(ctx context.Context, w io.Writer, f *pins.File, cache string) error {
+	dir, err := pullData(ctx, os.Stderr, f, cache)
+	if err != nil {
+		return err
+	}
+	if _, err := fmt.Fprintln(w, dir); err != nil {
+		return fmt.Errorf("data: %w", err)
+	}
+	return nil
+}
+
+// runCompareFrom compares with the datasets under datasets, or pulled into cache without it.
+func runCompareFrom(ctx context.Context, f *pins.File, cache, datasets, league string) error {
+	if datasets == "" {
+		var err error
+		if datasets, err = pullData(ctx, os.Stderr, f, cache); err != nil {
+			return err
+		}
+	}
+	return runCompare(os.Stdout, f, datasets, league)
+}
+
+// pullData brings the pinned leagues' datasets of the pinned pbt-data commit up to date under
+// cache, noting what it did on notes, and returns their directory.
+func pullData(ctx context.Context, notes io.Writer, f *pins.File, cache string) (string, error) {
+	dir := filepath.Join(cache, "data", f.Data.Commit, game)
+	rs, err := remote.Pull(ctx, remote.HTTP{Base: f.Data.RawURL()}, dir, game, leagues(f, "")...)
+	for _, r := range rs {
+		state := "current"
+		if r.Updated {
+			state = fmt.Sprintf("pulled, %d files", r.Fetched)
+		}
+		fmt.Fprintf(notes, "pbtc: %s %s %s (%s)\n", game, r.League, r.Version, state)
+	}
+	if err != nil {
+		return "", fmt.Errorf("data: %w", err)
+	}
+	return dir, nil
 }
 
 func leagues(f *pins.File, league string) []string {

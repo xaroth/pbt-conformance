@@ -6,7 +6,7 @@ Path of Building is the first smoke test, not the source of truth: the game is. 
 
 ## Pins
 
-`pins.json` records everything a run needs to be repeated: per game and league, the dataset (version and content id) and the Path of Building release (tag and commit), plus the sources the PoB runtime is built from. A PoB release targets the league of the newest non-variant tree in its `src/GameVersions.lua`; a league's pin is the latest release targeting it, so it stops moving once PoB targets the next league. Only the current league's pin moves.
+`pins.json` records everything a run needs to be repeated: the [pbt-data](https://github.com/xaroth/pbt-data) commit the datasets come from; per game and league, the dataset (version and content id, checked after pulling) and the Path of Building release (tag and commit); and the sources the PoB runtime is built from. Bumping the pbt-data commit moves every league to the datasets of that commit; their versions and ids in `pins.json` move with it. A PoB release targets the league of the newest non-variant tree in its `src/GameVersions.lua`; a league's pin is the latest release targeting it, so it stops moving once PoB targets the next league. Only the current league's pin moves.
 
 ## Run
 
@@ -27,10 +27,11 @@ go run ./cmd/pbtc pob --cache ~/.cache/pbt-conformance --check    # fail if a st
 
 Rerun it after adding or changing a build, bumping a pin, or changing the runner, and commit the `pob.json` changes with it.
 
-`pbtc compare` computes pbt-engine's sheet for every build with the pinned dataset and compares it with PoB's values for the tree-only build, the part the engine models so far. It reads `pob-treeonly.xml` for class, ascendancy, level, tree, mastery choices, and as config the bandits and the campaign stage (from PoB's resistance penalty), and simulates it with `simulator`. Every simulation warning except stats left out as not modelled (a dropped node, a mastery choice that does not fit, points over budget) is reported as a mismatch `warning:<code>` and must be triaged too. It needs no Lua or PoB, only the datasets, one directory per dataset version:
+`pbtc compare` computes pbt-engine's sheet for every build with the pinned dataset and compares it with PoB's values for the tree-only build, the part the engine models so far. It reads `pob-treeonly.xml` for class, ascendancy, level, tree, mastery choices, and as config the bandits and the campaign stage (from PoB's resistance penalty), and simulates it with `simulator`. Every simulation warning except stats left out as not modelled (a dropped node, a mastery choice that does not fit, points over budget) is reported as a mismatch `warning:<code>` and must be triaged too. It needs no Lua or PoB, only the datasets, which it pulls from the pinned pbt-data commit into the cache (`<cache>/data/<commit>/<game>`; a later run fetches nothing). `pbtc data` pulls them and prints that directory; `--datasets` compares with datasets already on disk (one directory per league or per version) instead. CI pulls the pinned datasets, runs the tests with them and runs compare.
 
 ```sh
-go run ./cmd/pbtc compare --datasets ../pbt-archive/datasets
+go run ./cmd/pbtc compare --cache ~/.cache/pbt-conformance
+go run ./cmd/pbtc data --cache ~/.cache/pbt-conformance       # just pull; prints the directory
 ```
 
 Every mismatch is listed with PoB's tree-only and full values. A mismatch is either fixed in pbt-engine or accepted in `triage.json` as a `deviation` (PoB behaviour we do not follow, with our evidence) or `pending` (a mechanic the engine does not model yet). An entry matches by league, build name pattern and output, and optionally by our value and PoB's (`ours`, `pob`): with values set, a triaged mismatch whose numbers change shows as untriaged again. Compare fails on untriaged mismatches and on triage entries that match nothing. The dataset must be the pinned one: its content id is checked.
@@ -44,7 +45,7 @@ go build ./...
 go test ./...
 golangci-lint run
 PBTC_CACHE=~/.cache/pbt-conformance go test ./runtime ./pob   # also build the PoB runtime and run PoB
-PBT_DATASETS=../pbt-archive/datasets PBTC_CACHE=~/.cache/pbt-conformance go test ./compare   # also compare with real datasets
+PBT_DATASETS=$(go run ./cmd/pbtc data --cache ~/.cache/pbt-conformance) PBTC_CACHE=~/.cache/pbt-conformance go test ./compare   # also compare with real datasets
 ```
 
 ## Licence

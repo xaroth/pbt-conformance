@@ -1,6 +1,6 @@
-// Package pins reads pins.json: per game and league, the dataset and Path of Building release
-// a conformance run uses, plus the sources the PoB runtime is built from, so every run can be
-// repeated exactly.
+// Package pins reads pins.json: the pbt-data commit datasets come from, per game and league the
+// dataset and Path of Building release a conformance run uses, plus the sources the PoB runtime
+// is built from, so every run can be repeated exactly.
 package pins
 
 import (
@@ -30,6 +30,7 @@ var (
 	errNotPatch   = errors.New("is not a patch of the league")
 	errNotHTTPS   = errors.New("want an https URL")
 	errNotHexHash = errors.New("want lowercase hex digits")
+	errNotGitHub  = errors.New("want a https://github.com/ repository")
 )
 
 const (
@@ -39,8 +40,18 @@ const (
 
 // File is the content of pins.json.
 type File struct {
-	Runtime Runtime         `json:"runtime"`
-	Games   map[string]Game `json:"games"`
+	Runtime Runtime `json:"runtime"`
+	// Data is the pbt-data commit the pinned datasets are pulled from.
+	Data  Source          `json:"data"`
+	Games map[string]Game `json:"games"`
+}
+
+// githubPrefix is where Data's repository must live: RawURL reads it through raw GitHub.
+const githubPrefix = "https://github.com/"
+
+// RawURL is the raw GitHub URL of the files of repository s at its commit, ending in a slash.
+func (s Source) RawURL() string {
+	return "https://raw.githubusercontent.com/" + strings.TrimPrefix(s.Repo, githubPrefix) + "/" + s.Commit + "/"
 }
 
 // Runtime are the sources the PoB runtime is built from.
@@ -106,6 +117,12 @@ func (f *File) check() error {
 		if err := s.check(); err != nil {
 			return fmt.Errorf("runtime %s: %w", name, err)
 		}
+	}
+	if err := f.Data.check(); err != nil {
+		return fmt.Errorf("data: %w", err)
+	}
+	if !strings.HasPrefix(f.Data.Repo, githubPrefix) {
+		return fmt.Errorf("data repo %q: %w", f.Data.Repo, errNotGitHub)
 	}
 	if len(f.Games) == 0 {
 		return errNoGames

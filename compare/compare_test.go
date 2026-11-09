@@ -50,7 +50,7 @@ func fixture(t *testing.T) []byte {
 
 func store329(t *testing.T) *dataset.Store {
 	t.Helper()
-	s, err := dataset.Open(os.DirFS(filepath.Join(env(t, "PBT_DATASETS"), "3.29.3.3")))
+	s, err := compare.OpenVersion(env(t, "PBT_DATASETS"), "poe1", "3.29.3.3")
 	if err != nil {
 		t.Fatal(err)
 	}
