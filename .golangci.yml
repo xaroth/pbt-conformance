@@ -51,6 +51,14 @@ linters:
           - maintidx # table tests can appear hard to maintain
         source: ^func Test
       - linters:
+          - gosec
+        path: ^(runtime|pob)/
+        text: "G204|G702|G703"
+        # These packages run the tools setup builds (git, make, cc, luajit) with arguments from
+        # pins.json, whose commits and repos pins.Read checks, in the operator's cache directory.
+        # gosec's taint analysis flags them differently per Go toolchain, so they are excluded
+        # here rather than with nolint directives, which then show as unused on the other build.
+      - linters:
           - revive
         text: "exported:"
         source: "\\s= errors.New" # we allow no comments on exported errors
