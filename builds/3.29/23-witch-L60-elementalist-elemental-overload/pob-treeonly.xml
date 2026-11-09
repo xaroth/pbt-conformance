@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathOfBuilding>
+	<Build level="60" targetVersion="3_0" className="Witch" ascendClassName="Elementalist" bandit="None" pantheonMajorGod="None" pantheonMinorGod="None" mainSocketGroup="1" viewMode="TREE" characterLevelAutoMode="false" />
+	<Tree activeSpec="1">
+		<Spec treeVersion="3_29" classId="3" ascendClassId="2" nodes="885,4184,4367,4397,4713,5296,5743,5916,5935,6764,6770,6967,7388,7444,9392,11128,11420,11924,12246,12738,13559,14936,15117,15167,16023,19501,19919,20987,21958,22088,22647,24872,25970,26270,27203,27323,27709,29049,29781,31462,31875,34423,34506,34661,34927,35035,35233,35958,36107,36542,36678,37114,37569,38849,38921,39836,39841,40366,42343,42760,43061,44184,45558,46340,46897,48118,48362,49651,52655,53123,54447,55332,55743,57264,58218,58402,60398,60989,61259,61804,63039,63447,64210,64355" masteryEffects="{34927,36313},{38921,4500},{39836,28638},{45558,30612}" secondaryAscendClassId="0">
+			<Sockets />
+		</Spec>
+	</Tree>
+</PathOfBuilding>

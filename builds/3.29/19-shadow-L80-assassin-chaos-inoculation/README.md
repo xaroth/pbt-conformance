@@ -1,0 +1,10 @@
+# 3.29 Shadow L80: Assassin Chaos Inoculation
+
+- Archetype: Viper Strike of the Mamba poison Assassin, Bino's Kitchen Knife and a rare dagger, Chaos Inoculation energy shield with Ghost Reaver leech, Ghost Dance and Perfect Agony.
+- Ascendancy: Assassin (Knife in the Back; Mistwalker; Opportunistic)
+- Keystones: Chaos Inoculation, Ghost Dance, Ghost Reaver, Perfect Agony
+- Skills: Viper Strike of the Mamba 6-link as on the source (Void Manipulation, Nightblade, Damage on Full Life, Melee Physical Damage, Deadly Ailments), Discipline, Flesh and Stone, Purity of Elements, Precision, Clarity, Alchemist's Mark, Withering Step, Whirling Blades
+- Notable items: Bino's Kitchen Knife (main hand on both source characters: crit, poison spread), rare Platinum Kris off hand, rare evasion/ES armour (Carnal Armour, Deicide Mask, Murder Mitts, Two-Toned Boots), Crystal Belt, 2 rare ES jewels.
+- Point budget: 103 = 79 (level) + 23 (quests) + 1 (bandits killed). 103 allocated incl. 11 masteries. Pantheon: Solaris, Garukhan.
+- Source: poe.ninja Allflame, https://poe.ninja/poe1/builds/allflame/character/kalleking-3463/MambaWambaBIG (level 100 Viper Strike of the Mamba CI Assassin, tree version 3_29), retrieved 2026-11-09; cluster jewels and their 14 sockets, the Oshabi bloodline and the timeless and other tree-changing jewels removed; 26 points refilled with Ghost Dance (37% of Allflame Assassins), Ghost Reaver (listed for this character by poe.ninja), Fangs of the Viper, Assassination, Adder's Touch, Wasting, Swift Venoms, Nightstalker, Entropy, Thief's Craft, Infused and Will of Blades (dagger, poison and ES notables next to the tree); lower levels grown from the class start along a leveling path using only nodes of that tree: dagger/poison/crit damage first (L35), poison, dagger and DoT masteries and the two basic jewel sockets (L60), Chaos Inoculation, Ghost Reaver, Ghost Dance, Perfect Agony and the ES/leech notables and masteries (L80); each level is a subset of the next.
+- pob-treeonly.xml: generated from pob.xml by tools, tree only.

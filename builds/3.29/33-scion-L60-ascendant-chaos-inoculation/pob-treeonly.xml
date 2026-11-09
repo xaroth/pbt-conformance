@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathOfBuilding>
+	<Build level="60" targetVersion="3_0" className="Scion" ascendClassName="Ascendant" bandit="None" pantheonMajorGod="None" pantheonMinorGod="None" mainSocketGroup="1" viewMode="TREE" characterLevelAutoMode="false" />
+	<Tree activeSpec="1">
+		<Spec treeVersion="3_29" classId="0" ascendClassId="1" nodes="238,607,918,3469,4367,5237,5296,5408,5743,5935,6363,6507,6580,7444,7594,8544,9392,10153,10661,10829,11497,11651,12143,13322,14182,15027,15117,15144,16167,18033,19144,19196,19501,20812,20987,21974,22551,23237,23471,24643,24798,26196,26270,27415,28221,28574,28859,29937,32091,32345,32710,32932,33310,33545,34171,35754,35958,36678,36874,37078,37671,39598,39841,41996,44103,44184,46092,46897,48778,48807,49605,51786,51923,55571,56589,57736,58833,58851,60090,60440,60472,61419,63447,63620,64210,65097" masteryEffects="{6507,61097}" secondaryAscendClassId="0">
+			<Sockets />
+		</Spec>
+	</Tree>
+</PathOfBuilding>

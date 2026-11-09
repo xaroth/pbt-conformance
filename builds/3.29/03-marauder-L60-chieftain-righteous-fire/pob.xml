@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathOfBuilding>
+	<Build level="60" targetVersion="3_0" className="Marauder" ascendClassName="Chieftain" bandit="None" pantheonMajorGod="Lunaris" pantheonMinorGod="Ralakesh" mainSocketGroup="1" viewMode="ITEMS" characterLevelAutoMode="false"/>
+	<Tree activeSpec="1">
+		<Spec treeVersion="3_29" classId="1" ascendClassId="3" secondaryAscendClassId="0" nodes="3644,4139,4367,4713,5152,5233,5643,5743,6245,6289,6712,7444,9995,11505,11730,11924,12382,13559,13714,14056,14930,14936,15117,15868,20987,21958,22627,22703,23027,24383,24704,25011,26270,28330,28475,29049,29353,30380,30733,31080,31462,32249,33287,33718,33755,34171,34400,34513,35288,36047,36678,36949,37326,39678,39841,40907,41415,42659,43374,44184,44202,46578,48109,48287,48480,49178,49412,50904,53118,54629,55485,55676,58218,59928,60472,61198,61804,63048,63282,63447,63723,64210,64221" masteryEffects="{4139,47642},{11505,36313},{12382,64381},{25011,31822},{41415,38454}">
+			<Sockets>
+				<Socket nodeId="28475" itemId="16"/>
+			</Sockets>
+		</Spec>
+	</Tree>
+	<Items activeItemSet="1" useSecondWeaponSet="false">
+		<Item id="1">
+Rarity: RARE
+Pain Bite
+Royal Sceptre
+Item Level: 58
+Quality: 0
+Sockets: R-B-B
+Implicits: 1
+24% increased Elemental Damage
+48% increased Fire Damage
++16% to Fire Damage over Time Multiplier
+14% increased Cast Speed
++31 to Intelligence
++33% to Fire Resistance
+		</Item>
+		<Item id="2">
+Rarity: RARE
+Brood Wall
+Shagreen Tower Shield
+Armour: 500
+Item Level: 59
+Quality: 10
+Sockets: R-R-B
+Implicits: 1
++25 to maximum Life
++78 to maximum Life
++36% to Fire Resistance
++29% to Cold Resistance
+54% increased Armour
+		</Item>
+		<Item id="3">
+Rarity: RARE
+Gale Visor
+Siege Helmet
+Armour: 280
+Item Level: 58
+Quality: 0
+Sockets: R-R-B-B
+Implicits: 0
++82 to maximum Life
++38% to Fire Resistance
++24% to Lightning Resistance
++31 to Strength
+		</Item>
+		<Item id="4">
+Rarity: UNIQUE
+Cloak of Flame
+Scholar's Robe
+Energy Shield: 30
+Item Level: 60
+Quality: 0
+Sockets: R-B-B-R-B
+Implicits: 0
++62% to Fire Resistance
+58% increased Ignite Duration on Enemies
+Reflects 100 Fire Damage to Melee Attackers
+40% of Physical Damage taken as Fire Damage
+		</Item>
+		<Item id="5">
+Rarity: RARE
+Doom Fist
+Ancient Gauntlets
+Armour: 160
+Item Level: 57
+Quality: 0
+Sockets: R-B-R-G
+Implicits: 0
++74 to maximum Life
++33 to Strength
++35% to Fire Resistance
++19% to Chaos Resistance
+		</Item>
+		<Item id="6">
+Rarity: RARE
+Morbid Track
+Ancient Greaves
+Armour: 160
+Item Level: 58
+Quality: 0
+Sockets: R-R-B-G
+Implicits: 0
+25% increased Movement Speed
++79 to maximum Life
++37% to Fire Resistance
++21% to Cold Resistance
+		</Item>
+		<Item id="7">
+Rarity: RARE
+Rune Collar
+Lapis Amulet
+Item Level: 58
+Implicits: 1
++26 to Intelligence
++78 to maximum Life
++34 to Strength
++12% to Fire Damage over Time Multiplier
++31% to Fire Resistance
+		</Item>
+		<Item id="8">
+Rarity: UNIQUE
+Lori's Lantern
+Prismatic Ring
+Item Level: 55
+Implicits: 1
++9% to all Elemental Resistances
++10% to all Elemental Resistances
+8% increased Movement Speed when on Low Life
+31% increased Light Radius
++20% to Chaos Resistance when on Low Life
+Damage of Enemies Hitting you is Unlucky while you are on Low Life
+		</Item>
+		<Item id="9">
+Rarity: RARE
+Corpse Coil
+Ruby Ring
+Item Level: 58
+Implicits: 1
++26% to Fire Resistance
++67 to maximum Life
++34% to Fire Resistance
++28 to Strength
+		</Item>
+		<Item id="10">
+Rarity: RARE
+Kraken Clasp
+Heavy Belt
+Item Level: 59
+Implicits: 1
++30 to Strength
++86 to maximum Life
++36% to Fire Resistance
++26% to Cold Resistance
+		</Item>
+		<Item id="11">
+Rarity: NORMAL
+Sanctified Life Flask
+Item Level: 30
+Quality: 0
+Implicits: 0
+		</Item>
+		<Item id="12">
+Rarity: MAGIC
+Experimenter's Quicksilver Flask of Adrenaline
+Item Level: 70
+Quality: 20
+Implicits: 0
+40% increased Duration
+25% increased Movement Speed during Effect
+		</Item>
+		<Item id="13">
+Rarity: MAGIC
+Experimenter's Ruby Flask of the Abalone
+Item Level: 70
+Quality: 20
+Implicits: 0
+40% increased Duration
+45% increased Armour during Effect
+		</Item>
+		<Item id="14">
+Rarity: MAGIC
+Experimenter's Granite Flask of Staunching
+Item Level: 70
+Quality: 20
+Implicits: 0
+40% increased Duration
+Grants Immunity to Bleeding for 4 seconds if used while Bleeding
+Grants Immunity to Corrupted Blood for 4 seconds if used while affected by Corrupted Blood
+		</Item>
+		<Item id="15">
+Rarity: MAGIC
+Experimenter's Silver Flask of the Conger
+Item Level: 70
+Quality: 20
+Implicits: 0
+40% increased Duration
+Grants Immunity to Shock for 4 seconds if used while Shocked
+		</Item>
+		<Item id="16">
+Rarity: RARE
+Gloom Glimmer
+Crimson Jewel
+Item Level: 58
+Implicits: 0
+6% increased maximum Life
+14% increased Burning Damage
++12% to Fire Resistance
+		</Item>
+		<ItemSet id="1" useSecondWeaponSet="false">
+			<Slot name="Weapon 1" itemId="1"/>
+			<Slot name="Weapon 2" itemId="2"/>
+			<Slot name="Helmet" itemId="3"/>
+			<Slot name="Body Armour" itemId="4"/>
+			<Slot name="Gloves" itemId="5"/>
+			<Slot name="Boots" itemId="6"/>
+			<Slot name="Amulet" itemId="7"/>
+			<Slot name="Ring 1" itemId="8"/>
+			<Slot name="Ring 2" itemId="9"/>
+			<Slot name="Belt" itemId="10"/>
+			<Slot name="Flask 1" itemId="11" active="true"/>
+			<Slot name="Flask 2" itemId="12" active="true"/>
+			<Slot name="Flask 3" itemId="13" active="true"/>
+			<Slot name="Flask 4" itemId="14" active="true"/>
+			<Slot name="Flask 5" itemId="15" active="true"/>
+		</ItemSet>
+	</Items>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="0">
+		<SkillSet id="1">
+			<Skill enabled="true" slot="Body Armour" label="" mainActiveSkill="1" mainActiveSkillCalcs="1" includeInFullDPS="true">
+				<Gem nameSpec="Righteous Fire" skillId="RighteousFire" gemId="Metadata/Items/Gems/SkillGemRighteousFire" level="15" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true"/>
+				<Gem nameSpec="Efficacy" skillId="SupportEfficacy" gemId="Metadata/Items/Gems/SkillGemSupportEfficacy" level="15" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true"/>
+				<Gem nameSpec="Elemental Focus" skillId="SupportElementalFocus" gemId="Metadata/Items/Gems/SkillGemSupportElementalFocus" level="15" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true"/>
+				<Gem nameSpec="Burning Damage" skillId="SupportBurningDamage" gemId="Metadata/Items/Gems/SkillGemSupportBurningDamage" level="15" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true"/>
+				<Gem nameSpec="Concentrated Effect" skillId="SupportConcentratedEffect" gemId="Metadata/Items/Gems/SkillGemSupportConcentratedEffect" level="15" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true"/>
+			</Skill>
+			<Skill enabled="true" slot="Helmet" label="" includeInFullDPS="false">
+				<Gem nameSpec="Purity of Fire" skillId="PurityOfFire" gemId="Metadata/Items/Gems/SkillGemPurityOfFire" level="15" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true"/>
+				<Gem nameSpec="Vitality" skillId="Vitality" gemId="Metadata/Items/Gems/SkillGemVitality" level="15" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true"/>
+			</Skill>
+			<Skill enabled="true" slot="Gloves" label="" includeInFullDPS="false">
+				<Gem nameSpec="Cast when Damage Taken" skillId="SupportCastWhenDamageTaken" gemId="Metadata/Items/Gems/SkillGemSupportCastWhenDamageTaken" level="6" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true"/>
+				<Gem nameSpec="Molten Shell" skillId="MoltenShell" gemId="Metadata/Items/Gems/SkillGemMoltenShell" level="9" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true"/>
+				<Gem nameSpec="Flammability" skillId="Flammability" gemId="Metadata/Items/Gems/SkillGemFlammability" level="6" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true"/>
+			</Skill>
+			<Skill enabled="true" slot="Boots" label="" includeInFullDPS="false">
+				<Gem nameSpec="Flame Dash" skillId="FlameDash" gemId="Metadata/Items/Gems/SkillGemFlameDash" level="16" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true"/>
+				<Gem nameSpec="Frostblink" skillId="Frostblink" gemId="Metadata/Items/Gems/SkillGemFrostblink" level="16" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true"/>
+			</Skill>
+		</SkillSet>
+	</Skills>
+	<Config activeConfigSet="1">
+		<ConfigSet id="1" title="Default"/>
+	</Config>
+</PathOfBuilding>

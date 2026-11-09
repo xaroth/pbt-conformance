@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathOfBuilding>
+	<Build level="60" targetVersion="3_0" className="Scion" ascendClassName="Ascendant" bandit="Eramir" pantheonMajorGod="Lunaris" pantheonMinorGod="Ralakesh" mainSocketGroup="1" viewMode="ITEMS" characterLevelAutoMode="false"/>
+	<Tree activeSpec="1">
+		<Spec treeVersion="3_29" classId="0" ascendClassId="1" secondaryAscendClassId="0" nodes="238,607,918,3469,4367,5237,5296,5408,5743,5935,6363,6507,6580,7444,7594,8544,9392,10153,10661,10829,11497,11651,12143,13322,14182,15027,15117,15144,16167,18033,19144,19196,19501,20812,20987,21974,22551,23237,23471,24643,24798,26196,26270,27415,28221,28574,28859,29937,32091,32345,32710,32932,33310,33545,34171,35754,35958,36678,36874,37078,37671,39598,39841,41996,44103,44184,46092,46897,48778,48807,49605,51786,51923,55571,56589,57736,58833,58851,60090,60440,60472,61419,63447,63620,64210,65097" masteryEffects="{6507,61097}">
+			<Sockets>
+
+			</Sockets>
+		</Spec>
+	</Tree>
+	<Items activeItemSet="1" useSecondWeaponSet="false">
+		<Item id="1">
+Rarity: RARE
+Rapture Edge
+Gemstone Sword
+Item Level: 62
+Quality: 14
+Sockets: R-G-R
+Implicits: 1
++400 to Accuracy Rating
+Adds 16 to 30 Physical Damage
+Adds 4 to 68 Lightning Damage
+12% increased Attack Speed
++26 to Dexterity
+		</Item>
+		<Item id="2">
+Rarity: RARE
+Brood Ward
+Etched Kite Shield
+Armour: 210
+Energy Shield: 44
+Item Level: 60
+Quality: 8
+Sockets: R-B-B
+Implicits: 1
++4% to all Elemental Resistances
++78 to maximum Life
++36% to Cold Resistance
++31% to Lightning Resistance
++24 to Intelligence
+		</Item>
+		<Item id="3">
+Rarity: RARE
+Oblivion Visage
+Magistrate Crown
+Armour: 190
+Energy Shield: 40
+Item Level: 60
+Quality: 10
+Sockets: B-B-R-G
+Implicits: 0
++81 to maximum Life
++38% to Fire Resistance
++29% to Lightning Resistance
++30 to Accuracy Rating
+		</Item>
+		<Item id="4">
+Rarity: RARE
+Hypnotic Shell
+Crusader Chainmail
+Armour: 320
+Energy Shield: 64
+Item Level: 61
+Quality: 12
+Sockets: R-R-B-G-R
+Implicits: 0
++86 to maximum Life
++35% to Cold Resistance
++32% to Fire Resistance
++30 to Strength
+		</Item>
+		<Item id="5">
+Rarity: RARE
+Dread Paw
+Soldier Gloves
+Armour: 92
+Energy Shield: 20
+Item Level: 59
+Sockets: R-G-B-R
+Implicits: 0
++68 to maximum Life
+Adds 4 to 9 Physical Damage to Attacks
++33% to Lightning Resistance
++28 to Dexterity
+		</Item>
+		<Item id="6">
+Rarity: RARE
+Corpse Track
+Soldier Boots
+Armour: 110
+Energy Shield: 24
+Item Level: 58
+Sockets: R-B-G
+Implicits: 0
+25% increased Movement Speed
++72 to maximum Life
++34% to Cold Resistance
++18% to Chaos Resistance
+		</Item>
+		<Item id="7">
+Rarity: RARE
+Gloom Beads
+Amber Amulet
+Item Level: 60
+Implicits: 1
++26 to Strength
++64 to maximum Life
++31% to Fire Resistance
++28 to Intelligence
+18% increased Elemental Damage with Attack Skills
+		</Item>
+		<Item id="8">
+Rarity: RARE
+Storm Turn
+Two-Stone Ring
+Item Level: 58
+Implicits: 1
++14% to Fire and Lightning Resistances
++58 to maximum Life
++34% to Cold Resistance
+Adds 3 to 41 Lightning Damage to Attacks
+		</Item>
+		<Item id="9">
+Rarity: RARE
+Rune Loop
+Ruby Ring
+Item Level: 57
+Implicits: 1
++26% to Fire Resistance
++55 to maximum Life
++24 to Intelligence
++30% to Lightning Resistance
+		</Item>
+		<Item id="10">
+Rarity: RARE
+Corruption Lash
+Heavy Belt
+Item Level: 60
+Implicits: 1
++30 to Strength
++79 to maximum Life
++35% to Cold Resistance
++30% to Fire Resistance
+		</Item>
+		<Item id="11">
+Rarity: MAGIC
+Bubbling Divine Life Flask of Staunching
+Item Level: 60
+Quality: 10
+Implicits: 0
+50% reduced Amount Recovered
+135% increased Recovery rate
+50% of Recovery applied Instantly
+Grants Immunity to Bleeding for 4 seconds if used while Bleeding
+Grants Immunity to Corrupted Blood for 4 seconds if used while affected by Corrupted Blood
+		</Item>
+		<Item id="12">
+Rarity: MAGIC
+Quicksilver Flask of Adrenaline
+Item Level: 50
+Quality: 0
+Implicits: 0
+25% increased Movement Speed during Effect
+		</Item>
+		<Item id="13">
+Rarity: MAGIC
+Granite Flask of Iron Skin
+Item Level: 56
+Quality: 0
+Implicits: 0
+40% increased Armour during Effect
+		</Item>
+		<ItemSet id="1" useSecondWeaponSet="false">
+			<Slot name="Weapon 1" itemId="1"/>
+			<Slot name="Weapon 2" itemId="2"/>
+			<Slot name="Helmet" itemId="3"/>
+			<Slot name="Body Armour" itemId="4"/>
+			<Slot name="Gloves" itemId="5"/>
+			<Slot name="Boots" itemId="6"/>
+			<Slot name="Amulet" itemId="7"/>
+			<Slot name="Ring 1" itemId="8"/>
+			<Slot name="Ring 2" itemId="9"/>
+			<Slot name="Belt" itemId="10"/>
+			<Slot name="Flask 1" itemId="11" active="true"/>
+			<Slot name="Flask 2" itemId="12" active="true"/>
+			<Slot name="Flask 3" itemId="13" active="true"/>
+		</ItemSet>
+	</Items>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="0">
+		<SkillSet id="1">
+			<Skill enabled="true" includeInFullDPS="false" slot="Body Armour">
+				<Gem nameSpec="Smite" level="17" quality="0" enabled="true"/>
+				<Gem nameSpec="Lightning Penetration" level="15" quality="0" enabled="true"/>
+				<Gem nameSpec="Elemental Damage with Attacks" level="15" quality="0" enabled="true"/>
+				<Gem nameSpec="Multistrike" level="12" quality="0" enabled="true"/>
+				<Gem nameSpec="Added Lightning Damage" level="16" quality="0" enabled="true"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="false" slot="Helmet">
+				<Gem nameSpec="Wrath" level="15" quality="0" enabled="true"/>
+				<Gem nameSpec="Determination" level="15" quality="0" enabled="true"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="false" slot="Gloves">
+				<Gem nameSpec="Leap Slam" level="16" quality="0" enabled="true"/>
+				<Gem nameSpec="Faster Attacks" level="16" quality="0" enabled="true"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="false" slot="Boots">
+				<Gem nameSpec="Cast when Damage Taken" level="3" quality="0" enabled="true"/>
+				<Gem nameSpec="Molten Shell" level="6" quality="0" enabled="true"/>
+			</Skill>
+		</SkillSet>
+	</Skills>
+	<Config activeConfigSet="1">
+		<ConfigSet id="1" title="Default">
+			<Input name="bandit" string="Eramir"/>
+			<Input name="pantheonMajorGod" string="Lunaris"/>
+			<Input name="pantheonMinorGod" string="Ralakesh"/>
+		</ConfigSet>
+	</Config>
+</PathOfBuilding>

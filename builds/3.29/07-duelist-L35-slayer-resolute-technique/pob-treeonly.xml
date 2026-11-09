@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathOfBuilding>
+	<Build level="35" targetVersion="3_0" className="Duelist" ascendClassName="Slayer" bandit="None" pantheonMajorGod="None" pantheonMinorGod="None" mainSocketGroup="1" viewMode="TREE" characterLevelAutoMode="false" />
+	<Tree activeSpec="1">
+		<Spec treeVersion="3_29" classId="4" ascendClassId="1" nodes="476,3644,5233,6113,7285,8533,8544,11700,12033,12664,14056,14930,16544,18103,18302,20018,20835,22703,23066,24083,24544,24914,25682,28498,30691,31473,31961,33795,34009,34400,34666,40818,40867,42293,42911,43374,43412,47389,50969,50986,59928,61262,62817,63282,63723" masteryEffects="" secondaryAscendClassId="0">
+			<Sockets />
+		</Spec>
+	</Tree>
+</PathOfBuilding>

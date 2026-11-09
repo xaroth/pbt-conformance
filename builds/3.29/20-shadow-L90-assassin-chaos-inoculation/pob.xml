@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathOfBuilding>
+	<Build level="90" targetVersion="3_0" className="Shadow" ascendClassName="Assassin" bandit="None" pantheonMajorGod="Solaris" pantheonMinorGod="Garukhan" mainSocketGroup="1" viewMode="ITEMS" characterLevelAutoMode="false"/>
+	<Tree activeSpec="1">
+		<Spec treeVersion="3_29" classId="6" ascendClassId="1" secondaryAscendClassId="0" nodes="857,1215,1405,1461,1648,1891,3424,3863,4011,4219,4242,5629,5802,5823,6064,6797,7263,8640,8938,9014,9015,9355,9469,10495,11018,11032,11455,11811,12412,12850,14157,14292,15614,15852,16141,18182,18769,18770,19050,19083,20546,20807,21033,21264,22618,23334,23407,23439,23449,24426,25411,25789,26148,27656,28012,28754,28782,28903,29454,30205,30745,31039,31197,31359,32176,32227,33903,33989,35255,35283,35851,35894,36225,36287,36858,37663,39443,39524,39861,42804,43215,44988,45272,45838,46277,46289,46408,46676,47484,48698,49308,49568,49605,49820,49900,49978,51212,52157,52714,53456,54452,56090,56276,56295,58229,58968,59009,59220,59606,60180,60259,60440,60592,60735,60834,61653,61834,62744,63228,63251,64509,64769,65502" masteryEffects="{857,31556},{1215,27103},{10495,64875},{11032,11541},{16141,57298},{19050,22056},{26148,51147},{28903,62897},{31039,9986},{31197,44869},{49820,58447},{60834,34420}">
+			<Sockets>
+				<Socket nodeId="33989" itemId="16"/>
+				<Socket nodeId="61834" itemId="17"/>
+			</Sockets>
+		</Spec>
+	</Tree>
+	<Items activeItemSet="1" useSecondWeaponSet="false">
+		<Item id="1">
+Rarity: UNIQUE
+Bino's Kitchen Knife
+Slaughter Knife
+Item Level: 83
+Quality: 20
+Sockets: G-B-G
+Implicits: 1
+30% increased Global Critical Strike Chance
+Adds 145 to 225 Physical Damage
+46% increased Critical Strike Chance
++21% to Global Critical Strike Multiplier
++23% to Chaos Resistance
+On Killing a Poisoned Enemy, Enemies within 3 metres are Poisoned
+and nearby Allies Regenerate 400 Life per second
+		</Item>
+		<Item id="2">
+Rarity: RARE
+Agony Sting
+Platinum Kris
+Item Level: 85
+Quality: 20
+Sockets: G-B-G
+Implicits: 1
+64% increased Global Critical Strike Chance
+Adds 24 to 44 Physical Damage
+23% increased Attack Speed
++27% to Chaos Damage over Time Multiplier
++33% to Global Critical Strike Multiplier
++45 to Intelligence
+		</Item>
+		<Item id="3">
+Rarity: RARE
+Dusk Mask
+Torturer's Mask
+Item Level: 86
+Quality: 20
+Sockets: G-B-G-G
+Implicits: 0
++78 to maximum Energy Shield
+108% increased Evasion and Energy Shield
++44% to Fire Resistance
++40% to Lightning Resistance
++48 to Intelligence
+		</Item>
+		<Item id="4">
+Rarity: RARE
+Soul Veil
+Necrotic Armour
+Item Level: 86
+Quality: 20
+Sockets: G-G-G-B-B-G
+Implicits: 1
++28 to maximum Mana
++108 to maximum Energy Shield
+112% increased Evasion and Energy Shield
++45% to Cold Resistance
++42% to Fire Resistance
++52 to Dexterity
+12% increased maximum Energy Shield
+		</Item>
+		<Item id="5">
+Rarity: RARE
+Viper Grip
+Phantom Mitts
+Item Level: 85
+Quality: 20
+Sockets: G-B-G-B
+Implicits: 0
++62 to maximum Energy Shield
+88% increased Evasion and Energy Shield
++42% to Cold Resistance
++40% to Lightning Resistance
+15% increased Attack Speed
+		</Item>
+		<Item id="6">
+Rarity: RARE
+Wraith Stride
+Phantom Boots
+Item Level: 85
+Quality: 20
+Sockets: G-G-B-B
+Implicits: 0
++68 to maximum Energy Shield
+82% increased Evasion and Energy Shield
+30% increased Movement Speed
++42% to Cold Resistance
++44% to Fire Resistance
++46 to Intelligence
+		</Item>
+		<Item id="7">
+Rarity: RARE
+Hex Torc
+Turquoise Amulet
+Item Level: 86
+Quality: 0
+Implicits: 1
++29 to Dexterity and Intelligence
++64 to maximum Energy Shield
+19% increased maximum Energy Shield
++38% to Global Critical Strike Multiplier
++44% to Lightning Resistance
++48 to Intelligence
++21% to Damage over Time Multiplier
+		</Item>
+		<Item id="8">
+Rarity: RARE
+Pandemonium Band
+Two-Stone Ring (Cold/Lightning)
+Item Level: 84
+Quality: 0
+Implicits: 1
++16% to Cold and Lightning Resistances
++52 to maximum Energy Shield
++46% to Fire Resistance
++42 to Intelligence
++64 to maximum Mana
++210 to Evasion Rating
+		</Item>
+		<Item id="9">
+Rarity: RARE
+Behemoth Whorl
+Diamond Ring
+Item Level: 85
+Quality: 0
+Implicits: 1
+29% increased Global Critical Strike Chance
++50 to maximum Energy Shield
++44% to Lightning Resistance
++40% to Cold Resistance
++44 to Dexterity
++190 to Evasion Rating
+		</Item>
+		<Item id="10">
+Rarity: RARE
+Gloom Coil
+Crystal Belt
+Item Level: 86
+Quality: 0
+Implicits: 1
++78 to maximum Energy Shield
++56 to maximum Energy Shield
++44% to Fire Resistance
++42% to Lightning Resistance
++50 to Strength
+20% increased Flask Effect Duration
+		</Item>
+		<Item id="11">
+Rarity: NORMAL
+Quicksilver Flask
+Item Level: 75
+Quality: 20
+Implicits: 0
+		</Item>
+		<Item id="12">
+Rarity: NORMAL
+Jade Flask
+Item Level: 75
+Quality: 20
+Implicits: 0
+		</Item>
+		<Item id="13">
+Rarity: NORMAL
+Silver Flask
+Item Level: 75
+Quality: 20
+Implicits: 0
+		</Item>
+		<Item id="14">
+Rarity: NORMAL
+Quartz Flask
+Item Level: 75
+Quality: 20
+Implicits: 0
+		</Item>
+		<Item id="15">
+Rarity: NORMAL
+Diamond Flask
+Item Level: 75
+Quality: 20
+Implicits: 0
+		</Item>
+		<Item id="16">
+Rarity: UNIQUE
+Watcher's Eye
+Prismatic Jewel
+Item Level: 86
+Implicits: 0
+6% increased maximum Energy Shield
+4% increased maximum Mana
+Gain 10% of Maximum Mana as Extra Maximum Energy Shield while affected by Clarity
+		</Item>
+		<Item id="17">
+Rarity: RARE
+Rapture Spark
+Cobalt Jewel
+Item Level: 84
+Quality: 0
+Implicits: 0
+8% increased maximum Energy Shield
++15% to Global Critical Strike Multiplier
++8% to Chaos Damage over Time Multiplier
++5% to Damage over Time Multiplier
+		</Item>
+		<ItemSet id="1" useSecondWeaponSet="false">
+			<Slot name="Weapon 1" itemId="1"/>
+			<Slot name="Weapon 2" itemId="2"/>
+			<Slot name="Helmet" itemId="3"/>
+			<Slot name="Body Armour" itemId="4"/>
+			<Slot name="Gloves" itemId="5"/>
+			<Slot name="Boots" itemId="6"/>
+			<Slot name="Amulet" itemId="7"/>
+			<Slot name="Ring 1" itemId="8"/>
+			<Slot name="Ring 2" itemId="9"/>
+			<Slot name="Belt" itemId="10"/>
+			<Slot name="Flask 1" itemId="11" active="true"/>
+			<Slot name="Flask 2" itemId="12" active="true"/>
+			<Slot name="Flask 3" itemId="13" active="true"/>
+			<Slot name="Flask 4" itemId="14" active="true"/>
+			<Slot name="Flask 5" itemId="15" active="true"/>
+		</ItemSet>
+	</Items>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="0">
+		<SkillSet id="1">
+			<Skill enabled="true" slot="Body Armour" label="" mainActiveSkill="1" mainActiveSkillCalcs="1" includeInFullDPS="true">
+				<Gem enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SkillGemViperStrikeAltX" level="20" nameSpec="Viper Strike of the Mamba" quality="20" skillId="ViperStrikeAltX" variantId="ViperStrikeAltX"/>
+				<Gem enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SkillGemSupportVoidManipulation" level="20" nameSpec="Void Manipulation" quality="20" skillId="SupportVoidManipulation" variantId="SupportVoidManipulation"/>
+				<Gem enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SkillGemSupportNightblade" level="20" nameSpec="Nightblade" quality="20" skillId="SupportNightblade" variantId="SupportNightblade"/>
+				<Gem enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SkillGemSupportDamageOnFullLife" level="20" nameSpec="Damage on Full Life" quality="20" skillId="SupportDamageOnFullLife" variantId="SupportDamageOnFullLife"/>
+				<Gem enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SkillGemSupportMeleePhysicalDamage" level="20" nameSpec="Melee Physical Damage" quality="20" skillId="SupportMeleePhysicalDamage" variantId="SupportMeleePhysicalDamage"/>
+				<Gem enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SkillGemSupportDeadlyAilments" level="20" nameSpec="Deadly Ailments" quality="20" skillId="SupportDeadlyAilments" variantId="SupportDeadlyAilments"/>
+			</Skill>
+			<Skill enabled="true" slot="Helmet" label="" includeInFullDPS="false">
+				<Gem enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SkillGemDiscipline" level="20" nameSpec="Discipline" quality="20" skillId="Discipline" variantId="Discipline"/>
+				<Gem enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SkillGemFleshAndStone" level="20" nameSpec="Flesh and Stone" quality="20" skillId="FleshAndStone" variantId="FleshAndStone"/>
+				<Gem enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SkillGemPurityOfElements" level="20" nameSpec="Purity of Elements" quality="20" skillId="PurityOfElements" variantId="PurityOfElements"/>
+			</Skill>
+			<Skill enabled="true" slot="Gloves" label="" includeInFullDPS="false">
+				<Gem enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SkillGemPrecision" level="1" nameSpec="Precision" quality="0" skillId="Precision" variantId="Precision"/>
+				<Gem enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SkillGemClarity" level="1" nameSpec="Clarity" quality="0" skillId="Clarity" variantId="Clarity"/>
+			</Skill>
+			<Skill enabled="true" slot="Boots" label="" includeInFullDPS="false">
+				<Gem enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SkillGemAlchemistsMark" level="20" nameSpec="Alchemist's Mark" quality="20" skillId="AlchemistsMark" variantId="AlchemistsMark"/>
+				<Gem enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SkillGemWitheringStep" level="20" nameSpec="Withering Step" quality="20" skillId="WitheringStep" variantId="WitheringStep"/>
+			</Skill>
+			<Skill enabled="true" slot="Weapon 2" label="" includeInFullDPS="false">
+				<Gem enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SkillGemWhirlingBlades" level="20" nameSpec="Whirling Blades" quality="20" skillId="WhirlingBlades" variantId="WhirlingBlades"/>
+				<Gem enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SkillGemSupportFasterAttacks" level="20" nameSpec="Faster Attacks" quality="20" skillId="SupportFasterAttacks" variantId="SupportFasterAttacks"/>
+			</Skill>
+		</SkillSet>
+	</Skills>
+	<Config activeConfigSet="1">
+		<ConfigSet id="1" title="Default"/>
+	</Config>
+</PathOfBuilding>

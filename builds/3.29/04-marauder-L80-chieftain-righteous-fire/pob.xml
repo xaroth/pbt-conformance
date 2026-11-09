@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathOfBuilding>
+	<Build level="80" targetVersion="3_0" className="Marauder" ascendClassName="Chieftain" bandit="None" pantheonMajorGod="Lunaris" pantheonMinorGod="Ralakesh" mainSocketGroup="1" viewMode="ITEMS" characterLevelAutoMode="false"/>
+	<Tree activeSpec="1">
+		<Spec treeVersion="3_29" classId="1" ascendClassId="3" secondaryAscendClassId="0" nodes="1731,2474,3644,4139,4367,4713,5152,5233,5643,5743,6245,6289,6712,7444,9971,9995,11505,11730,11924,12125,12382,13559,13714,14056,14930,14936,15117,15405,15868,19144,20987,21650,21958,22627,22703,23027,24383,24704,25011,26196,26270,26712,26725,27193,28330,28475,29049,29353,30380,30733,31080,31462,31683,32241,32249,33287,33718,33755,34171,34400,34513,35288,35503,36047,36678,36881,36949,37326,37403,39678,39841,40907,41415,42659,42760,43374,44184,44202,46340,46578,48109,48287,48480,49178,49412,50197,50422,50570,50862,50904,52502,53118,54629,55485,55676,55804,57279,58218,59928,60472,61198,61419,61804,62429,63048,63282,63447,63723,64210,64221" masteryEffects="{4139,47642},{11505,36313},{12125,21468},{12382,64381},{25011,31822},{27193,45653},{32241,34242},{41415,38454}">
+			<Sockets>
+				<Socket nodeId="28475" itemId="16"/>
+				<Socket nodeId="26196" itemId="17"/>
+				<Socket nodeId="61419" itemId="18"/>
+				<Socket nodeId="26725" itemId="19"/>
+			</Sockets>
+		</Spec>
+	</Tree>
+	<Items activeItemSet="1" useSecondWeaponSet="false">
+		<Item id="1">
+Rarity: MAGIC
+Seething Divine Life Flask of Staunching
+Item Level: 70
+Quality: 20
+Implicits: 0
+66% reduced Amount Recovered
+Instant Recovery
+Grants Immunity to Bleeding for 4 seconds if used while Bleeding
+Grants Immunity to Corrupted Blood for 4 seconds if used while affected by Corrupted Blood
+		</Item>
+		<Item id="2">
+Rarity: MAGIC
+Experimenter's Quicksilver Flask of Adrenaline
+Item Level: 70
+Quality: 20
+Implicits: 0
+40% increased Duration
+25% increased Movement Speed during Effect
+		</Item>
+		<Item id="3">
+Rarity: MAGIC
+Experimenter's Ruby Flask of the Abalone
+Item Level: 70
+Quality: 20
+Implicits: 0
+40% increased Duration
+45% increased Armour during Effect
+		</Item>
+		<Item id="4">
+Rarity: MAGIC
+Experimenter's Granite Flask of the Conger
+Item Level: 70
+Quality: 20
+Implicits: 0
+40% increased Duration
+Grants Immunity to Shock for 4 seconds if used while Shocked
+		</Item>
+		<Item id="5">
+Rarity: MAGIC
+Experimenter's Basalt Flask of Heat
+Item Level: 70
+Quality: 20
+Implicits: 0
+40% increased Duration
+Grants Immunity to Freeze for 4 seconds if used while Frozen
+		</Item>
+		<Item id="6">
+Rarity: UNIQUE
+Nebulis
+Void Sceptre
+Item Level: 78
+Quality: 0
+Sockets: R-B-B
+Implicits: 1
+40% increased Elemental Damage
+80% increased Implicit Modifier magnitudes
+16% increased Cast Speed
+6% increased Elemental Damage per 1% Fire, Cold, or Lightning Resistance above 75%
+		</Item>
+		<Item id="7">
+Rarity: UNIQUE
+Rathpith Globe
+Titanium Spirit Shield
+Energy Shield: 150
+Item Level: 74
+Quality: 0
+Sockets: B-R-G
+Implicits: 0
+124% increased Energy Shield
+10% increased maximum Life
++10% Chance to Block Spell Damage
+Sacrifice 10% of your Life when you Use or Trigger a Spell Skill
+3% increased Spell Critical Strike Chance per 100 Player Maximum Life
+3% increased Spell Damage per 100 Player Maximum Life
+		</Item>
+		<Item id="8">
+Rarity: UNIQUE
+Kaom's Heart
+Glorious Plate
+Armour: 650
+Item Level: 74
+Quality: 0
+Implicits: 0
+Has no Sockets
++1000 to maximum Life
+		</Item>
+		<Item id="9">
+Rarity: RARE
+Brimstone Peak
+Eternal Burgonet
+Armour: 420
+Item Level: 79
+Quality: 20
+Sockets: R-B-B-G
+Implicits: 0
++98 to maximum Life
++42% to Fire Resistance
++28% to Chaos Resistance
+38% increased Armour
+24% increased Burning Damage
++30 to Intelligence
+		</Item>
+		<Item id="10">
+Rarity: RARE
+Rift Grip
+Ancient Gauntlets
+Armour: 220
+Item Level: 78
+Quality: 20
+Sockets: R-G-B-R
+Implicits: 0
++94 to maximum Life
+11% increased Life Regeneration rate
++38% to Fire Resistance
++28% to Chaos Resistance
++32 to Intelligence
+		</Item>
+		<Item id="11">
+Rarity: RARE
+Skull Stride
+Goliath Greaves
+Armour: 200
+Item Level: 78
+Quality: 20
+Sockets: R-G-G-B
+Implicits: 0
+28% increased Movement Speed
++92 to maximum Life
+15% increased Life Regeneration rate
++41% to Fire Resistance
++25% to Chaos Resistance
++42 to Dexterity
+		</Item>
+		<Item id="12">
+Rarity: UNIQUE
+Defiance of Destiny
+Paua Amulet
+Item Level: 80
+Implicits: 1
+24% increased Mana Regeneration Rate
++70 to maximum Life
++25% to Fire Resistance
++30% to Cold Resistance
++18% to Lightning Resistance
+Gain 14% of Missing Unreserved Life before being Hit by an Enemy
+		</Item>
+		<Item id="13">
+Rarity: RARE
+Vortex Loop
+Ruby Ring
+Item Level: 78
+Implicits: 1
++28% to Fire Resistance
++74 to maximum Life
++26 to Dexterity
++16% to Damage over Time Multiplier
++40% to Lightning Resistance
++29% to Chaos Resistance
+		</Item>
+		<Item id="14">
+Rarity: RARE
+Hate Spiral
+Amethyst Ring
+Item Level: 78
+Implicits: 1
++21% to Chaos Resistance
++71 to maximum Life
++40% to Fire Resistance
++36 to Strength
++38 to Intelligence
+		</Item>
+		<Item id="15">
+Rarity: RARE
+Corpse Cord
+Heavy Belt
+Item Level: 80
+Implicits: 1
++32 to Strength
++28 to Dexterity
++109 to maximum Life
++42% to Cold Resistance
++24% to Chaos Resistance
+		</Item>
+		<Item id="16">
+Rarity: RARE
+Gloom Glimmer
+Crimson Jewel
+Item Level: 58
+Implicits: 0
+6% increased maximum Life
+14% increased Burning Damage
++12% to Fire Resistance
+		</Item>
+		<Item id="17">
+Rarity: RARE
+Viper Shard
+Crimson Jewel
+Item Level: 75
+Implicits: 0
+7% increased maximum Life
++1% to maximum Fire Resistance
+16% increased Burning Damage
++13% to Fire Resistance
+		</Item>
+		<Item id="18">
+Rarity: RARE
+Rapture Eye
+Cobalt Jewel
+Item Level: 74
+Implicits: 0
+6% increased maximum Life
++1% to maximum Fire Resistance
++7% to Fire Damage over Time Multiplier
++14% to Chaos Resistance
+		</Item>
+		<Item id="19">
+Rarity: RARE
+Storm Spark
+Viridian Jewel
+Item Level: 76
+Implicits: 0
+7% increased maximum Life
++2% to maximum Fire Resistance
+14% increased Fire Damage
++11% to Chaos Resistance
+		</Item>
+		<ItemSet id="1" useSecondWeaponSet="false">
+			<Slot name="Flask 1" itemId="1" active="true"/>
+			<Slot name="Flask 2" itemId="2" active="true"/>
+			<Slot name="Flask 3" itemId="3" active="true"/>
+			<Slot name="Flask 4" itemId="4" active="true"/>
+			<Slot name="Flask 5" itemId="5" active="true"/>
+			<Slot name="Weapon 1" itemId="6"/>
+			<Slot name="Weapon 2" itemId="7"/>
+			<Slot name="Body Armour" itemId="8"/>
+			<Slot name="Helmet" itemId="9"/>
+			<Slot name="Gloves" itemId="10"/>
+			<Slot name="Boots" itemId="11"/>
+			<Slot name="Amulet" itemId="12"/>
+			<Slot name="Ring 1" itemId="13"/>
+			<Slot name="Ring 2" itemId="14"/>
+			<Slot name="Belt" itemId="15"/>
+		</ItemSet>
+	</Items>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="0">
+		<SkillSet id="1">
+			<Skill enabled="true" slot="Helmet" label="" mainActiveSkill="1" mainActiveSkillCalcs="1" includeInFullDPS="true">
+				<Gem nameSpec="Righteous Fire" skillId="RighteousFire" gemId="Metadata/Items/Gems/SkillGemRighteousFire" level="20" quality="20" enabled="true" enableGlobal1="true" enableGlobal2="true"/>
+				<Gem nameSpec="Swift Affliction" skillId="SupportSwiftAffliction" gemId="Metadata/Items/Gems/SkillGemSupportSwiftAffliction" level="20" quality="20" enabled="true" enableGlobal1="true" enableGlobal2="true"/>
+				<Gem nameSpec="Elemental Focus" skillId="SupportElementalFocus" gemId="Metadata/Items/Gems/SkillGemSupportElementalFocus" level="20" quality="20" enabled="true" enableGlobal1="true" enableGlobal2="true"/>
+				<Gem nameSpec="Burning Damage" skillId="SupportBurningDamage" gemId="Metadata/Items/Gems/SkillGemSupportBurningDamage" level="20" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true"/>
+			</Skill>
+			<Skill enabled="true" slot="Gloves" label="" includeInFullDPS="false">
+				<Gem nameSpec="Malevolence" skillId="Malevolence" gemId="Metadata/Items/Gems/SkillGemMalevolence" level="20" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true"/>
+				<Gem nameSpec="Eternal Blessing" skillId="SupportEternalBlessing" gemId="Metadata/Items/Gems/SkillGemSupportEternalBlessing" level="20" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true"/>
+				<Gem nameSpec="Blood Rage" skillId="BloodRage" gemId="Metadata/Items/Gems/SkillGemBloodRage" level="11" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true"/>
+			</Skill>
+			<Skill enabled="true" slot="Boots" label="" includeInFullDPS="false">
+				<Gem nameSpec="Shield Charge" skillId="ShieldCharge" gemId="Metadata/Items/Gems/SkillGemShieldCharge" level="20" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true"/>
+				<Gem nameSpec="Frostblink" skillId="Frostblink" gemId="Metadata/Items/Gems/SkillGemFrostblink" level="20" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true"/>
+			</Skill>
+			<Skill enabled="true" slot="Weapon 1" label="" includeInFullDPS="false">
+				<Gem nameSpec="Punishment" skillId="Punishment" gemId="Metadata/Items/Gems/SkillGemPunishment" level="20" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true"/>
+			</Skill>
+			<Skill enabled="true" slot="Weapon 2" label="" includeInFullDPS="false">
+				<Gem nameSpec="Enduring Cry" skillId="EnduringCry" gemId="Metadata/Items/Gems/SkillGemEnduringCry" level="20" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true"/>
+			</Skill>
+		</SkillSet>
+	</Skills>
+	<Config activeConfigSet="1">
+		<ConfigSet id="1" title="Default"/>
+	</Config>
+</PathOfBuilding>

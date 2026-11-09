@@ -1,0 +1,10 @@
+# 3.29 Witch L60: Elementalist Elemental Overload
+
+- Archetype: Penance Brand ignite Elementalist, herald stacking (Ash, Thunder, Purity, Agony, Ice), armour/energy shield gear with life, Aegis Aurora block, golems; Elemental Overload and Runebinder from L60.
+- Ascendancy: Elementalist (Shaper of Flames; Mastermind of Discord)
+- Keystones: Elemental Overload, Runebinder
+- Skills: Penance Brand, Burning Damage, Combustion, Elemental Focus, Swift Affliction; Herald of Ash, Herald of Purity, Flammability, Flame Dash, Flame Golem, Elemental Weakness, Molten Shell on CwDT
+- Notable items: Rare Imbued Wand (fire DoT multiplier, added fire to spells) and Lacewood Spirit Shield with spell block; life and resist rares, Onyx Amulet with fire DoT multiplier.
+- Point budget: 78 = 59 (level) + 18 (quests) + 1 (bandits killed). 78 allocated incl. 4 masteries. Pantheon: Arakaali, Abberath.
+- Source: pobb.in https://pobb.in/rS3D501sumt7 (real character export of Orhn, level 97 Penance Brand Elementalist, league Allflame, tree version 3_29; keystone Elemental Overload), retrieved 2026-11-09; cluster jewels with their nodes and sockets, the Lycia bloodline, the tattoos (nodes kept as their base attribute nodes), the Elegant Hubris (its Supreme Ostentation keystone, Mind Over Matter underneath, dropped) and the Runegraft of Treachery (Life Mastery 41415 kept with 15% increased maximum Life if no life modifiers on body armour) removed; 23 freed points refilled with Runebinder, Brand Equity, Fire Walker, Discipline and Training, Heart and Soul, Sovereignty, Practical Application, Amplify, Light of Divinity, Brand, Damage over Time and Life Masteries and their path nodes; lower levels grown from the class start inside the L90 tree: fire DoT and ignite notables first (L35), Elemental Overload, Runebinder, block, life and golem notables (L60), remaining life, mana and reservation masteries and a jewel socket (L80); each level is a subset of the next; mastery effects as on the source.
+- pob-treeonly.xml: generated from pob.xml by tools, tree only.
