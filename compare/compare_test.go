@@ -1,0 +1,119 @@
+package compare_test
+
+import (
+	"context"
+	"errors"
+	"os"
+	"path/filepath"
+	"strings"
+	"testing"
+
+	"github.com/xaroth/pbt-conformance/compare"
+	"github.com/xaroth/pbt-conformance/pins"
+	"github.com/xaroth/pbt-conformance/pob"
+
+	"github.com/xaroth/pbt-engine/build"
+	"github.com/xaroth/pbt-engine/dataset"
+)
+
+// env returns the variable or skips the test when it is not set.
+func env(t *testing.T, name string) string {
+	t.Helper()
+	v := os.Getenv(name)
+	if v == "" {
+		t.Skip(name + " not set")
+	}
+	return v
+}
+
+func repoPins(t *testing.T) *pins.File {
+	t.Helper()
+	f, err := pins.Read(os.DirFS(".."))
+	if err != nil {
+		t.Fatal(err)
+	}
+	return f
+}
+
+func fixture(t *testing.T) []byte {
+	t.Helper()
+	b, err := os.ReadFile(filepath.Join("..", "testdata", "marauder-life-node.xml"))
+	if err != nil {
+		t.Fatal(err)
+	}
+	return b
+}
+
+func store329(t *testing.T) *dataset.Store {
+	t.Helper()
+	s, err := dataset.Open(os.DirFS(filepath.Join(env(t, "PBT_DATASETS"), "3.29.3.3")))
+	if err != nil {
+		t.Fatal(err)
+	}
+	return s
+}
+
+func TestFromPoB(t *testing.T) {
+	t.Parallel()
+	s := store329(t)
+	b, err := compare.FromPoB(fixture(t), "poe1", "3.29.3.3", "3_29", s)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if b.Class != "Metadata/Characters/Str/Str" || b.Level != 90 || len(b.Nodes) != 2 ||
+		b.Scenario.Campaign != build.CampaignComplete || b.Scenario.Bandits != build.BanditsKillAll {
+		t.Errorf("got %+v", b)
+	}
+	jugg := strings.Replace(string(fixture(t)), `ascendClassName="None"`, `ascendClassName="Juggernaut"`, 1)
+	penalty := `<Config activeConfigSet="1"><ConfigSet id="1"><Input name="resistancePenalty" number="-30"/></ConfigSet></Config>`
+	jugg = strings.Replace(jugg, `<Tree`, penalty+`<Tree`, 1)
+	if b, err = compare.FromPoB([]byte(jugg), "poe1", "3.29.3.3", "3_29", s); err != nil {
+		t.Fatal(err)
+	}
+	if b.Ascendancy != "Juggernaut" || b.Scenario.Campaign != build.CampaignActs6To10 {
+		t.Errorf("ascendancy and campaign: got %q, %q", b.Ascendancy, b.Scenario.Campaign)
+	}
+	for name, data := range map[string]string{
+		"other tree": strings.Replace(string(fixture(t)), "3_29", "3_28", 1),
+		"bad class":  strings.Replace(string(fixture(t)), `className="Marauder"`, `className="Barbarian"`, 1),
+		"bad node":   strings.Replace(string(fixture(t)), "31628", "x", 1),
+		"bad bandit": strings.Replace(string(fixture(t)), `bandit="None"`, `bandit="Eramir"`, 1),
+		"not xml":    "<",
+	} {
+		if _, err := compare.FromPoB([]byte(data), "poe1", "3.29.3.3", "3_29", s); !errors.Is(err, compare.ErrPoBXML) {
+			t.Errorf("%s: got %v, want %v", name, err, compare.ErrPoBXML)
+		}
+	}
+}
+
+// TestRun records PoB's values for the fixture and compares: a Marauder with one life node
+// has no mismatches.
+func TestRun(t *testing.T) {
+	t.Parallel()
+	datasets := env(t, "PBT_DATASETS")
+	cache := env(t, "PBTC_CACHE")
+	f := repoPins(t)
+	root := t.TempDir()
+	dir := filepath.Join(root, "builds", "3.29", "01-marauder-life-node")
+	if err := os.MkdirAll(dir, 0o755); err != nil {
+		t.Fatal(err)
+	}
+	for _, name := range []string{pob.FullXML, pob.TreeOnlyXML} {
+		if err := os.WriteFile(filepath.Join(dir, name), fixture(t), 0o600); err != nil {
+			t.Fatal(err)
+		}
+	}
+	if err := pob.Record(context.Background(), root, cache, f, "poe1", "3.29", false); err != nil {
+		t.Fatal(err)
+	}
+	ms, err := compare.Run(root, datasets, f, "poe1", "3.29")
+	if err != nil {
+		t.Fatal(err)
+	}
+	if len(ms) != 0 {
+		t.Errorf("mismatches: %+v", ms)
+	}
+	if _, err := compare.Run(root, t.TempDir(), f, "poe1", "3.29"); !errors.Is(err, compare.ErrDataset) {
+		t.Errorf("missing dataset: got %v, want %v", err, compare.ErrDataset)
+	}
+}
