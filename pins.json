@@ -1,0 +1,23 @@
+{
+  "runtime": {
+    "luajit": {"repo": "https://github.com/LuaJIT/LuaJIT", "commit": "2460b3ff93a1c955de3d62cfc825de7d68dc272e"},
+    "luautf8": {"repo": "https://github.com/starwing/luautf8", "commit": "1bb70d45208d4033dcc75efee968be70534dd3ab"}
+  },
+  "games": {
+    "poe1": {
+      "current": "3.29",
+      "leagues": {
+        "3.28": {
+          "pob": {"tag": "v2.65.0", "commit": "f9f4f3b4ab6a3a37d2eb693265b5c73317ff42a6"},
+          "tree": "3_28",
+          "dataset": {"version": "3.28.0.16", "id": "4a03bea29a271a17d97a3d52a3fe9fbb375d130c7fca7333a5567e801fe69269"}
+        },
+        "3.29": {
+          "pob": {"tag": "v2.67.2", "commit": "b32759ab0f31a1c8499a0d420cb0f0633d4fe478"},
+          "tree": "3_29",
+          "dataset": {"version": "3.29.3.3", "id": "51c9afc83cb9e1db75822ba2efdd7c3786e243fb24a439f4052be98ab80ade1c"}
+        }
+      }
+    }
+  }
+}

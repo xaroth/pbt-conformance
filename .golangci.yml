@@ -1,0 +1,72 @@
+version: "2"
+linters:
+  default: all
+  disable:
+    - depguard # prevents you from importing packages that are not explicitly allowed; requires a config file that nobody has
+    - errorlint # prevents from including downstream errors as strings if predefined error is used for wrapping; goerr113 & wrapcheck seem to be enough for linting errors returned
+    - exhaustruct # we consider it to be enforcing unnecessary boilerplate
+    - exhaustruct_v5 # new iteration of exhaustruct; see above
+    - nlreturn # too opinionated; new line on return is good but there are cases when it makes no sense
+    - nonamedreturns # too opinionated; named returns are great for documentation when it's unclear from the types alone what is returned
+    - varnamelen # too opinionated; two letter variable names (like `tx`) are real good sometimes
+    - wsl # too opinionated; sometimes appears that its empty lines rules decrease natural readability; might be reconsidered in the future
+    - wsl_v5 # new iteration of wsl; see above
+    - noinlineerr # too opinionated; checking errors inline ifs should be used VERY sparingly but blanket ban appears to be excessive
+    - gomodguard # disable to stop annoying deprecation warnings
+  settings:
+    exhaustive:
+      default-signifies-exhaustive: true
+    funlen:
+      ignore-comments: true
+    ireturn:
+      allow:
+        - anon
+        - error
+        - empty
+        - stdlib
+        - generic
+    lll:
+      line-length: 160
+    nakedret:
+      max-func-lines: 0
+  exclusions:
+    generated: lax
+    presets:
+      - common-false-positives
+      - legacy
+      - std-error-handling
+    rules:
+      - linters:
+          - lll
+        source: '^//go:generate '
+      - linters:
+          - dupl # dupl in tests is often false positive
+          - gosec # we don't care about this in tests
+          - forcetypeassert # in tests it's acceptable to just assert and let panic if assertion is wrong
+          - goconst # in tests it's often more readable to have literals instead of constants
+        path: .*_test.go
+      - linters:
+          - cyclop # tests are accepted to be complicated
+          - funlen # table tests are long
+          - maintidx # table tests can appear hard to maintain
+        source: ^func Test
+      - linters:
+          - revive
+        text: "exported:"
+        source: "\\s= errors.New" # we allow no comments on exported errors
+issues:
+  max-issues-per-linter: 0
+  max-same-issues: 0
+formatters:
+  enable:
+    - gci
+    - gofmt
+  settings:
+    gci:
+      sections:
+        - standard
+        - default
+        - prefix(github.com/xaroth)
+        - prefix(github.com/xaroth/pbt-engine)
+        - blank
+      custom-order: true
