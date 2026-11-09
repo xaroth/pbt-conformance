@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathOfBuilding>
+	<Build level="90" targetVersion="3_0" className="Marauder" ascendClassName="None" bandit="None" mainSocketGroup="1" viewMode="TREE"/>
+	<Tree activeSpec="1">
+		<Spec treeVersion="3_29" classId="1" ascendClassId="0" nodes="47175,31628"/>
+	</Tree>
+</PathOfBuilding>

@@ -18,6 +18,15 @@ go run ./cmd/pbtc setup --cache ~/.cache/pbt-conformance
 
 Setup checks that each PoB release targets its pinned league's tree.
 
+Each build lives in `builds/<league>/<NN>-<class>-L<level>-<target>/`: `pob.xml` holds the build as complete as PoB has it (tree, items, skills), `pob-treeonly.xml` the same tree without the rest, so a difference can be traced to the tree or the gear. `pbtc pob` runs both through the league's pinned PoB and writes PoB's values to `pob.json`, with the release that made them:
+
+```sh
+go run ./cmd/pbtc pob --cache ~/.cache/pbt-conformance            # every pinned league
+go run ./cmd/pbtc pob --cache ~/.cache/pbt-conformance --check    # fail if a stored pob.json is stale
+```
+
+Rerun it after adding or changing a build, bumping a pin, or changing the runner, and commit the `pob.json` changes with it.
+
 ## Develop
 
 Requires Go 1.27.
