@@ -27,7 +27,7 @@ go run ./cmd/pbtc pob --cache ~/.cache/pbt-conformance --check    # fail if a st
 
 Rerun it after adding or changing a build, bumping a pin, or changing the runner, and commit the `pob.json` changes with it.
 
-`pbtc compare` computes pbt-engine's sheet for every build with the pinned dataset and compares it with PoB's values for the tree-only build, the part the engine models so far. It reads `pob-treeonly.xml` for class, ascendancy, level, tree, bandits and the campaign stage (from PoB's resistance penalty). It needs no Lua or PoB, only the datasets, one directory per dataset version:
+`pbtc compare` computes pbt-engine's sheet for every build with the pinned dataset and compares it with PoB's values for the tree-only build, the part the engine models so far. It reads `pob-treeonly.xml` for class, ascendancy, level, tree, mastery choices, and as config the bandits and the campaign stage (from PoB's resistance penalty), and simulates it with `simulator`. Every simulation warning except stats left out as not modelled (a dropped node, a mastery choice that does not fit, points over budget) is reported as a mismatch `warning:<code>` and must be triaged too. It needs no Lua or PoB, only the datasets, one directory per dataset version:
 
 ```sh
 go run ./cmd/pbtc compare --datasets ../pbt-archive/datasets

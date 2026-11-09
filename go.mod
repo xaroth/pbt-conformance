@@ -4,7 +4,7 @@ go 1.27
 
 require (
 	github.com/google/go-cmp v0.7.0
-	github.com/xaroth/pbt-engine v0.0.0-20261108225653-0e6be1d6bb72
+	github.com/xaroth/pbt-engine v0.0.0-20261109133730-d354f0ebf782
 )
 
 require github.com/google/flatbuffers v25.12.19+incompatible // indirect

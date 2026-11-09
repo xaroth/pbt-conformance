@@ -15,10 +15,9 @@ import (
 
 	"github.com/xaroth/pbt-engine/build"
 	"github.com/xaroth/pbt-engine/dataset"
-	"github.com/xaroth/pbt-engine/resolve"
+	"github.com/xaroth/pbt-engine/output"
 	rules "github.com/xaroth/pbt-engine/rules/poe1"
-	"github.com/xaroth/pbt-engine/semantics"
-	sempoe1 "github.com/xaroth/pbt-engine/semantics/poe1"
+	"github.com/xaroth/pbt-engine/simulator"
 )
 
 // Errors of a comparison run; match them with errors.Is.
@@ -52,8 +51,8 @@ func maximum(elem string) pobValue {
 }
 
 // keyMap maps each pbt-engine catalogue output to its PoB value.
-func keyMap() map[string]pobValue {
-	m := map[string]pobValue{
+func keyMap() map[output.Key]pobValue {
+	m := map[output.Key]pobValue{
 		"player.strength": key("Str"), "player.dexterity": key("Dex"), "player.intelligence": key("Int"),
 		"player.life": key("Life"), "player.mana": key("Mana"), "player.energy_shield": key("EnergyShield"),
 		"player.armour": key("Armour"), "player.evasion_rating": key("Evasion"),
@@ -61,14 +60,15 @@ func keyMap() map[string]pobValue {
 		"player.energy_shield_regeneration": key("EnergyShieldRegen"),
 	}
 	for _, e := range []struct{ ours, pob string }{{"fire", "Fire"}, {"cold", "Cold"}, {"lightning", "Lightning"}, {"chaos", "Chaos"}} {
-		m["player."+e.ours+"_resistance"] = key(e.pob + "Resist")
-		m["player.maximum_"+e.ours+"_resistance"] = maximum(e.pob)
-		m["player.uncapped_"+e.ours+"_resistance"] = key(e.pob + "ResistTotal")
+		m[output.Key("player."+e.ours+"_resistance")] = key(e.pob + "Resist")
+		m[output.Key("player.maximum_"+e.ours+"_resistance")] = maximum(e.pob)
+		m[output.Key("player.uncapped_"+e.ours+"_resistance")] = key(e.pob + "ResistTotal")
 	}
 	return m
 }
 
-// Mismatch is one output of one build where pbt-engine and PoB differ.
+// Mismatch is one output of one build where pbt-engine and PoB differ, or a simulation warning
+// (Output "warning:<code>", Detail its subject and message) that must be triaged like one.
 type Mismatch struct {
 	League, Build, Output string
 	// Ours is pbt-engine's value; PoB is PoB's for the tree-only build, which is what the
@@ -77,7 +77,12 @@ type Mismatch struct {
 	HasPoB             bool
 	// Triage is the id of the triage entry that accepts the mismatch, empty if none.
 	Triage string
+	// Detail is a warning's subject and message.
+	Detail string
 }
+
+// warningPrefix starts the Output of a warning mismatch.
+const warningPrefix = "warning:"
 
 // Run compares every build of league under root, with the pinned dataset under datasets.
 // A build that cannot be compared at all (unreadable XML, failing build check) is an error.
@@ -90,7 +95,7 @@ func Run(root, datasets string, f *pins.File, game, league string) ([]Mismatch, 
 	if err != nil {
 		return nil, err
 	}
-	t, err := sempoe1.Load()
+	sim, err := simulator.New(s)
 	if err != nil {
 		return nil, fmt.Errorf("compare: %w", err)
 	}
@@ -100,7 +105,7 @@ func Run(root, datasets string, f *pins.File, game, league string) ([]Mismatch, 
 	}
 	var out []Mismatch
 	for _, dir := range dirs {
-		ms, err := compareBuild(dir, game, league, l, s, t)
+		ms, err := compareBuild(dir, game, league, l, sim)
 		if err != nil {
 			return nil, fmt.Errorf("compare %s: %w", filepath.Base(dir), err)
 		}
@@ -120,22 +125,23 @@ func openPinned(datasets string, d pins.Dataset) (*dataset.Store, error) {
 	return s, nil
 }
 
-func compareBuild(dir, game, league string, l pins.League, s *dataset.Store, t *semantics.Table) ([]Mismatch, error) {
+func compareBuild(dir, game, league string, l pins.League, sim *simulator.Sim) ([]Mismatch, error) {
 	xmlData, err := os.ReadFile(filepath.Join(dir, pob.TreeOnlyXML))
 	if err != nil {
 		return nil, fmt.Errorf("read: %w", err)
 	}
+	s := sim.Store()
 	b, err := FromPoB(xmlData, game, l.Dataset.Version, l.Tree, s)
 	if err != nil {
 		return nil, err
 	}
-	c, err := build.Check(b, s)
+	c, _, err := build.Check(b, s)
 	if err != nil {
 		return nil, fmt.Errorf("compare: %w", err)
 	}
-	sh, err := sheet(c, t)
+	st, err := sim.Simulate(b)
 	if err != nil {
-		return nil, err
+		return nil, fmt.Errorf("compare: %w", err)
 	}
 	v, err := readValues(dir)
 	if err != nil {
@@ -149,28 +155,43 @@ func compareBuild(dir, game, league string, l pins.League, s *dataset.Store, t *
 			Ours: float64(n), PoB: float64(v.TreeOnly.Allocated), PoBFull: float64(v.Full.Allocated), HasPoB: true,
 		})
 	}
-	ms, err := compareOutputs(sh, v, league, name)
+	out = append(out, warnings(st, league, name)...)
+	ms, err := compareOutputs(st, v, league, name)
 	return append(out, ms...), err
 }
 
-// compareOutputs compares every catalogue output of sh with PoB's values v.
-func compareOutputs(sh *rules.Sheet, v *pob.Values, league, name string) ([]Mismatch, error) {
+// warnings turns the simulation's warnings into mismatches, except stats left out as not
+// modelled, which the output mismatches show: a dropped node or mastery choice would otherwise
+// change values silently and land on an entry for another cause.
+func warnings(st *simulator.Stats, league, name string) []Mismatch {
+	var out []Mismatch
+	for _, w := range st.Warnings() {
+		if w.Code == simulator.UnmodelledStat {
+			continue
+		}
+		out = append(out, Mismatch{League: league, Build: name, Output: warningPrefix + string(w.Code), Detail: w.Subject + ": " + w.Message})
+	}
+	return out
+}
+
+// compareOutputs compares every catalogue output of st with PoB's values v.
+func compareOutputs(st *simulator.Stats, v *pob.Values, league, name string) ([]Mismatch, error) {
 	var out []Mismatch
 	for _, o := range rules.Outputs() {
-		get, ok := keyMap()[o.Name]
+		get, ok := keyMap()[o.Key]
 		if !ok {
-			return nil, fmt.Errorf("compare: %w %s", errNoKey, o.Name)
+			return nil, fmt.Errorf("compare: %w %s", errNoKey, o.Key)
 		}
-		ours, err := sh.Output(o.Name)
-		if err != nil {
-			return nil, fmt.Errorf("compare: %w", err)
+		ours, ok := st.Get(o.Key)
+		if !ok {
+			return nil, fmt.Errorf("compare: %w %s", errNoKey, o.Key)
 		}
 		p, has := get(v.TreeOnly.Outputs)
 		full, _ := get(v.Full.Outputs)
 		if has && math.Abs(ours-p) <= tolerance {
 			continue
 		}
-		out = append(out, Mismatch{League: league, Build: name, Output: o.Name, Ours: ours, PoB: p, PoBFull: full, HasPoB: has})
+		out = append(out, Mismatch{League: league, Build: name, Output: string(o.Key), Ours: ours, PoB: p, PoBFull: full, HasPoB: has})
 	}
 	return out, nil
 }
@@ -193,18 +214,6 @@ func Allocated(c *build.Checked) int {
 		}
 	}
 	return len(ids)
-}
-
-func sheet(c *build.Checked, t *semantics.Table) (*rules.Sheet, error) {
-	r, err := resolve.Resolve(c)
-	if err != nil {
-		return nil, fmt.Errorf("compare: %w", err)
-	}
-	sh, err := rules.Open(r, t)
-	if err != nil {
-		return nil, fmt.Errorf("compare: %w", err)
-	}
-	return sh, nil
 }
 
 func readValues(dir string) (*pob.Values, error) {

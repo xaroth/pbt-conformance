@@ -2,9 +2,11 @@ package compare_test
 
 import (
 	"context"
+	"encoding/json"
 	"errors"
 	"os"
 	"path/filepath"
+	"slices"
 	"strings"
 	"testing"
 
@@ -13,7 +15,9 @@ import (
 	"github.com/xaroth/pbt-conformance/pob"
 
 	"github.com/xaroth/pbt-engine/build"
+	"github.com/xaroth/pbt-engine/config"
 	"github.com/xaroth/pbt-engine/dataset"
+	"github.com/xaroth/pbt-engine/rules/poe1"
 )
 
 // env returns the variable or skips the test when it is not set.
@@ -60,8 +64,10 @@ func TestFromPoB(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
+	stage, _, _ := config.Get(b.Config, poe1.Campaign)
+	bandits, _, _ := config.Get(b.Config, poe1.Bandits)
 	if b.Class != "Metadata/Characters/Str/Str" || b.Level != 90 || len(b.Nodes) != 2 ||
-		b.Scenario.Campaign != build.CampaignComplete || b.Scenario.Bandits != build.BanditsKillAll {
+		stage != poe1.CampaignComplete || bandits != poe1.BanditsKillAll || len(b.Masteries) != 0 {
 		t.Errorf("got %+v", b)
 	}
 	jugg := strings.Replace(string(fixture(t)), `ascendClassName="None"`, `ascendClassName="Juggernaut"`, 1)
@@ -70,15 +76,24 @@ func TestFromPoB(t *testing.T) {
 	if b, err = compare.FromPoB([]byte(jugg), "poe1", "3.29.3.3", "3_29", s); err != nil {
 		t.Fatal(err)
 	}
-	if b.Ascendancy != "Juggernaut" || b.Scenario.Campaign != build.CampaignActs6To10 {
-		t.Errorf("ascendancy and campaign: got %q, %q", b.Ascendancy, b.Scenario.Campaign)
+	stage, _, _ = config.Get(b.Config, poe1.Campaign)
+	if b.Ascendancy != "Juggernaut" || stage != poe1.CampaignActs6To10 {
+		t.Errorf("ascendancy and campaign: got %q, %q", b.Ascendancy, stage)
+	}
+	withMasteries := strings.Replace(string(fixture(t)), `<Spec `, `<Spec masteryEffects="{4139,47642},{12382,64381}" `, 1)
+	if b, err = compare.FromPoB([]byte(withMasteries), "poe1", "3.29.3.3", "3_29", s); err != nil {
+		t.Fatal(err)
+	}
+	if len(b.Masteries) != 2 || b.Masteries[4139] != 47642 || b.Masteries[12382] != 64381 {
+		t.Errorf("masteries: got %v", b.Masteries)
 	}
 	for name, data := range map[string]string{
-		"other tree": strings.Replace(string(fixture(t)), "3_29", "3_28", 1),
-		"bad class":  strings.Replace(string(fixture(t)), `className="Marauder"`, `className="Barbarian"`, 1),
-		"bad node":   strings.Replace(string(fixture(t)), "31628", "x", 1),
-		"bad bandit": strings.Replace(string(fixture(t)), `bandit="None"`, `bandit="Eramir"`, 1),
-		"not xml":    "<",
+		"other tree":  strings.Replace(string(fixture(t)), "3_29", "3_28", 1),
+		"bad class":   strings.Replace(string(fixture(t)), `className="Marauder"`, `className="Barbarian"`, 1),
+		"bad node":    strings.Replace(string(fixture(t)), "31628", "x", 1),
+		"bad bandit":  strings.Replace(string(fixture(t)), `bandit="None"`, `bandit="Eramir"`, 1),
+		"bad mastery": strings.Replace(string(fixture(t)), `<Spec `, `<Spec masteryEffects="{4139}" `, 1),
+		"not xml":     "<",
 	} {
 		if _, err := compare.FromPoB([]byte(data), "poe1", "3.29.3.3", "3_29", s); !errors.Is(err, compare.ErrPoBXML) {
 			t.Errorf("%s: got %v, want %v", name, err, compare.ErrPoBXML)
@@ -136,12 +151,46 @@ func TestAllocatedCountsStarts(t *testing.T) {
 	} {
 		nb := *b
 		nb.Ascendancy, nb.Nodes = tc.ascendancy, tc.nodes
-		c, err := build.Check(&nb, s)
+		c, _, err := build.Check(&nb, s)
 		if err != nil {
 			t.Fatal(err)
 		}
 		if got := compare.Allocated(c); got != tc.want {
 			t.Errorf("%s: got %d, want %d", tc.name, got, tc.want)
 		}
+	}
+}
+
+// A build the check fixes shows its warning as a mismatch to triage, so a dropped node or
+// mastery choice cannot pass as another entry's cause.
+func TestRunReportsWarnings(t *testing.T) {
+	t.Parallel()
+	datasets := env(t, "PBT_DATASETS")
+	root := t.TempDir()
+	dir := filepath.Join(root, "builds", "3.29", "01-marauder-unknown-node")
+	if err := os.MkdirAll(dir, 0o755); err != nil {
+		t.Fatal(err)
+	}
+	xml := strings.Replace(string(fixture(t)), `nodes="47175,31628"`, `nodes="47175,31628,4294967"`, 1)
+	for _, name := range []string{pob.FullXML, pob.TreeOnlyXML} {
+		if err := os.WriteFile(filepath.Join(dir, name), []byte(xml), 0o600); err != nil {
+			t.Fatal(err)
+		}
+	}
+	values, err := json.Marshal(pob.Values{})
+	if err != nil {
+		t.Fatal(err)
+	}
+	if err := os.WriteFile(filepath.Join(dir, pob.ValuesFile), values, 0o600); err != nil {
+		t.Fatal(err)
+	}
+	ms, err := compare.Run(root, datasets, repoPins(t), "poe1", "3.29")
+	if err != nil {
+		t.Fatal(err)
+	}
+	if !slices.ContainsFunc(ms, func(m compare.Mismatch) bool {
+		return m.Output == "warning:node-unknown" && strings.HasPrefix(m.Detail, "node 4294967: ")
+	}) {
+		t.Errorf("no node-unknown warning in %+v", ms)
 	}
 }

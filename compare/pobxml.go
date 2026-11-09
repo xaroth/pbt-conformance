@@ -9,7 +9,9 @@ import (
 	"strings"
 
 	"github.com/xaroth/pbt-engine/build"
+	"github.com/xaroth/pbt-engine/config"
 	"github.com/xaroth/pbt-engine/dataset"
+	"github.com/xaroth/pbt-engine/rules/poe1"
 )
 
 // ErrPoBXML marks a build XML that cannot be read into a pbt-engine build.
@@ -25,8 +27,9 @@ type pobFile struct {
 	Tree struct {
 		Active int `xml:"activeSpec,attr"`
 		Specs  []struct {
-			TreeVersion string `xml:"treeVersion,attr"`
-			Nodes       string `xml:"nodes,attr"`
+			TreeVersion    string `xml:"treeVersion,attr"`
+			Nodes          string `xml:"nodes,attr"`
+			MasteryEffects string `xml:"masteryEffects,attr"`
 		} `xml:"Spec"`
 	} `xml:"Tree"`
 	Config struct {
@@ -45,10 +48,11 @@ type pobInput struct {
 }
 
 // FromPoB reads a PoB build XML as a pbt-engine build for version of game, with what the
-// build format has: class, ascendancy, level, the active tree's nodes, bandits and the campaign
-// stage from PoB's resistance penalty. Class and ascendancy names map to ids through the
-// dataset's English text. It fails when the active tree is not for tree, the league's PoB
-// tree version. Mastery effects, items and skills are left out: the build format has none yet.
+// build format has: class, ascendancy, level, the active tree's nodes and mastery choices, and
+// as config the bandits and the campaign stage from PoB's resistance penalty. Class and
+// ascendancy names map to ids through the dataset's English text. It fails when the active
+// tree is not for tree, the league's PoB tree version. Items and skills are left out: the
+// build format has none yet.
 func FromPoB(data []byte, game, version, tree string, s *dataset.Store) (*build.Build, error) {
 	var f pobFile
 	if err := xml.Unmarshal(data, &f); err != nil {
@@ -70,13 +74,33 @@ func FromPoB(data []byte, game, version, tree string, s *dataset.Store) (*build.
 	if b.Nodes, err = nodes(spec.Nodes); err != nil {
 		return nil, err
 	}
-	if b.Scenario.Bandits, err = bandits(f.Build.Bandit); err != nil {
+	if b.Masteries, err = masteries(spec.MasteryEffects); err != nil {
 		return nil, err
 	}
-	if b.Scenario.Campaign, err = campaign(f.inputs()); err != nil {
+	if b.Config, err = f.config(); err != nil {
 		return nil, err
 	}
 	return b, nil
+}
+
+// config returns the bandit choice and campaign stage as poe1 config values.
+func (f *pobFile) config() (config.Values, error) {
+	bandit, err := bandits(f.Build.Bandit)
+	if err != nil {
+		return nil, err
+	}
+	stage, err := campaign(f.inputs())
+	if err != nil {
+		return nil, err
+	}
+	var v config.Values
+	if err := config.Set(&v, poe1.Bandits, bandit); err != nil {
+		return nil, fmt.Errorf("%w: %w", ErrPoBXML, err)
+	}
+	if err := config.Set(&v, poe1.Campaign, stage); err != nil {
+		return nil, fmt.Errorf("%w: %w", ErrPoBXML, err)
+	}
+	return v, nil
 }
 
 // inputs are the config inputs PoB applies: the active config set's, or the legacy flat list.
@@ -126,17 +150,36 @@ func nodes(list string) ([]uint32, error) {
 	return slices.Compact(out), nil
 }
 
+// masteries reads PoB's masteryEffects, "{node,effect},{node,effect}".
+func masteries(list string) (map[uint32]uint32, error) {
+	out := map[uint32]uint32{}
+	for pair := range strings.SplitSeq(list, "},") {
+		pair = strings.Trim(strings.TrimSpace(pair), "{}")
+		if pair == "" {
+			continue
+		}
+		n, e, ok := strings.Cut(pair, ",")
+		node, err1 := strconv.ParseUint(strings.TrimSpace(n), 10, 32)
+		effect, err2 := strconv.ParseUint(strings.TrimSpace(e), 10, 32)
+		if !ok || err1 != nil || err2 != nil {
+			return nil, fmt.Errorf("%w: mastery effect %q", ErrPoBXML, pair)
+		}
+		out[uint32(node)] = uint32(effect)
+	}
+	return out, nil
+}
+
 // bandits maps PoB's bandit choice; "None" is PoB's kill-all.
-func bandits(pob string) (build.Bandits, error) {
+func bandits(pob string) (poe1.BanditChoice, error) {
 	switch pob {
 	case "", "None":
-		return build.BanditsKillAll, nil
+		return poe1.BanditsKillAll, nil
 	case "Alira":
-		return build.BanditsHelpAlira, nil
+		return poe1.BanditsHelpAlira, nil
 	case "Kraityn":
-		return build.BanditsHelpKraityn, nil
+		return poe1.BanditsHelpKraityn, nil
 	case "Oak":
-		return build.BanditsHelpOak, nil
+		return poe1.BanditsHelpOak, nil
 	}
 	return "", fmt.Errorf("%w: bandit %q", ErrPoBXML, pob)
 }
@@ -148,20 +191,20 @@ const (
 	penaltyActs6To10 = -30
 )
 
-func campaign(inputs []pobInput) (build.Campaign, error) {
+func campaign(inputs []pobInput) (poe1.CampaignStage, error) {
 	for _, in := range inputs {
 		if in.Name != "resistancePenalty" {
 			continue
 		}
 		switch in.Number {
 		case strconv.Itoa(penaltyComplete):
-			return build.CampaignComplete, nil
+			return poe1.CampaignComplete, nil
 		case strconv.Itoa(penaltyActs6To10):
-			return build.CampaignActs6To10, nil
+			return poe1.CampaignActs6To10, nil
 		case "0":
-			return build.CampaignActs1To5, nil
+			return poe1.CampaignActs1To5, nil
 		}
 		return "", fmt.Errorf("%w: resistance penalty %q", ErrPoBXML, in.Number)
 	}
-	return build.CampaignComplete, nil
+	return poe1.CampaignComplete, nil
 }
