@@ -1,1 +1,103 @@
-[]
+[
+  {
+    "id": "charges-hierophant-mana-regeneration",
+    "kind": "pending",
+    "build": "*-templar-*-hierophant-ancestral-bond",
+    "output": "player.mana_regeneration",
+    "reason": "Power charges (M11): node 12888 gives 8% increased mana regeneration rate per power charge; PoB counts the minimum power charges from nodes 25651 and 9261",
+    "evidence": "PoB ManaRegen INC from Tree:12888 is 8 per power charge times PowerChargesMin; the engine notes the stat as not applied (charges)"
+  },
+  {
+    "id": "charges-slayer-armour",
+    "kind": "pending",
+    "league": "3.28",
+    "build": "*-duelist-*-slayer-resolute-technique",
+    "output": "player.armour",
+    "reason": "Endurance charges (M11): node 65485, 5% increased armour per endurance charge; PoB counts one",
+    "evidence": "PoB Armour INC 5 from Tree:65485 (Multiplier); the engine notes the stat as not applied (charges)"
+  },
+  {
+    "id": "charges-and-mastery-slayer-life-regeneration",
+    "kind": "pending",
+    "league": "3.28",
+    "build": "*-duelist-L[89]0-slayer-resolute-technique",
+    "output": "player.life_regeneration",
+    "reason": "Endurance charges (M11) and mastery effects (M3): node 48109 regenerates 0.2% of life per second per endurance charge, and mastery effects raise life",
+    "evidence": "With mastery effects removed PoB gives 108.4 and 120.3 against our 103.7 and 115.1; the rest is LifeRegenPercent 0.2 from Tree:48109"
+  },
+  {
+    "id": "spell-block-elementalist-mana-regeneration",
+    "kind": "pending",
+    "league": "3.28",
+    "build": "*-witch-*-elementalist-elemental-overload",
+    "output": "player.mana_regeneration",
+    "reason": "Chance to block spell damage is not a sheet value yet: node 18174 gives 1% increased mana regeneration rate per 1% chance to block spell damage",
+    "evidence": "PoB ManaRegen INC 8 from Tree:18174 (PerStat); the engine notes the stat as not applied (scale)"
+  },
+  {
+    "id": "mastery-chieftain-life",
+    "kind": "pending",
+    "build": "*-marauder-*-chieftain-righteous-fire",
+    "output": "player.life",
+    "reason": "Mastery effects (M3): the build format has no mastery effect choices, so life mastery effects are left out",
+    "evidence": "With masteryEffects removed from the tree-only XML, PoB equals our value"
+  },
+  {
+    "id": "mastery-chieftain-life-regeneration",
+    "kind": "pending",
+    "build": "*-marauder-*-chieftain-righteous-fire",
+    "output": "player.life_regeneration",
+    "reason": "Mastery effects (M3): regeneration follows maximum life, which misses the life mastery effects",
+    "evidence": "With masteryEffects removed from the tree-only XML, PoB equals our value"
+  },
+  {
+    "id": "mastery-slayer-life",
+    "kind": "pending",
+    "build": "*-duelist-*-slayer-resolute-technique",
+    "output": "player.life",
+    "reason": "Mastery effects (M3): the build format has no mastery effect choices, so life mastery effects are left out",
+    "evidence": "With masteryEffects removed from the tree-only XML, PoB equals our value"
+  },
+  {
+    "id": "mastery-slayer-life-regeneration",
+    "kind": "pending",
+    "build": "*-duelist-*-slayer-resolute-technique",
+    "output": "player.life_regeneration",
+    "reason": "Mastery effects (M3): regeneration follows maximum life, which misses the life mastery effects",
+    "evidence": "With masteryEffects removed from the tree-only XML, PoB equals our value"
+  },
+  {
+    "id": "mastery-deadeye-life",
+    "kind": "pending",
+    "build": "*-ranger-*-deadeye-ghost-dance",
+    "output": "player.life",
+    "reason": "Mastery effects (M3): the build format has no mastery effect choices, so life mastery effects are left out",
+    "evidence": "With masteryEffects removed from the tree-only XML, PoB equals our value"
+  },
+  {
+    "id": "mastery-elementalist-life",
+    "kind": "pending",
+    "build": "*-witch-*-elementalist-elemental-overload",
+    "output": "player.life",
+    "reason": "Mastery effects (M3): the build format has no mastery effect choices, so life mastery effects are left out",
+    "evidence": "With masteryEffects removed from the tree-only XML, PoB equals our value"
+  },
+  {
+    "id": "mastery-hierophant-life",
+    "kind": "pending",
+    "league": "3.28",
+    "build": "*-templar-*-hierophant-ancestral-bond",
+    "output": "player.life",
+    "reason": "Mastery effects (M3): the build format has no mastery effect choices, so life mastery effects are left out",
+    "evidence": "With masteryEffects removed from the tree-only XML, PoB equals our value"
+  },
+  {
+    "id": "mastery-hierophant-life-regeneration",
+    "kind": "pending",
+    "league": "3.28",
+    "build": "*-templar-*-hierophant-ancestral-bond",
+    "output": "player.life_regeneration",
+    "reason": "Mastery effects (M3): regeneration follows maximum life, which misses the life mastery effects",
+    "evidence": "With masteryEffects removed from the tree-only XML, PoB equals our value"
+  }
+]
