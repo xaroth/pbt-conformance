@@ -128,6 +128,10 @@ func report(w io.Writer, ms []compare.Mismatch, stale []string) error {
 			t = "UNTRIAGED"
 			untriaged++
 		}
+		if m.Detail != "" {
+			fmt.Fprintf(tw, "%s\t%s\t%s\t%s\t\t\t%s\n", m.League, m.Build, m.Output, m.Detail, t)
+			continue
+		}
 		fmt.Fprintf(tw, "%s\t%s\t%s\t%v\t%s\t%v\t%s\n", m.League, m.Build, m.Output, m.Ours, p, m.PoBFull, t)
 	}
 	if err := tw.Flush(); err != nil {

@@ -67,7 +67,8 @@ func keyMap() map[output.Key]pobValue {
 	return m
 }
 
-// Mismatch is one output of one build where pbt-engine and PoB differ.
+// Mismatch is one output of one build where pbt-engine and PoB differ, or a simulation warning
+// (Output "warning:<code>", Detail its subject and message) that must be triaged like one.
 type Mismatch struct {
 	League, Build, Output string
 	// Ours is pbt-engine's value; PoB is PoB's for the tree-only build, which is what the
@@ -76,7 +77,12 @@ type Mismatch struct {
 	HasPoB             bool
 	// Triage is the id of the triage entry that accepts the mismatch, empty if none.
 	Triage string
+	// Detail is a warning's subject and message.
+	Detail string
 }
+
+// warningPrefix starts the Output of a warning mismatch.
+const warningPrefix = "warning:"
 
 // Run compares every build of league under root, with the pinned dataset under datasets.
 // A build that cannot be compared at all (unreadable XML, failing build check) is an error.
@@ -149,8 +155,23 @@ func compareBuild(dir, game, league string, l pins.League, sim *simulator.Sim) (
 			Ours: float64(n), PoB: float64(v.TreeOnly.Allocated), PoBFull: float64(v.Full.Allocated), HasPoB: true,
 		})
 	}
+	out = append(out, warnings(st, league, name)...)
 	ms, err := compareOutputs(st, v, league, name)
 	return append(out, ms...), err
+}
+
+// warnings turns the simulation's warnings into mismatches, except stats left out as not
+// modelled, which the output mismatches show: a dropped node or mastery choice would otherwise
+// change values silently and land on an entry for another cause.
+func warnings(st *simulator.Stats, league, name string) []Mismatch {
+	var out []Mismatch
+	for _, w := range st.Warnings() {
+		if w.Code == simulator.UnmodelledStat {
+			continue
+		}
+		out = append(out, Mismatch{League: league, Build: name, Output: warningPrefix + string(w.Code), Detail: w.Subject + ": " + w.Message})
+	}
+	return out
 }
 
 // compareOutputs compares every catalogue output of st with PoB's values v.
