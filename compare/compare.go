@@ -129,7 +129,11 @@ func compareBuild(dir, game, league string, l pins.League, s *dataset.Store, t *
 	if err != nil {
 		return nil, err
 	}
-	sh, err := sheet(b, s, t)
+	c, err := build.Check(b, s)
+	if err != nil {
+		return nil, fmt.Errorf("compare: %w", err)
+	}
+	sh, err := sheet(c, t)
 	if err != nil {
 		return nil, err
 	}
@@ -139,10 +143,10 @@ func compareBuild(dir, game, league string, l pins.League, s *dataset.Store, t *
 	}
 	name := filepath.Base(dir)
 	var out []Mismatch
-	if v.TreeOnly.Allocated != len(b.Nodes) {
+	if n := Allocated(c); v.TreeOnly.Allocated != n {
 		out = append(out, Mismatch{
 			League: league, Build: name, Output: "allocated_nodes",
-			Ours: float64(len(b.Nodes)), PoB: float64(v.TreeOnly.Allocated), PoBFull: float64(v.Full.Allocated), HasPoB: true,
+			Ours: float64(n), PoB: float64(v.TreeOnly.Allocated), PoBFull: float64(v.Full.Allocated), HasPoB: true,
 		})
 	}
 	ms, err := compareOutputs(sh, v, league, name)
@@ -171,11 +175,27 @@ func compareOutputs(sh *rules.Sheet, v *pob.Values, league, name string) ([]Mism
 	return out, nil
 }
 
-func sheet(b *build.Build, s *dataset.Store, t *semantics.Table) (*rules.Sheet, error) {
-	c, err := build.Check(b, s)
-	if err != nil {
-		return nil, fmt.Errorf("compare: %w", err)
+// Allocated counts the build's nodes as PoB does: PoB always allocates the class start and,
+// with an ascendancy, the ascendancy start, whether the build lists them or not.
+func Allocated(c *build.Checked) int {
+	ids := map[uint32]bool{}
+	for _, n := range c.Nodes() {
+		ids[n.ID] = true
 	}
+	if cl := c.Class(); cl != nil {
+		ids[cl.StartNode] = true
+	}
+	if asc := c.Build().Ascendancy; asc != "" {
+		for i := range c.Tree().Nodes {
+			if n := &c.Tree().Nodes[i]; n.Kind == dataset.AscendancyStart && n.Ascendancy == asc {
+				ids[n.ID] = true
+			}
+		}
+	}
+	return len(ids)
+}
+
+func sheet(c *build.Checked, t *semantics.Table) (*rules.Sheet, error) {
 	r, err := resolve.Resolve(c)
 	if err != nil {
 		return nil, fmt.Errorf("compare: %w", err)
