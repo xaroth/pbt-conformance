@@ -117,3 +117,31 @@ func TestRun(t *testing.T) {
 		t.Errorf("missing dataset: got %v, want %v", err, compare.ErrDataset)
 	}
 }
+
+func TestAllocatedCountsStarts(t *testing.T) {
+	t.Parallel()
+	s := store329(t)
+	b, err := compare.FromPoB(fixture(t), "poe1", "3.29.3.3", "3_29", s)
+	if err != nil {
+		t.Fatal(err)
+	}
+	for _, tc := range []struct {
+		name, ascendancy string
+		nodes            []uint32
+		want             int
+	}{
+		{"class start only", "", nil, 1},
+		{"with ascendancy", "Juggernaut", nil, 2},
+		{"start listed, not counted twice", "", b.Nodes, len(b.Nodes)},
+	} {
+		nb := *b
+		nb.Ascendancy, nb.Nodes = tc.ascendancy, tc.nodes
+		c, err := build.Check(&nb, s)
+		if err != nil {
+			t.Fatal(err)
+		}
+		if got := compare.Allocated(c); got != tc.want {
+			t.Errorf("%s: got %d, want %d", tc.name, got, tc.want)
+		}
+	}
+}
