@@ -1,0 +1,62 @@
+{
+  "pob": {
+    "tag": "v2.65.0",
+    "commit": "f9f4f3b4ab6a3a37d2eb693265b5c73317ff42a6"
+  },
+  "full": {
+    "allocated": 84,
+    "outputs": {
+      "Armour": 9379,
+      "ChaosResist": -17,
+      "ChaosResistTotal": -17,
+      "ColdResist": 77,
+      "ColdResistTotal": 84,
+      "Dex": 154,
+      "EnergyShield": 0,
+      "EnergyShieldRegen": 0,
+      "Evasion": 0,
+      "FireResist": 77,
+      "FireResistTotal": 116,
+      "Int": 62,
+      "Life": 3120,
+      "LifeRegen": 237.1,
+      "LightningResist": 70,
+      "LightningResistTotal": 70,
+      "Mana": 425,
+      "ManaRegen": 7.4,
+      "MissingChaosResist": 92,
+      "MissingColdResist": 0,
+      "MissingFireResist": 0,
+      "MissingLightningResist": 8,
+      "Str": 491
+    }
+  },
+  "treeOnly": {
+    "allocated": 84,
+    "outputs": {
+      "Armour": 23,
+      "ChaosResist": -60,
+      "ChaosResistTotal": -60,
+      "ColdResist": -55,
+      "ColdResistTotal": -55,
+      "Dex": 123,
+      "EnergyShield": 0,
+      "EnergyShieldRegen": 0,
+      "Evasion": 0,
+      "FireResist": -55,
+      "FireResistTotal": -55,
+      "Int": 24,
+      "Life": 1894,
+      "LifeRegen": 83.3,
+      "LightningResist": -55,
+      "LightningResistTotal": -55,
+      "Mana": 406,
+      "ManaRegen": 7.1,
+      "MissingChaosResist": 135,
+      "MissingColdResist": 132,
+      "MissingFireResist": 132,
+      "MissingLightningResist": 133,
+      "Str": 283
+    }
+  }
+}

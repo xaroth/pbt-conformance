@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathOfBuilding>
+	<Build level="35" targetVersion="3_0" className="Shadow" ascendClassName="Assassin" bandit="None" pantheonMajorGod="None" pantheonMinorGod="None" mainSocketGroup="1" viewMode="TREE" characterLevelAutoMode="false" />
+	<Tree activeSpec="1">
+		<Spec treeVersion="3_28" classId="6" ascendClassId="1" nodes="1405,1461,1648,1891,3424,3863,4011,5802,5823,6064,7634,8640,8920,8938,9015,9355,11489,11811,18182,21264,23439,28012,28754,31359,32227,35283,35894,39524,44134,45272,45838,46277,46408,46676,47422,49900,49978,52157,52714,55414,56295,58229,59009,59606,64509" masteryEffects="{7634,44869}" secondaryAscendClassId="0">
+			<Sockets />
+		</Spec>
+	</Tree>
+</PathOfBuilding>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathOfBuilding>
+	<Build level="35" targetVersion="3_0" className="Templar" ascendClassName="Hierophant" bandit="Alira" pantheonMajorGod="None" pantheonMinorGod="None" mainSocketGroup="1" viewMode="TREE" characterLevelAutoMode="false"/>
+	<Tree activeSpec="1">
+		<Spec treeVersion="3_28" classId="5" ascendClassId="2" secondaryAscendClassId="0" nodes="1031,1105,1203,4397,5296,7444,7938,11551,13009,14936,16243,17735,19635,20228,21958,22972,26714,26866,30940,31875,33310,33755,35556,36678,38176,39521,39841,39916,41472,41970,44184,44908,48878,49254,49651,50472,51146,51524,60398,61471,63067,63447,64210" masteryEffects="">
+			<Sockets>
+			</Sockets>
+		</Spec>
+	</Tree>
+	<Items activeItemSet="1" useSecondWeaponSet="false">
+		<Item id="1">
+Rarity: RARE
+Dread Branch
+Spiraled Wand
+Item Level: 33
+Sockets: B-B-G
+Implicits: 1
+Adds 1 to 10 Lightning Damage to Spells and Attacks
+Adds 8 to 15 Cold Damage
+Adds 6 to 12 Fire Damage
+14% increased Critical Strike Chance
++90 to Accuracy Rating
+		</Item>
+		<Item id="2">
+Rarity: RARE
+Rune Ward
+Tarnished Spirit Shield
+Item Level: 33
+Sockets: B-B
+Implicits: 1
+8% increased Spell Damage
++48 to maximum Life
++24% to Cold Resistance
++18% to Lightning Resistance
++16 to Strength
+		</Item>
+		<Item id="3">
+Rarity: UNIQUE
+Goldrim
+Leather Cap
+Item Level: 20
+Sockets: B-B-R
+Implicits: 0
++40 to Evasion Rating
+10% increased Rarity of Items found
++35% to all Elemental Resistances
+Reflects 4 Physical Damage to Melee Attackers
+		</Item>
+		<Item id="4">
+Rarity: RARE
+Storm Shell
+Full Ringmail
+Item Level: 34
+Sockets: R-B-B-G
+Implicits: 0
++58 to maximum Life
++22% to Fire Resistance
++18 to Strength
++15% to Cold Resistance
+		</Item>
+		<Item id="5">
+Rarity: RARE
+Kraken Grip
+Ringmail Gloves
+Item Level: 30
+Sockets: R-G-B
+Implicits: 0
++42 to maximum Life
++20% to Lightning Resistance
+Adds 2 to 4 Physical Damage to Attacks
++18 to Dexterity
+		</Item>
+		<Item id="6">
+Rarity: UNIQUE
+Wanderlust
+Wool Shoes
+Item Level: 15
+Sockets: G-R
+Implicits: 0
++5 to Dexterity
++15 to maximum Energy Shield
+30% increased Mana Regeneration Rate
+20% increased Movement Speed
+Cannot be Frozen
+		</Item>
+		<Item id="7">
+Rarity: RARE
+Gale Beads
+Jade Amulet
+Item Level: 30
+Implicits: 1
++24 to Dexterity
++40 to maximum Life
+Adds 1 to 16 Lightning Damage to Attacks
++18% to Fire Resistance
+		</Item>
+		<Item id="8">
+Rarity: RARE
+Glyph Loop
+Topaz Ring
+Item Level: 28
+Implicits: 1
++24% to Lightning Resistance
+Adds 4 to 8 Fire Damage to Attacks
++35 to maximum Life
++15 to Intelligence
+		</Item>
+		<Item id="9">
+Rarity: RARE
+Viper Coil
+Ruby Ring
+Item Level: 30
+Implicits: 1
++25% to Fire Resistance
++20% to Cold Resistance
++30 to maximum Life
++12 to Strength
+		</Item>
+		<Item id="10">
+Rarity: UNIQUE
+Prismweave
+Rustic Sash
+Item Level: 40
+Implicits: 1
+18% increased Global Physical Damage
+Adds 15 to 31 Fire Damage to Attacks
+Adds 11 to 26 Cold Damage to Attacks
+Adds 1 to 64 Lightning Damage to Attacks
++11% to all Elemental Resistances
+30% increased Elemental Damage with Attack Skills during any Flask Effect
+		</Item>
+		<Item id="11">
+Rarity: MAGIC
+Grand Life Flask
+Item Level: 30
+Quality: 20
+Implicits: 0
+		</Item>
+		<Item id="12">
+Rarity: MAGIC
+Quicksilver Flask
+Item Level: 20
+Quality: 20
+Implicits: 0
+		</Item>
+		<ItemSet id="1" useSecondWeaponSet="false">
+			<Slot name="Weapon 1" itemId="1"/>
+			<Slot name="Weapon 2" itemId="2"/>
+			<Slot name="Helmet" itemId="3"/>
+			<Slot name="Body Armour" itemId="4"/>
+			<Slot name="Gloves" itemId="5"/>
+			<Slot name="Boots" itemId="6"/>
+			<Slot name="Amulet" itemId="7"/>
+			<Slot name="Ring 1" itemId="8"/>
+			<Slot name="Ring 2" itemId="9"/>
+			<Slot name="Belt" itemId="10"/>
+			<Slot name="Flask 1" itemId="11" active="true"/>
+			<Slot name="Flask 2" itemId="12" active="true"/>
+		</ItemSet>
+	</Items>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="0">
+		<SkillSet id="1">
+			<Skill enabled="true" includeInFullDPS="false" mainActiveSkill="1" mainActiveSkillCalcs="1" slot="Body Armour">
+				<Gem nameSpec="Kinetic Fusillade" skillId="KineticFusillade" gemId="Metadata/Items/Gems/SkillGemKineticFusillade" level="7" quality="0" enabled="true"/>
+				<Gem nameSpec="Ballista Totem" skillId="SupportBallistaTotem" gemId="Metadata/Items/Gems/SkillGemSupportBallistaTotem" level="8" quality="0" enabled="true"/>
+				<Gem nameSpec="Volley" skillId="SupportVolley" gemId="Metadata/Items/Gems/SkillGemSupportVolley" level="9" quality="0" enabled="true"/>
+				<Gem nameSpec="Less Duration" skillId="SupportLessDuration" gemId="Metadata/Items/Gems/SkillGemSupportLessDuration" level="2" quality="0" enabled="true"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="false" mainActiveSkill="1" mainActiveSkillCalcs="1" slot="Gloves">
+				<Gem nameSpec="Anger" skillId="Anger" gemId="Metadata/Items/Gems/SkillGemAnger" level="4" quality="0" enabled="true"/>
+				<Gem nameSpec="Frostblink" skillId="Frostblink" gemId="Metadata/Items/Gems/SkillGemFrostblink" level="9" quality="0" enabled="true"/>
+				<Gem nameSpec="Faster Attacks" skillId="SupportFasterAttacks" gemId="Metadata/Items/Gems/SkillGemSupportFasterAttacks" level="8" quality="0" enabled="true"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="false" mainActiveSkill="1" mainActiveSkillCalcs="1" slot="Helmet">
+				<Gem nameSpec="Flame Wall" skillId="FlameWall" gemId="Metadata/Items/Gems/SkillGemFlameWall" level="9" quality="0" enabled="true"/>
+				<Gem nameSpec="Elemental Weakness" skillId="ElementalWeakness" gemId="Metadata/Items/Gems/SkillGemElementalWeakness" level="4" quality="0" enabled="true"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="false" mainActiveSkill="1" mainActiveSkillCalcs="1" slot="Weapon 1">
+				<Gem nameSpec="Precision" skillId="Precision" gemId="Metadata/Items/Gems/SkillGemPrecision" level="7" quality="0" enabled="true"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="false" mainActiveSkill="1" mainActiveSkillCalcs="1" slot="Boots">
+				<Gem nameSpec="Shield Charge" skillId="ShieldCharge" gemId="Metadata/Items/Gems/SkillGemShieldCharge" level="9" quality="0" enabled="true"/>
+				<Gem nameSpec="Momentum" skillId="SupportMomentum" gemId="Metadata/Items/Gems/SkillGemSupportMomentum" level="10" quality="0" enabled="true"/>
+			</Skill>
+		</SkillSet>
+	</Skills>
+	<Config activeConfigSet="1">
+		<ConfigSet id="1">
+			<Input name="bandit" string="Alira"/>
+		</ConfigSet>
+	</Config>
+</PathOfBuilding>

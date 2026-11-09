@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathOfBuilding>
+	<Build level="60" targetVersion="3_0" className="Duelist" ascendClassName="Slayer" bandit="None" pantheonMajorGod="TheBrineKing" pantheonMinorGod="None" mainSocketGroup="1" viewMode="TREE" characterLevelAutoMode="false"/>
+	<Tree activeSpec="1">
+		<Spec treeVersion="3_28" classId="4" ascendClassId="1" secondaryAscendClassId="0" nodes="476,1325,1909,3184,3644,5065,5152,5233,6289,6580,6741,7285,8533,8544,10661,11700,12033,13273,14056,14930,15286,16544,18103,18302,20551,20835,23066,23199,24083,24383,24544,24865,24914,25933,26294,27140,28498,29933,30691,31080,31471,31473,31961,33287,33795,34009,34031,34400,34601,34666,37584,37956,40818,40867,40907,41068,42293,42911,43374,43412,45565,47389,48287,48438,48807,49178,49318,49412,50340,50969,50986,55676,56359,56381,58449,59928,60031,60887,61198,62588,62817,63282,63723,64816" masteryEffects="{37956,59281},{62588,34242}">
+			<Sockets>
+
+			</Sockets>
+		</Spec>
+	</Tree>
+	<Items activeItemSet="1" useSecondWeaponSet="false">
+		<Item id="1">
+Rarity: RARE
+Gale Cleaver
+Sundering Axe
+Item Level: 62
+Quality: 10
+Sockets: R-R-R-G-R
+Implicits: 1
++20% to Damage over Time Multiplier for Bleeding
+Adds 19 to 38 Physical Damage
+112% increased Physical Damage
++180 to Accuracy Rating
+17% increased Attack Speed
++28 to Strength
+		</Item>
+		<Item id="2">
+Rarity: RARE
+Corpse Crown
+Samnite Helmet
+Armour: 280
+Item Level: 60
+Quality: 0
+Sockets: R-R-G-B
+Implicits: 0
++79 to maximum Life
+54% increased Armour
++31% to Fire Resistance
++28% to Cold Resistance
+		</Item>
+		<Item id="3">
+Rarity: RARE
+Viper Shell
+Crusader Plate
+Armour: 720
+Item Level: 60
+Quality: 0
+Sockets: R-R-R-G-R
+Implicits: 0
++38 to Strength
++21% to Fire Resistance
+62% increased Armour
++34% to Lightning Resistance
++27% to Cold Resistance
+		</Item>
+		<Item id="4">
+Rarity: RARE
+Doom Grasp
+Ancient Gauntlets
+Armour: 178
+Item Level: 58
+Quality: 0
+Sockets: R-R-G-G
+Implicits: 0
++74 to maximum Life
++28 to Strength
+Adds 4 to 8 Physical Damage to Attacks
++31% to Fire Resistance
++24% to Chaos Resistance
+		</Item>
+		<Item id="5">
+Rarity: RARE
+Sorrow Tread
+Ancient Greaves
+Armour: 186
+Item Level: 58
+Quality: 0
+Sockets: R-R-G
+Implicits: 0
++71 to maximum Life
+25% increased Movement Speed
++27 to Strength
++33% to Cold Resistance
++29% to Lightning Resistance
+		</Item>
+		<Item id="6">
+Rarity: RARE
+Rune Beads
+Amber Amulet
+Item Level: 60
+Implicits: 1
++28 to Strength
+Adds 7 to 14 Physical Damage to Attacks
++68 to maximum Life
++38 to Intelligence
++32% to Fire Resistance
+19% increased Global Physical Damage
+		</Item>
+		<Item id="7">
+Rarity: RARE
+Woe Coil
+Two-Stone Ring
+Item Level: 60
+Implicits: 1
++14% to Fire and Lightning Resistances
++62 to maximum Life
++33% to Cold Resistance
++29 to Strength
+Adds 3 to 7 Physical Damage to Attacks
+		</Item>
+		<Item id="8">
+Rarity: RARE
+Vortex Spiral
+Amethyst Ring
+Item Level: 60
+Implicits: 1
++19% to Chaos Resistance
++58 to maximum Life
++30% to Lightning Resistance
++31 to Dexterity
++24% to Fire Resistance
+		</Item>
+		<Item id="9">
+Rarity: UNIQUE
+Ryslatha's Coil
+Studded Belt
+Item Level: 58
+LevelReq: 20
+Implicits: 1
+25% increased Stun Duration on Enemies
++30 to Strength
+35% more Maximum Physical Attack Damage
+35% less Minimum Physical Attack Damage
+Adds 1 to 17 Physical Damage to Attacks
++88 to maximum Life
+Gain 50 Life when you Stun an Enemy
+		</Item>
+		<Item id="10">
+Rarity: MAGIC
+Bubbling Divine Life Flask of Staunching
+Item Level: 60
+Quality: 0
+Implicits: 0
+50% increased Amount Recovered
+Grants Immunity to Bleeding for 7 seconds if used while Bleeding
+Grants Immunity to Corrupted Blood for 7 seconds if used while affected by Corrupted Blood
+		</Item>
+		<Item id="11">
+Rarity: MAGIC
+Quicksilver Flask of Adrenaline
+Item Level: 30
+Quality: 0
+Implicits: 0
+25% increased Movement Speed during Effect
+		</Item>
+		<Item id="12">
+Rarity: MAGIC
+Granite Flask of the Armadillo
+Item Level: 33
+Quality: 0
+Implicits: 0
+41% increased Armour during Effect
+		</Item>
+		<Item id="13">
+Rarity: MAGIC
+Diamond Flask of the Rainbow
+Item Level: 55
+Quality: 0
+Implicits: 0
++18% to all Elemental Resistances during Effect
+		</Item>
+		<Item id="14">
+Rarity: MAGIC
+Jade Flask of Heat
+Item Level: 55
+Quality: 0
+Implicits: 0
+Grants Immunity to Freeze for 4 seconds if used while Frozen
+Grants Immunity to Chill for 4 seconds if used while Chilled
+		</Item>
+		<ItemSet id="1" useSecondWeaponSet="false">
+			<Slot name="Weapon 1" itemId="1"/>
+			<Slot name="Helmet" itemId="2"/>
+			<Slot name="Body Armour" itemId="3"/>
+			<Slot name="Gloves" itemId="4"/>
+			<Slot name="Boots" itemId="5"/>
+			<Slot name="Amulet" itemId="6"/>
+			<Slot name="Ring 1" itemId="7"/>
+			<Slot name="Ring 2" itemId="8"/>
+			<Slot name="Belt" itemId="9"/>
+			<Slot name="Flask 1" itemId="10" active="true"/>
+			<Slot name="Flask 2" itemId="11" active="true"/>
+			<Slot name="Flask 3" itemId="12" active="true"/>
+			<Slot name="Flask 4" itemId="13" active="true"/>
+			<Slot name="Flask 5" itemId="14" active="true"/>
+		</ItemSet>
+	</Items>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="0">
+		<SkillSet id="1">
+			<Skill slot="Body Armour" enabled="true" mainActiveSkill="1" mainActiveSkillCalcs="1">
+				<Gem nameSpec="Ground Slam of Earthshaking" skillId="GroundSlamAltX" gemId="Metadata/Items/Gems/SkillGemGroundSlam" level="17" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Melee Physical Damage" level="15" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Brutality" level="12" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Chance to Bleed" level="17" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Fortify" level="15" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true" count="1"/>
+			</Skill>
+			<Skill slot="Helmet" enabled="true" mainActiveSkill="1" mainActiveSkillCalcs="1">
+				<Gem nameSpec="Pride" level="15" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Herald of Purity" level="15" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Seismic Cry" level="15" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Autoexertion" level="15" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true" count="1"/>
+			</Skill>
+			<Skill slot="Gloves" enabled="true" mainActiveSkill="1" mainActiveSkillCalcs="1">
+				<Gem nameSpec="Leap Slam" level="16" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Faster Attacks" level="16" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Momentum" level="17" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Maim" level="16" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true" count="1"/>
+			</Skill>
+			<Skill slot="Boots" enabled="true" mainActiveSkill="1" mainActiveSkillCalcs="1">
+				<Gem nameSpec="Blood Rage" level="15" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Enduring Cry" level="16" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true" count="1"/>
+			</Skill>
+		</SkillSet>
+	</Skills>
+	<Config activeConfigSet="1">
+		<ConfigSet id="1" title="Default"/>
+	</Config>
+</PathOfBuilding>

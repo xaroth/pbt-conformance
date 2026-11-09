@@ -1,0 +1,10 @@
+# 3.28 Witch L80: Elementalist Elemental Overload
+
+- Archetype: Penance Brand ignite Elementalist with Spellblade and Rebuke of the Vaal, armour/energy shield gear with life on the tree, shield block, golems; Elemental Overload and Runebinder from L60.
+- Ascendancy: Elementalist (Shaper of Flames; Mastermind of Discord; Liege of the Primordial)
+- Keystones: Elemental Overload, Runebinder
+- Skills: as on the source: Penance Brand, Burning Damage, Swiftbrand, Spellblade, Inspiration, Cruelty (6-link); Flame Surge with Flammability on Hextouch; Steelskin on Automation; Herald of Ash, Malevolence, Determination, Tempest Shield; Flame, Lightning, Chaos and Stone Golem; Frostblink, Arcane Surge, Combustion
+- Notable items: Rebuke of the Vaal (Spellblade weapon as on the source), Legacy of Fury and The Taming as on the source; toned-down rares on the source bases where the level allows (Branded Kite Shield, Saint's Hauberk without life mods for the Life Mastery, Citrine Amulet, Amethyst Ring, Heavy Belt), Prophet Crown and Crusader Gloves in place of the level 84 Divine Crown and Paladin Gloves.
+- Point budget: 102 = 79 (level) + 23 (quests), bandit Alira. 102 allocated incl. 7 masteries. Pantheon: Brine King, Abberath.
+- Source: pobb.in https://pobb.in/bPzgKAzdIMab (real character export of a level 94 Penance Brand Elementalist, league Mirage, tree version 3_28; keystones Elemental Overload and Runebinder), retrieved 2026-11-09; cluster jewels with their nodes and sockets and the Saresh bloodline removed; the freed points refilled with Arcanist's Dominion, Deep Thoughts and Brand Equity plus their path nodes (Mana, Mana and Life, Brand Duration, Brand Recall Cooldown Recovery, Energy Shield); tree trimmed to the level budget, bandit Alira as on the source; lower levels grown from the class start inside the L90 tree: fire DoT and ignite notables first (L35), Elemental Overload, Runebinder, block, life and golem notables (L60), remaining masteries, cast speed and jewel socket (L80); each level is a subset of the next; mastery effects as on the source.
+- pob-treeonly.xml: generated from pob.xml by tools, tree only.

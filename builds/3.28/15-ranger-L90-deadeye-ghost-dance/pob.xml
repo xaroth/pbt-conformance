@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathOfBuilding>
+	<Build level="90" targetVersion="3_0" className="Ranger" ascendClassName="Deadeye" bandit="None" pantheonMajorGod="Lunaris" pantheonMinorGod="Yugul" mainSocketGroup="1" viewMode="TREE" characterLevelAutoMode="false"/>
+	<Tree activeSpec="1">
+		<Spec treeVersion="3_28" classId="2" ascendClassId="2" secondaryAscendClassId="0" nodes="1427,1461,2185,2715,3187,3571,4011,4481,5082,5237,5823,6427,6538,6654,6797,6799,6913,7488,8001,8458,8938,9206,9355,9469,9877,10840,11678,12412,12801,12948,13375,13935,14292,14400,14804,16882,18182,18707,18770,19858,20807,20953,22266,23334,23912,24848,25058,25511,26067,27656,28658,28995,29454,30205,30679,30969,31039,31508,32477,32514,32555,33903,33989,35255,36221,36281,36287,38149,38662,38995,39665,39718,39861,40132,41119,41420,42964,44306,44316,45035,45202,45313,45593,46277,48660,49391,49459,49820,49900,49978,50338,51235,51881,53114,53615,54142,55750,56023,56295,56646,58854,59220,59370,59606,59837,60735,60942,61306,61627,61834,62744,63194,63251,63795,64028,64265,64878,65224,65427,65502,65528" masteryEffects="{3571,64875},{6427,56951},{7488,62252},{31039,9986},{44316,34242},{48660,17942},{49391,64511},{49820,58447},{53615,61097},{56023,16644},{65528,57074}">
+			<Sockets>
+				<Socket nodeId="60735" itemId="16"/>
+				<Socket nodeId="61834" itemId="17"/>
+				<Socket nodeId="33989" itemId="18"/>
+			</Sockets>
+		</Spec>
+	</Tree>
+	<Items activeItemSet="1" useSecondWeaponSet="false">
+		<Item id="1">
+Rarity: RARE
+Loath Wind
+Spine Bow
+Item Level: 85
+Quality: 20
+Sockets: G-G-G-G-G-B
+LevelReq: 64
+Implicits: 0
+232% increased Physical Damage
+Adds 45 to 80 Physical Damage
+17% increased Attack Speed
+27% increased Critical Strike Chance
+Bow Attacks fire 2 additional Arrows
++180 to Accuracy Rating
++28 to Strength and Intelligence
+		</Item>
+		<Item id="2">
+Rarity: RARE
+Woe Stinger
+Spike-Point Arrow Quiver
+Item Level: 84
+Quality: 0
+LevelReq: 64
+Implicits: 1
+28% increased Global Critical Strike Chance
++132 to maximum Life
+Adds 10 to 130 Lightning Damage to Attacks
+Bow Attacks fire an additional Arrow
++38% to Global Critical Strike Multiplier
+42% increased Projectile Speed
+		</Item>
+		<Item id="3">
+Rarity: RARE
+Demon Cowl
+Torturer's Mask
+Item Level: 85
+Quality: 20
+Sockets: G-B-G-B
+LevelReq: 84
+Implicits: 0
+95% increased Evasion and Energy Shield
++132 to maximum Life
++35% to Chaos Resistance
++42% to Fire Resistance
+15% increased effect of Non-Curse Auras from your Skills
+		</Item>
+		<Item id="4">
+Rarity: RARE
+Bramble Mantle
+Necrotic Armour
+Item Level: 85
+Quality: 20
+Sockets: G-G-G-G-B-R
+LevelReq: 84
+Implicits: 0
+40% reduced Attribute Requirements
+99% increased Evasion and Energy Shield
++73 to maximum Energy Shield
++47% to Lightning Resistance
++18% to Lightning and Chaos Resistances
++22% chance to Suppress Spell Damage
+		</Item>
+		<Item id="5">
+Rarity: RARE
+Behemoth Vise
+Phantom Mitts
+Item Level: 85
+Quality: 20
+Sockets: G-B-G-R
+LevelReq: 84
+Implicits: 0
++118 to maximum Life
+35% of Physical Damage Converted to Lightning Damage
++46% to Cold Resistance
+16% increased Attack Speed
+16% increased Projectile Damage
++12% chance to Suppress Spell Damage
+		</Item>
+		<Item id="6">
+Rarity: RARE
+Corpse Spark
+Phantom Boots
+Item Level: 85
+Quality: 20
+Sockets: B-G-G-B
+LevelReq: 84
+Implicits: 0
+30% increased Movement Speed
++112 to maximum Life
++55 to Intelligence
++45% to Cold Resistance
+74% increased Evasion and Energy Shield
+		</Item>
+		<Item id="7">
+Rarity: RARE
+Mind Rosary
+Simplex Amulet
+Item Level: 85
+LevelReq: 64
+Implicits: 4
+-2 Prefix Modifiers allowed
+-1 Suffix Modifier allowed
+Implicit Modifiers Cannot Be Changed
+100% increased Explicit Modifier magnitudes
++76% to Global Critical Strike Multiplier
++90 to Dexterity
+		</Item>
+		<Item id="8">
+Rarity: RARE
+Hypnotic Gyre
+Synaptic Ring
+Item Level: 85
+LevelReq: 64
+Implicits: 2
++2% to maximum Lightning Resistance
+Cannot roll Modifiers of Non-Lightning Damage Types
++20% to Global Critical Strike Multiplier
++1 to Maximum Frenzy Charges
++104 to maximum Life
++42% to Chaos Resistance
++40% to Fire Resistance
+		</Item>
+		<Item id="9">
+Rarity: RARE
+Storm Knot
+Topaz Ring
+Item Level: 84
+LevelReq: 64
+Implicits: 1
++28% to Lightning Resistance
++72 to maximum Life
++52 to Dexterity
++42% to Cold Resistance
++38 to Intelligence
+		</Item>
+		<Item id="10">
+Rarity: RARE
+Dread Tether
+Leather Belt
+Item Level: 85
+LevelReq: 64
+Implicits: 1
++38 to maximum Life
++58 to Strength
++56 to Dexterity
++96 to maximum Life
++44% to Fire Resistance
+		</Item>
+		<Item id="11">
+Rarity: MAGIC
+Seething Divine Life Flask of Staunching
+Item Level: 84
+Quality: 20
+Implicits: 0
+66% reduced Amount Recovered
+Instant Recovery
+Grants Immunity to Bleeding for 4 seconds if used while Bleeding
+Grants Immunity to Corrupted Blood for 4 seconds if used while affected by Corrupted Blood
+		</Item>
+		<Item id="12">
+Rarity: MAGIC
+Quicksilver Flask of Heat
+Item Level: 84
+Quality: 20
+Implicits: 0
+Grants Immunity to Chill for 4 seconds if used while Chilled
+Grants Immunity to Freeze for 4 seconds if used while Frozen
+		</Item>
+		<Item id="13">
+Rarity: MAGIC
+Jade Flask of Grounding
+Item Level: 84
+Quality: 20
+Implicits: 0
+Grants Immunity to Shock for 4 seconds if used while Shocked
+		</Item>
+		<Item id="14">
+Rarity: MAGIC
+Silver Flask of Rupturing
+Item Level: 84
+Quality: 20
+Implicits: 0
+(38-43)% increased Critical Strike Chance during Effect
+		</Item>
+		<Item id="15">
+Rarity: UNIQUE
+Dying Sun
+Ruby Flask
+Item Level: 84
+Quality: 20
+LevelReq: 68
+Implicits: 0
+(125-150)% increased Charges per use
+(40-60)% less Duration
+(10-20)% increased Area of Effect during Effect
+Skills fire 2 additional Projectiles during Effect
+		</Item>
+		<Item id="16">
+Rarity: RARE
+Gale Eye
+Viridian Jewel
+Item Level: 78
+Implicits: 0
+7% increased maximum Life
++16% to Global Critical Strike Multiplier
+15% increased Global Critical Strike Chance
++12% to Cold and Lightning Resistances
+		</Item>
+		<Item id="17">
+Rarity: RARE
+Storm Spark
+Viridian Jewel
+Item Level: 80
+Implicits: 0
+6% increased maximum Life
++17% to Global Critical Strike Multiplier
+14% increased Elemental Damage with Attack Skills
++13% to Fire and Lightning Resistances
+		</Item>
+		<Item id="18">
+Rarity: RARE
+Pyre Glimmer
+Cobalt Jewel
+Item Level: 83
+Implicits: 0
+7% increased maximum Life
++15% to Global Critical Strike Multiplier
+6% increased maximum Energy Shield
++14% to Chaos Resistance
+		</Item>
+		<ItemSet id="1" useSecondWeaponSet="false">
+			<Slot name="Weapon 1" itemId="1"/>
+			<Slot name="Weapon 2" itemId="2"/>
+			<Slot name="Helmet" itemId="3"/>
+			<Slot name="Body Armour" itemId="4"/>
+			<Slot name="Gloves" itemId="5"/>
+			<Slot name="Boots" itemId="6"/>
+			<Slot name="Amulet" itemId="7"/>
+			<Slot name="Ring 1" itemId="8"/>
+			<Slot name="Ring 2" itemId="9"/>
+			<Slot name="Belt" itemId="10"/>
+			<Slot name="Flask 1" itemId="11" active="true"/>
+			<Slot name="Flask 2" itemId="12" active="true"/>
+			<Slot name="Flask 3" itemId="13" active="true"/>
+			<Slot name="Flask 4" itemId="14" active="true"/>
+			<Slot name="Flask 5" itemId="15" active="true"/>
+			<SocketIdURL name="Jewel 60735" nodeId="60735" itemPbURL=""/>
+			<SocketIdURL name="Jewel 61834" nodeId="61834" itemPbURL=""/>
+			<SocketIdURL name="Jewel 33989" nodeId="33989" itemPbURL=""/>
+		</ItemSet>
+	</Items>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="0" sortGemsByDPS="true" showSupportGemTypes="ALL" showLegacyGems="false">
+		<SkillSet id="1">
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="1" mainActiveSkillCalcs="1" slot="Body Armour">
+				<Gem nameSpec="Lightning Arrow" level="20" quality="20" enabled="true" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Trinity" level="20" quality="20" enabled="true" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Elemental Damage with Attacks" level="20" quality="20" enabled="true" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Inspiration" level="20" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Greater Fork" level="3" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Increased Critical Damage" level="20" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true" count="1"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="1" mainActiveSkillCalcs="1" slot="Helmet">
+				<Gem nameSpec="Hatred" level="20" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Vaal Haste" level="20" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Purity of Elements" level="20" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Enlighten" level="6" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true" count="1"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="1" mainActiveSkillCalcs="1" slot="Weapon 1">
+				<Gem nameSpec="Storm Rain" level="20" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Manaforged Arrows" level="20" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Tornado" level="20" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Frenzy" level="20" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Sniper&#x27;s Mark" level="20" quality="20" enabled="true" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Power Charge On Critical" level="20" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true" count="1"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="1" mainActiveSkillCalcs="1" slot="Gloves">
+				<Gem nameSpec="Precision" level="20" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Steelskin" level="12" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Automation" level="20" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true" count="1"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="1" mainActiveSkillCalcs="1" slot="Boots">
+				<Gem nameSpec="Blink Arrow" level="20" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Frostblink" level="20" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Cooldown Recovery" level="3" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true" count="1"/>
+			</Skill>
+		</SkillSet>
+	</Skills>
+	<Config activeConfigSet="1">
+		<ConfigSet id="1" title="Default"/>
+	</Config>
+</PathOfBuilding>

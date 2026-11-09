@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathOfBuilding>
+	<Build level="35" targetVersion="3_0" className="Marauder" ascendClassName="Chieftain" bandit="None" pantheonMajorGod="None" pantheonMinorGod="None" mainSocketGroup="1" viewMode="TREE" characterLevelAutoMode="false" />
+	<Tree activeSpec="1">
+		<Spec treeVersion="3_28" classId="1" ascendClassId="3" nodes="4139,4367,4713,5152,5643,6245,6446,6712,7444,10031,10221,14936,15064,15631,15868,21958,22285,22627,23027,24383,24704,26270,29049,31931,36047,36678,36949,39841,40653,44184,44429,44967,48480,49412,50422,50904,53118,53793,55649,60472,61198,63048,63447,64210" masteryEffects="{4139,34242}" secondaryAscendClassId="0">
+			<Sockets />
+		</Spec>
+	</Tree>
+</PathOfBuilding>

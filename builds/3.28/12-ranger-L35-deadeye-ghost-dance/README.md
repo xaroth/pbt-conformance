@@ -1,0 +1,10 @@
+# 3.28 Ranger L35: Deadeye Ghost Dance
+
+- Archetype: Lightning Arrow bow Deadeye, crit and elemental damage, evasion and energy shield hybrid defence with Ghost Dance, spell suppression, life leech.
+- Ascendancy: Deadeye (Gathering Winds)
+- Keystones: none yet (Ghost Dance taken by L60)
+- Skills: Lightning Arrow (Tabula 6-link: Mirage Archer, Added Lightning Damage, Elemental Damage with Attacks, Trinity, Faster Attacks), Precision, Herald of Ice, Frostblink, Frenzy, Sniper's Mark, Blink Arrow
+- Notable items: Tabula Rasa (6-link leveling body), Goldrim (resistances while leveling), Wanderlust (movement speed), rare Royal Bow with added lightning, rare Penetrating Arrow Quiver, rare jewellery for life and resistances.
+- Point budget: 41 = 34 (level) + 6 (quests) + 1 (bandits killed, Eramir). 41 allocated incl. 2 masteries. Pantheon: none.
+- Source: poe.ninja Mirage (final snapshot 2026-07-20, tree 3_28), https://poe.ninja/poe1/builds/mirage/character/fubgun-1755/FubgunDSF (Lightning Arrow Ghost Dance, level 100), retrieved 2026-11-09. Archetype share from poe.ninja search: Ghost Dance on 785 of 3794 Lightning Arrow Deadeyes in Mirage. Tattoos, cluster jewels with their sockets (32763, 46882), Lethal Pride, Unnatural Instinct, Thread of Hope and the bloodline removed. L90 is FubgunDSF's level 100 tree with its 91 points that stay connected without Thread of Hope; the 22 freed points reconnect 7 of the notables Fubgun took via Thread of Hope (Finesse, Blood Siphon, Quickstep, Aspect of the Lynx, Will of Blades, Forces of Nature, Perfectionist) along normal paths (15 small path nodes not in the source); Hired Killer, Harrier and Path of the Hunter did not fit. Mastery effects as on FubgunDSF. This level: leveling path inside the L60 tree: Ballistics, Aspect of the Eagle, Master Fletcher, King of the Hill, Herbalism, Primeval Force, Clever Thief, bow and life masteries. Lower levels are subsets of the next level's tree. Items are level-appropriate rares built after the sampled characters' gear, not copies.
+- pob-treeonly.xml: generated from pob.xml by tools, tree only.

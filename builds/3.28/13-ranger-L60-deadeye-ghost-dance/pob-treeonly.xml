@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathOfBuilding>
+	<Build level="60" targetVersion="3_0" className="Ranger" ascendClassName="Deadeye" bandit="None" pantheonMajorGod="None" pantheonMinorGod="None" mainSocketGroup="1" viewMode="TREE" characterLevelAutoMode="false" />
+	<Tree activeSpec="1">
+		<Spec treeVersion="3_28" classId="2" ascendClassId="2" nodes="1427,1461,2185,4011,5237,6427,6538,6654,6797,6799,6913,8001,8458,8938,9206,9355,9469,10840,11678,12412,12801,12948,13375,13935,14804,18182,18770,19858,20807,20953,22266,23912,24848,28658,28995,29454,30679,30969,31039,32477,32514,32555,35255,36221,36281,36287,38149,38662,38995,39665,41119,42964,44306,44316,45035,45202,45313,45593,46277,49391,49459,49900,49978,50338,51881,53114,53615,55750,56295,59220,59370,59606,59837,62744,63194,63251,63795,64265,64878,65224,65427,65502" masteryEffects="{6427,56951},{31039,9986},{44316,34242},{49391,64511},{53615,61097}" secondaryAscendClassId="0">
+			<Sockets />
+		</Spec>
+	</Tree>
+</PathOfBuilding>

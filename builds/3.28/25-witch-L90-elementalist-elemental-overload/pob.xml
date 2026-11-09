@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathOfBuilding>
+	<Build level="90" targetVersion="3_0" className="Witch" ascendClassName="Elementalist" bandit="Alira" pantheonMajorGod="TheBrineKing" pantheonMinorGod="Abberath" mainSocketGroup="1" viewMode="TREE" characterLevelAutoMode="false"/>
+	<Tree activeSpec="1">
+		<Spec treeVersion="3_28" classId="3" ascendClassId="2" secondaryAscendClassId="0" nodes="367,885,2292,4367,4713,5296,5743,5916,5935,6764,6770,6967,7444,7555,7938,8135,8948,9432,11420,11659,11924,12125,12246,12379,12738,13559,13862,13961,14021,14936,15117,15167,15973,16023,18174,19501,19635,19919,20987,21389,21678,21958,21974,22088,22577,24324,24362,24872,25831,25970,26270,26557,27038,27203,27709,27733,27929,28680,28887,29049,29781,30393,31462,32210,32241,32932,33310,34157,34423,34506,34927,35035,35958,36678,37114,37163,38176,38207,38849,38921,39841,40366,40483,40776,42343,42760,44183,44184,45558,46897,46904,48118,48362,49651,50826,52502,52655,53018,53123,53279,53290,54279,54447,54657,55332,55743,56029,56461,57226,58210,58218,58402,58998,61259,61419,61804,62697,62849,62970,63447,64210,64355" masteryEffects="{12125,38454},{13862,64875},{27733,61071},{28680,23471},{30393,37614},{32241,34242},{34927,36313},{38207,19495},{38921,4500},{45558,30612}">
+			<Sockets>
+				<Socket nodeId="61419" itemId="16"/>
+			</Sockets>
+		</Spec>
+	</Tree>
+	<Items activeItemSet="1" useSecondWeaponSet="false">
+		<Item id="1">
+Rarity: UNIQUE
+Rebuke of the Vaal
+Vaal Blade
+Item Level: 75
+Quality: 20
+Sockets: B-B-B
+Implicits: 1
++460 to Accuracy Rating
+Adds 68 to 128 Physical Damage
+Adds 56 to 101 Fire Damage
+Adds 69 to 135 Cold Damage
+Adds 1 to 239 Lightning Damage
+Adds 87 to 109 Chaos Damage
+15% increased Attack Speed
+		</Item>
+		<Item id="2">
+Rarity: RARE
+Viper Wing
+Branded Kite Shield
+Shaper Item
+Item Level: 85
+Quality: 20
+Sockets: B-B R
+Implicits: 1
++4% to all Elemental Resistances
+Socketed Gems have 30% increased Reservation Efficiency
++12 to Armour
++9 to maximum Energy Shield
++18% to all Elemental Resistances
+Reflects 10 Physical Damage to Melee Attackers
+Recover 5% of Life when you Block
+50% increased Chance to Block
+		</Item>
+		<Item id="3">
+Rarity: RARE
+Rage Wrap
+Saint's Hauberk
+Item Level: 72
+Quality: 20
+Sockets: R-B-B-B-R-R
+Implicits: 0
++33 to Intelligence
+109% increased Armour and Energy Shield
++53 to maximum Mana
+13% increased Stun and Block Recovery
+3% additional Physical Damage Reduction
+		</Item>
+		<Item id="4">
+Rarity: RARE
+Maelstrom Visage
+Divine Crown
+Searing Exarch Item
+Eater of Worlds Item
+Item Level: 85
+Quality: 20
+Sockets: R-B-B-R
+Implicits: 2
+6% of Physical Damage from Hits taken as Lightning Damage
+Adds 11 to 19 Cold Damage to Spells
++131 to Armour
+120% increased Armour and Energy Shield
++47 to maximum Energy Shield
++45% to Fire Resistance
+17% increased Stun and Block Recovery
+		</Item>
+		<Item id="5">
+Rarity: RARE
+Rage Hold
+Paladin Gloves
+Searing Exarch Item
+Eater of Worlds Item
+Item Level: 85
+Quality: 20
+Sockets: B-B-B-B
+Implicits: 2
+Inflict Fire Exposure on Hit, applying -12% to Fire Resistance
+Ignites you inflict spread to other Enemies within 1.4 metres
++49 to Strength
++11 to Dexterity
++39 to Armour
+82% increased Armour and Energy Shield
++26 to maximum Life
++15 to maximum Mana
+19% increased Brand Attachment range
+		</Item>
+		<Item id="6">
+Rarity: UNIQUE
+Legacy of Fury
+Wyrmscale Boots
+Item Level: 86
+Quality: 20
+Sockets: B-R-R R
+Implicits: 0
+218% increased Armour and Evasion
+30% increased Movement Speed
+Nearby Enemies are Scorched
+32% increased Effect of Scorch
+32% chance when you Kill a Scorched Enemy to Burn Each surrounding
+Enemy for 4 seconds, dealing 8% of the Killed Enemy's Life as Fire Damage per second
+		</Item>
+		<Item id="7">
+Rarity: UNIQUE
+The Taming
+Prismatic Ring
+Item Level: 42
+Implicits: 1
++10% to all Elemental Resistances
++21% to all Elemental Resistances
+10% chance to Freeze, Shock and Ignite
+39% increased Elemental Damage with Hits and Ailments for
+each type of Elemental Ailment on Enemy
+		</Item>
+		<Item id="8">
+Rarity: RARE
+Apocalypse Twirl
+Amethyst Ring
+Item Level: 85
+Implicits: 1
++23% to Chaos Resistance
++47 to Evasion Rating
++22 to maximum Energy Shield
++15% to all Elemental Resistances
++31% to Chaos Resistance
+Gain 7 Mana per Enemy Killed
++52 to maximum Life
+		</Item>
+		<Item id="9">
+Rarity: RARE
+Apocalypse Rosary
+Citrine Amulet
+Item Level: 73
+Quality: 0
+Implicits: 1
++22 to Strength and Dexterity
++19 to all Attributes
++111 to maximum Life
++48 to maximum Mana
++41% to Cold Resistance
++22% to Chaos Resistance
+		</Item>
+		<Item id="10">
+Rarity: RARE
+Rune Leash
+Heavy Belt
+Item Level: 66
+Implicits: 1
++31 to Strength
+10% reduced Enemy Stun Threshold
++106 to maximum Life
++42 to maximum Mana
++24% to Chaos Resistance
+15% increased Flask Life Recovery rate
++25 to Strength and Dexterity
+		</Item>
+		<Item id="11">
+Rarity: MAGIC
+Seething Divine Life Flask of Sealing
+Item Level: 65
+Quality: 0
+Implicits: 0
+66% reduced Amount Recovered
+Instant Recovery
+Grants Immunity to Bleeding for 8 seconds if used while Bleeding
+Grants Immunity to Corrupted Blood for 8 seconds if used while affected by Corrupted Blood
+		</Item>
+		<Item id="12">
+Rarity: MAGIC
+Flagellant's Ruby Flask of the Kakapo
+Item Level: 83
+Quality: 0
+Implicits: 1
+Used when Charges reach full
+Gain 3 Charges when you are Hit by an Enemy
+59% reduced Effect of Curses on you during Effect
+		</Item>
+		<Item id="13">
+Rarity: MAGIC
+Masochist's Granite Flask of the Petrel
+Item Level: 68
+Quality: 0
+Implicits: 1
+Used when Charges reach full
+Gain 2 Charges when you are Hit by an Enemy
+39% reduced Effect of Curses on you during Effect
+		</Item>
+		<Item id="14">
+Rarity: MAGIC
+Masochist's Silver Flask of Craft
+Item Level: 79
+Quality: 0
+Implicits: 1
+Used when Charges reach full
+Gain 2 Charges when you are Hit by an Enemy
+Regenerate 3% of Life per second during Effect
+		</Item>
+		<Item id="15">
+Rarity: MAGIC
+Masochist's Diamond Flask of Surefootedness
+Item Level: 75
+Quality: 0
+Implicits: 1
+Used when Charges reach full
+Gain 2 Charges when you are Hit by an Enemy
+36% Chance to Avoid being Stunned during Effect
+		</Item>
+		<Item id="16">
+Rarity: RARE
+Foe Breath
+Cobalt Jewel
+Item Level: 44
+Implicits: 1
+Corrupted Blood cannot be inflicted on you
+12% increased Damage over Time
+2% increased Cast Speed
+15% increased Damage with Wands
+Damaging Ailments deal damage 5% faster
+Corrupted
+		</Item>
+		<ItemSet id="1" useSecondWeaponSet="false">
+			<Slot name="Weapon 1" itemId="1"/>
+			<Slot name="Weapon 2" itemId="2"/>
+			<Slot name="Body Armour" itemId="3"/>
+			<Slot name="Helmet" itemId="4"/>
+			<Slot name="Gloves" itemId="5"/>
+			<Slot name="Boots" itemId="6"/>
+			<Slot name="Ring 1" itemId="7"/>
+			<Slot name="Ring 2" itemId="8"/>
+			<Slot name="Amulet" itemId="9"/>
+			<Slot name="Belt" itemId="10"/>
+			<Slot name="Flask 1" itemId="11" active="true"/>
+			<Slot name="Flask 2" itemId="12" active="true"/>
+			<Slot name="Flask 3" itemId="13" active="true"/>
+			<Slot name="Flask 4" itemId="14" active="true"/>
+			<Slot name="Flask 5" itemId="15" active="true"/>
+		</ItemSet>
+	</Items>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="0">
+		<SkillSet id="1">
+			<Skill enabled="true" slot="Body Armour" mainActiveSkill="1" mainActiveSkillCalcs="1" includeInFullDPS="false">
+				<Gem nameSpec="Penance Brand" gemId="Metadata/Items/Gems/SkillGemPenanceBrand" skillId="PenanceBrand" variantId="PenanceBrand" level="20" quality="20" enabled="true" enableGlobal1="true" enableGlobal2="false" count="1"/>
+				<Gem nameSpec="Burning Damage" gemId="Metadata/Items/Gems/SupportGemIncreasedBurningDamage" skillId="SupportBurningDamage" variantId="SupportBurningDamage" level="20" quality="20" enabled="true" enableGlobal1="true" enableGlobal2="false" count="1"/>
+				<Gem nameSpec="Swiftbrand" gemId="Metadata/Items/Gems/SupportGemSwiftbrand" skillId="SupportSwiftbrand" variantId="SupportSwiftbrand" level="20" quality="20" enabled="true" enableGlobal1="true" enableGlobal2="false" count="1"/>
+				<Gem nameSpec="Spellblade" gemId="Metadata/Items/Gems/SupportGemSpellblade" skillId="SupportSpellblade" variantId="SupportSpellblade" level="20" quality="20" enabled="true" enableGlobal1="true" enableGlobal2="false" count="1"/>
+				<Gem nameSpec="Inspiration" gemId="Metadata/Items/Gems/SupportGemReducedMana" skillId="SupportInspiration" variantId="SupportInspiration" level="20" quality="20" enabled="true" enableGlobal1="true" enableGlobal2="false" count="1"/>
+				<Gem nameSpec="Cruelty" gemId="Metadata/Items/Gems/SupportGemCruelty" skillId="SupportCruelty" variantId="SupportCruelty" level="20" quality="20" enabled="true" enableGlobal1="true" enableGlobal2="false" count="1"/>
+			</Skill>
+			<Skill enabled="true" slot="Gloves" mainActiveSkill="1" mainActiveSkillCalcs="1" includeInFullDPS="false">
+				<Gem nameSpec="Frostblink" gemId="Metadata/Items/Gems/SkillGemFrostblink" skillId="Frostblink" variantId="Frostblink" level="20" quality="20" enabled="true" enableGlobal1="true" enableGlobal2="false" count="1"/>
+				<Gem nameSpec="Arcane Surge" gemId="Metadata/Items/Gems/SupportGemArcaneSurge" skillId="SupportArcaneSurge" variantId="SupportArcaneSurge" level="20" quality="20" enabled="true" enableGlobal1="true" enableGlobal2="false" count="1"/>
+				<Gem nameSpec="Combustion" gemId="Metadata/Items/Gems/SupportGemChanceToIgnite" skillId="SupportCombustion" variantId="SupportCombustion" level="20" quality="20" enabled="true" enableGlobal1="true" enableGlobal2="false" count="1"/>
+			</Skill>
+			<Skill enabled="true" slot="Helmet" mainActiveSkill="1" mainActiveSkillCalcs="1" includeInFullDPS="false">
+				<Gem nameSpec="Summon Flame Golem" gemId="Metadata/Items/Gems/SkillGemSummonFlameGolem" skillId="SummonFlameGolem" variantId="SummonFlameGolem" level="20" quality="20" enabled="true" enableGlobal1="true" enableGlobal2="false" count="1"/>
+				<Gem nameSpec="Summon Lightning Golem" gemId="Metadata/Items/Gems/SkillGemSummonLightningGolem" skillId="SummonLightningGolem" variantId="SummonLightningGolem" level="20" quality="20" enabled="true" enableGlobal1="true" enableGlobal2="false" count="1"/>
+				<Gem nameSpec="Summon Chaos Golem" gemId="Metadata/Items/Gems/SkillGemSummonChaosGolem" skillId="SummonChaosGolem" variantId="SummonChaosGolem" level="20" quality="20" enabled="true" enableGlobal1="true" enableGlobal2="false" count="1"/>
+				<Gem nameSpec="Summon Stone Golem" gemId="Metadata/Items/Gems/SkillGemSummonRockGolem" skillId="SummonStoneGolem" variantId="SummonStoneGolem" level="20" quality="20" enabled="true" enableGlobal1="true" enableGlobal2="false" count="1"/>
+			</Skill>
+			<Skill enabled="true" slot="Boots" mainActiveSkill="1" mainActiveSkillCalcs="1" includeInFullDPS="false">
+				<Gem nameSpec="Automation" gemId="Metadata/Items/Gems/SkillGemAutomation" skillId="Automation" variantId="Automation" level="20" quality="20" enabled="true" enableGlobal1="true" enableGlobal2="false" count="1"/>
+				<Gem nameSpec="More Duration" gemId="Metadata/Items/Gems/SupportGemIncreasedDuration" skillId="SupportMoreDuration" variantId="SupportMoreDuration" level="20" quality="20" enabled="true" enableGlobal1="true" enableGlobal2="false" count="1"/>
+				<Gem nameSpec="Steelskin" gemId="Metadata/Items/Gems/SkillGemSteelskin" skillId="QuickGuard" variantId="QuickGuard" level="20" quality="20" enabled="true" enableGlobal1="true" enableGlobal2="false" count="1"/>
+			</Skill>
+			<Skill enabled="true" slot="Boots" mainActiveSkill="1" mainActiveSkillCalcs="1" includeInFullDPS="false">
+				<Gem nameSpec="Herald of Ash" gemId="Metadata/Items/Gems/SkillGemHeraldOfAsh" skillId="HeraldOfAsh" variantId="HeraldOfAsh" level="20" quality="20" enabled="true" enableGlobal1="true" enableGlobal2="false" count="1"/>
+			</Skill>
+			<Skill enabled="true" slot="Weapon 1" mainActiveSkill="1" mainActiveSkillCalcs="1" includeInFullDPS="false">
+				<Gem nameSpec="Flame Surge" gemId="Metadata/Items/Gems/SkillGemFlameWhip" skillId="FlameSurge" variantId="FlameSurge" level="20" quality="20" enabled="true" enableGlobal1="true" enableGlobal2="false" count="1"/>
+				<Gem nameSpec="Flammability" gemId="Metadata/Items/Gems/SkillGemFlammability" skillId="Flammability" variantId="Flammability" level="20" quality="20" enabled="true" enableGlobal1="true" enableGlobal2="false" count="1"/>
+				<Gem nameSpec="Hextouch" gemId="Metadata/Items/Gems/SupportGemCurseOnHit" skillId="SupportHextouch" variantId="SupportHextouch" level="20" quality="20" enabled="true" enableGlobal1="true" enableGlobal2="false" count="1"/>
+			</Skill>
+			<Skill enabled="true" slot="Weapon 2" mainActiveSkill="1" mainActiveSkillCalcs="1" includeInFullDPS="false">
+				<Gem nameSpec="Tempest Shield" gemId="Metadata/Items/Gems/SkillGemTempestShield" skillId="TempestShield" variantId="TempestShield" level="20" quality="20" enabled="true" enableGlobal1="true" enableGlobal2="false" count="1"/>
+				<Gem nameSpec="Malevolence" gemId="Metadata/Items/Gems/SkillGemDamageOverTimeAura" skillId="Malevolence" variantId="Malevolence" level="20" quality="20" enabled="true" enableGlobal1="true" enableGlobal2="false" count="1"/>
+			</Skill>
+			<Skill enabled="true" slot="Weapon 2" mainActiveSkill="1" mainActiveSkillCalcs="1" includeInFullDPS="false">
+				<Gem nameSpec="Determination" gemId="Metadata/Items/Gems/SkillGemDetermination" skillId="Determination" variantId="Determination" level="20" quality="20" enabled="true" enableGlobal1="true" enableGlobal2="false" count="1"/>
+			</Skill>
+		</SkillSet>
+	</Skills>
+	<Config activeConfigSet="1">
+		<ConfigSet id="1" title="Default">
+			<Input name="bandit" string="Alira"/>
+			<Input name="pantheonMajorGod" string="TheBrineKing"/>
+			<Input name="pantheonMinorGod" string="Abberath"/>
+		</ConfigSet>
+	</Config>
+</PathOfBuilding>

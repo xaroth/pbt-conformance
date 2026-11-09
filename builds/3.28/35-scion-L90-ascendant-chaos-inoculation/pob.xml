@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathOfBuilding>
+	<Build level="90" targetVersion="3_0" className="Scion" ascendClassName="Ascendant" bandit="Eramir" pantheonMajorGod="Arakaali" pantheonMinorGod="Ralakesh" mainSocketGroup="1" viewMode="ITEMS" characterLevelAutoMode="false"/>
+	<Tree activeSpec="1">
+		<Spec treeVersion="3_28" classId="0" ascendClassId="1" secondaryAscendClassId="0" nodes="238,607,918,1382,3452,3469,4833,5237,5408,5743,5935,6363,6507,6580,7388,7444,7594,8544,8620,9392,10153,10490,10661,10829,11455,11497,11730,11859,12143,14813,15144,15435,16167,17201,17383,17445,18033,18240,19144,19196,19711,20010,20812,20987,21033,21974,22473,22551,22618,23237,23471,24643,24798,25446,25831,26196,26270,27325,27415,28221,28574,28859,29937,30393,30919,32091,32345,32710,32932,33479,33545,34171,34907,35754,35958,36634,36678,36704,36874,37671,39598,39725,40132,41263,41534,41595,41996,42178,42760,44103,45067,46092,46340,46495,46897,47197,47251,48768,48778,48807,48859,49605,49806,50757,51786,51923,52502,54127,54872,55571,56001,56589,57736,58218,58545,58563,58833,58851,58854,60090,60398,60440,60472,63357,63425,63620,63649,63976,64210,65097" masteryEffects="{6507,61097},{18240,31556},{25446,62252},{30393,37614},{46495,28638},{47197,56471},{48859,64875},{50757,28676},{58563,48980}">
+			<Sockets>
+				<Socket nodeId="26196" itemId="11"/>
+				<Socket nodeId="54127" itemId="12"/>
+				<Socket nodeId="36634" itemId="13"/>
+				<Socket nodeId="48768" itemId="14"/>
+			</Sockets>
+		</Spec>
+	</Tree>
+	<Items activeItemSet="1" useSecondWeaponSet="false">
+		<Item id="1">
+Rarity: UNIQUE
+Replica Dreamfeather
+Eternal Sword
+Item Level: 84
+Quality: 20
+Sockets: R-R-R
+Implicits: 1
++475 to Accuracy Rating
+Adds 44 to 89 Physical Damage
+10% increased Attack Speed
++182 to Armour
+3% reduced Movement Speed
++283 to Accuracy Rating
+1% increased Attack Damage per 450 Armour
+		</Item>
+		<Item id="2">
+Rarity: UNIQUE
+Replica Dreamfeather
+Eternal Sword
+Item Level: 85
+Quality: 20
+Sockets: G-G-G
+Implicits: 1
++475 to Accuracy Rating
+Adds 46 to 73 Physical Damage
+10% increased Attack Speed
++189 to Armour
+3% reduced Movement Speed
++283 to Accuracy Rating
+1% increased Attack Damage per 450 Armour
+		</Item>
+		<Item id="3">
+Rarity: RARE
+Doom Salvation
+Lich's Circlet
+Item Level: 86
+Quality: 20
+Sockets: B-B-B-G
+Implicits: 2
+12% increased Mana Reservation Efficiency of Skills
+24% reduced Mana Cost of Attacks
+100% increased Energy Shield
++1 to Level of Socketed Intelligence Gems
++2 to Level of Socketed AoE Gems
++2 to Level of Socketed Aura Gems
++46 to Intelligence
+9% increased Area of Effect
++45 to maximum Energy Shield
+		</Item>
+		<Item id="4">
+Rarity: RARE
+Rift Skin
+Necrotic Armour
+Item Level: 88
+Quality: 26
+Sockets: R-R-R-R-W-G
+Implicits: 2
+Grace has 27% increased Aura Effect
+20% increased effect of Non-Curse Auras from your Skills
+Armour is increased by Overcapped Fire Resistance
++48 to Intelligence
++359 to Evasion Rating
+116% increased Evasion and Energy Shield
++81 to maximum Energy Shield
++48% to Fire Resistance
+6% increased Attributes
+		</Item>
+		<Item id="5">
+Rarity: RARE
+Sol Paw
+Warlock Gloves
+Item Level: 85
+Quality: 29
+Sockets: R-R-B-B
+Implicits: 2
+Inflict Lightning Exposure on Hit, applying -13% to Lightning Resistance
+Non-Vaal Strike Skills target 2 additional nearby Enemies
+17% increased Attack Speed
++55 to Intelligence
++45 to maximum Energy Shield
+136% increased Energy Shield
++41% to Fire Resistance
+16% increased Stun and Block Recovery
+		</Item>
+		<Item id="6">
+Rarity: UNIQUE
+Ralakesh's Impatience
+Riveted Boots
+Item Level: 85
+Quality: 20
+Sockets: R-B-R-R
+Implicits: 2
++2 to Level of Socketed Duration Gems
++1 to Maximum Endurance Charges
++21% to Cold Resistance
++19% to Chaos Resistance
+17% increased Movement Speed
+Corrupted Blood cannot be inflicted on you
+Count as having maximum number of Endurance Charges
+Corrupted
+		</Item>
+		<Item id="7">
+Rarity: UNIQUE
+Nimis
+Topaz Ring
+Item Level: 87
+Implicits: 1
++30% to Lightning Resistance
++60 to Dexterity
+26% increased Projectile Damage
+Projectiles Return to you
+Projectiles are fired in random directions
+		</Item>
+		<Item id="8">
+Rarity: RARE
+Brimstone Hold
+Gold Ring
+Item Level: 87
+Implicits: 1
+Grace has 20% increased Aura Effect
++53 to Intelligence
+Adds 5 to 10 Cold Damage to Attacks
++29 to maximum Energy Shield
++19% to all Elemental Resistances
++49% to Fire Resistance
+Non-Channelling Skills have -7 to Total Mana Cost
+		</Item>
+		<Item id="9">
+Rarity: RARE
+Vengeance Collar
+Onyx Amulet
+Item Level: 84
+Quality: 0
+Implicits: 1
++15 to all Attributes
++56 to maximum Energy Shield
+20% increased maximum Energy Shield
++44 to Strength
++42% to Lightning Resistance
+32% increased Elemental Damage with Attack Skills
+		</Item>
+		<Item id="10">
+Rarity: RARE
+Demon Lash
+Heavy Belt
+Item Level: 85
+Quality: 0
+Implicits: 1
++32 to Strength
++64 to maximum Energy Shield
++44% to Fire Resistance
++42% to Cold Resistance
++40 to Dexterity
+		</Item>
+		<Item id="11">
+Rarity: UNIQUE
+Watcher's Eye
+Prismatic Jewel
+Item Level: 87
+Implicits: 0
+5% increased maximum Energy Shield
+6% increased maximum Life
+6% increased maximum Mana
+Gain 28 Energy Shield per Enemy Hit while affected by Discipline
+65% of Physical Damage from your Hits cannot be Reflected while affected by Determination
+Damage Penetrates 15% Lightning Resistance while affected by Wrath
+		</Item>
+		<Item id="12">
+Rarity: UNIQUE
+Melding of the Flesh
+Cobalt Jewel
+Item Level: 86
+Implicits: 0
+-70% to all Elemental Resistances
+-4% to all maximum Elemental Resistances
+Elemental Resistances are capped by your highest Maximum Elemental Resistance instead
+		</Item>
+		<Item id="13">
+Rarity: RARE
+Rune Ruin
+Cobalt Jewel
+Item Level: 83
+Quality: 0
+Implicits: 0
+8% increased maximum Energy Shield
+14% increased Elemental Damage with Attack Skills
++14% to Cold Resistance
++12 to Intelligence
+		</Item>
+		<Item id="14">
+Rarity: RARE
+Dusk Bliss
+Viridian Jewel
+Item Level: 83
+Quality: 0
+Implicits: 0
+7% increased maximum Energy Shield
+6% increased Attack Speed
++15% to Fire Resistance
++14 to Dexterity
+		</Item>
+		<Item id="15">
+Rarity: MAGIC
+Abecedarian's Quicksilver Flask of the Armadillo
+Item Level: 84
+Quality: 20
+Implicits: 2
+60% increased Armour during Effect
+		</Item>
+		<Item id="16">
+Rarity: MAGIC
+Dabbler's Silver Flask of the Rainbow
+Item Level: 85
+Quality: 0
+Implicits: 2
+20% additional Elemental Resistances during Effect
+		</Item>
+		<Item id="17">
+Rarity: MAGIC
+Dabbler's Ruby Flask of the Impala
+Item Level: 84
+Quality: 0
+Implicits: 2
+60% increased Evasion Rating during Effect
+		</Item>
+		<Item id="18">
+Rarity: MAGIC
+Alchemist's Basalt Flask of Craft
+Item Level: 83
+Quality: 0
+Implicits: 3
+Taunts nearby Enemies on use
+		</Item>
+		<ItemSet id="1" useSecondWeaponSet="false">
+			<Slot name="Weapon 1" itemId="1"/>
+			<Slot name="Weapon 2" itemId="2"/>
+			<Slot name="Helmet" itemId="3"/>
+			<Slot name="Body Armour" itemId="4"/>
+			<Slot name="Gloves" itemId="5"/>
+			<Slot name="Boots" itemId="6"/>
+			<Slot name="Ring 1" itemId="7"/>
+			<Slot name="Ring 2" itemId="8"/>
+			<Slot name="Amulet" itemId="9"/>
+			<Slot name="Belt" itemId="10"/>
+			<Slot name="Flask 1" itemId="15" active="true"/>
+			<Slot name="Flask 2" itemId="16" active="true"/>
+			<Slot name="Flask 3" itemId="17" active="true"/>
+			<Slot name="Flask 4" itemId="18" active="true"/>
+		</ItemSet>
+	</Items>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="0">
+		<SkillSet id="1">
+			<Skill enabled="true" includeInFullDPS="false" slot="Body Armour">
+				<Gem nameSpec="Molten Strike" level="20" quality="20" enabled="true"/>
+				<Gem nameSpec="Damage on Full Life" level="20" quality="20" enabled="true"/>
+				<Gem nameSpec="Greater Multistrike" level="3" quality="20" enabled="true"/>
+				<Gem nameSpec="Volatility" level="20" quality="20" enabled="true"/>
+				<Gem nameSpec="Greater Ancestral Call" level="3" quality="20" enabled="true"/>
+				<Gem nameSpec="Greater Multiple Projectiles" level="20" quality="20" enabled="true"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="false" slot="Helmet">
+				<Gem nameSpec="Wrath" level="20" quality="0" enabled="true"/>
+				<Gem nameSpec="Enlighten" level="4" quality="0" enabled="true"/>
+				<Gem nameSpec="Discipline" level="20" quality="0" enabled="true"/>
+				<Gem nameSpec="Grace" level="20" quality="0" enabled="true"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="false" slot="Gloves">
+				<Gem nameSpec="Determination" level="20" quality="0" enabled="true"/>
+				<Gem nameSpec="Purity of Fire" level="20" quality="20" enabled="true"/>
+				<Gem nameSpec="Purity of Elements" level="20" quality="20" enabled="true"/>
+				<Gem nameSpec="Enlighten" level="4" quality="0" enabled="true"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="false" slot="Weapon 1">
+				<Gem nameSpec="Cast when Damage Taken" level="1" quality="20" enabled="true"/>
+				<Gem nameSpec="Vaal Molten Shell" level="7" quality="20" enabled="true"/>
+				<Gem nameSpec="Leap Slam" level="20" quality="0" enabled="true"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="false" slot="Weapon 2">
+				<Gem nameSpec="Mark On Hit" level="20" quality="20" enabled="true"/>
+				<Gem nameSpec="Sniper&#x27;s Mark" level="20" quality="20" enabled="true"/>
+				<Gem nameSpec="Vaal Haste" level="20" quality="0" enabled="true"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="false" slot="Boots">
+				<Gem nameSpec="Blood and Sand" level="7" quality="0" enabled="true"/>
+				<Gem nameSpec="Frost Shield" level="20" quality="0" enabled="true"/>
+				<Gem nameSpec="Vaal Smite" level="20" quality="20" enabled="true"/>
+			</Skill>
+		</SkillSet>
+	</Skills>
+	<Config activeConfigSet="1">
+		<ConfigSet id="1" title="Default">
+			<Input name="bandit" string="Eramir"/>
+			<Input name="pantheonMajorGod" string="Arakaali"/>
+			<Input name="pantheonMinorGod" string="Ralakesh"/>
+		</ConfigSet>
+	</Config>
+</PathOfBuilding>
