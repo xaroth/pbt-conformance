@@ -24,3 +24,22 @@ jobs:
       - uses: golangci/golangci-lint-action@v9
         with:
           version: v2.14.0
+
+  compare:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-go@v7
+        with:
+          go-version-file: go.mod
+      - name: Pull the pinned datasets
+        id: data
+        run: echo "dir=$(go run ./cmd/pbtc data --cache "$RUNNER_TEMP/pbtc")" >> "$GITHUB_OUTPUT"
+      - name: Tests with real datasets
+        run: go test ./...
+        env:
+          PBT_DATASETS: ${{ steps.data.outputs.dir }}
+      - name: Compare with the stored PoB values
+        run: go run ./cmd/pbtc compare --datasets "$DATASETS"
+        env:
+          DATASETS: ${{ steps.data.outputs.dir }}

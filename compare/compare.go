@@ -91,7 +91,7 @@ func Run(root, datasets string, f *pins.File, game, league string) ([]Mismatch, 
 	if !ok {
 		return nil, fmt.Errorf("compare: %s %s: %w", game, league, ErrDataset)
 	}
-	s, err := openPinned(datasets, l.Dataset)
+	s, err := openPinned(datasets, game, l.Dataset)
 	if err != nil {
 		return nil, err
 	}
@@ -114,8 +114,8 @@ func Run(root, datasets string, f *pins.File, game, league string) ([]Mismatch, 
 	return out, nil
 }
 
-func openPinned(datasets string, d pins.Dataset) (*dataset.Store, error) {
-	s, err := dataset.Open(os.DirFS(filepath.Join(datasets, d.Version)))
+func openPinned(datasets, game string, d pins.Dataset) (*dataset.Store, error) {
+	s, err := OpenVersion(datasets, game, d.Version)
 	if err != nil {
 		return nil, fmt.Errorf("compare: %w: %w", ErrDataset, err)
 	}
@@ -226,4 +226,21 @@ func readValues(dir string) (*pob.Values, error) {
 		return nil, fmt.Errorf("pob values: %w", err)
 	}
 	return &v, nil
+}
+
+// OpenVersion opens game's dataset of exactly version among the datasets in the directories of
+// dir: pulled from pbt-data (one per league) or one per version.
+func OpenVersion(dir, game, version string) (*dataset.Store, error) {
+	reg, err := dataset.OpenRoot(os.DirFS(dir))
+	if reg == nil {
+		return nil, fmt.Errorf("open %s: %w", dir, err)
+	}
+	res, err := reg.Resolve(game, version)
+	if err != nil {
+		return nil, fmt.Errorf("%s: %w", version, err)
+	}
+	if got := res.Store.Manifest().Version; got != version {
+		return nil, fmt.Errorf("%s has %s, not %s: %w", dir, got, version, ErrDataset)
+	}
+	return res.Store, nil
 }

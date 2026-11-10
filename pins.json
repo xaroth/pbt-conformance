@@ -3,6 +3,7 @@
     "luajit": {"repo": "https://github.com/LuaJIT/LuaJIT", "commit": "2460b3ff93a1c955de3d62cfc825de7d68dc272e"},
     "luautf8": {"repo": "https://github.com/starwing/luautf8", "commit": "1bb70d45208d4033dcc75efee968be70534dd3ab"}
   },
+  "data": {"repo": "https://github.com/xaroth/pbt-data", "commit": "b2469fb6eda35983c21fbf8aec3debc0ee32d7bf"},
   "games": {
     "poe1": {
       "current": "3.29",
