@@ -17,13 +17,13 @@
     "evidence": "PoB Armour INC 5 from Tree:65485 (Multiplier); the engine notes the stat as not applied (charges)"
   },
   {
-    "id": "charges-and-mastery-slayer-life-regeneration",
+    "id": "charges-slayer-life-regeneration",
     "kind": "pending",
     "league": "3.28",
     "build": "*-duelist-L[89]0-slayer-resolute-technique",
     "output": "player.life_regeneration",
-    "reason": "Endurance charges (M11) and the body armour life mastery (items, M4): node 48109 regenerates 0.2% of life per second per endurance charge, and \"15% increased maximum Life if there are no Life Modifiers on Equipped Body Armour\" raises life",
-    "evidence": "With mastery effects removed PoB gives 108.4 and 120.3 against our 103.7 and 115.1; the rest is LifeRegenPercent 0.2 from Tree:48109"
+    "reason": "Endurance charges (M11): node 48109 regenerates 0.2% of life per second per endurance charge; PoB counts one",
+    "evidence": "PoB LifeRegenPercent 0.2 from Tree:48109; PoB gives 116.5 and 129.4 against our 111.5 and 123.7, a gap of 0.2% of PoB life (2533 and 2812)"
   },
   {
     "id": "spell-block-elementalist-mana-regeneration",
@@ -35,69 +35,11 @@
     "evidence": "PoB ManaRegen INC 8 from Tree:18174 (PerStat); the engine notes the stat as not applied (scale)"
   },
   {
-    "id": "mastery-chieftain-life",
+    "id": "unchecked-body-armour-life-mastery",
     "kind": "pending",
-    "build": "*-marauder-*-chieftain-righteous-fire",
-    "output": "player.life",
-    "reason": "Mastery effect not modelled yet: \"15% increased maximum Life if there are no Life Modifiers on Equipped Body Armour\" (maximum_life_+%_if_no_life_tags_on_body_armour; items, M4; with no body armour PoB applies it)",
-    "evidence": "The engine applies chosen mastery effects since 2.9 and the Life Mastery count effect since pbt-engine#66; the simulator's unmodelled-stat warnings for these builds list maximum_life_+%_if_no_life_tags_on_body_armour. Before 2.9, with masteryEffects removed from the XML, PoB equalled our value"
-  },
-  {
-    "id": "mastery-chieftain-life-regeneration",
-    "kind": "pending",
-    "build": "*-marauder-*-chieftain-righteous-fire",
-    "output": "player.life_regeneration",
-    "reason": "Regeneration follows maximum life, which misses the mastery effect of the life entry: \"15% increased maximum Life if there are no Life Modifiers on Equipped Body Armour\" (maximum_life_+%_if_no_life_tags_on_body_armour; items, M4; with no body armour PoB applies it)",
-    "evidence": "The engine applies chosen mastery effects since 2.9; the simulator's unmodelled-stat warnings for these builds list maximum_life_+%_if_no_life_tags_on_body_armour. Before 2.9, with masteryEffects removed from the XML, PoB equalled our value"
-  },
-  {
-    "id": "mastery-slayer-life",
-    "kind": "pending",
-    "build": "*-duelist-*-slayer-resolute-technique",
-    "output": "player.life",
-    "reason": "Mastery effect not modelled yet: \"15% increased maximum Life if there are no Life Modifiers on Equipped Body Armour\" (maximum_life_+%_if_no_life_tags_on_body_armour; items, M4; with no body armour PoB applies it)",
-    "evidence": "The engine applies chosen mastery effects since 2.9; the simulator's unmodelled-stat warnings for these builds list maximum_life_+%_if_no_life_tags_on_body_armour. Before 2.9, with masteryEffects removed from the XML, PoB equalled our value"
-  },
-  {
-    "id": "mastery-slayer-life-regeneration",
-    "kind": "pending",
-    "build": "*-duelist-*-slayer-resolute-technique",
-    "output": "player.life_regeneration",
-    "reason": "Regeneration follows maximum life, which misses the mastery effect of the life entry: \"15% increased maximum Life if there are no Life Modifiers on Equipped Body Armour\" (maximum_life_+%_if_no_life_tags_on_body_armour; items, M4; with no body armour PoB applies it)",
-    "evidence": "The engine applies chosen mastery effects since 2.9; the simulator's unmodelled-stat warnings for these builds list maximum_life_+%_if_no_life_tags_on_body_armour. Before 2.9, with masteryEffects removed from the XML, PoB equalled our value"
-  },
-  {
-    "id": "mastery-deadeye-life",
-    "kind": "pending",
-    "build": "*-ranger-*-deadeye-ghost-dance",
-    "output": "player.life",
-    "reason": "Mastery effect not modelled yet: \"15% increased maximum Life if there are no Life Modifiers on Equipped Body Armour\" (maximum_life_+%_if_no_life_tags_on_body_armour; items, M4; with no body armour PoB applies it)",
-    "evidence": "The engine applies chosen mastery effects since 2.9; the simulator's unmodelled-stat warnings for these builds list maximum_life_+%_if_no_life_tags_on_body_armour. Before 2.9, with masteryEffects removed from the XML, PoB equalled our value"
-  },
-  {
-    "id": "mastery-elementalist-life",
-    "kind": "pending",
-    "build": "*-witch-*-elementalist-elemental-overload",
-    "output": "player.life",
-    "reason": "Mastery effect not modelled yet: \"15% increased maximum Life if there are no Life Modifiers on Equipped Body Armour\" (maximum_life_+%_if_no_life_tags_on_body_armour; items, M4; with no body armour PoB applies it)",
-    "evidence": "The engine applies chosen mastery effects since 2.9; the simulator's unmodelled-stat warnings for these builds list maximum_life_+%_if_no_life_tags_on_body_armour. Before 2.9, with masteryEffects removed from the XML, PoB equalled our value"
-  },
-  {
-    "id": "mastery-hierophant-life",
-    "kind": "pending",
-    "league": "3.28",
-    "build": "*-templar-*-hierophant-ancestral-bond",
-    "output": "player.life",
-    "reason": "Mastery effect not modelled yet: \"15% increased maximum Life if there are no Life Modifiers on Equipped Body Armour\" (maximum_life_+%_if_no_life_tags_on_body_armour; items, M4; with no body armour PoB applies it)",
-    "evidence": "The engine applies chosen mastery effects since 2.9; the simulator's unmodelled-stat warnings for these builds list maximum_life_+%_if_no_life_tags_on_body_armour. Before 2.9, with masteryEffects removed from the XML, PoB equalled our value"
-  },
-  {
-    "id": "mastery-hierophant-life-regeneration",
-    "kind": "pending",
-    "league": "3.28",
-    "build": "*-templar-*-hierophant-ancestral-bond",
-    "output": "player.life_regeneration",
-    "reason": "Regeneration follows maximum life, which misses the mastery effect of the life entry: \"15% increased maximum Life if there are no Life Modifiers on Equipped Body Armour\" (maximum_life_+%_if_no_life_tags_on_body_armour; items, M4; with no body armour PoB applies it)",
-    "evidence": "The engine applies chosen mastery effects since 2.9; the simulator's unmodelled-stat warnings for these builds list maximum_life_+%_if_no_life_tags_on_body_armour. Before 2.9, with masteryEffects removed from the XML, PoB equalled our value"
+    "build": "*",
+    "output": "warning:unchecked-condition",
+    "reason": "The Life Mastery \"15% increased maximum Life if there are no Life Modifiers on Equipped Body Armour\" (maximum_life_+%_if_no_life_tags_on_body_armour) applies without checking its condition, since builds hold no items yet (M4); the engine warns that it is unchecked",
+    "evidence": "pbt-engine #74 applies the mastery; an empty body armour slot meets the condition, verified in game, and these builds are compared tree-only"
   }
 ]

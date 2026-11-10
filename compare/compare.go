@@ -19,7 +19,6 @@ import (
 	"github.com/xaroth/pbt-engine/dataset"
 	"github.com/xaroth/pbt-engine/output"
 	pobimport "github.com/xaroth/pbt-engine/pob"
-	rules "github.com/xaroth/pbt-engine/rules/poe1"
 	"github.com/xaroth/pbt-engine/simulator"
 )
 
@@ -178,7 +177,7 @@ func compareBuild(dir, league string, reg *dataset.Registry, sim *simulator.Sim)
 		})
 	}
 	out = append(out, warnings(st, league, name)...)
-	ms, err := compareOutputs(st, v, league, name)
+	ms, err := compareOutputs(sim.Outputs(), st, v, league, name)
 	return append(out, ms...), err
 }
 
@@ -245,9 +244,9 @@ func warnings(st *simulator.Stats, league, name string) []Mismatch {
 }
 
 // compareOutputs compares every catalogue output of st with PoB's values v.
-func compareOutputs(st *simulator.Stats, v *pob.Values, league, name string) ([]Mismatch, error) {
+func compareOutputs(outputs []simulator.Output, st *simulator.Stats, v *pob.Values, league, name string) ([]Mismatch, error) {
 	var out []Mismatch
-	for _, o := range rules.Outputs() {
+	for _, o := range outputs {
 		get, ok := keyMap()[o.Key]
 		if !ok {
 			return nil, fmt.Errorf("compare: %w %s", errNoKey, o.Key)
