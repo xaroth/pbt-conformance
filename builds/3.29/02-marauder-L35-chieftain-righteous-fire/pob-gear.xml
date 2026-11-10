@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathOfBuilding>
+	<Build level="35" targetVersion="3_0" className="Marauder" ascendClassName="Chieftain" bandit="None" pantheonMajorGod="None" pantheonMinorGod="None" mainSocketGroup="1" viewMode="ITEMS" characterLevelAutoMode="false"/>
+	<Tree activeSpec="1">
+		<Spec treeVersion="3_29" classId="1" ascendClassId="3" secondaryAscendClassId="0" nodes="3644,4139,4713,5152,5233,5643,6245,6712,7444,14056,14930,14936,15868,21958,22627,22703,23027,24383,24704,26270,29049,29353,30380,31080,34400,36047,36678,36949,39841,43374,44184,44202,48480,49412,50904,53118,59928,60472,61198,63048,63282,63447,63723,64210" masteryEffects="{4139,47642}">
+			<Sockets>
+			</Sockets>
+		</Spec>
+	</Tree>
+	<Items activeItemSet="1" useSecondWeaponSet="false">
+		<Item id="1">
+Rarity: RARE
+Corpse Song
+Shadow Sceptre
+Item Level: 34
+Quality: 0
+Sockets: R-B-B
+Implicits: 1
+22% increased Elemental Damage
+24% increased Fire Damage
++9% to Fire Damage over Time Multiplier
++19 to Intelligence
++22% to Fire Resistance
+		</Item>
+		<Item id="2">
+Rarity: RARE
+Rune Bastion
+Reinforced Tower Shield
+Armour: 180
+Item Level: 33
+Quality: 0
+Sockets: R-R-B
+Implicits: 1
++16 to maximum Life
++51 to maximum Life
++23% to Fire Resistance
++18% to Lightning Resistance
++15 to Strength
+		</Item>
+		<Item id="3">
+Rarity: UNIQUE
+Goldrim
+Leather Cap
+Evasion: 60
+Item Level: 30
+Quality: 0
+Sockets: B-R
+Implicits: 0
++40 to Evasion Rating
+10% increased Rarity of Items found
++35% to all Elemental Resistances
+Reflects 4 Physical Damage to Melee Attackers
+		</Item>
+		<Item id="4">
+Rarity: RARE
+Blood Shell
+War Plate
+Armour: 210
+Item Level: 34
+Quality: 0
+Sockets: R-R-B-B
+Implicits: 0
++62 to maximum Life
+21% increased Armour
++26% to Fire Resistance
++17% to Cold Resistance
+		</Item>
+		<Item id="5">
+Rarity: RARE
+Kraken Grasp
+Bronze Gauntlets
+Armour: 50
+Item Level: 32
+Quality: 0
+Sockets: R-B-R
+Implicits: 0
++48 to maximum Life
++19 to Strength
++21% to Fire Resistance
++16% to Lightning Resistance
+		</Item>
+		<Item id="6">
+Rarity: UNIQUE
+Wanderlust
+Wool Shoes
+Energy Shield: 18
+Item Level: 24
+Quality: 0
+Sockets: B-R-R
+Implicits: 0
++5 to Dexterity
++15 to maximum Energy Shield
+30% increased Mana Regeneration Rate
+20% increased Movement Speed
+Cannot be Frozen
+		</Item>
+		<Item id="7">
+Rarity: RARE
+Woe Medallion
+Amber Amulet
+Item Level: 33
+Implicits: 1
++25 to Strength
++55 to maximum Life
++19 to Intelligence
++24% to Fire Resistance
+		</Item>
+		<Item id="8">
+Rarity: RARE
+Storm Loop
+Ruby Ring
+Item Level: 32
+Implicits: 1
++25% to Fire Resistance
++45 to maximum Life
++18% to Cold Resistance
++21 to Strength
+		</Item>
+		<Item id="9">
+Rarity: RARE
+Dusk Band
+Two-Stone Ring (Fire/Cold)
+Item Level: 34
+Implicits: 1
++14% to Fire and Cold Resistances
++42 to maximum Life
++20% to Lightning Resistance
++16 to Intelligence
+		</Item>
+		<Item id="10">
+Rarity: RARE
+Hate Strap
+Leather Belt
+Item Level: 33
+Implicits: 1
++33 to maximum Life
++48 to maximum Life
++24 to Strength
++22% to Fire Resistance
+		</Item>
+		<ItemSet id="1" useSecondWeaponSet="false">
+			<Slot name="Weapon 1" itemId="1"/>
+			<Slot name="Weapon 2" itemId="2"/>
+			<Slot name="Helmet" itemId="3"/>
+			<Slot name="Body Armour" itemId="4"/>
+			<Slot name="Gloves" itemId="5"/>
+			<Slot name="Boots" itemId="6"/>
+			<Slot name="Amulet" itemId="7"/>
+			<Slot name="Ring 1" itemId="8"/>
+			<Slot name="Ring 2" itemId="9"/>
+			<Slot name="Belt" itemId="10"/>
+		</ItemSet>
+	</Items>
+</PathOfBuilding>

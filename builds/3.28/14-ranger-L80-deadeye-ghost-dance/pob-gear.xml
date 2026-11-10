@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathOfBuilding>
+	<Build level="80" targetVersion="3_0" className="Ranger" ascendClassName="Deadeye" bandit="None" pantheonMajorGod="None" pantheonMinorGod="None" mainSocketGroup="1" viewMode="TREE" characterLevelAutoMode="false"/>
+	<Tree activeSpec="1">
+		<Spec treeVersion="3_28" classId="2" ascendClassId="2" secondaryAscendClassId="0" nodes="1427,1461,2185,2715,3187,3571,4011,5237,6427,6538,6654,6797,6799,6913,7488,8001,8458,8938,9206,9355,9469,10840,11678,12412,12801,12948,13375,13935,14292,14400,14804,16882,18182,18770,19858,20807,20953,22266,23334,23912,24848,26067,27656,28658,28995,29454,30679,30969,31039,31508,32477,32514,32555,33989,35255,36221,36281,36287,38149,38662,38995,39665,39718,39861,41119,41420,42964,44306,44316,45035,45202,45313,45593,46277,48660,49391,49459,49820,49900,49978,50338,51235,51881,53114,53615,54142,55750,56023,56295,56646,59220,59370,59606,59837,60735,60942,61306,61834,62744,63194,63251,63795,64028,64265,64878,65224,65427,65502,65528" masteryEffects="{3571,64875},{6427,56951},{7488,62252},{31039,9986},{44316,34242},{48660,17942},{49391,64511},{49820,58447},{53615,61097},{56023,16644},{65528,57074}">
+			<Sockets>
+				<Socket nodeId="60735" itemId="16"/>
+				<Socket nodeId="61834" itemId="17"/>
+				<Socket nodeId="33989" itemId="18"/>
+			</Sockets>
+		</Spec>
+	</Tree>
+	<Items activeItemSet="1" useSecondWeaponSet="false">
+		<Item id="1">
+Rarity: RARE
+Loath Wind
+Spine Bow
+Item Level: 80
+Quality: 20
+Sockets: G-G-G-G-G-B
+LevelReq: 64
+Implicits: 0
+182% increased Physical Damage
+Adds 34 to 62 Physical Damage
+14% increased Attack Speed
+24% increased Critical Strike Chance
+Bow Attacks fire 2 additional Arrows
++28 to Strength and Intelligence
+		</Item>
+		<Item id="2">
+Rarity: RARE
+Woe Barb
+Spike-Point Arrow Quiver
+Item Level: 80
+Quality: 0
+LevelReq: 64
+Implicits: 1
+24% increased Global Critical Strike Chance
++96 to maximum Life
+Adds 6 to 98 Lightning Damage to Attacks
+Bow Attacks fire an additional Arrow
++30% to Global Critical Strike Multiplier
+32% increased Projectile Speed
+		</Item>
+		<Item id="3">
+Rarity: RARE
+Demon Visage
+Deicide Mask
+Item Level: 80
+Quality: 20
+Sockets: G-B-G-B
+LevelReq: 67
+Implicits: 0
+82% increased Evasion and Energy Shield
++102 to maximum Life
++40% to Fire Resistance
++28% to Chaos Resistance
++36 to Intelligence
+		</Item>
+		<Item id="4">
+Rarity: RARE
+Bramble Shroud
+Varnished Coat
+Item Level: 80
+Quality: 20
+Sockets: G-G-G-G-B-R
+LevelReq: 62
+Implicits: 0
+88% increased Evasion and Energy Shield
++56 to maximum Energy Shield
++38% to Lightning Resistance
++36% to Fire Resistance
++16% chance to Suppress Spell Damage
+		</Item>
+		<Item id="5">
+Rarity: RARE
+Behemoth Grasp
+Murder Mitts
+Item Level: 80
+Quality: 20
+Sockets: G-B-G-R
+LevelReq: 67
+Implicits: 0
++92 to maximum Life
+35% of Physical Damage Converted to Lightning Damage
++38% to Cold Resistance
+12% increased Attack Speed
++11% chance to Suppress Spell Damage
+		</Item>
+		<Item id="6">
+Rarity: RARE
+Corpse Stride
+Murder Boots
+Item Level: 80
+Quality: 20
+Sockets: B-G-G-B
+LevelReq: 69
+Implicits: 0
+30% increased Movement Speed
++96 to maximum Life
++42 to Intelligence
++41% to Cold Resistance
++12% chance to Suppress Spell Damage
+		</Item>
+		<Item id="7">
+Rarity: RARE
+Mind Rosary
+Onyx Amulet
+Item Level: 80
+LevelReq: 64
+Implicits: 1
++15 to all Attributes
++78 to maximum Life
++34 to Dexterity
++36% to Lightning Resistance
++34% to Global Critical Strike Multiplier
+		</Item>
+		<Item id="8">
+Rarity: RARE
+Hypnotic Turn
+Synaptic Ring
+Item Level: 80
+LevelReq: 64
+Implicits: 2
++2% to maximum Lightning Resistance
+Cannot roll Modifiers of Non-Lightning Damage Types
++88 to maximum Life
++24% to Global Critical Strike Multiplier
++36% to Chaos Resistance
++38% to Fire Resistance
+		</Item>
+		<Item id="9">
+Rarity: RARE
+Storm Knot
+Topaz Ring
+Item Level: 80
+LevelReq: 64
+Implicits: 1
++24% to Lightning Resistance
++64 to maximum Life
++42 to Dexterity
++40% to Cold Resistance
++30 to Intelligence
+		</Item>
+		<Item id="10">
+Rarity: RARE
+Dread Cord
+Leather Belt
+Item Level: 80
+LevelReq: 64
+Implicits: 1
++32 to maximum Life
++48 to Strength
++44 to Dexterity
++82 to maximum Life
++40% to Fire Resistance
+		</Item>
+		<Item id="16">
+Rarity: RARE
+Gale Eye
+Viridian Jewel
+Item Level: 78
+Implicits: 0
+7% increased maximum Life
++16% to Global Critical Strike Multiplier
+15% increased Global Critical Strike Chance
++12% to Cold and Lightning Resistances
+		</Item>
+		<Item id="17">
+Rarity: RARE
+Storm Spark
+Viridian Jewel
+Item Level: 80
+Implicits: 0
+6% increased maximum Life
++17% to Global Critical Strike Multiplier
+14% increased Elemental Damage with Attack Skills
++13% to Fire and Lightning Resistances
+		</Item>
+		<Item id="18">
+Rarity: RARE
+Pyre Glimmer
+Cobalt Jewel
+Item Level: 83
+Implicits: 0
+7% increased maximum Life
++15% to Global Critical Strike Multiplier
+6% increased maximum Energy Shield
++14% to Chaos Resistance
+		</Item>
+		<ItemSet id="1" useSecondWeaponSet="false">
+			<Slot name="Weapon 1" itemId="1"/>
+			<Slot name="Weapon 2" itemId="2"/>
+			<Slot name="Helmet" itemId="3"/>
+			<Slot name="Body Armour" itemId="4"/>
+			<Slot name="Gloves" itemId="5"/>
+			<Slot name="Boots" itemId="6"/>
+			<Slot name="Amulet" itemId="7"/>
+			<Slot name="Ring 1" itemId="8"/>
+			<Slot name="Ring 2" itemId="9"/>
+			<Slot name="Belt" itemId="10"/>
+			<SocketIdURL name="Jewel 60735" nodeId="60735" itemPbURL=""/>
+			<SocketIdURL name="Jewel 61834" nodeId="61834" itemPbURL=""/>
+			<SocketIdURL name="Jewel 33989" nodeId="33989" itemPbURL=""/>
+		</ItemSet>
+	</Items>
+</PathOfBuilding>

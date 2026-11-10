@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathOfBuilding>
+	<Build level="35" targetVersion="3_0" className="Witch" ascendClassName="Elementalist" bandit="None" pantheonMajorGod="None" pantheonMinorGod="None" mainSocketGroup="1" viewMode="TREE" characterLevelAutoMode="false"/>
+	<Tree activeSpec="1">
+		<Spec treeVersion="3_29" classId="3" ascendClassId="2" secondaryAscendClassId="0" nodes="4184,4367,4397,4713,5296,5916,7388,7444,11128,11420,11924,12246,12738,13559,14936,15117,16023,19501,21958,22647,25970,27709,29049,31462,31875,34423,34661,34927,36542,36678,37569,38849,39841,42760,44184,46340,48118,49651,53123,54447,55332,57264,60398,61804,63447" masteryEffects="{34927,36313}">
+			<Sockets></Sockets>
+		</Spec>
+	</Tree>
+	<Items activeItemSet="1" useSecondWeaponSet="false">
+		<Item id="1">
+Rarity: RARE
+Doom Song
+Carved Wand
+Item Level: 34
+Quality: 0
+Sockets: R-B-B
+Implicits: 1
+13% increased Spell Damage
+Adds 5 to 10 Fire Damage to Spells
+19% increased Fire Damage
++9% to Fire Damage over Time Multiplier
++14 to Intelligence
+		</Item>
+		<Item id="2">
+Rarity: RARE
+Oblivion Ward
+Tarnished Spirit Shield
+Item Level: 33
+Quality: 0
+Sockets: B-R-G
+Implicits: 1
+8% increased Spell Damage
++52 to maximum Life
++24% to Fire Resistance
++19% to Cold Resistance
+12% increased Spell Damage
+		</Item>
+		<Item id="3">
+Rarity: UNIQUE
+Goldrim
+Leather Cap
+Item Level: 30
+Quality: 0
+Sockets: B-B-R
+Implicits: 0
++40 to Evasion Rating
+10% increased Rarity of Items found
++35% to all Elemental Resistances
+Reflects 4 Physical Damage to Melee Attackers
+		</Item>
+		<Item id="4">
+Rarity: UNIQUE
+Tabula Rasa
+Simple Robe
+Item Level: 33
+Quality: 0
+Sockets: W-W-W-W-W-W
+Implicits: 0
+		</Item>
+		<Item id="5">
+Rarity: RARE
+Mind Grip
+Silk Gloves
+Item Level: 32
+Quality: 0
+Sockets: B-G-R
+Implicits: 0
++46 to maximum Life
++21% to Lightning Resistance
++18% to Cold Resistance
++12 to maximum Energy Shield
+		</Item>
+		<Item id="6">
+Rarity: UNIQUE
+Wanderlust
+Wool Shoes
+Item Level: 24
+Quality: 0
+Sockets: B-G-B
+Implicits: 0
++5 to Dexterity
++15 to maximum Energy Shield
+30% increased Mana Regeneration Rate
+20% increased Movement Speed
+Cannot be Frozen
+		</Item>
+		<Item id="7">
+Rarity: RARE
+Rune Beads
+Lapis Amulet
+Item Level: 32
+Quality: 0
+Implicits: 1
++24 to Intelligence
++52 to maximum Life
++22% to Fire Resistance
++16% to Lightning Resistance
++15 to Strength
+		</Item>
+		<Item id="8">
+Rarity: RARE
+Pain Loop
+Ruby Ring
+Item Level: 30
+Quality: 0
+Implicits: 1
++22% to Fire Resistance
++38 to maximum Life
++20% to Cold Resistance
++11 to Strength
+		</Item>
+		<Item id="9">
+Rarity: RARE
+Ghoul Coil
+Sapphire Ring
+Item Level: 31
+Quality: 0
+Implicits: 1
++20% to Cold Resistance
++41 to maximum Life
++23% to Lightning Resistance
++14 to Strength
+		</Item>
+		<Item id="10">
+Rarity: RARE
+Gloom Cord
+Leather Belt
+Item Level: 30
+Quality: 0
+Implicits: 1
++28 to maximum Life
++48 to maximum Life
++20% to Fire Resistance
++16% to Lightning Resistance
+		</Item>
+		<ItemSet id="1" useSecondWeaponSet="false">
+			<Slot name="Weapon 1" itemId="1"/>
+			<Slot name="Weapon 2" itemId="2"/>
+			<Slot name="Helmet" itemId="3"/>
+			<Slot name="Body Armour" itemId="4"/>
+			<Slot name="Gloves" itemId="5"/>
+			<Slot name="Boots" itemId="6"/>
+			<Slot name="Amulet" itemId="7"/>
+			<Slot name="Ring 1" itemId="8"/>
+			<Slot name="Ring 2" itemId="9"/>
+			<Slot name="Belt" itemId="10"/>
+		</ItemSet>
+	</Items>
+</PathOfBuilding>

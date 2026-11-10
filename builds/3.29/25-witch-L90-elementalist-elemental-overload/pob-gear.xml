@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathOfBuilding>
+	<Build level="90" targetVersion="3_0" className="Witch" ascendClassName="Elementalist" bandit="None" pantheonMajorGod="None" pantheonMinorGod="None" mainSocketGroup="1" viewMode="TREE" characterLevelAutoMode="false"/>
+	<Tree activeSpec="1">
+		<Spec treeVersion="3_29" classId="3" ascendClassId="2" secondaryAscendClassId="0" nodes="258,885,2828,4184,4367,4397,4713,5296,5743,5916,5935,6712,6764,6770,6967,7388,7444,8135,9392,10031,11128,11420,11505,11730,11924,12246,12536,12738,13559,14936,15064,15117,15167,16023,19501,19919,20987,21143,21958,22088,22647,23027,24362,24872,25970,26196,26270,26712,27203,27323,27709,29049,29353,29781,30393,31462,31875,32241,32932,33435,34171,34423,34506,34661,34927,35035,35233,35288,35958,36107,36542,36634,36678,36949,37114,37569,38246,38849,38921,39836,39841,40366,40927,41415,41472,42343,42760,43061,44184,44202,44799,45558,46340,46897,47873,48118,48362,49651,51213,52502,52655,53123,53188,54279,54447,54694,55332,55743,56461,57264,58218,58402,60398,60472,60989,61259,61308,61419,61804,63039,63447,64210,64355" masteryEffects="{2828,2459},{11505,24180},{21143,20630},{30393,8653},{32241,47642},{34927,36313},{38921,4500},{39836,28638},{41415,34242},{45558,30612},{53188,64875}">
+			<Sockets>
+				<Socket nodeId="26196" itemId="16"/>
+				<Socket nodeId="36634" itemId="17"/>
+				<Socket nodeId="61419" itemId="18"/>
+			</Sockets>
+		</Spec>
+	</Tree>
+	<Items activeItemSet="1" useSecondWeaponSet="false">
+		<Item id="1">
+Rarity: UNIQUE
+Grace of the Goddess
+Prophecy Wand
+Item Level: 87
+Quality: 20
+Sockets: R-G B
+Implicits: 1
+40% increased Spell Damage
+324% increased Physical Damage
+Gain 49% of Physical Damage as Extra Fire Damage
+Gain 43% of Physical Damage as Extra Cold Damage
+Gain 41% of Physical Damage as Extra Lightning Damage
++1 to maximum number of Sacred Wisps
++1 to number of Sacred Wisps Summoned
+		</Item>
+		<Item id="2">
+Rarity: UNIQUE
+Aegis Aurora
+Champion Kite Shield
+Shaper Item
+Hunter Item
+Item Level: 85
+Quality: 20
+Sockets: W-R B
+Implicits: 0
+369% increased Armour and Energy Shield
++10% to all Elemental Resistances
++5% to maximum Cold Resistance
++6% Chance to Block
+Recover Energy Shield equal to 2% of Armour when you Block
+16% increased Elemental Damage with Attack Skills
+		</Item>
+		<Item id="3">
+Rarity: RARE
+Rift Keep
+Saint's Hauberk
+Item Level: 86
+Quality: 20
+Sockets: B-R-B-B-R-B
+Implicits: 0
++133 to Armour
++48 to maximum Energy Shield
++48% to Cold Resistance
+Recover 5% of Life on Kill
+11% increased Area of Effect
+77% increased Armour and Energy Shield
+		</Item>
+		<Item id="4">
+Rarity: RARE
+Honour Halo
+Archdemon Crown
+Elder Item
+Item Level: 83
+Quality: 20
+Sockets: B-R-R-G
+Implicits: 2
+-2 to Level of Socketed Support Gems
++2 to Level of Socketed Skill Gems
++2 to Level of Socketed AoE Gems
+Socketed Gems are Supported by Level 20 Burning Damage
+Socketed Gems deal 30% more Elemental Damage
++117 to maximum Life
++30% to Cold Resistance
+31% increased Burning Damage
+8% increased Area of Effect
+72% increased Armour and Energy Shield
+		</Item>
+		<Item id="5">
+Rarity: RARE
+Dusk Hand
+Paladin Gloves
+Searing Exarch Item
+Eater of Worlds Item
+Item Level: 84
+Quality: 24
+Sockets: B W-R R
+Implicits: 2
+Inflict Fire Exposure on Hit, applying -13% to Fire Resistance
+Ignites you inflict spread to other Enemies within 1.5 metres
++41 to Armour
++22 to maximum Energy Shield
++42% to Lightning Resistance
++34% to Chaos Resistance
+35% of Physical Damage Converted to Fire Damage
+11% increased Area of Effect
+16% increased Area Damage
+Ignites you inflict deal Damage 10% faster
+		</Item>
+		<Item id="6">
+Rarity: RARE
+Storm Trail
+Paladin Boots
+Searing Exarch Item
+Eater of Worlds Item
+Item Level: 86
+Quality: 20
+Sockets: W-B-B-G
+Implicits: 2
+Ignites you inflict deal Damage 7% faster
+41% chance to Avoid being Shocked
++97 to maximum Life
+30% increased Rarity of Items found
++26% to Chaos Resistance
+29% increased Movement Speed
+60% chance to Avoid being Shocked
+12% increased Movement Speed if you haven't been Hit Recently
+		</Item>
+		<Item id="7">
+Rarity: UNIQUE
+Polaric Devastation
+Opal Ring
+Item Level: 85
+Implicits: 1
+18% increased Elemental Damage
+18% increased Global Critical Strike Chance
++24% to Fire Resistance
++22% to Cold Resistance
+16% increased Duration of Ailments on Enemies
+Left Ring slot: Cover Enemies in Ash for 5 seconds when you Ignite them
+Right Ring slot: Cover Enemies in Frost for 5 seconds when you Freeze them
+Corrupted
+		</Item>
+		<Item id="8">
+Rarity: RARE
+Doom Coil
+Amethyst Ring
+Item Level: 84
+Quality: 0
+Implicits: 1
++19% to Chaos Resistance
++74 to maximum Life
++13% to all Elemental Resistances
++36% to Chaos Resistance
++40 to Dexterity
+16% increased Elemental Damage
+		</Item>
+		<Item id="9">
+Rarity: RARE
+Storm Beads
+Citrine Amulet
+Item Level: 84
+Quality: 0
+Implicits: 1
++24 to Strength and Dexterity
++92 to maximum Life
++1 to Level of all Fire Skill Gems
++24% to Fire Damage over Time Multiplier
++38% to Lightning Resistance
++40 to Dexterity
+		</Item>
+		<Item id="10">
+Rarity: RARE
+Gloom Cord
+Heavy Belt
+Item Level: 84
+Quality: 0
+Implicits: 1
++32 to Strength
++102 to maximum Life
++42% to Fire Resistance
++38% to Cold Resistance
++18% to Chaos Resistance
++30 to Dexterity
+		</Item>
+		<Item id="16">
+Rarity: UNIQUE
+The Red Nightmare
+Crimson Jewel
+Item Level: 84
+Radius: Large
+Limited to: 1
+Implicits: 0
+Gain 10% of Fire Damage as Extra Chaos Damage
+Passives granting Fire Resistance or all Elemental Resistances in Radius
+also grant Chance to Block Attack Damage at 50% of its value
+		</Item>
+		<Item id="17">
+Rarity: RARE
+Viper Eye
+Crimson Jewel
+Item Level: 84
+Quality: 0
+Implicits: 0
+7% increased maximum Life
++14% to Fire Damage over Time Multiplier
++15% to Cold Resistance
+16% increased Burning Damage
+		</Item>
+		<Item id="18">
+Rarity: RARE
+Glyph Spark
+Cobalt Jewel
+Item Level: 84
+Quality: 0
+Implicits: 0
+6% increased maximum Life
++12% to Damage over Time Multiplier
++14% to Lightning Resistance
+15% increased Fire Damage
+		</Item>
+		<ItemSet id="1" useSecondWeaponSet="false">
+			<Slot name="Weapon 1" itemId="1"/>
+			<Slot name="Weapon 2" itemId="2"/>
+			<Slot name="Body Armour" itemId="3"/>
+			<Slot name="Helmet" itemId="4"/>
+			<Slot name="Gloves" itemId="5"/>
+			<Slot name="Boots" itemId="6"/>
+			<Slot name="Ring 1" itemId="7"/>
+			<Slot name="Ring 2" itemId="8"/>
+			<Slot name="Amulet" itemId="9"/>
+			<Slot name="Belt" itemId="10"/>
+		</ItemSet>
+	</Items>
+</PathOfBuilding>

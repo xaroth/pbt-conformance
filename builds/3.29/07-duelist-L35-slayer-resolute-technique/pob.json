@@ -31,6 +31,34 @@
       "Str": 301
     }
   },
+  "gear": {
+    "allocated": 45,
+    "outputs": {
+      "Armour": 154,
+      "ChaosResist": -60,
+      "ChaosResistTotal": -60,
+      "ColdResist": 35,
+      "ColdResistTotal": 35,
+      "Dex": 93,
+      "EnergyShield": 0,
+      "EnergyShieldRegen": 0,
+      "Evasion": 101,
+      "FireResist": 21,
+      "FireResistTotal": 21,
+      "Int": 43,
+      "Life": 942,
+      "LifeRegen": 9.4,
+      "LightningResist": 14,
+      "LightningResistTotal": 14,
+      "Mana": 265,
+      "ManaRegen": 4.6,
+      "MissingChaosResist": 135,
+      "MissingColdResist": 40,
+      "MissingFireResist": 54,
+      "MissingLightningResist": 61,
+      "Str": 301
+    }
+  },
   "treeOnly": {
     "allocated": 45,
     "outputs": {

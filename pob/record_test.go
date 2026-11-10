@@ -54,13 +54,24 @@ func TestRecord(t *testing.T) {
 	if err := json.Unmarshal(b, &v); err != nil {
 		t.Fatal(err)
 	}
-	if v.PoB != f.Games["poe1"].Leagues["3.29"].PoB || v.Full.Outputs["Life"] != 1150 || v.TreeOnly.Outputs["Life"] != 1150 {
+	if v.PoB != f.Games["poe1"].Leagues["3.29"].PoB || v.Full.Outputs["Life"] != 1150 || v.Gear.Outputs["Life"] != 1150 ||
+		v.TreeOnly.Outputs["Life"] != 1150 {
 		t.Errorf("values: got %+v", v)
 	}
-	if err := os.WriteFile(filepath.Join(dir, pob.ValuesFile), []byte("{}\n"), 0o600); err != nil {
-		t.Fatal(err)
-	}
-	if err := pob.Record(ctx, root, cache, f, "poe1", "3.29", true); !errors.Is(err, pob.ErrStale) {
-		t.Errorf("check after tampering: got %v, want %v", err, pob.ErrStale)
+	for _, name := range []string{pob.ValuesFile, pob.GearXML} {
+		path := filepath.Join(dir, name)
+		stored, err := os.ReadFile(path)
+		if err != nil {
+			t.Fatal(err)
+		}
+		if err := os.WriteFile(path, []byte("{}\n"), 0o600); err != nil {
+			t.Fatal(err)
+		}
+		if err := pob.Record(ctx, root, cache, f, "poe1", "3.29", true); !errors.Is(err, pob.ErrStale) {
+			t.Errorf("check after tampering with %s: got %v, want %v", name, err, pob.ErrStale)
+		}
+		if err := os.WriteFile(path, stored, 0o600); err != nil {
+			t.Fatal(err)
+		}
 	}
 }
