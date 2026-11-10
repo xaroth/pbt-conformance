@@ -2,5 +2,5 @@ github.com/google/flatbuffers v25.12.19+incompatible h1:haMV2JRRJCe1998HeW/p0X9U
 github.com/google/flatbuffers v25.12.19+incompatible/go.mod h1:1AeVuKshWv4vARoZatz6mlQ0JxURH0Kv5+zNeJKJCa8=
 github.com/google/go-cmp v0.7.0 h1:wk8382ETsv4JYUZwIsn6YpYiWiBsYLSJiTsyBybVuN8=
 github.com/google/go-cmp v0.7.0/go.mod h1:pXiqmnSA92OHEEa9HXL2W4E7lf9JzCmGVUdgjX3N/iU=
-github.com/xaroth/pbt-engine v0.0.0-20261109233648-e7050a785898 h1:uxffRHKnFcbQAF0o+UZYnH88Gq4KBRH/YiSRbTZ/1KQ=
-github.com/xaroth/pbt-engine v0.0.0-20261109233648-e7050a785898/go.mod h1:kCpvhBR+vGqsXUoMGDMl/oDsrzpZ+c8cWJ870ZHApmA=
+github.com/xaroth/pbt-engine v0.0.0-20261110104203-844f05abbe34 h1:77SQN2KYsk+u6eknJBJvt5Y7NroQq1bgU+qIFTzmSDI=
+github.com/xaroth/pbt-engine v0.0.0-20261110104203-844f05abbe34/go.mod h1:kCpvhBR+vGqsXUoMGDMl/oDsrzpZ+c8cWJ870ZHApmA=
