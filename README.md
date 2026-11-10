@@ -36,6 +36,10 @@ go run ./cmd/pbtc data --cache ~/.cache/pbt-conformance       # just pull; print
 
 Every mismatch is listed with PoB's tree-only and full values. A mismatch is either fixed in pbt-engine or accepted in `triage.json` as a `deviation` (PoB behaviour we do not follow, with our evidence) or `pending` (a mechanic the engine does not model yet). An entry matches by league, build name pattern and output, and optionally by our value and PoB's (`ours`, `pob`): with values set, a triaged mismatch whose numbers change shows as untriaged again. Compare fails on untriaged mismatches and on triage entries that match nothing. The dataset must be the pinned one: its content id is checked.
 
+## Import cases
+
+`imports/<case>/` checks pbt-engine's PoB importer on what the conformance builds lack: cluster jewels, a tattoo, two trees, player config, the layout of older PoB files, the ruthless and alternate trees, a secondary ascendancy and a PoE2 file. Each case holds `pob.xml`, made from a conformance build's `pob-treeonly.xml` with one thing added (its `README.md` says what), and `expect.json`: the build it must import to, which is the source build with only the intended change, and its warnings by code and subject, or the error. `go test ./imports` runs them with `$PBT_DATASETS`, as CI does.
+
 ## Develop
 
 Requires Go 1.27.
