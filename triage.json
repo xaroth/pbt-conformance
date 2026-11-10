@@ -4,7 +4,7 @@
     "kind": "pending",
     "build": "*-templar-*-hierophant-ancestral-bond",
     "output": "player.mana_regeneration",
-    "reason": "Power charges (M11): node 12888 gives 8% increased mana regeneration rate per power charge; PoB counts the minimum power charges from nodes 25651 and 9261",
+    "reason": "Power charges are not modelled: node 12888 gives 8% increased mana regeneration rate per power charge; PoB counts the minimum power charges from nodes 25651 and 9261",
     "evidence": "PoB ManaRegen INC from Tree:12888 is 8 per power charge times PowerChargesMin; the engine notes the stat as not applied (charges)"
   },
   {
@@ -13,7 +13,7 @@
     "league": "3.28",
     "build": "*-duelist-*-slayer-resolute-technique",
     "output": "player.armour",
-    "reason": "Endurance charges (M11): node 65485, 5% increased armour per endurance charge; PoB counts one",
+    "reason": "Endurance charges are not modelled: node 65485, 5% increased armour per endurance charge; PoB counts one",
     "evidence": "PoB Armour INC 5 from Tree:65485 (Multiplier); the engine notes the stat as not applied (charges)"
   },
   {
@@ -22,7 +22,7 @@
     "league": "3.28",
     "build": "*-duelist-L[89]0-slayer-resolute-technique",
     "output": "player.life_regeneration",
-    "reason": "Endurance charges (M11): node 48109 regenerates 0.2% of life per second per endurance charge; PoB counts one",
+    "reason": "Endurance charges are not modelled: node 48109 regenerates 0.2% of life per second per endurance charge; PoB counts one",
     "evidence": "PoB LifeRegenPercent 0.2 from Tree:48109; PoB gives 116.5 and 129.4 against our 111.5 and 123.7, a gap of 0.2% of PoB life (2533 and 2812)"
   },
   {
@@ -39,7 +39,7 @@
     "kind": "pending",
     "build": "*",
     "output": "warning:unchecked-condition",
-    "reason": "The Life Mastery \"15% increased maximum Life if there are no Life Modifiers on Equipped Body Armour\" (maximum_life_+%_if_no_life_tags_on_body_armour) applies without checking its condition, since builds hold no items yet (M4); the engine warns that it is unchecked",
+    "reason": "The Life Mastery \"15% increased maximum Life if there are no Life Modifiers on Equipped Body Armour\" (maximum_life_+%_if_no_life_tags_on_body_armour) applies without checking its condition, since the engine does not model items; it warns that it is unchecked",
     "evidence": "pbt-engine #74 applies the mastery; an empty body armour slot meets the condition, verified in game, and these builds are compared tree-only"
   }
 ]

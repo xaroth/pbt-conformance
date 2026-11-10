@@ -22,22 +22,22 @@ func TestApply(t *testing.T) {
 		{League: "3.29", Build: "24-witch-L90-elementalist", Output: "player.armour", Ours: 5},
 	}
 	es := []compare.Entry{
-		{ID: "D1", Build: "*-marauder-*", Output: "player.life", League: "3.29", Ours: v(1150), PoB: v(1166)},
-		{ID: "P1", Build: "22-*", Output: "player.mana", Ours: v(600)},
+		{ID: "life-deviation", Build: "*-marauder-*", Output: "player.life", League: "3.29", Ours: v(1150), PoB: v(1166)},
+		{ID: "mana", Build: "22-*", Output: "player.mana", Ours: v(600)},
 		// pinned to the old value 600: build 23's 601 does not match
-		{ID: "P2", Build: "23-*", Output: "player.mana", Ours: v(600)},
-		{ID: "P3", Build: "24-*", PoB: v(0)}, // PoB has no value: a PoB value never matches
-		{ID: "P4", Build: "*-templar-*"},
+		{ID: "mana-old-value", Build: "23-*", Output: "player.mana", Ours: v(600)},
+		{ID: "armour-no-pob", Build: "24-*", PoB: v(0)}, // PoB has no value: a PoB value never matches
+		{ID: "templar", Build: "*-templar-*"},
 	}
 	stale := compare.Apply(ms, es)
 	got := make([]string, 0, len(ms))
 	for _, m := range ms {
 		got = append(got, m.Triage)
 	}
-	if diff := cmp.Diff([]string{"D1", "", "P1", "", ""}, got); diff != "" {
+	if diff := cmp.Diff([]string{"life-deviation", "", "mana", "", ""}, got); diff != "" {
 		t.Errorf("triage (-want +got):\n%s", diff)
 	}
-	if diff := cmp.Diff([]string{"P2", "P3", "P4"}, stale); diff != "" {
+	if diff := cmp.Diff([]string{"mana-old-value", "armour-no-pob", "templar"}, stale); diff != "" {
 		t.Errorf("stale (-want +got):\n%s", diff)
 	}
 }
@@ -47,16 +47,16 @@ func TestReadTriage(t *testing.T) {
 	testCases := []struct {
 		name, data, want string
 	}{
-		{"valid", `[{"id": "P1", "kind": "pending", "build": "*", "reason": "r"}]`, ""},
-		{"unknown field", `[{"id": "P1", "kind": "pending", "build": "*", "reason": "r", "x": 1}]`, "unknown field"},
+		{"valid", `[{"id": "mana", "kind": "pending", "build": "*", "reason": "r"}]`, ""},
+		{"unknown field", `[{"id": "mana", "kind": "pending", "build": "*", "reason": "r", "x": 1}]`, "unknown field"},
 		{
 			"repeated id",
-			`[{"id": "P1", "kind": "pending", "build": "*", "reason": "r"}, {"id": "P1", "kind": "pending", "build": "*", "reason": "r"}]`,
+			`[{"id": "mana", "kind": "pending", "build": "*", "reason": "r"}, {"id": "mana", "kind": "pending", "build": "*", "reason": "r"}]`,
 			"missing or repeated",
 		},
-		{"bad kind", `[{"id": "P1", "kind": "maybe", "build": "*", "reason": "r"}]`, `kind "maybe"`},
-		{"no reason", `[{"id": "P1", "kind": "pending", "build": "*"}]`, "no reason"},
-		{"bad pattern", `[{"id": "P1", "kind": "pending", "build": "[", "reason": "r"}]`, "build pattern"},
+		{"bad kind", `[{"id": "mana", "kind": "maybe", "build": "*", "reason": "r"}]`, `kind "maybe"`},
+		{"no reason", `[{"id": "mana", "kind": "pending", "build": "*"}]`, "no reason"},
+		{"bad pattern", `[{"id": "mana", "kind": "pending", "build": "[", "reason": "r"}]`, "build pattern"},
 	}
 	for _, testCase := range testCases {
 		t.Run(testCase.name, func(t *testing.T) {

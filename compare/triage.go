@@ -16,7 +16,7 @@ const TriageFile = "triage.json"
 // ErrTriage marks a malformed triage file.
 var ErrTriage = errors.New("invalid triage")
 
-// Kinds of triage entries (06-verification in pbt-engine's plan).
+// Kinds of triage entries.
 const (
 	// KindDeviation: PoB's behaviour we do not follow, with our evidence.
 	KindDeviation = "deviation"
