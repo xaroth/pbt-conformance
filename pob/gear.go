@@ -2,6 +2,7 @@ package pob
 
 import (
 	"bytes"
+	"cmp"
 	"encoding/xml"
 	"errors"
 	"fmt"
@@ -32,7 +33,7 @@ func Gear(full []byte) ([]byte, error) {
 	if err != nil {
 		return nil, fmt.Errorf("pob: gear: %w", err)
 	}
-	slices.SortFunc(edits, func(a, b edit) int { return int(a.start - b.start) })
+	slices.SortFunc(edits, func(a, b edit) int { return cmp.Compare(a.start, b.start) })
 	var out bytes.Buffer
 	pos := int64(0)
 	for _, e := range edits {
