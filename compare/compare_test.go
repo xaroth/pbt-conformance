@@ -15,9 +15,8 @@ import (
 	"github.com/xaroth/pbt-conformance/pob"
 
 	"github.com/xaroth/pbt-engine/build"
-	"github.com/xaroth/pbt-engine/config"
 	"github.com/xaroth/pbt-engine/dataset"
-	"github.com/xaroth/pbt-engine/rules/poe1"
+	pobimport "github.com/xaroth/pbt-engine/pob"
 )
 
 // env returns the variable or skips the test when it is not set.
@@ -57,47 +56,76 @@ func store329(t *testing.T) *dataset.Store {
 	return s
 }
 
-func TestFromPoB(t *testing.T) {
-	t.Parallel()
-	s := store329(t)
-	b, err := compare.FromPoB(fixture(t), "poe1", "3.29.3.3", "3_29", s)
+// writeBuild writes a build directory under root with the given tree-only and full XML and
+// empty PoB values, and returns root.
+func writeBuild(t *testing.T, name, treeOnly, full string) string {
+	t.Helper()
+	root := t.TempDir()
+	dir := filepath.Join(root, "builds", "3.29", name)
+	if err := os.MkdirAll(dir, 0o755); err != nil {
+		t.Fatal(err)
+	}
+	values, err := json.Marshal(pob.Values{})
 	if err != nil {
 		t.Fatal(err)
 	}
-	stage, _, _ := config.Get(b.Config, poe1.Campaign)
-	bandits, _, _ := config.Get(b.Config, poe1.Bandits)
-	if b.Class != "Metadata/Characters/Str/Str" || b.Level != 90 || len(b.Nodes) != 2 ||
-		stage != poe1.CampaignComplete || bandits != poe1.BanditsKillAll || len(b.Masteries) != 0 {
-		t.Errorf("got %+v", b)
-	}
-	jugg := strings.Replace(string(fixture(t)), `ascendClassName="None"`, `ascendClassName="Juggernaut"`, 1)
-	penalty := `<Config activeConfigSet="1"><ConfigSet id="1"><Input name="resistancePenalty" number="-30"/></ConfigSet></Config>`
-	jugg = strings.Replace(jugg, `<Tree`, penalty+`<Tree`, 1)
-	if b, err = compare.FromPoB([]byte(jugg), "poe1", "3.29.3.3", "3_29", s); err != nil {
-		t.Fatal(err)
-	}
-	stage, _, _ = config.Get(b.Config, poe1.Campaign)
-	if b.Ascendancy != "Juggernaut" || stage != poe1.CampaignActs6To10 {
-		t.Errorf("ascendancy and campaign: got %q, %q", b.Ascendancy, stage)
-	}
-	withMasteries := strings.Replace(string(fixture(t)), `<Spec `, `<Spec masteryEffects="{4139,47642},{12382,64381}" `, 1)
-	if b, err = compare.FromPoB([]byte(withMasteries), "poe1", "3.29.3.3", "3_29", s); err != nil {
-		t.Fatal(err)
-	}
-	if len(b.Masteries) != 2 || b.Masteries[4139] != 47642 || b.Masteries[12382] != 64381 {
-		t.Errorf("masteries: got %v", b.Masteries)
-	}
-	for name, data := range map[string]string{
-		"other tree":  strings.Replace(string(fixture(t)), "3_29", "3_28", 1),
-		"bad class":   strings.Replace(string(fixture(t)), `className="Marauder"`, `className="Barbarian"`, 1),
-		"bad node":    strings.Replace(string(fixture(t)), "31628", "x", 1),
-		"bad bandit":  strings.Replace(string(fixture(t)), `bandit="None"`, `bandit="Eramir"`, 1),
-		"bad mastery": strings.Replace(string(fixture(t)), `<Spec `, `<Spec masteryEffects="{4139}" `, 1),
-		"not xml":     "<",
-	} {
-		if _, err := compare.FromPoB([]byte(data), "poe1", "3.29.3.3", "3_29", s); !errors.Is(err, compare.ErrPoBXML) {
-			t.Errorf("%s: got %v, want %v", name, err, compare.ErrPoBXML)
+	for file, data := range map[string][]byte{pob.TreeOnlyXML: []byte(treeOnly), pob.FullXML: []byte(full), pob.ValuesFile: values} {
+		if err := os.WriteFile(filepath.Join(dir, file), data, 0o600); err != nil {
+			t.Fatal(err)
 		}
+	}
+	return root
+}
+
+func outputs(ms []compare.Mismatch, prefix string) []string {
+	var out []string
+	for _, m := range ms {
+		if strings.HasPrefix(m.Output, prefix) {
+			out = append(out, m.Output)
+		}
+	}
+	slices.Sort(out)
+	return out
+}
+
+// Import mismatches: tree-only warnings, full-file warnings for more than it holds beside the
+// tree, and a full file whose tree differs.
+func TestRunImports(t *testing.T) {
+	t.Parallel()
+	datasets := env(t, "PBT_DATASETS")
+	items := `<Items><Item id="1">Rarity: RARE
+Doom Crown
+Royal Burgonet</Item></Items></PathOfBuilding>`
+	withItems := strings.Replace(string(fixture(t)), "</PathOfBuilding>", items, 1)
+	testCases := []struct {
+		name, treeOnly, full string
+		want                 []string
+	}{
+		{"items only", string(fixture(t)), withItems, nil},
+		{"bandit differs", string(fixture(t)), strings.Replace(withItems, `bandit="None"`, `bandit="Alira"`, 1), nil},
+		{"cluster node in full", string(fixture(t)), strings.Replace(withItems, `nodes="47175,31628"`, `nodes="47175,31628,65601"`, 1),
+			[]string{"import:pob-cluster-node-dropped"}},
+		{"other tree in full", string(fixture(t)), strings.Replace(withItems, `nodes="47175,31628"`, `nodes="47175"`, 1),
+			[]string{"import:full-tree"}},
+		{"config in tree-only", strings.Replace(string(fixture(t)), "<Tree", `<Config><Input name="usePowerCharges" boolean="true"/></Config><Tree`, 1),
+			string(fixture(t)), []string{"import:pob-config-ignored"}},
+	}
+	for _, testCase := range testCases {
+		t.Run(testCase.name, func(t *testing.T) {
+			t.Parallel()
+			root := writeBuild(t, "01-marauder", testCase.treeOnly, testCase.full)
+			ms, err := compare.Run(root, datasets, repoPins(t), "poe1", "3.29")
+			if err != nil {
+				t.Fatal(err)
+			}
+			if got := outputs(ms, "import:"); !slices.Equal(got, testCase.want) {
+				t.Errorf("import mismatches %v, want %v", got, testCase.want)
+			}
+		})
+	}
+	other := strings.Replace(string(fixture(t)), "3_29", "3_28", 1)
+	if _, err := compare.Run(writeBuild(t, "01-marauder", other, other), datasets, repoPins(t), "poe1", "3.29"); !errors.Is(err, compare.ErrLeague) {
+		t.Errorf("3.28 tree under 3.29: got %v, want %v", err, compare.ErrLeague)
 	}
 }
 
@@ -136,7 +164,11 @@ func TestRun(t *testing.T) {
 func TestAllocatedCountsStarts(t *testing.T) {
 	t.Parallel()
 	s := store329(t)
-	b, err := compare.FromPoB(fixture(t), "poe1", "3.29.3.3", "3_29", s)
+	reg, err := dataset.OpenRoot(os.DirFS(env(t, "PBT_DATASETS")))
+	if reg == nil {
+		t.Fatal(err)
+	}
+	b, _, err := pobimport.FromXML(fixture(t), reg)
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -171,7 +203,7 @@ func TestRunReportsWarnings(t *testing.T) {
 	if err := os.MkdirAll(dir, 0o755); err != nil {
 		t.Fatal(err)
 	}
-	xml := strings.Replace(string(fixture(t)), `nodes="47175,31628"`, `nodes="47175,31628,4294967"`, 1)
+	xml := strings.Replace(string(fixture(t)), `nodes="47175,31628"`, `nodes="47175,31628,2"`, 1)
 	for _, name := range []string{pob.FullXML, pob.TreeOnlyXML} {
 		if err := os.WriteFile(filepath.Join(dir, name), []byte(xml), 0o600); err != nil {
 			t.Fatal(err)
@@ -189,7 +221,7 @@ func TestRunReportsWarnings(t *testing.T) {
 		t.Fatal(err)
 	}
 	if !slices.ContainsFunc(ms, func(m compare.Mismatch) bool {
-		return m.Output == "warning:node-unknown" && strings.HasPrefix(m.Detail, "node 4294967: ")
+		return m.Output == "warning:node-unknown" && strings.HasPrefix(m.Detail, "node 2: ")
 	}) {
 		t.Errorf("no node-unknown warning in %+v", ms)
 	}
