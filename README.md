@@ -18,16 +18,24 @@ go run ./cmd/pbtc setup --cache ~/.cache/pbt-conformance
 
 Setup checks that each PoB release targets its pinned league's tree.
 
-Each build lives in `builds/<league>/<NN>-<class>-L<level>-<target>/`: `pob.xml` holds the build as complete as PoB has it (tree, items, skills), `pob-treeonly.xml` the same tree without the rest, so a difference can be traced to the tree or the gear. `pbtc pob` runs both through the league's pinned PoB and writes PoB's values to `pob.json`, with the release that made them:
+Each build lives in `builds/<league>/<NN>-<class>-L<level>-<target>/` and is recorded in three layers, so a difference can be traced to the tree, the gear or the rest:
+
+| File | Layer | `pob.json` key |
+|---|---|---|
+| `pob.xml` | the build as complete as PoB has it (tree, items, skills, config) | `full` |
+| `pob-gear.xml` | the tree with its socketed jewels and the items, without flasks, skills or config | `gear` |
+| `pob-treeonly.xml` | the tree only | `treeOnly` |
+
+`pbtc pob` derives `pob-gear.xml` from `pob.xml`: it drops every top-level element but `Build`, `Tree` and `Items`, drops the flask slots and their items, resets the bandit and pantheon choices to `None` as in the tree-only file, and keeps the rest of the file as it is. It then runs the three files through the league's pinned PoB and writes PoB's values to `pob.json`, with the release that made them:
 
 ```sh
 go run ./cmd/pbtc pob --cache ~/.cache/pbt-conformance            # every pinned league
-go run ./cmd/pbtc pob --cache ~/.cache/pbt-conformance --check    # fail if a stored pob.json is stale
+go run ./cmd/pbtc pob --cache ~/.cache/pbt-conformance --check    # fail if a stored pob-gear.xml or pob.json is stale
 ```
 
-Rerun it after adding or changing a build, bumping a pin, or changing the runner, and commit the `pob.json` changes with it.
+Rerun it after adding or changing a build, bumping a pin, or changing the runner, and commit the `pob-gear.xml` and `pob.json` changes with it. `go test ./pob` fails when a stored `pob-gear.xml` is not what `pob.xml` derives to.
 
-`pbtc compare` computes pbt-engine's sheet for every build with the pinned dataset and compares it with PoB's values for the tree-only build, the part the engine models so far. It imports `pob-treeonly.xml` with pbt-engine's PoB importer (`pob.FromXML`: class, ascendancy, level, tree, mastery choices, and as config the bandits and the campaign stage from PoB's resistance penalty) and simulates it with `simulator`. It imports `pob.xml` too and checks the importer on both: the tree-only file must import without warnings, and the full file to the same tree (config apart: tree-only files keep PoB's default bandit choice) with warnings only for what it holds beside the tree (items, skills, jewels, config, pantheon). Anything else is a mismatch `import:<code>`, or `import:full-tree` when the trees differ. Every simulation warning except stats left out as not modelled (a dropped node, a mastery choice that does not fit, points over budget) is reported as a mismatch `warning:<code>` and must be triaged too. It needs no Lua or PoB, only the datasets, which it pulls from the pinned pbt-data commit into the cache (`<cache>/data/<commit>/<game>`; a later run fetches nothing). `pbtc data` pulls them and prints that directory; `--datasets` compares with datasets already on disk (one directory per league or per version) instead. CI pulls the pinned datasets, runs the tests with them and runs compare.
+`pbtc compare` computes pbt-engine's sheet for every build with the pinned dataset and compares it with PoB's values for the tree-only build, the part the engine models so far; it does not read the gear layer yet. It imports `pob-treeonly.xml` with pbt-engine's PoB importer (`pob.FromXML`: class, ascendancy, level, tree, mastery choices, and as config the bandits and the campaign stage from PoB's resistance penalty) and simulates it with `simulator`. It imports `pob.xml` too and checks the importer on both: the tree-only file must import without warnings, and the full file to the same tree (config apart: tree-only files keep PoB's default bandit choice) with warnings only for what it holds beside the tree (items, skills, jewels, config, pantheon). Anything else is a mismatch `import:<code>`, or `import:full-tree` when the trees differ. Every simulation warning except stats left out as not modelled (a dropped node, a mastery choice that does not fit, points over budget) is reported as a mismatch `warning:<code>` and must be triaged too. It needs no Lua or PoB, only the datasets, which it pulls from the pinned pbt-data commit into the cache (`<cache>/data/<commit>/<game>`; a later run fetches nothing). `pbtc data` pulls them and prints that directory; `--datasets` compares with datasets already on disk (one directory per league or per version) instead. CI pulls the pinned datasets, runs the tests with them and runs compare.
 
 ```sh
 go run ./cmd/pbtc compare --cache ~/.cache/pbt-conformance

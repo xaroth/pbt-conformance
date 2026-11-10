@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathOfBuilding>
+	<Build level="60" targetVersion="3_0" className="Shadow" ascendClassName="Assassin" bandit="None" pantheonMajorGod="None" pantheonMinorGod="None" mainSocketGroup="1" viewMode="ITEMS" characterLevelAutoMode="false"/>
+	<Tree activeSpec="1">
+		<Spec treeVersion="3_29" classId="6" ascendClassId="1" secondaryAscendClassId="0" nodes="1405,1461,1648,1891,3424,3863,4011,5629,5802,5823,6064,6797,7263,8640,8938,9015,9355,9469,11811,12412,14157,14292,18182,18769,18770,20546,20807,21264,23334,23439,23449,25789,26148,27656,28012,28754,28782,28903,29454,30205,31039,31197,31359,32227,33989,35283,35851,35894,36225,36287,36858,37663,39524,39861,43215,44988,45272,45838,46277,46289,46408,46676,47484,49900,49978,51212,52157,52714,53456,56295,58229,58968,59009,59220,59606,60592,60834,61653,61834,62744,63251,64509,64769,65502" masteryEffects="{26148,51147},{28903,62897},{31039,9986},{31197,44869},{60834,34420}">
+			<Sockets>
+				<Socket nodeId="33989" itemId="16"/>
+				<Socket nodeId="61834" itemId="17"/>
+			</Sockets>
+		</Spec>
+	</Tree>
+	<Items activeItemSet="1" useSecondWeaponSet="false">
+		<Item id="1">
+Rarity: RARE
+Viper Bite
+Golden Kris
+Item Level: 58
+Quality: 0
+Sockets: G-B-G
+Implicits: 1
+62% increased Global Critical Strike Chance
+Adds 14 to 28 Physical Damage
+Adds 12 to 25 Chaos Damage
+16% increased Attack Speed
+35% increased Damage with Poison
+25% chance to Poison on Hit
++24% to Global Critical Strike Multiplier
+		</Item>
+		<Item id="2">
+Rarity: RARE
+Agony Thirst
+Golden Kris
+Item Level: 55
+Quality: 0
+Sockets: G-B-G
+Implicits: 1
+61% increased Global Critical Strike Chance
+Adds 12 to 24 Physical Damage
+14% increased Attack Speed
+20% chance to Poison on Hit
++20% to Global Critical Strike Multiplier
++28 to Intelligence
+		</Item>
+		<Item id="3">
+Rarity: RARE
+Morbid Visage
+Harlequin Mask
+Item Level: 57
+Quality: 0
+Sockets: G-B-G-G
+Implicits: 0
++78 to maximum Life
+42% increased Evasion and Energy Shield
++34% to Fire Resistance
++28% to Lightning Resistance
++31 to Intelligence
+		</Item>
+		<Item id="4">
+Rarity: RARE
+Corpse Wrap
+Crypt Armour
+Item Level: 59
+Quality: 0
+Sockets: G-G-B-G-G
+Implicits: 0
++92 to maximum Life
+58% increased Evasion and Energy Shield
++36% to Cold Resistance
++30% to Fire Resistance
++28 to Dexterity
+		</Item>
+		<Item id="5">
+Rarity: RARE
+Torment Clutches
+Ambush Mitts
+Item Level: 57
+Quality: 0
+Sockets: G-B-G-B
+Implicits: 0
++68 to maximum Life
+Adds 4 to 8 Physical Damage to Attacks
++32% to Cold Resistance
++29% to Lightning Resistance
+9% increased Attack Speed
+		</Item>
+		<Item id="6">
+Rarity: RARE
+Gale Track
+Ambush Boots
+Item Level: 56
+Quality: 0
+Sockets: G-G-B
+Implicits: 0
++71 to maximum Life
+25% increased Movement Speed
++33% to Lightning Resistance
++27% to Fire Resistance
++30 to Intelligence
+		</Item>
+		<Item id="7">
+Rarity: RARE
+Blight Pendant
+Turquoise Amulet
+Item Level: 58
+Quality: 0
+Implicits: 1
++22 to Dexterity and Intelligence
++68 to maximum Life
++29% to Global Critical Strike Multiplier
++31% to Cold Resistance
++26 to Intelligence
++32 to maximum Mana
+		</Item>
+		<Item id="8">
+Rarity: RARE
+Plague Band
+Two-Stone Ring (Cold/Lightning)
+Item Level: 56
+Quality: 0
+Implicits: 1
++15% to Cold and Lightning Resistances
++60 to maximum Life
++33% to Fire Resistance
+Adds 4 to 8 Physical Damage to Attacks
++26 to Intelligence
+		</Item>
+		<Item id="9">
+Rarity: RARE
+Rapture Loop
+Diamond Ring
+Item Level: 57
+Quality: 0
+Implicits: 1
+27% increased Global Critical Strike Chance
++57 to maximum Life
++34% to Lightning Resistance
++28% to Fire Resistance
++25 to Dexterity
+		</Item>
+		<Item id="10">
+Rarity: RARE
+Gloom Lash
+Leather Belt
+Item Level: 58
+Quality: 0
+Implicits: 1
++35 to maximum Life
++76 to maximum Life
++33% to Cold Resistance
++29% to Fire Resistance
++28 to Strength
+		</Item>
+		<Item id="16">
+Rarity: RARE
+Grim Spark
+Viridian Jewel
+Item Level: 55
+Quality: 0
+Implicits: 0
+6% increased maximum Life
++10% to Global Critical Strike Multiplier
+14% increased Critical Strike Chance
+		</Item>
+		<Item id="17">
+Rarity: RARE
+Rift Shard
+Cobalt Jewel
+Item Level: 57
+Quality: 0
+Implicits: 0
+7% increased maximum Life
++6% to Chaos Damage over Time Multiplier
++12% to Lightning Resistance
+		</Item>
+		<ItemSet id="1" useSecondWeaponSet="false">
+			<Slot name="Weapon 1" itemId="1"/>
+			<Slot name="Weapon 2" itemId="2"/>
+			<Slot name="Helmet" itemId="3"/>
+			<Slot name="Body Armour" itemId="4"/>
+			<Slot name="Gloves" itemId="5"/>
+			<Slot name="Boots" itemId="6"/>
+			<Slot name="Amulet" itemId="7"/>
+			<Slot name="Ring 1" itemId="8"/>
+			<Slot name="Ring 2" itemId="9"/>
+			<Slot name="Belt" itemId="10"/>
+		</ItemSet>
+	</Items>
+</PathOfBuilding>

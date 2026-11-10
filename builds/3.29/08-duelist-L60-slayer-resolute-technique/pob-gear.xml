@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathOfBuilding>
+	<Build level="60" targetVersion="3_0" className="Duelist" ascendClassName="Slayer" bandit="None" pantheonMajorGod="None" pantheonMinorGod="None" mainSocketGroup="1" viewMode="TREE" characterLevelAutoMode="false"/>
+	<Tree activeSpec="1">
+		<Spec treeVersion="3_29" classId="4" ascendClassId="1" secondaryAscendClassId="0" nodes="476,1325,3184,3644,4139,4833,5233,6113,6289,7285,8533,8544,9976,10661,11700,12033,12407,12664,14056,14930,15286,16544,18103,18302,20018,20835,22295,22703,23038,23066,24083,24544,24914,25682,25796,25933,26023,26712,28498,29353,30380,30691,31080,31471,31473,31961,33287,33795,34009,34400,34590,34666,35288,35507,37584,37800,38664,40818,40867,40907,42293,42911,43374,43412,43601,44429,44624,47389,48109,48199,48287,48438,49178,49571,50969,50986,53118,55676,57953,59928,61262,62817,63282,63723" masteryEffects="{4139,34242},{22295,38703},{43601,59281}">
+			<Sockets>
+
+			</Sockets>
+		</Spec>
+	</Tree>
+	<Items activeItemSet="1" useSecondWeaponSet="false">
+		<Item id="1">
+Rarity: RARE
+Gale Cleaver
+Sundering Axe
+Item Level: 62
+Quality: 10
+Sockets: R-R-R-G-R
+Implicits: 1
++20% to Damage over Time Multiplier for Bleeding
+Adds 19 to 38 Physical Damage
+112% increased Physical Damage
++180 to Accuracy Rating
+17% increased Attack Speed
++28 to Strength
+		</Item>
+		<Item id="2">
+Rarity: RARE
+Corpse Crown
+Samnite Helmet
+Armour: 280
+Item Level: 60
+Quality: 0
+Sockets: R-R-G-B
+Implicits: 0
++79 to maximum Life
+54% increased Armour
++31% to Fire Resistance
++28% to Cold Resistance
++24 to Dexterity
+		</Item>
+		<Item id="3">
+Rarity: RARE
+Viper Shell
+Crusader Plate
+Armour: 720
+Item Level: 60
+Quality: 0
+Sockets: R-R-R-G-R
+Implicits: 0
++38 to Strength
++21% to Fire Resistance
+62% increased Armour
++34% to Lightning Resistance
++27% to Cold Resistance
+		</Item>
+		<Item id="4">
+Rarity: RARE
+Doom Grasp
+Ancient Gauntlets
+Armour: 178
+Item Level: 58
+Quality: 0
+Sockets: R-R-G-G
+Implicits: 0
++74 to maximum Life
++28 to Strength
+Adds 4 to 8 Physical Damage to Attacks
++31% to Fire Resistance
++24% to Chaos Resistance
+		</Item>
+		<Item id="5">
+Rarity: RARE
+Sorrow Tread
+Ancient Greaves
+Armour: 186
+Item Level: 58
+Quality: 0
+Sockets: R-R-G
+Implicits: 0
++71 to maximum Life
+25% increased Movement Speed
++27 to Strength
++33% to Cold Resistance
++29% to Lightning Resistance
+		</Item>
+		<Item id="6">
+Rarity: RARE
+Rune Beads
+Amber Amulet
+Item Level: 60
+Implicits: 1
++28 to Strength
+Adds 7 to 14 Physical Damage to Attacks
++68 to maximum Life
++38 to Intelligence
++32% to Fire Resistance
+19% increased Global Physical Damage
+		</Item>
+		<Item id="7">
+Rarity: RARE
+Woe Coil
+Two-Stone Ring
+Item Level: 60
+Implicits: 1
++14% to Fire and Lightning Resistances
++62 to maximum Life
++33% to Cold Resistance
++29 to Strength
++22 to Dexterity
+Adds 3 to 7 Physical Damage to Attacks
+		</Item>
+		<Item id="8">
+Rarity: RARE
+Vortex Spiral
+Amethyst Ring
+Item Level: 60
+Implicits: 1
++19% to Chaos Resistance
++58 to maximum Life
++30% to Lightning Resistance
++31 to Dexterity
++24% to Fire Resistance
+		</Item>
+		<Item id="9">
+Rarity: UNIQUE
+Ryslatha's Coil
+Studded Belt
+Item Level: 58
+LevelReq: 20
+Implicits: 1
+25% increased Stun Duration on Enemies
++30 to Strength
+35% more Maximum Physical Attack Damage
+35% less Minimum Physical Attack Damage
+Adds 1 to 17 Physical Damage to Attacks
++88 to maximum Life
+Gain 50 Life when you Stun an Enemy
+		</Item>
+		<ItemSet id="1" useSecondWeaponSet="false">
+			<Slot name="Weapon 1" itemId="1"/>
+			<Slot name="Helmet" itemId="2"/>
+			<Slot name="Body Armour" itemId="3"/>
+			<Slot name="Gloves" itemId="4"/>
+			<Slot name="Boots" itemId="5"/>
+			<Slot name="Amulet" itemId="6"/>
+			<Slot name="Ring 1" itemId="7"/>
+			<Slot name="Ring 2" itemId="8"/>
+			<Slot name="Belt" itemId="9"/>
+		</ItemSet>
+	</Items>
+</PathOfBuilding>

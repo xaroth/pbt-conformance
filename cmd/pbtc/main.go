@@ -8,9 +8,9 @@
 // setup builds the PoB runtime every pinned release needs (LuaJIT, lua-utf8, PoB checkouts)
 // into the cache directory, skipping what is already built. It needs git, make and cc.
 //
-// pob runs the builds of a league (default: every pinned league) through its pinned PoB and
-// writes each build's pob.json. With --check it writes nothing and fails when a stored
-// pob.json differs from the fresh run.
+// pob derives each build's pob-gear.xml from its pob.xml, runs the builds of a league (default:
+// every pinned league) through its pinned PoB and writes each build's pob.json. With --check it
+// writes nothing and fails when a stored pob-gear.xml or pob.json differs from a fresh run.
 //
 // data pulls the datasets of every pinned league from the pinned pbt-data commit into
 // <cache>/data/<commit>/<game> and prints that directory; a later run fetches nothing.

@@ -18,21 +18,25 @@ import (
 const (
 	// FullXML is the build as complete as PoB holds it: tree, items, skills.
 	FullXML = "pob.xml"
+	// GearXML is the tree and the gear, derived from FullXML by Gear.
+	GearXML = "pob-gear.xml"
 	// TreeOnlyXML is the same build with only the tree, to tell tree and gear causes apart.
 	TreeOnlyXML = "pob-treeonly.xml"
-	// ValuesFile holds what PoB computed for both XMLs.
+	// ValuesFile holds what PoB computed for the three XMLs.
 	ValuesFile = "pob.json"
 )
 
 // ErrStale marks a stored values file that differs from a fresh PoB run.
-var ErrStale = errors.New("stored pob values differ from a fresh run")
+var ErrStale = errors.New("stored pob files differ from a fresh run")
 
 const filePerm = 0o644
 
-// Values is a build's values file: PoB's results for both XMLs and the release that made them.
+// Values is a build's values file: PoB's results for the three XMLs and the release that made
+// them.
 type Values struct {
 	PoB      pins.Release `json:"pob"`
 	Full     Result       `json:"full"`
+	Gear     Result       `json:"gear"`
 	TreeOnly Result       `json:"treeOnly"`
 }
 
@@ -49,9 +53,10 @@ func BuildDirs(root, league string) ([]string, error) {
 	return dirs, nil
 }
 
-// Record runs every build of league under root through its pinned PoB in cache and writes
-// each build's values file. With check it writes nothing and fails with ErrStale when a stored
-// file differs from the fresh run, naming the builds.
+// Record derives each build's gear XML, runs every build of league under root through its
+// pinned PoB in cache and writes each build's values file. With check it writes nothing and
+// fails with ErrStale when a stored gear XML or values file differs from a fresh run, naming
+// the builds.
 func Record(ctx context.Context, root, cache string, f *pins.File, game, league string, check bool) error {
 	l, ok := f.Games[game].Leagues[league]
 	if !ok {
@@ -59,6 +64,9 @@ func Record(ctx context.Context, root, cache string, f *pins.File, game, league 
 	}
 	dirs, err := BuildDirs(root, league)
 	if err != nil || len(dirs) == 0 {
+		return err
+	}
+	if err := deriveAll(dirs, check); err != nil {
 		return err
 	}
 	files, err := xmlFiles(dirs)
@@ -72,13 +80,39 @@ func Record(ctx context.Context, root, cache string, f *pins.File, game, league 
 	return storeAll(dirs, l.PoB, res, check)
 }
 
-// storeAll stores each build's pair of results, full then tree-only, as it lies in res.
+// deriveAll writes each build's gear XML, or with check fails with ErrStale when one differs.
+func deriveAll(dirs []string, check bool) error {
+	var stale []string
+	for _, d := range dirs {
+		full, err := os.ReadFile(filepath.Join(d, FullXML))
+		if err != nil {
+			return fmt.Errorf("pob: %w", err)
+		}
+		gear, err := Gear(full)
+		if err != nil {
+			return fmt.Errorf("%s: %w", d, err)
+		}
+		same, err := update(filepath.Join(d, GearXML), gear, check)
+		if err != nil {
+			return err
+		}
+		if !same {
+			stale = append(stale, d)
+		}
+	}
+	if check && len(stale) > 0 {
+		return fmt.Errorf("%w: %s: %v", ErrStale, GearXML, stale)
+	}
+	return nil
+}
+
+// storeAll stores each build's results, in xmlNames order as they lie in res.
 func storeAll(dirs []string, r pins.Release, res []Result, check bool) error {
 	var stale []string
 	for i, d := range dirs {
-		full, treeOnly := res[0], res[1]
-		res = res[2:]
-		same, err := store(d, Values{PoB: r, Full: full, TreeOnly: treeOnly}, check)
+		v := Values{PoB: r, Full: res[0], Gear: res[1], TreeOnly: res[2]}
+		res = res[len(xmlNames()):]
+		same, err := store(d, v, check)
 		if err != nil {
 			return err
 		}
@@ -92,9 +126,14 @@ func storeAll(dirs []string, r pins.Release, res []Result, check bool) error {
 	return nil
 }
 
-// xmlFiles returns the full and tree-only XML of each build directory, absolute, in order.
+// xmlNames returns the XMLs run per build, in the order storeAll reads their results.
+func xmlNames() []string {
+	return []string{FullXML, GearXML, TreeOnlyXML}
+}
+
+// xmlFiles returns the XMLs of each build directory, absolute, in order.
 func xmlFiles(dirs []string) ([]string, error) {
-	names := []string{FullXML, TreeOnlyXML}
+	names := xmlNames()
 	files := make([]string, 0, len(names)*len(dirs))
 	for _, d := range dirs {
 		for _, name := range names {
@@ -115,8 +154,11 @@ func store(dir string, v Values, check bool) (bool, error) {
 	if err != nil {
 		return false, fmt.Errorf("pob: %w", err)
 	}
-	b = append(b, '\n')
-	path := filepath.Join(dir, ValuesFile)
+	return update(filepath.Join(dir, ValuesFile), append(b, '\n'), check)
+}
+
+// update writes b to path, or with check only compares; it reports whether path already held b.
+func update(path string, b []byte, check bool) (bool, error) {
 	old, err := os.ReadFile(path)
 	same := err == nil && bytes.Equal(old, b)
 	if check || same {

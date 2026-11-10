@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathOfBuilding>
+	<Build level="80" targetVersion="3_0" className="Scion" ascendClassName="Ascendant" bandit="None" pantheonMajorGod="None" pantheonMinorGod="None" mainSocketGroup="1" viewMode="ITEMS" characterLevelAutoMode="false"/>
+	<Tree activeSpec="1">
+		<Spec treeVersion="3_29" classId="0" ascendClassId="1" secondaryAscendClassId="0" nodes="238,607,918,3452,3469,4367,5237,5296,5408,5743,5935,6363,6507,6580,7444,7594,8544,9392,10153,10661,10829,11455,11497,11651,12143,13322,14182,15027,15064,15117,15144,15435,15631,16167,18033,18240,19144,19196,19501,20812,20987,21033,21974,22551,22618,23027,23237,23471,24643,24798,25831,26196,26270,27415,28221,28574,28859,29199,29937,30393,30919,31931,32091,32345,32710,32932,33310,33545,34171,34907,35754,35958,36678,36874,37078,37671,37999,39598,39841,40132,41263,41534,41996,44103,44184,44202,45067,46092,46495,46897,47197,48768,48778,48807,49605,49806,51786,51923,52502,55571,56589,57736,58218,58833,58851,58854,60090,60440,60472,61419,63425,63447,63620,64210,65097" masteryEffects="{6507,61097},{18240,31556},{30393,16215},{46495,56471},{47197,28638}">
+			<Sockets>
+				<Socket nodeId="26196" itemId="15"/>
+				<Socket nodeId="61419" itemId="16"/>
+				<Socket nodeId="48768" itemId="17"/>
+			</Sockets>
+		</Spec>
+	</Tree>
+	<Items activeItemSet="1" useSecondWeaponSet="false">
+		<Item id="1">
+Rarity: UNIQUE
+Replica Dreamfeather
+Eternal Sword
+Item Level: 78
+Quality: 20
+Sockets: R-G-B
+Implicits: 1
++475 to Accuracy Rating
+Adds 52 to 86 Physical Damage
+8% increased Attack Speed
++190 to Armour
+3% reduced Movement Speed
++290 to Accuracy Rating
+1% increased Attack Damage per 450 Armour
+		</Item>
+		<Item id="2">
+Rarity: UNIQUE
+Aegis Aurora
+Champion Kite Shield
+Item Level: 76
+Quality: 20
+Sockets: R-B-G
+Implicits: 0
+340% increased Armour and Energy Shield
++10% to all Elemental Resistances
++5% to maximum Cold Resistance
++6% Chance to Block
+Recover Energy Shield equal to 2% of Armour when you Block
+14% increased Elemental Damage with Attack Skills
+		</Item>
+		<Item id="3">
+Rarity: RARE
+Doom Halo
+Hubris Circlet
+Energy Shield: 240
+Item Level: 78
+Quality: 20
+Sockets: B-B-G-B
+Implicits: 0
++68 to maximum Energy Shield
+88% increased Energy Shield
++41% to Fire Resistance
++36% to Lightning Resistance
++38 to Intelligence
+		</Item>
+		<Item id="4">
+Rarity: RARE
+Woe Shroud
+Sadist Garb
+Evasion: 1100
+Energy Shield: 330
+Item Level: 80
+Quality: 20
+Sockets: R-G-B-B-R-G
+Implicits: 0
++92 to maximum Energy Shield
+106% increased Evasion and Energy Shield
++40% to Cold Resistance
++42 to Dexterity
++38 to Intelligence
+		</Item>
+		<Item id="5">
+Rarity: RARE
+Kraken Grip
+Sorcerer Gloves
+Energy Shield: 120
+Item Level: 79
+Quality: 20
+Sockets: B-B-G-R
+Implicits: 0
++54 to maximum Energy Shield
+72% increased Energy Shield
++38% to Fire Resistance
+14% increased Attack Speed
++36 to Strength
+		</Item>
+		<Item id="6">
+Rarity: RARE
+Gale Trail
+Sorcerer Boots
+Energy Shield: 130
+Item Level: 78
+Quality: 20
+Sockets: G-R-B-B
+Implicits: 0
+30% increased Movement Speed
++58 to maximum Energy Shield
+74% increased Energy Shield
++40% to Cold Resistance
++36% to Lightning Resistance
+		</Item>
+		<Item id="7">
+Rarity: RARE
+Entropy Torc
+Onyx Amulet
+Item Level: 80
+Implicits: 1
++14 to all Attributes
++52 to maximum Energy Shield
+18% increased maximum Energy Shield
++42 to Strength
++38% to Fire Resistance
+30% increased Elemental Damage with Attack Skills
+		</Item>
+		<Item id="8">
+Rarity: RARE
+Storm Spiral
+Prismatic Ring
+Item Level: 79
+Implicits: 1
++9% to all Elemental Resistances
++44 to maximum Energy Shield
++40 to Dexterity
++40% to Lightning Resistance
+Adds 5 to 70 Lightning Damage to Attacks
+		</Item>
+		<Item id="9">
+Rarity: RARE
+Vengeance Band
+Two-Stone Ring
+Item Level: 78
+Implicits: 1
++14% to Fire and Lightning Resistances
++41 to maximum Energy Shield
++40 to Intelligence
++40% to Cold Resistance
++36 to Strength
+		</Item>
+		<Item id="10">
+Rarity: RARE
+Brood Cord
+Heavy Belt
+Item Level: 80
+Implicits: 1
++30 to Strength
++60 to maximum Energy Shield
++42% to Fire Resistance
++40% to Cold Resistance
++38 to Strength
+		</Item>
+		<Item id="15">
+Rarity: RARE
+Corpse Glimmer
+Cobalt Jewel
+Item Level: 78
+Implicits: 0
+7% increased maximum Energy Shield
+6% increased Attack Speed
++13% to Lightning Resistance
+16% increased Lightning Damage
+		</Item>
+		<Item id="16">
+Rarity: RARE
+Rune Ruin
+Cobalt Jewel
+Item Level: 77
+Implicits: 0
+8% increased maximum Energy Shield
+14% increased Elemental Damage with Attack Skills
++14% to Cold Resistance
++12 to Intelligence
+		</Item>
+		<Item id="17">
+Rarity: RARE
+Dusk Bliss
+Viridian Jewel
+Item Level: 77
+Implicits: 0
+6% increased maximum Energy Shield
+5% increased Attack Speed
++15% to Fire Resistance
++14 to Dexterity
+		</Item>
+		<ItemSet id="1" useSecondWeaponSet="false">
+			<Slot name="Weapon 1" itemId="1"/>
+			<Slot name="Weapon 2" itemId="2"/>
+			<Slot name="Helmet" itemId="3"/>
+			<Slot name="Body Armour" itemId="4"/>
+			<Slot name="Gloves" itemId="5"/>
+			<Slot name="Boots" itemId="6"/>
+			<Slot name="Amulet" itemId="7"/>
+			<Slot name="Ring 1" itemId="8"/>
+			<Slot name="Ring 2" itemId="9"/>
+			<Slot name="Belt" itemId="10"/>
+		</ItemSet>
+	</Items>
+</PathOfBuilding>
