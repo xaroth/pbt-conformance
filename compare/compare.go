@@ -6,9 +6,11 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"maps"
 	"math"
 	"os"
 	"path/filepath"
+	"slices"
 
 	"github.com/xaroth/pbt-conformance/pins"
 	"github.com/xaroth/pbt-conformance/pob"
@@ -16,6 +18,7 @@ import (
 	"github.com/xaroth/pbt-engine/build"
 	"github.com/xaroth/pbt-engine/dataset"
 	"github.com/xaroth/pbt-engine/output"
+	pobimport "github.com/xaroth/pbt-engine/pob"
 	rules "github.com/xaroth/pbt-engine/rules/poe1"
 	"github.com/xaroth/pbt-engine/simulator"
 )
@@ -24,7 +27,9 @@ import (
 var (
 	// ErrDataset marks a dataset that is missing or not the pinned one.
 	ErrDataset = errors.New("dataset not as pinned")
-	errNoKey   = errors.New("no pob key for output")
+	// ErrLeague marks a build whose tree is not of the league it is filed under.
+	ErrLeague = errors.New("build tree not of its league")
+	errNoKey  = errors.New("no pob key for output")
 )
 
 // tolerance absorbs float noise; values are compared at the precision both sides round to.
@@ -81,8 +86,21 @@ type Mismatch struct {
 	Detail string
 }
 
-// warningPrefix starts the Output of a warning mismatch.
-const warningPrefix = "warning:"
+// Output prefixes of warning and import mismatches.
+const (
+	warningPrefix = "warning:"
+	importPrefix  = "import:"
+	// fullTree is the import mismatch of a full build whose tree differs from its tree-only one.
+	fullTree = importPrefix + "full-tree"
+)
+
+// fullWarnings are the import warnings a full build may give: what it holds beside its tree.
+func fullWarnings() []build.Code {
+	return []build.Code{
+		pobimport.ItemIgnored, pobimport.SkillIgnored, pobimport.JewelIgnored,
+		pobimport.ConfigIgnored, pobimport.PantheonIgnored,
+	}
+}
 
 // Run compares every build of league under root, with the pinned dataset under datasets.
 // A build that cannot be compared at all (unreadable XML, failing build check) is an error.
@@ -91,7 +109,7 @@ func Run(root, datasets string, f *pins.File, game, league string) ([]Mismatch, 
 	if !ok {
 		return nil, fmt.Errorf("compare: %s %s: %w", game, league, ErrDataset)
 	}
-	s, err := openPinned(datasets, game, l.Dataset)
+	reg, s, err := openPinned(datasets, game, l.Dataset)
 	if err != nil {
 		return nil, err
 	}
@@ -105,7 +123,7 @@ func Run(root, datasets string, f *pins.File, game, league string) ([]Mismatch, 
 	}
 	var out []Mismatch
 	for _, dir := range dirs {
-		ms, err := compareBuild(dir, game, league, l, sim)
+		ms, err := compareBuild(dir, league, reg, sim)
 		if err != nil {
 			return nil, fmt.Errorf("compare %s: %w", filepath.Base(dir), err)
 		}
@@ -114,27 +132,33 @@ func Run(root, datasets string, f *pins.File, game, league string) ([]Mismatch, 
 	return out, nil
 }
 
-func openPinned(datasets, game string, d pins.Dataset) (*dataset.Store, error) {
-	s, err := OpenVersion(datasets, game, d.Version)
+// openPinned opens the datasets and the pinned one among them, checking its id.
+func openPinned(datasets, game string, d pins.Dataset) (*dataset.Registry, *dataset.Store, error) {
+	reg, s, err := openVersion(datasets, game, d.Version)
 	if err != nil {
-		return nil, fmt.Errorf("compare: %w: %w", ErrDataset, err)
+		return nil, nil, fmt.Errorf("compare: %w: %w", ErrDataset, err)
 	}
 	if id := s.Manifest().ID; id != d.ID {
-		return nil, fmt.Errorf("compare: %w: %s has id %s, pinned %s", ErrDataset, d.Version, id, d.ID)
+		return nil, nil, fmt.Errorf("compare: %w: %s has id %s, pinned %s", ErrDataset, d.Version, id, d.ID)
 	}
-	return s, nil
+	return reg, s, nil
 }
 
-func compareBuild(dir, game, league string, l pins.League, sim *simulator.Sim) ([]Mismatch, error) {
-	xmlData, err := os.ReadFile(filepath.Join(dir, pob.TreeOnlyXML))
-	if err != nil {
-		return nil, fmt.Errorf("read: %w", err)
-	}
-	s := sim.Store()
-	b, err := FromPoB(xmlData, game, l.Dataset.Version, l.Tree, s)
+func compareBuild(dir, league string, reg *dataset.Registry, sim *simulator.Sim) ([]Mismatch, error) {
+	name := filepath.Base(dir)
+	b, treeWarnings, err := importFile(dir, pob.TreeOnlyXML, reg)
 	if err != nil {
 		return nil, err
 	}
+	if b.Version != league {
+		return nil, fmt.Errorf("compare: %w: tree %s, league %s", ErrLeague, b.Version, league)
+	}
+	full, fullWarns, err := importFile(dir, pob.FullXML, reg)
+	if err != nil {
+		return nil, err
+	}
+	out := importMismatches(league, name, b, treeWarnings, full, fullWarns)
+	s := sim.Store()
 	c, _, err := build.Check(b, s)
 	if err != nil {
 		return nil, fmt.Errorf("compare: %w", err)
@@ -147,8 +171,6 @@ func compareBuild(dir, game, league string, l pins.League, sim *simulator.Sim) (
 	if err != nil {
 		return nil, err
 	}
-	name := filepath.Base(dir)
-	var out []Mismatch
 	if n := Allocated(c); v.TreeOnly.Allocated != n {
 		out = append(out, Mismatch{
 			League: league, Build: name, Output: "allocated_nodes",
@@ -158,6 +180,54 @@ func compareBuild(dir, game, league string, l pins.League, sim *simulator.Sim) (
 	out = append(out, warnings(st, league, name)...)
 	ms, err := compareOutputs(st, v, league, name)
 	return append(out, ms...), err
+}
+
+func importFile(dir, file string, reg *dataset.Registry) (*build.Build, []build.Warning, error) {
+	data, err := os.ReadFile(filepath.Join(dir, file))
+	if err != nil {
+		return nil, nil, fmt.Errorf("read: %w", err)
+	}
+	b, ws, err := pobimport.FromXML(data, reg)
+	if err != nil {
+		return nil, nil, fmt.Errorf("import %s: %w", file, err)
+	}
+	return b, ws, nil
+}
+
+// importMismatches checks the imports of a build: the tree-only file imports without warnings,
+// and the full file to the same tree with warnings only for what it holds beside the tree.
+// Config is not compared: tree-only files keep PoB's default bandit choice.
+func importMismatches(league, name string, tree *build.Build, treeWarnings []build.Warning,
+	full *build.Build, fullWarns []build.Warning,
+) []Mismatch {
+	var out []Mismatch
+	add := func(w build.Warning, file string) {
+		out = append(out, Mismatch{
+			League: league, Build: name, Output: importPrefix + string(w.Code),
+			Detail: file + ": " + w.Subject + ": " + w.Message,
+		})
+	}
+	for _, w := range treeWarnings {
+		add(w, pob.TreeOnlyXML)
+	}
+	for _, w := range fullWarns {
+		if !slices.Contains(fullWarnings(), w.Code) {
+			add(w, pob.FullXML)
+		}
+	}
+	if !sameTree(tree, full) {
+		out = append(out, Mismatch{
+			League: league, Build: name, Output: fullTree,
+			Detail: pob.FullXML + " imports to another tree than " + pob.TreeOnlyXML,
+		})
+	}
+	return out
+}
+
+// sameTree compares what a build holds beside config.
+func sameTree(a, b *build.Build) bool {
+	return a.Game == b.Game && a.Version == b.Version && a.Variant == b.Variant && a.Class == b.Class &&
+		a.Ascendancy == b.Ascendancy && a.Level == b.Level && slices.Equal(a.Nodes, b.Nodes) && maps.Equal(a.Masteries, b.Masteries)
 }
 
 // warnings turns the simulation's warnings into mismatches, except stats left out as not
@@ -231,16 +301,21 @@ func readValues(dir string) (*pob.Values, error) {
 // OpenVersion opens game's dataset of exactly version among the datasets in the directories of
 // dir: pulled from pbt-data (one per league) or one per version.
 func OpenVersion(dir, game, version string) (*dataset.Store, error) {
+	_, s, err := openVersion(dir, game, version)
+	return s, err
+}
+
+func openVersion(dir, game, version string) (*dataset.Registry, *dataset.Store, error) {
 	reg, err := dataset.OpenRoot(os.DirFS(dir))
 	if reg == nil {
-		return nil, fmt.Errorf("open %s: %w", dir, err)
+		return nil, nil, fmt.Errorf("open %s: %w", dir, err)
 	}
 	res, err := reg.Resolve(game, version)
 	if err != nil {
-		return nil, fmt.Errorf("%s: %w", version, err)
+		return nil, nil, fmt.Errorf("%s: %w", version, err)
 	}
 	if got := res.Store.Manifest().Version; got != version {
-		return nil, fmt.Errorf("%s has %s, not %s: %w", dir, got, version, ErrDataset)
+		return nil, nil, fmt.Errorf("%s has %s, not %s: %w", dir, got, version, ErrDataset)
 	}
-	return res.Store, nil
+	return reg, res.Store, nil
 }
