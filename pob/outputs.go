@@ -71,10 +71,9 @@ func Outputs() []Output {
 			key("player.uncapped_"+e.ours+"_resistance", GroupSheet, e.pob+"ResistTotal"),
 		)
 	}
-	return append(out,
-		// AverageDamage is the average hit weighted by the chance to hit; PoB combines the hands
-		// of an attack only for it, and for spells it is the average hit.
-		key("skill.average_hit", GroupSkill, "AverageDamage"),
+	out = append(out, averageHit("skill", GroupSkill, "")...)
+	out = append(out,
+		key("skill.hit_chance", GroupSkill, "HitChance"),
 		// PoB's hit DPS uses HitSpeed where the skill hits at another rate than it is used.
 		first("skill.hits_per_second", GroupSkill, "HitSpeed", "Speed"),
 		key("skill.critical_strike_chance", GroupSkill, "CritChance"),
@@ -93,12 +92,53 @@ func Outputs() []Output {
 		key("player.energy_shield_recharge", GroupDefence, "EnergyShieldRecharge"),
 
 		key("minion.life", GroupMinion, minionPrefix+"Life"),
-		key("minion.average_hit", GroupMinion, minionPrefix+"AverageDamage"),
+	)
+	out = append(out, averageHit("minion", GroupMinion, minionPrefix)...)
+	return append(out,
+		key("minion.hit_chance", GroupMinion, minionPrefix+"HitChance"),
 		key("minion.total_dps", GroupMinion, minionPrefix+"CombinedDPS"),
 
 		key("delivery.totem_life", GroupDelivery, "TotemLife"),
 		deliveryDPS("delivery.total_dps"),
 	)
+}
+
+// averageHit returns the average hit outputs of actor ("skill" or "minion"), whose PoB keys
+// start with prefix. PoB gives a skill's average hit as AverageHit, and an attack's per hand
+// (MainHand.AverageHit, OffHand.AverageHit) without combining them: an attack with both hands
+// alternates them or hits with both at once, depending on the skill. So <actor>.average_hit is
+// AverageHit, or the one hand's for an attack with one hand, and absent when both hands attack;
+// then <actor>.main_hand_average_hit and <actor>.off_hand_average_hit give each hand's.
+func averageHit(actor string, g Group, prefix string) []Output {
+	whole, mh, oh := prefix+"AverageHit", prefix+"MainHand.AverageHit", prefix+"OffHand.AverageHit"
+	bothHands := func(o map[string]float64) bool {
+		_, ok1 := o[mh]
+		_, ok2 := o[oh]
+		return ok1 && ok2
+	}
+	hand := func(name, k string) Output {
+		return Output{Name: name, Group: g, keys: []string{mh, oh}, value: func(o map[string]float64) (float64, bool) {
+			v, ok := o[k]
+			return v, ok && bothHands(o)
+		}}
+	}
+	return []Output{
+		{Name: actor + ".average_hit", Group: g, keys: []string{whole, mh, oh}, value: func(o map[string]float64) (float64, bool) {
+			if v, ok := o[whole]; ok {
+				return v, true
+			}
+			if bothHands(o) {
+				return 0, false
+			}
+			if v, ok := o[mh]; ok {
+				return v, true
+			}
+			v, ok := o[oh]
+			return v, ok
+		}},
+		hand(actor+".main_hand_average_hit", mh),
+		hand(actor+".off_hand_average_hit", oh),
+	}
 }
 
 // Keys returns every PoB output key the table reads, sorted.

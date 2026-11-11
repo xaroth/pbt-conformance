@@ -1,7 +1,8 @@
 -- Runs build XMLs through Path of Building headless. Reads one XML path per line from stdin and
 -- writes one line per build to stdout: "PBTC " followed by JSON with the file, PoB's
--- allocated node count, its main skill and the requested output keys (arguments). A key
--- "Minion.<key>" is read from the outputs of the main skill's minion. PoB writes its own lines
+-- allocated node count, its main skill and the requested output keys (arguments). A dotted key
+-- such as "Minion.<key>" or "MainHand.<key>" is read from that table of PoB's outputs: the main
+-- skill's minion's or one hand's. PoB writes its own lines
 -- to stdout too; the prefix tells ours apart.
 local keys = { ... }
 arg = {} -- HeadlessWrapper reads arg; the keys must not reach it

@@ -39,11 +39,11 @@ go run ./cmd/pbtc pob --cache ~/.cache/pbt-conformance --check    # fail if a st
 |---|---|---|
 | `sheet` | attributes, life, mana, energy shield, armour, evasion, the resistances and their maximums, life, mana and energy shield regeneration, unreserved life and mana | all |
 | `defence` | block, spell block, spell suppression, life and energy shield regeneration recovery, life and energy shield leech rates, life and energy shield recharge | all |
-| `skill` | the main skill's average hit, hits per second, critical strike chance, hit, damage over time and total damage per second | full |
-| `minion` | the main skill's minion's life, and its own main skill's average hit and total damage per second, when the main skill has a minion | full |
+| `skill` | the main skill's average hit, chance to hit, hits per second, critical strike chance, hit, damage over time and total damage per second | full |
+| `minion` | the main skill's minion's life, and its own main skill's average hit, chance to hit and total damage per second, when the main skill has a minion | full |
 | `delivery` | totem life, and total damage per second with every totem placed, when the main skill is used by a totem, trap or mine | full |
 
-The full layer also records the main skill PoB took (`mainSkill`: its socket group, id and name, whether a totem, trap or mine uses it, and its minion). The other layers have no skills of their own, so they record the sheet and defences only. Minion values are read from PoB's outputs of the minion and stored as `Minion.<key>`.
+The full layer also records the main skill PoB took (`mainSkill`: its socket group, id and name, whether a totem, trap or mine uses it, and its minion). The other layers have no skills of their own, so they record the sheet and defences only. Minion values are read from PoB's outputs of the minion and stored as `Minion.<key>`, and an attack's per-hand values as `MainHand.<key>` and `OffHand.<key>`. The average hit is PoB's `AverageHit`, without the chance to hit, which is its own output. PoB gives an attack's average hit per hand only, and an attack with both hands either alternates them or hits with both at once, depending on the skill; so for an attack with both hands the average hit is recorded per hand (`main_hand_average_hit`, `off_hand_average_hit`) and the single `average_hit` is absent.
 
 Rerun it after adding or changing a build, bumping a pin, or changing the runner, and commit the `pob-gear.xml` and `pob.json` changes with it. `go test ./pob` fails when a stored `pob-gear.xml` is not what `pob.xml` derives to.
 

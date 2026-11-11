@@ -80,8 +80,8 @@ func TestRunMainSkill(t *testing.T) {
 		}
 	}
 	wantKeys := [][]string{
-		{"Life", "Minion.Life", "Minion.AverageDamage", "Minion.CombinedDPS"},
-		{"TotemLife", "TotemsSummoned", "TotalDPS", "CombinedDPS"},
+		{"Life", "Minion.Life", "Minion.MainHand.AverageHit", "Minion.HitChance", "Minion.CombinedDPS"},
+		{"TotemLife", "TotemsSummoned", "AverageHit", "HitChance", "TotalDPS", "CombinedDPS"},
 	}
 	for i, keys := range wantKeys {
 		for _, k := range keys {
@@ -95,6 +95,32 @@ func TestRunMainSkill(t *testing.T) {
 	}
 	if _, ok := res[0].Outputs["TotemLife"]; ok {
 		t.Errorf("totem life recorded for a minion skill")
+	}
+}
+
+// Viper Strike hits with both hands: the average hit is recorded per hand, the hit chance
+// combined as PoB gives it.
+func TestRunDualWield(t *testing.T) {
+	t.Parallel()
+	file, err := filepath.Abs(filepath.Join("..", "builds", "3.29", "20-shadow-L90-assassin-chaos-inoculation", pob.FullXML))
+	if err != nil {
+		t.Fatal(err)
+	}
+	res, err := pob.Run(context.Background(), paths(t), []string{file})
+	if err != nil {
+		t.Fatal(err)
+	}
+	got := map[string]bool{}
+	for _, o := range pob.Outputs() {
+		if _, ok := o.Value(res[0].Outputs); ok {
+			got[o.Name] = true
+		}
+	}
+	want := map[string]bool{"skill.average_hit": false, "skill.main_hand_average_hit": true, "skill.off_hand_average_hit": true, "skill.hit_chance": true}
+	for name, w := range want {
+		if got[name] != w {
+			t.Errorf("%s given: got %v, want %v", name, got[name], w)
+		}
 	}
 }
 
