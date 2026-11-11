@@ -185,3 +185,15 @@ func TestRunMissingFile(t *testing.T) {
 		t.Errorf("got %v, want %v", err, pob.ErrBuild)
 	}
 }
+
+// TestRunTimelessJewel runs a build with a timeless jewel, whose tables PoB must decompress.
+func TestRunTimelessJewel(t *testing.T) {
+	t.Parallel()
+	res, err := pob.Run(context.Background(), paths(t), []string{abs(t, "marauder-timeless-jewel.xml")})
+	if err != nil {
+		t.Fatal(err)
+	}
+	if res[0].Allocated == 0 || res[0].Outputs["Life"] == 0 {
+		t.Errorf("got %+v, want a calculated build", res[0])
+	}
+}

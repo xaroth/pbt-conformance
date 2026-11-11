@@ -10,7 +10,7 @@ Path of Building is the first smoke test, not the source of truth: the game is. 
 
 ## Run
 
-The Path of Building runtime is built once into a cache directory, from the sources in `pins.json`: LuaJIT, the lua-utf8 module and a PoB checkout per pinned release. It needs git, make and a C compiler; about a minute the first time.
+The Path of Building runtime is built once into a cache directory, from the sources in `pins.json`: LuaJIT, the lua-utf8 module and a PoB checkout per pinned release. It needs git, make and a C compiler, and running PoB needs the system zlib (`libz.so.1`); about a minute the first time.
 
 ```sh
 go run ./cmd/pbtc setup --cache ~/.cache/pbt-conformance

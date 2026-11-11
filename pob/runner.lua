@@ -14,6 +14,43 @@ arg = {} -- HeadlessWrapper reads arg; the keys must not reach it
 dofile("HeadlessWrapper.lua")
 local dkjson = require("dkjson")
 
+-- HeadlessWrapper stubs Inflate to return "", so PoB cannot read its zlib-compressed timeless
+-- jewel tables and stops loading any build with a timeless jewel. This one uses the system zlib.
+local ffi = require("ffi")
+ffi.cdef([[
+typedef struct {
+	const unsigned char *next_in; unsigned int avail_in; unsigned long total_in;
+	unsigned char *next_out; unsigned int avail_out; unsigned long total_out;
+	const char *msg; void *state; void *zalloc; void *zfree; void *opaque;
+	int data_type; unsigned long adler; unsigned long reserved;
+} pbtc_z_stream;
+const char *zlibVersion(void);
+int inflateInit_(pbtc_z_stream *strm, const char *version, int stream_size);
+int inflate(pbtc_z_stream *strm, int flush);
+int inflateEnd(pbtc_z_stream *strm);
+]])
+local zlib = ffi.load("libz.so.1")
+local Z_OK, Z_STREAM_END, chunk = 0, 1, 1048576
+
+function Inflate(data)
+	local strm = ffi.new("pbtc_z_stream")
+	assert(zlib.inflateInit_(strm, zlib.zlibVersion(), ffi.sizeof(strm)) == Z_OK, "inflateInit failed")
+	strm.next_in, strm.avail_in = data, #data
+	local buf, out, rc = ffi.new("unsigned char[?]", chunk), {}, Z_OK
+	while rc ~= Z_STREAM_END do
+		strm.next_out, strm.avail_out = buf, chunk
+		rc = zlib.inflate(strm, 0)
+		local n = chunk - strm.avail_out
+		if (rc ~= Z_OK and rc ~= Z_STREAM_END) or (n == 0 and strm.avail_in == 0 and rc ~= Z_STREAM_END) then
+			zlib.inflateEnd(strm)
+			error("inflate failed: " .. rc)
+		end
+		out[#out + 1] = ffi.string(buf, n)
+	end
+	zlib.inflateEnd(strm)
+	return table.concat(out)
+end
+
 local function lookup(outputs, key)
 	local v = outputs
 	for part in key:gmatch("[^.]+") do
