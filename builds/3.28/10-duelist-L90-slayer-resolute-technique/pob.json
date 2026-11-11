@@ -50,7 +50,8 @@
     "mainSkill": {
       "group": 1,
       "id": "GroundSlamAltX",
-      "name": "Ground Slam of Earthshaking"
+      "name": "Ground Slam of Earthshaking",
+      "attack": true
     }
   },
   "gear": {

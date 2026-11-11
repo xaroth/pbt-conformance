@@ -4,6 +4,8 @@
 //	pbtc pob --cache <dir> [--league <league>] [--check]
 //	pbtc data --cache <dir>
 //	pbtc compare (--cache <dir> | --datasets <dir>) [--league <league>] [--scoreboard] [--json] [--hints <file>]
+//	pbtc ninja --cache <dir> --overview <league> [--variant <league>] [--league <league>] [--skills <n>] [--mercenaries <n>]
+//	           [--per-skill <n>] [--variant-rows <n>] [--dry-run]
 //
 // setup builds the PoB runtime every pinned release needs (LuaJIT, lua-utf8, PoB checkouts)
 // into the cache directory, skipping what is already built. It needs git, make and cc.
@@ -26,6 +28,18 @@
 // compared, how many of each kind pass everything, the outputs the engine lacks, and the stats,
 // gems and mechanics it leaves out by the number of builds they appear in, each stat with its
 // text from the --hints file if given. --json writes the list and the scoreboard as JSON.
+//
+// ninja picks builds for a league (default: the current one) from poe.ninja's league named by
+// --overview, such as allflame, and adds them to builds/<league> with their origin: for each
+// kind, from the most popular main skills, one build per main skill and ascendancy until the
+// kind has its target count, then builds with a content swapped in until each content has its
+// quota, where it can. Candidates are the first characters of --per-skill ascendancies for each
+// of the --skills most popular main skills and of the --mercenaries most popular mercenary
+// classes, then --variant-rows characters of the --variant league (a Ruthless or alternate
+// tree). Each candidate runs through the league's pinned PoB, whose
+// result gives its kind; a candidate PoB fails on is not picked and is listed. Responses are
+// cached under <cache>/ninja, so a rerun makes no request it made before. With --dry-run it
+// prints the picks and writes nothing.
 package main
 
 import (
@@ -42,6 +56,7 @@ import (
 	"text/tabwriter"
 
 	"github.com/xaroth/pbt-conformance/compare"
+	"github.com/xaroth/pbt-conformance/ninja"
 	"github.com/xaroth/pbt-conformance/pins"
 	"github.com/xaroth/pbt-conformance/pob"
 	"github.com/xaroth/pbt-conformance/runtime"
@@ -54,7 +69,8 @@ const game = "poe1"
 var (
 	errUsage = errors.New("usage: pbtc setup --cache <dir> | pbtc pob --cache <dir> [--league <league>] [--check] | " +
 		"pbtc data --cache <dir> | pbtc compare (--cache <dir> | --datasets <dir>) [--league <league>] " +
-		"[--scoreboard] [--json] [--hints <file>]")
+		"[--scoreboard] [--json] [--hints <file>] | pbtc ninja --cache <dir> --overview <league> [--variant <league>] " +
+		"[--league <league>] [--skills <n>] [--mercenaries <n>] [--per-skill <n>] [--variant-rows <n>] [--dry-run]")
 	errMismatch = errors.New("untriaged mismatches or stale triage entries")
 )
 
@@ -81,10 +97,118 @@ func run(ctx context.Context, args []string) error {
 	fs.BoolVar(&out.scoreboard, "scoreboard", false, "follow the mismatches with the scoreboard (compare)")
 	fs.BoolVar(&out.json, "json", false, "write the mismatches and the scoreboard as JSON (compare)")
 	fs.StringVar(&out.hints, "hints", "", "JSON file of a hint per game stat id, a text or an object with a hint field, shown beside blocking stats (compare)")
+	var pick picking
+	fs.StringVar(&pick.src.Overview, "overview", "", "poe.ninja league to pick builds from, such as allflame (ninja)")
+	fs.StringVar(&pick.src.Variant, "variant", "", "poe.ninja league on a Ruthless or alternate tree, such as allflamer (ninja)")
+	fs.IntVar(&pick.src.Skills, "skills", defaultSkills, "most popular main skills to search (ninja)")
+	fs.IntVar(&pick.src.Mercenaries, "mercenaries", defaultMercenaries, "most popular mercenary classes to search (ninja)")
+	fs.IntVar(&pick.src.PerSkill, "per-skill", defaultPerSkill, "characters of different ascendancies per search (ninja)")
+	fs.IntVar(&pick.src.VariantRows, "variant-rows", defaultVariantRows, "characters of the variant league (ninja)")
+	fs.BoolVar(&pick.dryRun, "dry-run", false, "print the picks without writing builds (ninja)")
 	if err := fs.Parse(args[1:]); err != nil {
 		return fmt.Errorf("%s: %w", args[0], err)
 	}
+	if args[0] == "ninja" {
+		return runNinja(ctx, *cache, *league, pick)
+	}
 	return dispatch(ctx, args[0], *cache, *datasets, *league, *check, out)
+}
+
+// Defaults of the ninja command.
+const (
+	defaultSkills      = 120
+	defaultMercenaries = 3
+	defaultPerSkill    = 2
+	defaultVariantRows = 20
+)
+
+// picking is how the ninja command picks builds.
+type picking struct {
+	src    ninja.Source
+	dryRun bool
+}
+
+// runNinja picks builds for league from poe.ninja and writes them, or with dryRun prints them.
+func runNinja(ctx context.Context, cache, league string, pick picking) error {
+	if cache == "" || pick.src.Overview == "" {
+		return errUsage
+	}
+	f, err := pins.Read(os.DirFS("."))
+	if err != nil {
+		return fmt.Errorf("ninja: %w", err)
+	}
+	if league == "" {
+		league = f.Games[game].Current
+	}
+	l, ok := f.Games[game].Leagues[league]
+	if !ok {
+		return fmt.Errorf("ninja: %w: %s", errUsage, league)
+	}
+	plan, cands, err := planNinja(ctx, cache, league, runtime.Locate(cache, f.Runtime, l.PoB), l.PoB.Commit, pick.src)
+	if err != nil {
+		return err
+	}
+	if err := writePlan(os.Stdout, plan, cands); err != nil || pick.dryRun {
+		return err
+	}
+	dirs, err := ninja.Write(".", league, plan.Picked)
+	if err != nil {
+		return fmt.Errorf("ninja: %w", err)
+	}
+	fmt.Fprintf(os.Stderr, "pbtc: wrote %d builds; record them with pbtc pob\n", len(dirs))
+	return nil
+}
+
+// planNinja reads the candidates from poe.ninja, classifies them with PoB at p and picks from
+// them.
+func planNinja(ctx context.Context, cache, league string, p runtime.Paths, commit string, src ninja.Source) (ninja.Plan, []ninja.Candidate, error) {
+	api := &ninja.API{Client: &ninja.Client{Dir: filepath.Join(cache, "ninja", "http")}}
+	leads, err := ninja.Leads(ctx, api, src, league)
+	if err != nil {
+		return ninja.Plan{}, nil, fmt.Errorf("pick: %w", err)
+	}
+	cands, err := ninja.Fetch(ctx, api, leads)
+	if err != nil {
+		return ninja.Plan{}, nil, fmt.Errorf("pick: %w", err)
+	}
+	fmt.Fprintf(os.Stderr, "pbtc: %d candidates, %d requests made\n", len(cands), api.Client.Requests)
+	if err := ninja.Classify(ctx, p, filepath.Join(cache, "ninja", "pob", commit), cands); err != nil {
+		return ninja.Plan{}, nil, fmt.Errorf("pick: %w", err)
+	}
+	existing, err := ninja.Existing(".", league)
+	if err != nil {
+		return ninja.Plan{}, nil, fmt.Errorf("pick: %w", err)
+	}
+	return ninja.Choose(existing, cands, compare.Targets(), compare.Quotas()), cands, nil
+}
+
+// writePlan prints the picks, the counts per kind and content against their targets, and the
+// candidates PoB failed on.
+func writePlan(w io.Writer, plan ninja.Plan, cands []ninja.Candidate) error {
+	const padding = 2
+	tw := tabwriter.NewWriter(w, 0, 0, padding, ' ', 0)
+	fmt.Fprintln(tw, "kind\tskill\tascendancy\tlevel\tcontains\tsource")
+	if err := ninja.WriteTable(tw, plan.Picked); err != nil {
+		return fmt.Errorf("ninja: %w", err)
+	}
+	if err := tw.Flush(); err != nil {
+		return fmt.Errorf("ninja: %w", err)
+	}
+	targets, quotas := compare.Targets(), compare.Quotas()
+	for _, k := range compare.Kinds() {
+		if targets[k] > 0 {
+			fmt.Fprintf(w, "kind %s: %d of %d\n", k, plan.Kinds[k], targets[k])
+		}
+	}
+	for _, c := range compare.Contents() {
+		fmt.Fprintf(w, "contains %s: %d, quota %d\n", c, plan.Contents[c], quotas[c])
+	}
+	for _, c := range cands {
+		if c.Err != nil {
+			fmt.Fprintf(w, "not loaded: %s: %v\n", c.Char.URL(c.Snapshot), c.Err)
+		}
+	}
+	return nil
 }
 
 // output is how compare writes its result.

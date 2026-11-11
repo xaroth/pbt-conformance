@@ -66,13 +66,26 @@ func Contents() []Content {
 type Meta struct {
 	Kind     Kind
 	Contains []Content
+	// Origin is where the build was taken from, if recorded.
+	Origin *Origin
 }
 
-// metaFile is the metadata file: a kind with contents, or smoke alone.
-type metaFile struct {
-	Kind     Kind      `json:"kind"`
-	Smoke    bool      `json:"smoke"`
-	Contains []Content `json:"contains"`
+// Origin is where a build was taken from: the character's page and the snapshot of its
+// league that was read.
+type Origin struct {
+	URL string `json:"url"`
+	// League is the league's name, Snapshot the version of poe.ninja's data.
+	League   string `json:"league"`
+	Snapshot string `json:"snapshot"`
+}
+
+// MetaJSON is the metadata file: a kind with contents, or smoke alone, and where the build
+// came from.
+type MetaJSON struct {
+	Kind     Kind      `json:"kind,omitempty"`
+	Smoke    bool      `json:"smoke,omitempty"`
+	Contains []Content `json:"contains,omitempty"`
+	Origin   *Origin   `json:"origin,omitempty"`
 }
 
 // ReadMeta reads the metadata file in dir; without one the build is untagged, and with
@@ -91,7 +104,7 @@ func ReadMeta(dir string) (Meta, error) {
 func parseMeta(b []byte) (Meta, error) {
 	dec := json.NewDecoder(bytes.NewReader(b))
 	dec.DisallowUnknownFields()
-	var m metaFile
+	var m MetaJSON
 	if err := dec.Decode(&m); err != nil {
 		return Meta{}, fmt.Errorf("%s: %w: %w", MetaFile, ErrMeta, err)
 	}
@@ -109,5 +122,5 @@ func parseMeta(b []byte) (Meta, error) {
 			return Meta{}, fmt.Errorf("%s: %w: contains %q unknown or repeated", MetaFile, ErrMeta, c)
 		}
 	}
-	return Meta{Kind: m.Kind, Contains: m.Contains}, nil
+	return Meta{Kind: m.Kind, Contains: m.Contains, Origin: m.Origin}, nil
 }
