@@ -39,6 +39,7 @@
     "kind": "pending",
     "build": "*",
     "output": "warning:unchecked-condition",
+    "subject": "maximum_life_+%_if_no_life_tags_on_body_armour from *",
     "reason": "The Life Mastery \"15% increased maximum Life if there are no Life Modifiers on Equipped Body Armour\" (maximum_life_+%_if_no_life_tags_on_body_armour) applies without checking its condition, since the engine does not model items; it warns that it is unchecked",
     "evidence": "pbt-engine #74 applies the mastery; an empty body armour slot meets the condition, verified in game, and these builds are compared tree-only"
   }

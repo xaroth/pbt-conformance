@@ -8,6 +8,8 @@ import (
 	"io/fs"
 	"math"
 	"path"
+	"slices"
+	"strings"
 )
 
 // TriageFile is the triage file's name at the repository root.
@@ -24,20 +26,55 @@ const (
 	KindPending = "pending"
 )
 
-// Entry accepts the mismatches it matches: its league (empty: any), builds by path.Match
-// pattern on the build directory name, output (empty: any), and, when set, our value and
-// PoB's tree-only value. With values set, a triaged mismatch whose numbers change no longer
-// matches and shows as untriaged; broad pending entries leave them out.
+// Entry accepts the mismatches it matches, for one reason. It matches either by pattern: its
+// league (empty: any), builds by path.Match pattern on the build directory name, one output,
+// for an import or warning output its subject by path.Match pattern, and, when set, our value
+// and PoB's tree-only value; or by its cases, each one exact mismatch. With values set, a
+// triaged mismatch whose numbers change no longer matches and shows as untriaged; broad pending
+// entries leave them out.
 type Entry struct {
 	ID       string   `json:"id"`
 	Kind     string   `json:"kind"`
 	League   string   `json:"league,omitempty"`
-	Build    string   `json:"build"`
+	Build    string   `json:"build,omitempty"`
 	Output   string   `json:"output,omitempty"`
+	Subject  string   `json:"subject,omitempty"`
 	Ours     *float64 `json:"ours,omitempty"`
 	PoB      *float64 `json:"pob,omitempty"`
+	Cases    []Case   `json:"cases,omitempty"`
 	Reason   string   `json:"reason"`
 	Evidence string   `json:"evidence,omitempty"`
+}
+
+// Case is one mismatch an entry accepts: a build by its exact name, an output, and for an
+// output with values our value and PoB's tree-only value, PoB's left out when PoB gives none;
+// for an import or warning output, which has no values, its exact subject. A case whose values
+// or subject change no longer matches, and a case that matches nothing is stale.
+type Case struct {
+	Build   string   `json:"build"`
+	Output  string   `json:"output"`
+	Subject string   `json:"subject,omitempty"`
+	Ours    *float64 `json:"ours,omitempty"`
+	PoB     *float64 `json:"pob,omitempty"`
+}
+
+// isNote reports whether output is an import or warning output, which has a subject and no
+// values.
+func isNote(output string) bool {
+	return strings.HasPrefix(output, importPrefix) || strings.HasPrefix(output, warningPrefix)
+}
+
+func (c *Case) matches(m *Mismatch) bool {
+	if c.Build != m.Build || c.Output != m.Output {
+		return false
+	}
+	if isNote(c.Output) {
+		return c.Subject == m.Subject
+	}
+	if c.PoB == nil {
+		return !m.HasPoB && sameValue(c.Ours, m.Ours, true)
+	}
+	return sameValue(c.Ours, m.Ours, true) && sameValue(c.PoB, m.PoB, m.HasPoB)
 }
 
 // ReadTriage reads and checks the triage file in fsys.
@@ -62,17 +99,77 @@ func ReadTriage(fsys fs.FS) ([]Entry, error) {
 		case e.Reason == "":
 			return nil, fmt.Errorf("%s: %w: %s: no reason", TriageFile, ErrTriage, e.ID)
 		}
-		if _, err := path.Match(e.Build, ""); err != nil {
-			return nil, fmt.Errorf("%s: %w: %s: build pattern: %w", TriageFile, ErrTriage, e.ID, err)
+		if err := checkMatch(&e); err != nil {
+			return nil, fmt.Errorf("%s: %w: %s: %w", TriageFile, ErrTriage, e.ID, err)
 		}
 		seen[e.ID] = true
 	}
 	return es, nil
 }
 
+var (
+	errBothMatches = errors.New("a build pattern, output, subject or values beside cases")
+	errNoOutput    = errors.New("a build pattern without an output")
+	errSubject     = errors.New("an import or warning output needs a subject, other outputs have none")
+	errBadCase     = errors.New("case without build or output, repeated, or without the values or subject it needs")
+)
+
+// checkMatch checks that e matches either by pattern or by cases. A pattern names one output,
+// and for an import or warning output a subject pattern. Each case names one mismatch: our
+// value for an output with values, its subject for an import or warning output.
+func checkMatch(e *Entry) error {
+	if len(e.Cases) == 0 {
+		return checkPattern(e)
+	}
+	if e.Build != "" || e.Output != "" || e.Subject != "" || e.Ours != nil || e.PoB != nil {
+		return errBothMatches
+	}
+	seen := map[Case]bool{}
+	for _, c := range e.Cases {
+		key := Case{Build: c.Build, Output: c.Output, Subject: c.Subject}
+		if !c.valid() || seen[key] {
+			return fmt.Errorf("%w: %s %s %s", errBadCase, c.Build, c.Output, c.Subject)
+		}
+		seen[key] = true
+	}
+	return nil
+}
+
+func checkPattern(e *Entry) error {
+	if _, err := path.Match(e.Build, ""); err != nil {
+		return fmt.Errorf("build pattern: %w", err)
+	}
+	if e.Output == "" {
+		return errNoOutput
+	}
+	if isNote(e.Output) != (e.Subject != "") {
+		return errSubject
+	}
+	if _, err := path.Match(e.Subject, ""); err != nil {
+		return fmt.Errorf("subject pattern: %w", err)
+	}
+	return nil
+}
+
+// valid reports whether c names a build and output, with our value exactly when the output
+// has values and a subject exactly when it has none.
+func (c *Case) valid() bool {
+	if c.Build == "" || c.Output == "" {
+		return false
+	}
+	if isNote(c.Output) {
+		return c.Subject != "" && c.Ours == nil && c.PoB == nil
+	}
+	return c.Subject == "" && c.Ours != nil
+}
+
 func (e *Entry) matches(m *Mismatch) bool {
+	if len(e.Cases) > 0 {
+		return slices.ContainsFunc(e.Cases, func(c Case) bool { return (e.League == "" || e.League == m.League) && c.matches(m) })
+	}
 	ok, _ := path.Match(e.Build, m.Build)
-	return ok && (e.League == "" || e.League == m.League) && (e.Output == "" || e.Output == m.Output) &&
+	subject, _ := path.Match(e.Subject, m.Subject)
+	return ok && subject && (e.League == "" || e.League == m.League) && e.Output == m.Output &&
 		sameValue(e.Ours, m.Ours, true) && sameValue(e.PoB, m.PoB, m.HasPoB)
 }
 
@@ -81,8 +178,8 @@ func sameValue(want *float64, got float64, has bool) bool {
 	return want == nil || (has && math.Abs(*want-got) <= tolerance)
 }
 
-// Apply sets each mismatch's Triage to the first entry matching it and returns the ids of
-// entries that match nothing, which are stale.
+// Apply sets each mismatch's Triage to the first entry matching it and returns what matches
+// nothing, which is stale: the ids of entries, and "<id>: <build> <output>" for each case.
 func Apply(ms []Mismatch, es []Entry) []string {
 	used := map[string]bool{}
 	for i := range ms {
@@ -90,15 +187,37 @@ func Apply(ms []Mismatch, es []Entry) []string {
 			if es[j].matches(&ms[i]) {
 				ms[i].Triage = es[j].ID
 				used[es[j].ID] = true
+				for _, c := range es[j].Cases {
+					if c.matches(&ms[i]) {
+						used[caseKey(&es[j], &c)] = true
+					}
+				}
 				break
 			}
 		}
 	}
+	return staleOf(es, used)
+}
+
+// staleOf returns the entries without cases and the cases that used does not hold.
+func staleOf(es []Entry, used map[string]bool) []string {
 	var stale []string
 	for _, e := range es {
-		if !used[e.ID] {
-			stale = append(stale, e.ID)
+		if len(e.Cases) == 0 {
+			if !used[e.ID] {
+				stale = append(stale, e.ID)
+			}
+			continue
+		}
+		for _, c := range e.Cases {
+			if k := caseKey(&e, &c); !used[k] {
+				stale = append(stale, k)
+			}
 		}
 	}
 	return stale
+}
+
+func caseKey(e *Entry, c *Case) string {
+	return strings.TrimSpace(e.ID + ": " + c.Build + " " + c.Output + " " + c.Subject)
 }

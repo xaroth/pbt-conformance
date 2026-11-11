@@ -55,8 +55,10 @@ type Mismatch struct {
 	HasPoB  bool    `json:"hasPoB"`
 	// Triage is the id of the triage entry that accepts the mismatch, empty if none.
 	Triage string `json:"triage,omitempty"`
-	// Detail is a warning's subject and message.
-	Detail string `json:"detail,omitempty"`
+	// Subject is what an import or warning mismatch is about, such as a stat and its node;
+	// Detail is the subject with the message.
+	Subject string `json:"subject,omitempty"`
+	Detail  string `json:"detail,omitempty"`
 }
 
 // Output prefixes of warning and import mismatches.
@@ -232,7 +234,7 @@ func importMismatches(league, name string, tree *build.Build, treeWarnings []bui
 	add := func(w build.Warning, file string) {
 		out = append(out, Mismatch{
 			League: league, Build: name, Output: importPrefix + string(w.Code),
-			Detail: file + ": " + w.Subject + ": " + w.Message,
+			Subject: w.Subject, Detail: file + ": " + w.Subject + ": " + w.Message,
 		})
 	}
 	for _, w := range treeWarnings {
@@ -245,7 +247,7 @@ func importMismatches(league, name string, tree *build.Build, treeWarnings []bui
 	}
 	if !sameTree(tree, full) {
 		out = append(out, Mismatch{
-			League: league, Build: name, Output: fullTree,
+			League: league, Build: name, Output: fullTree, Subject: pob.FullXML,
 			Detail: pob.FullXML + " imports to another tree than " + pob.TreeOnlyXML,
 		})
 	}
@@ -267,7 +269,10 @@ func warnings(st *simulator.Stats, league, name string) []Mismatch {
 		if w.Code == simulator.UnmodelledStat {
 			continue
 		}
-		out = append(out, Mismatch{League: league, Build: name, Output: warningPrefix + string(w.Code), Detail: w.Subject + ": " + w.Message})
+		out = append(out, Mismatch{
+			League: league, Build: name, Output: warningPrefix + string(w.Code),
+			Subject: w.Subject, Detail: w.Subject + ": " + w.Message,
+		})
 	}
 	return out
 }
