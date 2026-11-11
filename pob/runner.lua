@@ -4,6 +4,11 @@
 -- such as "Minion.<key>" or "MainHand.<key>" is read from that table of PoB's outputs: the main
 -- skill's minion's or one hand's. PoB writes its own lines
 -- to stdout too; the prefix tells ours apart.
+--
+-- A line "<path>\t<ally path>" runs the build with its ally's party buffs, as PoB's Party tab
+-- imports them: the ally is calculated with "Export support" on, and the buffs it exports
+-- (auras, curses, warcries, links, enemy conditions and modifiers) are loaded into the build's
+-- Party section in place of its own.
 local keys = { ... }
 arg = {} -- HeadlessWrapper reads arg; the keys must not reach it
 dofile("HeadlessWrapper.lua")
@@ -42,10 +47,38 @@ local function mainSkill()
 	return res
 end
 
-local function run(path)
+local function read(path)
 	local f = assert(io.open(path, "rb"))
 	local xml = f:read("*a")
 	f:close()
+	return xml
+end
+
+-- partyOf returns the Party section of the ally's XML with its exported buffs as imported ones.
+local function partyOf(allyPath)
+	loadBuildFromXML(read(allyPath), allyPath)
+	build.partyTab.enableExportBuffs = true
+	build.buildFlag = true
+	runCallback("OnFrame")
+	local party = assert(build:SaveDB("ally"):match("<Party.-</Party>"), "ally exports no party section")
+	return (party:gsub("ExportedBuffs", "ImportedBuffs"))
+end
+
+-- withParty returns xml with its Party section replaced by party.
+local function withParty(xml, party)
+	xml = xml:gsub("<Party.-</Party>", ""):gsub("<Party[^>]*/>", "")
+	local out, n = xml:gsub("</PathOfBuilding>%s*$", function() return party .. "\n</PathOfBuilding>\n" end)
+	assert(n == 1, "no closing PathOfBuilding element")
+	return out
+end
+
+local function run(line)
+	local path, ally = line:match("^([^\t]+)\t(.+)$")
+	path = path or line
+	local xml = read(path)
+	if ally then
+		xml = withParty(xml, partyOf(ally))
+	end
 	loadBuildFromXML(xml, path)
 	local allocated = 0
 	for _ in pairs(build.spec.allocNodes) do
@@ -61,10 +94,10 @@ local function run(path)
 	return { file = path, allocated = allocated, outputs = outputs, mainSkill = mainSkill() }
 end
 
-for path in io.lines() do
-	local ok, res = pcall(run, path)
+for line in io.lines() do
+	local ok, res = pcall(run, line)
 	if not ok then
-		res = { file = path, error = tostring(res) }
+		res = { file = line:match("^[^\t]+"), error = tostring(res) }
 	end
 	io.write("PBTC ", dkjson.encode(res), "\n")
 	io.flush()

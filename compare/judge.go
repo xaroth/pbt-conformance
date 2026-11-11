@@ -9,10 +9,12 @@ const (
 	LayerTree = "tree"
 	LayerGear = "gear"
 	LayerFull = "full"
+	// LayerParty is the full build with its ally's party buffs; only builds with an ally have it.
+	LayerParty = "party"
 )
 
 // Layers returns the layers in report order.
-func Layers() []string { return []string{LayerTree, LayerGear, LayerFull} }
+func Layers() []string { return []string{LayerTree, LayerGear, LayerFull, LayerParty} }
 
 // Status is how a build fares on one group of outputs in one layer.
 type Status string
@@ -45,14 +47,19 @@ type GroupResult struct {
 	Missing []string `json:"missing,omitempty"`
 }
 
-// judgeLayers judges each layer of PoB's values v against our values for it. The engine
-// simulates the tree-only build only, so ours are the tree layer's.
+// judgeLayers judges each layer of PoB's values v against our values for it, the party layer
+// only when v has one. The engine simulates the tree-only build only, so ours are the tree
+// layer's.
 func judgeLayers(v *pob.Values, ours map[string]float64) []Layer {
-	return []Layer{
+	ls := []Layer{
 		judgeLayer(LayerTree, v.TreeOnly, ours),
 		judgeLayer(LayerGear, v.Gear, nil),
 		judgeLayer(LayerFull, v.Full, nil),
 	}
+	if v.Party != nil {
+		ls = append(ls, judgeLayer(LayerParty, *v.Party, nil))
+	}
+	return ls
 }
 
 func judgeLayer(name string, theirs pob.Result, ours map[string]float64) Layer {

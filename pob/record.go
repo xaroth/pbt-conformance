@@ -6,6 +6,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"io/fs"
 	"os"
 	"path/filepath"
 	"slices"
@@ -24,6 +25,9 @@ const (
 	TreeOnlyXML = "pob-treeonly.xml"
 	// ValuesFile holds what PoB computed for the three XMLs.
 	ValuesFile = "pob.json"
+	// PartyFile names the build's ally in its league: the build whose party buffs it is
+	// recorded with too.
+	PartyFile = "party.json"
 )
 
 // ErrStale marks a stored values file that differs from a fresh PoB run.
@@ -39,7 +43,19 @@ type Values struct {
 	Full     Result       `json:"full"`
 	Gear     Result       `json:"gear"`
 	TreeOnly Result       `json:"treeOnly"`
+	// Party is the full build with the party buffs of the ally its party file names, recorded
+	// as the full layer is.
+	Party *Result `json:"party,omitempty"`
 }
+
+// Party is a build's party file.
+type Party struct {
+	// Ally is the directory name of the ally's build, in the same league.
+	Ally string `json:"ally"`
+}
+
+// ErrParty marks a malformed party file or one naming no build of its league.
+var ErrParty = errors.New("invalid party file")
 
 // BuildDirs returns the build directories of league under root/builds/<league>, sorted.
 func BuildDirs(root, league string) ([]string, error) {
@@ -70,15 +86,73 @@ func Record(ctx context.Context, root, cache string, f *pins.File, game, league 
 	if err := deriveAll(dirs, check); err != nil {
 		return err
 	}
+	jobs, allies, err := jobsOf(dirs)
+	if err != nil {
+		return err
+	}
+	res, err := RunJobs(ctx, runtime.Locate(cache, f.Runtime, l.PoB), jobs)
+	if err != nil {
+		return err
+	}
+	return storeAll(dirs, allies, l.PoB, res, check)
+}
+
+// jobsOf returns the jobs of the build directories: their XMLs, in order, then each full XML
+// with its ally's, in order of the builds with an ally. allies holds whether each build has one.
+func jobsOf(dirs []string) (jobs []Job, allies []bool, err error) {
 	files, err := xmlFiles(dirs)
 	if err != nil {
-		return err
+		return nil, nil, err
 	}
-	res, err := Run(ctx, runtime.Locate(cache, f.Runtime, l.PoB), files)
+	for _, f := range files {
+		jobs = append(jobs, Job{File: f})
+	}
+	allies = make([]bool, len(dirs))
+	for i, d := range dirs {
+		ally, err := allyOf(d)
+		if err != nil {
+			return nil, nil, err
+		}
+		if ally == "" {
+			continue
+		}
+		full, err := filepath.Abs(filepath.Join(d, FullXML))
+		if err != nil {
+			return nil, nil, fmt.Errorf("pob: %w", err)
+		}
+		jobs = append(jobs, Job{File: full, Ally: ally})
+		allies[i] = true
+	}
+	return jobs, allies, nil
+}
+
+// allyOf returns the absolute path of the full XML of the ally that dir's party file names,
+// empty without a party file.
+func allyOf(dir string) (string, error) {
+	b, err := os.ReadFile(filepath.Join(dir, PartyFile))
+	if errors.Is(err, fs.ErrNotExist) {
+		return "", nil
+	}
 	if err != nil {
-		return err
+		return "", fmt.Errorf("pob: %w", err)
 	}
-	return storeAll(dirs, l.PoB, res, check)
+	dec := json.NewDecoder(bytes.NewReader(b))
+	dec.DisallowUnknownFields()
+	var p Party
+	if err := dec.Decode(&p); err != nil {
+		return "", fmt.Errorf("%s: %w: %w", dir, ErrParty, err)
+	}
+	if p.Ally == "" || p.Ally != filepath.Base(p.Ally) || p.Ally == filepath.Base(dir) {
+		return "", fmt.Errorf("%s: %w: ally %q", dir, ErrParty, p.Ally)
+	}
+	ally, err := filepath.Abs(filepath.Join(filepath.Dir(dir), p.Ally, FullXML))
+	if err != nil {
+		return "", fmt.Errorf("pob: %w", err)
+	}
+	if _, err := os.Stat(ally); err != nil {
+		return "", fmt.Errorf("%s: %w: %w", dir, ErrParty, err)
+	}
+	return ally, nil
 }
 
 // deriveAll writes each build's gear XML, or with check fails with ErrStale when one differs.
@@ -107,12 +181,18 @@ func deriveAll(dirs []string, check bool) error {
 	return nil
 }
 
-// storeAll stores each build's results, in xmlNames order as they lie in res.
-func storeAll(dirs []string, r pins.Release, res []Result, check bool) error {
+// storeAll stores each build's results, as they lie in res in the order of jobsOf.
+func storeAll(dirs []string, allies []bool, r pins.Release, res []Result, check bool) error {
 	var stale []string
+	party := res[len(xmlNames())*len(dirs):]
 	for i, d := range dirs {
 		v := Values{PoB: r, Full: res[0].restrict(true), Gear: res[1].restrict(false), TreeOnly: res[2].restrict(false)}
 		res = res[len(xmlNames()):]
+		if allies[i] {
+			p := party[0].restrict(true)
+			v.Party = &p
+			party = party[1:]
+		}
 		same, err := store(d, v, check)
 		if err != nil {
 			return err

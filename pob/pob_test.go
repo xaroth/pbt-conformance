@@ -124,6 +124,60 @@ func TestRunDualWield(t *testing.T) {
 	}
 }
 
+// A build run with an ally gets the ally's aura: Vitality's life regeneration reaches the
+// life-node Marauder, who has none of his own, and the same on every run.
+func TestRunJobsParty(t *testing.T) {
+	t.Parallel()
+	build, ally := abs(t, "marauder-life-node.xml"), abs(t, "marauder-vitality.xml")
+	jobs := []pob.Job{{File: build}, {File: build, Ally: ally}, {File: build, Ally: ally}}
+	res, err := pob.RunJobs(context.Background(), paths(t), jobs)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if res[0].Outputs["LifeRegen"] != 0 {
+		t.Errorf("alone: life regeneration %v, want 0", res[0].Outputs["LifeRegen"])
+	}
+	if res[1].Outputs["LifeRegen"] <= 0 {
+		t.Errorf("with ally: life regeneration %v, want more than 0", res[1].Outputs["LifeRegen"])
+	}
+	if res[1].Outputs["LifeRegen"] != res[2].Outputs["LifeRegen"] {
+		t.Errorf("runs differ: %v, %v", res[1].Outputs["LifeRegen"], res[2].Outputs["LifeRegen"])
+	}
+	if res[1].Outputs["Life"] != res[0].Outputs["Life"] {
+		t.Errorf("life: got %v, want %v", res[1].Outputs["Life"], res[0].Outputs["Life"])
+	}
+}
+
+// Two conformance builds as a stand-in pair: the Ascendant's Determination raises the Slayer's
+// armour, the same in a second PoB process.
+func TestRunJobsPartyStandIn(t *testing.T) {
+	t.Parallel()
+	p := paths(t)
+	dir := func(name string) string {
+		t.Helper()
+		f, err := filepath.Abs(filepath.Join("..", "builds", "3.29", name, pob.FullXML))
+		if err != nil {
+			t.Fatal(err)
+		}
+		return f
+	}
+	slayer, ascendant := dir("10-duelist-L90-slayer-resolute-technique"), dir("35-scion-L90-ascendant-chaos-inoculation")
+	runs := make([]map[string]float64, 0, 2)
+	for range 2 {
+		res, err := pob.RunJobs(context.Background(), p, []pob.Job{{File: slayer}, {File: slayer, Ally: ascendant}})
+		if err != nil {
+			t.Fatal(err)
+		}
+		if res[1].Outputs["Armour"] <= res[0].Outputs["Armour"] {
+			t.Errorf("armour with ally %v, alone %v", res[1].Outputs["Armour"], res[0].Outputs["Armour"])
+		}
+		runs = append(runs, res[1].Outputs)
+	}
+	if diff := cmp.Diff(runs[0], runs[1]); diff != "" {
+		t.Errorf("runs differ (-first +second):\n%s", diff)
+	}
+}
+
 func TestRunMissingFile(t *testing.T) {
 	t.Parallel()
 	_, err := pob.Run(context.Background(), paths(t), []string{abs(t, "missing.xml")})
