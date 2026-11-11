@@ -30,25 +30,71 @@ const (
 	maxLine = 1 << 20
 )
 
-// Keys are the PoB output keys recorded per build: the sheet values pbt-engine computes.
-// PoB has no plain maximum resistance key; a maximum is <Elem>Resist + Missing<Elem>Resist.
-func Keys() []string {
-	return []string{
-		"Str", "Dex", "Int", "Life", "Mana", "EnergyShield", "Armour", "Evasion",
-		"LifeRegen", "ManaRegen", "EnergyShieldRegen",
-		"FireResist", "FireResistTotal", "MissingFireResist",
-		"ColdResist", "ColdResistTotal", "MissingColdResist",
-		"LightningResist", "LightningResistTotal", "MissingLightningResist",
-		"ChaosResist", "ChaosResistTotal", "MissingChaosResist",
-	}
-}
-
 // Result is what PoB computed for one build XML.
 type Result struct {
 	// Allocated is the number of nodes PoB allocated, class and ascendancy starts included;
 	// fewer than the build lists means PoB dropped some.
-	Allocated int                `json:"allocated"`
-	Outputs   map[string]float64 `json:"outputs"`
+	Allocated int `json:"allocated"`
+	// Outputs holds PoB's value per output key; a key PoB gives no number for is absent.
+	Outputs map[string]float64 `json:"outputs"`
+	// MainSkill is the skill PoB calculates the build's damage for; nil in a layer whose skill
+	// outputs are not recorded.
+	MainSkill *MainSkill `json:"mainSkill,omitempty"`
+}
+
+// MainSkill is the skill PoB took as a build's main skill.
+type MainSkill struct {
+	// Group is the skill's socket group, counted from 1 in the build file; 0 when the skill
+	// comes from no group of the file, such as PoB's default attack.
+	Group int `json:"group,omitempty"`
+	// ID and Name are the skill's granted effect.
+	ID   string `json:"id"`
+	Name string `json:"name"`
+	// Totem, Trap and Mine say how the skill is used.
+	Totem bool `json:"totem,omitempty"`
+	Trap  bool `json:"trap,omitempty"`
+	Mine  bool `json:"mine,omitempty"`
+	// Minion is the minion the skill summons, if any.
+	Minion *Minion `json:"minion,omitempty"`
+}
+
+// Minion is the main skill's minion and the minion's own main skill.
+type Minion struct {
+	Name  string `json:"name"`
+	Skill string `json:"skill"`
+}
+
+// groups returns the groups of outputs that apply to a build with main skill ms.
+func (ms *MainSkill) groups() []Group {
+	g := []Group{GroupSheet, GroupDefence}
+	if ms == nil {
+		return g
+	}
+	g = append(g, GroupSkill)
+	if ms.Minion != nil {
+		g = append(g, GroupMinion)
+	}
+	if ms.Totem || ms.Trap || ms.Mine {
+		g = append(g, GroupDelivery)
+	}
+	return g
+}
+
+// restrict returns r as recorded for a layer: with withSkill its main skill and the outputs of
+// the groups that apply to it, else the sheet and defences only.
+func (r Result) restrict(withSkill bool) Result {
+	if !withSkill {
+		r.MainSkill = nil
+	}
+	keep := keysOf(Outputs(), r.MainSkill.groups())
+	out := make(map[string]float64, len(keep))
+	for _, k := range keep {
+		if v, ok := r.Outputs[k]; ok {
+			out[k] = v
+		}
+	}
+	r.Outputs = out
+	return r
 }
 
 type line struct {
