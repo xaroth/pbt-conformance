@@ -112,8 +112,23 @@ type line struct {
 	Error string `json:"error"`
 }
 
+// Job is a build XML to run, and the XML of its ally, whose party buffs apply, if any.
+type Job struct {
+	File, Ally string
+}
+
 // Run runs each file through PoB at p in one process and returns the results in file order.
 func Run(ctx context.Context, p runtime.Paths, files []string) ([]Result, error) {
+	jobs := make([]Job, len(files))
+	for i, f := range files {
+		jobs[i] = Job{File: f}
+	}
+	return RunJobs(ctx, p, jobs)
+}
+
+// RunJobs runs each job through PoB at p in one process and returns the results in job order.
+// A job with an ally runs as PoB's Party tab would with the ally's exported support imported.
+func RunJobs(ctx context.Context, p runtime.Paths, jobs []Job) ([]Result, error) {
 	script, err := os.CreateTemp("", "pbtc-runner-*.lua")
 	if err != nil {
 		return nil, fmt.Errorf("pob: %w", err)
@@ -128,7 +143,17 @@ func Run(ctx context.Context, p runtime.Paths, files []string) ([]Result, error)
 	cmd := exec.CommandContext(ctx, p.LuaJIT, append([]string{script.Name()}, Keys()...)...)
 	cmd.Dir = p.PoBSrc
 	cmd.Env = append(os.Environ(), "LUA_PATH="+runtime.LuaPath, "LUA_CPATH="+p.CPath)
-	cmd.Stdin = strings.NewReader(strings.Join(files, "\n") + "\n")
+	var in strings.Builder
+	files := make([]string, len(jobs))
+	for i, j := range jobs {
+		files[i] = j.File
+		in.WriteString(j.File)
+		if j.Ally != "" {
+			in.WriteString("\t" + j.Ally)
+		}
+		in.WriteString("\n")
+	}
+	cmd.Stdin = strings.NewReader(in.String())
 	var stderr bytes.Buffer
 	cmd.Stderr = &stderr
 	out, err := cmd.Output()

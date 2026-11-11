@@ -182,6 +182,10 @@ func TestRun(t *testing.T) {
 	if diff := cmp.Diff(want, bs[0].Layers); diff != "" {
 		t.Errorf("layers (-want +got):\n%s", diff)
 	}
+	// no party file, no party layer
+	if n := len(bs[0].Layers); n != 3 {
+		t.Errorf("got %d layers, want 3", n)
+	}
 	if bs[0].Meta.Kind != compare.Untagged {
 		t.Errorf("kind: got %q, want %q", bs[0].Meta.Kind, compare.Untagged)
 	}
@@ -259,5 +263,35 @@ func TestRunReportsWarnings(t *testing.T) {
 		return m.Output == "warning:node-unknown" && strings.HasPrefix(m.Detail, "node 2: ")
 	}) {
 		t.Errorf("no node-unknown warning in %+v", ms)
+	}
+}
+
+// A build recorded with an ally has a party layer, not compared: the engine does not simulate
+// party buffs yet. A build without one has no party layer.
+func TestRunPartyLayer(t *testing.T) {
+	t.Parallel()
+	datasets := env(t, "PBT_DATASETS")
+	root := writeBuild(t, "01-marauder", string(fixture(t)), string(fixture(t)))
+	party := &pob.Result{Outputs: map[string]float64{"Life": 1150, "BlockChance": 0}, MainSkill: &pob.MainSkill{ID: "Vitality", Name: "Vitality"}}
+	values, err := json.Marshal(pob.Values{Party: party})
+	if err != nil {
+		t.Fatal(err)
+	}
+	if err := os.WriteFile(filepath.Join(root, "builds", "3.29", "01-marauder", pob.ValuesFile), values, 0o600); err != nil {
+		t.Fatal(err)
+	}
+	bs, err := compare.Run(root, datasets, repoPins(t), "poe1", "3.29")
+	if err != nil {
+		t.Fatal(err)
+	}
+	ls := bs[0].Layers
+	want := compare.Layer{Name: "party", Groups: []compare.GroupResult{
+		{Group: pob.GroupSheet, Status: compare.StatusNotCompared}, {Group: pob.GroupDefence, Status: compare.StatusNotCompared},
+	}}
+	if len(ls) != 4 {
+		t.Fatalf("got %d layers, want 4: %+v", len(ls), ls)
+	}
+	if diff := cmp.Diff(want, ls[3]); diff != "" {
+		t.Errorf("party layer (-want +got):\n%s", diff)
 	}
 }

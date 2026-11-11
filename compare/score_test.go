@@ -15,9 +15,10 @@ import (
 	"github.com/xaroth/pbt-conformance/pob"
 )
 
-func layers(tree, full compare.Status) []compare.Layer {
+// layers are a tree layer whose sheet passes and a full layer whose skill group has status full.
+func layers(full compare.Status) []compare.Layer {
 	return []compare.Layer{
-		{Name: "tree", Groups: []compare.GroupResult{{Group: pob.GroupSheet, Status: tree}}},
+		{Name: "tree", Groups: []compare.GroupResult{{Group: pob.GroupSheet, Status: compare.StatusPass}}},
 		{Name: "full", Groups: []compare.GroupResult{{Group: pob.GroupSkill, Status: full}}},
 	}
 }
@@ -26,13 +27,13 @@ func scoreBuilds() []compare.Build {
 	stat := compare.Blocker{Kind: compare.BlockerStat, Name: "spell_damage_+%"}
 	gem := compare.Blocker{Kind: compare.BlockerGem, Name: "Cruelty"}
 	return []compare.Build{
-		{League: "3.29", Name: "01-a", Meta: compare.Meta{Kind: compare.Untagged}, Layers: layers(compare.StatusPass, compare.StatusPass),
+		{League: "3.29", Name: "01-a", Meta: compare.Meta{Kind: compare.Untagged}, Layers: layers(compare.StatusPass),
 			Blockers: []compare.Blocker{stat}},
 		{League: "3.29", Name: "02-b", Meta: compare.Meta{Kind: compare.KindAttack, Contains: []compare.Content{compare.ClusterJewel}},
-			Layers: layers(compare.StatusPass, compare.StatusNotCompared), Blockers: []compare.Blocker{gem, stat}},
+			Layers: layers(compare.StatusNotCompared), Blockers: []compare.Blocker{gem, stat}},
 		{League: "3.29", Name: "03-c", Meta: compare.Meta{Kind: compare.KindAttack},
 			Mismatches: []compare.Mismatch{{League: "3.29", Build: "03-c", Output: "warning:node-unknown"}},
-			Layers:     layers(compare.StatusPass, compare.StatusPass)},
+			Layers:     layers(compare.StatusPass)},
 		{League: "3.28", Name: "01-a", Meta: compare.Meta{Kind: compare.Untagged}, Blockers: []compare.Blocker{stat},
 			Mismatches: []compare.Mismatch{{League: "3.28", Build: "01-a", Output: "player.life", Triage: "life"}},
 			Layers: []compare.Layer{{Name: "tree", Groups: []compare.GroupResult{
@@ -136,5 +137,30 @@ func TestReadHints(t *testing.T) {
 	}
 	if _, err := compare.ReadHints(bad); !errors.Is(err, compare.ErrHints) {
 		t.Errorf("bad: got %v, want %v", err, compare.ErrHints)
+	}
+}
+
+// The party layer is scored for the builds that have it, after the other layers, and a build
+// not compared on it does not pass everything.
+func TestScorePartyLayer(t *testing.T) {
+	t.Parallel()
+	party := compare.Layer{Name: "party", Groups: []compare.GroupResult{{Group: pob.GroupSheet, Status: compare.StatusNotCompared}}}
+	builds := []compare.Build{
+		{League: "3.29", Name: "01-a", Meta: compare.Meta{Kind: compare.KindParty}, Layers: append(layers(compare.StatusPass), party)},
+		{League: "3.29", Name: "02-b", Meta: compare.Meta{Kind: compare.KindParty}, Layers: layers(compare.StatusPass)},
+	}
+	s := compare.Score(builds, nil, nil, nil)
+	want := []compare.GroupRow{
+		{League: "3.29", Layer: "tree", Group: pob.GroupSheet, Builds: 2, Pass: 2},
+		{League: "3.29", Layer: "tree", Group: compare.GroupChecks, Builds: 2, Pass: 2},
+		{League: "3.29", Layer: "full", Group: pob.GroupSkill, Builds: 2, Pass: 2},
+		{League: "3.29", Layer: "party", Group: pob.GroupSheet, Builds: 1, NotCompared: 1},
+	}
+	if diff := cmp.Diff(want, s.Groups); diff != "" {
+		t.Errorf("groups (-want +got):\n%s", diff)
+	}
+	wantKinds := []compare.KindRow{{League: "3.29", Kind: "party", Builds: 2, PassAll: 1}}
+	if diff := cmp.Diff(wantKinds, s.Kinds); diff != "" {
+		t.Errorf("kinds (-want +got):\n%s", diff)
 	}
 }
