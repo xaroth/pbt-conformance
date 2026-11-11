@@ -11,6 +11,7 @@ import (
 	"fmt"
 	"os"
 	"os/exec"
+	"slices"
 	"strings"
 
 	"github.com/xaroth/pbt-conformance/runtime"
@@ -62,6 +63,13 @@ type MainSkill struct {
 type Minion struct {
 	Name  string `json:"name"`
 	Skill string `json:"skill"`
+}
+
+// Groups returns the groups of outputs recorded in r, in the order of Groups: the sheet and
+// defences, and with a main skill the groups that apply to it.
+func (r Result) Groups() []Group {
+	all := r.MainSkill.groups()
+	return slices.DeleteFunc(Groups(), func(g Group) bool { return !slices.Contains(all, g) })
 }
 
 // groups returns the groups of outputs that apply to a build with main skill ms.

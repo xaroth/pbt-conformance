@@ -7,7 +7,6 @@ import (
 	"errors"
 	"fmt"
 	"maps"
-	"math"
 	"os"
 	"path/filepath"
 	"slices"
@@ -30,7 +29,7 @@ var (
 	errNoKey  = errors.New("no pob key for output")
 )
 
-// tolerance absorbs float noise; values are compared at the precision both sides round to.
+// tolerance absorbs float noise in the values of triage entries.
 const tolerance = 1e-9
 
 // pobOutputs indexes the outputs of pob.Outputs by name.
@@ -45,15 +44,19 @@ func pobOutputs() map[string]pob.Output {
 // Mismatch is one output of one build where pbt-engine and PoB differ, or a simulation warning
 // (Output "warning:<code>", Detail its subject and message) that must be triaged like one.
 type Mismatch struct {
-	League, Build, Output string
+	League string `json:"league"`
+	Build  string `json:"build"`
+	Output string `json:"output"`
 	// Ours is pbt-engine's value; PoB is PoB's for the tree-only build, which is what the
 	// engine models, and PoBFull PoB's for the full build. HasPoB is false when PoB has no value.
-	Ours, PoB, PoBFull float64
-	HasPoB             bool
+	Ours    float64 `json:"ours"`
+	PoB     float64 `json:"pob"`
+	PoBFull float64 `json:"pobFull"`
+	HasPoB  bool    `json:"hasPoB"`
 	// Triage is the id of the triage entry that accepts the mismatch, empty if none.
-	Triage string
+	Triage string `json:"triage,omitempty"`
 	// Detail is a warning's subject and message.
-	Detail string
+	Detail string `json:"detail,omitempty"`
 }
 
 // Output prefixes of warning and import mismatches.
@@ -72,9 +75,18 @@ func fullWarnings() []build.Code {
 	}
 }
 
+// Build is the comparison of one build.
+type Build struct {
+	League, Name string
+	// Mismatches are the build's mismatches, in the order compare lists them.
+	Mismatches []Mismatch
+	// Layers judge each layer's groups of outputs, in the order of Layers().
+	Layers []Layer
+}
+
 // Run compares every build of league under root, with the pinned dataset under datasets.
 // A build that cannot be compared at all (unreadable XML, failing build check) is an error.
-func Run(root, datasets string, f *pins.File, game, league string) ([]Mismatch, error) {
+func Run(root, datasets string, f *pins.File, game, league string) ([]Build, error) {
 	l, ok := f.Games[game].Leagues[league]
 	if !ok {
 		return nil, fmt.Errorf("compare: %s %s: %w", game, league, ErrDataset)
@@ -91,15 +103,24 @@ func Run(root, datasets string, f *pins.File, game, league string) ([]Mismatch, 
 	if err != nil {
 		return nil, fmt.Errorf("compare: %w", err)
 	}
-	var out []Mismatch
+	out := make([]Build, 0, len(dirs))
 	for _, dir := range dirs {
-		ms, err := compareBuild(dir, league, reg, sim)
+		b, err := compareBuild(dir, league, reg, sim)
 		if err != nil {
 			return nil, fmt.Errorf("compare %s: %w", filepath.Base(dir), err)
 		}
-		out = append(out, ms...)
+		out = append(out, *b)
 	}
 	return out, nil
+}
+
+// Mismatches returns the mismatches of builds, in order.
+func Mismatches(builds []Build) []Mismatch {
+	var out []Mismatch
+	for _, b := range builds {
+		out = append(out, b.Mismatches...)
+	}
+	return out
 }
 
 // openPinned opens the datasets and the pinned one among them, checking its id.
@@ -114,7 +135,7 @@ func openPinned(datasets, game string, d pins.Dataset) (*dataset.Registry, *data
 	return reg, s, nil
 }
 
-func compareBuild(dir, league string, reg *dataset.Registry, sim *simulator.Sim) ([]Mismatch, error) {
+func compareBuild(dir, league string, reg *dataset.Registry, sim *simulator.Sim) (*Build, error) {
 	name := filepath.Base(dir)
 	b, treeWarnings, err := importFile(dir, pob.TreeOnlyXML, reg)
 	if err != nil {
@@ -141,15 +162,44 @@ func compareBuild(dir, league string, reg *dataset.Registry, sim *simulator.Sim)
 	if err != nil {
 		return nil, err
 	}
-	if n := Allocated(c); v.TreeOnly.Allocated != n {
-		out = append(out, Mismatch{
-			League: league, Build: name, Output: "allocated_nodes",
-			Ours: float64(n), PoB: float64(v.TreeOnly.Allocated), PoBFull: float64(v.Full.Allocated), HasPoB: true,
-		})
-	}
+	out = append(out, allocatedMismatches(c, v, league, name)...)
 	out = append(out, warnings(st, league, name)...)
-	ms, err := compareOutputs(sim.Outputs(), st, v, league, name)
-	return append(out, ms...), err
+	ours, err := engineValues(sim.Outputs(), st)
+	if err != nil {
+		return nil, err
+	}
+	ms, err := compareOutputs(sim.Outputs(), ours, v, league, name)
+	if err != nil {
+		return nil, err
+	}
+	return &Build{
+		League: league, Name: name, Mismatches: append(out, ms...), Layers: judgeLayers(v, ours),
+	}, nil
+}
+
+// allocatedMismatches reports a tree whose node count differs from PoB's.
+func allocatedMismatches(c *build.Checked, v *pob.Values, league, name string) []Mismatch {
+	n := Allocated(c)
+	if v.TreeOnly.Allocated == n {
+		return nil
+	}
+	return []Mismatch{{
+		League: league, Build: name, Output: "allocated_nodes",
+		Ours: float64(n), PoB: float64(v.TreeOnly.Allocated), PoBFull: float64(v.Full.Allocated), HasPoB: true,
+	}}
+}
+
+// engineValues returns the value of every catalogue output of st.
+func engineValues(outputs []simulator.Output, st *simulator.Stats) (map[string]float64, error) {
+	m := make(map[string]float64, len(outputs))
+	for _, o := range outputs {
+		v, ok := st.Get(o.Key)
+		if !ok {
+			return nil, fmt.Errorf("compare: %w %s", errNoKey, o.Key)
+		}
+		m[string(o.Key)] = v
+	}
+	return m, nil
 }
 
 func importFile(dir, file string, reg *dataset.Registry) (*build.Build, []build.Warning, error) {
@@ -214,8 +264,8 @@ func warnings(st *simulator.Stats, league, name string) []Mismatch {
 	return out
 }
 
-// compareOutputs compares every catalogue output of st with PoB's values v.
-func compareOutputs(outputs []simulator.Output, st *simulator.Stats, v *pob.Values, league, name string) ([]Mismatch, error) {
+// compareOutputs compares every catalogue output, with our values in values, with PoB's values v.
+func compareOutputs(outputs []simulator.Output, values map[string]float64, v *pob.Values, league, name string) ([]Mismatch, error) {
 	var out []Mismatch
 	table := pobOutputs()
 	for _, o := range outputs {
@@ -223,13 +273,10 @@ func compareOutputs(outputs []simulator.Output, st *simulator.Stats, v *pob.Valu
 		if !ok {
 			return nil, fmt.Errorf("compare: %w %s", errNoKey, o.Key)
 		}
-		ours, ok := st.Get(o.Key)
-		if !ok {
-			return nil, fmt.Errorf("compare: %w %s", errNoKey, o.Key)
-		}
+		ours := values[string(o.Key)]
 		p, has := get.Value(v.TreeOnly.Outputs)
 		full, _ := get.Value(v.Full.Outputs)
-		if has && math.Abs(ours-p) <= tolerance {
+		if has && get.Matches(ours, p) {
 			continue
 		}
 		out = append(out, Mismatch{League: league, Build: name, Output: string(o.Key), Ours: ours, PoB: p, PoBFull: full, HasPoB: has})
