@@ -1,0 +1,13 @@
+{
+  "kind": "totem",
+  "contains": [
+    "cluster-jewel",
+    "timeless-jewel",
+    "mercenary"
+  ],
+  "origin": {
+    "url": "https://poe.ninja/poe1/builds/allflame/character/Aveen_-6026/AvnBuysFriends",
+    "league": "Allflame",
+    "snapshot": "0208-20261111-47167"
+  }
+}

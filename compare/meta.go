@@ -35,12 +35,11 @@ const (
 	KindTotem    Kind = "totem"
 	KindTrapMine Kind = "trap-mine"
 	KindParty    Kind = "party"
-	KindOther    Kind = "other"
 )
 
 // Kinds returns the kinds a metadata file may give, in report order.
 func Kinds() []Kind {
-	return []Kind{KindSpell, KindAttack, KindDoT, KindMinion, KindTotem, KindTrapMine, KindParty, KindOther}
+	return []Kind{KindSpell, KindAttack, KindDoT, KindMinion, KindTotem, KindTrapMine, KindParty}
 }
 
 // Content is something a build holds that the scoreboard shows apart.

@@ -1,0 +1,14 @@
+{
+  "kind": "minion",
+  "contains": [
+    "cluster-jewel",
+    "timeless-jewel",
+    "mercenary",
+    "item-skill"
+  ],
+  "origin": {
+    "url": "https://poe.ninja/poe1/builds/allflame/character/dunggiang_9119-2069/autobot_dg",
+    "league": "Allflame",
+    "snapshot": "0208-20261111-47167"
+  }
+}

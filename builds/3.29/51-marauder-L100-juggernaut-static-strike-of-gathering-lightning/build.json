@@ -1,0 +1,13 @@
+{
+  "kind": "attack",
+  "contains": [
+    "cluster-jewel",
+    "timeless-jewel",
+    "item-skill"
+  ],
+  "origin": {
+    "url": "https://poe.ninja/poe1/builds/allflame/character/holth21-4191/%E7%8B%82%E8%9B%AE%E9%AD%94%E5%B0%8A",
+    "league": "Allflame",
+    "snapshot": "0208-20261111-47167"
+  }
+}

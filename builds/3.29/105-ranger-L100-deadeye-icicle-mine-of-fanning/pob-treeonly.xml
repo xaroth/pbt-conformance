@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathOfBuilding>
+	<Build ascendClassName="Deadeye" bandit="None" characterLevelAutoMode="false" className="Ranger" level="100" mainSocketGroup="1" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="3_0" viewMode="TREE">
+		<PlayerStat stat="AverageHit" value="635369.9742555"/>
+		<PlayerStat stat="AverageBurstDamage" value="635369.9742555"/>
+		<PlayerStat stat="Speed" value="16.785714285714"/>
+		<PlayerStat stat="MineLayingTime" value="0.29787234042553"/>
+		<PlayerStat stat="MineThrowCount" value="5"/>
+		<PlayerStat stat="PreEffectiveCritChance" value="70.38"/>
+		<PlayerStat stat="CritChance" value="70.38"/>
+		<PlayerStat stat="CritMultiplier" value="6"/>
+		<PlayerStat stat="HitChance" value="100"/>
+		<PlayerStat stat="TotalDPS" value="10665138.853574"/>
+		<PlayerStat stat="TotalDot" value="0"/>
+		<PlayerStat stat="WithBleedDPS" value="10665138.853574"/>
+		<PlayerStat stat="IgniteDPS" value="37848.933811865"/>
+		<PlayerStat stat="WithIgniteDPS" value="10702987.787386"/>
+		<PlayerStat stat="WithPoisonDPS" value="10665138.853574"/>
+		<PlayerStat stat="TotalDotDPS" value="37848.933811865"/>
+		<PlayerStat stat="CullingDPS" value="1189220.8652651"/>
+		<PlayerStat stat="ReservationDPS" value="0"/>
+		<PlayerStat stat="CombinedDPS" value="11892208.652651"/>
+		<PlayerStat stat="ManaCost" value="16"/>
+		<PlayerStat stat="ManaPercentCost" value="0"/>
+		<PlayerStat stat="ManaPerSecondCost" value="53.714285714286"/>
+		<PlayerStat stat="ManaPercentPerSecondCost" value="0"/>
+		<PlayerStat stat="LifeCost" value="0"/>
+		<PlayerStat stat="LifePercentCost" value="0"/>
+		<PlayerStat stat="LifePerSecondCost" value="0"/>
+		<PlayerStat stat="LifePercentPerSecondCost" value="0"/>
+		<PlayerStat stat="ESCost" value="0"/>
+		<PlayerStat stat="ESPerSecondCost" value="0"/>
+		<PlayerStat stat="ESPercentPerSecondCost" value="0"/>
+		<PlayerStat stat="RageCost" value="0"/>
+		<PlayerStat stat="SoulCost" value="0"/>
+		<PlayerStat stat="Str" value="135"/>
+		<PlayerStat stat="ReqStr" value="91"/>
+		<PlayerStat stat="Dex" value="171"/>
+		<PlayerStat stat="ReqDex" value="147"/>
+		<PlayerStat stat="Int" value="214"/>
+		<PlayerStat stat="ReqInt" value="166"/>
+		<PlayerStat stat="Devotion" value="0"/>
+		<PlayerStat stat="TotalEHP" value="29943.646430231"/>
+		<PlayerStat stat="PhysicalMaximumHitTaken" value="8830"/>
+		<PlayerStat stat="LightningMaximumHitTaken" value="19332"/>
+		<PlayerStat stat="FireMaximumHitTaken" value="19332"/>
+		<PlayerStat stat="ColdMaximumHitTaken" value="19332"/>
+		<PlayerStat stat="ChaosMaximumHitTaken" value="3708"/>
+		<PlayerStat stat="Life" value="2923"/>
+		<PlayerStat stat="Spec:LifeInc" value="62"/>
+		<PlayerStat stat="LifeUnreserved" value="2923"/>
+		<PlayerStat stat="LifeRecoverable" value="2923"/>
+		<PlayerStat stat="LifeUnreservedPercent" value="100"/>
+		<PlayerStat stat="LifeRegenRecovery" value="65.9"/>
+		<PlayerStat stat="LifeLeechGainRate" value="0"/>
+		<PlayerStat stat="Mana" value="1088"/>
+		<PlayerStat stat="Spec:ManaInc" value="36"/>
+		<PlayerStat stat="ManaUnreserved" value="167"/>
+		<PlayerStat stat="ManaUnreservedPercent" value="15.349264705882"/>
+		<PlayerStat stat="ManaRegenRecovery" value="64.3"/>
+		<PlayerStat stat="ManaLeechGainRate" value="0"/>
+		<PlayerStat stat="EnergyShield" value="0"/>
+		<PlayerStat stat="EnergyShieldRecoveryCap" value="0"/>
+		<PlayerStat stat="Spec:EnergyShieldInc" value="0"/>
+		<PlayerStat stat="EnergyShieldRegenRecovery" value="0"/>
+		<PlayerStat stat="EnergyShieldLeechGainRate" value="0"/>
+		<PlayerStat stat="Ward" value="0"/>
+		<PlayerStat stat="RageRegenRecovery" value="0"/>
+		<PlayerStat stat="Evasion" value="22242"/>
+		<PlayerStat stat="Spec:EvasionInc" value="73"/>
+		<PlayerStat stat="MeleeEvadeChance" value="77"/>
+		<PlayerStat stat="ProjectileEvadeChance" value="77"/>
+		<PlayerStat stat="Armour" value="1261"/>
+		<PlayerStat stat="Spec:ArmourInc" value="0"/>
+		<PlayerStat stat="PhysicalDamageReduction" value="18"/>
+		<PlayerStat stat="EffectiveBlockChance" value="36"/>
+		<PlayerStat stat="EffectiveSpellBlockChance" value="0"/>
+		<PlayerStat stat="AttackDodgeChance" value="0"/>
+		<PlayerStat stat="SpellDodgeChance" value="0"/>
+		<PlayerStat stat="EffectiveSpellSuppressionChance" value="97"/>
+		<PlayerStat stat="FireResist" value="75"/>
+		<PlayerStat stat="FireResistOverCap" value="36"/>
+		<PlayerStat stat="ColdResist" value="75"/>
+		<PlayerStat stat="ColdResistOverCap" value="114"/>
+		<PlayerStat stat="LightningResist" value="75"/>
+		<PlayerStat stat="LightningResistOverCap" value="13"/>
+		<PlayerStat stat="ChaosResist" value="-46"/>
+		<PlayerStat stat="ChaosResistOverCap" value="0"/>
+		<PlayerStat stat="EffectiveMovementSpeedMod" value="3.54"/>
+		<PlayerStat stat="FullDPS" value="0"/>
+		<PlayerStat stat="FullDotDPS" value="0"/>
+		<PlayerStat stat="PowerCharges" value="4"/>
+		<PlayerStat stat="PowerChargesMax" value="4"/>
+		<PlayerStat stat="FrenzyCharges" value="5"/>
+		<PlayerStat stat="FrenzyChargesMax" value="5"/>
+		<PlayerStat stat="EnduranceCharges" value="0"/>
+		<PlayerStat stat="EnduranceChargesMax" value="3"/>
+		<TimelessData devotionVariant1="1" devotionVariant2="1" searchList="" searchListFallback=""/>
+	</Build>
+	<Tree activeSpec="1">
+		<Spec ascendClassId="2" classId="2" clusterHashFormatVersion="2" masteryEffects="{9586,38070},{10495,64875},{31039,2987},{38207,38814},{53615,23621}" nodes="1461,1655,2260,3656,4036,4502,5082,6538,6797,6799,6910,7920,8027,8938,9206,9469,9586,9797,10495,10763,11716,12412,12801,12831,13170,14292,15228,16079,18182,18661,18770,19858,20807,20852,21033,21984,22618,22852,23169,23334,24050,24848,25260,25411,26067,27656,27788,28754,29454,29549,31039,31958,32710,32763,33310,33777,33783,33989,35283,35334,35894,36221,36287,36585,36858,37504,38207,38662,39861,40644,41635,41866,41870,42006,42443,42649,42686,42744,42804,44102,45035,45593,45608,46277,46965,47306,47507,48614,49605,49900,49929,49978,50338,50459,53005,53114,53213,53456,53615,56134,56295,56856,59220,59370,59585,59606,59837,60405,60440,60735,61627,61689,61834,61981,62744,63194,63228,63251,63795,64265,64583,65502,65808,65811,65817,65872,65874,65882,65888,65890,65898,66896,66899,66905" secondaryAscendClassId="9" treeVersion="3_29">
+			<URL>
+				https://www.pathofexile.com/passive-skill-tree/AAAABgImdwW1BncI1A5ID8QRlhPaGYoajRqPGv4e8B9bIuoj9iT9JXImRSj_KgstxDB8MgEyHzNyN9Q7fD7PRwZI5UlSTZJRR1F0UilV4FhaWURagVsmXfJhEGKsY0Nl02wIbIxwUnMOc215P3_Gf_uCHoPxg_eExYnTigaMNo19jb-O6Y_6koCVP5cGm7WexKKjo4qjjqQWpcummaa-pvinNKxGr-uyGbIotMW3dbjKuZO95sHFwuzDCcM6xKLPDc96z93Q0NFv20bb5-dU5-rowejW6b3r9ewY7T_wu_D58YryHfUY9tr2_PcT-TP7CfxH_94MARABEwEZAVABUgFaAWABYgFqBVAFUwVZBZS2JXL9ayj_C6t5P5eelT9cRdFv
+			</URL>
+			<Sockets>
+			</Sockets>
+			<Overrides>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ArohonguiTribePassiveBG.png" dn="Tattoo of the Arohongui Warrior" icon="Art/2DArt/SkillIcons/passives/colddamage.png" nodeId="1461">
+					5% increased Cold Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ArohonguiTribePassiveBG.png" dn="Tattoo of the Arohongui Warrior" icon="Art/2DArt/SkillIcons/passives/colddamage.png" nodeId="8938">
+					5% increased Cold Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/RamakoTribePassiveBG.png" dn="Tattoo of the Ramako Fleetfoot" icon="Art/2DArt/SkillIcons/passives/MovementSpeedandEvasionPassive.png" nodeId="12412">
+					2% increased Movement Speed
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ArohonguiTribePassiveBG.png" dn="Tattoo of the Arohongui Warrior" icon="Art/2DArt/SkillIcons/passives/colddamage.png" nodeId="14292">
+					5% increased Cold Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ArohonguiTribePassiveBG.png" dn="Tattoo of the Arohongui Warrior" icon="Art/2DArt/SkillIcons/passives/colddamage.png" nodeId="20807">
+					5% increased Cold Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/RamakoTribePassiveBG.png" dn="Tattoo of the Ramako Fleetfoot" icon="Art/2DArt/SkillIcons/passives/MovementSpeedandEvasionPassive.png" nodeId="22266">
+					2% increased Movement Speed
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/RamakoTribePassiveBG.png" dn="Tattoo of the Ramako Fleetfoot" icon="Art/2DArt/SkillIcons/passives/MovementSpeedandEvasionPassive.png" nodeId="30679">
+					2% increased Movement Speed
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/RamakoTribePassiveBG.png" dn="Tattoo of the Ramako Fleetfoot" icon="Art/2DArt/SkillIcons/passives/MovementSpeedandEvasionPassive.png" nodeId="32555">
+					2% increased Movement Speed
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ArohonguiTribePassiveBG.png" dn="Tattoo of the Arohongui Warrior" icon="Art/2DArt/SkillIcons/passives/colddamage.png" nodeId="36287">
+					5% increased Cold Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ArohonguiTribePassiveBG.png" dn="Tattoo of the Arohongui Warrior" icon="Art/2DArt/SkillIcons/passives/colddamage.png" nodeId="38662">
+					5% increased Cold Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ArohonguiTribePassiveBG.png" dn="Tattoo of the Arohongui Warrior" icon="Art/2DArt/SkillIcons/passives/colddamage.png" nodeId="39861">
+					5% increased Cold Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ArohonguiTribePassiveBG.png" dn="Tattoo of the Arohongui Warrior" icon="Art/2DArt/SkillIcons/passives/colddamage.png" nodeId="46277">
+					5% increased Cold Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ArohonguiTribePassiveBG.png" dn="Tattoo of the Arohongui Warrior" icon="Art/2DArt/SkillIcons/passives/colddamage.png" nodeId="49900">
+					5% increased Cold Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ArohonguiTribePassiveBG.png" dn="Tattoo of the Arohongui Warrior" icon="Art/2DArt/SkillIcons/passives/colddamage.png" nodeId="49978">
+					5% increased Cold Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ArohonguiTribePassiveBG.png" dn="Tattoo of the Arohongui Warrior" icon="Art/2DArt/SkillIcons/passives/colddamage.png" nodeId="53213">
+					5% increased Cold Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ArohonguiTribePassiveBG.png" dn="Tattoo of the Arohongui Warrior" icon="Art/2DArt/SkillIcons/passives/colddamage.png" nodeId="59370">
+					5% increased Cold Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ArohonguiTribePassiveBG.png" dn="Tattoo of the Arohongui Warrior" icon="Art/2DArt/SkillIcons/passives/colddamage.png" nodeId="59606">
+					5% increased Cold Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ArohonguiTribePassiveBG.png" dn="Tattoo of the Arohongui Warrior" icon="Art/2DArt/SkillIcons/passives/colddamage.png" nodeId="63795">
+					5% increased Cold Damage
+				</Override>
+			</Overrides>
+		</Spec>
+	</Tree>
+</PathOfBuilding>

@@ -1,0 +1,11 @@
+{
+  "kind": "trap-mine",
+  "contains": [
+    "cluster-jewel"
+  ],
+  "origin": {
+    "url": "https://poe.ninja/poe1/builds/allflame/character/R4gZzz-2155/STEAMSUPPORT",
+    "league": "Allflame",
+    "snapshot": "0208-20261111-47167"
+  }
+}

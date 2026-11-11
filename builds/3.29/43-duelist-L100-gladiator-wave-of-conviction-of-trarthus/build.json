@@ -1,0 +1,13 @@
+{
+  "kind": "spell",
+  "contains": [
+    "cluster-jewel",
+    "timeless-jewel",
+    "item-skill"
+  ],
+  "origin": {
+    "url": "https://poe.ninja/poe1/builds/allflame/character/Beton-8841/Evrei_",
+    "league": "Allflame",
+    "snapshot": "0208-20261111-47167"
+  }
+}

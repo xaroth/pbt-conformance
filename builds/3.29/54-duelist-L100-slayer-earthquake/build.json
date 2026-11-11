@@ -1,0 +1,13 @@
+{
+  "kind": "attack",
+  "contains": [
+    "cluster-jewel",
+    "timeless-jewel",
+    "item-skill"
+  ],
+  "origin": {
+    "url": "https://poe.ninja/poe1/builds/allflame/character/444831425-0342/moyuhhh",
+    "league": "Allflame",
+    "snapshot": "0208-20261111-47167"
+  }
+}

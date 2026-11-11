@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathOfBuilding>
+	<Build ascendClassName="Hierophant" bandit="None" characterLevelAutoMode="false" className="Templar" level="100" mainSocketGroup="2" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="3_0" viewMode="TREE">
+		<PlayerStat stat="AverageHit" value="198430.988976"/>
+		<PlayerStat stat="AverageBurstDamage" value="198430.988976"/>
+		<PlayerStat stat="Speed" value="2.0166666666667"/>
+		<PlayerStat stat="TotemPlacementTime" value="0.23529411764706"/>
+		<PlayerStat stat="PreEffectiveCritChance" value="95.2"/>
+		<PlayerStat stat="CritChance" value="95.2"/>
+		<PlayerStat stat="CritMultiplier" value="4.32"/>
+		<PlayerStat stat="HitChance" value="100"/>
+		<PlayerStat stat="TotalDPS" value="400169.1611016"/>
+		<PlayerStat stat="TotalDot" value="0"/>
+		<PlayerStat stat="WithBleedDPS" value="400169.1611016"/>
+		<PlayerStat stat="WithIgniteDPS" value="400169.1611016"/>
+		<PlayerStat stat="WithPoisonDPS" value="400169.1611016"/>
+		<PlayerStat stat="TotalDotDPS" value="0"/>
+		<PlayerStat stat="CullingDPS" value="0"/>
+		<PlayerStat stat="ReservationDPS" value="0"/>
+		<PlayerStat stat="CombinedDPS" value="400169.1611016"/>
+		<PlayerStat stat="ManaCost" value="298"/>
+		<PlayerStat stat="ManaPercentCost" value="0"/>
+		<PlayerStat stat="ManaPerSecondCost" value="1266.5"/>
+		<PlayerStat stat="ManaPercentPerSecondCost" value="0"/>
+		<PlayerStat stat="LifeCost" value="0"/>
+		<PlayerStat stat="LifePercentCost" value="0"/>
+		<PlayerStat stat="LifePerSecondCost" value="0"/>
+		<PlayerStat stat="LifePercentPerSecondCost" value="0"/>
+		<PlayerStat stat="ESCost" value="0"/>
+		<PlayerStat stat="ESPerSecondCost" value="0"/>
+		<PlayerStat stat="ESPercentPerSecondCost" value="0"/>
+		<PlayerStat stat="RageCost" value="0"/>
+		<PlayerStat stat="SoulCost" value="0"/>
+		<PlayerStat stat="Str" value="169"/>
+		<PlayerStat stat="ReqStr" value="159"/>
+		<PlayerStat stat="Dex" value="180"/>
+		<PlayerStat stat="ReqDex" value="120"/>
+		<PlayerStat stat="Int" value="223"/>
+		<PlayerStat stat="ReqInt" value="177"/>
+		<PlayerStat stat="Devotion" value="80"/>
+		<PlayerStat stat="TotalEHP" value="47837.602592795"/>
+		<PlayerStat stat="PhysicalMaximumHitTaken" value="12199"/>
+		<PlayerStat stat="LightningMaximumHitTaken" value="36658"/>
+		<PlayerStat stat="FireMaximumHitTaken" value="33725"/>
+		<PlayerStat stat="ColdMaximumHitTaken" value="35130"/>
+		<PlayerStat stat="ChaosMaximumHitTaken" value="16776"/>
+		<PlayerStat stat="Life" value="2129"/>
+		<PlayerStat stat="Spec:LifeInc" value="45"/>
+		<PlayerStat stat="LifeUnreserved" value="1621"/>
+		<PlayerStat stat="LifeRecoverable" value="1621"/>
+		<PlayerStat stat="LifeUnreservedPercent" value="76.139032409582"/>
+		<PlayerStat stat="LifeRegenRecovery" value="0"/>
+		<PlayerStat stat="LifeRecharge" value="816"/>
+		<PlayerStat stat="LifeLeechGainRate" value="0"/>
+		<PlayerStat stat="Mana" value="1913"/>
+		<PlayerStat stat="Spec:ManaInc" value="107"/>
+		<PlayerStat stat="ManaUnreserved" value="1913"/>
+		<PlayerStat stat="ManaUnreservedPercent" value="100"/>
+		<PlayerStat stat="ManaRegenRecovery" value="399.4"/>
+		<PlayerStat stat="ManaLeechGainRate" value="0"/>
+		<PlayerStat stat="EnergyShield" value="4044"/>
+		<PlayerStat stat="EnergyShieldRecoveryCap" value="4044"/>
+		<PlayerStat stat="Spec:EnergyShieldInc" value="107"/>
+		<PlayerStat stat="EnergyShieldRegenRecovery" value="749.9"/>
+		<PlayerStat stat="EnergyShieldLeechGainRate" value="0"/>
+		<PlayerStat stat="Ward" value="0"/>
+		<PlayerStat stat="RageRegenRecovery" value="0"/>
+		<PlayerStat stat="Evasion" value="20"/>
+		<PlayerStat stat="Spec:EvasionInc" value="0"/>
+		<PlayerStat stat="MeleeEvadeChance" value="0"/>
+		<PlayerStat stat="ProjectileEvadeChance" value="0"/>
+		<PlayerStat stat="Armour" value="20022"/>
+		<PlayerStat stat="Spec:ArmourInc" value="43"/>
+		<PlayerStat stat="PhysicalDamageReduction" value="84"/>
+		<PlayerStat stat="EffectiveBlockChance" value="70"/>
+		<PlayerStat stat="EffectiveSpellBlockChance" value="80"/>
+		<PlayerStat stat="AttackDodgeChance" value="0"/>
+		<PlayerStat stat="SpellDodgeChance" value="0"/>
+		<PlayerStat stat="EffectiveSpellSuppressionChance" value="0"/>
+		<PlayerStat stat="FireResist" value="78"/>
+		<PlayerStat stat="FireResistOverCap" value="7"/>
+		<PlayerStat stat="ColdResist" value="79"/>
+		<PlayerStat stat="ColdResistOverCap" value="11"/>
+		<PlayerStat stat="LightningResist" value="80"/>
+		<PlayerStat stat="LightningResistOverCap" value="20"/>
+		<PlayerStat stat="ChaosResist" value="77"/>
+		<PlayerStat stat="ChaosResistOverCap" value="37"/>
+		<PlayerStat stat="EffectiveMovementSpeedMod" value="2.54"/>
+		<PlayerStat stat="FullDPS" value="0"/>
+		<PlayerStat stat="FullDotDPS" value="0"/>
+		<PlayerStat stat="PowerCharges" value="6"/>
+		<PlayerStat stat="PowerChargesMax" value="6"/>
+		<PlayerStat stat="FrenzyCharges" value="0"/>
+		<PlayerStat stat="FrenzyChargesMax" value="3"/>
+		<PlayerStat stat="EnduranceCharges" value="5"/>
+		<PlayerStat stat="EnduranceChargesMax" value="5"/>
+		<PlayerStat stat="ActiveTotemLimit" value="6"/>
+		<TimelessData devotionVariant1="1" devotionVariant2="1" searchList="" searchListFallback=""/>
+	</Build>
+	<Tree activeSpec="1">
+		<Spec ascendClassId="2" classId="5" clusterHashFormatVersion="2" masteryEffects="{240,50993},{16123,9986},{27307,29586},{34723,14100},{38921,44840},{44948,2902},{45558,45307},{58816,64063}" nodes="240,367,1105,1203,2913,4367,5743,6764,6770,6967,7153,7444,7555,7960,9261,9386,9408,10115,11551,11645,11730,12246,12379,12783,12888,13009,13753,14021,14057,14870,15117,15405,15631,16123,16954,17735,18174,19635,19732,19919,20228,20528,20987,21650,22315,22472,22577,22637,23659,25651,26196,26270,26714,26866,27163,27307,29712,30940,31931,32431,32455,33631,33864,34098,34171,34434,34723,35556,35958,36452,36678,38921,39713,39841,39916,40351,40366,40510,41472,41970,42795,43000,44183,44184,44797,44908,44948,45558,46469,46842,46897,48514,49254,49588,50029,50826,50862,51108,52502,53279,55743,56158,57167,58218,58402,58763,58816,60398,60472,61264,61419,61471,61525,62767,63138,63398,63425,63447,63630,64210,65568,65569,65570,65571,65573,65574,65575,65577,65578,65579,66576,66579,66582,66585" secondaryAscendClassId="13" treeVersion="3_29">
+			<URL>
+				https://www.pathofexile.com/passive-skill-tree/AAAABgU2dQDwAW8EUQSzC2ERDxZvGmwachs3G_EdFB2DHxgkLSSqJMAngy0fLX0t0i_WMFsx7zJYMtE1uTbFNuk6FjsNPC09Dz77QjpFR0b-TLNNFE3PTwRQMFH7VJJXK1fIWDFYbVxrZDNmVGaeaFpo8mobaqt0EHy7fq9-x4NfhEiFMoV7hoKHo4rkjHaOZI9GmAmbIZuhm-ydn52unj6iAKPypyun-KyXrJiu_a9sr5Sx9rWFtvq3Mb2CwGbBtMNtxorGrsekzRbQH9m_217fT-Nq5CLli-XA6-7sOO9Q7-vwH_Uv9qL3pvfB99f60g4AIAAhACIAIwAlACYAJwApACoAKwQQBBMEFgQZCMcxAPAnAj77c5JqqzcUh6OvKJgJC1avlLD7sfb6P-XA
+			</URL>
+			<Sockets>
+			</Sockets>
+			<Overrides/>
+		</Spec>
+	</Tree>
+</PathOfBuilding>

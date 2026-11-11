@@ -69,7 +69,7 @@ func TestDetectKind(t *testing.T) {
 		{"totem", pob.Result{MainSkill: &pob.MainSkill{Group: 1, Totem: true, Attack: true}, Outputs: dps}, compare.KindTotem},
 		{"mine", pob.Result{MainSkill: &pob.MainSkill{Group: 1, Mine: true}, Outputs: dps}, compare.KindTrapMine},
 		{"minion", pob.Result{MainSkill: &pob.MainSkill{Group: 1, Minion: &pob.Minion{}}}, compare.KindMinion},
-		{"no damage", pob.Result{MainSkill: &pob.MainSkill{Group: 1}}, compare.KindOther},
+		{"no damage", pob.Result{MainSkill: &pob.MainSkill{Group: 1}}, compare.KindSpell},
 		{"damage over time", pob.Result{MainSkill: &pob.MainSkill{Group: 1, Attack: true}, Outputs: dot}, compare.KindDoT},
 		{"attack", pob.Result{MainSkill: &pob.MainSkill{Group: 1, Attack: true}, Outputs: dps}, compare.KindAttack},
 		{"spell", pob.Result{MainSkill: &pob.MainSkill{Group: 1}, Outputs: dps}, compare.KindSpell},

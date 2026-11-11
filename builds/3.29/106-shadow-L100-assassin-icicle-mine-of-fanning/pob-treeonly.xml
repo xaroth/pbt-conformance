@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathOfBuilding>
+	<Build ascendClassName="Assassin" bandit="None" characterLevelAutoMode="false" className="Shadow" level="100" mainSocketGroup="1" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="3_0" viewMode="TREE">
+		<PlayerStat stat="AverageHit" value="27070320.128001"/>
+		<PlayerStat stat="AverageBurstDamage" value="27070320.128001"/>
+		<PlayerStat stat="Speed" value="20.171666666667"/>
+		<PlayerStat stat="MineLayingTime" value="0.24787242832356"/>
+		<PlayerStat stat="MineThrowCount" value="5"/>
+		<PlayerStat stat="PreEffectiveCritChance" value="98.196"/>
+		<PlayerStat stat="CritChance" value="99.96745584"/>
+		<PlayerStat stat="CritMultiplier" value="10.783505559703"/>
+		<PlayerStat stat="HitChance" value="100"/>
+		<PlayerStat stat="TotalDPS" value="546053474.18199"/>
+		<PlayerStat stat="TotalDot" value="0"/>
+		<PlayerStat stat="WithBleedDPS" value="546053474.18199"/>
+		<PlayerStat stat="IgniteDPS" value="108841.91944862"/>
+		<PlayerStat stat="WithIgniteDPS" value="546162316.10144"/>
+		<PlayerStat stat="WithPoisonDPS" value="546053474.18199"/>
+		<PlayerStat stat="TotalDotDPS" value="108841.91944862"/>
+		<PlayerStat stat="CullingDPS" value="60684701.789049"/>
+		<PlayerStat stat="ReservationDPS" value="0"/>
+		<PlayerStat stat="CombinedDPS" value="606847017.89049"/>
+		<PlayerStat stat="ManaCost" value="14.912280701754"/>
+		<PlayerStat stat="ManaPercentCost" value="0"/>
+		<PlayerStat stat="ManaPerSecondCost" value="60.161111111111"/>
+		<PlayerStat stat="ManaPercentPerSecondCost" value="0"/>
+		<PlayerStat stat="LifeCost" value="0"/>
+		<PlayerStat stat="LifePercentCost" value="0"/>
+		<PlayerStat stat="LifePerSecondCost" value="0"/>
+		<PlayerStat stat="LifePercentPerSecondCost" value="0"/>
+		<PlayerStat stat="ESCost" value="0"/>
+		<PlayerStat stat="ESPerSecondCost" value="0"/>
+		<PlayerStat stat="ESPercentPerSecondCost" value="0"/>
+		<PlayerStat stat="RageCost" value="0"/>
+		<PlayerStat stat="SoulCost" value="0"/>
+		<PlayerStat stat="Str" value="128"/>
+		<PlayerStat stat="ReqStr" value="107"/>
+		<PlayerStat stat="Dex" value="153"/>
+		<PlayerStat stat="ReqDex" value="145"/>
+		<PlayerStat stat="Int" value="160"/>
+		<PlayerStat stat="ReqInt" value="145"/>
+		<PlayerStat stat="Devotion" value="0"/>
+		<PlayerStat stat="TotalEHP" value="5222.2539784964"/>
+		<PlayerStat stat="PhysicalMaximumHitTaken" value="3827"/>
+		<PlayerStat stat="LightningMaximumHitTaken" value="4627"/>
+		<PlayerStat stat="FireMaximumHitTaken" value="4784"/>
+		<PlayerStat stat="ColdMaximumHitTaken" value="7383"/>
+		<PlayerStat stat="ChaosMaximumHitTaken" value="3866"/>
+		<PlayerStat stat="Life" value="3100"/>
+		<PlayerStat stat="Spec:LifeInc" value="80"/>
+		<PlayerStat stat="LifeUnreserved" value="13"/>
+		<PlayerStat stat="LifeRecoverable" value="3100"/>
+		<PlayerStat stat="LifeUnreservedPercent" value="0.41935483870968"/>
+		<PlayerStat stat="LifeRegenRecovery" value="155"/>
+		<PlayerStat stat="LifeLeechGainRate" value="0"/>
+		<PlayerStat stat="Mana" value="814"/>
+		<PlayerStat stat="Spec:ManaInc" value="8"/>
+		<PlayerStat stat="ManaUnreserved" value="257"/>
+		<PlayerStat stat="ManaUnreservedPercent" value="31.572481572482"/>
+		<PlayerStat stat="ManaRegenRecovery" value="58.1"/>
+		<PlayerStat stat="ManaLeechGainRate" value="0"/>
+		<PlayerStat stat="EnergyShield" value="0"/>
+		<PlayerStat stat="EnergyShieldRecoveryCap" value="0"/>
+		<PlayerStat stat="Spec:EnergyShieldInc" value="15"/>
+		<PlayerStat stat="EnergyShieldRegenRecovery" value="0"/>
+		<PlayerStat stat="EnergyShieldLeechGainRate" value="0"/>
+		<PlayerStat stat="Ward" value="0"/>
+		<PlayerStat stat="RageRegenRecovery" value="0"/>
+		<PlayerStat stat="Evasion" value="2392"/>
+		<PlayerStat stat="Spec:EvasionInc" value="62"/>
+		<PlayerStat stat="MeleeEvadeChance" value="16"/>
+		<PlayerStat stat="ProjectileEvadeChance" value="16"/>
+		<PlayerStat stat="Armour" value="0"/>
+		<PlayerStat stat="Spec:ArmourInc" value="0"/>
+		<PlayerStat stat="PhysicalDamageReduction" value="0"/>
+		<PlayerStat stat="EffectiveBlockChance" value="5"/>
+		<PlayerStat stat="EffectiveSpellBlockChance" value="0"/>
+		<PlayerStat stat="AttackDodgeChance" value="0"/>
+		<PlayerStat stat="SpellDodgeChance" value="0"/>
+		<PlayerStat stat="EffectiveSpellSuppressionChance" value="0"/>
+		<PlayerStat stat="FireResist" value="23"/>
+		<PlayerStat stat="FireResistOverCap" value="0"/>
+		<PlayerStat stat="ColdResist" value="31"/>
+		<PlayerStat stat="ColdResistOverCap" value="0"/>
+		<PlayerStat stat="LightningResist" value="15"/>
+		<PlayerStat stat="LightningResistOverCap" value="0"/>
+		<PlayerStat stat="ChaosResist" value="1"/>
+		<PlayerStat stat="ChaosResistOverCap" value="0"/>
+		<PlayerStat stat="EffectiveMovementSpeedMod" value="3.808"/>
+		<PlayerStat stat="FullDPS" value="0"/>
+		<PlayerStat stat="FullDotDPS" value="0"/>
+		<PlayerStat stat="PowerCharges" value="5"/>
+		<PlayerStat stat="PowerChargesMax" value="5"/>
+		<PlayerStat stat="FrenzyCharges" value="6"/>
+		<PlayerStat stat="FrenzyChargesMax" value="6"/>
+		<PlayerStat stat="EnduranceCharges" value="0"/>
+		<PlayerStat stat="EnduranceChargesMax" value="3"/>
+		<TimelessData devotionVariant1="1" devotionVariant2="1" searchList="" searchListFallback=""/>
+	</Build>
+	<Tree activeSpec="1">
+		<Spec ascendClassId="1" classId="6" clusterHashFormatVersion="2" masteryEffects="{292,34242},{9586,2987},{13387,17942},{27872,29161},{55491,61097},{65528,6462}" nodes="292,1461,1600,1655,1945,2260,3656,4036,4242,4269,4502,6064,6538,6797,6799,6910,7920,8027,8938,9014,9469,9586,10153,10763,11716,12143,12801,12850,13387,14292,15228,16079,18182,18436,18661,18769,19083,20807,20852,21033,21264,21835,21984,22618,22748,23334,24050,25058,25260,25411,27415,27656,27788,27872,28754,28859,29549,31583,31703,31958,32710,32763,33753,33777,33783,33954,33989,35283,35334,35894,36287,36585,36858,37671,38129,39861,41263,41635,42006,42443,42649,42744,44102,44683,45593,45608,46277,46676,46965,47306,47507,48614,48778,49605,49900,49929,49978,52714,53114,53213,53456,55491,55571,55880,56295,58229,59220,59606,60405,60440,60735,61653,61689,61834,61981,62069,63194,63639,64265,64583,65502,65528,65808,65810,65818,65824,65826,65834,65872,65875,65881,66832,66835,66841" secondaryAscendClassId="9" treeVersion="3_29">
+			<URL>
+				https://www.pathofexile.com/passive-skill-tree/AAAABgYldwEkBbUGQAZ3B5kI1A5ID8QQkhCtEZYXsBmKGo0ajxr-HvAfWyLqIzYk_SVyJ6kqCy3EL28yATIyNEs31Dt8Ps9HBkgESOVJUUqLUUdRdFIpUxBVS1XgWFpY3FsmXfJh4mKsY0NrF2wIbIxs4HBScLtzbXtfe9d_xn_7g9mD8YP3hKKExYnTigaMNo2_jumP-pMnlPGbtaEvoqOkFqXLppmm-KxGshmyKLTFtlS3dbjKuZO95r6KwcXC7MMJwzrN6s96z93Q0NjD2RPaSNvn51To1uv17BjtP_DV8PnxivId8nX22viX-wn8R__e__gMARABEgEaASABIgEqAVABUwFZBRAFEwUZBoXCASQLqyVyRhY0S3HpbODuqdjDGT7_-A==
+			</URL>
+			<Sockets>
+			</Sockets>
+			<Overrides>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/RamakoTribePassiveBG.png" dn="Tattoo of the Ramako Fleetfoot" icon="Art/2DArt/SkillIcons/passives/MovementSpeedandEvasionPassive.png" nodeId="1461">
+					2% increased Movement Speed
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ValakoTribePassiveBG.png" dn="Tattoo of the Valako Scout" icon="Art/2DArt/SkillIcons/passives/LightningResistNode.png" nodeId="3656">
+					10% reduced Effect of Shock on you
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ValakoTribePassiveBG.png" dn="Tattoo of the Valako Scout" icon="Art/2DArt/SkillIcons/passives/LightningResistNode.png" nodeId="4502">
+					10% reduced Effect of Shock on you
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ValakoTribePassiveBG.png" dn="Tattoo of the Valako Scout" icon="Art/2DArt/SkillIcons/passives/LightningResistNode.png" nodeId="6538">
+					10% reduced Effect of Shock on you
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/RamakoTribePassiveBG.png" dn="Tattoo of the Ramako Fleetfoot" icon="Art/2DArt/SkillIcons/passives/MovementSpeedandEvasionPassive.png" nodeId="8938">
+					2% increased Movement Speed
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ValakoTribePassiveBG.png" dn="Tattoo of the Valako Scout" icon="Art/2DArt/SkillIcons/passives/LightningResistNode.png" nodeId="18182">
+					10% reduced Effect of Shock on you
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ValakoTribePassiveBG.png" dn="Tattoo of the Valako Scout" icon="Art/2DArt/SkillIcons/passives/LightningResistNode.png" nodeId="27415">
+					10% reduced Effect of Shock on you
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ValakoTribePassiveBG.png" dn="Tattoo of the Valako Scout" icon="Art/2DArt/SkillIcons/passives/LightningResistNode.png" nodeId="27656">
+					10% reduced Effect of Shock on you
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ValakoTribePassiveBG.png" dn="Tattoo of the Valako Scout" icon="Art/2DArt/SkillIcons/passives/LightningResistNode.png" nodeId="32710">
+					10% reduced Effect of Shock on you
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ValakoTribePassiveBG.png" dn="Tattoo of the Valako Scout" icon="Art/2DArt/SkillIcons/passives/LightningResistNode.png" nodeId="33783">
+					10% reduced Effect of Shock on you
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ValakoTribePassiveBG.png" dn="Tattoo of the Valako Scout" icon="Art/2DArt/SkillIcons/passives/LightningResistNode.png" nodeId="36858">
+					10% reduced Effect of Shock on you
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ValakoTribePassiveBG.png" dn="Tattoo of the Valako Scout" icon="Art/2DArt/SkillIcons/passives/LightningResistNode.png" nodeId="37671">
+					10% reduced Effect of Shock on you
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ValakoTribePassiveBG.png" dn="Tattoo of the Valako Scout" icon="Art/2DArt/SkillIcons/passives/LightningResistNode.png" nodeId="41635">
+					10% reduced Effect of Shock on you
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ValakoTribePassiveBG.png" dn="Tattoo of the Valako Scout" icon="Art/2DArt/SkillIcons/passives/LightningResistNode.png" nodeId="48778">
+					10% reduced Effect of Shock on you
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ValakoTribePassiveBG.png" dn="Tattoo of the Valako Scout" icon="Art/2DArt/SkillIcons/passives/LightningResistNode.png" nodeId="49605">
+					10% reduced Effect of Shock on you
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/RamakoTribePassiveBG.png" dn="Tattoo of the Ramako Fleetfoot" icon="Art/2DArt/SkillIcons/passives/MovementSpeedandEvasionPassive.png" nodeId="49900">
+					2% increased Movement Speed
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/RamakoTribePassiveBG.png" dn="Tattoo of the Ramako Fleetfoot" icon="Art/2DArt/SkillIcons/passives/MovementSpeedandEvasionPassive.png" nodeId="49978">
+					2% increased Movement Speed
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ValakoTribePassiveBG.png" dn="Tattoo of the Valako Scout" icon="Art/2DArt/SkillIcons/passives/LightningResistNode.png" nodeId="53456">
+					10% reduced Effect of Shock on you
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ValakoTribePassiveBG.png" dn="Tattoo of the Valako Scout" icon="Art/2DArt/SkillIcons/passives/LightningResistNode.png" nodeId="56295">
+					10% reduced Effect of Shock on you
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ValakoTribePassiveBG.png" dn="Tattoo of the Valako Scout" icon="Art/2DArt/SkillIcons/passives/LightningResistNode.png" nodeId="60440">
+					10% reduced Effect of Shock on you
+				</Override>
+			</Overrides>
+		</Spec>
+	</Tree>
+</PathOfBuilding>

@@ -1,0 +1,12 @@
+{
+  "kind": "trap-mine",
+  "contains": [
+    "cluster-jewel",
+    "timeless-jewel"
+  ],
+  "origin": {
+    "url": "https://poe.ninja/poe1/builds/allflame/character/eden4712-9046/MechaTrone",
+    "league": "Allflame",
+    "snapshot": "0208-20261111-47167"
+  }
+}

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathOfBuilding>
+	<Build ascendClassName="Occultist" bandit="None" characterLevelAutoMode="false" className="Witch" level="100" mainSocketGroup="8" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="3_0" viewMode="TREE">
+		<PlayerStat stat="ActiveMinionLimit" value="3"/>
+		<PlayerStat stat="AverageHit" value="0"/>
+		<PlayerStat stat="AverageBurstDamage" value="0"/>
+		<PlayerStat stat="Speed" value="0.49677098857427"/>
+		<PlayerStat stat="CritMultiplier" value="0"/>
+		<PlayerStat stat="HitChance" value="100"/>
+		<PlayerStat stat="TotalDPS" value="0"/>
+		<PlayerStat stat="TotalDot" value="0"/>
+		<PlayerStat stat="WithBleedDPS" value="0"/>
+		<PlayerStat stat="WithIgniteDPS" value="0"/>
+		<PlayerStat stat="WithPoisonDPS" value="0"/>
+		<PlayerStat stat="TotalDotDPS" value="0"/>
+		<PlayerStat stat="CullingDPS" value="0"/>
+		<PlayerStat stat="ReservationDPS" value="0"/>
+		<PlayerStat stat="CombinedDPS" value="0"/>
+		<PlayerStat stat="Cooldown" value="2.013"/>
+		<PlayerStat stat="ManaCost" value="62"/>
+		<PlayerStat stat="ManaPercentCost" value="0"/>
+		<PlayerStat stat="ManaPerSecondCost" value="30.799801291605"/>
+		<PlayerStat stat="ManaPercentPerSecondCost" value="0"/>
+		<PlayerStat stat="LifeCost" value="12.8"/>
+		<PlayerStat stat="LifePercentCost" value="0"/>
+		<PlayerStat stat="LifePerSecondCost" value="6.3586686537506"/>
+		<PlayerStat stat="LifePercentPerSecondCost" value="0"/>
+		<PlayerStat stat="ESCost" value="0"/>
+		<PlayerStat stat="ESPerSecondCost" value="0"/>
+		<PlayerStat stat="ESPercentPerSecondCost" value="0"/>
+		<PlayerStat stat="RageCost" value="0"/>
+		<PlayerStat stat="SoulCost" value="0"/>
+		<PlayerStat stat="Str" value="120"/>
+		<PlayerStat stat="Dex" value="122"/>
+		<PlayerStat stat="Int" value="106"/>
+		<PlayerStat stat="Devotion" value="0"/>
+		<PlayerStat stat="TotalEHP" value="231051.60313158"/>
+		<PlayerStat stat="PhysicalMaximumHitTaken" value="7747"/>
+		<PlayerStat stat="LightningMaximumHitTaken" value="31158"/>
+		<PlayerStat stat="FireMaximumHitTaken" value="31158"/>
+		<PlayerStat stat="ColdMaximumHitTaken" value="31158"/>
+		<PlayerStat stat="ChaosMaximumHitTaken" value="28308"/>
+		<PlayerStat stat="Life" value="4136"/>
+		<PlayerStat stat="Spec:LifeInc" value="145"/>
+		<PlayerStat stat="LifeUnreserved" value="4136"/>
+		<PlayerStat stat="LifeRecoverable" value="4136"/>
+		<PlayerStat stat="LifeUnreservedPercent" value="100"/>
+		<PlayerStat stat="LifeRegenRecovery" value="41.4"/>
+		<PlayerStat stat="LifeLeechGainRate" value="0"/>
+		<PlayerStat stat="Mana" value="780"/>
+		<PlayerStat stat="Spec:ManaInc" value="20"/>
+		<PlayerStat stat="ManaUnreserved" value="83"/>
+		<PlayerStat stat="ManaUnreservedPercent" value="10.641025641026"/>
+		<PlayerStat stat="ManaRegenRecovery" value="13.7"/>
+		<PlayerStat stat="ManaLeechGainRate" value="0"/>
+		<PlayerStat stat="EnergyShield" value="196"/>
+		<PlayerStat stat="EnergyShieldRecoveryCap" value="196"/>
+		<PlayerStat stat="Spec:EnergyShieldInc" value="38"/>
+		<PlayerStat stat="EnergyShieldRegenRecovery" value="0"/>
+		<PlayerStat stat="EnergyShieldLeechGainRate" value="0"/>
+		<PlayerStat stat="Ward" value="147"/>
+		<PlayerStat stat="RageRegenRecovery" value="0"/>
+		<PlayerStat stat="Evasion" value="679"/>
+		<PlayerStat stat="Spec:EvasionInc" value="0"/>
+		<PlayerStat stat="MeleeEvadeChance" value="0"/>
+		<PlayerStat stat="ProjectileEvadeChance" value="0"/>
+		<PlayerStat stat="Armour" value="1403"/>
+		<PlayerStat stat="Spec:ArmourInc" value="48"/>
+		<PlayerStat stat="PhysicalDamageReduction" value="13"/>
+		<PlayerStat stat="EffectiveBlockChance" value="91"/>
+		<PlayerStat stat="EffectiveSpellBlockChance" value="91"/>
+		<PlayerStat stat="AttackDodgeChance" value="0"/>
+		<PlayerStat stat="SpellDodgeChance" value="0"/>
+		<PlayerStat stat="EffectiveSpellSuppressionChance" value="19"/>
+		<PlayerStat stat="FireResist" value="78"/>
+		<PlayerStat stat="FireResistOverCap" value="97"/>
+		<PlayerStat stat="ColdResist" value="78"/>
+		<PlayerStat stat="ColdResistOverCap" value="43"/>
+		<PlayerStat stat="LightningResist" value="78"/>
+		<PlayerStat stat="LightningResistOverCap" value="52"/>
+		<PlayerStat stat="ChaosResist" value="75"/>
+		<PlayerStat stat="ChaosResistOverCap" value="1"/>
+		<PlayerStat stat="EffectiveMovementSpeedMod" value="2.88"/>
+		<PlayerStat stat="FullDPS" value="0"/>
+		<PlayerStat stat="FullDotDPS" value="0"/>
+		<PlayerStat stat="PowerCharges" value="0"/>
+		<PlayerStat stat="PowerChargesMax" value="3"/>
+		<PlayerStat stat="FrenzyCharges" value="0"/>
+		<PlayerStat stat="FrenzyChargesMax" value="3"/>
+		<PlayerStat stat="EnduranceCharges" value="0"/>
+		<PlayerStat stat="EnduranceChargesMax" value="4"/>
+		<PlayerStat stat="ActiveMinionLimit" value="3"/>
+		<MinionStat stat="AverageDamage" value="115614.38497"/>
+		<MinionStat stat="Speed" value="3.15371056"/>
+		<MinionStat stat="Speed" value="3.15371056"/>
+		<MinionStat stat="TotalDPS" value="364614.30676779"/>
+		<MinionStat stat="TotalDot" value="0"/>
+		<MinionStat stat="WithBleedDPS" value="364614.30676779"/>
+		<MinionStat stat="WithIgniteDPS" value="364614.30676779"/>
+		<MinionStat stat="PoisonDPS" value="53922.866856"/>
+		<MinionStat stat="PoisonDamage" value="195200.77801872"/>
+		<MinionStat stat="WithPoisonDPS" value="980221.06172565"/>
+		<MinionStat stat="TotalDotDPS" value="615606.75495785"/>
+		<MinionStat stat="CullingDPS" value="0"/>
+		<MinionStat stat="ReservationDPS" value="0"/>
+		<MinionStat stat="CombinedDPS" value="980221.06172565"/>
+		<MinionStat stat="Cooldown" value="0.132"/>
+		<MinionStat stat="Life" value="53959"/>
+		<MinionStat stat="LifeRegenRecovery" value="539.6"/>
+		<MinionStat stat="LifeLeechGainRate" value="3646.1430676779"/>
+		<MinionStat stat="EnergyShield" value="15040"/>
+		<MinionStat stat="EnergyShieldRegenRecovery" value="0"/>
+		<MinionStat stat="EnergyShieldLeechGainRate" value="0"/>
+		<TimelessData devotionVariant1="1" devotionVariant2="1" searchList="" searchListFallback=""/>
+	</Build>
+	<Tree activeSpec="1">
+		<Spec ascendClassId="1" classId="3" clusterHashFormatVersion="2" masteryEffects="{2841,64875},{4139,38454},{22480,44840},{25011,31822},{32241,47642},{38921,55013},{41415,34242},{42792,9074},{43647,41544},{47197,34383},{48290,15574},{54849,11723},{64406,48720}" nodes="1203,2491,2841,3533,3644,4139,4397,5197,5233,5743,5935,6289,6712,6764,6967,7285,7374,7388,9386,9402,10532,10904,11088,11420,13009,14057,14930,15046,15405,15522,16287,17527,17735,18378,18901,19732,19919,21974,22480,23027,23756,24824,25011,25309,25332,25831,25989,26196,26270,26712,26725,27096,27195,27203,29106,29353,30380,30693,31316,31875,31961,31984,32241,32417,32932,33287,33435,33631,34171,34400,34880,34917,35214,35288,36542,36634,36915,36949,37127,37326,37569,38921,41415,41472,42668,42792,43647,43689,44169,44191,44202,44967,46519,47197,48109,48287,48290,48362,49080,49254,50422,50570,50862,53118,54447,54849,55190,55676,56359,57264,58218,58453,58999,59928,60398,60472,62319,62429,62767,63138,63282,63723,64210,64406,64587,65108,65696,65698,65703,65706,65760,65762,65767,65770" secondaryAscendClassId="16" treeVersion="3_29">
+			<URL>
+				https://www.pathofexile.com/passive-skill-tree/AAAABgNBewSzCbsLGQ3NDjwQKxEtFE0UcRZvFy8YkRo4GmwbNxx1HM4c3CSqJLopJCqYK1AsnDLRNuk6UjrGPC08oj-fRHdFR0nVTRRNz1XWV9BZ81zMYPhhs2LdYvRk52WFZlRmnmhYaGVp2Go7akNxsnKpdqx35XpUfIN82XzwffF-oYCkggeCm4NfhXuGYIhAiGWJ2I6-jxqQM5BVkQeRzpLBmAmhx6IApqynKKp_qqmsiayfrKqvp7W3uF277byfvKK86r-4wGbE9sWKxq7PftZB15bZfNwn37DjauRV5nfqGOvu7Djzb_Pd9S_2ovcy-Ov60vuW_Ev-VAgAoACiAKcAqgDgAOIA5wDqDf1rCxmWNhArryhX0HxOYbO6Gn3x1uWYCYXCoccjcqcookiqf4ZPuF081ryiLcvWQb5Q-5Y=
+			</URL>
+			<Sockets>
+			</Sockets>
+			<Overrides>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/KitavaTribePassiveBG.png" dn="Tattoo of the Kitava Rebel" icon="Art/2DArt/SkillIcons/passives/Blood2.png" nodeId="3644">
+					10% chance to Avoid Bleeding
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Warmonger" icon="Art/2DArt/SkillIcons/passives/minionlife.png" nodeId="4397">
+					Minions have 5% increased maximum Life
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/KitavaTribePassiveBG.png" dn="Tattoo of the Kitava Rebel" icon="Art/2DArt/SkillIcons/passives/Blood2.png" nodeId="5233">
+					10% chance to Avoid Bleeding
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Warmonger" icon="Art/2DArt/SkillIcons/passives/minionlife.png" nodeId="7388">
+					Minions have 5% increased maximum Life
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/TasalioTribePassiveBG.png" dn="Tattoo of the Tasalio Tideshifter" icon="Art/2DArt/SkillIcons/passives/stundex.png" nodeId="13009">
+					10% chance to Avoid being Stunned
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/NgamahuTribePassiveBG.png" dn="Tattoo of the Ngamahu Shaman" icon="Art/2DArt/SkillIcons/passives/FireResistNode.png" nodeId="14930">
+					10% reduced Ignite Duration on you
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/TukohamaTribePassiveBG.png" dn="Tattoo of the Tukohama Brawler" icon="Art/2DArt/SkillIcons/passives/knockback.png" nodeId="15405">
+					10% chance to Knock Enemies Back on hit
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/TukohamaTribePassiveBG.png" dn="Tattoo of the Tukohama Brawler" icon="Art/2DArt/SkillIcons/passives/knockback.png" nodeId="15631">
+					10% chance to Knock Enemies Back on hit
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Warmonger" icon="Art/2DArt/SkillIcons/passives/minionlife.png" nodeId="17735">
+					Minions have 5% increased maximum Life
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/TukohamaTribePassiveBG.png" dn="Tattoo of the Tukohama Brawler" icon="Art/2DArt/SkillIcons/passives/knockback.png" nodeId="23027">
+					10% chance to Knock Enemies Back on hit
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/Village/RuneCraftingPassiveBG.png" dn="Runegraft of the Warp" icon="Art/2DArt/SkillIcons/passives/AtlasTrees/RuneGraftingIcon11.png" nodeId="25011">
+					Buffs on you expire 30% slower
+					Debuffs on you expire 30% faster
+					Limited to 1 Runegraft of the Warp
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/KitavaTribePassiveBG.png" dn="Tattoo of the Kitava Rebel" icon="Art/2DArt/SkillIcons/passives/Blood2.png" nodeId="29353">
+					10% chance to Avoid Bleeding
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/TukohamaTribePassiveBG.png" dn="Tattoo of the Tukohama Brawler" icon="Art/2DArt/SkillIcons/passives/knockback.png" nodeId="34171">
+					10% chance to Knock Enemies Back on hit
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ValakoTribePassiveBG.png" dn="Tattoo of the Valako Shieldbearer" icon="Art/2DArt/SkillIcons/passives/ShieldAttackDamage.png" nodeId="34400">
+					+1% Chance to Block Attack Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Warmonger" icon="Art/2DArt/SkillIcons/passives/minionlife.png" nodeId="36542">
+					Minions have 5% increased maximum Life
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Warmonger" icon="Art/2DArt/SkillIcons/passives/minionlife.png" nodeId="37569">
+					Minions have 5% increased maximum Life
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/KitavaTribePassiveBG.png" dn="Tattoo of the Kitava Rebel" icon="Art/2DArt/SkillIcons/passives/Blood2.png" nodeId="44202">
+					10% chance to Avoid Bleeding
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/TukohamaTribePassiveBG.png" dn="Tattoo of the Tukohama Brawler" icon="Art/2DArt/SkillIcons/passives/knockback.png" nodeId="44967">
+					10% chance to Knock Enemies Back on hit
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/Village/RuneCraftingPassiveBG.png" dn="Runegraft of Gemcraft" icon="Art/2DArt/SkillIcons/passives/AtlasTrees/RuneGraftingIcon14.png" nodeId="47197">
+					+1 to Level of all non-Exceptional Support Gems
+					Limited to 1 Runegraft of Gemcraft
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/Village/RuneCraftingPassiveBG.png" dn="Runegraft of Treachery" icon="Art/2DArt/SkillIcons/passives/AtlasTrees/RuneGraftingIcon20.png" nodeId="48505">
+					15% increased Reservation Efficiency of Skills
+					Auras from your Skills which affect Allies also affect Enemies
+					Limited to 1 Runegraft of Treachery
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/KitavaTribePassiveBG.png" dn="Tattoo of the Kitava Rebel" icon="Art/2DArt/SkillIcons/passives/Blood2.png" nodeId="50422">
+					10% chance to Avoid Bleeding
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/KitavaTribePassiveBG.png" dn="Tattoo of the Kitava Rebel" icon="Art/2DArt/SkillIcons/passives/Blood2.png" nodeId="50570">
+					10% chance to Avoid Bleeding
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/TukohamaTribePassiveBG.png" dn="Tattoo of the Tukohama Brawler" icon="Art/2DArt/SkillIcons/passives/knockback.png" nodeId="50862">
+					10% chance to Knock Enemies Back on hit
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/KitavaTribePassiveBG.png" dn="Tattoo of the Kitava Rebel" icon="Art/2DArt/SkillIcons/passives/Blood2.png" nodeId="59928">
+					10% chance to Avoid Bleeding
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Warmonger" icon="Art/2DArt/SkillIcons/passives/minionlife.png" nodeId="60398">
+					Minions have 5% increased maximum Life
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/TukohamaTribePassiveBG.png" dn="Tattoo of the Tukohama Brawler" icon="Art/2DArt/SkillIcons/passives/knockback.png" nodeId="60472">
+					10% chance to Knock Enemies Back on hit
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/KitavaTribePassiveBG.png" dn="Tattoo of the Kitava Rebel" icon="Art/2DArt/SkillIcons/passives/Blood2.png" nodeId="62429">
+					10% chance to Avoid Bleeding
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/KitavaTribePassiveBG.png" dn="Tattoo of the Kitava Rebel" icon="Art/2DArt/SkillIcons/passives/Blood2.png" nodeId="63282">
+					10% chance to Avoid Bleeding
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/KitavaTribePassiveBG.png" dn="Tattoo of the Kitava Rebel" icon="Art/2DArt/SkillIcons/passives/Blood2.png" nodeId="63723">
+					10% chance to Avoid Bleeding
+				</Override>
+			</Overrides>
+		</Spec>
+	</Tree>
+</PathOfBuilding>

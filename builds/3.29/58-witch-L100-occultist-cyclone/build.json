@@ -1,0 +1,12 @@
+{
+  "kind": "attack",
+  "contains": [
+    "cluster-jewel",
+    "timeless-jewel"
+  ],
+  "origin": {
+    "url": "https://poe.ninja/poe1/builds/allflame/character/Khao_dell-7548/ALL_Khao",
+    "league": "Allflame",
+    "snapshot": "0208-20261111-47167"
+  }
+}

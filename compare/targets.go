@@ -9,7 +9,7 @@ const (
 	minionBuilds   = 17
 	totemBuilds    = 9
 	trapMineBuilds = 9
-	// countedBuilds is the total; the builds beyond the kinds' targets are of any kind.
+	// countedBuilds is the total; the builds beyond the kinds' targets are of any of them.
 	countedBuilds = 100
 
 	clusterJewelBuilds  = 20
@@ -19,8 +19,8 @@ const (
 )
 
 // Targets returns how many counted builds of each kind the current league holds at least;
-// smoke tests count towards none, and there are no party builds. Other has no target of its
-// own: the builds beyond these targets, up to Total, may be of any kind.
+// smoke tests count towards none, and there are no party builds. Every counted build is of one
+// of these kinds; the builds beyond the targets, up to Total, may be of any of them.
 func Targets() map[Kind]int {
 	return map[Kind]int{
 		KindSpell: spellBuilds, KindAttack: attackBuilds, KindDoT: dotBuilds, KindMinion: minionBuilds,
