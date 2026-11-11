@@ -97,7 +97,7 @@ func TestChooseKeepsQuota(t *testing.T) {
 // Past the kinds' targets, candidates of any kind are picked by popularity up to the total.
 func TestChooseTotal(t *testing.T) {
 	t.Parallel()
-	broken := cand(compare.KindOther, "Reap", "x")
+	broken := cand(compare.KindSpell, "Reap", "x")
 	broken.Err = ninja.ErrNoDamage
 	cands := []ninja.Candidate{
 		cand(compare.KindAttack, "Cyclone", "x"),
