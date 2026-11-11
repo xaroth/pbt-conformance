@@ -34,6 +34,7 @@ func scoreBuilds() []compare.Build {
 		{League: "3.29", Name: "03-c", Meta: compare.Meta{Kind: compare.KindAttack},
 			Mismatches: []compare.Mismatch{{League: "3.29", Build: "03-c", Output: "warning:node-unknown"}},
 			Layers:     layers(compare.StatusPass)},
+		{League: "3.28", Name: "02-s", Meta: compare.Meta{Kind: compare.Smoke}},
 		{League: "3.28", Name: "01-a", Meta: compare.Meta{Kind: compare.Untagged}, Blockers: []compare.Blocker{stat},
 			Mismatches: []compare.Mismatch{{League: "3.28", Build: "01-a", Output: "player.life", Triage: "life"}},
 			Layers: []compare.Layer{{Name: "tree", Groups: []compare.GroupResult{
@@ -48,7 +49,7 @@ func TestScore(t *testing.T) {
 	s := compare.Score(builds, compare.Mismatches(builds), nil, map[string]string{"spell_damage_+%": "Damage, spell"})
 	wantGroups := []compare.GroupRow{
 		{League: "3.28", Layer: "tree", Group: pob.GroupSheet, Builds: 1, Fail: 1, Incomplete: 1},
-		{League: "3.28", Layer: "tree", Group: compare.GroupChecks, Builds: 1, Pass: 1},
+		{League: "3.28", Layer: "tree", Group: compare.GroupChecks, Builds: 2, Pass: 2},
 		{League: "3.29", Layer: "tree", Group: pob.GroupSheet, Builds: 3, Pass: 3},
 		{League: "3.29", Layer: "tree", Group: compare.GroupChecks, Builds: 3, Pass: 2, Fail: 1, Mismatch: 1},
 		{League: "3.29", Layer: "full", Group: pob.GroupSkill, Builds: 3, Pass: 2, NotCompared: 1},
@@ -58,6 +59,7 @@ func TestScore(t *testing.T) {
 	}
 	wantKinds := []compare.KindRow{
 		{League: "3.28", Kind: "untagged", Builds: 1},
+		{League: "3.28", Kind: "smoke", Builds: 1, PassAll: 1},
 		{League: "3.29", Kind: "untagged", Builds: 1, PassAll: 1},
 		{League: "3.29", Kind: "attack", Builds: 2},
 		{League: "3.29", Kind: "contains:cluster-jewel", Builds: 1},

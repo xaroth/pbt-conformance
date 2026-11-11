@@ -72,7 +72,7 @@ go run ./cmd/pbtc compare --cache ~/.cache/pbt-conformance --json > scoreboard.j
 - The outputs the engine lacks in groups it gives other outputs of, by the number of builds.
 - What the engine leaves out as not modelled, by the number of builds it appears in, most first: stats with no meaning yet (`unmodelled-stat` warnings of the tree-only simulation), gems and the parts of the full file the importer leaves out, and mechanics a known stat waits for (charges, items, a condition). `--hints` names a JSON file mapping a game stat id to a short text, shown beside that stat.
 
-A build's kind and contents come from `build.json` in its directory; a build without one is `untagged`:
+A build's kind and contents come from `build.json` in its directory; a build without one is `untagged`, and a smoke test such as a level 1 start has `{"smoke": true}` alone, no kind and no contents, and shows as `smoke`:
 
 ```json
 {"kind": "attack", "contains": ["cluster-jewel", "item-skill"]}
@@ -81,6 +81,7 @@ A build's kind and contents come from `build.json` in its directory; a build wit
 | Field | Values |
 |---|---|
 | `kind` | `spell` (a spell that hits), `attack`, `damage-over-time`, `minion`, `totem`, `trap-mine`, `party`, `other` |
+| `smoke` | `true` for a smoke test; then `kind` and `contains` are absent |
 | `contains` | `cluster-jewel`, `timeless-jewel`, `mercenary`, `tree-variant` (a Ruthless or alternate tree), `item-skill` (a skill granted by an item, a graft included) |
 
 ## Import cases

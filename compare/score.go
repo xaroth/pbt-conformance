@@ -200,10 +200,11 @@ func count(rows map[pob.Group]*GroupRow, league, layer string, g pob.Group, st S
 	}
 }
 
-// kindKeys returns the keys of kind rows in report order: the kinds, then the contents.
+// kindKeys returns the keys of kind rows in report order: untagged and smoke builds, the kinds,
+// then the contents.
 func kindKeys() []string {
-	keys := make([]string, 0, 1+len(Kinds())+len(Contents()))
-	keys = append(keys, string(Untagged))
+	keys := make([]string, 0, 2+len(Kinds())+len(Contents()))
+	keys = append(keys, string(Untagged), string(Smoke))
 	for _, k := range Kinds() {
 		keys = append(keys, string(k))
 	}
