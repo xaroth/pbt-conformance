@@ -2,6 +2,7 @@ package pob
 
 import (
 	"maps"
+	"math"
 	"slices"
 )
 
@@ -35,11 +36,40 @@ type Output struct {
 	// keys are the PoB output keys value reads.
 	keys  []string
 	value func(map[string]float64) (float64, bool)
+	// decimals is the precision an exact output is displayed at.
+	decimals int
 }
 
 // Value returns the output's value from PoB's outputs, and false when PoB gave none.
-func (o *Output) Value(outputs map[string]float64) (float64, bool) {
+func (o Output) Value(outputs map[string]float64) (float64, bool) {
 	return o.value(outputs)
+}
+
+// relTolerance is how far apart a damage output's values may be, relative to PoB's.
+const relTolerance = 0.001
+
+// floatNoise absorbs float noise in values that are equal.
+const floatNoise = 1e-9
+
+// Exact reports whether the output must match as displayed, rather than within relTolerance.
+func (o Output) Exact() bool {
+	return o.Group == GroupSheet || o.Group == GroupDefence
+}
+
+// Matches reports whether our value matches PoB's: as displayed for exact outputs, else
+// within relTolerance of PoB's.
+func (o Output) Matches(ours, pob float64) bool {
+	if o.Exact() {
+		scale := math.Pow10(o.decimals)
+		return math.Abs(math.Round(ours*scale)-math.Round(pob*scale)) <= floatNoise
+	}
+	return math.Abs(ours-pob) <= max(relTolerance*math.Abs(pob), floatNoise)
+}
+
+// tenths has an exact output displayed with one decimal; the default is whole numbers.
+func (o Output) tenths() Output {
+	o.decimals = 1
+	return o
 }
 
 // minionPrefix marks a PoB output key of the main skill's minion rather than of the player; the
@@ -59,9 +89,9 @@ func Outputs() []Output {
 		key("player.energy_shield", GroupSheet, "EnergyShield"),
 		key("player.armour", GroupSheet, "Armour"),
 		key("player.evasion_rating", GroupSheet, "Evasion"),
-		key("player.life_regeneration", GroupSheet, "LifeRegen"),
-		key("player.mana_regeneration", GroupSheet, "ManaRegen"),
-		key("player.energy_shield_regeneration", GroupSheet, "EnergyShieldRegen"),
+		key("player.life_regeneration", GroupSheet, "LifeRegen").tenths(),
+		key("player.mana_regeneration", GroupSheet, "ManaRegen").tenths(),
+		key("player.energy_shield_regeneration", GroupSheet, "EnergyShieldRegen").tenths(),
 	}
 	for _, e := range []struct{ ours, pob string }{{"fire", "Fire"}, {"cold", "Cold"}, {"lightning", "Lightning"}, {"chaos", "Chaos"}} {
 		out = append(out,
@@ -84,12 +114,12 @@ func Outputs() []Output {
 		key("player.block_chance", GroupDefence, "BlockChance"),
 		key("player.spell_block_chance", GroupDefence, "SpellBlockChance"),
 		key("player.spell_suppression_chance", GroupDefence, "SpellSuppressionChance"),
-		key("player.life_regeneration_recovery", GroupDefence, "LifeRegenRecovery"),
-		key("player.energy_shield_regeneration_recovery", GroupDefence, "EnergyShieldRegenRecovery"),
-		key("player.life_leech_rate", GroupDefence, "LifeLeechRate"),
-		key("player.energy_shield_leech_rate", GroupDefence, "EnergyShieldLeechRate"),
-		key("player.life_recharge", GroupDefence, "LifeRecharge"),
-		key("player.energy_shield_recharge", GroupDefence, "EnergyShieldRecharge"),
+		key("player.life_regeneration_recovery", GroupDefence, "LifeRegenRecovery").tenths(),
+		key("player.energy_shield_regeneration_recovery", GroupDefence, "EnergyShieldRegenRecovery").tenths(),
+		key("player.life_leech_rate", GroupDefence, "LifeLeechRate").tenths(),
+		key("player.energy_shield_leech_rate", GroupDefence, "EnergyShieldLeechRate").tenths(),
+		key("player.life_recharge", GroupDefence, "LifeRecharge").tenths(),
+		key("player.energy_shield_recharge", GroupDefence, "EnergyShieldRecharge").tenths(),
 
 		key("minion.life", GroupMinion, minionPrefix+"Life"),
 	)

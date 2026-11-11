@@ -10,6 +10,8 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/google/go-cmp/cmp"
+
 	"github.com/xaroth/pbt-conformance/compare"
 	"github.com/xaroth/pbt-conformance/pins"
 	"github.com/xaroth/pbt-conformance/pob"
@@ -114,11 +116,11 @@ Royal Burgonet</Item></Items></PathOfBuilding>`
 		t.Run(testCase.name, func(t *testing.T) {
 			t.Parallel()
 			root := writeBuild(t, "01-marauder", testCase.treeOnly, testCase.full)
-			ms, err := compare.Run(root, datasets, repoPins(t), "poe1", "3.29")
+			bs, err := compare.Run(root, datasets, repoPins(t), "poe1", "3.29")
 			if err != nil {
 				t.Fatal(err)
 			}
-			if got := outputs(ms, "import:"); !slices.Equal(got, testCase.want) {
+			if got := outputs(compare.Mismatches(bs), "import:"); !slices.Equal(got, testCase.want) {
 				t.Errorf("import mismatches %v, want %v", got, testCase.want)
 			}
 		})
@@ -130,7 +132,7 @@ Royal Burgonet</Item></Items></PathOfBuilding>`
 }
 
 // TestRun records PoB's values for the fixture and compares: a Marauder with one life node
-// has no mismatches.
+// has no mismatches, and a Spell Totem Fireball in its full file shows as not compared.
 func TestRun(t *testing.T) {
 	t.Parallel()
 	datasets := env(t, "PBT_DATASETS")
@@ -141,20 +143,44 @@ func TestRun(t *testing.T) {
 	if err := os.MkdirAll(dir, 0o755); err != nil {
 		t.Fatal(err)
 	}
-	for _, name := range []string{pob.FullXML, pob.TreeOnlyXML} {
-		if err := os.WriteFile(filepath.Join(dir, name), fixture(t), 0o600); err != nil {
+	totem, err := os.ReadFile(filepath.Join("..", "testdata", "marauder-totem.xml"))
+	if err != nil {
+		t.Fatal(err)
+	}
+	for name, xml := range map[string][]byte{pob.FullXML: totem, pob.TreeOnlyXML: fixture(t)} {
+		if err := os.WriteFile(filepath.Join(dir, name), xml, 0o600); err != nil {
 			t.Fatal(err)
 		}
 	}
 	if err := pob.Record(context.Background(), root, cache, f, "poe1", "3.29", false); err != nil {
 		t.Fatal(err)
 	}
-	ms, err := compare.Run(root, datasets, f, "poe1", "3.29")
+	bs, err := compare.Run(root, datasets, f, "poe1", "3.29")
 	if err != nil {
 		t.Fatal(err)
 	}
-	if len(ms) != 0 {
+	if len(bs) != 1 {
+		t.Fatalf("got %d builds, want 1", len(bs))
+	}
+	if ms := compare.Mismatches(bs); len(ms) != 0 {
 		t.Errorf("mismatches: %+v", ms)
+	}
+	// The engine gives the sheet of the tree layer but unreserved life and mana; nothing else.
+	want := []compare.Layer{
+		{Name: "tree", Groups: []compare.GroupResult{
+			{Group: pob.GroupSheet, Status: compare.StatusIncomplete, Missing: []string{"player.unreserved_life", "player.unreserved_mana"}},
+			{Group: pob.GroupDefence, Status: compare.StatusNotCompared},
+		}},
+		{Name: "gear", Groups: []compare.GroupResult{
+			{Group: pob.GroupSheet, Status: compare.StatusNotCompared}, {Group: pob.GroupDefence, Status: compare.StatusNotCompared},
+		}},
+		{Name: "full", Groups: []compare.GroupResult{
+			{Group: pob.GroupSheet, Status: compare.StatusNotCompared}, {Group: pob.GroupSkill, Status: compare.StatusNotCompared},
+			{Group: pob.GroupDefence, Status: compare.StatusNotCompared}, {Group: pob.GroupDelivery, Status: compare.StatusNotCompared},
+		}},
+	}
+	if diff := cmp.Diff(want, bs[0].Layers); diff != "" {
+		t.Errorf("layers (-want +got):\n%s", diff)
 	}
 	if _, err := compare.Run(root, t.TempDir(), f, "poe1", "3.29"); !errors.Is(err, compare.ErrDataset) {
 		t.Errorf("missing dataset: got %v, want %v", err, compare.ErrDataset)
@@ -216,10 +242,11 @@ func TestRunReportsWarnings(t *testing.T) {
 	if err := os.WriteFile(filepath.Join(dir, pob.ValuesFile), values, 0o600); err != nil {
 		t.Fatal(err)
 	}
-	ms, err := compare.Run(root, datasets, repoPins(t), "poe1", "3.29")
+	bs, err := compare.Run(root, datasets, repoPins(t), "poe1", "3.29")
 	if err != nil {
 		t.Fatal(err)
 	}
+	ms := compare.Mismatches(bs)
 	if !slices.ContainsFunc(ms, func(m compare.Mismatch) bool {
 		return m.Output == "warning:node-unknown" && strings.HasPrefix(m.Detail, "node 2: ")
 	}) {

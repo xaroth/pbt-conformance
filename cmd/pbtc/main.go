@@ -161,11 +161,11 @@ func runCompare(w io.Writer, f *pins.File, datasets, league string) error {
 	}
 	var all []compare.Mismatch
 	for _, l := range leagues(f, league) {
-		ms, err := compare.Run(".", datasets, f, game, l)
+		bs, err := compare.Run(".", datasets, f, game, l)
 		if err != nil {
 			return fmt.Errorf("compare %s: %w", l, err)
 		}
-		all = append(all, ms...)
+		all = append(all, compare.Mismatches(bs)...)
 	}
 	stale := compare.Apply(all, triage)
 	return report(w, all, stale)

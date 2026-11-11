@@ -72,3 +72,30 @@ func TestOutputValue(t *testing.T) {
 		})
 	}
 }
+
+func TestOutputMatches(t *testing.T) {
+	t.Parallel()
+	testCases := []struct {
+		name, output string
+		ours, pob    float64
+		want         bool
+	}{
+		{"whole number", "player.life", 1150, 1150, true},
+		{"whole number off by one", "player.life", 1151, 1150, false},
+		{"same as displayed", "player.life", 1150.2, 1149.9, true},
+		{"tenths", "player.life_regeneration", 31.94, 31.9, true},
+		{"tenths differ", "player.life_regeneration", 31.96, 31.9, false},
+		{"damage within 0.1%", "skill.total_dps", 100_090, 100_000, true},
+		{"damage over 0.1%", "skill.total_dps", 100_110, 100_000, false},
+		{"damage zero", "skill.total_dps", 0, 0, true},
+	}
+	for _, testCase := range testCases {
+		t.Run(testCase.name, func(t *testing.T) {
+			t.Parallel()
+			o := output(t, testCase.output)
+			if got := o.Matches(testCase.ours, testCase.pob); got != testCase.want {
+				t.Errorf("got %v, want %v", got, testCase.want)
+			}
+		})
+	}
+}
