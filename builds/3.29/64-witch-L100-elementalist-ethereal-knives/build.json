@@ -1,0 +1,13 @@
+{
+  "kind": "damage-over-time",
+  "contains": [
+    "cluster-jewel",
+    "timeless-jewel",
+    "item-skill"
+  ],
+  "origin": {
+    "url": "https://poe.ninja/poe1/builds/allflame/character/IamKaru-4813/SpongebobHeistLeague",
+    "league": "Allflame",
+    "snapshot": "0208-20261111-47167"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "kind": "minion",
+  "contains": [
+    "cluster-jewel",
+    "tree-variant",
+    "item-skill"
+  ],
+  "origin": {
+    "url": "https://poe.ninja/poe1/builds/allflamer/character/mooowoo-5655/AllflameMOOO_Ruthless",
+    "league": "Ruthless Allflame",
+    "snapshot": "0235-20261111-46508"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "kind": "attack",
+  "contains": [
+    "cluster-jewel",
+    "tree-variant"
+  ],
+  "origin": {
+    "url": "https://poe.ninja/poe1/builds/allflamer/character/Achilion-0497/Sir_Assassin",
+    "league": "Ruthless Allflame",
+    "snapshot": "0235-20261111-46508"
+  }
+}

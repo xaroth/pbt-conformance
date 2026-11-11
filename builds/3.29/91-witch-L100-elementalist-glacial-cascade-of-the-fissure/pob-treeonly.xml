@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathOfBuilding>
+	<Build ascendClassName="Elementalist" bandit="None" characterLevelAutoMode="false" className="Witch" level="100" mainSocketGroup="3" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="3_0" viewMode="TREE">
+		<PlayerStat stat="AverageHit" value="1106082.141696"/>
+		<PlayerStat stat="AverageBurstDamage" value="1106082.141696"/>
+		<PlayerStat stat="Speed" value="14.667119047619"/>
+		<PlayerStat stat="MineLayingTime" value="0.34089857618028"/>
+		<PlayerStat stat="MineThrowCount" value="5"/>
+		<PlayerStat stat="PreEffectiveCritChance" value="100"/>
+		<PlayerStat stat="CritChance" value="100"/>
+		<PlayerStat stat="CritMultiplier" value="4.53"/>
+		<PlayerStat stat="HitChance" value="100"/>
+		<PlayerStat stat="TotalDPS" value="16223038.448701"/>
+		<PlayerStat stat="TotalDot" value="0"/>
+		<PlayerStat stat="WithBleedDPS" value="16223038.448701"/>
+		<PlayerStat stat="WithIgniteDPS" value="16223038.448701"/>
+		<PlayerStat stat="WithPoisonDPS" value="16223038.448701"/>
+		<PlayerStat stat="TotalDotDPS" value="0"/>
+		<PlayerStat stat="CullingDPS" value="0"/>
+		<PlayerStat stat="ReservationDPS" value="0"/>
+		<PlayerStat stat="CombinedDPS" value="16223038.448701"/>
+		<PlayerStat stat="AreaOfEffectRadiusMetres" value="1.8"/>
+		<PlayerStat stat="ManaCost" value="53"/>
+		<PlayerStat stat="ManaPercentCost" value="0"/>
+		<PlayerStat stat="ManaPerSecondCost" value="155.47146190476"/>
+		<PlayerStat stat="ManaPercentPerSecondCost" value="0"/>
+		<PlayerStat stat="LifeCost" value="0"/>
+		<PlayerStat stat="LifePercentCost" value="0"/>
+		<PlayerStat stat="LifePerSecondCost" value="0"/>
+		<PlayerStat stat="LifePercentPerSecondCost" value="0"/>
+		<PlayerStat stat="ESCost" value="0"/>
+		<PlayerStat stat="ESPerSecondCost" value="0"/>
+		<PlayerStat stat="ESPercentPerSecondCost" value="0"/>
+		<PlayerStat stat="RageCost" value="0"/>
+		<PlayerStat stat="SoulCost" value="0"/>
+		<PlayerStat stat="Str" value="163"/>
+		<PlayerStat stat="ReqStr" value="159"/>
+		<PlayerStat stat="Dex" value="112"/>
+		<PlayerStat stat="ReqDex" value="102"/>
+		<PlayerStat stat="Int" value="287"/>
+		<PlayerStat stat="ReqInt" value="195"/>
+		<PlayerStat stat="Devotion" value="0"/>
+		<PlayerStat stat="TotalEHP" value="35438.223266274"/>
+		<PlayerStat stat="PhysicalMaximumHitTaken" value="5858"/>
+		<PlayerStat stat="LightningMaximumHitTaken" value="26771"/>
+		<PlayerStat stat="FireMaximumHitTaken" value="26771"/>
+		<PlayerStat stat="ColdMaximumHitTaken" value="31455"/>
+		<PlayerStat stat="ChaosMaximumHitTaken" value="11248"/>
+		<PlayerStat stat="Life" value="2812"/>
+		<PlayerStat stat="Spec:LifeInc" value="70"/>
+		<PlayerStat stat="LifeUnreserved" value="2812"/>
+		<PlayerStat stat="LifeRecoverable" value="2812"/>
+		<PlayerStat stat="LifeUnreservedPercent" value="100"/>
+		<PlayerStat stat="LifeRegenRecovery" value="434.2"/>
+		<PlayerStat stat="LifeLeechGainRate" value="0"/>
+		<PlayerStat stat="Mana" value="1336"/>
+		<PlayerStat stat="Spec:ManaInc" value="56"/>
+		<PlayerStat stat="ManaUnreserved" value="258"/>
+		<PlayerStat stat="ManaUnreservedPercent" value="19.311377245509"/>
+		<PlayerStat stat="ManaRegenRecovery" value="254.7"/>
+		<PlayerStat stat="ManaLeechGainRate" value="0"/>
+		<PlayerStat stat="EnergyShield" value="1534"/>
+		<PlayerStat stat="EnergyShieldRecoveryCap" value="1534"/>
+		<PlayerStat stat="Spec:EnergyShieldInc" value="25"/>
+		<PlayerStat stat="EnergyShieldRegenRecovery" value="0"/>
+		<PlayerStat stat="EnergyShieldLeechGainRate" value="0"/>
+		<PlayerStat stat="Ward" value="0"/>
+		<PlayerStat stat="RageRegenRecovery" value="0"/>
+		<PlayerStat stat="Evasion" value="25"/>
+		<PlayerStat stat="Spec:EvasionInc" value="0"/>
+		<PlayerStat stat="MeleeEvadeChance" value="0"/>
+		<PlayerStat stat="ProjectileEvadeChance" value="0"/>
+		<PlayerStat stat="Armour" value="5622"/>
+		<PlayerStat stat="Spec:ArmourInc" value="0"/>
+		<PlayerStat stat="PhysicalDamageReduction" value="35"/>
+		<PlayerStat stat="EffectiveBlockChance" value="43"/>
+		<PlayerStat stat="EffectiveSpellBlockChance" value="39"/>
+		<PlayerStat stat="AttackDodgeChance" value="0"/>
+		<PlayerStat stat="SpellDodgeChance" value="0"/>
+		<PlayerStat stat="EffectiveSpellSuppressionChance" value="0"/>
+		<PlayerStat stat="FireResist" value="75"/>
+		<PlayerStat stat="FireResistOverCap" value="39"/>
+		<PlayerStat stat="ColdResist" value="75"/>
+		<PlayerStat stat="ColdResistOverCap" value="39"/>
+		<PlayerStat stat="LightningResist" value="75"/>
+		<PlayerStat stat="LightningResistOverCap" value="39"/>
+		<PlayerStat stat="ChaosResist" value="75"/>
+		<PlayerStat stat="ChaosResistOverCap" value="7"/>
+		<PlayerStat stat="EffectiveMovementSpeedMod" value="1.9116"/>
+		<PlayerStat stat="FullDPS" value="0"/>
+		<PlayerStat stat="FullDotDPS" value="0"/>
+		<PlayerStat stat="PowerCharges" value="5"/>
+		<PlayerStat stat="PowerChargesMax" value="5"/>
+		<PlayerStat stat="FrenzyCharges" value="5"/>
+		<PlayerStat stat="FrenzyChargesMax" value="5"/>
+		<PlayerStat stat="EnduranceCharges" value="0"/>
+		<PlayerStat stat="EnduranceChargesMax" value="3"/>
+		<TimelessData devotionVariant1="1" devotionVariant2="1" searchList="" searchListFallback=""/>
+	</Build>
+	<Tree activeSpec="1">
+		<Spec ascendClassId="2" classId="3" clusterHashFormatVersion="2" masteryEffects="{89,47823},{12125,34242},{27733,48358},{27872,29161},{53188,64875},{53738,6510},{60170,38814},{63861,2987}" nodes="89,1822,2260,2292,4036,4367,4502,4546,4917,5296,5972,6052,7600,8027,8135,8833,8948,9055,9261,9797,10153,11659,11689,11716,12125,12128,12143,12439,12783,12888,13170,14745,14936,15117,15167,15228,16023,16954,18182,18661,18769,19008,19501,19595,20528,21033,21460,21678,21958,21984,22090,22618,24362,24872,25260,25411,27203,27656,27733,27788,27872,27929,28859,29781,32210,32710,33777,33783,34506,35334,36226,36412,36858,37114,38176,38190,40409,40609,41635,42006,42443,42744,44102,44184,45608,46277,46904,47306,47507,49605,49651,49929,51801,53188,53213,53456,53573,53738,54279,54447,55571,56158,56295,56461,57197,57226,58210,59585,60170,60405,60440,61259,61419,61653,61689,61834,61981,63447,63861,64583,65856,65858,65860,65872,65875,65881,65888,65893,65894,65895,65898,66896,66899,66905" secondaryAscendClassId="15" treeVersion="3_29">
+			<URL>
+				https://www.pathofexile.com/passive-skill-tree/AAAABgM-dQBZBx4I1Aj0D8QRDxGWEcITNRSwF1QXpB9bH8cigSL0I18kLSZFJ6ktiy2pLcQvXS9gL28wlzHvMlgzcjmZOlg7DTs_O3xCOkcGSOVJUUpATC1Mi1AwUilT1FSuVcZV4FZKWFpfKmEoYqxjQ2pDbAhsVWyMbOBtGXC7dFV90n_Gg_GD94bKigaNgo48j_qQ-pUglS6d2Z6hoqOkFqXLpvisRqyYsii0xbc4uMq5k8HFwfPDCcpZz8TP3dDQ0UXR6tQH2RPbXtvn3I3fbd-K42LowesK6_XsGO9L7-vw1fD58YryHffX-XX8Rw4BQAFCAUQBUAFTAVkBYAFlAWYBZwFqBVAFUwVZCLrPAFmFwi9dvOZsVXHpbOD9a8_EGW7R6pee6woLq_l1
+			</URL>
+			<Sockets>
+			</Sockets>
+			<Overrides>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/Village/RuneCraftingPassiveBG.png" dn="Runegraft of the Warp" icon="Art/2DArt/SkillIcons/passives/AtlasTrees/RuneGraftingIcon11.png" nodeId="12125">
+					Buffs on you expire 30% slower
+					Debuffs on you expire 30% faster
+					Limited to 1 Runegraft of the Warp
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Shaman" icon="Art/2DArt/SkillIcons/passives/mana.png" nodeId="18182">
+					8% increased Mana Regeneration Rate
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Shaman" icon="Art/2DArt/SkillIcons/passives/mana.png" nodeId="36858">
+					8% increased Mana Regeneration Rate
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Shaman" icon="Art/2DArt/SkillIcons/passives/mana.png" nodeId="49605">
+					8% increased Mana Regeneration Rate
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Shaman" icon="Art/2DArt/SkillIcons/passives/mana.png" nodeId="53456">
+					8% increased Mana Regeneration Rate
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Shaman" icon="Art/2DArt/SkillIcons/passives/mana.png" nodeId="56295">
+					8% increased Mana Regeneration Rate
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Shaman" icon="Art/2DArt/SkillIcons/passives/mana.png" nodeId="60440">
+					8% increased Mana Regeneration Rate
+				</Override>
+			</Overrides>
+		</Spec>
+	</Tree>
+</PathOfBuilding>

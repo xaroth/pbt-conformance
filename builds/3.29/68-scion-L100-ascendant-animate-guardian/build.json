@@ -1,0 +1,13 @@
+{
+  "kind": "minion",
+  "contains": [
+    "cluster-jewel",
+    "timeless-jewel",
+    "item-skill"
+  ],
+  "origin": {
+    "url": "https://poe.ninja/poe1/builds/allflame/character/Stefan2ndacc-2120/StoegsEi",
+    "league": "Allflame",
+    "snapshot": "0208-20261111-47167"
+  }
+}

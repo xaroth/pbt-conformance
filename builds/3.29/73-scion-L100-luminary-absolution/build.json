@@ -1,0 +1,12 @@
+{
+  "kind": "minion",
+  "contains": [
+    "cluster-jewel",
+    "timeless-jewel"
+  ],
+  "origin": {
+    "url": "https://poe.ninja/poe1/builds/allflame/character/%EC%95%84%EB%A6%84%EB%8B%A4%EC%9A%B4%EB%82%A0%EB%93%A4-7821/CoA_Luminous",
+    "league": "Allflame",
+    "snapshot": "0208-20261111-47167"
+  }
+}

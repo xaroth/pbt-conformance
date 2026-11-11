@@ -1,0 +1,13 @@
+{
+  "kind": "minion",
+  "contains": [
+    "cluster-jewel",
+    "mercenary",
+    "item-skill"
+  ],
+  "origin": {
+    "url": "https://poe.ninja/poe1/builds/allflame/character/bobo1111-6684/%E5%A4%A7%E8%B0%B7%E5%82%AD%E5%85%B5",
+    "league": "Allflame",
+    "snapshot": "0208-20261111-47167"
+  }
+}

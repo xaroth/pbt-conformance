@@ -1,0 +1,12 @@
+{
+  "kind": "spell",
+  "contains": [
+    "cluster-jewel",
+    "timeless-jewel"
+  ],
+  "origin": {
+    "url": "https://poe.ninja/poe1/builds/allflame/character/NeilHumanBreen-2739/AllflameGoldnatz",
+    "league": "Allflame",
+    "snapshot": "0208-20261111-47167"
+  }
+}

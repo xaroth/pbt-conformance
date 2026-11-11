@@ -1,0 +1,12 @@
+{
+  "kind": "minion",
+  "contains": [
+    "cluster-jewel",
+    "item-skill"
+  ],
+  "origin": {
+    "url": "https://poe.ninja/poe1/builds/allflame/character/morningrocket-0365/%E4%BB%A8%E7%9F%B3%E5%87%A0%E5%8F%A3",
+    "league": "Allflame",
+    "snapshot": "0208-20261111-47167"
+  }
+}

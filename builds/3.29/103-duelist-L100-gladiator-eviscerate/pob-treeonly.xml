@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathOfBuilding>
+	<Build ascendClassName="Gladiator" bandit="None" characterLevelAutoMode="false" className="Duelist" level="100" mainSocketGroup="6" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="3_0" viewMode="TREE">
+		<PlayerStat stat="CombinedDPS" value="0"/>
+		<PlayerStat stat="Str" value="303"/>
+		<PlayerStat stat="ReqStr" value="138"/>
+		<PlayerStat stat="Dex" value="233"/>
+		<PlayerStat stat="ReqDex" value="155"/>
+		<PlayerStat stat="Int" value="114"/>
+		<PlayerStat stat="ReqInt" value="100"/>
+		<PlayerStat stat="Devotion" value="0"/>
+		<PlayerStat stat="TotalEHP" value="8701.7903161223"/>
+		<PlayerStat stat="PhysicalMaximumHitTaken" value="4974"/>
+		<PlayerStat stat="LightningMaximumHitTaken" value="11164"/>
+		<PlayerStat stat="FireMaximumHitTaken" value="4941"/>
+		<PlayerStat stat="ColdMaximumHitTaken" value="4710"/>
+		<PlayerStat stat="ChaosMaximumHitTaken" value="2992"/>
+		<PlayerStat stat="Life" value="2805"/>
+		<PlayerStat stat="Spec:LifeInc" value="84"/>
+		<PlayerStat stat="LifeUnreserved" value="2805"/>
+		<PlayerStat stat="LifeRecoverable" value="2805"/>
+		<PlayerStat stat="LifeUnreservedPercent" value="100"/>
+		<PlayerStat stat="LifeRegenRecovery" value="44.9"/>
+		<PlayerStat stat="Mana" value="691"/>
+		<PlayerStat stat="Spec:ManaInc" value="0"/>
+		<PlayerStat stat="ManaUnreserved" value="-9"/>
+		<PlayerStat stat="ManaUnreservedPercent" value="-1.3024602026049"/>
+		<PlayerStat stat="ManaRegenRecovery" value="12.1"/>
+		<PlayerStat stat="EnergyShield" value="0"/>
+		<PlayerStat stat="EnergyShieldRecoveryCap" value="0"/>
+		<PlayerStat stat="Spec:EnergyShieldInc" value="0"/>
+		<PlayerStat stat="EnergyShieldRegenRecovery" value="0"/>
+		<PlayerStat stat="Ward" value="0"/>
+		<PlayerStat stat="Rage" value="30"/>
+		<PlayerStat stat="RageRegenRecovery" value="0"/>
+		<PlayerStat stat="TotalBuildDegen" value="98.736"/>
+		<PlayerStat stat="TotalNetRegen" value="-41.736"/>
+		<PlayerStat stat="NetLifeRegen" value="-53.836"/>
+		<PlayerStat stat="NetManaRegen" value="12.1"/>
+		<PlayerStat stat="NetEnergyShieldRegen" value="0"/>
+		<PlayerStat stat="Evasion" value="3835"/>
+		<PlayerStat stat="Spec:EvasionInc" value="16"/>
+		<PlayerStat stat="MeleeEvadeChance" value="28"/>
+		<PlayerStat stat="ProjectileEvadeChance" value="28"/>
+		<PlayerStat stat="Armour" value="3655"/>
+		<PlayerStat stat="Spec:ArmourInc" value="32"/>
+		<PlayerStat stat="PhysicalDamageReduction" value="36"/>
+		<PlayerStat stat="EffectiveBlockChance" value="37.59"/>
+		<PlayerStat stat="EffectiveSpellBlockChance" value="19"/>
+		<PlayerStat stat="AttackDodgeChance" value="0"/>
+		<PlayerStat stat="SpellDodgeChance" value="0"/>
+		<PlayerStat stat="EffectiveSpellSuppressionChance" value="0"/>
+		<PlayerStat stat="FireResist" value="42"/>
+		<PlayerStat stat="FireResistOverCap" value="0"/>
+		<PlayerStat stat="ColdResist" value="39"/>
+		<PlayerStat stat="ColdResistOverCap" value="0"/>
+		<PlayerStat stat="LightningResist" value="76"/>
+		<PlayerStat stat="LightningResistOverCap" value="2"/>
+		<PlayerStat stat="ChaosResist" value="-25"/>
+		<PlayerStat stat="ChaosResistOverCap" value="0"/>
+		<PlayerStat stat="EffectiveMovementSpeedMod" value="1.7"/>
+		<PlayerStat stat="FullDPS" value="0"/>
+		<PlayerStat stat="FullDotDPS" value="0"/>
+		<PlayerStat stat="PowerCharges" value="0"/>
+		<PlayerStat stat="PowerChargesMax" value="3"/>
+		<PlayerStat stat="FrenzyCharges" value="8"/>
+		<PlayerStat stat="FrenzyChargesMax" value="8"/>
+		<PlayerStat stat="EnduranceCharges" value="3"/>
+		<PlayerStat stat="EnduranceChargesMax" value="3"/>
+		<TimelessData devotionVariant1="1" devotionVariant2="1" searchList="" searchListFallback=""/>
+	</Build>
+	<Tree activeSpec="1">
+		<Spec ascendClassId="2" classId="4" clusterHashFormatVersion="2" masteryEffects="{4327,1915},{12169,32255},{21324,4500},{22480,23442},{26697,8018},{37795,30612},{40170,23936},{41744,5944},{58563,48980},{62588,34242},{63710,3449}" nodes="1325,1675,2491,2598,2599,3319,3644,3651,4327,4918,5233,5237,5408,5632,6289,6363,6580,6741,8419,8544,8620,9402,10532,11651,12169,13019,13273,14056,14930,15021,15226,15437,16544,16860,17527,18103,18901,19069,21324,22480,22994,23066,23199,23471,24083,24538,24865,24914,26023,26294,26528,26697,27325,29937,30679,31471,31604,32376,32730,33287,34400,34678,35053,36764,36874,37623,37795,38462,39725,40132,40170,41595,41744,42495,43413,44191,44207,44268,44624,45283,46393,46519,46882,48287,48807,49343,49407,49806,50679,50986,52575,54127,55420,55676,56330,56589,56807,56920,57839,58271,58563,58854,59928,60153,60887,61050,61262,62109,62319,62588,63490,63630,63649,63710,63723,64024,64238,64257,65107,65632,65634,65638,65639,65642,65760,65762,65766,65767,65770" secondaryAscendClassId="13" treeVersion="3_29">
+			<URL>
+				https://www.pathofexile.com/passive-skill-tree/AAAABgQ2dAUtBosJuwomCicM9w48DkMQ5xM2FHEUdRUgFgAYkRjbGbQaVSDjIWAhrCS6KSQtgy-JMtsz2TboOlI6rTt6PE1AoEHcRHdGt0nVSn1TTFfQWdJaGlqfW69eE1_aYSFhUmWnZrZnoGhJar108XfXeu97dH54ggeGYId2iO2PnJAKkveTo5Y-my2cxJzqonujEKX_qZWsn6yvrOyuULDjtTm1t7civJ--p8C_wP_CjsX3zV_Tb9h82XzcCt0N3efeWOHv45_kw-Xm6hjq-e3X7nrvTvKd82_0fPgC-KH43vjr-hj67vsB_lMKAGAAYgBmAGcAagDgAOIA5gDnAOoLB3sQ533_L4kRlFNMW5JX0B9SaEl3lJOjXYCc6hc4oxC_VOTDhcL0fA15-N4=
+			</URL>
+			<Sockets>
+			</Sockets>
+			<Overrides>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ArohonguiTribePassiveBG.png" dn="Tattoo of the Arohongui Moonwarden" icon="Art/2DArt/SkillIcons/passives/ColdResistNode.png" nodeId="1461">
+					+6% to Cold Resistance
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/TasalioTribePassiveBG.png" dn="Tattoo of the Tasalio Tideshifter" icon="Art/2DArt/SkillIcons/passives/stundex.png" nodeId="6363">
+					10% chance to Avoid being Stunned
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/TasalioTribePassiveBG.png" dn="Tattoo of the Tasalio Tideshifter" icon="Art/2DArt/SkillIcons/passives/stundex.png" nodeId="8544">
+					10% chance to Avoid being Stunned
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ArohonguiTribePassiveBG.png" dn="Tattoo of the Arohongui Moonwarden" icon="Art/2DArt/SkillIcons/passives/ColdResistNode.png" nodeId="12412">
+					+6% to Cold Resistance
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ArohonguiTribePassiveBG.png" dn="Tattoo of the Arohongui Moonwarden" icon="Art/2DArt/SkillIcons/passives/ColdResistNode.png" nodeId="20807">
+					+6% to Cold Resistance
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/TasalioTribePassiveBG.png" dn="Tattoo of the Tasalio Tideshifter" icon="Art/2DArt/SkillIcons/passives/stundex.png" nodeId="23471">
+					10% chance to Avoid being Stunned
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/TasalioTribePassiveBG.png" dn="Tattoo of the Tasalio Tideshifter" icon="Art/2DArt/SkillIcons/passives/stundex.png" nodeId="29937">
+					10% chance to Avoid being Stunned
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/TasalioTribePassiveBG.png" dn="Tattoo of the Tasalio Tideshifter" icon="Art/2DArt/SkillIcons/passives/stundex.png" nodeId="32555">
+					10% chance to Avoid being Stunned
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/NgamahuTribePassiveBG.png" dn="Tattoo of the Ngamahu Firewalker" icon="Art/2DArt/SkillIcons/passives/FireResistNode.png" nodeId="34400">
+					+6% to Fire Resistance
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ArohonguiTribePassiveBG.png" dn="Tattoo of the Arohongui Moonwarden" icon="Art/2DArt/SkillIcons/passives/ColdResistNode.png" nodeId="36287">
+					+6% to Cold Resistance
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/TukohamaTribePassiveBG.png" dn="Tattoo of the Tukohama Warrior" icon="Art/2DArt/SkillIcons/passives/FortifyNode.png" nodeId="61262">
+					Melee Hits which Stun have 5% chance to Fortify
+				</Override>
+			</Overrides>
+		</Spec>
+	</Tree>
+</PathOfBuilding>
