@@ -32,8 +32,8 @@
 // ninja picks builds for a league (default: the current one) from poe.ninja's league named by
 // --overview, such as allflame, and adds them to builds/<league> with their origin: for each
 // kind, from the most popular main skills, one build per main skill and ascendancy until the
-// kind has its target count, then builds with a content swapped in until each content has its
-// quota, where it can. Candidates are the first characters of --per-skill ascendancies for each
+// kind has its target count, then builds of any kind until the league has its total, then
+// builds with a content swapped in until each content has its quota, where it can. Candidates are the first characters of --per-skill ascendancies for each
 // of the --skills most popular main skills and of the --mercenaries most popular mercenary
 // classes, then --variant-rows characters of the --variant league (a Ruthless or alternate
 // tree). Each candidate runs through the league's pinned PoB, whose
@@ -118,7 +118,7 @@ func run(ctx context.Context, args []string) error {
 // Defaults of the ninja command.
 const (
 	defaultSkills      = 120
-	defaultMercenaries = 3
+	defaultMercenaries = 5
 	defaultPerSkill    = 2
 	defaultVariantRows = 20
 )
@@ -181,7 +181,7 @@ func planNinja(ctx context.Context, cache, league string, p runtime.Paths, commi
 	if err != nil {
 		return ninja.Plan{}, nil, fmt.Errorf("pick: %w", err)
 	}
-	return ninja.Choose(existing, cands, compare.Targets(), compare.Quotas()), cands, nil
+	return ninja.Choose(existing, cands, compare.Targets(), compare.Total(), compare.Quotas()), cands, nil
 }
 
 // writePlan prints the picks, the counts per kind and content against their targets, and the
@@ -197,11 +197,14 @@ func writePlan(w io.Writer, plan ninja.Plan, cands []ninja.Candidate) error {
 		return fmt.Errorf("ninja: %w", err)
 	}
 	targets, quotas := compare.Targets(), compare.Quotas()
+	total := 0
 	for _, k := range compare.Kinds() {
-		if targets[k] > 0 {
-			fmt.Fprintf(w, "kind %s: %d of %d\n", k, plan.Kinds[k], targets[k])
+		total += plan.Kinds[k]
+		if plan.Kinds[k] > 0 || targets[k] > 0 {
+			fmt.Fprintf(w, "kind %s: %d, target %d\n", k, plan.Kinds[k], targets[k])
 		}
 	}
+	fmt.Fprintf(w, "total: %d of %d\n", total, compare.Total())
 	for _, c := range compare.Contents() {
 		fmt.Fprintf(w, "contains %s: %d, quota %d\n", c, plan.Contents[c], quotas[c])
 	}

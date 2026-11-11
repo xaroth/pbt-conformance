@@ -5,8 +5,11 @@ import (
 	"encoding/hex"
 	"encoding/json"
 	"errors"
+	"net/http"
+	"net/http/httptest"
 	"os"
 	"path/filepath"
+	"sync/atomic"
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
@@ -113,19 +116,24 @@ func TestExisting(t *testing.T) {
 }
 
 // Classify reads PoB's results from its cache and runs no PoB for them: the runtime here does
-// not exist. A result without damage is not picked.
+// not exist. It takes the kind and main skill from PoB, adds a mercenary poe.ninja shows, and
+// leaves out a build PoB failed on and one whose main skill PoB gives no damage, the minion's
+// for a minion skill.
 func TestClassifyCached(t *testing.T) {
 	t.Parallel()
 	dir := t.TempDir()
-	results := []pob.Result{
-		{MainSkill: &pob.MainSkill{Group: 1, Name: "Raise Zombie", Minion: &pob.Minion{Name: "Zombie"}}},
-		{MainSkill: &pob.MainSkill{Group: 1, Name: "Raise Spectre"}},
+	zombie := &pob.MainSkill{Group: 1, Name: "Raise Zombie", Minion: &pob.Minion{Name: "Zombie"}}
+	cached := []map[string]any{
+		{"result": pob.Result{MainSkill: zombie, Outputs: map[string]float64{"Minion.CombinedDPS": 100}}},
+		{"result": pob.Result{MainSkill: &pob.MainSkill{Group: 1, Name: "Raise Spectre"}}},
+		{"result": pob.Result{MainSkill: zombie, Outputs: map[string]float64{"CombinedDPS": 100}}},
+		{"error": "boom"},
 	}
-	cands := make([]ninja.Candidate, 0, len(results))
-	for i, r := range results {
+	cands := make([]ninja.Candidate, 0, len(cached))
+	for i, r := range cached {
 		x := []byte(buildXML + string(rune('a'+i)))
 		sum := sha256.Sum256(x)
-		b, err := json.Marshal(map[string]any{"result": r})
+		b, err := json.Marshal(r)
 		if err != nil {
 			t.Fatal(err)
 		}
@@ -134,13 +142,52 @@ func TestClassifyCached(t *testing.T) {
 		}
 		cands = append(cands, ninja.Candidate{XML: x, Char: ninja.Character{Class: "Necromancer"}})
 	}
+	cands[0].Char.Mercenary = json.RawMessage(`{"name": "Karielle"}`)
 	if err := ninja.Classify(t.Context(), runtime.Paths{LuaJIT: "/nonexistent"}, dir, cands); err != nil {
 		t.Fatal(err)
 	}
-	if cands[0].Kind != compare.KindMinion || cands[0].Skill != "Raise Zombie" || cands[0].Ascendancy != "Necromancer" {
-		t.Errorf("first %+v", cands[0].Build)
+	want := ninja.Build{Kind: compare.KindMinion, Skill: "Raise Zombie", Ascendancy: "Necromancer", Contains: []compare.Content{compare.Mercenary}}
+	if diff := cmp.Diff(want, cands[0].Build); diff != "" || cands[0].Err != nil {
+		t.Errorf("first (-want +got):\n%s%v", diff, cands[0].Err)
 	}
-	if !errors.Is(cands[1].Err, ninja.ErrNoDamage) || cands[1].Kind != compare.KindOther {
-		t.Errorf("second: kind %s, err %v", cands[1].Kind, cands[1].Err)
+	for i, want := range []error{ninja.ErrNoDamage, ninja.ErrNoDamage, ninja.ErrLoad} {
+		if !errors.Is(cands[i+1].Err, want) {
+			t.Errorf("candidate %d: got %v, want %v", i+1, cands[i+1].Err, want)
+		}
+	}
+}
+
+// A character poe.ninja no longer has is a candidate with the error, not the end of the run,
+// and a rerun asks for it no more.
+func TestFetchMissingCharacter(t *testing.T) {
+	t.Parallel()
+	var hits atomic.Int32
+	srv := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		hits.Add(1)
+		if r.URL.Query().Get("name") == "gone" {
+			http.NotFound(w, r)
+			return
+		}
+		b, err := os.ReadFile(filepath.Join("testdata", "character.json"))
+		if err != nil {
+			t.Error(err)
+		}
+		_, _ = w.Write(b)
+	}))
+	defer srv.Close()
+	var s sleeps
+	a := &ninja.API{Client: &ninja.Client{Base: srv.URL, Dir: t.TempDir(), Sleep: s.sleep}}
+	leads := []ninja.Lead{{Row: ninja.Row{Account: "a", Name: "gone", Class: "Witch"}}, {Row: ninja.Row{Account: "a", Name: "here"}}}
+	for range 2 {
+		cands, err := ninja.Fetch(t.Context(), a, leads)
+		if err != nil {
+			t.Fatal(err)
+		}
+		if !errors.Is(cands[0].Err, ninja.ErrStatus) || cands[0].Char.Name != "gone" || cands[1].Err != nil || len(cands[1].XML) == 0 {
+			t.Errorf("got %v, %v", cands[0].Err, cands[1].Err)
+		}
+	}
+	if hits.Load() != 2 {
+		t.Errorf("%d requests, want 2", hits.Load())
 	}
 }

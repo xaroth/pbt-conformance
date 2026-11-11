@@ -108,4 +108,30 @@ func TestClientFails(t *testing.T) {
 	if hits.Load() != 1 {
 		t.Errorf("%d requests for a 404, want 1", hits.Load())
 	}
+	// The 404 is cached: a later call fails the same way without a request.
+	if _, err := c.Get(t.Context(), "/x", nil); !errors.Is(err, ninja.ErrStatus) || hits.Load() != 1 {
+		t.Errorf("second call: %v after %d requests, want 1", err, hits.Load())
+	}
+}
+
+func TestClientGivesUp(t *testing.T) {
+	t.Parallel()
+	var hits atomic.Int32
+	srv := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, _ *http.Request) {
+		hits.Add(1)
+		w.WriteHeader(http.StatusServiceUnavailable)
+	}))
+	defer srv.Close()
+	var s sleeps
+	c := &ninja.Client{Base: srv.URL, Dir: t.TempDir(), Sleep: s.sleep}
+	if _, err := c.Get(t.Context(), "/x", nil); !errors.Is(err, ninja.ErrStatus) {
+		t.Errorf("got %v, want %v", err, ninja.ErrStatus)
+	}
+	if hits.Load() != 6 {
+		t.Errorf("%d attempts, want 6", hits.Load())
+	}
+	// A failure that may pass is not cached: a later call asks again.
+	if _, err := c.Get(t.Context(), "/x", nil); !errors.Is(err, ninja.ErrStatus) || hits.Load() != 12 {
+		t.Errorf("second call: %v after %d attempts, want 12", err, hits.Load())
+	}
 }

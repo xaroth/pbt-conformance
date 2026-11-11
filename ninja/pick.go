@@ -132,15 +132,24 @@ func snapshotOn(ctx context.Context, a *API, overview, league string, variant bo
 	return s, nil
 }
 
-// Fetch reads each lead's character and its PoB build.
+// Fetch reads each lead's character and its PoB build. A character poe.ninja does not give,
+// with a status that is not retried or one that outlasts the retries, or gives unreadable, is
+// a candidate with that error.
 func Fetch(ctx context.Context, a *API, leads []Lead) ([]Candidate, error) {
 	cands := make([]Candidate, 0, len(leads))
 	for _, l := range leads {
 		ch, err := a.Character(ctx, l.Snapshot, l.Row.Account, l.Row.Name)
-		if err != nil {
+		if err != nil && !errors.Is(err, ErrStatus) && !errors.Is(err, ErrFormat) {
 			return nil, err
 		}
-		c := Candidate{Char: ch, Snapshot: l.Snapshot}
+		if err != nil {
+			ch = Character{Account: l.Row.Account, Name: l.Row.Name, Class: l.Row.Class}
+		}
+		c := Candidate{Char: ch, Snapshot: l.Snapshot, Err: err}
+		if err != nil {
+			cands = append(cands, c)
+			continue
+		}
 		c.XML, c.Err = ch.XML()
 		cands = append(cands, c)
 	}
@@ -218,8 +227,8 @@ func runClassify(ctx context.Context, p runtime.Paths, dir string, cands []Candi
 	files := make([]string, len(todo))
 	for k, i := range todo {
 		files[k] = classFile(dir, cands[i].XML) + ".xml"
-		if err := os.WriteFile(files[k], cands[i].XML, filePerm); err != nil {
-			return fmt.Errorf("ninja: %w", err)
+		if err := writeAtomic(files[k], cands[i].XML); err != nil {
+			return err
 		}
 	}
 	out, errs, err := pob.RunEach(ctx, p, files)
@@ -235,8 +244,8 @@ func runClassify(ctx context.Context, p runtime.Paths, dir string, cands []Candi
 		if err != nil {
 			return fmt.Errorf("ninja: %w", err)
 		}
-		if err := os.WriteFile(strings.TrimSuffix(files[k], ".xml")+".json", b, filePerm); err != nil {
-			return fmt.Errorf("ninja: %w", err)
+		if err := writeAtomic(strings.TrimSuffix(files[k], ".xml")+".json", b); err != nil {
+			return err
 		}
 	}
 	return nil
@@ -246,9 +255,9 @@ func runClassify(ctx context.Context, p runtime.Paths, dir string, cands []Candi
 var (
 	// ErrLoad marks a build PoB fails to load.
 	ErrLoad = errors.New("PoB cannot load the build")
-	// ErrNoDamage marks a build whose main skill PoB gives no damage. Such builds are mostly
-	// ones PoB cannot read from poe.ninja's export, such as a spectre build without its
-	// spectre, which the export does not name.
+	// ErrNoDamage marks a build whose main skill PoB gives no damage, the minion's for a
+	// minion skill. Such builds are mostly ones PoB cannot read from poe.ninja's export, such
+	// as a spectre build without its spectre, which the export does not name.
 	ErrNoDamage = errors.New("PoB gives the main skill no damage")
 )
 
@@ -258,7 +267,7 @@ func setBuild(c *Candidate, r classified) {
 		return
 	}
 	c.Kind = compare.DetectKind(r.Result)
-	if c.Kind == compare.KindOther {
+	if !hasDamage(r.Result) {
 		c.Err = ErrNoDamage
 		return
 	}
@@ -275,6 +284,15 @@ func setBuild(c *Candidate, r classified) {
 		contains = append(contains, compare.Mercenary)
 	}
 	c.Contains = sortContents(contains)
+}
+
+// hasDamage reports whether PoB gives the main skill damage: the minion's for a minion
+// skill.
+func hasDamage(r pob.Result) bool {
+	if r.MainSkill != nil && r.MainSkill.Minion != nil {
+		return r.Outputs["Minion.CombinedDPS"] > 0
+	}
+	return r.Outputs["CombinedDPS"] > 0
 }
 
 func sortContents(cs []compare.Content) []compare.Content {

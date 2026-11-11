@@ -59,7 +59,10 @@ type Client struct {
 	last time.Time
 }
 
-// Get returns the body at path with query q, from the cache if there, else from poe.ninja.
+// Get returns the body at path with query q, from the cache if there, else from poe.ninja. A
+// response with a 4xx status other than 429, such as a 404 for a removed character, is cached
+// as that status and returned as ErrStatus on every later call; a 429 or 5xx that outlasts the
+// retries is not cached.
 func (c *Client) Get(ctx context.Context, path string, q url.Values) ([]byte, error) {
 	base := c.Base
 	if base == "" {
@@ -71,56 +74,91 @@ func (c *Client) Get(ctx context.Context, path string, q url.Values) ([]byte, er
 	}
 	sum := sha256.Sum256([]byte(path + "?" + q.Encode()))
 	file := filepath.Join(c.Dir, hex.EncodeToString(sum[:]))
-	b, err := os.ReadFile(file)
-	if err == nil {
-		return b, nil
+	if b, ok, err := cached(file, u); ok || err != nil {
+		return b, err
 	}
-	if !errors.Is(err, fs.ErrNotExist) {
-		return nil, fmt.Errorf("ninja: %w", err)
-	}
-	if b, err = c.fetch(ctx, u); err != nil {
+	b, status, err := c.fetch(ctx, u)
+	if err != nil {
 		return nil, err
 	}
-	if err := os.MkdirAll(c.Dir, dirPerm); err != nil {
-		return nil, fmt.Errorf("ninja: %w", err)
+	if status != http.StatusOK {
+		if err := writeAtomic(file+".status", []byte(strconv.Itoa(status))); err != nil {
+			return nil, err
+		}
+		return nil, fmt.Errorf("ninja: %s: %w %d", u, ErrStatus, status)
 	}
-	tmp := file + ".tmp"
-	if err := os.WriteFile(tmp, b, filePerm); err != nil {
-		return nil, fmt.Errorf("ninja: %w", err)
-	}
-	if err := os.Rename(tmp, file); err != nil {
-		return nil, fmt.Errorf("ninja: %w", err)
+	if err := writeAtomic(file, b); err != nil {
+		return nil, err
 	}
 	return b, nil
 }
 
+// cached returns the cached response at file, the body or the failure, and whether there is
+// one.
+func cached(file, u string) ([]byte, bool, error) {
+	b, err := os.ReadFile(file)
+	if err == nil {
+		return b, true, nil
+	}
+	if !errors.Is(err, fs.ErrNotExist) {
+		return nil, false, fmt.Errorf("ninja: %w", err)
+	}
+	st, err := os.ReadFile(file + ".status")
+	if err == nil {
+		return nil, true, fmt.Errorf("ninja: %s: %w %s (cached)", u, ErrStatus, st)
+	}
+	if !errors.Is(err, fs.ErrNotExist) {
+		return nil, false, fmt.Errorf("ninja: %w", err)
+	}
+	return nil, false, nil
+}
+
+// writeAtomic writes b to path through a temporary file, so an interrupted write leaves no
+// partial file at path.
+func writeAtomic(path string, b []byte) error {
+	if err := os.MkdirAll(filepath.Dir(path), dirPerm); err != nil {
+		return fmt.Errorf("ninja: %w", err)
+	}
+	tmp := path + ".tmp"
+	if err := os.WriteFile(tmp, b, filePerm); err != nil {
+		return fmt.Errorf("ninja: %w", err)
+	}
+	if err := os.Rename(tmp, path); err != nil {
+		return fmt.Errorf("ninja: %w", err)
+	}
+	return nil
+}
+
 // fetch requests u, waiting out the delay since the last request and backing off on 429 and
-// 5xx.
-func (c *Client) fetch(ctx context.Context, u string) ([]byte, error) {
+// 5xx. It returns the body of a 200 response, or the status of a 4xx response other than 429,
+// which is not retried.
+func (c *Client) fetch(ctx context.Context, u string) ([]byte, int, error) {
 	backoff := c.Backoff
 	if backoff == 0 {
 		backoff = defaultBackoff
 	}
 	for attempt := 1; ; attempt++ {
-		if err := c.pace(ctx); err != nil {
-			return nil, err
-		}
 		b, status, wait, err := c.once(ctx, u)
 		if err != nil {
-			return nil, err
+			return nil, 0, err
 		}
-		switch {
-		case status == http.StatusOK:
-			return b, nil
-		case status != http.StatusTooManyRequests && status < http.StatusInternalServerError,
-			attempt == maxAttempts:
-			return nil, fmt.Errorf("ninja: %s: %w %d", u, ErrStatus, status)
+		transient := status == http.StatusTooManyRequests || status >= http.StatusInternalServerError
+		if final(status, transient) {
+			return b, status, nil
+		}
+		if !transient || attempt == maxAttempts {
+			return nil, 0, fmt.Errorf("ninja: %s: %w %d", u, ErrStatus, status)
 		}
 		if err := c.sleep(ctx, max(wait, backoff)); err != nil {
-			return nil, err
+			return nil, 0, err
 		}
 		backoff *= 2
 	}
+}
+
+// final reports whether a response is kept as it is: a 200, or a 4xx that is not transient.
+func final(status int, transient bool) bool {
+	return status == http.StatusOK || (status >= http.StatusBadRequest && !transient)
 }
 
 // pace waits until the delay since the last request has passed.
@@ -138,8 +176,12 @@ func (c *Client) pace(ctx context.Context) error {
 	return nil
 }
 
-// once makes one request and returns its body, status and the wait its Retry-After asks for.
+// once waits out the delay since the last request, makes one request and returns its body,
+// status and the wait its Retry-After asks for.
 func (c *Client) once(ctx context.Context, u string) ([]byte, int, time.Duration, error) {
+	if err := c.pace(ctx); err != nil {
+		return nil, 0, 0, err
+	}
 	req, err := http.NewRequestWithContext(ctx, http.MethodGet, u, nil)
 	if err != nil {
 		return nil, 0, 0, fmt.Errorf("ninja: %w", err)

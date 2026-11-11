@@ -1,6 +1,7 @@
 package ninja_test
 
 import (
+	"errors"
 	"net/http"
 	"net/http/httptest"
 	"os"
@@ -136,7 +137,34 @@ func TestLeads(t *testing.T) {
 	if !slices.Equal(got, want) {
 		t.Fatalf("leads %+v", leads)
 	}
-	if _, err := ninja.Leads(t.Context(), a, ninja.Source{Overview: "mirage", Skills: 1, PerSkill: 1}, "3.29"); err == nil {
-		t.Error("league on another tree: no error")
+	for _, bad := range []ninja.Source{
+		{Overview: "mirage", Skills: 1, PerSkill: 1},
+		{Overview: "allflame", Variant: "mirage", Skills: 1, PerSkill: 1, VariantRows: 1},
+		{Overview: "allflame", Variant: "allflame", Skills: 1, PerSkill: 1, VariantRows: 1},
+	} {
+		if _, err := ninja.Leads(t.Context(), a, bad, "3.29"); !errors.Is(err, ninja.ErrTree) {
+			t.Errorf("%s with variant %q: got %v, want %v", bad.Overview, bad.Variant, err, ninja.ErrTree)
+		}
+	}
+}
+
+// One search gives one character per ascendancy: the fourth Winter Orb row is a second
+// Occultist, so the fourth lead is a later row.
+func TestLeadsOnePerAscendancy(t *testing.T) {
+	t.Parallel()
+	a := recorded(t)
+	leads, err := ninja.Leads(t.Context(), a, ninja.Source{Overview: "allflame", Skills: 1, PerSkill: 4}, "3.29")
+	if err != nil {
+		t.Fatal(err)
+	}
+	seen := map[string]bool{}
+	for _, l := range leads {
+		if seen[l.Row.Class] {
+			t.Errorf("second %s: %s", l.Row.Class, l.Row.Name)
+		}
+		seen[l.Row.Class] = true
+	}
+	if len(leads) != 4 {
+		t.Errorf("%d leads, want 4", len(leads))
 	}
 }

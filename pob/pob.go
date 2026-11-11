@@ -26,10 +26,12 @@ var runner []byte
 
 // RunnerID identifies what the runner records: a hash of the runner and the output keys it
 // reads. A result recorded under another ID may lack outputs or fields this runner gives.
-func RunnerID() string {
+func RunnerID() string { return runnerID(runner, Keys()) }
+
+func runnerID(runner []byte, keys []string) string {
 	h := sha256.New()
 	h.Write(runner)
-	for _, k := range Keys() {
+	for _, k := range keys {
 		h.Write([]byte("\x00" + k))
 	}
 	return hex.EncodeToString(h.Sum(nil))

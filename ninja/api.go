@@ -284,7 +284,7 @@ func (a *API) Character(ctx context.Context, s Snapshot, account, name string) (
 	}
 	var c Character
 	if err := json.Unmarshal(b, &c); err != nil {
-		return Character{}, fmt.Errorf("ninja: character %s/%s: %w", account, name, err)
+		return Character{}, fmt.Errorf("ninja: character %s/%s: %w: %w", account, name, ErrFormat, err)
 	}
 	return c, nil
 }

@@ -36,20 +36,17 @@ type Plan struct {
 	Contents map[compare.Content]int
 }
 
-// Choose picks candidates, in their order of popularity, until each kind has its target count
-// with the existing builds: one build per main skill and ascendancy, none failing to load. It
-// then swaps picked builds for later candidates of the same kind until each content has its
-// quota, where it can. The result is in kind order, then in candidate order.
-func Choose(existing []Build, cands []Candidate, targets map[compare.Kind]int, quotas map[compare.Content]int) Plan {
-	p := planner{existing: existing, cands: cands, picked: make([]bool, len(cands)), used: map[[2]string]bool{}}
+// Choose picks candidates, in their order of popularity, one build per main skill and
+// ascendancy and none that cannot be used: first until each kind has its target count with the
+// existing builds, then of any kind until there are total counted builds. It then swaps picked
+// builds for later candidates until each content has its quota, where it can, keeping each
+// kind at its target. The result is in kind order, then in candidate order.
+func Choose(existing []Build, cands []Candidate, targets map[compare.Kind]int, total int, quotas map[compare.Content]int) Plan {
+	p := planner{existing: existing, cands: cands, picked: make([]bool, len(cands)), used: map[[2]string]bool{}, targets: targets}
 	for _, b := range existing {
 		p.used[b.key()] = true
 	}
-	for i, c := range cands {
-		if p.usable(i) && p.kinds()[c.Kind] < targets[c.Kind] {
-			p.pick(i)
-		}
-	}
+	p.fill(total)
 	for _, q := range compare.Contents() {
 		for p.contents()[q] < quotas[q] {
 			if !p.swapIn(q, quotas) {
@@ -65,6 +62,22 @@ type planner struct {
 	cands    []Candidate
 	picked   []bool
 	used     map[[2]string]bool
+	targets  map[compare.Kind]int
+}
+
+// fill picks candidates in order while their kind is short of its target, then any until
+// there are total counted builds.
+func (p *planner) fill(total int) {
+	for i, c := range p.cands {
+		if p.usable(i) && p.kinds()[c.Kind] < p.targets[c.Kind] {
+			p.pick(i)
+		}
+	}
+	for i := range p.cands {
+		if p.usable(i) && len(p.counted()) < total {
+			p.pick(i)
+		}
+	}
 }
 
 // inKindOrder returns the picked candidates in kind order, then in candidate order.
@@ -123,8 +136,8 @@ func (p *planner) contents() map[compare.Content]int {
 }
 
 // swapIn picks the first unpicked candidate with content q in place of the last picked
-// candidate of its kind that lacks q and holds no content at or under its quota; it reports
-// whether it found such a pair.
+// candidate that lacks q, holds no content at or under its quota and is of the same kind or of
+// a kind above its target; it reports whether it found such a pair.
 func (p *planner) swapIn(q compare.Content, quotas map[compare.Content]int) bool {
 	have := p.contents()
 	spare := func(d Candidate) bool {
@@ -139,11 +152,13 @@ func (p *planner) swapIn(q compare.Content, quotas map[compare.Content]int) bool
 	return false
 }
 
-// replace picks candidate i in place of the last picked candidate of its kind that spare
-// allows and whose removal frees i's pair, if any, and reports whether it did.
+// replace picks candidate i in place of the last picked candidate that spare allows, of i's
+// kind or of a kind above its target, and whose removal frees i's pair, if any, and reports
+// whether it did.
 func (p *planner) replace(i int, spare func(Candidate) bool) bool {
+	kinds := p.kinds()
 	for j, d := range slices.Backward(p.cands) {
-		if !p.picked[j] || d.Kind != p.cands[i].Kind || !spare(d) {
+		if !p.picked[j] || !spare(d) || (d.Kind != p.cands[i].Kind && kinds[d.Kind] <= p.targets[d.Kind]) {
 			continue
 		}
 		p.drop(j)
