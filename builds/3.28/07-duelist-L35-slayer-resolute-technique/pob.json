@@ -7,7 +7,6 @@
     "allocated": 45,
     "outputs": {
       "Armour": 2729,
-      "AverageDamage": 1551.6128289107,
       "BlockChance": 0,
       "ChaosResist": -60,
       "ChaosResistTotal": -60,
@@ -24,6 +23,7 @@
       "Evasion": 124,
       "FireResist": 21,
       "FireResistTotal": 21,
+      "HitChance": 100,
       "Int": 43,
       "Life": 1329,
       "LifeLeechRate": 17.806432953606,
@@ -32,6 +32,7 @@
       "LifeUnreserved": 1329,
       "LightningResist": 14,
       "LightningResistTotal": 14,
+      "MainHand.AverageHit": 1551.6128289107,
       "Mana": 265,
       "ManaRegen": 4.6,
       "ManaUnreserved": 66,

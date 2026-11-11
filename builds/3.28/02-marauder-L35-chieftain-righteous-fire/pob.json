@@ -7,7 +7,7 @@
     "allocated": 45,
     "outputs": {
       "Armour": 3150,
-      "AverageDamage": 0,
+      "AverageHit": 0,
       "BlockChance": 23,
       "ChaosResist": -60,
       "ChaosResistTotal": -60,
@@ -24,6 +24,7 @@
       "Evasion": 77,
       "FireResist": 81,
       "FireResistTotal": 272,
+      "HitChance": 100,
       "Int": 148,
       "Life": 1906,
       "LifeLeechRate": 0,
