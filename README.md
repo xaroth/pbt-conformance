@@ -84,6 +84,8 @@ A build's kind and contents come from `build.json` in its directory; a build wit
 | `smoke` | `true` for a smoke test; then `kind` and `contains` are absent |
 | `contains` | `cluster-jewel`, `timeless-jewel`, `mercenary`, `tree-variant` (a Ruthless or alternate tree), `item-skill` (a skill granted by an item, a graft included) |
 
+`go test ./compare` checks every `build.json` against its `pob.xml` (`compare.DetectContents`): a cluster or timeless jewel socketed in the active tree, a Ruthless or alternate active tree, and an equipped item other than a flask with a line that grants or triggers a skill, or anything in a graft slot. `contains` must list exactly those, plus `mercenary` where poe.ninja shows one, which PoB's file does not hold.
+
 ## Import cases
 
 `imports/<case>/` checks pbt-engine's PoB importer on what the conformance builds lack: cluster jewels, a tattoo, two trees, player config, the layout of older PoB files, the ruthless and alternate trees, a secondary ascendancy and a PoE2 file. Each case holds `pob.xml`, made from a conformance build's `pob-treeonly.xml` with one thing added (its `README.md` says what), and `expect.json`: the build it must import to, which is the source build with only the intended change, and its warnings by code and subject, or the error. `go test ./imports` runs them with `$PBT_DATASETS`, as CI does.
