@@ -146,18 +146,10 @@ func compareBuild(dir, league string, reg *dataset.Registry, sim *simulator.Sim)
 	if err != nil {
 		return nil, err
 	}
-	b, treeWarnings, err := importFile(dir, pob.TreeOnlyXML, reg)
+	b, full, fullWarns, out, err := importBoth(dir, league, name, reg)
 	if err != nil {
 		return nil, err
 	}
-	if b.Version != league {
-		return nil, fmt.Errorf("compare: %w: tree %s, league %s", ErrLeague, b.Version, league)
-	}
-	full, fullWarns, err := importFile(dir, pob.FullXML, reg)
-	if err != nil {
-		return nil, err
-	}
-	out := importMismatches(league, name, b, treeWarnings, full, fullWarns)
 	s := sim.Store()
 	c, _, err := build.Check(b, s)
 	if err != nil {
@@ -181,10 +173,32 @@ func compareBuild(dir, league string, reg *dataset.Registry, sim *simulator.Sim)
 	if err != nil {
 		return nil, err
 	}
+	gems, err := gemNames(full.Skills, s)
+	if err != nil {
+		return nil, err
+	}
 	return &Build{
 		League: league, Name: name, Meta: meta, Mismatches: append(out, ms...),
-		Layers: judgeLayers(v, ours), Blockers: blockers(st.Warnings(), fullWarns),
+		Layers: judgeLayers(v, ours), Blockers: blockers(st.Warnings(), fullWarns, gems),
 	}, nil
+}
+
+// importBoth imports a build's tree-only and full files and checks the imports.
+func importBoth(dir, league, name string, reg *dataset.Registry) (
+	tree, full *build.Build, fullWarns []build.Warning, mismatches []Mismatch, err error,
+) {
+	tree, treeWarnings, err := importFile(dir, pob.TreeOnlyXML, reg)
+	if err != nil {
+		return nil, nil, nil, nil, err
+	}
+	if tree.Version != league {
+		return nil, nil, nil, nil, fmt.Errorf("compare: %w: tree %s, league %s", ErrLeague, tree.Version, league)
+	}
+	full, fullWarns, err = importFile(dir, pob.FullXML, reg)
+	if err != nil {
+		return nil, nil, nil, nil, err
+	}
+	return tree, full, fullWarns, importMismatches(league, name, tree, treeWarnings, full, fullWarns), nil
 }
 
 // allocatedMismatches reports a tree whose node count differs from PoB's.

@@ -145,12 +145,19 @@
     "config": {
       "bandits": "kill-all",
       "campaign": "acts-1-5"
+    },
+    "skills": {
+      "groups": [
+        {
+          "gems": [
+            {
+              "id": "Metadata/Items/Gems/SkillGemRighteousFire",
+              "level": 0
+            }
+          ]
+        }
+      ]
     }
   },
-  "warnings": [
-    {
-      "code": "pob-skill-ignored",
-      "subject": "RF"
-    }
-  ]
+  "warnings": []
 }
