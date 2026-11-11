@@ -17,7 +17,6 @@ import (
 
 	"github.com/xaroth/pbt-engine/build"
 	"github.com/xaroth/pbt-engine/dataset"
-	"github.com/xaroth/pbt-engine/output"
 	pobimport "github.com/xaroth/pbt-engine/pob"
 	"github.com/xaroth/pbt-engine/simulator"
 )
@@ -34,39 +33,11 @@ var (
 // tolerance absorbs float noise; values are compared at the precision both sides round to.
 const tolerance = 1e-9
 
-// pobValue returns the PoB value of a catalogue output from PoB's outputs, and false when
-// PoB has none.
-type pobValue func(map[string]float64) (float64, bool)
-
-func key(k string) pobValue {
-	return func(o map[string]float64) (float64, bool) {
-		v, ok := o[k]
-		return v, ok
-	}
-}
-
-// maximum is <elem>Resist + Missing<elem>Resist: PoB has no plain maximum resistance key.
-func maximum(elem string) pobValue {
-	return func(o map[string]float64) (float64, bool) {
-		v, ok1 := o[elem+"Resist"]
-		m, ok2 := o["Missing"+elem+"Resist"]
-		return v + m, ok1 && ok2
-	}
-}
-
-// keyMap maps each pbt-engine catalogue output to its PoB value.
-func keyMap() map[output.Key]pobValue {
-	m := map[output.Key]pobValue{
-		"player.strength": key("Str"), "player.dexterity": key("Dex"), "player.intelligence": key("Int"),
-		"player.life": key("Life"), "player.mana": key("Mana"), "player.energy_shield": key("EnergyShield"),
-		"player.armour": key("Armour"), "player.evasion_rating": key("Evasion"),
-		"player.life_regeneration": key("LifeRegen"), "player.mana_regeneration": key("ManaRegen"),
-		"player.energy_shield_regeneration": key("EnergyShieldRegen"),
-	}
-	for _, e := range []struct{ ours, pob string }{{"fire", "Fire"}, {"cold", "Cold"}, {"lightning", "Lightning"}, {"chaos", "Chaos"}} {
-		m[output.Key("player."+e.ours+"_resistance")] = key(e.pob + "Resist")
-		m[output.Key("player.maximum_"+e.ours+"_resistance")] = maximum(e.pob)
-		m[output.Key("player.uncapped_"+e.ours+"_resistance")] = key(e.pob + "ResistTotal")
+// pobOutputs indexes the outputs of pob.Outputs by name.
+func pobOutputs() map[string]pob.Output {
+	m := map[string]pob.Output{}
+	for _, o := range pob.Outputs() {
+		m[o.Name] = o
 	}
 	return m
 }
@@ -246,8 +217,9 @@ func warnings(st *simulator.Stats, league, name string) []Mismatch {
 // compareOutputs compares every catalogue output of st with PoB's values v.
 func compareOutputs(outputs []simulator.Output, st *simulator.Stats, v *pob.Values, league, name string) ([]Mismatch, error) {
 	var out []Mismatch
+	table := pobOutputs()
 	for _, o := range outputs {
-		get, ok := keyMap()[o.Key]
+		get, ok := table[string(o.Key)]
 		if !ok {
 			return nil, fmt.Errorf("compare: %w %s", errNoKey, o.Key)
 		}
@@ -255,8 +227,8 @@ func compareOutputs(outputs []simulator.Output, st *simulator.Stats, v *pob.Valu
 		if !ok {
 			return nil, fmt.Errorf("compare: %w %s", errNoKey, o.Key)
 		}
-		p, has := get(v.TreeOnly.Outputs)
-		full, _ := get(v.Full.Outputs)
+		p, has := get.Value(v.TreeOnly.Outputs)
+		full, _ := get.Value(v.Full.Outputs)
 		if has && math.Abs(ours-p) <= tolerance {
 			continue
 		}

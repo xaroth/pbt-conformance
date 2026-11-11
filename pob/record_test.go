@@ -24,14 +24,14 @@ func TestRecord(t *testing.T) {
 	}
 	root := t.TempDir()
 	dir := filepath.Join(root, "builds", "3.29", "01-marauder-life-node")
-	xml, err := os.ReadFile(filepath.Join("..", "testdata", "marauder-life-node.xml"))
-	if err != nil {
-		t.Fatal(err)
-	}
 	if err := os.MkdirAll(dir, 0o755); err != nil {
 		t.Fatal(err)
 	}
-	for _, name := range []string{pob.FullXML, pob.TreeOnlyXML} {
+	for name, fixture := range map[string]string{pob.FullXML: "marauder-totem.xml", pob.TreeOnlyXML: "marauder-life-node.xml"} {
+		xml, err := os.ReadFile(filepath.Join("..", "testdata", fixture))
+		if err != nil {
+			t.Fatal(err)
+		}
 		if err := os.WriteFile(filepath.Join(dir, name), xml, 0o600); err != nil {
 			t.Fatal(err)
 		}
@@ -58,6 +58,7 @@ func TestRecord(t *testing.T) {
 		v.TreeOnly.Outputs["Life"] != 1150 {
 		t.Errorf("values: got %+v", v)
 	}
+	checkLayers(t, &v)
 	for _, name := range []string{pob.ValuesFile, pob.GearXML} {
 		path := filepath.Join(dir, name)
 		stored, err := os.ReadFile(path)
@@ -73,5 +74,25 @@ func TestRecord(t *testing.T) {
 		if err := os.WriteFile(path, stored, 0o600); err != nil {
 			t.Fatal(err)
 		}
+	}
+}
+
+// checkLayers checks that skill outputs are recorded for the full build only, which has skills,
+// and delivery ones for its totem.
+func checkLayers(t *testing.T, v *pob.Values) {
+	t.Helper()
+	if v.Full.MainSkill == nil || v.Full.MainSkill.ID != "Fireball" || v.Gear.MainSkill != nil || v.TreeOnly.MainSkill != nil {
+		t.Errorf("main skills: got %+v, %+v, %+v", v.Full.MainSkill, v.Gear.MainSkill, v.TreeOnly.MainSkill)
+	}
+	for _, k := range []string{"TotalDPS", "TotemLife"} {
+		_, full := v.Full.Outputs[k]
+		_, gear := v.Gear.Outputs[k]
+		_, tree := v.TreeOnly.Outputs[k]
+		if !full || gear || tree {
+			t.Errorf("%s recorded in full, gear, tree-only: %v, %v, %v; want only full", k, full, gear, tree)
+		}
+	}
+	if _, ok := v.TreeOnly.Outputs["BlockChance"]; !ok {
+		t.Errorf("tree-only: no defence output BlockChance")
 	}
 }

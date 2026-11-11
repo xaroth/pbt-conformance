@@ -32,7 +32,8 @@ var ErrStale = errors.New("stored pob files differ from a fresh run")
 const filePerm = 0o644
 
 // Values is a build's values file: PoB's results for the three XMLs and the release that made
-// them.
+// them. The skill, minion and delivery outputs are recorded for the full build only: the other
+// layers have no skills of their own.
 type Values struct {
 	PoB      pins.Release `json:"pob"`
 	Full     Result       `json:"full"`
@@ -110,7 +111,7 @@ func deriveAll(dirs []string, check bool) error {
 func storeAll(dirs []string, r pins.Release, res []Result, check bool) error {
 	var stale []string
 	for i, d := range dirs {
-		v := Values{PoB: r, Full: res[0], Gear: res[1], TreeOnly: res[2]}
+		v := Values{PoB: r, Full: res[0].restrict(true), Gear: res[1].restrict(false), TreeOnly: res[2].restrict(false)}
 		res = res[len(xmlNames()):]
 		same, err := store(d, v, check)
 		if err != nil {
