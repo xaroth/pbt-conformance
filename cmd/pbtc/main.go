@@ -3,7 +3,7 @@
 //	pbtc setup --cache <dir>
 //	pbtc pob --cache <dir> [--league <league>] [--check]
 //	pbtc data --cache <dir>
-//	pbtc compare (--cache <dir> | --datasets <dir>) [--league <league>]
+//	pbtc compare (--cache <dir> | --datasets <dir>) [--league <league>] [--scoreboard] [--json] [--hints <file>]
 //
 // setup builds the PoB runtime every pinned release needs (LuaJIT, lua-utf8, PoB checkouts)
 // into the cache directory, skipping what is already built. It needs git, make and cc.
@@ -20,7 +20,11 @@
 // per version) or else pulled into --cache as data does, and
 // compares it with the stored PoB values for the tree-only build. It lists every mismatch,
 // with its triage.json entry if one accepts it, and fails on untriaged mismatches and on
-// triage entries that match nothing.
+// triage entries that match nothing. With --scoreboard it follows the list with the
+// scoreboard: per league, layer and group of outputs how many builds pass, fail and are not
+// compared, how many of each kind pass everything, the outputs the engine lacks, and the stats,
+// gems and mechanics it leaves out by the number of builds they appear in, each stat with its
+// text from the --hints file if given. --json writes the list and the scoreboard as JSON.
 package main
 
 import (
@@ -48,7 +52,8 @@ const game = "poe1"
 
 var (
 	errUsage = errors.New("usage: pbtc setup --cache <dir> | pbtc pob --cache <dir> [--league <league>] [--check] | " +
-		"pbtc data --cache <dir> | pbtc compare (--cache <dir> | --datasets <dir>) [--league <league>]")
+		"pbtc data --cache <dir> | pbtc compare (--cache <dir> | --datasets <dir>) [--league <league>] " +
+		"[--scoreboard] [--json] [--hints <file>]")
 	errMismatch = errors.New("untriaged mismatches or stale triage entries")
 )
 
@@ -71,13 +76,23 @@ func run(ctx context.Context, args []string) error {
 	datasets := fs.String("datasets", "", "directory of datasets to compare with instead of pulling them (compare)")
 	league := fs.String("league", "", "league to run (pob, compare; default all pinned)")
 	check := fs.Bool("check", false, "fail on stored values that differ instead of writing (pob)")
+	var out output
+	fs.BoolVar(&out.scoreboard, "scoreboard", false, "follow the mismatches with the scoreboard (compare)")
+	fs.BoolVar(&out.json, "json", false, "write the mismatches and the scoreboard as JSON (compare)")
+	fs.StringVar(&out.hints, "hints", "", "JSON file of a text per game stat id, shown beside blocking stats (compare)")
 	if err := fs.Parse(args[1:]); err != nil {
 		return fmt.Errorf("%s: %w", args[0], err)
 	}
-	return dispatch(ctx, args[0], *cache, *datasets, *league, *check)
+	return dispatch(ctx, args[0], *cache, *datasets, *league, *check, out)
 }
 
-func dispatch(ctx context.Context, cmd, cache, datasets, league string, check bool) error {
+// output is how compare writes its result.
+type output struct {
+	scoreboard, json bool
+	hints            string
+}
+
+func dispatch(ctx context.Context, cmd, cache, datasets, league string, check bool, out output) error {
 	f, err := pins.Read(os.DirFS("."))
 	if err != nil {
 		return fmt.Errorf("%s: %w", cmd, err)
@@ -90,7 +105,7 @@ func dispatch(ctx context.Context, cmd, cache, datasets, league string, check bo
 		"setup":   {cache != "", func() error { return runSetup(ctx, f, cache) }},
 		"pob":     {cache != "", func() error { return runPoB(ctx, f, cache, league, check) }},
 		"data":    {cache != "", func() error { return runData(ctx, os.Stdout, f, cache) }},
-		"compare": {datasets != "" || cache != "", func() error { return runCompareFrom(ctx, f, cache, datasets, league) }},
+		"compare": {datasets != "" || cache != "", func() error { return runCompareFrom(ctx, f, cache, datasets, league, out) }},
 	}
 	c, ok := commands[cmd]
 	if !ok || !c.ready {
@@ -119,14 +134,14 @@ func runData(ctx context.Context, w io.Writer, f *pins.File, cache string) error
 }
 
 // runCompareFrom compares with the datasets under datasets, or pulled into cache without it.
-func runCompareFrom(ctx context.Context, f *pins.File, cache, datasets, league string) error {
+func runCompareFrom(ctx context.Context, f *pins.File, cache, datasets, league string, out output) error {
 	if datasets == "" {
 		var err error
 		if datasets, err = pullData(ctx, os.Stderr, f, cache); err != nil {
 			return err
 		}
 	}
-	return runCompare(os.Stdout, f, datasets, league)
+	return runCompare(os.Stdout, f, datasets, league, out)
 }
 
 // pullData brings the pinned leagues' datasets of the pinned pbt-data commit up to date under
@@ -154,21 +169,68 @@ func leagues(f *pins.File, league string) []string {
 	return slices.Sorted(maps.Keys(f.Games[game].Leagues))
 }
 
-func runCompare(w io.Writer, f *pins.File, datasets, league string) error {
+func runCompare(w io.Writer, f *pins.File, datasets, league string, out output) error {
 	triage, err := compare.ReadTriage(os.DirFS("."))
 	if err != nil {
 		return fmt.Errorf("compare: %w", err)
 	}
-	var all []compare.Mismatch
+	hints, err := readHints(out.hints)
+	if err != nil {
+		return err
+	}
+	builds, err := compareLeagues(f, datasets, league)
+	if err != nil {
+		return err
+	}
+	all := compare.Mismatches(builds)
+	stale := compare.Apply(all, triage)
+	if out.json {
+		if err := compare.Score(builds, all, stale, hints).WriteJSON(w); err != nil {
+			return fmt.Errorf("compare: %w", err)
+		}
+		return verdict(all, stale)
+	}
+	if err := report(w, all, stale); err != nil && !errors.Is(err, errMismatch) {
+		return err
+	}
+	if out.scoreboard {
+		if err := compare.Score(builds, all, stale, hints).WriteText(w); err != nil {
+			return fmt.Errorf("compare: %w", err)
+		}
+	}
+	return verdict(all, stale)
+}
+
+// readHints reads the hints file at path, empty without one.
+func readHints(path string) (map[string]string, error) {
+	if path == "" {
+		return map[string]string{}, nil
+	}
+	h, err := compare.ReadHints(path)
+	if err != nil {
+		return nil, fmt.Errorf("compare: %w", err)
+	}
+	return h, nil
+}
+
+func compareLeagues(f *pins.File, datasets, league string) ([]compare.Build, error) {
+	var builds []compare.Build
 	for _, l := range leagues(f, league) {
 		bs, err := compare.Run(".", datasets, f, game, l)
 		if err != nil {
-			return fmt.Errorf("compare %s: %w", l, err)
+			return nil, fmt.Errorf("compare %s: %w", l, err)
 		}
-		all = append(all, compare.Mismatches(bs)...)
+		builds = append(builds, bs...)
 	}
-	stale := compare.Apply(all, triage)
-	return report(w, all, stale)
+	return builds, nil
+}
+
+// verdict fails when a mismatch is untriaged or a triage entry stale.
+func verdict(ms []compare.Mismatch, stale []string) error {
+	if len(stale) > 0 || slices.ContainsFunc(ms, func(m compare.Mismatch) bool { return m.Triage == "" }) {
+		return errMismatch
+	}
+	return nil
 }
 
 // report lists the mismatches and stale triage entries and fails when any is not accepted.

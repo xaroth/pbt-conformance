@@ -182,6 +182,14 @@ func TestRun(t *testing.T) {
 	if diff := cmp.Diff(want, bs[0].Layers); diff != "" {
 		t.Errorf("layers (-want +got):\n%s", diff)
 	}
+	if bs[0].Meta.Kind != compare.Untagged {
+		t.Errorf("kind: got %q, want %q", bs[0].Meta.Kind, compare.Untagged)
+	}
+	for _, b := range []compare.Blocker{{Kind: compare.BlockerGem, Name: "Spell Totem"}, {Kind: compare.BlockerMechanic, Name: "skills"}} {
+		if !slices.Contains(bs[0].Blockers, b) {
+			t.Errorf("no blocker %+v in %+v", b, bs[0].Blockers)
+		}
+	}
 	if _, err := compare.Run(root, t.TempDir(), f, "poe1", "3.29"); !errors.Is(err, compare.ErrDataset) {
 		t.Errorf("missing dataset: got %v, want %v", err, compare.ErrDataset)
 	}
