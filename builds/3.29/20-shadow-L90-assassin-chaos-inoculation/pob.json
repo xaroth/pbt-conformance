@@ -51,7 +51,8 @@
     "mainSkill": {
       "group": 1,
       "id": "ViperStrikeAltX",
-      "name": "Viper Strike of the Mamba"
+      "name": "Viper Strike of the Mamba",
+      "attack": true
     }
   },
   "gear": {

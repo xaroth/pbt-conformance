@@ -9,6 +9,7 @@ import (
 	"github.com/google/go-cmp/cmp"
 
 	"github.com/xaroth/pbt-conformance/compare"
+	"github.com/xaroth/pbt-conformance/pob"
 )
 
 func TestReadMeta(t *testing.T) {
@@ -30,7 +31,9 @@ func TestReadMeta(t *testing.T) {
 		{"untagged is no kind to give", `{"kind": "untagged"}`, compare.Meta{}, compare.ErrMeta},
 		{"unknown content", `{"kind": "attack", "contains": ["flask"]}`, compare.Meta{}, compare.ErrMeta},
 		{"repeated content", `{"kind": "attack", "contains": ["mercenary", "mercenary"]}`, compare.Meta{}, compare.ErrMeta},
-		{"unknown field", `{"kind": "attack", "origin": "poe.ninja"}`, compare.Meta{}, compare.ErrMeta},
+		{"origin", `{"kind": "attack", "origin": {"url": "https://poe.ninja/x", "league": "Allflame", "snapshot": "0208"}}`,
+			compare.Meta{Kind: compare.KindAttack, Origin: &compare.Origin{URL: "https://poe.ninja/x", League: "Allflame", Snapshot: "0208"}}, nil},
+		{"unknown field", `{"kind": "attack", "source": "poe.ninja"}`, compare.Meta{}, compare.ErrMeta},
 	}
 	for _, testCase := range testCases {
 		t.Run(testCase.name, func(t *testing.T) {
@@ -49,5 +52,31 @@ func TestReadMeta(t *testing.T) {
 				t.Errorf("meta (-want +got):\n%s", diff)
 			}
 		})
+	}
+}
+
+func TestDetectKind(t *testing.T) {
+	t.Parallel()
+	dps := map[string]float64{"CombinedDPS": 100, "TotalDPS": 80}
+	dot := map[string]float64{"CombinedDPS": 100, "TotalDPS": 50}
+	tests := []struct {
+		name string
+		r    pob.Result
+		want compare.Kind
+	}{
+		{"default attack", pob.Result{MainSkill: &pob.MainSkill{}}, compare.Smoke},
+		{"no skill", pob.Result{}, compare.Smoke},
+		{"totem", pob.Result{MainSkill: &pob.MainSkill{Group: 1, Totem: true, Attack: true}, Outputs: dps}, compare.KindTotem},
+		{"mine", pob.Result{MainSkill: &pob.MainSkill{Group: 1, Mine: true}, Outputs: dps}, compare.KindTrapMine},
+		{"minion", pob.Result{MainSkill: &pob.MainSkill{Group: 1, Minion: &pob.Minion{}}}, compare.KindMinion},
+		{"no damage", pob.Result{MainSkill: &pob.MainSkill{Group: 1}}, compare.KindOther},
+		{"damage over time", pob.Result{MainSkill: &pob.MainSkill{Group: 1, Attack: true}, Outputs: dot}, compare.KindDoT},
+		{"attack", pob.Result{MainSkill: &pob.MainSkill{Group: 1, Attack: true}, Outputs: dps}, compare.KindAttack},
+		{"spell", pob.Result{MainSkill: &pob.MainSkill{Group: 1}, Outputs: dps}, compare.KindSpell},
+	}
+	for _, tc := range tests {
+		if got := compare.DetectKind(tc.r); got != tc.want {
+			t.Errorf("%s: got %s, want %s", tc.name, got, tc.want)
+		}
 	}
 }

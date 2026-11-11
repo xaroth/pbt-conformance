@@ -49,7 +49,8 @@
     },
     "mainSkill": {
       "id": "Melee",
-      "name": "Default Attack"
+      "name": "Default Attack",
+      "attack": true
     }
   },
   "gear": {

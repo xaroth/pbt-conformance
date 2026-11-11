@@ -50,7 +50,8 @@
     "mainSkill": {
       "group": 1,
       "id": "MoltenStrike",
-      "name": "Molten Strike"
+      "name": "Molten Strike",
+      "attack": true
     }
   },
   "gear": {
