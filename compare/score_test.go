@@ -148,6 +148,7 @@ func TestReadHints(t *testing.T) {
 	}
 	for name, body := range map[string]string{
 		"number":    `{"spell_damage_+%": 3}`,
+		"null":      `{"spell_damage_+%": null}`,
 		"no hint":   `{"spell_damage_+%": {"pob": []}}`,
 		"hint type": `{"spell_damage_+%": {"hint": 3}}`,
 		"list":      `["spell_damage_+%"]`,

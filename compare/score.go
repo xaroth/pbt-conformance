@@ -23,7 +23,10 @@ const GroupChecks pob.Group = "checks"
 // ErrHints marks a malformed hints file.
 var ErrHints = errors.New("invalid hints")
 
-var errNoHint = errors.New(`entry has no "hint" text`)
+var (
+	errNoHint   = errors.New(`entry has no "hint" text`)
+	errNullHint = errors.New("entry is null")
+)
 
 // Scoreboard says how many builds the engine gets right and what blocks the most.
 type Scoreboard struct {
@@ -106,6 +109,10 @@ func ReadHints(path string) (map[string]string, error) {
 
 // hintText reads one hints file entry, a text or an object with a text "hint" field.
 func hintText(v json.RawMessage) (string, error) {
+	// null would unmarshal into a string as "" without error.
+	if bytes.Equal(bytes.TrimSpace(v), []byte("null")) {
+		return "", errNullHint
+	}
 	var text string
 	if err := json.Unmarshal(v, &text); err == nil {
 		return text, nil
