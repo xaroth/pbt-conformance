@@ -1789,7 +1789,7 @@
     "kind": "pending",
     "league": "3.29",
     "reason": "Commander of Darkness (Necromancer, node 36017): \"You and nearby Allies have +30% to Elemental Resistances\"; the engine applies it only when affected by your auras, which it does not model yet",
-    "evidence": "The gap is 30 on each elemental resistance; the engine notes the stat as not applied (condition)",
+    "evidence": "Without tattoos and runegrafts the gap is 30 on each elemental resistance; the engine notes the stat as not applied (condition). In build 84 its fire and cold resistance tattoos add to the gap: fire 66 (ours -60, PoB 6) and cold 42 (ours -60, PoB -18), each 30 when PoB records it without them",
     "cases": [
       {"build": "84-witch-L100-necromancer-summon-raging-spirit", "output": "player.fire_resistance", "ours": -60, "pob": 6},
       {"build": "84-witch-L100-necromancer-summon-raging-spirit", "output": "player.cold_resistance", "ours": -60, "pob": -18},
