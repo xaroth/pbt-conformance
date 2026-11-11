@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathOfBuilding>
+	<Build ascendClassName="Gladiator" bandit="None" characterLevelAutoMode="false" className="Duelist" level="100" mainSocketGroup="2" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="3_0" viewMode="TREE">
+		<PlayerStat stat="AverageHit" value="0"/>
+		<PlayerStat stat="AverageBurstDamage" value="0"/>
+		<PlayerStat stat="Speed" value="0"/>
+		<PlayerStat stat="CritMultiplier" value="0"/>
+		<PlayerStat stat="HitChance" value="100"/>
+		<PlayerStat stat="TotalDPS" value="0"/>
+		<PlayerStat stat="TotalDot" value="0"/>
+		<PlayerStat stat="WithDotDPS" value="0"/>
+		<PlayerStat stat="CorruptingBloodDPS" value="1362287.2056835"/>
+		<PlayerStat stat="WithBleedDPS" value="0"/>
+		<PlayerStat stat="WithIgniteDPS" value="0"/>
+		<PlayerStat stat="WithPoisonDPS" value="0"/>
+		<PlayerStat stat="TotalDotDPS" value="1362287.2056835"/>
+		<PlayerStat stat="CullingDPS" value="0"/>
+		<PlayerStat stat="ReservationDPS" value="0"/>
+		<PlayerStat stat="CombinedDPS" value="1362287.2056835"/>
+		<PlayerStat stat="Cooldown" value="1.023"/>
+		<PlayerStat stat="ManaCost" value="0"/>
+		<PlayerStat stat="ManaPercentCost" value="0"/>
+		<PlayerStat stat="ManaPerSecondCost" value="0"/>
+		<PlayerStat stat="ManaPercentPerSecondCost" value="0"/>
+		<PlayerStat stat="LifeCost" value="4051"/>
+		<PlayerStat stat="LifePercentCost" value="0"/>
+		<PlayerStat stat="LifePerSecondCost" value="3959.9217986315"/>
+		<PlayerStat stat="LifePercentPerSecondCost" value="0"/>
+		<PlayerStat stat="ESCost" value="0"/>
+		<PlayerStat stat="ESPerSecondCost" value="0"/>
+		<PlayerStat stat="ESPercentPerSecondCost" value="0"/>
+		<PlayerStat stat="RageCost" value="0"/>
+		<PlayerStat stat="SoulCost" value="0"/>
+		<PlayerStat stat="Str" value="33"/>
+		<PlayerStat stat="Dex" value="72"/>
+		<PlayerStat stat="Int" value="34"/>
+		<PlayerStat stat="Devotion" value="0"/>
+		<PlayerStat stat="TotalEHP" value="672642.60613442"/>
+		<PlayerStat stat="PhysicalMaximumHitTaken" value="11171"/>
+		<PlayerStat stat="LightningMaximumHitTaken" value="20567"/>
+		<PlayerStat stat="FireMaximumHitTaken" value="21328"/>
+		<PlayerStat stat="ColdMaximumHitTaken" value="20567"/>
+		<PlayerStat stat="ChaosMaximumHitTaken" value="16456"/>
+		<PlayerStat stat="Life" value="4114"/>
+		<PlayerStat stat="Spec:LifeInc" value="110"/>
+		<PlayerStat stat="LifeUnreserved" value="4114"/>
+		<PlayerStat stat="LifeRecoverable" value="4114"/>
+		<PlayerStat stat="LifeUnreservedPercent" value="100"/>
+		<PlayerStat stat="LifeRegenRecovery" value="541.6"/>
+		<PlayerStat stat="LifeLeechGainRate" value="0"/>
+		<PlayerStat stat="Mana" value="710"/>
+		<PlayerStat stat="Spec:ManaInc" value="8"/>
+		<PlayerStat stat="ManaUnreserved" value="149"/>
+		<PlayerStat stat="ManaUnreservedPercent" value="20.985915492958"/>
+		<PlayerStat stat="ManaRegenRecovery" value="19.9"/>
+		<PlayerStat stat="ManaLeechGainRate" value="0"/>
+		<PlayerStat stat="EnergyShield" value="0"/>
+		<PlayerStat stat="EnergyShieldRecoveryCap" value="0"/>
+		<PlayerStat stat="Spec:EnergyShieldInc" value="21"/>
+		<PlayerStat stat="EnergyShieldRegenRecovery" value="0"/>
+		<PlayerStat stat="EnergyShieldLeechGainRate" value="0"/>
+		<PlayerStat stat="Ward" value="0"/>
+		<PlayerStat stat="RageRegenRecovery" value="0"/>
+		<PlayerStat stat="TotalBuildDegen" value="121.7744"/>
+		<PlayerStat stat="TotalNetRegen" value="439.7256"/>
+		<PlayerStat stat="NetLifeRegen" value="419.8256"/>
+		<PlayerStat stat="NetManaRegen" value="19.9"/>
+		<PlayerStat stat="NetEnergyShieldRegen" value="0"/>
+		<PlayerStat stat="Evasion" value="1139"/>
+		<PlayerStat stat="Spec:EvasionInc" value="84"/>
+		<PlayerStat stat="MeleeEvadeChance" value="0"/>
+		<PlayerStat stat="ProjectileEvadeChance" value="0"/>
+		<PlayerStat stat="Armour" value="33051"/>
+		<PlayerStat stat="Spec:ArmourInc" value="204"/>
+		<PlayerStat stat="PhysicalDamageReduction" value="90"/>
+		<PlayerStat stat="EffectiveBlockChance" value="96.7232"/>
+		<PlayerStat stat="EffectiveSpellBlockChance" value="95.7125"/>
+		<PlayerStat stat="AttackDodgeChance" value="0"/>
+		<PlayerStat stat="SpellDodgeChance" value="0"/>
+		<PlayerStat stat="EffectiveSpellSuppressionChance" value="19"/>
+		<PlayerStat stat="FireResist" value="76"/>
+		<PlayerStat stat="FireResistOverCap" value="56"/>
+		<PlayerStat stat="ColdResist" value="75"/>
+		<PlayerStat stat="ColdResistOverCap" value="68"/>
+		<PlayerStat stat="LightningResist" value="75"/>
+		<PlayerStat stat="LightningResistOverCap" value="65"/>
+		<PlayerStat stat="ChaosResist" value="75"/>
+		<PlayerStat stat="ChaosResistOverCap" value="27"/>
+		<PlayerStat stat="EffectiveMovementSpeedMod" value="2.856"/>
+		<PlayerStat stat="FullDPS" value="0"/>
+		<PlayerStat stat="FullDotDPS" value="0"/>
+		<PlayerStat stat="PowerCharges" value="0"/>
+		<PlayerStat stat="PowerChargesMax" value="3"/>
+		<PlayerStat stat="FrenzyCharges" value="4"/>
+		<PlayerStat stat="FrenzyChargesMax" value="4"/>
+		<PlayerStat stat="EnduranceCharges" value="6"/>
+		<PlayerStat stat="EnduranceChargesMax" value="6"/>
+		<TimelessData devotionVariant1="1" devotionVariant2="1" searchList="" searchListFallback=""/>
+	</Build>
+	<Tree activeSpec="1">
+		<Spec ascendClassId="2" classId="4" clusterHashFormatVersion="2" masteryEffects="{22480,23442},{37641,16215},{48717,48720},{52220,18859},{62588,31822}" nodes="476,1325,1572,1675,2491,2598,3644,4833,5197,5233,6204,6230,6289,6712,7600,8419,9402,10532,11730,11859,13714,14930,15405,16544,16775,17527,18103,18901,19144,19609,21650,22480,23027,23066,24083,24256,24538,24544,24914,26196,26564,26712,26725,27137,27864,28330,28475,28498,29353,29933,30380,30691,30733,31471,31683,31961,32245,32690,32730,33179,33287,33631,33725,33740,34171,34207,34400,34906,35288,35503,36881,36949,37326,37623,37641,38906,39678,40818,40867,40907,42911,43374,44169,44191,44202,44207,45803,46519,46578,46636,46910,47389,47421,48109,48287,48423,48717,48760,49080,49178,50197,50422,50570,50862,50986,52220,53118,54127,54629,55190,55485,55676,55854,58921,59928,60472,61262,62319,62429,62588,63282,63723,63976,64221,64587,64882,65034,65696,65698,65706,65760,65762,65770" secondaryAscendClassId="15" treeVersion="3_29">
+			<URL>
+				https://www.pathofexile.com/passive-skill-tree/AAAABgQ-fAHcBS0GJAaLCbsKJg48EuEUTRRxGDwYVhiRGjgg4yS6KSQt0i5TNZI6UjwtQKBBh0R3RrdJ1UrITJlUklfQWfNaGl4TXsBf2l_gYVJmVGfEaFhoZWoBbNhuqm87b1JyqXTtdqx343gNeu97w3zZffV_soGbggeDX4O9g8yFe4WfhmCIWonYiq-QEZBVkc6S95MJl_qa_p9yn6Ofy6efqW6siayfrKqsr7Lrtbe18rYstz65Hbk9u-28n70nvk2-eL-4wBrEFcT2xYrGrsv8z37Tb9Vl15bYvdl82i7mKeoY7DjvTvNv8930fPcy-Ov56Prd_Ev9cv4KBgCgAKIAqgDgAOIA6gVbklfQP1eTCb5Qvk1Jq8v8fE70fA==
+			</URL>
+			<Sockets>
+			</Sockets>
+			<Overrides>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/KitavaTribePassiveBG.png" dn="Tattoo of the Kitava Warrior" icon="Art/2DArt/SkillIcons/passives/damage.png" nodeId="476">
+					5% increased Physical Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/KitavaTribePassiveBG.png" dn="Tattoo of the Kitava Warrior" icon="Art/2DArt/SkillIcons/passives/damage.png" nodeId="3644">
+					5% increased Physical Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/KitavaTribePassiveBG.png" dn="Tattoo of the Kitava Warrior" icon="Art/2DArt/SkillIcons/passives/damage.png" nodeId="5233">
+					5% increased Physical Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/KitavaTribePassiveBG.png" dn="Tattoo of the Kitava Warrior" icon="Art/2DArt/SkillIcons/passives/damage.png" nodeId="11859">
+					5% increased Physical Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/KitavaTribePassiveBG.png" dn="Tattoo of the Kitava Warrior" icon="Art/2DArt/SkillIcons/passives/damage.png" nodeId="14930">
+					5% increased Physical Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/RamakoTribePassiveBG.png" dn="Tattoo of the Ramako Fleetfoot" icon="Art/2DArt/SkillIcons/passives/MovementSpeedandEvasionPassive.png" nodeId="16544">
+					2% increased Movement Speed
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/KitavaTribePassiveBG.png" dn="Tattoo of the Kitava Warrior" icon="Art/2DArt/SkillIcons/passives/damage.png" nodeId="16775">
+					5% increased Physical Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/RamakoTribePassiveBG.png" dn="Tattoo of the Ramako Fleetfoot" icon="Art/2DArt/SkillIcons/passives/MovementSpeedandEvasionPassive.png" nodeId="18103">
+					2% increased Movement Speed
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/KitavaTribePassiveBG.png" dn="Tattoo of the Kitava Warrior" icon="Art/2DArt/SkillIcons/passives/damage.png" nodeId="23027">
+					5% increased Physical Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/KitavaTribePassiveBG.png" dn="Tattoo of the Kitava Warrior" icon="Art/2DArt/SkillIcons/passives/damage.png" nodeId="24083">
+					5% increased Physical Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/KitavaTribePassiveBG.png" dn="Tattoo of the Kitava Warrior" icon="Art/2DArt/SkillIcons/passives/damage.png" nodeId="24914">
+					5% increased Physical Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/KitavaTribePassiveBG.png" dn="Tattoo of the Kitava Warrior" icon="Art/2DArt/SkillIcons/passives/damage.png" nodeId="28330">
+					5% increased Physical Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/KitavaTribePassiveBG.png" dn="Tattoo of the Kitava Warrior" icon="Art/2DArt/SkillIcons/passives/damage.png" nodeId="29353">
+					5% increased Physical Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/TasalioTribePassiveBG.png" dn="Tattoo of the Tasalio Shaman" icon="Art/2DArt/SkillIcons/passives/CurseCastSpeed.png" nodeId="30691">
+					5% chance to Hinder Enemies on Hit with Spells
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/KitavaTribePassiveBG.png" dn="Tattoo of the Kitava Warrior" icon="Art/2DArt/SkillIcons/passives/damage.png" nodeId="30733">
+					5% increased Physical Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/KitavaTribePassiveBG.png" dn="Tattoo of the Kitava Warrior" icon="Art/2DArt/SkillIcons/passives/damage.png" nodeId="34171">
+					5% increased Physical Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/KitavaTribePassiveBG.png" dn="Tattoo of the Kitava Warrior" icon="Art/2DArt/SkillIcons/passives/damage.png" nodeId="34400">
+					5% increased Physical Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/KitavaTribePassiveBG.png" dn="Tattoo of the Kitava Warrior" icon="Art/2DArt/SkillIcons/passives/damage.png" nodeId="40867">
+					5% increased Physical Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/KitavaTribePassiveBG.png" dn="Tattoo of the Kitava Warrior" icon="Art/2DArt/SkillIcons/passives/damage.png" nodeId="42911">
+					5% increased Physical Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/KitavaTribePassiveBG.png" dn="Tattoo of the Kitava Warrior" icon="Art/2DArt/SkillIcons/passives/damage.png" nodeId="43374">
+					5% increased Physical Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/KitavaTribePassiveBG.png" dn="Tattoo of the Kitava Warrior" icon="Art/2DArt/SkillIcons/passives/damage.png" nodeId="44202">
+					5% increased Physical Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/KitavaTribePassiveBG.png" dn="Tattoo of the Kitava Warrior" icon="Art/2DArt/SkillIcons/passives/damage.png" nodeId="46578">
+					5% increased Physical Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/KitavaTribePassiveBG.png" dn="Tattoo of the Kitava Warrior" icon="Art/2DArt/SkillIcons/passives/damage.png" nodeId="46910">
+					5% increased Physical Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/KitavaTribePassiveBG.png" dn="Tattoo of the Kitava Warrior" icon="Art/2DArt/SkillIcons/passives/damage.png" nodeId="49178">
+					5% increased Physical Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/KitavaTribePassiveBG.png" dn="Tattoo of the Kitava Warrior" icon="Art/2DArt/SkillIcons/passives/damage.png" nodeId="50570">
+					5% increased Physical Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/KitavaTribePassiveBG.png" dn="Tattoo of the Kitava Warrior" icon="Art/2DArt/SkillIcons/passives/damage.png" nodeId="59928">
+					5% increased Physical Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/KitavaTribePassiveBG.png" dn="Tattoo of the Kitava Warrior" icon="Art/2DArt/SkillIcons/passives/damage.png" nodeId="60472">
+					5% increased Physical Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/KitavaTribePassiveBG.png" dn="Tattoo of the Kitava Warrior" icon="Art/2DArt/SkillIcons/passives/damage.png" nodeId="61262">
+					5% increased Physical Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/KitavaTribePassiveBG.png" dn="Tattoo of the Kitava Warrior" icon="Art/2DArt/SkillIcons/passives/damage.png" nodeId="62429">
+					5% increased Physical Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/Village/RuneCraftingPassiveBG.png" dn="Runegraft of the Warp" icon="Art/2DArt/SkillIcons/passives/AtlasTrees/RuneGraftingIcon11.png" nodeId="62588">
+					Buffs on you expire 30% slower
+					Debuffs on you expire 30% faster
+					Limited to 1 Runegraft of the Warp
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/KitavaTribePassiveBG.png" dn="Tattoo of the Kitava Warrior" icon="Art/2DArt/SkillIcons/passives/damage.png" nodeId="63282">
+					5% increased Physical Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/KitavaTribePassiveBG.png" dn="Tattoo of the Kitava Warrior" icon="Art/2DArt/SkillIcons/passives/damage.png" nodeId="63723">
+					5% increased Physical Damage
+				</Override>
+			</Overrides>
+		</Spec>
+	</Tree>
+</PathOfBuilding>

@@ -1,0 +1,11 @@
+{
+  "kind": "damage-over-time",
+  "contains": [
+    "cluster-jewel"
+  ],
+  "origin": {
+    "url": "https://poe.ninja/poe1/builds/allflame/character/%EB%B0%94%EB%A1%9C%EA%B7%B8%EA%B1%B0%EC%97%AC-1485/COTA_Halbae",
+    "league": "Allflame",
+    "snapshot": "0208-20261111-47167"
+  }
+}

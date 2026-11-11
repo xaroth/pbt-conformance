@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathOfBuilding>
+	<Build ascendClassName="Hierophant" bandit="None" characterLevelAutoMode="false" className="Templar" level="100" mainSocketGroup="2" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="3_0" viewMode="TREE">
+		<PlayerStat stat="AverageHit" value="0"/>
+		<PlayerStat stat="AverageBurstDamage" value="0"/>
+		<PlayerStat stat="Speed" value="0"/>
+		<PlayerStat stat="CritMultiplier" value="1.5"/>
+		<PlayerStat stat="HitChance" value="100"/>
+		<PlayerStat stat="TotalDPS" value="0"/>
+		<PlayerStat stat="TotalDot" value="7451996.2705148"/>
+		<PlayerStat stat="WithDotDPS" value="7451996.2705148"/>
+		<PlayerStat stat="WithBleedDPS" value="0"/>
+		<PlayerStat stat="WithIgniteDPS" value="0"/>
+		<PlayerStat stat="WithPoisonDPS" value="0"/>
+		<PlayerStat stat="TotalDotDPS" value="7451996.2705148"/>
+		<PlayerStat stat="CullingDPS" value="0"/>
+		<PlayerStat stat="ReservationDPS" value="0"/>
+		<PlayerStat stat="CombinedDPS" value="7451996.2705148"/>
+		<PlayerStat stat="Cooldown" value="0.33"/>
+		<PlayerStat stat="AreaOfEffectRadiusMetres" value="4.3"/>
+		<PlayerStat stat="ManaCost" value="0"/>
+		<PlayerStat stat="ManaPercentCost" value="0"/>
+		<PlayerStat stat="ManaPerSecondCost" value="0"/>
+		<PlayerStat stat="ManaPercentPerSecondCost" value="0"/>
+		<PlayerStat stat="LifeCost" value="0"/>
+		<PlayerStat stat="LifePercentCost" value="0"/>
+		<PlayerStat stat="LifePerSecondCost" value="0"/>
+		<PlayerStat stat="LifePercentPerSecondCost" value="0"/>
+		<PlayerStat stat="ESCost" value="0"/>
+		<PlayerStat stat="ESPerSecondCost" value="0"/>
+		<PlayerStat stat="ESPercentPerSecondCost" value="0"/>
+		<PlayerStat stat="RageCost" value="0"/>
+		<PlayerStat stat="SoulCost" value="0"/>
+		<PlayerStat stat="Str" value="159"/>
+		<PlayerStat stat="ReqStr" value="159"/>
+		<PlayerStat stat="Dex" value="149"/>
+		<PlayerStat stat="ReqDex" value="114"/>
+		<PlayerStat stat="Int" value="415"/>
+		<PlayerStat stat="ReqInt" value="159"/>
+		<PlayerStat stat="Devotion" value="160"/>
+		<PlayerStat stat="TotalEHP" value="147336.82157515"/>
+		<PlayerStat stat="PhysicalMaximumHitTaken" value="23691"/>
+		<PlayerStat stat="LightningMaximumHitTaken" value="90192"/>
+		<PlayerStat stat="FireMaximumHitTaken" value="90192"/>
+		<PlayerStat stat="ColdMaximumHitTaken" value="90192"/>
+		<PlayerStat stat="ChaosMaximumHitTaken" value="14030"/>
+		<PlayerStat stat="Life" value="1410"/>
+		<PlayerStat stat="Spec:LifeInc" value="0"/>
+		<PlayerStat stat="LifeUnreserved" value="4"/>
+		<PlayerStat stat="LifeRecoverable" value="4"/>
+		<PlayerStat stat="LifeUnreservedPercent" value="0.28368794326241"/>
+		<PlayerStat stat="LifeRegenRecovery" value="0"/>
+		<PlayerStat stat="LifeLeechGainRate" value="0"/>
+		<PlayerStat stat="Mana" value="12125"/>
+		<PlayerStat stat="Spec:ManaInc" value="459"/>
+		<PlayerStat stat="ManaUnreserved" value="12125"/>
+		<PlayerStat stat="ManaUnreservedPercent" value="100"/>
+		<PlayerStat stat="ManaRegenRecovery" value="1431"/>
+		<PlayerStat stat="ManaLeechGainRate" value="0"/>
+		<PlayerStat stat="EnergyShield" value="9845"/>
+		<PlayerStat stat="EnergyShieldRecoveryCap" value="9845"/>
+		<PlayerStat stat="Spec:EnergyShieldInc" value="62"/>
+		<PlayerStat stat="EnergyShieldRegenRecovery" value="1745"/>
+		<PlayerStat stat="EnergyShieldLeechGainRate" value="0"/>
+		<PlayerStat stat="Ward" value="0"/>
+		<PlayerStat stat="RageRegenRecovery" value="0"/>
+		<PlayerStat stat="TotalBuildDegen" value="824.985"/>
+		<PlayerStat stat="TotalNetRegen" value="2351.015"/>
+		<PlayerStat stat="NetLifeRegen" value="0"/>
+		<PlayerStat stat="NetManaRegen" value="1431"/>
+		<PlayerStat stat="NetEnergyShieldRegen" value="920.015"/>
+		<PlayerStat stat="Evasion" value="709"/>
+		<PlayerStat stat="Spec:EvasionInc" value="0"/>
+		<PlayerStat stat="MeleeEvadeChance" value="0"/>
+		<PlayerStat stat="ProjectileEvadeChance" value="0"/>
+		<PlayerStat stat="Armour" value="42207"/>
+		<PlayerStat stat="Spec:ArmourInc" value="83"/>
+		<PlayerStat stat="PhysicalDamageReduction" value="90"/>
+		<PlayerStat stat="EffectiveBlockChance" value="37"/>
+		<PlayerStat stat="EffectiveSpellBlockChance" value="26"/>
+		<PlayerStat stat="AttackDodgeChance" value="0"/>
+		<PlayerStat stat="SpellDodgeChance" value="0"/>
+		<PlayerStat stat="EffectiveSpellSuppressionChance" value="0"/>
+		<PlayerStat stat="FireResist" value="90"/>
+		<PlayerStat stat="FireResistOverCap" value="144"/>
+		<PlayerStat stat="ColdResist" value="90"/>
+		<PlayerStat stat="ColdResistOverCap" value="18"/>
+		<PlayerStat stat="LightningResist" value="90"/>
+		<PlayerStat stat="LightningResistOverCap" value="9"/>
+		<PlayerStat stat="ChaosResist" value="9"/>
+		<PlayerStat stat="ChaosResistOverCap" value="0"/>
+		<PlayerStat stat="EffectiveMovementSpeedMod" value="2"/>
+		<PlayerStat stat="FullDPS" value="0"/>
+		<PlayerStat stat="FullDotDPS" value="0"/>
+		<PlayerStat stat="PowerCharges" value="4"/>
+		<PlayerStat stat="PowerChargesMax" value="4"/>
+		<PlayerStat stat="FrenzyCharges" value="1"/>
+		<PlayerStat stat="FrenzyChargesMax" value="3"/>
+		<PlayerStat stat="EnduranceCharges" value="4"/>
+		<PlayerStat stat="EnduranceChargesMax" value="4"/>
+		<TimelessData devotionVariant1="1" devotionVariant2="1" searchList="" searchListFallback=""/>
+	</Build>
+	<Tree activeSpec="1">
+		<Spec ascendClassId="2" classId="5" clusterHashFormatVersion="2" masteryEffects="{6507,23621},{18240,35810},{30393,37614}" nodes="922,1006,1031,2550,2913,3452,6230,6507,7388,7444,7594,7614,7938,7960,9408,9939,10115,10221,10490,11046,11551,11688,12250,13170,13191,14021,15405,16775,18033,18240,18767,19635,20228,20987,21033,21958,21984,22315,22472,22473,22618,22637,24362,25651,25714,25970,26270,26740,26866,26960,27163,27415,29026,29712,29994,30393,30940,31703,31819,32245,32345,32710,33479,33545,33631,33740,33755,34423,34601,34907,35556,35958,36634,36678,37671,38516,38701,39916,40510,41263,42760,43000,44797,44908,45067,45456,45680,46092,46340,46897,46910,47251,48118,48298,48514,48768,48778,49605,50422,50862,51108,51923,52502,53279,54396,55332,55906,56029,57167,57736,60090,60247,60388,60398,61419,61525,63425,63976,64210,64583,65097,65552,65558,65561,65568,65570,65578,65888,65890,65898,66576,66579,66582,66585" secondaryAscendClassId="12" treeVersion="3_29">
+			<URL>
+				https://www.pathofexile.com/passive-skill-tree/AAAABgUydgOaA-4EBwn2C2ENfBhWGWsc3B0UHaodvh8CHxgkwCeDJ-0o-ismLR8tqC_aM3IzhzbFPC1Bh0ZxR0BJT0yzTwRR-1IpVcZV4FcrV8hXyVhaWG1fKmQzZHJlcmaeaHRo8mlQahtrF3FidBB1Kna5e9d8S331fll_xoLHgwmDX4PMg9uGd4cpiFuK5Ix2jxqPRpMnlnSXLZvsnj6hL6cIp_iu_a9ssAuxkLJwtAy1BLcxtz64k7v2vKq9gr6AvorBxcT2xq7HpMrTzRbQH9R82CTaYtrd30_hiOq661fr5Ovu7-v3wfno-tL8R_5JDQAQABYAGQAgACIAKgFgAWIBagQQBBMEFgQZA1xFGWuL4kdAku52uQ==
+			</URL>
+			<Sockets>
+			</Sockets>
+			<Overrides>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/TasalioTribePassiveBG.png" dn="Tattoo of the Tasalio Tideshifter" icon="Art/2DArt/SkillIcons/passives/stundex.png" nodeId="2913">
+					10% chance to Avoid being Stunned
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ValakoTribePassiveBG.png" dn="Tattoo of the Valako Shieldbearer" icon="Art/2DArt/SkillIcons/passives/ShieldAttackDamage.png" nodeId="15405">
+					+1% Chance to Block Attack Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraPassiveBG.png" dn="Journey Tattoo of the Mind" icon="Art/2DArt/SkillIcons/passives/HinekoraPassiveIcon2.png" nodeId="32245">
+					+30 to maximum Mana per Allocated Journey Tattoo of the Mind
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraPassiveBG.png" dn="Journey Tattoo of the Mind" icon="Art/2DArt/SkillIcons/passives/HinekoraPassiveIcon2.png" nodeId="32345">
+					+30 to maximum Mana per Allocated Journey Tattoo of the Mind
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ValakoTribePassiveBG.png" dn="Tattoo of the Valako Shieldbearer" icon="Art/2DArt/SkillIcons/passives/ShieldAttackDamage.png" nodeId="33740">
+					+1% Chance to Block Attack Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/TukohamaTribePassiveBG.png" dn="Tattoo of the Tukohama Shaman" icon="Art/2DArt/SkillIcons/passives/lifepercentage.png" nodeId="34171">
+					Regenerate 0.3% of Life per second
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraPassiveBG.png" dn="Journey Tattoo of the Mind" icon="Art/2DArt/SkillIcons/passives/HinekoraPassiveIcon2.png" nodeId="34601">
+					+30 to maximum Mana per Allocated Journey Tattoo of the Mind
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ValakoTribePassiveBG.png" dn="Tattoo of the Valako Shieldbearer" icon="Art/2DArt/SkillIcons/passives/ShieldAttackDamage.png" nodeId="35556">
+					+1% Chance to Block Attack Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ValakoTribePassiveBG.png" dn="Tattoo of the Valako Shieldbearer" icon="Art/2DArt/SkillIcons/passives/ShieldAttackDamage.png" nodeId="39916">
+					+1% Chance to Block Attack Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ValakoTribePassiveBG.png" dn="Tattoo of the Valako Shieldbearer" icon="Art/2DArt/SkillIcons/passives/ShieldAttackDamage.png" nodeId="44908">
+					+1% Chance to Block Attack Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ValakoTribePassiveBG.png" dn="Tattoo of the Valako Shieldbearer" icon="Art/2DArt/SkillIcons/passives/ShieldAttackDamage.png" nodeId="50422">
+					+1% Chance to Block Attack Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ValakoTribePassiveBG.png" dn="Tattoo of the Valako Shieldbearer" icon="Art/2DArt/SkillIcons/passives/ShieldAttackDamage.png" nodeId="50862">
+					+1% Chance to Block Attack Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraPassiveBG.png" dn="Journey Tattoo of the Mind" icon="Art/2DArt/SkillIcons/passives/HinekoraPassiveIcon2.png" nodeId="56029">
+					+30 to maximum Mana per Allocated Journey Tattoo of the Mind
+				</Override>
+			</Overrides>
+		</Spec>
+	</Tree>
+</PathOfBuilding>

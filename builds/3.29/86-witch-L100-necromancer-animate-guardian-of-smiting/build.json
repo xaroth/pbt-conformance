@@ -1,0 +1,12 @@
+{
+  "kind": "minion",
+  "contains": [
+    "cluster-jewel",
+    "item-skill"
+  ],
+  "origin": {
+    "url": "https://poe.ninja/poe1/builds/allflame/character/tzxstc-0272/Af_goHappy",
+    "league": "Allflame",
+    "snapshot": "0208-20261111-47167"
+  }
+}

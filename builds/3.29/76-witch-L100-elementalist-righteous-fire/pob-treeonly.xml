@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathOfBuilding>
+	<Build ascendClassName="Elementalist" bandit="None" characterLevelAutoMode="false" className="Witch" level="100" mainSocketGroup="1" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="3_0" viewMode="TREE">
+		<PlayerStat stat="AverageHit" value="0"/>
+		<PlayerStat stat="AverageBurstDamage" value="0"/>
+		<PlayerStat stat="Speed" value="0"/>
+		<PlayerStat stat="CritMultiplier" value="1.5"/>
+		<PlayerStat stat="HitChance" value="100"/>
+		<PlayerStat stat="TotalDPS" value="0"/>
+		<PlayerStat stat="TotalDot" value="13004330.706553"/>
+		<PlayerStat stat="WithDotDPS" value="13004330.706553"/>
+		<PlayerStat stat="WithBleedDPS" value="0"/>
+		<PlayerStat stat="WithIgniteDPS" value="0"/>
+		<PlayerStat stat="WithPoisonDPS" value="0"/>
+		<PlayerStat stat="TotalDotDPS" value="13004330.706553"/>
+		<PlayerStat stat="CullingDPS" value="0"/>
+		<PlayerStat stat="ReservationDPS" value="0"/>
+		<PlayerStat stat="CombinedDPS" value="13004330.706553"/>
+		<PlayerStat stat="Cooldown" value="0.33"/>
+		<PlayerStat stat="AreaOfEffectRadiusMetres" value="3.4"/>
+		<PlayerStat stat="ManaCost" value="0"/>
+		<PlayerStat stat="ManaPercentCost" value="0"/>
+		<PlayerStat stat="ManaPerSecondCost" value="0"/>
+		<PlayerStat stat="ManaPercentPerSecondCost" value="0"/>
+		<PlayerStat stat="LifeCost" value="0"/>
+		<PlayerStat stat="LifePercentCost" value="0"/>
+		<PlayerStat stat="LifePerSecondCost" value="0"/>
+		<PlayerStat stat="LifePercentPerSecondCost" value="0"/>
+		<PlayerStat stat="ESCost" value="0"/>
+		<PlayerStat stat="ESPerSecondCost" value="0"/>
+		<PlayerStat stat="ESPercentPerSecondCost" value="0"/>
+		<PlayerStat stat="RageCost" value="0"/>
+		<PlayerStat stat="SoulCost" value="0"/>
+		<PlayerStat stat="Str" value="226"/>
+		<PlayerStat stat="ReqStr" value="224"/>
+		<PlayerStat stat="Dex" value="119"/>
+		<PlayerStat stat="ReqDex" value="114"/>
+		<PlayerStat stat="Int" value="162"/>
+		<PlayerStat stat="ReqInt" value="159"/>
+		<PlayerStat stat="Devotion" value="0"/>
+		<PlayerStat stat="TotalEHP" value="172998.96882665"/>
+		<PlayerStat stat="PhysicalMaximumHitTaken" value="27954"/>
+		<PlayerStat stat="LightningMaximumHitTaken" value="173411"/>
+		<PlayerStat stat="FireMaximumHitTaken" value="200089"/>
+		<PlayerStat stat="ColdMaximumHitTaken" value="173411"/>
+		<PlayerStat stat="ChaosMaximumHitTaken" value="88651"/>
+		<PlayerStat stat="Life" value="19060"/>
+		<PlayerStat stat="Spec:LifeInc" value="161"/>
+		<PlayerStat stat="LifeUnreserved" value="19060"/>
+		<PlayerStat stat="LifeRecoverable" value="19060"/>
+		<PlayerStat stat="LifeUnreservedPercent" value="100"/>
+		<PlayerStat stat="LifeRegenRecovery" value="2982.2"/>
+		<PlayerStat stat="LifeLeechGainRate" value="0"/>
+		<PlayerStat stat="Mana" value="0"/>
+		<PlayerStat stat="Spec:ManaInc" value="0"/>
+		<PlayerStat stat="ManaRegenRecovery" value="0"/>
+		<PlayerStat stat="ManaLeechGainRate" value="0"/>
+		<PlayerStat stat="EnergyShield" value="3310"/>
+		<PlayerStat stat="EnergyShieldRecoveryCap" value="3310"/>
+		<PlayerStat stat="Spec:EnergyShieldInc" value="12"/>
+		<PlayerStat stat="EnergyShieldRegenRecovery" value="0"/>
+		<PlayerStat stat="EnergyShieldLeechGainRate" value="0"/>
+		<PlayerStat stat="Ward" value="0"/>
+		<PlayerStat stat="RageRegenRecovery" value="0"/>
+		<PlayerStat stat="TotalBuildDegen" value="1752.39"/>
+		<PlayerStat stat="TotalNetRegen" value="1229.81"/>
+		<PlayerStat stat="NetLifeRegen" value="1229.81"/>
+		<PlayerStat stat="NetManaRegen" value="0"/>
+		<PlayerStat stat="NetEnergyShieldRegen" value="0"/>
+		<PlayerStat stat="Evasion" value="0"/>
+		<PlayerStat stat="Spec:EvasionInc" value="24"/>
+		<PlayerStat stat="MeleeEvadeChance" value="0"/>
+		<PlayerStat stat="ProjectileEvadeChance" value="0"/>
+		<PlayerStat stat="Armour" value="10442"/>
+		<PlayerStat stat="Spec:ArmourInc" value="72"/>
+		<PlayerStat stat="PhysicalDamageReduction" value="61"/>
+		<PlayerStat stat="EffectiveBlockChance" value="25"/>
+		<PlayerStat stat="EffectiveSpellBlockChance" value="11"/>
+		<PlayerStat stat="AttackDodgeChance" value="0"/>
+		<PlayerStat stat="SpellDodgeChance" value="0"/>
+		<PlayerStat stat="EffectiveSpellSuppressionChance" value="6"/>
+		<PlayerStat stat="FireResist" value="90"/>
+		<PlayerStat stat="FireResistOverCap" value="102"/>
+		<PlayerStat stat="ColdResist" value="88"/>
+		<PlayerStat stat="ColdResistOverCap" value="101"/>
+		<PlayerStat stat="LightningResist" value="88"/>
+		<PlayerStat stat="LightningResistOverCap" value="81"/>
+		<PlayerStat stat="ChaosResist" value="75"/>
+		<PlayerStat stat="ChaosResistOverCap" value="0"/>
+		<PlayerStat stat="EffectiveMovementSpeedMod" value="2.22"/>
+		<PlayerStat stat="FullDPS" value="0"/>
+		<PlayerStat stat="FullDotDPS" value="0"/>
+		<PlayerStat stat="PowerCharges" value="0"/>
+		<PlayerStat stat="PowerChargesMax" value="3"/>
+		<PlayerStat stat="FrenzyCharges" value="0"/>
+		<PlayerStat stat="FrenzyChargesMax" value="3"/>
+		<PlayerStat stat="EnduranceCharges" value="0"/>
+		<PlayerStat stat="EnduranceChargesMax" value="3"/>
+		<TimelessData devotionVariant1="1" devotionVariant2="1" searchList="" searchListFallback=""/>
+	</Build>
+	<Tree activeSpec="1">
+		<Spec ascendClassId="2" classId="3" clusterHashFormatVersion="2" masteryEffects="{4139,31822},{11505,36313},{12125,64381},{12382,38454},{25011,21468},{32241,34242},{41415,47642},{64406,7137}" nodes="1031,1325,2491,3644,4139,4367,4397,4713,5197,5233,5743,5916,6230,6289,6712,7388,7444,7600,7938,7960,9408,10532,11505,12125,12382,12738,13714,14930,14936,15117,15405,16023,16544,16775,18103,18901,19144,19595,20987,21650,21958,23027,24083,24914,25011,26196,26270,26712,26725,26740,27038,28330,28475,29049,29353,29712,30380,30733,31471,31683,31875,32241,32245,33287,33631,33740,33755,34171,34400,35288,35503,36542,36634,36678,36881,36949,37114,37569,39841,41415,44169,44184,44202,46519,46578,46910,48287,49080,49178,50197,50422,50570,50862,52502,53118,53123,54127,54447,55190,55485,55676,55906,57197,57264,57279,58218,58998,59928,60398,60472,61259,61262,61419,62319,62429,63282,63447,63723,63976,64210,64406,64587,65034,65568,65570,65574,65575,65578,65696,65698,65706,65760,65762,65770" secondaryAscendClassId="15" treeVersion="3_29">
+			<URL>
+				https://www.pathofexile.com/passive-skill-tree/AAAABgM-eAQHBS0Juw48ECsRDxEtEmkUTRRxFm8XHBhWGJEaOBzcHRQfAh8YJMApJCzxL10wXjHCNZI6UjpYOw08LUCgQYdGt0nVSshMi1H7VJJVxlnzXhNhUmGzZlRmnmhYaGVodGmebqpvO3F5cql0EHaseA1673vDfIN98X31ggeDX4PMg9uFe4ZgidiKr46-jxqPRpARkFWQ-pLBm6Ghx6yJrJisqrW3tfK3Pryfv7jAGsQVxPbFisauzRbPfs-D02_Xlti92XzaYt9t37Dfv-Nq5nbqGOvu7DjvS-9O7-vzb_Pd9zL31_jr-ej60vuW_Ev-CgsAIAAiACYAJwAqAKAAogCqAOAA4gDqCHxOECuN2Szx-30vXZY2MF5T3GGzhcJ98boaoccb4fuW
+			</URL>
+			<Sockets>
+			</Sockets>
+			<Overrides>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Storyteller" icon="Art/2DArt/SkillIcons/passives/skillduration.png" nodeId="4397">
+					+3% to Chaos Resistance
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/TukohamaTribePassiveBG.png" dn="Tattoo of the Tukohama Shaman" icon="Art/2DArt/SkillIcons/passives/lifepercentage.png" nodeId="23027">
+					Regenerate 0.3% of Life per second
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/TukohamaTribePassiveBG.png" dn="Tattoo of the Tukohama Shaman" icon="Art/2DArt/SkillIcons/passives/lifepercentage.png" nodeId="29353">
+					Regenerate 0.3% of Life per second
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/TukohamaTribePassiveBG.png" dn="Tattoo of the Tukohama Shaman" icon="Art/2DArt/SkillIcons/passives/lifepercentage.png" nodeId="34171">
+					Regenerate 0.3% of Life per second
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Storyteller" icon="Art/2DArt/SkillIcons/passives/skillduration.png" nodeId="36542">
+					+3% to Chaos Resistance
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Storyteller" icon="Art/2DArt/SkillIcons/passives/skillduration.png" nodeId="37569">
+					+3% to Chaos Resistance
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/TukohamaTribePassiveBG.png" dn="Tattoo of the Tukohama Shaman" icon="Art/2DArt/SkillIcons/passives/lifepercentage.png" nodeId="44202">
+					Regenerate 0.3% of Life per second
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/TukohamaTribePassiveBG.png" dn="Tattoo of the Tukohama Shaman" icon="Art/2DArt/SkillIcons/passives/lifepercentage.png" nodeId="50570">
+					Regenerate 0.3% of Life per second
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/TukohamaTribePassiveBG.png" dn="Tattoo of the Tukohama Shaman" icon="Art/2DArt/SkillIcons/passives/lifepercentage.png" nodeId="60472">
+					Regenerate 0.3% of Life per second
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/TukohamaTribePassiveBG.png" dn="Tattoo of the Tukohama Shaman" icon="Art/2DArt/SkillIcons/passives/lifepercentage.png" nodeId="63282">
+					Regenerate 0.3% of Life per second
+				</Override>
+			</Overrides>
+		</Spec>
+	</Tree>
+</PathOfBuilding>

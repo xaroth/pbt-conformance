@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathOfBuilding>
+	<Build ascendClassName="Gladiator" bandit="None" characterLevelAutoMode="false" className="Duelist" level="100" mainSocketGroup="11" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="3_0" viewMode="TREE">
+		<PlayerStat stat="AverageHit" value="82751.9810625"/>
+		<PlayerStat stat="AverageBurstDamage" value="82751.9810625"/>
+		<PlayerStat stat="Speed" value="7.5757575757576"/>
+		<PlayerStat stat="PreEffectiveCritChance" value="6.6"/>
+		<PlayerStat stat="CritChance" value="6.6"/>
+		<PlayerStat stat="CritMultiplier" value="1"/>
+		<PlayerStat stat="HitChance" value="100"/>
+		<PlayerStat stat="TotalDPS" value="626908.94744318"/>
+		<PlayerStat stat="TotalDot" value="0"/>
+		<PlayerStat stat="IgniteDPS" value="105548.42959549"/>
+		<PlayerStat stat="IgniteDamage" value="648927.38195747"/>
+		<PlayerStat stat="TotalDotDPS" value="105548.42959549"/>
+		<PlayerStat stat="CullingDPS" value="0"/>
+		<PlayerStat stat="ReservationDPS" value="0"/>
+		<PlayerStat stat="CombinedAvg" value="626908.94744318"/>
+		<PlayerStat stat="ManaCost" value="0"/>
+		<PlayerStat stat="ManaPercentCost" value="0"/>
+		<PlayerStat stat="ManaPerSecondCost" value="0"/>
+		<PlayerStat stat="ManaPercentPerSecondCost" value="0"/>
+		<PlayerStat stat="LifeCost" value="70"/>
+		<PlayerStat stat="LifePercentCost" value="0"/>
+		<PlayerStat stat="LifePerSecondCost" value="530.30303030303"/>
+		<PlayerStat stat="LifePercentPerSecondCost" value="0"/>
+		<PlayerStat stat="ESCost" value="0"/>
+		<PlayerStat stat="ESPerSecondCost" value="0"/>
+		<PlayerStat stat="ESPercentPerSecondCost" value="0"/>
+		<PlayerStat stat="RageCost" value="0"/>
+		<PlayerStat stat="SoulCost" value="0"/>
+		<PlayerStat stat="Str" value="33"/>
+		<PlayerStat stat="Dex" value="72"/>
+		<PlayerStat stat="Int" value="34"/>
+		<PlayerStat stat="Devotion" value="0"/>
+		<PlayerStat stat="TotalEHP" value="6121475.490856"/>
+		<PlayerStat stat="PhysicalMaximumHitTaken" value="22422"/>
+		<PlayerStat stat="LightningMaximumHitTaken" value="38741"/>
+		<PlayerStat stat="FireMaximumHitTaken" value="41019"/>
+		<PlayerStat stat="ColdMaximumHitTaken" value="38741"/>
+		<PlayerStat stat="ChaosMaximumHitTaken" value="34307"/>
+		<PlayerStat stat="Life" value="4613"/>
+		<PlayerStat stat="Spec:LifeInc" value="148"/>
+		<PlayerStat stat="LifeUnreserved" value="2538"/>
+		<PlayerStat stat="LifeRecoverable" value="2538"/>
+		<PlayerStat stat="LifeUnreservedPercent" value="55.018426186863"/>
+		<PlayerStat stat="LifeRegenRecovery" value="2312.3"/>
+		<PlayerStat stat="LifeLeechGainRate" value="1149.8727272727"/>
+		<PlayerStat stat="Mana" value="0"/>
+		<PlayerStat stat="Spec:ManaInc" value="8"/>
+		<PlayerStat stat="ManaRegenRecovery" value="0"/>
+		<PlayerStat stat="ManaLeechGainRate" value="0"/>
+		<PlayerStat stat="EnergyShield" value="192"/>
+		<PlayerStat stat="EnergyShieldRecoveryCap" value="192"/>
+		<PlayerStat stat="Spec:EnergyShieldInc" value="20"/>
+		<PlayerStat stat="EnergyShieldRegenRecovery" value="0"/>
+		<PlayerStat stat="EnergyShieldLeechGainRate" value="0"/>
+		<PlayerStat stat="Ward" value="0"/>
+		<PlayerStat stat="RageRegenRecovery" value="0"/>
+		<PlayerStat stat="Evasion" value="1224"/>
+		<PlayerStat stat="Spec:EvasionInc" value="24"/>
+		<PlayerStat stat="MeleeEvadeChance" value="1"/>
+		<PlayerStat stat="ProjectileEvadeChance" value="1"/>
+		<PlayerStat stat="Armour" value="19542"/>
+		<PlayerStat stat="Spec:ArmourInc" value="70"/>
+		<PlayerStat stat="PhysicalDamageReduction" value="90"/>
+		<PlayerStat stat="EffectiveBlockChance" value="99.3141"/>
+		<PlayerStat stat="EffectiveSpellBlockChance" value="99.2"/>
+		<PlayerStat stat="AttackDodgeChance" value="0"/>
+		<PlayerStat stat="SpellDodgeChance" value="0"/>
+		<PlayerStat stat="EffectiveSpellSuppressionChance" value="0"/>
+		<PlayerStat stat="FireResist" value="86"/>
+		<PlayerStat stat="FireResistOverCap" value="107"/>
+		<PlayerStat stat="ColdResist" value="85"/>
+		<PlayerStat stat="ColdResistOverCap" value="33"/>
+		<PlayerStat stat="LightningResist" value="85"/>
+		<PlayerStat stat="LightningResistOverCap" value="35"/>
+		<PlayerStat stat="ChaosResist" value="76"/>
+		<PlayerStat stat="ChaosResistOverCap" value="12"/>
+		<PlayerStat stat="EffectiveMovementSpeedMod" value="2.17"/>
+		<PlayerStat stat="FullDPS" value="0"/>
+		<PlayerStat stat="FullDotDPS" value="0"/>
+		<PlayerStat stat="PowerCharges" value="0"/>
+		<PlayerStat stat="PowerChargesMax" value="3"/>
+		<PlayerStat stat="FrenzyCharges" value="0"/>
+		<PlayerStat stat="FrenzyChargesMax" value="3"/>
+		<PlayerStat stat="EnduranceCharges" value="8"/>
+		<PlayerStat stat="EnduranceChargesMax" value="8"/>
+		<TimelessData devotionVariant1="1" devotionVariant2="1" searchList="" searchListFallback=""/>
+	</Build>
+	<Tree activeSpec="1">
+		<Spec ascendClassId="2" classId="4" clusterHashFormatVersion="2" masteryEffects="{4139,34242},{22480,4500},{25011,47642},{37698,52557},{38921,44840},{62588,31822},{64128,23621}" nodes="476,1325,1675,2491,2598,3644,4139,4833,5233,5743,6204,6230,6289,6712,6764,6967,8419,9386,9402,9995,10532,11730,11859,13714,14057,14930,14993,15405,16775,17297,17527,18901,19144,19919,21650,22088,22480,23027,24538,24865,25011,26270,26712,26725,27864,28330,28475,29353,29472,29933,30380,30691,30733,31683,32245,32730,33631,33718,33740,34031,34171,34400,34513,35288,35503,36881,36949,37326,37698,38921,40366,40867,42760,42911,43374,44169,44191,44202,44465,45657,46519,46578,46910,47389,48109,48287,48423,48760,49080,49178,50197,50422,50570,50862,50986,53118,54127,55190,55332,55485,55743,56001,57279,58218,58556,59928,60118,60472,61092,61666,62319,62429,62588,63282,63723,63976,64128,64210,65034,65680,65683,65686,65689,65696,65698,65706,65760,65762,65770,66704,66706,66714,66768,66777" secondaryAscendClassId="4" treeVersion="3_29">
+			<URL>
+				https://www.pathofexile.com/passive-skill-tree/AAAABgQSdAHcBS0Giwm7CiYOPBArEuEUcRZvGDwYVhiRGjgabBs3IOMkqiS6JwspJC3SLlM1kjbpOlI6kTwtQYdEd0nVSshNz1SSVkhX0FnzX9phIWGzZp5oWGhlbNhuqm87cqlzIHTtdqx343gNe8N99YNfg7aDzITvhXuGYIbRidiKr5ARkFWRzpNCmAmdrp-jpwinn6lurImsn6yqrbGyWbW3tfK3Prkdu-28n70nvni_uMAaxBXE9sWKxq7PftNv15bYJNi92b_awd-_42rkvOoY6tbsOO6k8OLzb_Pd9Hz3Mvjr-ej6gPrS_goPAJAAkwCWAJkAoACiAKoA4ADiAOoEkASSBJoE0ATZB4XCECsRlFfQuhphs81Nk0KvKJgJfE70fFxF-oA=
+			</URL>
+			<Sockets>
+			</Sockets>
+			<Overrides>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/NgamahuTribePassiveBG.png" dn="Tattoo of the Ngamahu Warmonger" icon="Art/2DArt/SkillIcons/passives/firedamage.png" nodeId="476">
+					5% chance to Ignite
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/TukohamaTribePassiveBG.png" dn="Tattoo of the Tukohama Shaman" icon="Art/2DArt/SkillIcons/passives/lifepercentage.png" nodeId="3644">
+					Regenerate 0.3% of Life per second
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/Village/RuneCraftingPassiveBG.png" dn="Runegraft of Treachery" icon="Art/2DArt/SkillIcons/passives/AtlasTrees/RuneGraftingIcon20.png" nodeId="4139">
+					15% increased Reservation Efficiency of Skills
+					Auras from your Skills which affect Allies also affect Enemies
+					Limited to 1 Runegraft of Treachery
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/NgamahuTribePassiveBG.png" dn="Tattoo of the Ngamahu Firewalker" icon="Art/2DArt/SkillIcons/passives/FireResistNode.png" nodeId="5233">
+					+6% to Fire Resistance
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Storyteller" icon="Art/2DArt/SkillIcons/passives/skillduration.png" nodeId="6764">
+					+3% to Chaos Resistance
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/TukohamaTribePassiveBG.png" dn="Tattoo of the Tukohama Shaman" icon="Art/2DArt/SkillIcons/passives/lifepercentage.png" nodeId="11859">
+					Regenerate 0.3% of Life per second
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/TukohamaTribePassiveBG.png" dn="Tattoo of the Tukohama Shaman" icon="Art/2DArt/SkillIcons/passives/lifepercentage.png" nodeId="14930">
+					Regenerate 0.3% of Life per second
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/TukohamaTribePassiveBG.png" dn="Tattoo of the Tukohama Shaman" icon="Art/2DArt/SkillIcons/passives/lifepercentage.png" nodeId="15405">
+					Regenerate 0.3% of Life per second
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/TukohamaTribePassiveBG.png" dn="Tattoo of the Tukohama Shaman" icon="Art/2DArt/SkillIcons/passives/lifepercentage.png" nodeId="16775">
+					Regenerate 0.3% of Life per second
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/TukohamaTribePassiveBG.png" dn="Tattoo of the Tukohama Shaman" icon="Art/2DArt/SkillIcons/passives/lifepercentage.png" nodeId="23027">
+					Regenerate 0.3% of Life per second
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ValakoTribePassiveBG.png" dn="Tattoo of the Valako Shieldbearer" icon="Art/2DArt/SkillIcons/passives/ShieldAttackDamage.png" nodeId="24083">
+					+1% Chance to Block Attack Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/TukohamaTribePassiveBG.png" dn="Tattoo of the Tukohama Shaman" icon="Art/2DArt/SkillIcons/passives/lifepercentage.png" nodeId="24865">
+					Regenerate 0.3% of Life per second
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ValakoTribePassiveBG.png" dn="Tattoo of the Valako Shieldbearer" icon="Art/2DArt/SkillIcons/passives/ShieldAttackDamage.png" nodeId="24914">
+					+1% Chance to Block Attack Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/Village/RuneCraftingPassiveBG.png" dn="Runegraft of the Warp" icon="Art/2DArt/SkillIcons/passives/AtlasTrees/RuneGraftingIcon11.png" nodeId="25011">
+					Buffs on you expire 30% slower
+					Debuffs on you expire 30% faster
+					Limited to 1 Runegraft of the Warp
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Storyteller" icon="Art/2DArt/SkillIcons/passives/skillduration.png" nodeId="26270">
+					+3% to Chaos Resistance
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/NgamahuTribePassiveBG.png" dn="Tattoo of the Ngamahu Warmonger" icon="Art/2DArt/SkillIcons/passives/firedamage.png" nodeId="28330">
+					5% chance to Ignite
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/TukohamaTribePassiveBG.png" dn="Tattoo of the Tukohama Shaman" icon="Art/2DArt/SkillIcons/passives/lifepercentage.png" nodeId="29353">
+					Regenerate 0.3% of Life per second
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Storyteller" icon="Art/2DArt/SkillIcons/passives/skillduration.png" nodeId="30691">
+					+3% to Chaos Resistance
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/NgamahuTribePassiveBG.png" dn="Tattoo of the Ngamahu Warmonger" icon="Art/2DArt/SkillIcons/passives/firedamage.png" nodeId="30733">
+					5% chance to Ignite
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/TukohamaTribePassiveBG.png" dn="Tattoo of the Tukohama Shaman" icon="Art/2DArt/SkillIcons/passives/lifepercentage.png" nodeId="33740">
+					Regenerate 0.3% of Life per second
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/TukohamaTribePassiveBG.png" dn="Tattoo of the Tukohama Shaman" icon="Art/2DArt/SkillIcons/passives/lifepercentage.png" nodeId="34031">
+					Regenerate 0.3% of Life per second
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/TukohamaTribePassiveBG.png" dn="Tattoo of the Tukohama Shaman" icon="Art/2DArt/SkillIcons/passives/lifepercentage.png" nodeId="34171">
+					Regenerate 0.3% of Life per second
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/TukohamaTribePassiveBG.png" dn="Tattoo of the Tukohama Shaman" icon="Art/2DArt/SkillIcons/passives/lifepercentage.png" nodeId="34400">
+					Regenerate 0.3% of Life per second
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Storyteller" icon="Art/2DArt/SkillIcons/passives/skillduration.png" nodeId="40366">
+					+3% to Chaos Resistance
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/NgamahuTribePassiveBG.png" dn="Tattoo of the Ngamahu Warmonger" icon="Art/2DArt/SkillIcons/passives/firedamage.png" nodeId="40867">
+					5% chance to Ignite
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Storyteller" icon="Art/2DArt/SkillIcons/passives/skillduration.png" nodeId="42760">
+					+3% to Chaos Resistance
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/NgamahuTribePassiveBG.png" dn="Tattoo of the Ngamahu Warmonger" icon="Art/2DArt/SkillIcons/passives/firedamage.png" nodeId="42911">
+					5% chance to Ignite
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/NgamahuTribePassiveBG.png" dn="Tattoo of the Ngamahu Warmonger" icon="Art/2DArt/SkillIcons/passives/firedamage.png" nodeId="43374">
+					5% chance to Ignite
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/TukohamaTribePassiveBG.png" dn="Tattoo of the Tukohama Shaman" icon="Art/2DArt/SkillIcons/passives/lifepercentage.png" nodeId="44202">
+					Regenerate 0.3% of Life per second
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/NgamahuTribePassiveBG.png" dn="Tattoo of the Ngamahu Warmonger" icon="Art/2DArt/SkillIcons/passives/firedamage.png" nodeId="46578">
+					5% chance to Ignite
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/TukohamaTribePassiveBG.png" dn="Tattoo of the Tukohama Shaman" icon="Art/2DArt/SkillIcons/passives/lifepercentage.png" nodeId="46910">
+					Regenerate 0.3% of Life per second
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/NgamahuTribePassiveBG.png" dn="Tattoo of the Ngamahu Warmonger" icon="Art/2DArt/SkillIcons/passives/firedamage.png" nodeId="49178">
+					5% chance to Ignite
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/TukohamaTribePassiveBG.png" dn="Tattoo of the Tukohama Shaman" icon="Art/2DArt/SkillIcons/passives/lifepercentage.png" nodeId="50422">
+					Regenerate 0.3% of Life per second
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/TukohamaTribePassiveBG.png" dn="Tattoo of the Tukohama Shaman" icon="Art/2DArt/SkillIcons/passives/lifepercentage.png" nodeId="50570">
+					Regenerate 0.3% of Life per second
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/TukohamaTribePassiveBG.png" dn="Tattoo of the Tukohama Shaman" icon="Art/2DArt/SkillIcons/passives/lifepercentage.png" nodeId="50862">
+					Regenerate 0.3% of Life per second
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Storyteller" icon="Art/2DArt/SkillIcons/passives/skillduration.png" nodeId="55332">
+					+3% to Chaos Resistance
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/TukohamaTribePassiveBG.png" dn="Tattoo of the Tukohama Shaman" icon="Art/2DArt/SkillIcons/passives/lifepercentage.png" nodeId="56001">
+					Regenerate 0.3% of Life per second
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/NgamahuTribePassiveBG.png" dn="Tattoo of the Ngamahu Firewalker" icon="Art/2DArt/SkillIcons/passives/FireResistNode.png" nodeId="59928">
+					+6% to Fire Resistance
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/TukohamaTribePassiveBG.png" dn="Tattoo of the Tukohama Shaman" icon="Art/2DArt/SkillIcons/passives/lifepercentage.png" nodeId="60472">
+					Regenerate 0.3% of Life per second
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ValakoTribePassiveBG.png" dn="Tattoo of the Valako Shieldbearer" icon="Art/2DArt/SkillIcons/passives/ShieldAttackDamage.png" nodeId="61262">
+					+1% Chance to Block Attack Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/NgamahuTribePassiveBG.png" dn="Tattoo of the Ngamahu Firewalker" icon="Art/2DArt/SkillIcons/passives/FireResistNode.png" nodeId="62429">
+					+6% to Fire Resistance
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/TukohamaTribePassiveBG.png" dn="Tattoo of the Tukohama Shaman" icon="Art/2DArt/SkillIcons/passives/lifepercentage.png" nodeId="63282">
+					Regenerate 0.3% of Life per second
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/NgamahuTribePassiveBG.png" dn="Tattoo of the Ngamahu Firewalker" icon="Art/2DArt/SkillIcons/passives/FireResistNode.png" nodeId="63723">
+					+6% to Fire Resistance
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Storyteller" icon="Art/2DArt/SkillIcons/passives/skillduration.png" nodeId="64210">
+					+3% to Chaos Resistance
+				</Override>
+			</Overrides>
+		</Spec>
+	</Tree>
+</PathOfBuilding>

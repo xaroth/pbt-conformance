@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathOfBuilding>
+	<Build ascendClassName="Elementalist" bandit="None" characterLevelAutoMode="false" className="Witch" level="100" mainSocketGroup="4" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="3_0" viewMode="TREE">
+		<PlayerStat stat="AverageHit" value="222800.1090643"/>
+		<PlayerStat stat="AverageBurstDamage" value="222800.1090643"/>
+		<PlayerStat stat="Speed" value="1.9"/>
+		<PlayerStat stat="PreEffectiveCritChance" value="7.08"/>
+		<PlayerStat stat="CritChance" value="7.08"/>
+		<PlayerStat stat="CritMultiplier" value="1"/>
+		<PlayerStat stat="HitChance" value="100"/>
+		<PlayerStat stat="TotalDPS" value="423320.20722217"/>
+		<PlayerStat stat="TotalDot" value="800813.13022219"/>
+		<PlayerStat stat="WithDotDPS" value="1224133.3374444"/>
+		<PlayerStat stat="WithBleedDPS" value="423320.20722217"/>
+		<PlayerStat stat="IgniteDPS" value="30391958.788312"/>
+		<PlayerStat stat="BurningGroundDPS" value="9117587.6364936"/>
+		<PlayerStat stat="WithIgniteDPS" value="30815278.995534"/>
+		<PlayerStat stat="WithPoisonDPS" value="423320.20722217"/>
+		<PlayerStat stat="TotalDotDPS" value="35791394"/>
+		<PlayerStat stat="CullingDPS" value="0"/>
+		<PlayerStat stat="ReservationDPS" value="0"/>
+		<PlayerStat stat="CombinedDPS" value="36214714.207222"/>
+		<PlayerStat stat="AreaOfEffectRadiusMetres" value="3.6"/>
+		<PlayerStat stat="ManaCost" value="0"/>
+		<PlayerStat stat="ManaPercentCost" value="0"/>
+		<PlayerStat stat="ManaPerSecondCost" value="0"/>
+		<PlayerStat stat="ManaPercentPerSecondCost" value="0"/>
+		<PlayerStat stat="LifeCost" value="450"/>
+		<PlayerStat stat="LifePercentCost" value="0"/>
+		<PlayerStat stat="LifePerSecondCost" value="855"/>
+		<PlayerStat stat="LifePercentPerSecondCost" value="0"/>
+		<PlayerStat stat="ESCost" value="0"/>
+		<PlayerStat stat="ESPerSecondCost" value="0"/>
+		<PlayerStat stat="ESPercentPerSecondCost" value="0"/>
+		<PlayerStat stat="RageCost" value="0"/>
+		<PlayerStat stat="SoulCost" value="0"/>
+		<PlayerStat stat="Str" value="68"/>
+		<PlayerStat stat="Dex" value="67"/>
+		<PlayerStat stat="Int" value="38"/>
+		<PlayerStat stat="Devotion" value="0"/>
+		<PlayerStat stat="TotalEHP" value="162858.3184722"/>
+		<PlayerStat stat="PhysicalMaximumHitTaken" value="7108"/>
+		<PlayerStat stat="LightningMaximumHitTaken" value="20115"/>
+		<PlayerStat stat="FireMaximumHitTaken" value="20115"/>
+		<PlayerStat stat="ColdMaximumHitTaken" value="20115"/>
+		<PlayerStat stat="ChaosMaximumHitTaken" value="13991"/>
+		<PlayerStat stat="Life" value="2787"/>
+		<PlayerStat stat="Spec:LifeInc" value="73"/>
+		<PlayerStat stat="LifeUnreserved" value="2787"/>
+		<PlayerStat stat="LifeRecoverable" value="2787"/>
+		<PlayerStat stat="LifeUnreservedPercent" value="100"/>
+		<PlayerStat stat="LifeRegenRecovery" value="546.2"/>
+		<PlayerStat stat="LifeLeechGainRate" value="0"/>
+		<PlayerStat stat="Mana" value="689"/>
+		<PlayerStat stat="Spec:ManaInc" value="0"/>
+		<PlayerStat stat="ManaUnreserved" value="60"/>
+		<PlayerStat stat="ManaUnreservedPercent" value="8.7082728592163"/>
+		<PlayerStat stat="ManaRegenRecovery" value="71.4"/>
+		<PlayerStat stat="ManaLeechGainRate" value="0"/>
+		<PlayerStat stat="EnergyShield" value="1110"/>
+		<PlayerStat stat="EnergyShieldRecoveryCap" value="1110"/>
+		<PlayerStat stat="Spec:EnergyShieldInc" value="35"/>
+		<PlayerStat stat="EnergyShieldRegenRecovery" value="0"/>
+		<PlayerStat stat="EnergyShieldLeechGainRate" value="0"/>
+		<PlayerStat stat="Ward" value="361"/>
+		<PlayerStat stat="RageRegenRecovery" value="0"/>
+		<PlayerStat stat="Evasion" value="30"/>
+		<PlayerStat stat="Spec:EvasionInc" value="0"/>
+		<PlayerStat stat="MeleeEvadeChance" value="0"/>
+		<PlayerStat stat="ProjectileEvadeChance" value="0"/>
+		<PlayerStat stat="Armour" value="6757"/>
+		<PlayerStat stat="Spec:ArmourInc" value="39"/>
+		<PlayerStat stat="PhysicalDamageReduction" value="68"/>
+		<PlayerStat stat="EffectiveBlockChance" value="87.75"/>
+		<PlayerStat stat="EffectiveSpellBlockChance" value="89.76"/>
+		<PlayerStat stat="AttackDodgeChance" value="0"/>
+		<PlayerStat stat="SpellDodgeChance" value="0"/>
+		<PlayerStat stat="EffectiveSpellSuppressionChance" value="0"/>
+		<PlayerStat stat="FireResist" value="75"/>
+		<PlayerStat stat="FireResistOverCap" value="161"/>
+		<PlayerStat stat="ColdResist" value="75"/>
+		<PlayerStat stat="ColdResistOverCap" value="71"/>
+		<PlayerStat stat="LightningResist" value="75"/>
+		<PlayerStat stat="LightningResistOverCap" value="76"/>
+		<PlayerStat stat="ChaosResist" value="75"/>
+		<PlayerStat stat="ChaosResistOverCap" value="5"/>
+		<PlayerStat stat="EffectiveMovementSpeedMod" value="1.91"/>
+		<PlayerStat stat="FullDPS" value="0"/>
+		<PlayerStat stat="FullDotDPS" value="0"/>
+		<PlayerStat stat="PowerCharges" value="0"/>
+		<PlayerStat stat="PowerChargesMax" value="3"/>
+		<PlayerStat stat="FrenzyCharges" value="0"/>
+		<PlayerStat stat="FrenzyChargesMax" value="3"/>
+		<PlayerStat stat="EnduranceCharges" value="4"/>
+		<PlayerStat stat="EnduranceChargesMax" value="4"/>
+		<TimelessData devotionVariant1="1" devotionVariant2="1" searchList="" searchListFallback=""/>
+	</Build>
+	<Tree activeSpec="1">
+		<Spec ascendClassId="2" classId="3" clusterHashFormatVersion="2" masteryEffects="{2828,1251},{11505,55308},{26393,61283},{30393,16215},{34927,6216},{38921,4500},{39836,28638},{44298,25681},{45558,30612}" nodes="258,2311,2828,4184,4367,4397,4713,5743,5916,5935,6712,6764,6770,6967,7388,7444,7600,7960,8198,9386,9408,10031,11420,11505,11730,11924,12246,12536,12613,12738,13164,13559,14057,14936,14993,15064,15117,15167,16023,19501,19919,20987,21958,21974,22088,22577,23027,24872,24970,25831,25970,26196,26270,26393,26712,29049,29061,29353,29712,30393,31462,31875,32932,33435,34098,34171,34423,34506,34661,34927,35233,35288,35958,36542,36634,36678,36949,37114,37569,38921,39836,39841,41472,42760,44169,44184,44202,44298,44799,45558,46340,46897,47873,48118,49080,52502,53123,54279,54447,55190,55332,55743,55993,56461,57264,58218,58556,60398,60472,60989,61259,61419,61804,63039,63447,64210,65552,65554,65562,65568,65570,65578,65680,65682,65690,65696,65698,65706,66576,66579,66585,66704,66707,66713" secondaryAscendClassId="15" treeVersion="3_29">
+			<URL>
+				https://www.pathofexile.com/passive-skill-tree/AAAABgM-cQECCQcLDBBYEQ8RLRJpFm8XHBcvGjgabBpyGzcc3B0UHxggBiSqJMAnLyycLPEt0i6UL9Yw-DFFMcIzbDT3Nuk6WDqROtg7DTs_TC1Nz1H7VcZV1lZIWDFZ82EoYYpk52VyZlRmnmcZaFhxeXGFcql0EHa5euZ8g4CkgpuFMoV7hneGyodliG-JoYnYjHaOvo8aj0aQVZD6ksGYCZucm6GiAKcIrImsmKyqrQqu_7H2tQS3MbsBu_a_uM0Wz4PUB9eW2CTZv9q53I3fsONq5Lzr7uw47j3vS-_r8Wz2P_fX-tISABAAEgAaACAAIgAqAJAAkgCaAKAAogCqBBAEEwQZBJAEkwSZCQTjCwzYDCzx72NnGT9XdrkYSIhvEZSYCW_em5xkUa0Kd5Sx9g==
+			</URL>
+			<Sockets>
+			</Sockets>
+			<Overrides>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ArohonguiTribePassiveBG.png" dn="Tattoo of the Arohongui Shaman" icon="Art/2DArt/SkillIcons/passives/HeraldReservationNode.png" nodeId="4367">
+					5% increased Effect of Herald Buffs on you
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ArohonguiTribePassiveBG.png" dn="Tattoo of the Arohongui Shaman" icon="Art/2DArt/SkillIcons/passives/HeraldReservationNode.png" nodeId="6764">
+					5% increased Effect of Herald Buffs on you
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ArohonguiTribePassiveBG.png" dn="Tattoo of the Arohongui Shaman" icon="Art/2DArt/SkillIcons/passives/HeraldReservationNode.png" nodeId="7444">
+					5% increased Effect of Herald Buffs on you
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/NgamahuTribePassiveBG.png" dn="Tattoo of the Ngamahu Firewalker" icon="Art/2DArt/SkillIcons/passives/FireResistNode.png" nodeId="15064">
+					+6% to Fire Resistance
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ArohonguiTribePassiveBG.png" dn="Tattoo of the Arohongui Shaman" icon="Art/2DArt/SkillIcons/passives/HeraldReservationNode.png" nodeId="15117">
+					5% increased Effect of Herald Buffs on you
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ArohonguiTribePassiveBG.png" dn="Tattoo of the Arohongui Shaman" icon="Art/2DArt/SkillIcons/passives/HeraldReservationNode.png" nodeId="19501">
+					5% increased Effect of Herald Buffs on you
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/NgamahuTribePassiveBG.png" dn="Tattoo of the Ngamahu Firewalker" icon="Art/2DArt/SkillIcons/passives/FireResistNode.png" nodeId="23027">
+					+6% to Fire Resistance
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ArohonguiTribePassiveBG.png" dn="Tattoo of the Arohongui Shaman" icon="Art/2DArt/SkillIcons/passives/HeraldReservationNode.png" nodeId="26270">
+					5% increased Effect of Herald Buffs on you
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/Village/RuneCraftingPassiveBG.png" dn="Runegraft of the Fortress" icon="Art/2DArt/SkillIcons/passives/AtlasTrees/RuneGraftingIcon1.png" nodeId="26393">
+					10% reduced Attributes
+					40% increased Defences
+					Limited to 1 Runegraft of the Fortress
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ValakoTribePassiveBG.png" dn="Tattoo of the Valako Shieldbearer" icon="Art/2DArt/SkillIcons/passives/ShieldAttackDamage.png" nodeId="29353">
+					+1% Chance to Block Attack Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/NgamahuTribePassiveBG.png" dn="Tattoo of the Ngamahu Firewalker" icon="Art/2DArt/SkillIcons/passives/FireResistNode.png" nodeId="31931">
+					+6% to Fire Resistance
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/NgamahuTribePassiveBG.png" dn="Tattoo of the Ngamahu Firewalker" icon="Art/2DArt/SkillIcons/passives/FireResistNode.png" nodeId="34171">
+					+6% to Fire Resistance
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ArohonguiTribePassiveBG.png" dn="Tattoo of the Arohongui Shaman" icon="Art/2DArt/SkillIcons/passives/HeraldReservationNode.png" nodeId="36678">
+					5% increased Effect of Herald Buffs on you
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ArohonguiTribePassiveBG.png" dn="Tattoo of the Arohongui Shaman" icon="Art/2DArt/SkillIcons/passives/HeraldReservationNode.png" nodeId="39841">
+					5% increased Effect of Herald Buffs on you
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ArohonguiTribePassiveBG.png" dn="Tattoo of the Arohongui Shaman" icon="Art/2DArt/SkillIcons/passives/HeraldReservationNode.png" nodeId="42760">
+					5% increased Effect of Herald Buffs on you
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ArohonguiTribePassiveBG.png" dn="Tattoo of the Arohongui Shaman" icon="Art/2DArt/SkillIcons/passives/HeraldReservationNode.png" nodeId="44184">
+					5% increased Effect of Herald Buffs on you
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ValakoTribePassiveBG.png" dn="Tattoo of the Valako Shieldbearer" icon="Art/2DArt/SkillIcons/passives/ShieldAttackDamage.png" nodeId="44202">
+					+1% Chance to Block Attack Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/NgamahuTribePassiveBG.png" dn="Tattoo of the Ngamahu Firewalker" icon="Art/2DArt/SkillIcons/passives/FireResistNode.png" nodeId="60472">
+					+6% to Fire Resistance
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ArohonguiTribePassiveBG.png" dn="Tattoo of the Arohongui Shaman" icon="Art/2DArt/SkillIcons/passives/HeraldReservationNode.png" nodeId="63447">
+					5% increased Effect of Herald Buffs on you
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ArohonguiTribePassiveBG.png" dn="Tattoo of the Arohongui Shaman" icon="Art/2DArt/SkillIcons/passives/HeraldReservationNode.png" nodeId="64210">
+					5% increased Effect of Herald Buffs on you
+				</Override>
+			</Overrides>
+		</Spec>
+	</Tree>
+</PathOfBuilding>

@@ -1,0 +1,12 @@
+{
+  "kind": "minion",
+  "contains": [
+    "cluster-jewel",
+    "mercenary"
+  ],
+  "origin": {
+    "url": "https://poe.ninja/poe1/builds/allflame/character/BansheesVeil-4479/sotsunakuLuminaryCotA",
+    "league": "Allflame",
+    "snapshot": "0208-20261111-47167"
+  }
+}

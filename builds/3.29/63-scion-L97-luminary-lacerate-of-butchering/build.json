@@ -1,0 +1,11 @@
+{
+  "kind": "attack",
+  "contains": [
+    "tree-variant"
+  ],
+  "origin": {
+    "url": "https://poe.ninja/poe1/builds/allflamer/character/Turophile-2126/ScionYouCrazyDiamond",
+    "league": "Ruthless Allflame",
+    "snapshot": "0235-20261111-46508"
+  }
+}

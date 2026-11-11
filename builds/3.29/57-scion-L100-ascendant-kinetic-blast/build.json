@@ -1,0 +1,12 @@
+{
+  "kind": "attack",
+  "contains": [
+    "cluster-jewel",
+    "timeless-jewel"
+  ],
+  "origin": {
+    "url": "https://poe.ninja/poe1/builds/allflame/character/Dilice-1248/%D0%A7%D0%B5%D0%BB%D0%BE%D0%B2%D0%B5%D0%BA_%D0%98%D0%BB%D0%B8_%D0%98%D0%98",
+    "league": "Allflame",
+    "snapshot": "0208-20261111-47167"
+  }
+}

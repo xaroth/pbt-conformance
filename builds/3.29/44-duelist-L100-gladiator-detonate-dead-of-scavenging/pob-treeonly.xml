@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathOfBuilding>
+	<Build ascendClassName="Gladiator" bandit="None" characterLevelAutoMode="false" className="Duelist" level="100" mainSocketGroup="10" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="3_0" viewMode="TREE">
+		<PlayerStat stat="AverageHit" value="104604.7842"/>
+		<PlayerStat stat="AverageBurstDamage" value="104604.7842"/>
+		<PlayerStat stat="Speed" value="7.5757575757576"/>
+		<PlayerStat stat="PreEffectiveCritChance" value="6"/>
+		<PlayerStat stat="CritChance" value="6"/>
+		<PlayerStat stat="CritMultiplier" value="1"/>
+		<PlayerStat stat="HitChance" value="100"/>
+		<PlayerStat stat="TotalDPS" value="792460.48636364"/>
+		<PlayerStat stat="TotalDot" value="0"/>
+		<PlayerStat stat="IgniteDPS" value="66613.255632"/>
+		<PlayerStat stat="IgniteDamage" value="738341.32542509"/>
+		<PlayerStat stat="BurningGroundDPS" value="19983.9766896"/>
+		<PlayerStat stat="TotalDotDPS" value="86597.2323216"/>
+		<PlayerStat stat="CullingDPS" value="0"/>
+		<PlayerStat stat="ReservationDPS" value="0"/>
+		<PlayerStat stat="CombinedAvg" value="792460.48636364"/>
+		<PlayerStat stat="AreaOfEffectRadiusMetres" value="4.2"/>
+		<PlayerStat stat="ManaCost" value="0"/>
+		<PlayerStat stat="ManaPercentCost" value="0"/>
+		<PlayerStat stat="ManaPerSecondCost" value="0"/>
+		<PlayerStat stat="ManaPercentPerSecondCost" value="0"/>
+		<PlayerStat stat="LifeCost" value="40"/>
+		<PlayerStat stat="LifePercentCost" value="0"/>
+		<PlayerStat stat="LifePerSecondCost" value="303.0303030303"/>
+		<PlayerStat stat="LifePercentPerSecondCost" value="0"/>
+		<PlayerStat stat="ESCost" value="0"/>
+		<PlayerStat stat="ESPerSecondCost" value="0"/>
+		<PlayerStat stat="ESPercentPerSecondCost" value="0"/>
+		<PlayerStat stat="RageCost" value="0"/>
+		<PlayerStat stat="SoulCost" value="0"/>
+		<PlayerStat stat="Str" value="53"/>
+		<PlayerStat stat="Dex" value="92"/>
+		<PlayerStat stat="Int" value="26"/>
+		<PlayerStat stat="Devotion" value="0"/>
+		<PlayerStat stat="TotalEHP" value="4797613.5725502"/>
+		<PlayerStat stat="PhysicalMaximumHitTaken" value="20910"/>
+		<PlayerStat stat="LightningMaximumHitTaken" value="53220"/>
+		<PlayerStat stat="FireMaximumHitTaken" value="49419"/>
+		<PlayerStat stat="ColdMaximumHitTaken" value="53220"/>
+		<PlayerStat stat="ChaosMaximumHitTaken" value="15779"/>
+		<PlayerStat stat="Life" value="5309"/>
+		<PlayerStat stat="Spec:LifeInc" value="156"/>
+		<PlayerStat stat="LifeUnreserved" value="2935"/>
+		<PlayerStat stat="LifeRecoverable" value="2935"/>
+		<PlayerStat stat="LifeUnreservedPercent" value="55.283480881522"/>
+		<PlayerStat stat="LifeRegenRecovery" value="1175.4"/>
+		<PlayerStat stat="LifeLeechGainRate" value="1251.1939393939"/>
+		<PlayerStat stat="Mana" value="0"/>
+		<PlayerStat stat="Spec:ManaInc" value="0"/>
+		<PlayerStat stat="ManaRegenRecovery" value="0"/>
+		<PlayerStat stat="ManaLeechGainRate" value="0"/>
+		<PlayerStat stat="EnergyShield" value="0"/>
+		<PlayerStat stat="EnergyShieldRecoveryCap" value="0"/>
+		<PlayerStat stat="Spec:EnergyShieldInc" value="20"/>
+		<PlayerStat stat="EnergyShieldRegenRecovery" value="0"/>
+		<PlayerStat stat="EnergyShieldLeechGainRate" value="0"/>
+		<PlayerStat stat="Ward" value="0"/>
+		<PlayerStat stat="RageRegenRecovery" value="0"/>
+		<PlayerStat stat="Evasion" value="1430"/>
+		<PlayerStat stat="Spec:EvasionInc" value="0"/>
+		<PlayerStat stat="MeleeEvadeChance" value="9"/>
+		<PlayerStat stat="ProjectileEvadeChance" value="9"/>
+		<PlayerStat stat="Armour" value="5279"/>
+		<PlayerStat stat="Spec:ArmourInc" value="34"/>
+		<PlayerStat stat="PhysicalDamageReduction" value="90"/>
+		<PlayerStat stat="EffectiveBlockChance" value="99.2"/>
+		<PlayerStat stat="EffectiveSpellBlockChance" value="98.9352"/>
+		<PlayerStat stat="AttackDodgeChance" value="0"/>
+		<PlayerStat stat="SpellDodgeChance" value="0"/>
+		<PlayerStat stat="EffectiveSpellSuppressionChance" value="0"/>
+		<PlayerStat stat="FireResist" value="89"/>
+		<PlayerStat stat="FireResistOverCap" value="135"/>
+		<PlayerStat stat="ColdResist" value="90"/>
+		<PlayerStat stat="ColdResistOverCap" value="28"/>
+		<PlayerStat stat="LightningResist" value="90"/>
+		<PlayerStat stat="LightningResistOverCap" value="27"/>
+		<PlayerStat stat="ChaosResist" value="55"/>
+		<PlayerStat stat="ChaosResistOverCap" value="0"/>
+		<PlayerStat stat="EffectiveMovementSpeedMod" value="1.31"/>
+		<PlayerStat stat="FullDPS" value="0"/>
+		<PlayerStat stat="FullDotDPS" value="0"/>
+		<PlayerStat stat="PowerCharges" value="0"/>
+		<PlayerStat stat="PowerChargesMax" value="3"/>
+		<PlayerStat stat="FrenzyCharges" value="0"/>
+		<PlayerStat stat="FrenzyChargesMax" value="3"/>
+		<PlayerStat stat="EnduranceCharges" value="8"/>
+		<PlayerStat stat="EnduranceChargesMax" value="8"/>
+		<TimelessData devotionVariant1="1" devotionVariant2="1" searchList="" searchListFallback=""/>
+	</Build>
+	<Tree activeSpec="1">
+		<Spec ascendClassId="2" classId="4" clusterHashFormatVersion="2" masteryEffects="{4139,34242},{11505,55308},{12382,38454},{22480,55013},{25011,21468},{32241,47642},{33657,19422},{37698,52557},{38921,4500},{41415,64381},{42792,9074},{62588,31822},{64128,23621}" nodes="476,1325,1675,2311,2598,3644,3651,4139,4713,4833,5065,5233,5743,6245,6289,6712,6764,6770,6967,7399,7444,7600,7960,8419,9386,9402,9408,9995,11505,11730,11859,12246,12382,13714,14056,14057,14930,15405,15522,17527,19078,19732,19919,20987,21650,22088,22480,22703,23027,24538,24865,25011,25989,26196,26270,26725,27323,28475,29049,29353,29472,29712,29933,30380,30691,30733,31080,32241,32245,32730,33631,33657,33718,34031,34171,34400,34513,36678,36949,37326,37698,38921,39381,39678,40867,41415,42760,42792,42911,43061,43374,44191,44202,44465,45657,46578,47389,48109,48287,49178,50197,50340,50422,50570,50862,50986,52502,52575,53118,54127,54629,55332,55485,56001,57279,58218,59928,60031,60472,62429,62588,62767,63138,63282,63723,64128,64210,64221,65568,65570,65578,66576,66579,66585" secondaryAscendClassId="15" treeVersion="3_29">
+			<URL>
+				https://www.pathofexile.com/passive-skill-tree/AAAABgQ-fQHcBS0GiwkHCiYOPA5DECsSaRLhE8kUcRZvGGUYkRo4Gmwachs3HOcdFB8YIOMkqiS6JMAnCyzxLdIuUy_WMF41kjboNuk6UjwtPKJEd0qGTRRNz1H7VJJWSFfQWK9Z81_aYSFhs2WFZlRmnmhlartvO3F5cqlzIHQQdO12rHfjeA15aH3xffWDX4N5g7aE74V7hmCG0Y9GkFWRzpNCmAmZ1Zr-n6Ohx6cIpyinn6g1qW6sn6yqrbGyWbXyuR277byfwBrEFcSkxPbFisauzRbNX89-02_VZdgk2L3awd-_42rqGOp_7Djz3fR89S_2ovcy-Ov6gPrS-t0GACAAIgAqBBAEEwQZDYXCECvYDCzxljYwXtblV9BT3GGzuhp98Uveg3nNTZNCEZSYCft9occjcqcofE70fFxF-oA=
+			</URL>
+			<Sockets>
+			</Sockets>
+			<Overrides>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/NgamahuTribePassiveBG.png" dn="Tattoo of the Ngamahu Firewalker" icon="Art/2DArt/SkillIcons/passives/FireResistNode.png" nodeId="476">
+					+6% to Fire Resistance
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/RongokuraiTribePassiveBG.png" dn="Tattoo of the Rongokurai Guard" icon="Art/2DArt/SkillIcons/passives/dmgreduction.png" nodeId="3644">
+					Guard Skills have 6% increased Duration
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/RongokuraiTribePassiveBG.png" dn="Tattoo of the Rongokurai Guard" icon="Art/2DArt/SkillIcons/passives/dmgreduction.png" nodeId="5233">
+					Guard Skills have 6% increased Duration
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ValakoTribePassiveBG.png" dn="Tattoo of the Valako Stormrider" icon="Art/2DArt/SkillIcons/passives/LightningResistNode.png" nodeId="7444">
+					+6% to Lightning Resistance
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/RongokuraiTribePassiveBG.png" dn="Tattoo of the Rongokurai Guard" icon="Art/2DArt/SkillIcons/passives/dmgreduction.png" nodeId="11859">
+					Guard Skills have 6% increased Duration
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/RongokuraiTribePassiveBG.png" dn="Tattoo of the Rongokurai Guard" icon="Art/2DArt/SkillIcons/passives/dmgreduction.png" nodeId="14056">
+					Guard Skills have 6% increased Duration
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/RongokuraiTribePassiveBG.png" dn="Tattoo of the Rongokurai Guard" icon="Art/2DArt/SkillIcons/passives/dmgreduction.png" nodeId="14930">
+					Guard Skills have 6% increased Duration
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/NgamahuTribePassiveBG.png" dn="Tattoo of the Ngamahu Firewalker" icon="Art/2DArt/SkillIcons/passives/FireResistNode.png" nodeId="22703">
+					+6% to Fire Resistance
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/RongokuraiTribePassiveBG.png" dn="Tattoo of the Rongokurai Guard" icon="Art/2DArt/SkillIcons/passives/dmgreduction.png" nodeId="23027">
+					Guard Skills have 6% increased Duration
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/RongokuraiTribePassiveBG.png" dn="Tattoo of the Rongokurai Guard" icon="Art/2DArt/SkillIcons/passives/dmgreduction.png" nodeId="24865">
+					Guard Skills have 6% increased Duration
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ValakoTribePassiveBG.png" dn="Tattoo of the Valako Stormrider" icon="Art/2DArt/SkillIcons/passives/LightningResistNode.png" nodeId="26270">
+					+6% to Lightning Resistance
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ValakoTribePassiveBG.png" dn="Tattoo of the Valako Shieldbearer" icon="Art/2DArt/SkillIcons/passives/ShieldAttackDamage.png" nodeId="29353">
+					+1% Chance to Block Attack Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ValakoTribePassiveBG.png" dn="Tattoo of the Valako Stormrider" icon="Art/2DArt/SkillIcons/passives/LightningResistNode.png" nodeId="30691">
+					+6% to Lightning Resistance
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/NgamahuTribePassiveBG.png" dn="Tattoo of the Ngamahu Firewalker" icon="Art/2DArt/SkillIcons/passives/FireResistNode.png" nodeId="30733">
+					+6% to Fire Resistance
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/Village/RuneCraftingPassiveBG.png" dn="Runegraft of the Warp" icon="Art/2DArt/SkillIcons/passives/AtlasTrees/RuneGraftingIcon11.png" nodeId="33657">
+					Buffs on you expire 30% slower
+					Debuffs on you expire 30% faster
+					Limited to 1 Runegraft of the Warp
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/RongokuraiTribePassiveBG.png" dn="Tattoo of the Rongokurai Guard" icon="Art/2DArt/SkillIcons/passives/dmgreduction.png" nodeId="34031">
+					Guard Skills have 6% increased Duration
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/RongokuraiTribePassiveBG.png" dn="Tattoo of the Rongokurai Guard" icon="Art/2DArt/SkillIcons/passives/dmgreduction.png" nodeId="34171">
+					Guard Skills have 6% increased Duration
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/RongokuraiTribePassiveBG.png" dn="Tattoo of the Rongokurai Guard" icon="Art/2DArt/SkillIcons/passives/dmgreduction.png" nodeId="34400">
+					Guard Skills have 6% increased Duration
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ValakoTribePassiveBG.png" dn="Tattoo of the Valako Stormrider" icon="Art/2DArt/SkillIcons/passives/LightningResistNode.png" nodeId="36678">
+					+6% to Lightning Resistance
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/NgamahuTribePassiveBG.png" dn="Tattoo of the Ngamahu Firewalker" icon="Art/2DArt/SkillIcons/passives/FireResistNode.png" nodeId="40867">
+					+6% to Fire Resistance
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ValakoTribePassiveBG.png" dn="Tattoo of the Valako Stormrider" icon="Art/2DArt/SkillIcons/passives/LightningResistNode.png" nodeId="42760">
+					+6% to Lightning Resistance
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/Village/RuneCraftingPassiveBG.png" dn="Runegraft of Treachery" icon="Art/2DArt/SkillIcons/passives/AtlasTrees/RuneGraftingIcon20.png" nodeId="42792">
+					15% increased Reservation Efficiency of Skills
+					Auras from your Skills which affect Allies also affect Enemies
+					Limited to 1 Runegraft of Treachery
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/NgamahuTribePassiveBG.png" dn="Tattoo of the Ngamahu Firewalker" icon="Art/2DArt/SkillIcons/passives/FireResistNode.png" nodeId="42911">
+					+6% to Fire Resistance
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/NgamahuTribePassiveBG.png" dn="Tattoo of the Ngamahu Firewalker" icon="Art/2DArt/SkillIcons/passives/FireResistNode.png" nodeId="43374">
+					+6% to Fire Resistance
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ValakoTribePassiveBG.png" dn="Tattoo of the Valako Shieldbearer" icon="Art/2DArt/SkillIcons/passives/ShieldAttackDamage.png" nodeId="44202">
+					+1% Chance to Block Attack Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/RongokuraiTribePassiveBG.png" dn="Tattoo of the Rongokurai Guard" icon="Art/2DArt/SkillIcons/passives/dmgreduction.png" nodeId="46578">
+					Guard Skills have 6% increased Duration
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/NgamahuTribePassiveBG.png" dn="Tattoo of the Ngamahu Firewalker" icon="Art/2DArt/SkillIcons/passives/FireResistNode.png" nodeId="49178">
+					+6% to Fire Resistance
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/RongokuraiTribePassiveBG.png" dn="Tattoo of the Rongokurai Guard" icon="Art/2DArt/SkillIcons/passives/dmgreduction.png" nodeId="50570">
+					Guard Skills have 6% increased Duration
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ValakoTribePassiveBG.png" dn="Tattoo of the Valako Stormrider" icon="Art/2DArt/SkillIcons/passives/LightningResistNode.png" nodeId="55332">
+					+6% to Lightning Resistance
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/RongokuraiTribePassiveBG.png" dn="Tattoo of the Rongokurai Guard" icon="Art/2DArt/SkillIcons/passives/dmgreduction.png" nodeId="56001">
+					Guard Skills have 6% increased Duration
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ValakoTribePassiveBG.png" dn="Tattoo of the Valako Shieldbearer" icon="Art/2DArt/SkillIcons/passives/ShieldAttackDamage.png" nodeId="59928">
+					+1% Chance to Block Attack Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/RongokuraiTribePassiveBG.png" dn="Tattoo of the Rongokurai Guard" icon="Art/2DArt/SkillIcons/passives/dmgreduction.png" nodeId="60472">
+					Guard Skills have 6% increased Duration
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/RongokuraiTribePassiveBG.png" dn="Tattoo of the Rongokurai Guard" icon="Art/2DArt/SkillIcons/passives/dmgreduction.png" nodeId="62429">
+					Guard Skills have 6% increased Duration
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ValakoTribePassiveBG.png" dn="Tattoo of the Valako Shieldbearer" icon="Art/2DArt/SkillIcons/passives/ShieldAttackDamage.png" nodeId="63282">
+					+1% Chance to Block Attack Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/RongokuraiTribePassiveBG.png" dn="Tattoo of the Rongokurai Guard" icon="Art/2DArt/SkillIcons/passives/dmgreduction.png" nodeId="63723">
+					Guard Skills have 6% increased Duration
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/ValakoTribePassiveBG.png" dn="Tattoo of the Valako Stormrider" icon="Art/2DArt/SkillIcons/passives/LightningResistNode.png" nodeId="64210">
+					+6% to Lightning Resistance
+				</Override>
+			</Overrides>
+		</Spec>
+	</Tree>
+</PathOfBuilding>

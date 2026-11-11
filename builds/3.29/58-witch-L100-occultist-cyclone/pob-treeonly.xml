@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathOfBuilding>
+	<Build ascendClassName="Occultist" bandit="None" characterLevelAutoMode="false" className="Witch" level="100" mainSocketGroup="9" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="3_0" viewMode="TREE">
+		<PlayerStat stat="AverageDamage" value="34859.503115695"/>
+		<PlayerStat stat="AverageBurstDamage" value="34859.503115695"/>
+		<PlayerStat stat="Speed" value="9.1605"/>
+		<PlayerStat stat="PreEffectiveCritChance" value="85.0915"/>
+		<PlayerStat stat="CritChance" value="85.0915"/>
+		<PlayerStat stat="CritMultiplier" value="5.34"/>
+		<PlayerStat stat="HitChance" value="100"/>
+		<PlayerStat stat="TotalDPS" value="319330.47829132"/>
+		<PlayerStat stat="TotalDot" value="0"/>
+		<PlayerStat stat="WithBleedDPS" value="319330.47829132"/>
+		<PlayerStat stat="WithIgniteDPS" value="319330.47829132"/>
+		<PlayerStat stat="WithPoisonDPS" value="319330.47829132"/>
+		<PlayerStat stat="TotalDotDPS" value="0"/>
+		<PlayerStat stat="CullingDPS" value="0"/>
+		<PlayerStat stat="ReservationDPS" value="0"/>
+		<PlayerStat stat="CombinedDPS" value="319330.47829132"/>
+		<PlayerStat stat="AreaOfEffectRadiusMetres" value="2.2"/>
+		<PlayerStat stat="ManaCost" value="0"/>
+		<PlayerStat stat="ManaPercentCost" value="0"/>
+		<PlayerStat stat="ManaPerSecondCost" value="0"/>
+		<PlayerStat stat="ManaPercentPerSecondCost" value="0"/>
+		<PlayerStat stat="LifeCost" value="0"/>
+		<PlayerStat stat="LifePercentCost" value="0"/>
+		<PlayerStat stat="LifePerSecondCost" value="0"/>
+		<PlayerStat stat="LifePercentPerSecondCost" value="0"/>
+		<PlayerStat stat="ESCost" value="5"/>
+		<PlayerStat stat="ESPerSecondCost" value="45.8025"/>
+		<PlayerStat stat="ESPercentPerSecondCost" value="0"/>
+		<PlayerStat stat="RageCost" value="0"/>
+		<PlayerStat stat="SoulCost" value="0"/>
+		<PlayerStat stat="Str" value="115"/>
+		<PlayerStat stat="Dex" value="42"/>
+		<PlayerStat stat="Int" value="105"/>
+		<PlayerStat stat="Devotion" value="0"/>
+		<PlayerStat stat="TotalEHP" value="132525.69395412"/>
+		<PlayerStat stat="PhysicalMaximumHitTaken" value="20677"/>
+		<PlayerStat stat="LightningMaximumHitTaken" value="67763"/>
+		<PlayerStat stat="FireMaximumHitTaken" value="57478"/>
+		<PlayerStat stat="ColdMaximumHitTaken" value="45982"/>
+		<PlayerStat stat="ChaosMaximumHitTaken" value="inf"/>
+		<PlayerStat stat="MainHandAccuracy" value="300"/>
+		<PlayerStat stat="Life" value="1"/>
+		<PlayerStat stat="Spec:LifeInc" value="0"/>
+		<PlayerStat stat="LifeUnreserved" value="1"/>
+		<PlayerStat stat="LifeRecoverable" value="1"/>
+		<PlayerStat stat="LifeUnreservedPercent" value="100"/>
+		<PlayerStat stat="LifeRegenRecovery" value="0"/>
+		<PlayerStat stat="LifeLeechGainRate" value="0"/>
+		<PlayerStat stat="Mana" value="669"/>
+		<PlayerStat stat="Spec:ManaInc" value="32"/>
+		<PlayerStat stat="ManaUnreserved" value="44"/>
+		<PlayerStat stat="ManaUnreservedPercent" value="6.576980568012"/>
+		<PlayerStat stat="ManaRegenRecovery" value="29.3"/>
+		<PlayerStat stat="ManaLeechGainRate" value="0"/>
+		<PlayerStat stat="EnergyShield" value="10299"/>
+		<PlayerStat stat="EnergyShieldRecoveryCap" value="10299"/>
+		<PlayerStat stat="Spec:EnergyShieldInc" value="203"/>
+		<PlayerStat stat="EnergyShieldRegenRecovery" value="452.2"/>
+		<PlayerStat stat="EnergyShieldLeechGainRate" value="274.815"/>
+		<PlayerStat stat="Ward" value="0"/>
+		<PlayerStat stat="RageRegenRecovery" value="0"/>
+		<PlayerStat stat="Evasion" value="832"/>
+		<PlayerStat stat="Spec:EvasionInc" value="0"/>
+		<PlayerStat stat="MeleeEvadeChance" value="0"/>
+		<PlayerStat stat="ProjectileEvadeChance" value="0"/>
+		<PlayerStat stat="Armour" value="9268"/>
+		<PlayerStat stat="Spec:ArmourInc" value="45"/>
+		<PlayerStat stat="PhysicalDamageReduction" value="68"/>
+		<PlayerStat stat="EffectiveBlockChance" value="34"/>
+		<PlayerStat stat="EffectiveSpellBlockChance" value="75"/>
+		<PlayerStat stat="AttackDodgeChance" value="0"/>
+		<PlayerStat stat="SpellDodgeChance" value="0"/>
+		<PlayerStat stat="EffectiveSpellSuppressionChance" value="19"/>
+		<PlayerStat stat="FireResist" value="75"/>
+		<PlayerStat stat="FireResistOverCap" value="54"/>
+		<PlayerStat stat="ColdResist" value="75"/>
+		<PlayerStat stat="ColdResistOverCap" value="78"/>
+		<PlayerStat stat="LightningResist" value="84"/>
+		<PlayerStat stat="LightningResistOverCap" value="85"/>
+		<PlayerStat stat="ChaosResist" value="18"/>
+		<PlayerStat stat="ChaosResistOverCap" value="0"/>
+		<PlayerStat stat="EffectiveMovementSpeedMod" value="1.128"/>
+		<PlayerStat stat="FullDPS" value="0"/>
+		<PlayerStat stat="FullDotDPS" value="0"/>
+		<PlayerStat stat="PowerCharges" value="10"/>
+		<PlayerStat stat="PowerChargesMax" value="10"/>
+		<PlayerStat stat="FrenzyCharges" value="0"/>
+		<PlayerStat stat="FrenzyChargesMax" value="3"/>
+		<PlayerStat stat="EnduranceCharges" value="5"/>
+		<PlayerStat stat="EnduranceChargesMax" value="5"/>
+		<TimelessData devotionVariant1="1" devotionVariant2="1" searchList="" searchListFallback=""/>
+	</Build>
+	<Tree activeSpec="1">
+		<Spec ascendClassId="1" classId="3" clusterHashFormatVersion="2" masteryEffects="{16123,61534},{16141,62252},{34723,40307},{63861,38070}" nodes="3359,3452,4036,4367,5296,5935,6230,6250,6728,7444,7960,8948,9261,9408,9788,9797,10490,11455,11688,11730,12613,12783,12888,13170,15117,15228,15852,16123,16141,16954,18033,18182,18378,18865,19501,20528,20987,21033,21678,21974,21984,22473,22535,22618,25309,25411,25757,25789,25831,26196,26270,26740,27096,27656,27659,29629,29712,30767,31316,31703,32210,32417,32932,33310,33479,33545,34171,34173,34723,36452,36678,36858,37492,37671,37999,38176,39743,39841,41263,41635,44184,45456,46092,46842,47306,47949,48124,48556,48768,48778,48971,49605,49651,51923,52502,53456,53652,54447,54452,55906,56158,56295,57226,60090,60405,60440,60472,61419,61834,61981,62504,63398,63425,63447,63861,63976,64210,64583,65552,65554,65562,65568,65570,65578,65872,65875,65881,65888,65890,65898,66880,66884" secondaryAscendClassId="0" treeVersion="3_29">
+			<URL>
+				https://www.pathofexile.com/passive-skill-tree/AAAABgMBdA0fDXwPxBEPFLAXLxhWGGoaSB0UHxgi9CQtJMAmPCZFKPosvy2oLdIxRTHvMlgzcjsNO3w97D77Pw1COkZxRwZJsUwtUDBR-1IpVK5V1lXgV8lYB1haYt1jQ2SdZL1k52ZUZp5odGnYbAhsC3O9dBB4L3pUe9d90n6hgKSCHoLHgwmFe4V9h6OOZI9Gj_qSdJMnlG-VIJs_m6GhL6KjrJixkLQMtvq4yrtNu_y9rL6Avoq_S8HFwfPK080W0NDRlNS02mLbXtvn34rquuv17BjsOO_r8YryHfQo96b3wffX-XX56PrS_EcOABAAEgAaACAAIgAqAVABUwFZAWABYgFqBUAFRATwXj778yw_DZ1zh6OUtvl1
+			</URL>
+			<Sockets>
+			</Sockets>
+			<Overrides>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Warrior" icon="Art/2DArt/SkillIcons/passives/energyshield.png" nodeId="4367">
+					3% increased maximum Energy Shield
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Warrior" icon="Art/2DArt/SkillIcons/passives/energyshield.png" nodeId="5296">
+					3% increased maximum Energy Shield
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Warrior" icon="Art/2DArt/SkillIcons/passives/energyshield.png" nodeId="7444">
+					3% increased maximum Energy Shield
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Warrior" icon="Art/2DArt/SkillIcons/passives/energyshield.png" nodeId="10490">
+					3% increased maximum Energy Shield
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Warrior" icon="Art/2DArt/SkillIcons/passives/energyshield.png" nodeId="15117">
+					3% increased maximum Energy Shield
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Warrior" icon="Art/2DArt/SkillIcons/passives/energyshield.png" nodeId="18033">
+					3% increased maximum Energy Shield
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Warrior" icon="Art/2DArt/SkillIcons/passives/energyshield.png" nodeId="18182">
+					3% increased maximum Energy Shield
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Warrior" icon="Art/2DArt/SkillIcons/passives/energyshield.png" nodeId="19501">
+					3% increased maximum Energy Shield
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Warrior" icon="Art/2DArt/SkillIcons/passives/energyshield.png" nodeId="26270">
+					3% increased maximum Energy Shield
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Warrior" icon="Art/2DArt/SkillIcons/passives/energyshield.png" nodeId="27656">
+					3% increased maximum Energy Shield
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Warrior" icon="Art/2DArt/SkillIcons/passives/energyshield.png" nodeId="33310">
+					3% increased maximum Energy Shield
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Warrior" icon="Art/2DArt/SkillIcons/passives/energyshield.png" nodeId="33479">
+					3% increased maximum Energy Shield
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Warrior" icon="Art/2DArt/SkillIcons/passives/energyshield.png" nodeId="36678">
+					3% increased maximum Energy Shield
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Warrior" icon="Art/2DArt/SkillIcons/passives/energyshield.png" nodeId="36858">
+					3% increased maximum Energy Shield
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Warrior" icon="Art/2DArt/SkillIcons/passives/energyshield.png" nodeId="37999">
+					3% increased maximum Energy Shield
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Warrior" icon="Art/2DArt/SkillIcons/passives/energyshield.png" nodeId="38176">
+					3% increased maximum Energy Shield
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Warrior" icon="Art/2DArt/SkillIcons/passives/energyshield.png" nodeId="39841">
+					3% increased maximum Energy Shield
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Warrior" icon="Art/2DArt/SkillIcons/passives/energyshield.png" nodeId="41635">
+					3% increased maximum Energy Shield
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Warrior" icon="Art/2DArt/SkillIcons/passives/energyshield.png" nodeId="44184">
+					3% increased maximum Energy Shield
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Warrior" icon="Art/2DArt/SkillIcons/passives/energyshield.png" nodeId="46092">
+					3% increased maximum Energy Shield
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Warrior" icon="Art/2DArt/SkillIcons/passives/energyshield.png" nodeId="49605">
+					3% increased maximum Energy Shield
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Warrior" icon="Art/2DArt/SkillIcons/passives/energyshield.png" nodeId="49651">
+					3% increased maximum Energy Shield
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Warrior" icon="Art/2DArt/SkillIcons/passives/energyshield.png" nodeId="53456">
+					3% increased maximum Energy Shield
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Warrior" icon="Art/2DArt/SkillIcons/passives/energyshield.png" nodeId="56295">
+					3% increased maximum Energy Shield
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Warrior" icon="Art/2DArt/SkillIcons/passives/energyshield.png" nodeId="60440">
+					3% increased maximum Energy Shield
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Warrior" icon="Art/2DArt/SkillIcons/passives/energyshield.png" nodeId="63447">
+					3% increased maximum Energy Shield
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/Village/RuneCraftingPassiveBG.png" dn="Runegraft of the Fortress" icon="Art/2DArt/SkillIcons/passives/AtlasTrees/RuneGraftingIcon1.png" nodeId="63861">
+					10% reduced Attributes
+					40% increased Defences
+					Limited to 1 Runegraft of the Fortress
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Warrior" icon="Art/2DArt/SkillIcons/passives/energyshield.png" nodeId="64210">
+					3% increased maximum Energy Shield
+				</Override>
+			</Overrides>
+		</Spec>
+	</Tree>
+</PathOfBuilding>

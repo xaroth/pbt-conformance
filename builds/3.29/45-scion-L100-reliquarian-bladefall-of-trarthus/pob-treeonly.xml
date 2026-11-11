@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathOfBuilding>
+	<Build ascendClassName="Reliquarian" bandit="None" characterLevelAutoMode="false" className="Scion" level="100" mainSocketGroup="2" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="3_0" viewMode="TREE">
+		<PlayerStat stat="AverageHit" value="3559308.7562269"/>
+		<PlayerStat stat="AverageBurstDamage" value="3559308.7562269"/>
+		<PlayerStat stat="Speed" value="0"/>
+		<PlayerStat stat="HitSpeed" value="1.8571428571429"/>
+		<PlayerStat stat="PreEffectiveCritChance" value="72.8522"/>
+		<PlayerStat stat="CritChance" value="72.8522"/>
+		<PlayerStat stat="CritMultiplier" value="6.5"/>
+		<PlayerStat stat="HitChance" value="100"/>
+		<PlayerStat stat="TotalDPS" value="6610144.8329928"/>
+		<PlayerStat stat="TotalDot" value="0"/>
+		<PlayerStat stat="WithBleedDPS" value="6610144.8329928"/>
+		<PlayerStat stat="WithIgniteDPS" value="6610144.8329928"/>
+		<PlayerStat stat="WithPoisonDPS" value="6610144.8329928"/>
+		<PlayerStat stat="TotalDotDPS" value="0"/>
+		<PlayerStat stat="CullingDPS" value="0"/>
+		<PlayerStat stat="ReservationDPS" value="0"/>
+		<PlayerStat stat="CombinedDPS" value="6610144.8329928"/>
+		<PlayerStat stat="Cooldown" value="0.33"/>
+		<PlayerStat stat="AreaOfEffectRadiusMetres" value="3.4"/>
+		<PlayerStat stat="ManaCost" value="0"/>
+		<PlayerStat stat="ManaPercentCost" value="0"/>
+		<PlayerStat stat="ManaPerSecondCost" value="0"/>
+		<PlayerStat stat="ManaPercentPerSecondCost" value="2.7586206896552"/>
+		<PlayerStat stat="LifeCost" value="0"/>
+		<PlayerStat stat="LifePercentCost" value="0"/>
+		<PlayerStat stat="LifePerSecondCost" value="0"/>
+		<PlayerStat stat="LifePercentPerSecondCost" value="0"/>
+		<PlayerStat stat="ESCost" value="0"/>
+		<PlayerStat stat="ESPerSecondCost" value="0"/>
+		<PlayerStat stat="ESPercentPerSecondCost" value="0"/>
+		<PlayerStat stat="RageCost" value="0"/>
+		<PlayerStat stat="SoulCost" value="0"/>
+		<PlayerStat stat="Str" value="161"/>
+		<PlayerStat stat="ReqStr" value="138"/>
+		<PlayerStat stat="Dex" value="193"/>
+		<PlayerStat stat="ReqDex" value="155"/>
+		<PlayerStat stat="Int" value="296"/>
+		<PlayerStat stat="ReqInt" value="224"/>
+		<PlayerStat stat="Devotion" value="0"/>
+		<PlayerStat stat="TotalEHP" value="14639.724445544"/>
+		<PlayerStat stat="PhysicalMaximumHitTaken" value="7141"/>
+		<PlayerStat stat="LightningMaximumHitTaken" value="4828"/>
+		<PlayerStat stat="FireMaximumHitTaken" value="4529"/>
+		<PlayerStat stat="ColdMaximumHitTaken" value="4062"/>
+		<PlayerStat stat="ChaosMaximumHitTaken" value="inf"/>
+		<PlayerStat stat="Life" value="1"/>
+		<PlayerStat stat="Spec:LifeInc" value="4"/>
+		<PlayerStat stat="LifeUnreserved" value="1"/>
+		<PlayerStat stat="LifeRecoverable" value="1"/>
+		<PlayerStat stat="LifeUnreservedPercent" value="100"/>
+		<PlayerStat stat="LifeRegenRecovery" value="0"/>
+		<PlayerStat stat="LifeLeechGainRate" value="0"/>
+		<PlayerStat stat="Mana" value="1506"/>
+		<PlayerStat stat="Spec:ManaInc" value="72"/>
+		<PlayerStat stat="ManaUnreserved" value="7"/>
+		<PlayerStat stat="ManaUnreservedPercent" value="0.46480743691899"/>
+		<PlayerStat stat="ManaRegenRecovery" value="79.6"/>
+		<PlayerStat stat="ManaLeechGainRate" value="0"/>
+		<PlayerStat stat="EnergyShield" value="3660"/>
+		<PlayerStat stat="EnergyShieldRecoveryCap" value="3660"/>
+		<PlayerStat stat="Spec:EnergyShieldInc" value="20"/>
+		<PlayerStat stat="EnergyShieldRegenRecovery" value="91.5"/>
+		<PlayerStat stat="EnergyShieldLeechGainRate" value="0"/>
+		<PlayerStat stat="Ward" value="0"/>
+		<PlayerStat stat="RageRegenRecovery" value="0"/>
+		<PlayerStat stat="Evasion" value="66"/>
+		<PlayerStat stat="Spec:EvasionInc" value="30"/>
+		<PlayerStat stat="MeleeEvadeChance" value="0"/>
+		<PlayerStat stat="ProjectileEvadeChance" value="0"/>
+		<PlayerStat stat="Armour" value="34889"/>
+		<PlayerStat stat="Spec:ArmourInc" value="30"/>
+		<PlayerStat stat="PhysicalDamageReduction" value="82"/>
+		<PlayerStat stat="EffectiveBlockChance" value="49"/>
+		<PlayerStat stat="EffectiveSpellBlockChance" value="70"/>
+		<PlayerStat stat="AttackDodgeChance" value="0"/>
+		<PlayerStat stat="SpellDodgeChance" value="0"/>
+		<PlayerStat stat="EffectiveSpellSuppressionChance" value="0"/>
+		<PlayerStat stat="FireResist" value="17"/>
+		<PlayerStat stat="FireResistOverCap" value="0"/>
+		<PlayerStat stat="ColdResist" value="-124"/>
+		<PlayerStat stat="ColdResistOverCap" value="0"/>
+		<PlayerStat stat="LightningResist" value="-173"/>
+		<PlayerStat stat="LightningResistOverCap" value="0"/>
+		<PlayerStat stat="ChaosResist" value="-150"/>
+		<PlayerStat stat="ChaosResistOverCap" value="0"/>
+		<PlayerStat stat="EffectiveMovementSpeedMod" value="2.3937"/>
+		<PlayerStat stat="FullDPS" value="0"/>
+		<PlayerStat stat="FullDotDPS" value="0"/>
+		<PlayerStat stat="PowerCharges" value="3"/>
+		<PlayerStat stat="PowerChargesMax" value="3"/>
+		<PlayerStat stat="FrenzyCharges" value="0"/>
+		<PlayerStat stat="FrenzyChargesMax" value="3"/>
+		<PlayerStat stat="EnduranceCharges" value="0"/>
+		<PlayerStat stat="EnduranceChargesMax" value="3"/>
+		<TimelessData devotionVariant1="1" devotionVariant2="1" searchList="" searchListFallback=""/>
+	</Build>
+	<Tree activeSpec="1">
+		<Spec ascendClassId="2" classId="0" clusterHashFormatVersion="2" masteryEffects="{5230,28589},{18240,31556},{38921,4500},{39332,22149},{53188,64875},{55491,28638},{63482,53046}" nodes="2151,2460,3452,4367,4977,5230,5296,5456,5462,5875,6230,6764,6799,6967,7364,7444,7594,7918,7960,9086,9408,9788,10108,10115,11455,11688,12143,12189,12613,13961,14665,15117,15544,16633,17570,18033,18174,18240,19501,19919,20261,20987,21033,21974,21984,22441,22618,22628,22702,24229,24362,26070,26196,26270,26557,27415,28859,29712,29781,31683,32710,32932,33508,33545,34171,35233,35936,36107,36452,36489,36678,36881,37303,37671,37690,38246,38921,39332,39761,39841,40366,41263,41635,42343,42760,42917,44184,45456,46092,46842,47062,48423,48768,48778,48828,49605,49651,49698,51213,51923,52502,53188,53957,54694,55491,55571,55743,55926,56029,56153,56922,57736,58556,58833,59826,60090,60247,60440,60472,61419,62697,63194,63398,63425,63447,63482,64210,64583,65273,65552,65561,65568,65570,65578,65888,65890,65893,65894,65898" secondaryAscendClassId="7" treeVersion="3_29">
+			<URL>
+				https://www.pathofexile.com/passive-skill-tree/AAAABgAefghnCZwNfBEPE3EUbhSwFVAVVhbzGFYabBqPGzccxB0UHaoe7h8YJMAmPCeDLL8tqC9vL50xRTaJOUk7DTy4QPlEokZxRv5HQEwtTc9PJVH7UilV1lXgV6lYWlhkWK5epV8qZdZmVGaeZ71rF3C7dBB0VXvDf8aApILkgwmFe4mhjGCNC45kjomPRpARkbeTJ5M6lWaYCZmkm1GboZ2uoS-io6VnpwinpayYsZC0DLb6t9a9J76Avoq-vMHFwfPCIsgNytPNFs_E0sXVptjD2RPZv9p22t3bWd5a4YjkvOmy6rrrV-wY7Djv6_Tp9tr3pvfB99f3-vrS_Ef--QoAEAAZACAAIgAqAWABYgFlAWYBagdvrRRue0RHQBGUmAlWhZmk_WvPxG_e2MPPNvf6
+			</URL>
+			<Sockets>
+			</Sockets>
+			<Overrides>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/KitavaTribePassiveBG.png" dn="Tattoo of the Kitava Heart Eater" icon="Art/2DArt/SkillIcons/passives/lifegainpertarget.png" nodeId="4367">
+					Killing Blows have 4% chance to Consume corpses to recover 10% of Maximum Life
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/KitavaTribePassiveBG.png" dn="Tattoo of the Kitava Heart Eater" icon="Art/2DArt/SkillIcons/passives/lifegainpertarget.png" nodeId="6764">
+					Killing Blows have 4% chance to Consume corpses to recover 10% of Maximum Life
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/KitavaTribePassiveBG.png" dn="Tattoo of the Kitava Heart Eater" icon="Art/2DArt/SkillIcons/passives/lifegainpertarget.png" nodeId="7444">
+					Killing Blows have 4% chance to Consume corpses to recover 10% of Maximum Life
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/KitavaTribePassiveBG.png" dn="Tattoo of the Kitava Heart Eater" icon="Art/2DArt/SkillIcons/passives/lifegainpertarget.png" nodeId="26270">
+					Killing Blows have 4% chance to Consume corpses to recover 10% of Maximum Life
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/KitavaTribePassiveBG.png" dn="Tattoo of the Kitava Heart Eater" icon="Art/2DArt/SkillIcons/passives/lifegainpertarget.png" nodeId="36678">
+					Killing Blows have 4% chance to Consume corpses to recover 10% of Maximum Life
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/Village/RuneCraftingPassiveBG.png" dn="Runegraft of Treachery" icon="Art/2DArt/SkillIcons/passives/AtlasTrees/RuneGraftingIcon20.png" nodeId="39332">
+					15% increased Reservation Efficiency of Skills
+					Auras from your Skills which affect Allies also affect Enemies
+					Limited to 1 Runegraft of Treachery
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/KitavaTribePassiveBG.png" dn="Tattoo of the Kitava Heart Eater" icon="Art/2DArt/SkillIcons/passives/lifegainpertarget.png" nodeId="39841">
+					Killing Blows have 4% chance to Consume corpses to recover 10% of Maximum Life
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/KitavaTribePassiveBG.png" dn="Tattoo of the Kitava Heart Eater" icon="Art/2DArt/SkillIcons/passives/lifegainpertarget.png" nodeId="40366">
+					Killing Blows have 4% chance to Consume corpses to recover 10% of Maximum Life
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/KitavaTribePassiveBG.png" dn="Tattoo of the Kitava Heart Eater" icon="Art/2DArt/SkillIcons/passives/lifegainpertarget.png" nodeId="42760">
+					Killing Blows have 4% chance to Consume corpses to recover 10% of Maximum Life
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/KitavaTribePassiveBG.png" dn="Tattoo of the Kitava Heart Eater" icon="Art/2DArt/SkillIcons/passives/lifegainpertarget.png" nodeId="44184">
+					Killing Blows have 4% chance to Consume corpses to recover 10% of Maximum Life
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/KitavaTribePassiveBG.png" dn="Tattoo of the Kitava Heart Eater" icon="Art/2DArt/SkillIcons/passives/lifegainpertarget.png" nodeId="63447">
+					Killing Blows have 4% chance to Consume corpses to recover 10% of Maximum Life
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/KitavaTribePassiveBG.png" dn="Tattoo of the Kitava Heart Eater" icon="Art/2DArt/SkillIcons/passives/lifegainpertarget.png" nodeId="64210">
+					Killing Blows have 4% chance to Consume corpses to recover 10% of Maximum Life
+				</Override>
+			</Overrides>
+		</Spec>
+	</Tree>
+</PathOfBuilding>

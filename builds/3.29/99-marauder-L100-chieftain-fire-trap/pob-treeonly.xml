@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathOfBuilding>
+	<Build ascendClassName="Chieftain" bandit="None" characterLevelAutoMode="false" className="Marauder" level="100" mainSocketGroup="5" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="3_0" viewMode="TREE">
+		<PlayerStat stat="AverageHit" value="189125.4332916"/>
+		<PlayerStat stat="AverageBurstDamage" value="189125.4332916"/>
+		<PlayerStat stat="Speed" value="1.5"/>
+		<PlayerStat stat="TrapThrowingTime" value="0.66666666666667"/>
+		<PlayerStat stat="TrapThrowCount" value="1"/>
+		<PlayerStat stat="PreEffectiveCritChance" value="1.2"/>
+		<PlayerStat stat="CritChance" value="1.2"/>
+		<PlayerStat stat="CritMultiplier" value="1.5"/>
+		<PlayerStat stat="HitChance" value="100"/>
+		<PlayerStat stat="TotalDPS" value="283688.1499374"/>
+		<PlayerStat stat="TotalDot" value="0"/>
+		<PlayerStat stat="WithDotDPS" value="283688.1499374"/>
+		<PlayerStat stat="WithBleedDPS" value="283688.1499374"/>
+		<PlayerStat stat="IgniteDPS" value="457142.42919972"/>
+		<PlayerStat stat="BurningGroundDPS" value="1495662.634262"/>
+		<PlayerStat stat="WithIgniteDPS" value="740830.57913712"/>
+		<PlayerStat stat="WithPoisonDPS" value="283688.1499374"/>
+		<PlayerStat stat="TotalDotDPS" value="1952805.0634618"/>
+		<PlayerStat stat="CullingDPS" value="0"/>
+		<PlayerStat stat="ReservationDPS" value="0"/>
+		<PlayerStat stat="CombinedDPS" value="2236493.2133992"/>
+		<PlayerStat stat="AreaOfEffectRadiusMetres" value="2.5"/>
+		<PlayerStat stat="ManaCost" value="0"/>
+		<PlayerStat stat="ManaPercentCost" value="0"/>
+		<PlayerStat stat="ManaPerSecondCost" value="0"/>
+		<PlayerStat stat="ManaPercentPerSecondCost" value="0"/>
+		<PlayerStat stat="LifeCost" value="182.4"/>
+		<PlayerStat stat="LifePercentCost" value="0"/>
+		<PlayerStat stat="LifePerSecondCost" value="273.6"/>
+		<PlayerStat stat="LifePercentPerSecondCost" value="0"/>
+		<PlayerStat stat="ESCost" value="0"/>
+		<PlayerStat stat="ESPerSecondCost" value="0"/>
+		<PlayerStat stat="ESPercentPerSecondCost" value="0"/>
+		<PlayerStat stat="RageCost" value="0"/>
+		<PlayerStat stat="SoulCost" value="0"/>
+		<PlayerStat stat="Str" value="362"/>
+		<PlayerStat stat="ReqStr" value="177"/>
+		<PlayerStat stat="Dex" value="107"/>
+		<PlayerStat stat="ReqDex" value="102"/>
+		<PlayerStat stat="Int" value="158"/>
+		<PlayerStat stat="ReqInt" value="148"/>
+		<PlayerStat stat="Devotion" value="0"/>
+		<PlayerStat stat="TotalEHP" value="198269.21389621"/>
+		<PlayerStat stat="PhysicalMaximumHitTaken" value="39121"/>
+		<PlayerStat stat="LightningMaximumHitTaken" value="122233"/>
+		<PlayerStat stat="FireMaximumHitTaken" value="122193"/>
+		<PlayerStat stat="ColdMaximumHitTaken" value="122215"/>
+		<PlayerStat stat="ChaosMaximumHitTaken" value="17838"/>
+		<PlayerStat stat="Life" value="9051"/>
+		<PlayerStat stat="Spec:LifeInc" value="254"/>
+		<PlayerStat stat="LifeUnreserved" value="9051"/>
+		<PlayerStat stat="LifeRecoverable" value="9051"/>
+		<PlayerStat stat="LifeUnreservedPercent" value="100"/>
+		<PlayerStat stat="LifeRegenRecovery" value="2192.5"/>
+		<PlayerStat stat="LifeLeechGainRate" value="0"/>
+		<PlayerStat stat="Mana" value="1094"/>
+		<PlayerStat stat="Spec:ManaInc" value="28"/>
+		<PlayerStat stat="ManaUnreserved" value="82"/>
+		<PlayerStat stat="ManaUnreservedPercent" value="7.4954296160878"/>
+		<PlayerStat stat="ManaRegenRecovery" value="32.7"/>
+		<PlayerStat stat="ManaLeechGainRate" value="0"/>
+		<PlayerStat stat="EnergyShield" value="116"/>
+		<PlayerStat stat="EnergyShieldRecoveryCap" value="116"/>
+		<PlayerStat stat="Spec:EnergyShieldInc" value="20"/>
+		<PlayerStat stat="EnergyShieldRegenRecovery" value="0"/>
+		<PlayerStat stat="EnergyShieldLeechGainRate" value="0"/>
+		<PlayerStat stat="Ward" value="249"/>
+		<PlayerStat stat="RageRegenRecovery" value="0"/>
+		<PlayerStat stat="TotalBuildDegen" value="621.96876"/>
+		<PlayerStat stat="TotalNetRegen" value="1603.23124"/>
+		<PlayerStat stat="NetLifeRegen" value="1570.53124"/>
+		<PlayerStat stat="NetManaRegen" value="32.7"/>
+		<PlayerStat stat="NetEnergyShieldRegen" value="0"/>
+		<PlayerStat stat="Evasion" value="18"/>
+		<PlayerStat stat="Spec:EvasionInc" value="0"/>
+		<PlayerStat stat="MeleeEvadeChance" value="0"/>
+		<PlayerStat stat="ProjectileEvadeChance" value="0"/>
+		<PlayerStat stat="Armour" value="13922"/>
+		<PlayerStat stat="Spec:ArmourInc" value="76"/>
+		<PlayerStat stat="PhysicalDamageReduction" value="90"/>
+		<PlayerStat stat="EffectiveBlockChance" value="75"/>
+		<PlayerStat stat="EffectiveSpellBlockChance" value="46"/>
+		<PlayerStat stat="AttackDodgeChance" value="0"/>
+		<PlayerStat stat="SpellDodgeChance" value="0"/>
+		<PlayerStat stat="EffectiveSpellSuppressionChance" value="0"/>
+		<PlayerStat stat="FireResist" value="90"/>
+		<PlayerStat stat="FireResistOverCap" value="281"/>
+		<PlayerStat stat="ColdResist" value="90"/>
+		<PlayerStat stat="ColdResistOverCap" value="125"/>
+		<PlayerStat stat="LightningResist" value="90"/>
+		<PlayerStat stat="LightningResistOverCap" value="109"/>
+		<PlayerStat stat="ChaosResist" value="26"/>
+		<PlayerStat stat="ChaosResistOverCap" value="0"/>
+		<PlayerStat stat="EffectiveMovementSpeedMod" value="1.6"/>
+		<PlayerStat stat="FullDPS" value="0"/>
+		<PlayerStat stat="FullDotDPS" value="0"/>
+		<PlayerStat stat="PowerCharges" value="0"/>
+		<PlayerStat stat="PowerChargesMax" value="3"/>
+		<PlayerStat stat="FrenzyCharges" value="1"/>
+		<PlayerStat stat="FrenzyChargesMax" value="3"/>
+		<PlayerStat stat="EnduranceCharges" value="4"/>
+		<PlayerStat stat="EnduranceChargesMax" value="4"/>
+		<TimelessData devotionVariant1="1" devotionVariant2="1" searchList="" searchListFallback=""/>
+	</Build>
+	<Tree activeSpec="1">
+		<Spec ascendClassId="3" classId="1" clusterHashFormatVersion="2" masteryEffects="{4139,34242},{5368,4500},{11505,36313},{12382,64381},{25011,47642},{32241,38454},{41415,21468},{47197,61097},{48267,55308},{48505,31822},{53188,64875}" nodes="487,1203,1731,2550,3533,4139,4713,5152,5197,5368,5643,5743,5935,6245,6289,6446,6712,7374,7444,7600,7960,8198,9052,9386,9408,9971,10031,10221,10238,11088,11505,11730,11924,12382,12536,12613,13164,13559,14057,14936,15064,15365,15405,15631,15868,20987,21958,21974,22285,22627,23027,24362,24383,24704,25011,25831,25989,26196,26270,26725,27166,29049,29061,29712,29781,30380,31462,31931,32241,32249,32738,32932,33287,33435,33631,33740,34171,36047,36678,36949,38119,39841,40653,40927,41415,41472,42659,42800,44184,44429,44799,44967,46910,47175,47197,48267,48287,48480,48505,48929,49412,50197,50422,50862,50904,52502,53118,53188,53793,54396,55485,55649,55993,58218,60472,61198,61308,61355,61471,61804,62017,62363,63048,63447,64210,64587,65034,65108,65552,65554,65562,65568,65570,65578" secondaryAscendClassId="15" treeVersion="3_29">
+			<URL>
+				https://www.pathofexile.com/passive-skill-tree/AAAABgE_fQHnBLMGwwn2Dc0QKxJpFCAUTRT4FgsWbxcvGGUYkRkuGjgczh0UHxggBiNcJKokwCbzJy8n7Sf-K1As8S3SLpQwXjD4MUUzbDT3Nuk6WDrYPAU8LT0PPfxR-1XGVdZXDVhjWfNfKl8_YbNk52WFZlRmnmhlah5xeXGFdBB0VXaseuZ8u33xffl_4oCkggeCm4Nfg8yFe4zPj0aQVZTnm6GezZ_foceiAKajpzCsmK2Nrv-vp7c-uF28i7yfvWC9eb8hwQTEFcT2xq7G2M0Wz37PxNIh1HzYvdlh2rnjauw47w7vfO-r8B_xbPJB85v2SPfX-tL8S_4K_lQGABAAEgAaACAAIgAqC4XCECsRlBT4jdks8ft9MF66GmGzljZ98VPcocfuqbhd2Ay8i3xOvXn9a8_E
+			</URL>
+			<Sockets>
+			</Sockets>
+			<Overrides>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/NgamahuTribePassiveBG.png" dn="Tattoo of the Ngamahu Firewalker" icon="Art/2DArt/SkillIcons/passives/FireResistNode.png" nodeId="6446">
+					+6% to Fire Resistance
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/NgamahuTribePassiveBG.png" dn="Tattoo of the Ngamahu Firewalker" icon="Art/2DArt/SkillIcons/passives/FireResistNode.png" nodeId="22285">
+					+6% to Fire Resistance
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/NgamahuTribePassiveBG.png" dn="Tattoo of the Ngamahu Warmonger" icon="Art/2DArt/SkillIcons/passives/firedamage.png" nodeId="34171">
+					5% chance to Ignite
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/NgamahuTribePassiveBG.png" dn="Tattoo of the Ngamahu Firewalker" icon="Art/2DArt/SkillIcons/passives/FireResistNode.png" nodeId="40653">
+					+6% to Fire Resistance
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/NgamahuTribePassiveBG.png" dn="Tattoo of the Ngamahu Firewalker" icon="Art/2DArt/SkillIcons/passives/FireResistNode.png" nodeId="53793">
+					+6% to Fire Resistance
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/NgamahuTribePassiveBG.png" dn="Tattoo of the Ngamahu Firewalker" icon="Art/2DArt/SkillIcons/passives/FireResistNode.png" nodeId="55649">
+					+6% to Fire Resistance
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/NgamahuTribePassiveBG.png" dn="Tattoo of the Ngamahu Firewalker" icon="Art/2DArt/SkillIcons/passives/FireResistNode.png" nodeId="62363">
+					+6% to Fire Resistance
+				</Override>
+			</Overrides>
+		</Spec>
+	</Tree>
+</PathOfBuilding>

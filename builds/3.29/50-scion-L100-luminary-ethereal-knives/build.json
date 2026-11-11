@@ -1,0 +1,14 @@
+{
+  "kind": "spell",
+  "contains": [
+    "cluster-jewel",
+    "timeless-jewel",
+    "mercenary",
+    "item-skill"
+  ],
+  "origin": {
+    "url": "https://poe.ninja/poe1/builds/allflame/character/xsakx2-4060/DjangoGotChained",
+    "league": "Allflame",
+    "snapshot": "0208-20261111-47167"
+  }
+}

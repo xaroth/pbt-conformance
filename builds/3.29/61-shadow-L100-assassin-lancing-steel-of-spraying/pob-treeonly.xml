@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathOfBuilding>
+	<Build ascendClassName="Assassin" bandit="None" characterLevelAutoMode="false" className="Shadow" level="100" mainSocketGroup="5" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="3_0" viewMode="TREE">
+		<PlayerStat stat="AverageDamage" value="24709.6449215"/>
+		<PlayerStat stat="AverageBurstDamage" value="24709.6449215"/>
+		<PlayerStat stat="Speed" value="2.751336"/>
+		<PlayerStat stat="PreEffectiveCritChance" value="100"/>
+		<PlayerStat stat="CritChance" value="100"/>
+		<PlayerStat stat="CritMultiplier" value="7.42"/>
+		<PlayerStat stat="HitChance" value="100"/>
+		<PlayerStat stat="TotalDPS" value="67984.53561974"/>
+		<PlayerStat stat="TotalDot" value="0"/>
+		<PlayerStat stat="WithBleedDPS" value="67984.53561974"/>
+		<PlayerStat stat="WithIgniteDPS" value="67984.53561974"/>
+		<PlayerStat stat="WithPoisonDPS" value="67984.53561974"/>
+		<PlayerStat stat="TotalDotDPS" value="0"/>
+		<PlayerStat stat="CullingDPS" value="7553.8372910822"/>
+		<PlayerStat stat="ReservationDPS" value="0"/>
+		<PlayerStat stat="CombinedDPS" value="75538.372910822"/>
+		<PlayerStat stat="ManaCost" value="35"/>
+		<PlayerStat stat="ManaPercentCost" value="0"/>
+		<PlayerStat stat="ManaPerSecondCost" value="0"/>
+		<PlayerStat stat="ManaPercentPerSecondCost" value="0"/>
+		<PlayerStat stat="LifeCost" value="0"/>
+		<PlayerStat stat="LifePercentCost" value="0"/>
+		<PlayerStat stat="LifePerSecondCost" value="0"/>
+		<PlayerStat stat="LifePercentPerSecondCost" value="0"/>
+		<PlayerStat stat="ESCost" value="0"/>
+		<PlayerStat stat="ESPerSecondCost" value="96.29676"/>
+		<PlayerStat stat="ESPercentPerSecondCost" value="0"/>
+		<PlayerStat stat="RageCost" value="0"/>
+		<PlayerStat stat="SoulCost" value="0"/>
+		<PlayerStat stat="Str" value="70"/>
+		<PlayerStat stat="Dex" value="86"/>
+		<PlayerStat stat="Int" value="50"/>
+		<PlayerStat stat="Devotion" value="0"/>
+		<PlayerStat stat="TotalEHP" value="79948.66295834"/>
+		<PlayerStat stat="PhysicalMaximumHitTaken" value="18057"/>
+		<PlayerStat stat="LightningMaximumHitTaken" value="67699"/>
+		<PlayerStat stat="FireMaximumHitTaken" value="67699"/>
+		<PlayerStat stat="ColdMaximumHitTaken" value="67699"/>
+		<PlayerStat stat="ChaosMaximumHitTaken" value="24648"/>
+		<PlayerStat stat="MainHandAccuracy" value="1160"/>
+		<PlayerStat stat="Life" value="3905"/>
+		<PlayerStat stat="Spec:LifeInc" value="70"/>
+		<PlayerStat stat="LifeUnreserved" value="3683"/>
+		<PlayerStat stat="LifeRecoverable" value="3683"/>
+		<PlayerStat stat="LifeUnreservedPercent" value="94.314980793854"/>
+		<PlayerStat stat="LifeRegenRecovery" value="0"/>
+		<PlayerStat stat="LifeLeechGainRate" value="253.44866188987"/>
+		<PlayerStat stat="Mana" value="799"/>
+		<PlayerStat stat="Spec:ManaInc" value="8"/>
+		<PlayerStat stat="ManaUnreserved" value="19"/>
+		<PlayerStat stat="ManaUnreservedPercent" value="2.377972465582"/>
+		<PlayerStat stat="ManaRegenRecovery" value="25"/>
+		<PlayerStat stat="ManaLeechGainRate" value="0"/>
+		<PlayerStat stat="EnergyShield" value="2111"/>
+		<PlayerStat stat="EnergyShieldRecoveryCap" value="2111"/>
+		<PlayerStat stat="Spec:EnergyShieldInc" value="61"/>
+		<PlayerStat stat="EnergyShieldRegenRecovery" value="0"/>
+		<PlayerStat stat="EnergyShieldLeechGainRate" value="0"/>
+		<PlayerStat stat="Ward" value="0"/>
+		<PlayerStat stat="RageRegenRecovery" value="0"/>
+		<PlayerStat stat="Evasion" value="24366"/>
+		<PlayerStat stat="Spec:EvasionInc" value="36"/>
+		<PlayerStat stat="MeleeEvadeChance" value="61"/>
+		<PlayerStat stat="ProjectileEvadeChance" value="61"/>
+		<PlayerStat stat="Armour" value="1574"/>
+		<PlayerStat stat="Spec:ArmourInc" value="0"/>
+		<PlayerStat stat="PhysicalDamageReduction" value="25"/>
+		<PlayerStat stat="EffectiveBlockChance" value="43"/>
+		<PlayerStat stat="EffectiveSpellBlockChance" value="0"/>
+		<PlayerStat stat="AttackDodgeChance" value="0"/>
+		<PlayerStat stat="SpellDodgeChance" value="0"/>
+		<PlayerStat stat="EffectiveSpellSuppressionChance" value="100"/>
+		<PlayerStat stat="FireResist" value="90"/>
+		<PlayerStat stat="FireResistOverCap" value="0"/>
+		<PlayerStat stat="ColdResist" value="90"/>
+		<PlayerStat stat="ColdResistOverCap" value="0"/>
+		<PlayerStat stat="LightningResist" value="90"/>
+		<PlayerStat stat="LightningResistOverCap" value="17"/>
+		<PlayerStat stat="ChaosResist" value="75"/>
+		<PlayerStat stat="ChaosResistOverCap" value="13"/>
+		<PlayerStat stat="EffectiveMovementSpeedMod" value="2.8665"/>
+		<PlayerStat stat="FullDPS" value="0"/>
+		<PlayerStat stat="FullDotDPS" value="0"/>
+		<PlayerStat stat="PowerCharges" value="6"/>
+		<PlayerStat stat="PowerChargesMax" value="6"/>
+		<PlayerStat stat="FrenzyCharges" value="3"/>
+		<PlayerStat stat="FrenzyChargesMax" value="3"/>
+		<PlayerStat stat="EnduranceCharges" value="0"/>
+		<PlayerStat stat="EnduranceChargesMax" value="3"/>
+		<TimelessData devotionVariant1="1" devotionVariant2="1" searchList="" searchListFallback=""/>
+	</Build>
+	<Tree activeSpec="1">
+		<Spec ascendClassId="1" classId="6" clusterHashFormatVersion="2" masteryEffects="{292,34242},{857,31556},{12125,64381},{12873,19422},{32657,48980},{34723,40307},{63861,2987}" nodes="292,857,1461,1945,4242,4269,4367,5296,6064,6797,6910,7388,7600,7960,9261,9408,10511,10843,11334,12125,12783,12850,12873,12888,13170,13885,14292,14936,15117,15549,16954,18182,18335,18436,18769,19501,20528,20546,20807,20987,21033,21228,21301,21958,21984,22535,22618,22748,23334,25260,25411,25757,26620,27415,27656,27788,28754,29629,29712,31222,31703,32657,32681,32710,32763,33310,33753,33954,34098,34723,35283,35894,36287,36634,36678,36858,37671,38129,39841,40362,41263,41989,42760,44184,44362,44683,46277,46340,46676,47362,47949,48239,48556,48778,48971,49605,49900,52502,53456,55686,55880,56075,56158,56295,56671,57746,58229,60398,60405,60440,60735,61419,61653,61834,61981,62490,62744,63447,63861,64583,65568,65570,65578,65808,65811,65817,65824,65826,65834,65888,65890,65898,66832,66835,66841" secondaryAscendClassId="15" treeVersion="3_29">
+			<URL>
+				https://www.pathofexile.com/passive-skill-tree/AAAABgY9dQEkA1kFtQeZEJIQrREPFLAXsBqNGv4c3B8YJC0kwCkPKlssRi9dMe8yMjJJMlgzcjY9N9Q6WDsNPL1COkcGR59IBElRTC1QMFBCUUdR-1IpUuxTNVXGVeBYB1haWNxbJmKsY0NknWf8axdsCGyMcFJzvXQQefZ713-Rf6l_xn_7gh6D2YSihTKHo4nTjDaNv48aj0aP-pMnlPGboZ2qoS-kBacIrJitSrTFtQS2VLkCu028b72svoq_S8HFwuzNFtDQ2YbaSNsL217b591f4ZLr7uv17BjtP-_r8NXxivId9Br1GPfX-XX8Rw8AIAAiACoBEAETARkBIAEiASoBYAFiAWoFEAUTBRkHhcIBJHtEA1n7fS9dS94ySb9Uf5Gdc4ejC6v5dQ==
+			</URL>
+			<Sockets>
+			</Sockets>
+			<Overrides>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/Village/RuneCraftingPassiveBG.png" dn="Runegraft of the Fortress" icon="Art/2DArt/SkillIcons/passives/AtlasTrees/RuneGraftingIcon1.png" nodeId="292">
+					10% reduced Attributes
+					40% increased Defences
+					Limited to 1 Runegraft of the Fortress
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/RamakoTribePassiveBG.png" dn="Tattoo of the Ramako Shaman" icon="Art/2DArt/SkillIcons/passives/SpellSuppresionNode.png" nodeId="1461">
+					+2% chance to Suppress Spell Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/RamakoTribePassiveBG.png" dn="Tattoo of the Ramako Shaman" icon="Art/2DArt/SkillIcons/passives/SpellSuppresionNode.png" nodeId="4011">
+					+2% chance to Suppress Spell Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/RongokuraiTribePassiveBG.png" dn="Tattoo of the Rongokurai Turtle" icon="Art/2DArt/SkillIcons/passives/dmgreduction.png" nodeId="4367">
+					You take 5% reduced Extra Damage from Critical Strikes
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/RongokuraiTribePassiveBG.png" dn="Tattoo of the Rongokurai Turtle" icon="Art/2DArt/SkillIcons/passives/dmgreduction.png" nodeId="5296">
+					You take 5% reduced Extra Damage from Critical Strikes
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Warrior" icon="Art/2DArt/SkillIcons/passives/energyshield.png" nodeId="7388">
+					3% increased maximum Energy Shield
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/RamakoTribePassiveBG.png" dn="Tattoo of the Ramako Shaman" icon="Art/2DArt/SkillIcons/passives/SpellSuppresionNode.png" nodeId="8640">
+					+2% chance to Suppress Spell Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Warrior" icon="Art/2DArt/SkillIcons/passives/energyshield.png" nodeId="11334">
+					3% increased maximum Energy Shield
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/Village/RuneCraftingPassiveBG.png" dn="Runegraft of Treachery" icon="Art/2DArt/SkillIcons/passives/AtlasTrees/RuneGraftingIcon20.png" nodeId="12125">
+					15% increased Reservation Efficiency of Skills
+					Auras from your Skills which affect Allies also affect Enemies
+					Limited to 1 Runegraft of Treachery
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/Village/RuneCraftingPassiveBG.png" dn="Runegraft of Time" icon="Art/2DArt/SkillIcons/passives/AtlasTrees/RuneGraftingIcon19.png" nodeId="12873">
+					20% chance for Skills to not consume a Cooldown on use
+					Limited to 1 Runegraft of Time
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/RamakoTribePassiveBG.png" dn="Tattoo of the Ramako Shaman" icon="Art/2DArt/SkillIcons/passives/SpellSuppresionNode.png" nodeId="13885">
+					+2% chance to Suppress Spell Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Warrior" icon="Art/2DArt/SkillIcons/passives/energyshield.png" nodeId="15117">
+					3% increased maximum Energy Shield
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Warrior" icon="Art/2DArt/SkillIcons/passives/energyshield.png" nodeId="15549">
+					3% increased maximum Energy Shield
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Warrior" icon="Art/2DArt/SkillIcons/passives/energyshield.png" nodeId="18182">
+					3% increased maximum Energy Shield
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/RongokuraiTribePassiveBG.png" dn="Tattoo of the Rongokurai Turtle" icon="Art/2DArt/SkillIcons/passives/dmgreduction.png" nodeId="19501">
+					You take 5% reduced Extra Damage from Critical Strikes
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Warrior" icon="Art/2DArt/SkillIcons/passives/energyshield.png" nodeId="20546">
+					3% increased maximum Energy Shield
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/NgamahuTribePassiveBG.png" dn="Tattoo of the Ngamahu Firewalker" icon="Art/2DArt/SkillIcons/passives/FireResistNode.png" nodeId="21301">
+					+6% to Fire Resistance
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/RamakoTribePassiveBG.png" dn="Tattoo of the Ramako Shaman" icon="Art/2DArt/SkillIcons/passives/SpellSuppresionNode.png" nodeId="27283">
+					+2% chance to Suppress Spell Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Warrior" icon="Art/2DArt/SkillIcons/passives/energyshield.png" nodeId="27415">
+					3% increased maximum Energy Shield
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Warrior" icon="Art/2DArt/SkillIcons/passives/energyshield.png" nodeId="27656">
+					3% increased maximum Energy Shield
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/RamakoTribePassiveBG.png" dn="Tattoo of the Ramako Shaman" icon="Art/2DArt/SkillIcons/passives/SpellSuppresionNode.png" nodeId="28012">
+					+2% chance to Suppress Spell Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Warrior" icon="Art/2DArt/SkillIcons/passives/energyshield.png" nodeId="32710">
+					3% increased maximum Energy Shield
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/RongokuraiTribePassiveBG.png" dn="Tattoo of the Rongokurai Turtle" icon="Art/2DArt/SkillIcons/passives/dmgreduction.png" nodeId="33310">
+					You take 5% reduced Extra Damage from Critical Strikes
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/RamakoTribePassiveBG.png" dn="Tattoo of the Ramako Shaman" icon="Art/2DArt/SkillIcons/passives/SpellSuppresionNode.png" nodeId="36287">
+					+2% chance to Suppress Spell Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/RongokuraiTribePassiveBG.png" dn="Tattoo of the Rongokurai Turtle" icon="Art/2DArt/SkillIcons/passives/dmgreduction.png" nodeId="36678">
+					You take 5% reduced Extra Damage from Critical Strikes
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Warrior" icon="Art/2DArt/SkillIcons/passives/energyshield.png" nodeId="36858">
+					3% increased maximum Energy Shield
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Warrior" icon="Art/2DArt/SkillIcons/passives/energyshield.png" nodeId="37671">
+					3% increased maximum Energy Shield
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/RamakoTribePassiveBG.png" dn="Tattoo of the Ramako Shaman" icon="Art/2DArt/SkillIcons/passives/SpellSuppresionNode.png" nodeId="38348">
+					+2% chance to Suppress Spell Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/RongokuraiTribePassiveBG.png" dn="Tattoo of the Rongokurai Turtle" icon="Art/2DArt/SkillIcons/passives/dmgreduction.png" nodeId="39841">
+					You take 5% reduced Extra Damage from Critical Strikes
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Warrior" icon="Art/2DArt/SkillIcons/passives/energyshield.png" nodeId="41635">
+					3% increased maximum Energy Shield
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/RamakoTribePassiveBG.png" dn="Tattoo of the Ramako Shaman" icon="Art/2DArt/SkillIcons/passives/SpellSuppresionNode.png" nodeId="41866">
+					+2% chance to Suppress Spell Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/RongokuraiTribePassiveBG.png" dn="Tattoo of the Rongokurai Turtle" icon="Art/2DArt/SkillIcons/passives/dmgreduction.png" nodeId="42760">
+					You take 5% reduced Extra Damage from Critical Strikes
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/RongokuraiTribePassiveBG.png" dn="Tattoo of the Rongokurai Turtle" icon="Art/2DArt/SkillIcons/passives/dmgreduction.png" nodeId="44184">
+					You take 5% reduced Extra Damage from Critical Strikes
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/RamakoTribePassiveBG.png" dn="Tattoo of the Ramako Shaman" icon="Art/2DArt/SkillIcons/passives/SpellSuppresionNode.png" nodeId="45838">
+					+2% chance to Suppress Spell Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/TasalioTribePassiveBG.png" dn="Tattoo of the Tasalio Warrior" icon="Art/2DArt/SkillIcons/passives/AttackBlindNode.png" nodeId="46277">
+					5% chance to Blind Enemies on Hit with Attacks
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Warrior" icon="Art/2DArt/SkillIcons/passives/energyshield.png" nodeId="46340">
+					3% increased maximum Energy Shield
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Warrior" icon="Art/2DArt/SkillIcons/passives/energyshield.png" nodeId="48778">
+					3% increased maximum Energy Shield
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/RongokuraiTribePassiveBG.png" dn="Tattoo of the Rongokurai Turtle" icon="Art/2DArt/SkillIcons/passives/dmgreduction.png" nodeId="49605">
+					You take 5% reduced Extra Damage from Critical Strikes
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/RamakoTribePassiveBG.png" dn="Tattoo of the Ramako Shaman" icon="Art/2DArt/SkillIcons/passives/SpellSuppresionNode.png" nodeId="49900">
+					+2% chance to Suppress Spell Damage
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Warrior" icon="Art/2DArt/SkillIcons/passives/energyshield.png" nodeId="53456">
+					3% increased maximum Energy Shield
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Warrior" icon="Art/2DArt/SkillIcons/passives/energyshield.png" nodeId="56295">
+					3% increased maximum Energy Shield
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Warrior" icon="Art/2DArt/SkillIcons/passives/energyshield.png" nodeId="60398">
+					3% increased maximum Energy Shield
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/HinekoraTribePassiveBG.png" dn="Tattoo of the Hinekora Warrior" icon="Art/2DArt/SkillIcons/passives/energyshield.png" nodeId="60440">
+					3% increased maximum Energy Shield
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/RongokuraiTribePassiveBG.png" dn="Tattoo of the Rongokurai Turtle" icon="Art/2DArt/SkillIcons/passives/dmgreduction.png" nodeId="63447">
+					You take 5% reduced Extra Damage from Critical Strikes
+				</Override>
+				<Override activeEffectImage="Art/2DArt/UIImages/InGame/AncestralTrial/PassiveTreeTattoos/RamakoTribePassiveBG.png" dn="Tattoo of the Ramako Shaman" icon="Art/2DArt/SkillIcons/passives/SpellSuppresionNode.png" nodeId="63843">
+					+2% chance to Suppress Spell Damage
+				</Override>
+			</Overrides>
+		</Spec>
+	</Tree>
+</PathOfBuilding>
