@@ -80,7 +80,7 @@ func run(ctx context.Context, args []string) error {
 	var out output
 	fs.BoolVar(&out.scoreboard, "scoreboard", false, "follow the mismatches with the scoreboard (compare)")
 	fs.BoolVar(&out.json, "json", false, "write the mismatches and the scoreboard as JSON (compare)")
-	fs.StringVar(&out.hints, "hints", "", "JSON file of a text per game stat id, shown beside blocking stats (compare)")
+	fs.StringVar(&out.hints, "hints", "", "JSON file of a hint per game stat id, a text or an object with a hint field, shown beside blocking stats (compare)")
 	if err := fs.Parse(args[1:]); err != nil {
 		return fmt.Errorf("%s: %w", args[0], err)
 	}

@@ -126,19 +126,61 @@ func TestScoreboardWrite(t *testing.T) {
 func TestReadHints(t *testing.T) {
 	t.Parallel()
 	dir := t.TempDir()
-	good, bad := filepath.Join(dir, "good.json"), filepath.Join(dir, "bad.json")
-	if err := os.WriteFile(good, []byte(`{"spell_damage_+%": "Damage, spell"}`), 0o600); err != nil {
-		t.Fatal(err)
+	write := func(name, body string) string {
+		t.Helper()
+		path := filepath.Join(dir, name)
+		if err := os.WriteFile(path, []byte(body), 0o600); err != nil {
+			t.Fatal(err)
+		}
+		return path
 	}
-	if err := os.WriteFile(bad, []byte(`{"spell_damage_+%": 3}`), 0o600); err != nil {
-		t.Fatal(err)
-	}
+	good := write("good.json", `{
+		"spell_damage_+%": "Damage, spell",
+		"damage_+%": {"hint": "Damage INC", "pob": [{"source": "skillStatMap"}]}
+	}`)
 	h, err := compare.ReadHints(good)
-	if err != nil || h["spell_damage_+%"] != "Damage, spell" {
-		t.Errorf("good: got %v, %v", h, err)
+	if err != nil {
+		t.Fatal(err)
 	}
-	if _, err := compare.ReadHints(bad); !errors.Is(err, compare.ErrHints) {
-		t.Errorf("bad: got %v, want %v", err, compare.ErrHints)
+	want := map[string]string{"spell_damage_+%": "Damage, spell", "damage_+%": "Damage INC"}
+	if diff := cmp.Diff(want, h); diff != "" {
+		t.Errorf("good (-want +got):\n%s", diff)
+	}
+	for name, body := range map[string]string{
+		"number":    `{"spell_damage_+%": 3}`,
+		"null":      `{"spell_damage_+%": null}`,
+		"no hint":   `{"spell_damage_+%": {"pob": []}}`,
+		"hint type": `{"spell_damage_+%": {"hint": 3}}`,
+		"list":      `["spell_damage_+%"]`,
+	} {
+		if _, err := compare.ReadHints(write(name+".json", body)); !errors.Is(err, compare.ErrHints) {
+			t.Errorf("%s: got %v, want %v", name, err, compare.ErrHints)
+		}
+	}
+}
+
+// A stat's hint shows beside it in the blockers table and changes nothing else; a gem's name
+// takes no hint.
+func TestScoreboardHintsText(t *testing.T) {
+	t.Parallel()
+	builds := scoreBuilds()
+	text := func(hints map[string]string) string {
+		t.Helper()
+		var b bytes.Buffer
+		if err := compare.Score(builds, compare.Mismatches(builds), nil, hints).WriteText(&b); err != nil {
+			t.Fatal(err)
+		}
+		return b.String()
+	}
+	with := text(map[string]string{"spell_damage_+%": "Damage INC Spell (skill stat map)", "Cruelty": "not a stat"})
+	if !strings.Contains(with, "stat     spell_damage_+%  Damage INC Spell (skill stat map)\n") {
+		t.Errorf("text lacks the hint:\n%s", with)
+	}
+	if strings.Contains(with, "not a stat") {
+		t.Errorf("hint shown beside a gem:\n%s", with)
+	}
+	if without := text(nil); strings.Replace(with, "  Damage INC Spell (skill stat map)", "", 1) != without {
+		t.Errorf("hints change more than the hint column:\n%s\n%s", with, without)
 	}
 }
 

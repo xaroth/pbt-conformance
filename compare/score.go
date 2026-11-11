@@ -23,6 +23,11 @@ const GroupChecks pob.Group = "checks"
 // ErrHints marks a malformed hints file.
 var ErrHints = errors.New("invalid hints")
 
+var (
+	errNoHint   = errors.New(`entry has no "hint" text`)
+	errNullHint = errors.New("entry is null")
+)
+
 // Scoreboard says how many builds the engine gets right and what blocks the most.
 type Scoreboard struct {
 	Mismatches []Mismatch `json:"mismatches"`
@@ -80,17 +85,48 @@ type BlockerRow struct {
 	Hint string `json:"hint,omitempty"`
 }
 
-// ReadHints reads a hints file: a JSON object from game stat id to a short text.
+// ReadHints reads a hints file: a JSON object from game stat id to either a short text or an
+// object whose "hint" field is that text. Other fields of the object are ignored.
 func ReadHints(path string) (map[string]string, error) {
 	b, err := os.ReadFile(path)
 	if err != nil {
 		return nil, fmt.Errorf("read hints: %w", err)
 	}
-	var h map[string]string
-	if err := json.Unmarshal(b, &h); err != nil {
+	var raw map[string]json.RawMessage
+	if err := json.Unmarshal(b, &raw); err != nil {
 		return nil, fmt.Errorf("%s: %w: %w", path, ErrHints, err)
 	}
+	h := make(map[string]string, len(raw))
+	for stat, v := range raw {
+		text, err := hintText(v)
+		if err != nil {
+			return nil, fmt.Errorf("%s: %s: %w: %w", path, stat, ErrHints, err)
+		}
+		h[stat] = text
+	}
 	return h, nil
+}
+
+// hintText reads one hints file entry, a text or an object with a text "hint" field.
+func hintText(v json.RawMessage) (string, error) {
+	// null would unmarshal into a string as "" without error.
+	if bytes.Equal(bytes.TrimSpace(v), []byte("null")) {
+		return "", errNullHint
+	}
+	var text string
+	if err := json.Unmarshal(v, &text); err == nil {
+		return text, nil
+	}
+	var obj struct {
+		Hint *string `json:"hint"`
+	}
+	if err := json.Unmarshal(v, &obj); err != nil {
+		return "", fmt.Errorf("hint: %w", err)
+	}
+	if obj.Hint == nil {
+		return "", errNoHint
+	}
+	return *obj.Hint, nil
 }
 
 // Score builds the scoreboard of builds, with ms their mismatches as triaged, stale the stale
