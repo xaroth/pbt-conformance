@@ -51,7 +51,8 @@ func fixture(t *testing.T) []byte {
 
 func store329(t *testing.T) *dataset.Store {
 	t.Helper()
-	s, err := compare.OpenVersion(env(t, "PBT_DATASETS"), "poe1", "3.29.3.3")
+	v := repoPins(t).Games["poe1"].Leagues["3.29"].Dataset.Version
+	s, err := compare.OpenVersion(env(t, "PBT_DATASETS"), "poe1", v)
 	if err != nil {
 		t.Fatal(err)
 	}

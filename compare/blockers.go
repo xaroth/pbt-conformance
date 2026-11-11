@@ -2,10 +2,12 @@ package compare
 
 import (
 	"cmp"
+	"fmt"
 	"slices"
 	"strings"
 
 	"github.com/xaroth/pbt-engine/build"
+	"github.com/xaroth/pbt-engine/dataset"
 	pobimport "github.com/xaroth/pbt-engine/pob"
 	"github.com/xaroth/pbt-engine/simulator"
 )
@@ -43,8 +45,9 @@ func importMechanics() map[build.Code]string {
 }
 
 // blockers returns, sorted and once each, what the tree-only simulation left out (its
-// unmodelled-stat warnings) and what the full file's import left out.
-func blockers(simWarnings, fullImport []build.Warning) []Blocker {
+// unmodelled-stat warnings), what the full file's import left out, and the gems of the full
+// file, which the engine imports but does not simulate yet.
+func blockers(simWarnings, fullImport []build.Warning, fullGems []string) []Blocker {
 	var out []Blocker
 	for _, w := range simWarnings {
 		if w.Code != simulator.UnmodelledStat {
@@ -57,16 +60,15 @@ func blockers(simWarnings, fullImport []build.Warning) []Blocker {
 		}
 	}
 	for _, w := range fullImport {
-		m, ok := importMechanics()[w.Code]
-		if !ok {
-			continue
+		if m, ok := importMechanics()[w.Code]; ok {
+			out = append(out, Blocker{BlockerMechanic, m})
 		}
-		out = append(out, Blocker{BlockerMechanic, m})
-		if w.Code == pobimport.SkillIgnored {
-			for _, g := range gems(w.Message) {
-				out = append(out, Blocker{BlockerGem, g})
-			}
-		}
+	}
+	if len(fullGems) > 0 {
+		out = append(out, Blocker{BlockerMechanic, "skills"})
+	}
+	for _, g := range fullGems {
+		out = append(out, Blocker{BlockerGem, g})
 	}
 	slices.SortFunc(out, compareBlockers)
 	return slices.Compact(out)
@@ -84,19 +86,57 @@ func waitsFor(msg string) (string, bool) {
 	return m, m != ""
 }
 
-// gems returns the gems of a skill-ignored warning's message, which lists them in
-// parentheses: "skills are not imported (Fireball, Spell Echo)".
-func gems(msg string) []string {
-	_, list, ok := strings.Cut(msg, "(")
-	if !ok {
-		return nil
+// gemNames returns the English name of every gem in skills: a transfigured gem's by the skill
+// its variant grants, a support's without " Support". A gem without a name keeps its id.
+func gemNames(skills build.Skills, store *dataset.Store) ([]string, error) {
+	var gems []build.Gem
+	for _, g := range skills.Groups {
+		gems = append(gems, g.Gems...)
 	}
-	list = strings.TrimSuffix(list, ")")
-	var out []string
-	for g := range strings.SplitSeq(list, ", ") {
-		if g != "" {
-			out = append(out, g)
+	if len(gems) == 0 {
+		return nil, nil
+	}
+	sk, err := store.Skills()
+	if err != nil {
+		return nil, fmt.Errorf("compare: %w", err)
+	}
+	text, err := store.Text("en")
+	if err != nil {
+		return nil, fmt.Errorf("compare: %w", err)
+	}
+	gemName, skillName := names(text.GemNames), names(text.SkillNames)
+	out := make([]string, 0, len(gems))
+	for _, g := range gems {
+		name := cmp.Or(gemName[g.ID], g.ID)
+		if active := variantSkill(sk, g.GemID); active != "" {
+			name = cmp.Or(skillName[active], name)
 		}
+		out = append(out, strings.TrimSuffix(name, " Support"))
 	}
-	return out
+	return out, nil
+}
+
+// variantSkill returns the active skill a gem's variant grants, empty for its first variant.
+func variantSkill(sk *dataset.Skills, id build.GemID) string {
+	gem := sk.Gem(id.ID)
+	if id.Effect == "" || gem == nil {
+		return ""
+	}
+	e := gem.Effect(id.Effect)
+	if e == nil {
+		return ""
+	}
+	i := slices.IndexFunc(sk.GrantedEffects, func(ge dataset.GrantedEffect) bool { return ge.ID == e.GrantedEffect })
+	if i < 0 {
+		return ""
+	}
+	return sk.GrantedEffects[i].ActiveSkill
+}
+
+func names(ns []dataset.Name) map[string]string {
+	m := make(map[string]string, len(ns))
+	for _, n := range ns {
+		m[n.ID] = n.Name
+	}
+	return m
 }

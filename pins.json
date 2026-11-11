@@ -3,7 +3,7 @@
     "luajit": {"repo": "https://github.com/LuaJIT/LuaJIT", "commit": "2460b3ff93a1c955de3d62cfc825de7d68dc272e"},
     "luautf8": {"repo": "https://github.com/starwing/luautf8", "commit": "1bb70d45208d4033dcc75efee968be70534dd3ab"}
   },
-  "data": {"repo": "https://github.com/xaroth/pbt-data", "commit": "b2469fb6eda35983c21fbf8aec3debc0ee32d7bf"},
+  "data": {"repo": "https://github.com/xaroth/pbt-data", "commit": "09cc68e78b87f3b6ff1894052f211e509359738c"},
   "games": {
     "poe1": {
       "current": "3.29",
@@ -11,12 +11,12 @@
         "3.28": {
           "pob": {"tag": "v2.65.0", "commit": "f9f4f3b4ab6a3a37d2eb693265b5c73317ff42a6"},
           "tree": "3_28",
-          "dataset": {"version": "3.28.0.16", "id": "bf18496797b2f28bb3fdd0468a577eaeab762d86c965c9da6c19b7156d790065"}
+          "dataset": {"version": "3.28.0.16", "id": "83b4f5cd482e8e35cbfa6b990ac4aaecb8f53fe4340921329d4ae0e838977463"}
         },
         "3.29": {
           "pob": {"tag": "v2.67.2", "commit": "b32759ab0f31a1c8499a0d420cb0f0633d4fe478"},
           "tree": "3_29",
-          "dataset": {"version": "3.29.3.3", "id": "02d18523184806240adcca6ce2a3d2154cf4beeaf5b4741ab86d507f02b64cfc"}
+          "dataset": {"version": "3.29.3.6", "id": "e289097d0083987692a916fe008bed5b87b9265dcc880523bcea391251c974a1"}
         }
       }
     }
