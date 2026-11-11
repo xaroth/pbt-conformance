@@ -28,7 +28,7 @@ type pobFile struct {
 	} `xml:"Tree"`
 	Items struct {
 		ActiveSet int       `xml:"activeItemSet,attr"`
-		SecondSet bool      `xml:"useSecondWeaponSet,attr"`
+		SecondSet string    `xml:"useSecondWeaponSet,attr"`
 		Items     []pobItem `xml:"Item"`
 		Sets      []pobSet  `xml:"ItemSet"`
 		// Slots holds an older file's slots, which have no item set.
@@ -37,8 +37,9 @@ type pobFile struct {
 }
 
 type pobSet struct {
-	ID        int       `xml:"id,attr"`
-	SecondSet bool      `xml:"useSecondWeaponSet,attr"`
+	ID int `xml:"id,attr"`
+	// SecondSet is "true" when the set uses its second weapons; PoB writes "nil" for unset.
+	SecondSet string    `xml:"useSecondWeaponSet,attr"`
 	Slots     []pobSlot `xml:"Slot"`
 }
 
@@ -115,7 +116,7 @@ func activeSlots(f *pobFile) []pobSlot {
 		}
 	}
 	return slices.DeleteFunc(slices.Clone(slots), func(s pobSlot) bool {
-		return strings.HasPrefix(s.Name, "Weapon ") && strings.Contains(s.Name, " Swap") != second
+		return strings.HasPrefix(s.Name, "Weapon ") && strings.Contains(s.Name, " Swap") != (second == "true")
 	})
 }
 
