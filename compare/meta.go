@@ -24,7 +24,10 @@ type Kind string
 // Kinds of build.
 const (
 	// Untagged is the kind of a build without a metadata file.
-	Untagged     Kind = "untagged"
+	Untagged Kind = "untagged"
+	// Smoke is the kind of a smoke-test build, such as a level 1 start: it has no kind of its
+	// own and counts towards none.
+	Smoke        Kind = "smoke"
 	KindSpell    Kind = "spell"
 	KindAttack   Kind = "attack"
 	KindDoT      Kind = "damage-over-time"
@@ -59,13 +62,21 @@ func Contents() []Content {
 	return []Content{ClusterJewel, TimelessJewel, Mercenary, TreeVariant, ItemSkill}
 }
 
-// Meta is a build's metadata file.
+// Meta is a build's metadata.
 type Meta struct {
-	Kind     Kind      `json:"kind"`
-	Contains []Content `json:"contains,omitempty"`
+	Kind     Kind
+	Contains []Content
 }
 
-// ReadMeta reads the metadata file in dir; without one the build is untagged.
+// metaFile is the metadata file: a kind with contents, or smoke alone.
+type metaFile struct {
+	Kind     Kind      `json:"kind"`
+	Smoke    bool      `json:"smoke"`
+	Contains []Content `json:"contains"`
+}
+
+// ReadMeta reads the metadata file in dir; without one the build is untagged, and with
+// "smoke" set its kind is Smoke.
 func ReadMeta(dir string) (Meta, error) {
 	b, err := os.ReadFile(filepath.Join(dir, MetaFile))
 	if errors.Is(err, fs.ErrNotExist) {
@@ -80,9 +91,15 @@ func ReadMeta(dir string) (Meta, error) {
 func parseMeta(b []byte) (Meta, error) {
 	dec := json.NewDecoder(bytes.NewReader(b))
 	dec.DisallowUnknownFields()
-	var m Meta
+	var m metaFile
 	if err := dec.Decode(&m); err != nil {
 		return Meta{}, fmt.Errorf("%s: %w: %w", MetaFile, ErrMeta, err)
+	}
+	if m.Smoke {
+		if m.Kind != "" || len(m.Contains) > 0 {
+			return Meta{}, fmt.Errorf("%s: %w: smoke with a kind or contents", MetaFile, ErrMeta)
+		}
+		return Meta{Kind: Smoke}, nil
 	}
 	if !slices.Contains(Kinds(), m.Kind) {
 		return Meta{}, fmt.Errorf("%s: %w: kind %q", MetaFile, ErrMeta, m.Kind)
@@ -92,5 +109,5 @@ func parseMeta(b []byte) (Meta, error) {
 			return Meta{}, fmt.Errorf("%s: %w: contains %q unknown or repeated", MetaFile, ErrMeta, c)
 		}
 	}
-	return m, nil
+	return Meta{Kind: m.Kind, Contains: m.Contains}, nil
 }
