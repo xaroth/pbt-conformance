@@ -29,9 +29,28 @@ type edit struct {
 // are dropped, and the bandit and pantheon choices on <Build> are reset to None. The rest is
 // kept byte for byte.
 func Gear(full []byte) ([]byte, error) {
-	edits, err := gearEdits(full)
+	b, err := derive(full, false)
 	if err != nil {
 		return nil, fmt.Errorf("pob: gear: %w", err)
+	}
+	return b, nil
+}
+
+// TreeOnly derives a build's tree-only layer from its full PoB XML: the build and its tree with
+// no jewels in its sockets. Every other top-level element is dropped and the bandit and pantheon
+// choices on <Build> are reset to None, as in Gear.
+func TreeOnly(full []byte) ([]byte, error) {
+	b, err := derive(full, true)
+	if err != nil {
+		return nil, fmt.Errorf("pob: tree only: %w", err)
+	}
+	return b, nil
+}
+
+func derive(full []byte, treeOnly bool) ([]byte, error) {
+	edits, err := layerEdits(full, treeOnly)
+	if err != nil {
+		return nil, err
 	}
 	slices.SortFunc(edits, func(a, b edit) int { return cmp.Compare(a.start, b.start) })
 	var out bytes.Buffer
@@ -45,19 +64,20 @@ func Gear(full []byte) ([]byte, error) {
 	return out.Bytes(), nil
 }
 
-// gearWalk collects the edits that turn a full XML into its gear layer.
-type gearWalk struct {
-	d      *xml.Decoder
-	full   []byte
-	edits  []edit
-	path   []string
-	items  map[string]edit
-	flasks []string
-	root   bool
+// layerWalk collects the edits that turn a full XML into its gear or tree-only layer.
+type layerWalk struct {
+	treeOnly bool
+	d        *xml.Decoder
+	full     []byte
+	edits    []edit
+	path     []string
+	items    map[string]edit
+	flasks   []string
+	root     bool
 }
 
-func gearEdits(full []byte) ([]edit, error) {
-	w := &gearWalk{d: xml.NewDecoder(bytes.NewReader(full)), full: full, items: map[string]edit{}}
+func layerEdits(full []byte, treeOnly bool) ([]edit, error) {
+	w := &layerWalk{treeOnly: treeOnly, d: xml.NewDecoder(bytes.NewReader(full)), full: full, items: map[string]edit{}}
 	for {
 		start := w.d.InputOffset()
 		tok, err := w.d.Token()
@@ -90,7 +110,7 @@ func gearEdits(full []byte) ([]edit, error) {
 
 // open handles the element whose start tag t began at start: it either skips the element or
 // descends into it.
-func (w *gearWalk) open(t xml.StartElement, start int64) error {
+func (w *layerWalk) open(t xml.StartElement, start int64) error {
 	var (
 		skipped bool
 		err     error
@@ -102,6 +122,11 @@ func (w *gearWalk) open(t xml.StartElement, start int64) error {
 		skipped, err = w.openTop(t, start)
 	case slices.Contains(w.path, "Items"):
 		skipped, err = w.openItems(t, start)
+	case w.treeOnly && t.Name.Local == "Socket" && slices.Contains(w.path, "Tree"):
+		var e edit
+		e, err = w.skip(start)
+		w.edits = append(w.edits, e)
+		skipped = true
 	}
 	if err != nil || skipped {
 		return err
@@ -110,16 +135,20 @@ func (w *gearWalk) open(t xml.StartElement, start int64) error {
 	return nil
 }
 
-// openTop resets the choices on <Build> and drops every top-level element a gear file does not
+// openTop resets the choices on <Build> and drops every top-level element the layer does not
 // keep, so PoB uses its defaults for them.
-func (w *gearWalk) openTop(t xml.StartElement, start int64) (bool, error) {
+func (w *layerWalk) openTop(t xml.StartElement, start int64) (bool, error) {
 	switch t.Name.Local {
 	case "Build":
 		tag := w.full[start:w.d.InputOffset()]
 		w.edits = append(w.edits, edit{start, w.d.InputOffset(), choiceAttr.ReplaceAll(tag, []byte(`$1="None"`))})
 		return false, nil
-	case "Tree", "Items":
+	case "Tree":
 		return false, nil
+	case "Items":
+		if !w.treeOnly {
+			return false, nil
+		}
 	}
 	e, err := w.skip(start)
 	w.edits = append(w.edits, e)
@@ -128,7 +157,7 @@ func (w *gearWalk) openTop(t xml.StartElement, start int64) (bool, error) {
 
 // openItems drops flask slots and notes every item; the flasks' items are dropped once all
 // slots are read.
-func (w *gearWalk) openItems(t xml.StartElement, start int64) (bool, error) {
+func (w *layerWalk) openItems(t xml.StartElement, start int64) (bool, error) {
 	switch {
 	case t.Name.Local == "Slot" && strings.HasPrefix(attr(t, "name"), "Flask "):
 		e, err := w.skip(start)
@@ -144,7 +173,7 @@ func (w *gearWalk) openItems(t xml.StartElement, start int64) (bool, error) {
 }
 
 // skip reads past the element whose start tag began at start and returns its removal.
-func (w *gearWalk) skip(start int64) (edit, error) {
+func (w *layerWalk) skip(start int64) (edit, error) {
 	if err := w.d.Skip(); err != nil {
 		return edit{}, fmt.Errorf("reading xml: %w", err)
 	}

@@ -7,6 +7,7 @@ import (
 	"errors"
 	"fmt"
 	"io/fs"
+	"maps"
 	"os"
 	"path/filepath"
 	"slices"
@@ -21,7 +22,8 @@ const (
 	FullXML = "pob.xml"
 	// GearXML is the tree and the gear, derived from FullXML by Gear.
 	GearXML = "pob-gear.xml"
-	// TreeOnlyXML is the same build with only the tree, to tell tree and gear causes apart.
+	// TreeOnlyXML is the same build with only the tree, to tell tree and gear causes apart,
+	// derived from FullXML by TreeOnly.
 	TreeOnlyXML = "pob-treeonly.xml"
 	// ValuesFile holds what PoB computed for the three XMLs.
 	ValuesFile = "pob.json"
@@ -155,7 +157,13 @@ func allyOf(dir string) (string, error) {
 	return ally, nil
 }
 
-// deriveAll writes each build's gear XML, or with check fails with ErrStale when one differs.
+// Derived returns the XMLs derived from a build's full XML, by file name.
+func Derived() map[string]func([]byte) ([]byte, error) {
+	return map[string]func([]byte) ([]byte, error){GearXML: Gear, TreeOnlyXML: TreeOnly}
+}
+
+// deriveAll writes each build's derived XMLs, or with check fails with ErrStale when one
+// differs.
 func deriveAll(dirs []string, check bool) error {
 	var stale []string
 	for _, d := range dirs {
@@ -163,20 +171,22 @@ func deriveAll(dirs []string, check bool) error {
 		if err != nil {
 			return fmt.Errorf("pob: %w", err)
 		}
-		gear, err := Gear(full)
-		if err != nil {
-			return fmt.Errorf("%s: %w", d, err)
-		}
-		same, err := update(filepath.Join(d, GearXML), gear, check)
-		if err != nil {
-			return err
-		}
-		if !same {
-			stale = append(stale, d)
+		for _, name := range slices.Sorted(maps.Keys(Derived())) {
+			b, err := Derived()[name](full)
+			if err != nil {
+				return fmt.Errorf("%s: %w", d, err)
+			}
+			same, err := update(filepath.Join(d, name), b, check)
+			if err != nil {
+				return err
+			}
+			if !same {
+				stale = append(stale, filepath.Join(d, name))
+			}
 		}
 	}
 	if check && len(stale) > 0 {
-		return fmt.Errorf("%w: %s: %v", ErrStale, GearXML, stale)
+		return fmt.Errorf("%w: %v", ErrStale, stale)
 	}
 	return nil
 }

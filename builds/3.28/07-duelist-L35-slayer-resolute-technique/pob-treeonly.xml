@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PathOfBuilding>
-	<Build level="35" targetVersion="3_0" className="Duelist" ascendClassName="Slayer" bandit="None" pantheonMajorGod="None" pantheonMinorGod="None" mainSocketGroup="1" viewMode="TREE" characterLevelAutoMode="false" />
+	<Build level="35" targetVersion="3_0" className="Duelist" ascendClassName="Slayer" bandit="None" pantheonMajorGod="None" pantheonMinorGod="None" mainSocketGroup="1" viewMode="TREE" characterLevelAutoMode="false"/>
 	<Tree activeSpec="1">
-		<Spec treeVersion="3_28" classId="4" ascendClassId="1" nodes="476,1325,3644,5233,6741,11700,12033,13273,14056,14930,18302,20835,23199,24544,24865,25933,26294,28498,29933,30691,31080,31961,33795,34009,34031,34400,34601,34666,37956,40867,42293,42911,43374,43412,47389,48438,48807,50969,50986,59928,60887,62588,62817,63282,63723" masteryEffects="{37956,59281},{62588,34242}" secondaryAscendClassId="0">
-			<Sockets />
+		<Spec treeVersion="3_28" classId="4" ascendClassId="1" secondaryAscendClassId="0" nodes="476,1325,3644,5233,6741,11700,12033,13273,14056,14930,18302,20835,23199,24544,24865,25933,26294,28498,29933,30691,31080,31961,33795,34009,34031,34400,34601,34666,37956,40867,42293,42911,43374,43412,47389,48438,48807,50969,50986,59928,60887,62588,62817,63282,63723" masteryEffects="{37956,59281},{62588,34242}">
+			<Sockets>
+
+			</Sockets>
 		</Spec>
 	</Tree>
 </PathOfBuilding>

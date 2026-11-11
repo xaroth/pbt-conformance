@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PathOfBuilding>
-	<Build level="35" targetVersion="3_0" className="Templar" ascendClassName="Hierophant" bandit="None" pantheonMajorGod="None" pantheonMinorGod="None" mainSocketGroup="1" viewMode="TREE" characterLevelAutoMode="false" />
+	<Build level="35" targetVersion="3_0" className="Templar" ascendClassName="Hierophant" bandit="None" pantheonMajorGod="None" pantheonMinorGod="None" mainSocketGroup="1" viewMode="TREE" characterLevelAutoMode="false"/>
 	<Tree activeSpec="1">
-		<Spec treeVersion="3_28" classId="5" ascendClassId="2" nodes="1031,1105,1203,4397,5296,7444,7938,11551,13009,14936,16243,17735,19635,20228,21958,22972,26714,26866,30940,31875,33310,33755,35556,36678,38176,39521,39841,39916,41472,41970,44184,44908,48878,49254,49651,50472,51146,51524,60398,61471,63067,63447,64210" masteryEffects="" secondaryAscendClassId="0">
-			<Sockets />
+		<Spec treeVersion="3_28" classId="5" ascendClassId="2" secondaryAscendClassId="0" nodes="1031,1105,1203,4397,5296,7444,7938,11551,13009,14936,16243,17735,19635,20228,21958,22972,26714,26866,30940,31875,33310,33755,35556,36678,38176,39521,39841,39916,41472,41970,44184,44908,48878,49254,49651,50472,51146,51524,60398,61471,63067,63447,64210" masteryEffects="">
+			<Sockets>
+			</Sockets>
 		</Spec>
 	</Tree>
 </PathOfBuilding>
