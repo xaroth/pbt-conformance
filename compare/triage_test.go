@@ -71,3 +71,65 @@ func TestReadTriage(t *testing.T) {
 		})
 	}
 }
+
+func TestApplyCases(t *testing.T) {
+	t.Parallel()
+	v := func(f float64) *float64 { return &f }
+	ms := []compare.Mismatch{
+		{League: "3.29", Build: "40-a", Output: "import:pob-override-ignored", Detail: "node 1"},
+		{League: "3.29", Build: "40-a", Output: "import:pob-override-ignored", Detail: "node 2"},
+		{League: "3.29", Build: "40-a", Output: "player.life", Ours: 4000, PoB: 4100, HasPoB: true},
+		// PoB's value tripled since the case was written: no longer accepted
+		{League: "3.29", Build: "41-b", Output: "player.mana_regeneration", Ours: 10, PoB: 52.8, HasPoB: true},
+		{League: "3.29", Build: "42-c", Output: "player.armour", Ours: 5},
+		{League: "3.28", Build: "40-a", Output: "player.life", Ours: 4000, PoB: 4100, HasPoB: true},
+	}
+	es := []compare.Entry{{
+		ID: "tattoos", League: "3.29", Cases: []compare.Case{
+			{Build: "40-a", Output: "import:pob-override-ignored"},
+			{Build: "40-a", Output: "player.life", Ours: v(4000), PoB: v(4100)},
+			{Build: "41-b", Output: "player.mana_regeneration", Ours: v(10), PoB: v(17.6)},
+			{Build: "42-c", Output: "player.armour", Ours: v(5)},
+		},
+	}}
+	stale := compare.Apply(ms, es)
+	got := make([]string, 0, len(ms))
+	for _, m := range ms {
+		got = append(got, m.Triage)
+	}
+	if diff := cmp.Diff([]string{"tattoos", "tattoos", "tattoos", "", "tattoos", ""}, got); diff != "" {
+		t.Errorf("triage (-want +got):\n%s", diff)
+	}
+	if diff := cmp.Diff([]string{"tattoos: 41-b player.mana_regeneration"}, stale); diff != "" {
+		t.Errorf("stale (-want +got):\n%s", diff)
+	}
+}
+
+func TestReadTriageCases(t *testing.T) {
+	t.Parallel()
+	const head = `[{"id": "tattoos", "kind": "pending", "reason": "r", `
+	testCases := []struct {
+		name, data, want string
+	}{
+		{"valid", head + `"cases": [{"build": "40-a", "output": "player.life", "ours": 1, "pob": 2},
+			{"build": "40-a", "output": "import:pob-override-ignored"}]}]`, ""},
+		{"no values on a value output", head + `"cases": [{"build": "40-a", "output": "player.life"}]}]`, "case"},
+		{"values on an import output", head + `"cases": [{"build": "40-a", "output": "import:x", "ours": 1}]}]`, "case"},
+		{"no build", head + `"cases": [{"output": "player.life", "ours": 1}]}]`, "case"},
+		{"repeated", head + `"cases": [{"build": "40-a", "output": "player.life", "ours": 1},
+			{"build": "40-a", "output": "player.life", "ours": 2}]}]`, "case"},
+		{"pattern beside cases", head + `"build": "*", "cases": [{"build": "40-a", "output": "player.life", "ours": 1}]}]`, "beside cases"},
+	}
+	for _, testCase := range testCases {
+		t.Run(testCase.name, func(t *testing.T) {
+			t.Parallel()
+			_, err := compare.ReadTriage(fstest.MapFS{compare.TriageFile: {Data: []byte(testCase.data)}})
+			switch {
+			case testCase.want == "" && err != nil:
+				t.Errorf("got %v, want nil", err)
+			case testCase.want != "" && (!errors.Is(err, compare.ErrTriage) || !strings.Contains(err.Error(), testCase.want)):
+				t.Errorf("got %v, want %v containing %q", err, compare.ErrTriage, testCase.want)
+			}
+		})
+	}
+}
