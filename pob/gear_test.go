@@ -119,9 +119,9 @@ func TestGearInvalid(t *testing.T) {
 	}
 }
 
-// TestGearFiles checks that every stored gear XML is what Gear derives from its build, so a
-// changed pob.xml cannot go unrecorded without the PoB runtime.
-func TestGearFiles(t *testing.T) {
+// TestDerivedFiles checks that every stored gear and tree-only XML is what pob derives from its
+// build, so a changed pob.xml cannot go unrecorded without the PoB runtime.
+func TestDerivedFiles(t *testing.T) {
 	t.Parallel()
 	fulls, err := filepath.Glob(filepath.Join("..", "builds", "*", "*", pob.FullXML))
 	if err != nil {
@@ -132,14 +132,57 @@ func TestGearFiles(t *testing.T) {
 		if err != nil {
 			t.Fatal(err)
 		}
-		want, err := pob.Gear(b)
-		if err != nil {
-			t.Fatal(err)
+		for name, derive := range pob.Derived() {
+			want, err := derive(b)
+			if err != nil {
+				t.Fatal(err)
+			}
+			path := filepath.Join(filepath.Dir(full), name)
+			got, err := os.ReadFile(path)
+			if err != nil || string(got) != string(want) {
+				t.Errorf("%s is missing or stale, run pbtc pob: %v", path, err)
+			}
 		}
-		gear := filepath.Join(filepath.Dir(full), pob.GearXML)
-		got, err := os.ReadFile(gear)
-		if err != nil || string(got) != string(want) {
-			t.Errorf("%s is missing or stale, run pbtc pob: %v", gear, err)
-		}
+	}
+}
+
+func TestTreeOnly(t *testing.T) {
+	t.Parallel()
+	full := `<PathOfBuilding>
+	<Build level="90" bandit="Alira" pantheonMajorGod="Lunaris" pantheonMinorGod="Abberath"/>
+	<Tree activeSpec="1">
+		<Spec nodes="1,2">
+			<Sockets>
+				<Socket nodeId="2" itemId="1"/>
+			</Sockets>
+		</Spec>
+	</Tree>
+	<Items activeItemSet="1">
+		<Item id="1">
+Rarity: RARE
+Rift Eye
+Crimson Jewel
+		</Item>
+	</Items>
+	<Skills/>
+	<Config/>
+</PathOfBuilding>
+`
+	want := `<PathOfBuilding>
+	<Build level="90" bandit="None" pantheonMajorGod="None" pantheonMinorGod="None"/>
+	<Tree activeSpec="1">
+		<Spec nodes="1,2">
+			<Sockets>
+			</Sockets>
+		</Spec>
+	</Tree>
+</PathOfBuilding>
+`
+	got, err := pob.TreeOnly([]byte(full))
+	if err != nil {
+		t.Fatal(err)
+	}
+	if diff := cmp.Diff(want, string(got)); diff != "" {
+		t.Errorf("(-want +got)\n%s", diff)
 	}
 }
