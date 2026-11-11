@@ -37,7 +37,8 @@
 // of the --skills most popular main skills and of the --mercenaries most popular mercenary
 // classes, then --variant-rows characters of the --variant league (a Ruthless or alternate
 // tree). Each candidate runs through the league's pinned PoB, whose
-// result gives its kind; a candidate PoB fails on is not picked and is listed. Responses are
+// result gives its kind; a candidate PoB fails on or gives no damage is not picked and is
+// listed. Responses are
 // cached under <cache>/ninja, so a rerun makes no request it made before. With --dry-run it
 // prints the picks and writes nothing.
 package main
@@ -172,7 +173,8 @@ func planNinja(ctx context.Context, cache, league string, p runtime.Paths, commi
 		return ninja.Plan{}, nil, fmt.Errorf("pick: %w", err)
 	}
 	fmt.Fprintf(os.Stderr, "pbtc: %d candidates, %d requests made\n", len(cands), api.Client.Requests)
-	if err := ninja.Classify(ctx, p, filepath.Join(cache, "ninja", "pob", commit), cands); err != nil {
+	dir := filepath.Join(cache, "ninja", "pob", commit+"-"+pob.RunnerID()[:16])
+	if err := ninja.Classify(ctx, p, dir, cands); err != nil {
 		return ninja.Plan{}, nil, fmt.Errorf("pick: %w", err)
 	}
 	existing, err := ninja.Existing(".", league)
@@ -183,7 +185,7 @@ func planNinja(ctx context.Context, cache, league string, p runtime.Paths, commi
 }
 
 // writePlan prints the picks, the counts per kind and content against their targets, and the
-// candidates PoB failed on.
+// candidates that cannot be picked.
 func writePlan(w io.Writer, plan ninja.Plan, cands []ninja.Candidate) error {
 	const padding = 2
 	tw := tabwriter.NewWriter(w, 0, 0, padding, ' ', 0)
@@ -205,7 +207,7 @@ func writePlan(w io.Writer, plan ninja.Plan, cands []ninja.Candidate) error {
 	}
 	for _, c := range cands {
 		if c.Err != nil {
-			fmt.Fprintf(w, "not loaded: %s: %v\n", c.Char.URL(c.Snapshot), c.Err)
+			fmt.Fprintf(w, "not picked: %s: %v\n", c.Char.URL(c.Snapshot), c.Err)
 		}
 	}
 	return nil

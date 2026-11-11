@@ -74,3 +74,22 @@ func TestChooseQuotas(t *testing.T) {
 		t.Errorf("contents %v", p.Contents)
 	}
 }
+
+// A content at its quota is kept: the only attack slot holds the only cluster jewel, so the
+// timeless jewel does not take it.
+func TestChooseKeepsQuota(t *testing.T) {
+	t.Parallel()
+	cands := []ninja.Candidate{
+		cand(compare.KindAttack, "A", "x", compare.ClusterJewel),
+		cand(compare.KindAttack, "B", "x", compare.TimelessJewel),
+	}
+	targets := map[compare.Kind]int{compare.KindAttack: 1}
+	quotas := map[compare.Content]int{compare.ClusterJewel: 1, compare.TimelessJewel: 1}
+	p := ninja.Choose(nil, cands, targets, quotas)
+	if diff := cmp.Diff([]string{"A x"}, names(p.Picked)); diff != "" {
+		t.Errorf("picked (-want +got):\n%s", diff)
+	}
+	if p.Contents[compare.ClusterJewel] != 1 || p.Contents[compare.TimelessJewel] != 0 {
+		t.Errorf("contents %v", p.Contents)
+	}
+}

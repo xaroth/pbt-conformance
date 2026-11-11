@@ -6,6 +6,8 @@ import (
 	"bufio"
 	"bytes"
 	"context"
+	"crypto/sha256"
+	"encoding/hex"
 	"encoding/json"
 	"errors"
 	"fmt"
@@ -21,6 +23,17 @@ import (
 
 //go:embed runner.lua
 var runner []byte
+
+// RunnerID identifies what the runner records: a hash of the runner and the output keys it
+// reads. A result recorded under another ID may lack outputs or fields this runner gives.
+func RunnerID() string {
+	h := sha256.New()
+	h.Write(runner)
+	for _, k := range Keys() {
+		h.Write([]byte("\x00" + k))
+	}
+	return hex.EncodeToString(h.Sum(nil))
+}
 
 // ErrBuild marks a build PoB could not load or calculate.
 var ErrBuild = errors.New("pob failed on build")

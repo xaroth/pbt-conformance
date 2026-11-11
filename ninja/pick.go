@@ -242,8 +242,15 @@ func runClassify(ctx context.Context, p runtime.Paths, dir string, cands []Candi
 	return nil
 }
 
-// ErrLoad marks a build PoB fails to load.
-var ErrLoad = errors.New("PoB cannot load the build")
+// Reasons a candidate is not picked.
+var (
+	// ErrLoad marks a build PoB fails to load.
+	ErrLoad = errors.New("PoB cannot load the build")
+	// ErrNoDamage marks a build whose main skill PoB gives no damage. Such builds are mostly
+	// ones PoB cannot read from poe.ninja's export, such as a spectre build without its
+	// spectre, which the export does not name.
+	ErrNoDamage = errors.New("PoB gives the main skill no damage")
+)
 
 func setBuild(c *Candidate, r classified) {
 	if r.Error != "" {
@@ -251,6 +258,10 @@ func setBuild(c *Candidate, r classified) {
 		return
 	}
 	c.Kind = compare.DetectKind(r.Result)
+	if c.Kind == compare.KindOther {
+		c.Err = ErrNoDamage
+		return
+	}
 	if r.Result.MainSkill != nil {
 		c.Skill = r.Result.MainSkill.Name
 	}

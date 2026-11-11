@@ -29,6 +29,7 @@ const (
 	defaultDelay   = 1500 * time.Millisecond
 	defaultBackoff = 5 * time.Second
 	maxAttempts    = 6
+	defaultTimeout = time.Minute
 	dirPerm        = 0o750
 	filePerm       = 0o600
 )
@@ -43,7 +44,7 @@ type Client struct {
 	Base string
 	// Dir holds the cached responses.
 	Dir string
-	// HTTP makes the requests; http.DefaultClient when nil.
+	// HTTP makes the requests; a client with a one-minute timeout when nil.
 	HTTP *http.Client
 	// Delay is the least time between two requests; 1.5 s when zero.
 	Delay time.Duration
@@ -146,7 +147,7 @@ func (c *Client) once(ctx context.Context, u string) ([]byte, int, time.Duration
 	req.Header.Set("User-Agent", UserAgent)
 	hc := c.HTTP
 	if hc == nil {
-		hc = http.DefaultClient
+		hc = &http.Client{Timeout: defaultTimeout}
 	}
 	c.Requests++
 	resp, err := hc.Do(req)
