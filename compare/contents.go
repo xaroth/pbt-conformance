@@ -14,6 +14,10 @@ import (
 var itemSkillLine = regexp.MustCompile(`(?i)^(?:\d+% chance to )?(?:grants?|triggers?|casts?|attack with|uses?|curse enemies with) level \d+ |` +
 	` can trigger level \d+ |^\d+% chance to trigger .+ when |^grants [^0-9]+ skill$`)
 
+// conqueredLine marks a timeless jewel, the Legion ones and the abyss ones on an Assembled Eye
+// Jewel base alike.
+var conqueredLine = regexp.MustCompile(`(?i)^passives (?:in radius|affected) are conquered by `)
+
 // lineTags matches the tags PoB writes before an item line, such as {crafted} or {range:0.5}.
 var lineTags = regexp.MustCompile(`^(?:\{[^}]*\})+`)
 
@@ -24,14 +28,18 @@ type pobFile struct {
 	} `xml:"Tree"`
 	Items struct {
 		ActiveSet int       `xml:"activeItemSet,attr"`
+		SecondSet bool      `xml:"useSecondWeaponSet,attr"`
 		Items     []pobItem `xml:"Item"`
-		Sets      []struct {
-			ID    int       `xml:"id,attr"`
-			Slots []pobSlot `xml:"Slot"`
-		} `xml:"ItemSet"`
+		Sets      []pobSet  `xml:"ItemSet"`
 		// Slots holds an older file's slots, which have no item set.
 		Slots []pobSlot `xml:"Slot"`
 	} `xml:"Items"`
+}
+
+type pobSet struct {
+	ID        int       `xml:"id,attr"`
+	SecondSet bool      `xml:"useSecondWeaponSet,attr"`
+	Slots     []pobSlot `xml:"Slot"`
 }
 
 type pobSpec struct {
@@ -76,7 +84,7 @@ func DetectContents(full []byte) ([]Content, error) {
 	}
 	found := map[Content]bool{
 		ClusterJewel:  slices.ContainsFunc(jewels, func(it pobItem) bool { return hasBase(it, "Cluster Jewel") }),
-		TimelessJewel: slices.ContainsFunc(jewels, func(it pobItem) bool { return hasBase(it, "Timeless Jewel") }),
+		TimelessJewel: slices.ContainsFunc(jewels, isTimeless),
 		TreeVariant:   strings.Contains(spec.TreeVersion, "ruthless") || strings.Contains(spec.TreeVersion, "alternate"),
 		ItemSkill:     grantsSkill(activeSlots(&f), byID, jewels),
 	}
@@ -97,13 +105,22 @@ func activeSpec(f *pobFile) (pobSpec, bool) {
 	return f.Tree.Specs[i], true
 }
 
+// activeSlots returns the slots of the active item set that PoB uses: the swap weapons only
+// when the set uses its second weapon set, and the main weapons only when it does not.
 func activeSlots(f *pobFile) []pobSlot {
+	slots, second := f.Items.Slots, f.Items.SecondSet
 	for _, s := range f.Items.Sets {
 		if s.ID == f.Items.ActiveSet {
-			return s.Slots
+			slots, second = s.Slots, s.SecondSet
 		}
 	}
-	return f.Items.Slots
+	return slices.DeleteFunc(slices.Clone(slots), func(s pobSlot) bool {
+		return strings.HasPrefix(s.Name, "Weapon ") && strings.Contains(s.Name, " Swap") != second
+	})
+}
+
+func isTimeless(it pobItem) bool {
+	return hasBase(it, "Timeless Jewel") || slices.ContainsFunc(itemLines(it), conqueredLine.MatchString)
 }
 
 // hasBase reports whether the item's name or base, the lines after its rarity, holds base; a

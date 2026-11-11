@@ -84,7 +84,7 @@ A build's kind and contents come from `build.json` in its directory; a build wit
 | `smoke` | `true` for a smoke test; then `kind` and `contains` are absent |
 | `contains` | `cluster-jewel`, `timeless-jewel`, `mercenary`, `tree-variant` (a Ruthless or alternate tree), `item-skill` (a skill granted by an item, a graft included) |
 
-`go test ./compare` checks every `build.json` against its `pob.xml` (`compare.DetectContents`): a cluster or timeless jewel socketed in the active tree, a Ruthless or alternate active tree, and an equipped item other than a flask with a line that grants or triggers a skill, or anything in a graft slot. `contains` must list exactly those, plus `mercenary` where poe.ninja shows one, which PoB's file does not hold.
+`go test ./compare` checks every `build.json` against its `pob.xml` (`compare.DetectContents`): a cluster or timeless jewel socketed in the active tree (a timeless jewel by its base or its "are Conquered by" line, which the abyss timeless jewels have), a Ruthless or alternate active tree, and an item PoB uses (flasks apart, weapons of the weapon set in use) with a line that grants or triggers a skill, or anything in a graft slot. `contains` must list exactly those, plus `mercenary` where poe.ninja shows one, which PoB's file does not hold.
 
 ## Import cases
 

@@ -32,6 +32,20 @@ Rarity: UNIQUE
 Glorious Vanity
 Timeless Jewel
 		</Item>`
+	abyssTimeless = `<Item id="4">
+Rarity: UNIQUE
+Reclaimed Malevolence
+Assembled Eye Jewel
+Binding 3320 souls to phylacteries to sustain Zorath
+Passives affected are Conquered by the Abyssal
+		</Item>`
+	skillWeapon = `<Item id="5">
+Rarity: UNIQUE
+Cospri's Malice
+Jewelled Foil
+Trigger a Socketed Cold Spell on Melee Critical Strike, with a 0.25 second Cooldown
+Trigger Level 20 Icicle Burst when you Hit a Frozen Enemy
+		</Item>`
 	skillHelmet = `<Item id="3">
 Rarity: UNIQUE
 Black Sun Crest
@@ -55,12 +69,21 @@ func TestDetectContents(t *testing.T) {
 		{"nothing", pobWith("3_29", "", plainHelmet+`<ItemSet id="1"><Slot name="Helmet" itemId="3"/></ItemSet>`), nil},
 		{"socketed jewels", pobWith("3_29", `<Socket nodeId="1" itemId="1"/><Socket nodeId="2" itemId="2"/>`, clusterJewel+timelessJewel),
 			[]compare.Content{compare.ClusterJewel, compare.TimelessJewel}},
+		{"abyss timeless jewel", pobWith("3_29", `<Socket nodeId="1" itemId="4"/>`, abyssTimeless),
+			[]compare.Content{compare.TimelessJewel}},
 		{"jewels not socketed in the active tree", pobWith("3_29", "", clusterJewel+timelessJewel), nil},
 		{"ruthless tree", pobWith("3_29_ruthless", "", ""), []compare.Content{compare.TreeVariant}},
 		{"alternate tree", pobWith("3_28_alternate", "", ""), []compare.Content{compare.TreeVariant}},
 		{"item grants a skill", pobWith("3_29", "", skillHelmet+`<ItemSet id="1"><Slot name="Helmet" itemId="3"/></ItemSet>`),
 			[]compare.Content{compare.ItemSkill}},
 		{"item with a skill in another set", pobWith("3_29", "", skillHelmet+`<ItemSet id="2"><Slot name="Helmet" itemId="3"/></ItemSet>`), nil},
+		{"item with a skill in the unused weapon swap", pobWith("3_29", "",
+			skillWeapon+`<ItemSet id="1"><Slot name="Weapon 1 Swap" itemId="5"/></ItemSet>`), nil},
+		{"item with a skill in the weapon swap in use", pobWith("3_29", "",
+			skillWeapon+`<ItemSet id="1" useSecondWeaponSet="true"><Slot name="Weapon 1 Swap" itemId="5"/></ItemSet>`),
+			[]compare.Content{compare.ItemSkill}},
+		{"item with a skill in the main weapon slot while the swap is in use", pobWith("3_29", "",
+			skillWeapon+`<ItemSet id="1" useSecondWeaponSet="true"><Slot name="Weapon 1" itemId="5"/></ItemSet>`), nil},
 		{"item with a skill in a flask slot", pobWith("3_29", "", skillHelmet+`<ItemSet id="1"><Slot name="Flask 1" itemId="3"/></ItemSet>`), nil},
 		{"graft", pobWith("3_29", "", plainHelmet+`<ItemSet id="1"><Slot name="Graft 1" itemId="3"/></ItemSet>`),
 			[]compare.Content{compare.ItemSkill}},
