@@ -78,10 +78,13 @@ func fullWarnings() []build.Code {
 // Build is the comparison of one build.
 type Build struct {
 	League, Name string
+	Meta         Meta
 	// Mismatches are the build's mismatches, in the order compare lists them.
 	Mismatches []Mismatch
 	// Layers judge each layer's groups of outputs, in the order of Layers().
 	Layers []Layer
+	// Blockers are what the engine left out as not modelled for the build, sorted.
+	Blockers []Blocker
 }
 
 // Run compares every build of league under root, with the pinned dataset under datasets.
@@ -137,6 +140,10 @@ func openPinned(datasets, game string, d pins.Dataset) (*dataset.Registry, *data
 
 func compareBuild(dir, league string, reg *dataset.Registry, sim *simulator.Sim) (*Build, error) {
 	name := filepath.Base(dir)
+	meta, err := ReadMeta(dir)
+	if err != nil {
+		return nil, err
+	}
 	b, treeWarnings, err := importFile(dir, pob.TreeOnlyXML, reg)
 	if err != nil {
 		return nil, err
@@ -173,7 +180,8 @@ func compareBuild(dir, league string, reg *dataset.Registry, sim *simulator.Sim)
 		return nil, err
 	}
 	return &Build{
-		League: league, Name: name, Mismatches: append(out, ms...), Layers: judgeLayers(v, ours),
+		League: league, Name: name, Meta: meta, Mismatches: append(out, ms...),
+		Layers: judgeLayers(v, ours), Blockers: blockers(st.Warnings(), fullWarns),
 	}, nil
 }
 

@@ -56,6 +56,31 @@ go run ./cmd/pbtc data --cache ~/.cache/pbt-conformance       # just pull; print
 
 An output matches when both values are equal as PoB displays them, for the sheet and defences, and within 0.1% of PoB's for the damage outputs; `pob.Outputs` gives each output's precision. Every mismatch is listed with PoB's tree-only and full values. A mismatch is either fixed in pbt-engine or accepted in `triage.json` as a `deviation` (PoB behaviour we do not follow, with our evidence) or `pending` (a mechanic the engine does not model yet). An entry matches by league, build name pattern and output, and optionally by our value and PoB's (`ours`, `pob`): with values set, a triaged mismatch whose numbers change shows as untriaged again. Compare fails on untriaged mismatches and on triage entries that match nothing. The dataset must be the pinned one: its content id is checked.
 
+## Scoreboard
+
+`pbtc compare --scoreboard` follows the mismatch list, unchanged, with the scoreboard; `--json` writes the list and the scoreboard as JSON instead. Both fail as `pbtc compare` does.
+
+```sh
+go run ./cmd/pbtc compare --cache ~/.cache/pbt-conformance --scoreboard [--hints hints.json]
+go run ./cmd/pbtc compare --cache ~/.cache/pbt-conformance --json > scoreboard.json
+```
+
+- Per league, layer and group of outputs, the builds PoB gives that group for, and how many pass, fail and are not compared. A build passes a group when pbt-engine gives every output of it PoB gives and each matches: the sheet and defences as PoB displays them, the others within 0.1%. It fails on a mismatch, or when the engine gives some outputs of the group but not all (incomplete). It is not compared when the engine gives none: the engine simulates only the tree-only file so far, so the gear and full layers are not compared. The row `checks` counts the builds with an import, warning or allocated-node mismatch.
+- Per league and kind of build, the builds that pass every group of every layer and their checks, then the same per content a build holds.
+- The outputs the engine lacks in groups it gives other outputs of, by the number of builds.
+- What the engine leaves out as not modelled, by the number of builds it appears in, most first: stats with no meaning yet (`unmodelled-stat` warnings of the tree-only simulation), gems and the parts of the full file the importer leaves out, and mechanics a known stat waits for (charges, items, a condition). `--hints` names a JSON file mapping a game stat id to a short text, shown beside that stat.
+
+A build's kind and contents come from `build.json` in its directory; a build without one is `untagged`:
+
+```json
+{"kind": "attack", "contains": ["cluster-jewel", "item-skill"]}
+```
+
+| Field | Values |
+|---|---|
+| `kind` | `spell` (a spell that hits), `attack`, `damage-over-time`, `minion`, `totem`, `trap-mine`, `party`, `other` |
+| `contains` | `cluster-jewel`, `timeless-jewel`, `mercenary`, `tree-variant` (a Ruthless or alternate tree), `item-skill` (a skill granted by an item, a graft included) |
+
 ## Import cases
 
 `imports/<case>/` checks pbt-engine's PoB importer on what the conformance builds lack: cluster jewels, a tattoo, two trees, player config, the layout of older PoB files, the ruthless and alternate trees, a secondary ascendancy and a PoE2 file. Each case holds `pob.xml`, made from a conformance build's `pob-treeonly.xml` with one thing added (its `README.md` says what), and `expect.json`: the build it must import to, which is the source build with only the intended change, and its warnings by code and subject, or the error. `go test ./imports` runs them with `$PBT_DATASETS`, as CI does.
