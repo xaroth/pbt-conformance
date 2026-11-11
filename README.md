@@ -84,6 +84,8 @@ A build's kind and contents come from `build.json` in its directory; a build wit
 | `smoke` | `true` for a smoke test; then `kind` and `contains` are absent |
 | `contains` | `cluster-jewel`, `timeless-jewel`, `mercenary`, `tree-variant` (a Ruthless or alternate tree), `item-skill` (a skill granted by an item, a graft included) |
 
+A build's kind follows from what PoB records for it in the full layer (`pob.json`), in this order: no skill of its own (PoB's default attack) is `smoke`; a main skill used by a totem is `totem`, by a trap or mine `trap-mine`; one with a minion is `minion`; otherwise `damage-over-time` when damage over time (ignite, bleed, poison and the like) is at least half of PoB's combined damage per second (`(CombinedDPS - TotalDPS) / CombinedDPS >= 0.5`), `other` when PoB gives the main skill no damage, and else `spell` or `attack` by the skill. `go test ./compare` checks that every 3.29 build has a `build.json` and that its kind follows this rule; spell against attack is the one part it cannot read from the recording.
+
 `go test ./compare` checks every `build.json` against its `pob.xml` (`compare.DetectContents`): a cluster or timeless jewel socketed in the active tree (a timeless jewel by its base or its "are Conquered by" line, which the abyss timeless jewels have), a Ruthless or alternate active tree, and an item PoB uses (flasks apart, weapons of the weapon set in use) with a line that grants or triggers a skill, or anything in a graft slot. `contains` must list exactly those, plus `mercenary` where poe.ninja shows one, which PoB's file does not hold.
 
 ## Import cases

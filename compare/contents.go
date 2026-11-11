@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"regexp"
 	"slices"
+	"strconv"
 	"strings"
 )
 
@@ -17,6 +18,12 @@ var itemSkillLine = regexp.MustCompile(`(?i)^(?:\d+% chance to )?(?:grants?|trig
 // conqueredLine marks a timeless jewel, the Legion ones and the abyss ones on an Assembled Eye
 // Jewel base alike.
 var conqueredLine = regexp.MustCompile(`(?i)^passives (?:in radius|affected) are conquered by `)
+
+// variantTag matches the variants an item line belongs to, {variant:1,2}.
+var variantTag = regexp.MustCompile(`\{variant:([0-9, ]+)\}`)
+
+// selectedVariant matches an item's selected variant, or with group 1 set an alt variant.
+var selectedVariant = regexp.MustCompile(`^Selected (Alt )?Variant(?: Two| Three| Four| Five)?: (\d+)$`)
 
 // lineTags matches the tags PoB writes before an item line, such as {crafted} or {range:0.5}.
 var lineTags = regexp.MustCompile(`^(?:\{[^}]*\})+`)
@@ -98,8 +105,10 @@ func DetectContents(full []byte) ([]Content, error) {
 	return out, nil
 }
 
+// activeSpec returns the active spec; a file without activeSpec, as older PoB wrote, uses the
+// first.
 func activeSpec(f *pobFile) (pobSpec, bool) {
-	i := f.Tree.Active - 1
+	i := max(f.Tree.Active, 1) - 1
 	if i < 0 || i >= len(f.Tree.Specs) {
 		return pobSpec{}, false
 	}
@@ -160,12 +169,43 @@ func grantsSkill(slots []pobSlot, byID map[int]pobItem, jewels []pobItem) bool {
 	})
 }
 
+// itemLines returns the item's lines without their tags, leaving out the lines of variants the
+// item does not have selected, as PoB does.
 func itemLines(it pobItem) []string {
+	raw := slices.Collect(strings.Lines(it.Text))
+	selected := selectedVariants(raw)
 	var out []string
-	for l := range strings.Lines(it.Text) {
-		if l = lineTags.ReplaceAllString(strings.TrimSpace(l), ""); l != "" {
+	for _, l := range raw {
+		l = strings.TrimSpace(l)
+		if m := variantTag.FindStringSubmatch(l); m != nil && !slices.ContainsFunc(strings.Split(m[1], ","), func(v string) bool {
+			return selected[strings.TrimSpace(v)]
+		}) {
+			continue
+		}
+		if l = lineTags.ReplaceAllString(l, ""); l != "" {
 			out = append(out, l)
 		}
 	}
 	return out
+}
+
+// selectedVariants returns the item's selected variant and alt variants; without a selected
+// variant PoB takes the last one.
+func selectedVariants(lines []string) map[string]bool {
+	selected := map[string]bool{}
+	variants, chosen := 0, false
+	for _, l := range lines {
+		l = strings.TrimSpace(l)
+		if strings.HasPrefix(l, "Variant: ") {
+			variants++
+		}
+		if m := selectedVariant.FindStringSubmatch(l); m != nil {
+			selected[m[2]] = true
+			chosen = chosen || m[1] == ""
+		}
+	}
+	if !chosen && variants > 0 {
+		selected[strconv.Itoa(variants)] = true
+	}
+	return selected
 }

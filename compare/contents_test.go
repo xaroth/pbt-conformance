@@ -5,6 +5,7 @@ import (
 	"os"
 	"path/filepath"
 	"slices"
+	"strconv"
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
@@ -60,6 +61,23 @@ Iron Hat
 		</Item>`
 )
 
+const helmetSlot = `<ItemSet id="1"><Slot name="Helmet" itemId="6"/></ItemSet>`
+
+// variantHelmet returns a unique helmet with two variants, the skill line on variant skillOn,
+// and the selection lines given.
+func variantHelmet(selection string, skillOn int) string {
+	return `<Item id="6">
+Rarity: UNIQUE
+Black Sun Crest
+Lacquered Helmet
+Variant: Pre 3.0.0
+Variant: Current
+` + selection + `
+{variant:` + strconv.Itoa(skillOn) + `}Grants Level 20 Summon Stone Golem
+{variant:` + strconv.Itoa(3-skillOn) + `}+50 to maximum Life
+		</Item>`
+}
+
 func TestDetectContents(t *testing.T) {
 	t.Parallel()
 	testCases := []struct {
@@ -88,6 +106,17 @@ func TestDetectContents(t *testing.T) {
 		{"item with a skill in the main weapon slot while the swap is in use", pobWith("3_29", "",
 			skillWeapon+`<ItemSet id="1" useSecondWeaponSet="true"><Slot name="Weapon 1" itemId="5"/></ItemSet>`), nil},
 		{"item with a skill in a flask slot", pobWith("3_29", "", skillHelmet+`<ItemSet id="1"><Slot name="Flask 1" itemId="3"/></ItemSet>`), nil},
+		{"skill on a variant not selected", pobWith("3_29", "", variantHelmet("Selected Variant: 2", 1)+helmetSlot), nil},
+		{"skill on the selected variant", pobWith("3_29", "", variantHelmet("Selected Variant: 1", 1)+helmetSlot),
+			[]compare.Content{compare.ItemSkill}},
+		{"skill on the last variant, none selected", pobWith("3_29", "", variantHelmet("", 2)+helmetSlot),
+			[]compare.Content{compare.ItemSkill}},
+		{"skill on an earlier variant, none selected", pobWith("3_29", "", variantHelmet("", 1)+helmetSlot), nil},
+		{"skill on the selected alt variant", pobWith("3_29", "",
+			variantHelmet("Selected Variant: 2\nHas Alt Variant: true\nSelected Alt Variant: 1", 1)+helmetSlot),
+			[]compare.Content{compare.ItemSkill}},
+		{"older file without activeSpec", `<PathOfBuilding><Tree><Spec treeVersion="3_29_ruthless"/></Tree></PathOfBuilding>`,
+			[]compare.Content{compare.TreeVariant}},
 		{"graft", pobWith("3_29", "", plainHelmet+`<ItemSet id="1"><Slot name="Graft 1" itemId="3"/></ItemSet>`),
 			[]compare.Content{compare.ItemSkill}},
 		{"older file without item sets", pobWith("3_29", "", skillHelmet+`<Slot name="Helmet" itemId="3"/>`),
