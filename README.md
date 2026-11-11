@@ -43,7 +43,7 @@ go run ./cmd/pbtc pob --cache ~/.cache/pbt-conformance --check    # fail if a st
 | `minion` | the main skill's minion's life, and its own main skill's average hit, chance to hit and total damage per second, when the main skill has a minion | full |
 | `delivery` | totem life, and total damage per second with every totem placed, when the main skill is used by a totem, trap or mine | full |
 
-The full layer also records the main skill PoB took (`mainSkill`: its socket group, id and name, whether a totem, trap or mine uses it, and its minion). The other layers have no skills of their own, so they record the sheet and defences only. Minion values are read from PoB's outputs of the minion and stored as `Minion.<key>`, and an attack's per-hand values as `MainHand.<key>` and `OffHand.<key>`. The average hit is PoB's `AverageHit`, without the chance to hit, which is its own output. PoB gives an attack's average hit per hand only, and an attack with both hands either alternates them or hits with both at once, depending on the skill; so for an attack with both hands the average hit is recorded per hand (`main_hand_average_hit`, `off_hand_average_hit`) and the single `average_hit` is absent.
+The full layer also records the main skill PoB took (`mainSkill`: its socket group, id and name, whether it is an attack, whether a totem, trap or mine uses it, and its minion). The other layers have no skills of their own, so they record the sheet and defences only. Minion values are read from PoB's outputs of the minion and stored as `Minion.<key>`, and an attack's per-hand values as `MainHand.<key>` and `OffHand.<key>`. The average hit is PoB's `AverageHit`, without the chance to hit, which is its own output. PoB gives an attack's average hit per hand only, and an attack with both hands either alternates them or hits with both at once, depending on the skill; so for an attack with both hands the average hit is recorded per hand (`main_hand_average_hit`, `off_hand_average_hit`) and the single `average_hit` is absent.
 
 A build directory may hold `party.json`, `{"ally": "<build directory>"}`, naming another build of its league whose party buffs it is recorded with too, under `party` in `pob.json`: the full build as PoB's Party tab computes it after importing the ally's exported support. The runner calculates the ally with "Export support" on and loads the auras, curses, warcries, links and enemy conditions and modifiers it exports into the build's Party section, in place of the build's own.
 
@@ -80,10 +80,11 @@ go run ./cmd/pbtc compare --cache ~/.cache/pbt-conformance --json > scoreboard.j
 - The outputs the engine lacks in groups it gives other outputs of, by the number of builds.
 - What the engine leaves out as not modelled, by the number of builds it appears in, most first: stats with no meaning yet (`unmodelled-stat` warnings of the tree-only simulation), the gems of the full file (imported, not simulated yet) under the mechanic `skills`, the parts of the full file the importer leaves out, and mechanics a known stat waits for (charges, items, a condition). `--hints` names a JSON file mapping a game stat id to a short text, shown beside that stat.
 
-A build's kind and contents come from `build.json` in its directory; a build without one is `untagged`, and a smoke test such as a level 1 start has `{"smoke": true}` alone, no kind and no contents, and shows as `smoke`:
+A build's kind and contents come from `build.json` in its directory; a build without one is `untagged`, and a smoke test such as a level 1 start has `{"smoke": true}` alone, no kind and no contents, and shows as `smoke`. A build taken from poe.ninja also names its origin:
 
 ```json
-{"kind": "attack", "contains": ["cluster-jewel", "item-skill"]}
+{"kind": "attack", "contains": ["cluster-jewel", "item-skill"],
+ "origin": {"url": "https://poe.ninja/poe1/builds/allflame/character/<account>/<character>", "league": "Allflame", "snapshot": "0208-20261111-47167"}}
 ```
 
 | Field | Values |
@@ -91,10 +92,27 @@ A build's kind and contents come from `build.json` in its directory; a build wit
 | `kind` | `spell` (a spell that hits), `attack`, `damage-over-time`, `minion`, `totem`, `trap-mine`, `party`, `other` |
 | `smoke` | `true` for a smoke test; then `kind` and `contains` are absent |
 | `contains` | `cluster-jewel`, `timeless-jewel`, `mercenary`, `tree-variant` (a Ruthless or alternate tree), `item-skill` (a skill granted by an item, a graft included) |
+| `origin` | where the build was taken from: the character's page, the league's name and the version of poe.ninja's data that was read |
 
-A build's kind follows from what PoB records for it in the full layer (`pob.json`), in this order: no skill of its own (PoB's default attack) is `smoke`; a main skill used by a totem is `totem`, by a trap or mine `trap-mine`; one with a minion is `minion`; otherwise `damage-over-time` when damage over time (ignite, bleed, poison and the like) is at least half of PoB's combined damage per second (`(CombinedDPS - TotalDPS) / CombinedDPS >= 0.5`), `other` when PoB gives the main skill no damage, and else `spell` or `attack` by the skill. `go test ./compare` checks that every 3.29 build has a `build.json` and that its kind follows this rule; spell against attack is the one part it cannot read from the recording.
+A build's kind follows from what PoB records for it in the full layer (`pob.json`), in this order: no skill of its own (PoB's default attack) is `smoke`; a main skill used by a totem is `totem`, by a trap or mine `trap-mine`; one with a minion is `minion`; otherwise `damage-over-time` when damage over time (ignite, bleed, poison and the like) is at least half of PoB's combined damage per second (`(CombinedDPS - TotalDPS) / CombinedDPS >= 0.5`), `other` when PoB gives the main skill no damage, and else `attack` when PoB marks the skill an attack and `spell` otherwise (`compare.DetectKind`). `go test ./compare` checks that every 3.29 build has a `build.json` and that its kind follows this rule.
 
 `go test ./compare` checks every `build.json` against its `pob.xml` (`compare.DetectContents`): a cluster or timeless jewel socketed in the active tree (a timeless jewel by its base or its "are Conquered by" line, which the abyss timeless jewels have), a Ruthless or alternate active tree, and an item PoB uses (flasks apart, weapons of the weapon set in use) with a line that grants or triggers a skill, or anything in a graft slot. `contains` must list exactly those, plus `mercenary` where poe.ninja shows one, which PoB's file does not hold.
+
+## Picking builds
+
+`pbtc ninja` picks builds for a league (default: the current one) from poe.ninja, by popularity, and adds them with their origin:
+
+```sh
+go run ./cmd/pbtc ninja --cache ~/.cache/pbt-conformance --overview allflame --variant allflamer --dry-run
+go run ./cmd/pbtc ninja --cache ~/.cache/pbt-conformance --overview allflame --variant allflamer
+go run ./cmd/pbtc pob --cache ~/.cache/pbt-conformance
+```
+
+`--overview` names poe.ninja's league, whose passive tree must be the build league's; `--variant` a league on its Ruthless or alternate tree. The candidates are, in this order: for each of the `--skills` (120) most popular main skills, the first characters of `--per-skill` (2) different ascendancies poe.ninja lists for it; the same for the `--mercenaries` (3) most popular mercenary classes; then the first `--variant-rows` (20) characters of different ascendancies of the variant league. Each candidate's PoB build runs through the league's pinned PoB, which gives its kind as above and its main skill; `compare.DetectContents` gives its contents, and poe.ninja whether it has a mercenary. A candidate PoB fails to load is listed and not picked.
+
+The pick is deterministic for a given set of responses. In candidate order, a candidate is picked while its kind is short of its target (`compare.Targets`; the counted builds already in the league count too), one build per main skill and ascendancy. Then, for each content short of its quota (`compare.Quotas`), the first unpicked candidate with it replaces the last picked candidate of its kind that lacks it and holds no content at or under its own quota. `--dry-run` prints the picks (kind, main skill, ascendancy, level, contents, source), the counts per kind and content and the candidates PoB failed on, and writes nothing; without it the picks are written as `builds/<league>/<NN>-<class>-L<level>-<ascendancy>-<skill>/` with `pob.xml` and `build.json`, numbered after the existing builds, and `pbtc pob` records them.
+
+Requests go to poe.ninja's builds API (the league index, searches, dictionaries and characters) one at a time with a descriptive User-Agent, at least 1.5 s apart, and back off on 429 and 5xx (honouring `Retry-After`, else from 5 s doubling, six attempts). Every response is cached under `<cache>/ninja/http` by its URL, the league's data version included, so a rerun makes no request it made before; PoB's results are cached under `<cache>/ninja/pob/<PoB commit>`. Delete the cache to read a newer snapshot.
 
 ## Import cases
 

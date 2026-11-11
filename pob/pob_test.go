@@ -110,6 +110,9 @@ func TestRunDualWield(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
+	if ms := res[0].MainSkill; ms == nil || !ms.Attack {
+		t.Errorf("main skill %+v, want an attack", ms)
+	}
 	got := map[string]bool{}
 	for _, o := range pob.Outputs() {
 		if _, ok := o.Value(res[0].Outputs); ok {
@@ -183,6 +186,21 @@ func TestRunMissingFile(t *testing.T) {
 	_, err := pob.Run(context.Background(), paths(t), []string{abs(t, "missing.xml")})
 	if !errors.Is(err, pob.ErrBuild) {
 		t.Errorf("got %v, want %v", err, pob.ErrBuild)
+	}
+}
+
+// RunEach gives the error for a file PoB fails on and still runs the others.
+func TestRunEach(t *testing.T) {
+	t.Parallel()
+	res, errs, err := pob.RunEach(context.Background(), paths(t), []string{abs(t, "missing.xml"), abs(t, "marauder-totem.xml")})
+	if err != nil {
+		t.Fatal(err)
+	}
+	if !errors.Is(errs[0], pob.ErrBuild) || errs[1] != nil {
+		t.Errorf("errors %v, want %v then nil", errs, pob.ErrBuild)
+	}
+	if res[1].MainSkill == nil || res[1].MainSkill.Name != "Fireball" {
+		t.Errorf("second result %+v", res[1])
 	}
 }
 

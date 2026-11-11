@@ -53,6 +53,7 @@
       "group": 1,
       "id": "KineticFusillade",
       "name": "Kinetic Fusillade",
+      "attack": true,
       "totem": true
     }
   },

@@ -68,6 +68,7 @@ local function mainSkill()
 	local res = {
 		id = skill.activeEffect.grantedEffect.id,
 		name = skill.activeEffect.grantedEffect.name,
+		attack = flags.attack or nil,
 		totem = flags.totem or nil,
 		trap = flags.trap or nil,
 		mine = flags.mine or nil,

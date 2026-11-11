@@ -51,6 +51,8 @@ type MainSkill struct {
 	// ID and Name are the skill's granted effect.
 	ID   string `json:"id"`
 	Name string `json:"name"`
+	// Attack is set for an attack, as opposed to a spell or another skill.
+	Attack bool `json:"attack,omitempty"`
 	// Totem, Trap and Mine say how the skill is used.
 	Totem bool `json:"totem,omitempty"`
 	Trap  bool `json:"trap,omitempty"`
@@ -129,16 +131,38 @@ func Run(ctx context.Context, p runtime.Paths, files []string) ([]Result, error)
 // RunJobs runs each job through PoB at p in one process and returns the results in job order.
 // A job with an ally runs as PoB's Party tab would with the ally's exported support imported.
 func RunJobs(ctx context.Context, p runtime.Paths, jobs []Job) ([]Result, error) {
+	res, errs, err := runJobs(ctx, p, jobs)
+	if err != nil {
+		return nil, err
+	}
+	if err := errors.Join(errs...); err != nil {
+		return nil, err
+	}
+	return res, nil
+}
+
+// RunEach runs each file through PoB at p in one process and returns the results in file
+// order, with the error PoB raised for each file or nil; a file PoB fails on does not stop the
+// others.
+func RunEach(ctx context.Context, p runtime.Paths, files []string) ([]Result, []error, error) {
+	jobs := make([]Job, len(files))
+	for i, f := range files {
+		jobs[i] = Job{File: f}
+	}
+	return runJobs(ctx, p, jobs)
+}
+
+func runJobs(ctx context.Context, p runtime.Paths, jobs []Job) ([]Result, []error, error) {
 	script, err := os.CreateTemp("", "pbtc-runner-*.lua")
 	if err != nil {
-		return nil, fmt.Errorf("pob: %w", err)
+		return nil, nil, fmt.Errorf("pob: %w", err)
 	}
 	defer os.Remove(script.Name())
 	if _, err := script.Write(runner); err != nil {
-		return nil, fmt.Errorf("pob: %w", err)
+		return nil, nil, fmt.Errorf("pob: %w", err)
 	}
 	if err := script.Close(); err != nil {
-		return nil, fmt.Errorf("pob: %w", err)
+		return nil, nil, fmt.Errorf("pob: %w", err)
 	}
 	cmd := exec.CommandContext(ctx, p.LuaJIT, append([]string{script.Name()}, Keys()...)...)
 	cmd.Dir = p.PoBSrc
@@ -158,13 +182,16 @@ func RunJobs(ctx context.Context, p runtime.Paths, jobs []Job) ([]Result, error)
 	cmd.Stderr = &stderr
 	out, err := cmd.Output()
 	if err != nil {
-		return nil, fmt.Errorf("pob: %w\n%s", err, stderr.Bytes())
+		return nil, nil, fmt.Errorf("pob: %w\n%s", err, stderr.Bytes())
 	}
 	return parse(out, files)
 }
 
-func parse(out []byte, files []string) ([]Result, error) {
+// parse reads the runner's lines for files: a result per file, and per file the error PoB
+// raised or nil.
+func parse(out []byte, files []string) ([]Result, []error, error) {
 	var results []Result
+	var errs []error
 	sc := bufio.NewScanner(bytes.NewReader(out))
 	sc.Buffer(nil, maxLine)
 	for sc.Scan() {
@@ -174,21 +201,23 @@ func parse(out []byte, files []string) ([]Result, error) {
 		}
 		var l line
 		if err := json.Unmarshal([]byte(text), &l); err != nil {
-			return nil, fmt.Errorf("pob: runner line: %w", err)
-		}
-		if l.Error != "" {
-			return nil, fmt.Errorf("%w %s: %s", ErrBuild, l.File, l.Error)
+			return nil, nil, fmt.Errorf("pob: runner line: %w", err)
 		}
 		if len(results) >= len(files) || l.File != files[len(results)] {
-			return nil, fmt.Errorf("%w: unexpected result for %s", ErrBuild, l.File)
+			return nil, nil, fmt.Errorf("%w: unexpected result for %s", ErrBuild, l.File)
+		}
+		var err error
+		if l.Error != "" {
+			err = fmt.Errorf("%w %s: %s", ErrBuild, l.File, l.Error)
 		}
 		results = append(results, l.Result)
+		errs = append(errs, err)
 	}
 	if err := sc.Err(); err != nil {
-		return nil, fmt.Errorf("pob: %w", err)
+		return nil, nil, fmt.Errorf("pob: %w", err)
 	}
 	if len(results) != len(files) {
-		return nil, fmt.Errorf("%w: %d results for %d files", ErrBuild, len(results), len(files))
+		return nil, nil, fmt.Errorf("%w: %d results for %d files", ErrBuild, len(results), len(files))
 	}
-	return results, nil
+	return results, errs, nil
 }
