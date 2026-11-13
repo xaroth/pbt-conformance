@@ -50,6 +50,7 @@
       "MissingColdResist": 0,
       "MissingFireResist": 0,
       "MissingLightningResist": 0,
+      "MovementSpeedMod": 1.73,
       "Speed": 3.3304,
       "SpellBlockChance": 75,
       "SpellSuppressionChance": 10,
@@ -139,6 +140,7 @@
       "MissingColdResist": 0,
       "MissingFireResist": 0,
       "MissingLightningResist": 0,
+      "MovementSpeedMod": 1.22,
       "Speed": 3.3304,
       "SpellBlockChance": 28,
       "SpellSuppressionChance": 0,
@@ -214,6 +216,7 @@
       "MissingColdResist": 0,
       "MissingFireResist": 0,
       "MissingLightningResist": 0,
+      "MovementSpeedMod": 1.22,
       "SpellBlockChance": 28,
       "SpellSuppressionChance": 0,
       "Str": 198
@@ -252,6 +255,7 @@
       "MissingColdResist": 108,
       "MissingFireResist": 108,
       "MissingLightningResist": 108,
+      "MovementSpeedMod": 1,
       "SpellBlockChance": 0,
       "SpellSuppressionChance": 0,
       "Str": 173
