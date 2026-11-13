@@ -9,6 +9,16 @@
       "Armour": 0,
       "AverageHit": 384209.9545898,
       "BlockChance": 23,
+      "Calcs.ChaosMax": 0,
+      "Calcs.ChaosMin": 0,
+      "Calcs.ColdMax": 0,
+      "Calcs.ColdMin": 0,
+      "Calcs.FireMax": 0,
+      "Calcs.FireMin": 0,
+      "Calcs.LightningMax": 120983.5926,
+      "Calcs.LightningMin": 80586.3006,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
       "ChaosResist": 75,
       "ChaosResistTotal": 78,
       "ColdResist": 75,
@@ -53,7 +63,124 @@
       "group": 1,
       "id": "StormBurstAltX",
       "name": "Storm Burst of Repulsion",
-      "totem": true
+      "level": 21,
+      "quality": 60,
+      "totem": true,
+      "supports": [
+        {
+          "id": "SupportIncreasedCriticalDamage",
+          "level": 20,
+          "quality": 10
+        },
+        {
+          "id": "SupportIncreasedCriticalStrikes",
+          "level": 20
+        },
+        {
+          "id": "SupportInvertTheRules",
+          "level": 3
+        },
+        {
+          "id": "SupportMoreDuration",
+          "level": 20,
+          "quality": 30
+        },
+        {
+          "id": "SupportSpellTotem",
+          "level": 20,
+          "quality": 20
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 134,
+    "outputs": {
+      "Armour": 0,
+      "AverageHit": 141926.93995896,
+      "BlockChance": 23,
+      "Calcs.ChaosMax": 0,
+      "Calcs.ChaosMin": 0,
+      "Calcs.ColdMax": 0,
+      "Calcs.ColdMin": 0,
+      "Calcs.FireMax": 0,
+      "Calcs.FireMin": 0,
+      "Calcs.LightningMax": 49811.58,
+      "Calcs.LightningMin": 33180.03,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
+      "ChaosResist": 75,
+      "ChaosResistTotal": 78,
+      "ColdResist": 75,
+      "ColdResistTotal": 99,
+      "CombinedDPS": 1088106.5396854,
+      "CritChance": 73.12,
+      "Dex": 229,
+      "EnergyShield": 2006,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 669,
+      "EnergyShieldRegen": 0,
+      "EnergyShieldRegenRecovery": 0,
+      "Evasion": 1389,
+      "FireResist": 75,
+      "FireResistTotal": 80,
+      "HitChance": 100,
+      "Int": 311,
+      "Life": 5262,
+      "LifeLeechRate": 0,
+      "LifeRegen": 277.9,
+      "LifeRegenRecovery": 277.9,
+      "LifeUnreserved": 5262,
+      "LightningResist": 75,
+      "LightningResistTotal": 76,
+      "Mana": 6015,
+      "ManaRegen": 623.6,
+      "ManaUnreserved": 6015,
+      "MissingChaosResist": 0,
+      "MissingColdResist": 0,
+      "MissingFireResist": 0,
+      "MissingLightningResist": 0,
+      "Speed": 7.6666666666667,
+      "SpellBlockChance": 0,
+      "SpellSuppressionChance": 21,
+      "Str": 202,
+      "TotalDPS": 1088106.5396854,
+      "TotalDotDPS": 0,
+      "TotemLife": 2365,
+      "TotemsSummoned": 4
+    },
+    "mainSkill": {
+      "group": 1,
+      "id": "StormBurstAltX",
+      "name": "Storm Burst of Repulsion",
+      "level": 21,
+      "quality": 60,
+      "totem": true,
+      "supports": [
+        {
+          "id": "SupportIncreasedCriticalDamage",
+          "level": 20,
+          "quality": 10
+        },
+        {
+          "id": "SupportIncreasedCriticalStrikes",
+          "level": 20
+        },
+        {
+          "id": "SupportInvertTheRules",
+          "level": 3
+        },
+        {
+          "id": "SupportMoreDuration",
+          "level": 20,
+          "quality": 30
+        },
+        {
+          "id": "SupportSpellTotem",
+          "level": 20,
+          "quality": 20
+        }
+      ]
     }
   },
   "gear": {

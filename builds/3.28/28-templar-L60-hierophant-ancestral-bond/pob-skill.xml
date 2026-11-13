@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathOfBuilding>
+	<Build level="60" targetVersion="3_0" className="Templar" ascendClassName="Hierophant" bandit="None" pantheonMajorGod="None" pantheonMinorGod="None" mainSocketGroup="1" viewMode="TREE" characterLevelAutoMode="false"/>
+	<Tree activeSpec="1">
+		<Spec treeVersion="3_28" classId="5" ascendClassId="2" secondaryAscendClassId="0" nodes="1031,1105,1203,2913,4300,4367,4397,5296,5743,5935,6237,7388,7444,7938,9261,10115,11190,11551,12783,12888,13009,14870,14936,16243,16954,17735,19635,20142,20228,20528,20844,21958,22972,26608,26714,26866,27879,30940,31875,33310,33435,33755,33779,34434,35556,35910,36678,38176,39521,39841,39916,41472,41476,41970,43000,44184,44529,44562,44799,44908,45366,48878,49254,49651,50472,51146,51524,52031,52848,53828,54694,56066,56158,58218,60398,61471,62217,63067,63447,63635,63944,64210" masteryEffects="{26608,32279},{53828,63280}">
+			<Sockets>
+			</Sockets>
+		</Spec>
+	</Tree>
+	<Items activeItemSet="1" useSecondWeaponSet="false">
+		<Item id="1">
+Rarity: RARE
+Dread Song
+Blasting Wand
+Item Level: 58
+Quality: 20
+Sockets: B-B-G
+Implicits: 1
+Cannot roll Caster Modifiers
+Adds 28 to 52 Cold Damage
+Adds 22 to 44 Fire Damage
+20% increased Critical Strike Chance
++160 to Accuracy Rating
+		</Item>
+		<Item id="2">
+Rarity: RARE
+Golem Ward
+Ancient Spirit Shield
+Item Level: 58
+Sockets: B-G-R
+Implicits: 1
+8% increased Spell Damage
++68 to maximum Life
++30% to Fire Resistance
++26% to Lightning Resistance
++22 to Dexterity
+		</Item>
+		<Item id="3">
+Rarity: RARE
+Blood Visor
+Great Crown
+Item Level: 58
+Sockets: B-R-G-B
+Implicits: 0
++72 to maximum Life
++32% to Cold Resistance
++24% to Lightning Resistance
++28 to Strength
+		</Item>
+		<Item id="4">
+Rarity: RARE
+Oblivion Shroud
+Devout Chainmail
+Item Level: 58
+Quality: 20
+Sockets: B-R-B-G-B
+Implicits: 0
++82 to maximum Life
++30% to Fire Resistance
++26% to Cold Resistance
++28 to Strength
+		</Item>
+		<Item id="5">
+Rarity: RARE
+Corpse Mitts
+Soldier Gloves
+Item Level: 56
+Sockets: R-G-B-B
+Implicits: 0
++60 to maximum Life
++30% to Lightning Resistance
+Adds 2 to 28 Lightning Damage to Attacks
+8% increased Attack Speed
+		</Item>
+		<Item id="6">
+Rarity: RARE
+Pandemonium Track
+Soldier Boots
+Item Level: 56
+Sockets: R-B-G
+Implicits: 0
+25% increased Movement Speed
++64 to maximum Life
++30% to Fire Resistance
++22% to Cold Resistance
+		</Item>
+		<Item id="7">
+Rarity: RARE
+Rapture Charm
+Citrine Amulet
+Item Level: 56
+Implicits: 1
++20 to Strength and Dexterity
++58 to maximum Life
++24% to Global Critical Strike Multiplier
+Adds 2 to 32 Lightning Damage to Attacks
++24% to Fire Resistance
+		</Item>
+		<Item id="8">
+Rarity: RARE
+Dusk Band
+Amethyst Ring
+Item Level: 56
+Implicits: 1
++19% to Chaos Resistance
++55 to maximum Life
++30% to Cold Resistance
+Adds 8 to 15 Fire Damage to Attacks
+		</Item>
+		<Item id="9">
+Rarity: RARE
+Empyrean Spiral
+Two-Stone Ring
+Item Level: 56
+Implicits: 1
++14% to Fire and Lightning Resistances
++50 to maximum Life
++30% to Lightning Resistance
++30 to Dexterity
+		</Item>
+		<Item id="10">
+Rarity: UNIQUE
+Prismweave
+Rustic Sash
+Item Level: 40
+Implicits: 1
+18% increased Global Physical Damage
+Adds 15 to 31 Fire Damage to Attacks
+Adds 11 to 26 Cold Damage to Attacks
+Adds 1 to 64 Lightning Damage to Attacks
++11% to all Elemental Resistances
+30% increased Elemental Damage with Attack Skills during any Flask Effect
+		</Item>
+		<ItemSet id="1" useSecondWeaponSet="false">
+			<Slot name="Weapon 1" itemId="1"/>
+			<Slot name="Weapon 2" itemId="2"/>
+			<Slot name="Helmet" itemId="3"/>
+			<Slot name="Body Armour" itemId="4"/>
+			<Slot name="Gloves" itemId="5"/>
+			<Slot name="Boots" itemId="6"/>
+			<Slot name="Amulet" itemId="7"/>
+			<Slot name="Ring 1" itemId="8"/>
+			<Slot name="Ring 2" itemId="9"/>
+			<Slot name="Belt" itemId="10"/>
+		</ItemSet>
+	</Items>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="0">
+		<SkillSet id="1">
+			<Skill enabled="true" includeInFullDPS="false" mainActiveSkill="1" mainActiveSkillCalcs="1" slot="Body Armour">
+				<Gem nameSpec="Kinetic Fusillade" skillId="KineticFusillade" gemId="Metadata/Items/Gems/SkillGemKineticFusillade" level="15" quality="0" enabled="true"/>
+				<Gem nameSpec="Ballista Totem" skillId="SupportBallistaTotem" gemId="Metadata/Items/Gems/SkillGemSupportBallistaTotem" level="16" quality="0" enabled="true"/>
+				<Gem nameSpec="Greater Volley" skillId="SupportGreaterVolley" gemId="Metadata/Items/Gems/SkillGemSupportGreaterVolley" level="12" quality="0" enabled="true"/>
+				<Gem nameSpec="Less Duration" skillId="SupportLessDuration" gemId="Metadata/Items/Gems/SkillGemSupportLessDuration" level="15" quality="0" enabled="true"/>
+				<Gem nameSpec="Elemental Damage with Attacks" skillId="SupportElementalDamageWithAttacks" gemId="Metadata/Items/Gems/SkillGemSupportElementalDamageWithAttacks" level="15" quality="0" enabled="true"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="false" mainActiveSkill="1" mainActiveSkillCalcs="1" slot="Helmet">
+				<Gem nameSpec="Anger" skillId="Anger" gemId="Metadata/Items/Gems/SkillGemAnger" level="15" quality="0" enabled="false"/>
+				<Gem nameSpec="Precision" skillId="Precision" gemId="Metadata/Items/Gems/SkillGemPrecision" level="16" quality="0" enabled="false"/>
+				<Gem nameSpec="Arrogance" skillId="SupportArrogance" gemId="Metadata/Items/Gems/SkillGemSupportArrogance" level="15" quality="0" enabled="true"/>
+				<Gem nameSpec="Frostblink" skillId="Frostblink" gemId="Metadata/Items/Gems/SkillGemFrostblink" level="16" quality="0" enabled="false"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="false" mainActiveSkill="1" mainActiveSkillCalcs="1" slot="Gloves">
+				<Gem nameSpec="Flame Wall" skillId="FlameWall" gemId="Metadata/Items/Gems/SkillGemFlameWall" level="16" quality="0" enabled="false"/>
+				<Gem nameSpec="Arcanist Brand" skillId="BrandSupport" gemId="Metadata/Items/Gems/SkillGemBrandSupport" level="12" quality="0" enabled="false"/>
+				<Gem nameSpec="Elemental Weakness" skillId="ElementalWeakness" gemId="Metadata/Items/Gems/SkillGemElementalWeakness" level="15" quality="0" enabled="false"/>
+				<Gem nameSpec="Tornado" skillId="Tornado" gemId="Metadata/Items/Gems/SkillGemTornado" level="14" quality="0" enabled="false"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="false" mainActiveSkill="1" mainActiveSkillCalcs="1" slot="Weapon 2">
+				<Gem nameSpec="Steelskin" skillId="QuickGuard" gemId="Metadata/Items/Gems/SkillGemQuickGuard" level="16" quality="0" enabled="false"/>
+				<Gem nameSpec="Cast when Damage Taken" skillId="SupportCastWhenDamageTaken" gemId="Metadata/Items/Gems/SkillGemSupportCastWhenDamageTaken" level="12" quality="0" enabled="true"/>
+				<Gem nameSpec="More Duration" skillId="SupportMoreDuration" gemId="Metadata/Items/Gems/SkillGemSupportMoreDuration" level="15" quality="0" enabled="true"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="false" mainActiveSkill="1" mainActiveSkillCalcs="1" slot="Boots">
+				<Gem nameSpec="Shield Charge" skillId="ShieldCharge" gemId="Metadata/Items/Gems/SkillGemShieldCharge" level="16" quality="0" enabled="false"/>
+				<Gem nameSpec="Faster Attacks" skillId="SupportFasterAttacks" gemId="Metadata/Items/Gems/SkillGemSupportFasterAttacks" level="16" quality="0" enabled="true"/>
+				<Gem nameSpec="Momentum" skillId="SupportMomentum" gemId="Metadata/Items/Gems/SkillGemSupportMomentum" level="17" quality="0" enabled="true"/>
+			</Skill>
+		</SkillSet>
+	</Skills>
+	<Config activeConfigSet="1">
+		<ConfigSet id="1">
+		</ConfigSet>
+	</Config>
+</PathOfBuilding>

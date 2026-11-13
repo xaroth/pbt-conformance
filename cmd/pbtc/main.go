@@ -10,7 +10,7 @@
 // setup builds the PoB runtime every pinned release needs (LuaJIT, lua-utf8, PoB checkouts)
 // into the cache directory, skipping what is already built. It needs git, make and cc.
 //
-// pob derives each build's pob-gear.xml and pob-treeonly.xml from its pob.xml, runs the builds of a league (default:
+// pob derives each build's pob-skill.xml, pob-gear.xml and pob-treeonly.xml from its pob.xml, runs the builds of a league (default:
 // every pinned league) through its pinned PoB and writes each build's pob.json. A build with a
 // party.json is run once more with the party buffs of the ally it names. With --check it
 // writes nothing and fails when a stored derived XML or pob.json differs from a fresh run.
@@ -21,7 +21,8 @@
 // compare computes pbt-engine's sheet for every build of a league (default: every pinned
 // league) with the pinned dataset, from --datasets (directories of datasets, one per league or
 // per version) or else pulled into --cache as data does, and
-// compares it with the stored PoB values for the tree-only build. It lists every mismatch,
+// compares it with the stored PoB values for the tree-only build, and the skill outputs, once
+// the engine gives them, with those for the skill build. It lists every mismatch,
 // with its triage.json entry if one accepts it, and fails on untriaged mismatches and on
 // triage entries that match nothing. With --scoreboard it follows the list with the
 // scoreboard: per league, layer and group of outputs how many builds pass, fail and are not
@@ -377,7 +378,7 @@ func report(w io.Writer, ms []compare.Mismatch, stale []string) error {
 	untriaged := 0
 	const padding = 2
 	tw := tabwriter.NewWriter(w, 0, 0, padding, ' ', 0)
-	fmt.Fprintln(tw, "league\tbuild\toutput\tours\tpob tree\tpob full\ttriage")
+	fmt.Fprintln(tw, "league\tbuild\toutput\tours\tpob layer\tpob full\ttriage")
 	for _, m := range ms {
 		p := "-"
 		if m.HasPoB {

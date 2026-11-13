@@ -9,6 +9,16 @@
       "Armour": 23177,
       "AverageHit": 0,
       "BlockChance": 60,
+      "Calcs.ChaosMax": 0,
+      "Calcs.ChaosMin": 0,
+      "Calcs.ColdMax": 0,
+      "Calcs.ColdMin": 0,
+      "Calcs.FireMax": 0,
+      "Calcs.FireMin": 0,
+      "Calcs.LightningMax": 0,
+      "Calcs.LightningMin": 0,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
       "ChaosResist": 75,
       "ChaosResistTotal": 110,
       "ColdResist": 90,
@@ -55,10 +65,154 @@
       "group": 17,
       "id": "SummonRagingSpirit",
       "name": "Summon Raging Spirit",
+      "level": 23,
+      "quality": 30,
       "minion": {
         "name": "Raging Spirit",
         "skill": "Melee"
-      }
+      },
+      "supports": [
+        {
+          "id": "SupportAddedColdDamage",
+          "level": 29
+        },
+        {
+          "id": "SupportElementalDamageWithAttacks",
+          "level": 21,
+          "quality": 23
+        },
+        {
+          "id": "SupportElementalFocus",
+          "level": 21,
+          "quality": 23
+        },
+        {
+          "id": "SupportElementalPenetration",
+          "level": 21,
+          "quality": 30
+        },
+        {
+          "id": "SupportGreaterMultistrike",
+          "level": 4,
+          "quality": 30
+        },
+        {
+          "id": "SupportGreaterUnleash",
+          "level": 4,
+          "quality": 5
+        },
+        {
+          "id": "SupportMinionDamage",
+          "level": 21,
+          "quality": 33
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 134,
+    "outputs": {
+      "Armour": 6754,
+      "AverageHit": 0,
+      "BlockChance": 60,
+      "Calcs.ChaosMax": 0,
+      "Calcs.ChaosMin": 0,
+      "Calcs.ColdMax": 0,
+      "Calcs.ColdMin": 0,
+      "Calcs.FireMax": 0,
+      "Calcs.FireMin": 0,
+      "Calcs.LightningMax": 0,
+      "Calcs.LightningMin": 0,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
+      "ChaosResist": 75,
+      "ChaosResistTotal": 75,
+      "ColdResist": -68,
+      "ColdResistTotal": -68,
+      "CombinedDPS": 0,
+      "CritChance": 0,
+      "Dex": 167,
+      "EnergyShield": 1843,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 307,
+      "EnergyShieldRegen": 0,
+      "EnergyShieldRegenRecovery": 0,
+      "Evasion": 26,
+      "FireResist": -1,
+      "FireResistTotal": -1,
+      "HitChance": 100,
+      "Int": 183,
+      "Life": 4928,
+      "LifeLeechRate": 0,
+      "LifeRegen": 312.5,
+      "LifeRegenRecovery": 312.5,
+      "LifeUnreserved": 4928,
+      "LightningResist": 48,
+      "LightningResistTotal": 48,
+      "Mana": 832,
+      "ManaRegen": 17.5,
+      "ManaUnreserved": 832,
+      "Minion.CombinedDPS": 107059.24583716,
+      "Minion.HitChance": 100,
+      "Minion.Life": 6606,
+      "Minion.MainHand.AverageHit": 14060.776527,
+      "MissingChaosResist": 0,
+      "MissingColdResist": 143,
+      "MissingFireResist": 76,
+      "MissingLightningResist": 27,
+      "Speed": 2.14,
+      "SpellBlockChance": 70,
+      "SpellSuppressionChance": 7,
+      "Str": 189,
+      "TotalDPS": 0,
+      "TotalDotDPS": 0
+    },
+    "mainSkill": {
+      "group": 17,
+      "id": "SummonRagingSpirit",
+      "name": "Summon Raging Spirit",
+      "level": 23,
+      "quality": 30,
+      "minion": {
+        "name": "Raging Spirit",
+        "skill": "Melee"
+      },
+      "supports": [
+        {
+          "id": "SupportAddedColdDamage",
+          "level": 29
+        },
+        {
+          "id": "SupportElementalDamageWithAttacks",
+          "level": 21,
+          "quality": 23
+        },
+        {
+          "id": "SupportElementalFocus",
+          "level": 21,
+          "quality": 23
+        },
+        {
+          "id": "SupportElementalPenetration",
+          "level": 21,
+          "quality": 30
+        },
+        {
+          "id": "SupportGreaterMultistrike",
+          "level": 4,
+          "quality": 30
+        },
+        {
+          "id": "SupportGreaterUnleash",
+          "level": 4,
+          "quality": 5
+        },
+        {
+          "id": "SupportMinionDamage",
+          "level": 21,
+          "quality": 33
+        }
+      ]
     }
   },
   "gear": {

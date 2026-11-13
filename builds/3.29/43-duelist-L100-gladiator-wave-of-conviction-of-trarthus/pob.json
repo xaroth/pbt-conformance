@@ -9,6 +9,16 @@
       "Armour": 19542,
       "AverageHit": 82751.9810625,
       "BlockChance": 81,
+      "Calcs.ChaosMax": 4326.21,
+      "Calcs.ChaosMin": 2884.14,
+      "Calcs.ColdMax": 0,
+      "Calcs.ColdMin": 0,
+      "Calcs.FireMax": 94550.328,
+      "Calcs.FireMin": 63043.191,
+      "Calcs.LightningMax": 0,
+      "Calcs.LightningMin": 0,
+      "Calcs.PhysicalMax": 420.035625,
+      "Calcs.PhysicalMin": 280.0575,
       "ChaosResist": 76,
       "ChaosResistTotal": 88,
       "ColdResist": 85,
@@ -49,7 +59,114 @@
     "mainSkill": {
       "group": 11,
       "id": "WaveOfConvictionAltY",
-      "name": "Wave of Conviction of Trarthus"
+      "name": "Wave of Conviction of Trarthus",
+      "level": 25,
+      "quality": 30,
+      "supports": [
+        {
+          "id": "SupportAwakenedEmpower",
+          "level": 5,
+          "quality": 16
+        },
+        {
+          "id": "SupportCastWhenStunned",
+          "level": 20,
+          "quality": 33
+        },
+        {
+          "id": "SupportCombustion",
+          "level": 21,
+          "quality": 20
+        },
+        {
+          "id": "SupportCruelty",
+          "level": 21,
+          "quality": 30
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 134,
+    "outputs": {
+      "Armour": 4304,
+      "AverageHit": 21569.18375,
+      "BlockChance": 81,
+      "Calcs.ChaosMax": 2265.9,
+      "Calcs.ChaosMin": 1510.6,
+      "Calcs.ColdMax": 0,
+      "Calcs.ColdMin": 0,
+      "Calcs.FireMax": 23304.24,
+      "Calcs.FireMin": 15539.04,
+      "Calcs.LightningMax": 0,
+      "Calcs.LightningMin": 0,
+      "Calcs.PhysicalMax": 311.1375,
+      "Calcs.PhysicalMin": 207.45,
+      "ChaosResist": 76,
+      "ChaosResistTotal": 88,
+      "ColdResist": 40,
+      "ColdResistTotal": 40,
+      "CombinedDPS": 184373.66998567,
+      "CritChance": 6.6,
+      "Dex": 72,
+      "EnergyShield": 192,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 64,
+      "EnergyShieldRegen": 0,
+      "EnergyShieldRegenRecovery": 0,
+      "Evasion": 1224,
+      "FireResist": 77,
+      "FireResistTotal": 115,
+      "HitChance": 100,
+      "Int": 34,
+      "Life": 4613,
+      "LifeLeechRate": 588.53454545455,
+      "LifeRegen": 963.7,
+      "LifeRegenRecovery": 963.7,
+      "LifeUnreserved": 4613,
+      "LightningResist": 42,
+      "LightningResistTotal": 42,
+      "Mana": 0,
+      "ManaRegen": 0,
+      "MissingChaosResist": 0,
+      "MissingColdResist": 36,
+      "MissingFireResist": 0,
+      "MissingLightningResist": 34,
+      "Speed": 7.5757575757576,
+      "SpellBlockChance": 54,
+      "SpellSuppressionChance": 0,
+      "Str": 33,
+      "TotalDPS": 163402.90719697,
+      "TotalDotDPS": 20970.762788697
+    },
+    "mainSkill": {
+      "group": 11,
+      "id": "WaveOfConvictionAltY",
+      "name": "Wave of Conviction of Trarthus",
+      "level": 25,
+      "quality": 30,
+      "supports": [
+        {
+          "id": "SupportAwakenedEmpower",
+          "level": 5,
+          "quality": 16
+        },
+        {
+          "id": "SupportCastWhenStunned",
+          "level": 20,
+          "quality": 33
+        },
+        {
+          "id": "SupportCombustion",
+          "level": 21,
+          "quality": 20
+        },
+        {
+          "id": "SupportCruelty",
+          "level": 21,
+          "quality": 30
+        }
+      ]
     }
   },
   "gear": {

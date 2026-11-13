@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathOfBuilding>
+	<Build level="80" targetVersion="3_0" className="Duelist" ascendClassName="Slayer" bandit="None" pantheonMajorGod="None" pantheonMinorGod="None" mainSocketGroup="1" viewMode="TREE" characterLevelAutoMode="false"/>
+	<Tree activeSpec="1">
+		<Spec treeVersion="3_29" classId="4" ascendClassId="1" secondaryAscendClassId="0" nodes="476,1325,1909,3184,3533,3644,4139,4833,4940,5233,6113,6289,7285,7374,8533,8544,9976,10143,10661,11088,11700,12033,12407,12664,14056,14930,15286,16544,18103,18302,20018,20835,22295,22356,22703,23038,23066,24083,24224,24544,24914,25682,25796,25933,26023,26712,26725,28475,28498,29353,30380,30691,31080,31471,31473,31961,32245,33287,33795,34009,34400,34590,34666,35118,35288,35507,35859,37326,37584,37800,38664,40818,40867,40907,42293,42911,43374,43412,43601,44429,44624,44967,45696,47389,48109,48199,48287,48438,48807,49178,49318,49571,50197,50422,50570,50969,50986,53118,54127,55676,56359,56381,57953,59928,61262,62429,62817,63282,63723,64406,65108" masteryEffects="{4139,34242},{22295,38703},{24224,233},{35118,35582},{35859,62252},{43601,59281},{64406,7137}">
+			<Sockets>
+				<Socket nodeId="28475" itemId="15"/>
+				<Socket nodeId="54127" itemId="16"/>
+				<Socket nodeId="26725" itemId="17"/>
+			</Sockets>
+		</Spec>
+	</Tree>
+	<Items activeItemSet="1" useSecondWeaponSet="false">
+		<Item id="1">
+Rarity: RARE
+Behemoth Sunder
+Void Axe
+Item Level: 80
+Quality: 20
+Sockets: R-R-R-R-G-R
+Implicits: 0
+Adds 30 to 64 Physical Damage
+148% increased Physical Damage
++250 to Accuracy Rating
+22% increased Attack Speed
++33 to Strength
+25% increased Critical Strike Chance
+		</Item>
+		<Item id="2">
+Rarity: RARE
+Rune Visor
+Eternal Burgonet
+Armour: 620
+Item Level: 80
+Quality: 20
+Sockets: R-R-G-R
+Implicits: 0
++98 to maximum Life
+78% increased Armour
++38% to Fire Resistance
++33% to Lightning Resistance
++21% to Chaos Resistance
+		</Item>
+		<Item id="3">
+Rarity: RARE
+Kraken Shell
+Glorious Plate
+Armour: 1650
+Item Level: 81
+Quality: 20
+Sockets: R-R-R-R-G-R
+Implicits: 0
++45 to Strength
++33% to Fire Resistance
+88% increased Armour
++39% to Cold Resistance
++35% to Lightning Resistance
+6% additional Physical Damage Reduction
+		</Item>
+		<Item id="4">
+Rarity: RARE
+Rapture Hold
+Titan Gauntlets
+Armour: 320
+Item Level: 80
+Quality: 20
+Sockets: R-R-G-B
+Implicits: 0
++89 to maximum Life
++35 to Strength
+Adds 8 to 15 Physical Damage to Attacks
++37% to Fire Resistance
++29% to Cold Resistance
+10% increased Attack Speed
+		</Item>
+		<Item id="5">
+Rarity: RARE
+Hate Road
+Titan Greaves
+Armour: 330
+Item Level: 80
+Quality: 20
+Sockets: R-R-G-R
+Implicits: 0
++92 to maximum Life
+30% increased Movement Speed
++38 to Strength
++40% to Cold Resistance
++36% to Lightning Resistance
++19% to Chaos Resistance
+		</Item>
+		<Item id="6">
+Rarity: RARE
+Behemoth Heart
+Onyx Amulet
+Item Level: 80
+Implicits: 1
++14 to all Attributes
++34 to Intelligence
+Adds 10 to 21 Physical Damage to Attacks
++82 to maximum Life
++40% to Fire Resistance
+24% increased Global Physical Damage
+		</Item>
+		<Item id="7">
+Rarity: RARE
+Dragon Turn
+Amethyst Ring
+Item Level: 80
+Implicits: 1
++21% to Chaos Resistance
++43 to Strength
++79 to maximum Life
++41% to Cold Resistance
++34% to Lightning Resistance
+		</Item>
+		<Item id="8">
+Rarity: RARE
+Brood Band
+Two-Stone Ring
+Item Level: 80
+Implicits: 1
++15% to Fire and Lightning Resistances
++75 to maximum Life
++38% to Fire Resistance
++33 to Dexterity
+Adds 5 to 10 Physical Damage to Attacks
+		</Item>
+		<Item id="9">
+Rarity: UNIQUE
+Ryslatha's Coil
+Studded Belt
+Item Level: 75
+LevelReq: 20
+Implicits: 1
+28% increased Stun Duration on Enemies
++36 to Strength
+38% more Maximum Physical Attack Damage
+36% less Minimum Physical Attack Damage
+Adds 1 to 19 Physical Damage to Attacks
++94 to maximum Life
+Gain 50 Life when you Stun an Enemy
+		</Item>
+		<Item id="15">
+Rarity: RARE
+Foe Scar
+Crimson Jewel
+Item Level: 74
+Implicits: 0
++7% to Physical Damage over Time Multiplier
+6% increased maximum Life
+17% increased Damage with Bleeding
+		</Item>
+		<Item id="16">
+Rarity: RARE
+Blood Glisten
+Crimson Jewel
+Item Level: 75
+Implicits: 0
+5% increased maximum Life
+14% increased Physical Damage with Axes
++12% to Cold Resistance
+		</Item>
+		<Item id="17">
+Rarity: RARE
+Gale Scar
+Crimson Jewel
+Item Level: 77
+Implicits: 0
+6% increased maximum Life
++6% to Physical Damage over Time Multiplier
++13% to Fire Resistance
+		</Item>
+		<ItemSet id="1" useSecondWeaponSet="false">
+			<Slot name="Weapon 1" itemId="1"/>
+			<Slot name="Helmet" itemId="2"/>
+			<Slot name="Body Armour" itemId="3"/>
+			<Slot name="Gloves" itemId="4"/>
+			<Slot name="Boots" itemId="5"/>
+			<Slot name="Amulet" itemId="6"/>
+			<Slot name="Ring 1" itemId="7"/>
+			<Slot name="Ring 2" itemId="8"/>
+			<Slot name="Belt" itemId="9"/>
+		</ItemSet>
+	</Items>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="0">
+		<SkillSet id="1">
+			<Skill slot="Body Armour" enabled="true" mainActiveSkill="1" mainActiveSkillCalcs="1">
+				<Gem nameSpec="Ground Slam of Earthshaking" skillId="GroundSlamAltX" gemId="Metadata/Items/Gems/SkillGemGroundSlam" level="20" quality="20" enabled="true" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Fist of War" level="20" quality="20" enabled="true" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Fortify" level="20" quality="20" enabled="true" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Melee Physical Damage" level="20" quality="20" enabled="true" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Brutality" level="20" quality="20" enabled="true" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Pulverise" level="20" quality="20" enabled="true" enableGlobal1="true" enableGlobal2="true" count="1"/>
+			</Skill>
+			<Skill slot="Helmet" enabled="true" mainActiveSkill="1" mainActiveSkillCalcs="1">
+				<Gem nameSpec="Pride" level="20" quality="20" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Seismic Cry" level="20" quality="20" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Herald of Purity" level="20" quality="20" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Autoexertion" level="20" quality="20" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+			</Skill>
+			<Skill slot="Gloves" enabled="true" mainActiveSkill="1" mainActiveSkillCalcs="1">
+				<Gem nameSpec="Momentum" level="20" quality="20" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Maim" level="20" quality="20" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Faster Attacks" level="20" quality="20" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Leap Slam" level="20" quality="20" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+			</Skill>
+			<Skill slot="Weapon 1" enabled="true" mainActiveSkill="1" mainActiveSkillCalcs="1">
+				<Gem nameSpec="Blood Rage" level="20" quality="20" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+			</Skill>
+			<Skill slot="Boots" enabled="true" mainActiveSkill="1" mainActiveSkillCalcs="1">
+				<Gem nameSpec="Enduring Cry" level="20" quality="20" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Urgent Orders" level="20" quality="20" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Rallying Cry" level="20" quality="20" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+			</Skill>
+		</SkillSet>
+	</Skills>
+	<Config activeConfigSet="1">
+		<ConfigSet id="1" title="Default"/>
+	</Config>
+</PathOfBuilding>

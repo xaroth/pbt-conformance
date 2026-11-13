@@ -8,6 +8,16 @@
     "outputs": {
       "Armour": 26016,
       "BlockChance": 64,
+      "Calcs.MainHand.ChaosMax": 0,
+      "Calcs.MainHand.ChaosMin": 0,
+      "Calcs.MainHand.ColdMax": 2216.115,
+      "Calcs.MainHand.ColdMin": 1427.679,
+      "Calcs.MainHand.FireMax": 5177.106,
+      "Calcs.MainHand.FireMin": 3332.34,
+      "Calcs.MainHand.LightningMax": 2023.362,
+      "Calcs.MainHand.LightningMin": 149.193,
+      "Calcs.MainHand.PhysicalMax": 150.425,
+      "Calcs.MainHand.PhysicalMin": 81.125,
       "ChaosResist": 5,
       "ChaosResistTotal": 5,
       "ColdResist": 80,
@@ -53,8 +63,122 @@
       "group": 1,
       "id": "KineticFusillade",
       "name": "Kinetic Fusillade",
+      "level": 20,
+      "quality": 20,
       "attack": true,
-      "totem": true
+      "totem": true,
+      "supports": [
+        {
+          "id": "SupportBallistaTotem",
+          "level": 20
+        },
+        {
+          "id": "SupportElementalDamageWithAttacks",
+          "level": 20
+        },
+        {
+          "id": "SupportGreaterVolley",
+          "level": 20
+        },
+        {
+          "id": "SupportIncreasedCriticalDamage",
+          "level": 20
+        },
+        {
+          "id": "SupportLessDuration",
+          "level": 20,
+          "quality": 20
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 122,
+    "outputs": {
+      "Armour": 7246,
+      "BlockChance": 64,
+      "Calcs.MainHand.ChaosMax": 0,
+      "Calcs.MainHand.ChaosMin": 0,
+      "Calcs.MainHand.ColdMax": 1404.15,
+      "Calcs.MainHand.ColdMin": 904.59,
+      "Calcs.MainHand.FireMax": 1526.97,
+      "Calcs.MainHand.FireMin": 885.96,
+      "Calcs.MainHand.LightningMax": 1282.02,
+      "Calcs.MainHand.LightningMin": 94.53,
+      "Calcs.MainHand.PhysicalMax": 136.75,
+      "Calcs.MainHand.PhysicalMin": 73.75,
+      "ChaosResist": 5,
+      "ChaosResistTotal": 5,
+      "ColdResist": 80,
+      "ColdResistTotal": 177,
+      "CombinedDPS": 218602.02170714,
+      "CritChance": 72.43275,
+      "Dex": 117,
+      "EnergyShield": 2255,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 752,
+      "EnergyShieldRegen": 0,
+      "EnergyShieldRegenRecovery": 0,
+      "Evasion": 22,
+      "FireResist": 75,
+      "FireResistTotal": 133,
+      "HitChance": 95,
+      "Int": 365,
+      "Life": 3958,
+      "LifeLeechRate": 0,
+      "LifeRegen": 237.5,
+      "LifeRegenRecovery": 237.5,
+      "LifeUnreserved": 3958,
+      "LightningResist": 75,
+      "LightningResistTotal": 157,
+      "MainHand.AverageHit": 11356.754997511,
+      "Mana": 1608,
+      "ManaRegen": 174.3,
+      "ManaUnreserved": 1608,
+      "MissingChaosResist": 70,
+      "MissingColdResist": 0,
+      "MissingFireResist": 0,
+      "MissingLightningResist": 0,
+      "Speed": 3.3304,
+      "SpellBlockChance": 28,
+      "SpellSuppressionChance": 0,
+      "Str": 198,
+      "TotalDPS": 217957.92419466,
+      "TotalDotDPS": 644.09751248138,
+      "TotemLife": 2365,
+      "TotemsSummoned": 5
+    },
+    "mainSkill": {
+      "group": 1,
+      "id": "KineticFusillade",
+      "name": "Kinetic Fusillade",
+      "level": 20,
+      "quality": 20,
+      "attack": true,
+      "totem": true,
+      "supports": [
+        {
+          "id": "SupportBallistaTotem",
+          "level": 20
+        },
+        {
+          "id": "SupportElementalDamageWithAttacks",
+          "level": 20
+        },
+        {
+          "id": "SupportGreaterVolley",
+          "level": 20
+        },
+        {
+          "id": "SupportIncreasedCriticalDamage",
+          "level": 20
+        },
+        {
+          "id": "SupportLessDuration",
+          "level": 20,
+          "quality": 20
+        }
+      ]
     }
   },
   "gear": {

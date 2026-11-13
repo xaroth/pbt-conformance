@@ -9,6 +9,16 @@
       "Armour": 11042,
       "AverageHit": 0,
       "BlockChance": 55,
+      "Calcs.ChaosMax": 0,
+      "Calcs.ChaosMin": 0,
+      "Calcs.ColdMax": 0,
+      "Calcs.ColdMin": 0,
+      "Calcs.FireMax": 0,
+      "Calcs.FireMin": 0,
+      "Calcs.LightningMax": 0,
+      "Calcs.LightningMin": 0,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
       "ChaosResist": 75,
       "ChaosResistTotal": 115,
       "ColdResist": 78,
@@ -55,10 +65,154 @@
       "group": 10,
       "id": "AnimateWeaponAltY",
       "name": "Animate Weapon of Ranged Arms",
+      "level": 23,
+      "quality": 20,
       "minion": {
         "name": "Animated Weapon",
         "skill": "Default Attack"
-      }
+      },
+      "supports": [
+        {
+          "id": "SupportAddedChaosDamage",
+          "level": 29
+        },
+        {
+          "id": "SupportGreaterUnleash",
+          "level": 4,
+          "quality": 20
+        },
+        {
+          "id": "SupportLesserMultipleProjectiles",
+          "level": 21,
+          "quality": 20
+        },
+        {
+          "id": "SupportMinionDamage",
+          "level": 21,
+          "quality": 20
+        },
+        {
+          "id": "SupportUnboundAilments",
+          "level": 21,
+          "quality": 20
+        },
+        {
+          "id": "SupportVileToxins",
+          "level": 21,
+          "quality": 20
+        },
+        {
+          "id": "SupportWitheringTouch",
+          "level": 20,
+          "quality": 20
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 134,
+    "outputs": {
+      "Armour": 2459,
+      "AverageHit": 0,
+      "BlockChance": 55,
+      "Calcs.ChaosMax": 0,
+      "Calcs.ChaosMin": 0,
+      "Calcs.ColdMax": 0,
+      "Calcs.ColdMin": 0,
+      "Calcs.FireMax": 0,
+      "Calcs.FireMin": 0,
+      "Calcs.LightningMax": 0,
+      "Calcs.LightningMin": 0,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
+      "ChaosResist": 75,
+      "ChaosResistTotal": 80,
+      "ColdResist": 78,
+      "ColdResistTotal": 102,
+      "CombinedDPS": 0,
+      "CritChance": 0,
+      "Dex": 102,
+      "EnergyShield": 635,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 106,
+      "EnergyShieldRegen": 0,
+      "EnergyShieldRegenRecovery": 0,
+      "Evasion": 623,
+      "FireResist": 78,
+      "FireResistTotal": 98,
+      "HitChance": 100,
+      "Int": 246,
+      "Life": 3646,
+      "LifeLeechRate": 0,
+      "LifeRegen": 252.3,
+      "LifeRegenRecovery": 252.3,
+      "LifeUnreserved": 3646,
+      "LightningResist": 78,
+      "LightningResistTotal": 87,
+      "Mana": 1123,
+      "ManaRegen": 27.5,
+      "ManaUnreserved": 1123,
+      "Minion.CombinedDPS": 127126.84789698,
+      "Minion.HitChance": 100,
+      "Minion.Life": 10044,
+      "Minion.MainHand.AverageHit": 13193.853081327,
+      "MissingChaosResist": 0,
+      "MissingColdResist": 0,
+      "MissingFireResist": 0,
+      "MissingLightningResist": 0,
+      "Speed": 1.4,
+      "SpellBlockChance": 46,
+      "SpellSuppressionChance": 34,
+      "Str": 180,
+      "TotalDPS": 0,
+      "TotalDotDPS": 0
+    },
+    "mainSkill": {
+      "group": 10,
+      "id": "AnimateWeaponAltY",
+      "name": "Animate Weapon of Ranged Arms",
+      "level": 23,
+      "quality": 20,
+      "minion": {
+        "name": "Animated Weapon",
+        "skill": "Default Attack"
+      },
+      "supports": [
+        {
+          "id": "SupportAddedChaosDamage",
+          "level": 29
+        },
+        {
+          "id": "SupportGreaterUnleash",
+          "level": 4,
+          "quality": 20
+        },
+        {
+          "id": "SupportLesserMultipleProjectiles",
+          "level": 21,
+          "quality": 20
+        },
+        {
+          "id": "SupportMinionDamage",
+          "level": 21,
+          "quality": 20
+        },
+        {
+          "id": "SupportUnboundAilments",
+          "level": 21,
+          "quality": 20
+        },
+        {
+          "id": "SupportVileToxins",
+          "level": 21,
+          "quality": 20
+        },
+        {
+          "id": "SupportWitheringTouch",
+          "level": 20,
+          "quality": 20
+        }
+      ]
     }
   },
   "gear": {

@@ -9,6 +9,16 @@
       "Armour": 2974,
       "AverageHit": 863639.90423984,
       "BlockChance": 0,
+      "Calcs.ChaosMax": 0,
+      "Calcs.ChaosMin": 0,
+      "Calcs.ColdMax": 104865.6518,
+      "Calcs.ColdMin": 69197.9197,
+      "Calcs.FireMax": 76482.4333,
+      "Calcs.FireMin": 50497.629,
+      "Calcs.LightningMax": 36384.8758,
+      "Calcs.LightningMin": 23623.0904,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
       "ChaosResist": 75,
       "ChaosResistTotal": 77,
       "ColdResist": 75,
@@ -50,7 +60,125 @@
     "mainSkill": {
       "group": 4,
       "id": "EtherealKnives",
-      "name": "Ethereal Knives"
+      "name": "Ethereal Knives",
+      "level": 29,
+      "quality": 30,
+      "supports": [
+        {
+          "id": "SupportAwakenedEmpower",
+          "level": 5,
+          "quality": 20
+        },
+        {
+          "id": "SupportGreaterSpellEcho",
+          "level": 4,
+          "quality": 30
+        },
+        {
+          "id": "SupportIncreasedCriticalDamage",
+          "level": 21,
+          "quality": 30
+        },
+        {
+          "id": "SupportInspiration",
+          "level": 21,
+          "quality": 30
+        },
+        {
+          "id": "SupportInvertTheRules",
+          "level": 4,
+          "quality": 33
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 134,
+    "outputs": {
+      "Armour": 2974,
+      "AverageHit": 76055.16954586,
+      "BlockChance": 0,
+      "Calcs.ChaosMax": 0,
+      "Calcs.ChaosMin": 0,
+      "Calcs.ColdMax": 0,
+      "Calcs.ColdMin": 0,
+      "Calcs.FireMax": 12412.7,
+      "Calcs.FireMin": 8195.86,
+      "Calcs.LightningMax": 17777.28,
+      "Calcs.LightningMin": 11506.54,
+      "Calcs.PhysicalMax": 7465.8579483581,
+      "Calcs.PhysicalMin": 4929.2421169809,
+      "ChaosResist": 32,
+      "ChaosResistTotal": 32,
+      "ColdResist": 66,
+      "ColdResistTotal": 66,
+      "CombinedDPS": 272851.048407,
+      "CritChance": 35.64,
+      "Dex": 185,
+      "EnergyShield": 121,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 40,
+      "EnergyShieldRegen": 0,
+      "EnergyShieldRegenRecovery": 0,
+      "Evasion": 572,
+      "FireResist": 39,
+      "FireResistTotal": 39,
+      "HitChance": 100,
+      "Int": 40,
+      "Life": 3227,
+      "LifeLeechRate": 630.29832623493,
+      "LifeRegen": 0,
+      "LifeRegenRecovery": 0,
+      "LifeUnreserved": 3227,
+      "LightningResist": 66,
+      "LightningResistTotal": 66,
+      "Mana": 1079,
+      "ManaRegen": 22.7,
+      "ManaUnreserved": 1079,
+      "MissingChaosResist": 43,
+      "MissingColdResist": 9,
+      "MissingFireResist": 36,
+      "MissingLightningResist": 9,
+      "Speed": 3.5166666666667,
+      "SpellBlockChance": 10,
+      "SpellSuppressionChance": 100,
+      "Str": 151,
+      "TotalDPS": 267460.67956961,
+      "TotalDotDPS": 5390.3688373887
+    },
+    "mainSkill": {
+      "group": 4,
+      "id": "EtherealKnives",
+      "name": "Ethereal Knives",
+      "level": 29,
+      "quality": 30,
+      "supports": [
+        {
+          "id": "SupportAwakenedEmpower",
+          "level": 5,
+          "quality": 20
+        },
+        {
+          "id": "SupportGreaterSpellEcho",
+          "level": 4,
+          "quality": 30
+        },
+        {
+          "id": "SupportIncreasedCriticalDamage",
+          "level": 21,
+          "quality": 30
+        },
+        {
+          "id": "SupportInspiration",
+          "level": 21,
+          "quality": 30
+        },
+        {
+          "id": "SupportInvertTheRules",
+          "level": 4,
+          "quality": 33
+        }
+      ]
     }
   },
   "gear": {

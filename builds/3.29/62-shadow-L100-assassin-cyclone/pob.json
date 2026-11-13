@@ -8,6 +8,16 @@
     "outputs": {
       "Armour": 0,
       "BlockChance": 62,
+      "Calcs.MainHand.ChaosMax": 4351.36,
+      "Calcs.MainHand.ChaosMin": 981.76,
+      "Calcs.MainHand.ColdMax": 0,
+      "Calcs.MainHand.ColdMin": 0,
+      "Calcs.MainHand.FireMax": 0,
+      "Calcs.MainHand.FireMin": 0,
+      "Calcs.MainHand.LightningMax": 0,
+      "Calcs.MainHand.LightningMin": 0,
+      "Calcs.MainHand.PhysicalMax": 0,
+      "Calcs.MainHand.PhysicalMin": 0,
       "ChaosResist": -56,
       "ChaosResistTotal": -56,
       "ColdResist": 90,
@@ -51,7 +61,106 @@
       "group": 2,
       "id": "Cyclone",
       "name": "Cyclone",
-      "attack": true
+      "level": 20,
+      "quality": 30,
+      "attack": true,
+      "supports": [
+        {
+          "id": "SupportCastOnCriticalStrike",
+          "level": 21,
+          "quality": 20
+        },
+        {
+          "id": "SupportIncreasedCriticalDamage",
+          "level": 20,
+          "quality": 30
+        },
+        {
+          "id": "SupportPowerChargeOnCritical",
+          "level": 20,
+          "quality": 10
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 135,
+    "outputs": {
+      "Armour": 0,
+      "BlockChance": 62,
+      "Calcs.MainHand.ChaosMax": 296.8,
+      "Calcs.MainHand.ChaosMin": 61.6,
+      "Calcs.MainHand.ColdMax": 0,
+      "Calcs.MainHand.ColdMin": 0,
+      "Calcs.MainHand.FireMax": 0,
+      "Calcs.MainHand.FireMin": 0,
+      "Calcs.MainHand.LightningMax": 0,
+      "Calcs.MainHand.LightningMin": 0,
+      "Calcs.MainHand.PhysicalMax": 72.5,
+      "Calcs.MainHand.PhysicalMin": 18,
+      "ChaosResist": -56,
+      "ChaosResistTotal": -56,
+      "ColdResist": 35,
+      "ColdResistTotal": 35,
+      "CombinedDPS": 6224.4857634622,
+      "CritChance": 80.4576,
+      "Dex": 90,
+      "EnergyShield": 14319,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 5966,
+      "EnergyShieldRegen": 554.3,
+      "EnergyShieldRegenRecovery": 554.3,
+      "Evasion": 741,
+      "FireResist": 23,
+      "FireResistTotal": 23,
+      "HitChance": 100,
+      "Int": 142,
+      "Life": 1,
+      "LifeLeechRate": 0,
+      "LifeRegen": 0,
+      "LifeRegenRecovery": 0,
+      "LifeUnreserved": 1,
+      "LightningResist": -48,
+      "LightningResistTotal": -48,
+      "MainHand.AverageHit": 753.570153776,
+      "Mana": 412,
+      "ManaRegen": 12.5,
+      "ManaUnreserved": 412,
+      "MissingChaosResist": 131,
+      "MissingColdResist": 42,
+      "MissingFireResist": 54,
+      "MissingLightningResist": 125,
+      "Speed": 7.434,
+      "SpellBlockChance": 43,
+      "SpellSuppressionChance": 0,
+      "Str": 50,
+      "TotalDPS": 5602.0405231708,
+      "TotalDotDPS": 0
+    },
+    "mainSkill": {
+      "group": 2,
+      "id": "Cyclone",
+      "name": "Cyclone",
+      "level": 20,
+      "quality": 30,
+      "attack": true,
+      "supports": [
+        {
+          "id": "SupportCastOnCriticalStrike",
+          "level": 21,
+          "quality": 20
+        },
+        {
+          "id": "SupportIncreasedCriticalDamage",
+          "level": 20,
+          "quality": 30
+        },
+        {
+          "id": "SupportPowerChargeOnCritical",
+          "level": 20,
+          "quality": 10
+        }
+      ]
     }
   },
   "gear": {

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathOfBuilding>
+	<Build level="35" targetVersion="3_0" className="Shadow" ascendClassName="Assassin" bandit="None" pantheonMajorGod="None" pantheonMinorGod="None" mainSocketGroup="1" viewMode="ITEMS" characterLevelAutoMode="false"/>
+	<Tree activeSpec="1">
+		<Spec treeVersion="3_29" classId="6" ascendClassId="1" secondaryAscendClassId="0" nodes="1405,1461,1648,1891,3424,3863,4011,5802,5823,6064,8640,8938,9015,9355,9469,11811,20807,21264,23439,28012,28754,28903,31359,32227,35283,35894,36287,37663,39524,44988,45272,45838,46408,46676,49900,49978,52157,52714,58229,58968,59009,59220,59606,64509,65502" masteryEffects="{28903,62897}">
+			<Sockets>
+			</Sockets>
+		</Spec>
+	</Tree>
+	<Items activeItemSet="1" useSecondWeaponSet="false">
+		<Item id="1">
+Rarity: RARE
+Viper Fang
+Skean
+Item Level: 33
+Quality: 0
+Sockets: G-B-G
+Implicits: 1
+42% increased Global Critical Strike Chance
+Adds 6 to 13 Physical Damage
+Adds 5 to 11 Chaos Damage
+12% increased Attack Speed
+25% increased Damage with Poison
+20% chance to Poison on Hit
++18 to Intelligence
+		</Item>
+		<Item id="2">
+Rarity: RARE
+Gloom Edge
+Skean
+Item Level: 31
+Quality: 0
+Sockets: G-B
+Implicits: 1
+41% increased Global Critical Strike Chance
+Adds 5 to 10 Physical Damage
+10% increased Attack Speed
+10% chance to Poison on Hit
++15% to Global Critical Strike Multiplier
++21 to Dexterity
+		</Item>
+		<Item id="3">
+Rarity: UNIQUE
+Goldrim
+Leather Cap
+Item Level: 30
+Quality: 0
+Sockets: G-B
+Implicits: 0
++40 to Evasion Rating
+10% increased Rarity of Items found
++35% to all Elemental Resistances
+Reflects 4 Physical Damage to Melee Attackers
+		</Item>
+		<Item id="4">
+Rarity: RARE
+Shade Shroud
+Waxed Garb
+Item Level: 34
+Quality: 0
+Sockets: G-G-B-G
+Implicits: 0
++64 to maximum Life
+28% increased Evasion and Energy Shield
++24% to Cold Resistance
++19% to Lightning Resistance
+		</Item>
+		<Item id="5">
+Rarity: RARE
+Grim Grip
+Clasped Mitts
+Item Level: 33
+Quality: 0
+Sockets: G-B-G
+Implicits: 0
++46 to maximum Life
+Adds 2 to 5 Physical Damage to Attacks
++22% to Fire Resistance
++16 to Intelligence
+		</Item>
+		<Item id="6">
+Rarity: UNIQUE
+Wanderlust
+Wool Shoes
+Item Level: 24
+Quality: 0
+Sockets: G-G
+Implicits: 0
++5 to Dexterity
++15 to maximum Energy Shield
+30% increased Mana Regeneration Rate
+20% increased Movement Speed
+Cannot be Frozen
+		</Item>
+		<Item id="7">
+Rarity: RARE
+Venom Charm
+Turquoise Amulet
+Item Level: 32
+Quality: 0
+Implicits: 1
++18 to Dexterity and Intelligence
++48 to maximum Life
++22% to Fire Resistance
++19% to Global Critical Strike Multiplier
++20 to Intelligence
+		</Item>
+		<Item id="8">
+Rarity: RARE
+Plague Loop
+Two-Stone Ring (Cold/Lightning)
+Item Level: 30
+Quality: 0
+Implicits: 1
++14% to Cold and Lightning Resistances
++40 to maximum Life
+Adds 2 to 4 Physical Damage to Attacks
++21% to Fire Resistance
++17 to Intelligence
+		</Item>
+		<Item id="9">
+Rarity: RARE
+Doom Coil
+Diamond Ring
+Item Level: 32
+Quality: 0
+Implicits: 1
+24% increased Global Critical Strike Chance
++42 to maximum Life
++23% to Lightning Resistance
++18% to Cold Resistance
++19 to Dexterity
+		</Item>
+		<Item id="10">
+Rarity: RARE
+Bramble Cord
+Leather Belt
+Item Level: 32
+Quality: 0
+Implicits: 1
++30 to maximum Life
++44 to maximum Life
++21% to Fire Resistance
++18% to Cold Resistance
+		</Item>
+		<ItemSet id="1" useSecondWeaponSet="false">
+			<Slot name="Weapon 1" itemId="1"/>
+			<Slot name="Weapon 2" itemId="2"/>
+			<Slot name="Helmet" itemId="3"/>
+			<Slot name="Body Armour" itemId="4"/>
+			<Slot name="Gloves" itemId="5"/>
+			<Slot name="Boots" itemId="6"/>
+			<Slot name="Amulet" itemId="7"/>
+			<Slot name="Ring 1" itemId="8"/>
+			<Slot name="Ring 2" itemId="9"/>
+			<Slot name="Belt" itemId="10"/>
+		</ItemSet>
+	</Items>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="0">
+		<SkillSet id="1">
+			<Skill enabled="true" slot="Body Armour" label="" mainActiveSkill="1" mainActiveSkillCalcs="1" includeInFullDPS="true">
+				<Gem enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SkillGemViperStrikeAltX" level="10" nameSpec="Viper Strike of the Mamba" quality="0" skillId="ViperStrikeAltX" variantId="ViperStrikeAltX"/>
+				<Gem enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SkillGemSupportAddedChaosDamage" level="2" nameSpec="Added Chaos Damage" quality="0" skillId="SupportAddedChaosDamage" variantId="SupportAddedChaosDamage"/>
+				<Gem enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SkillGemSupportVoidManipulation" level="8" nameSpec="Void Manipulation" quality="0" skillId="SupportVoidManipulation" variantId="SupportVoidManipulation"/>
+				<Gem enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SkillGemSupportUnboundAilments" level="8" nameSpec="Unbound Ailments" quality="0" skillId="SupportUnboundAilments" variantId="SupportUnboundAilments"/>
+			</Skill>
+			<Skill enabled="true" slot="Helmet" label="" includeInFullDPS="false">
+				<Gem enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemHeraldOfAgony" level="6" nameSpec="Herald of Agony" quality="0" skillId="HeraldOfAgony" variantId="HeraldOfAgony"/>
+				<Gem enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemPrecision" level="7" nameSpec="Precision" quality="0" skillId="Precision" variantId="Precision"/>
+			</Skill>
+			<Skill enabled="true" slot="Gloves" label="" includeInFullDPS="false">
+				<Gem enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemWitheringStep" level="7" nameSpec="Withering Step" quality="0" skillId="WitheringStep" variantId="WitheringStep"/>
+				<Gem enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemDespair" level="4" nameSpec="Despair" quality="0" skillId="Despair" variantId="Despair"/>
+			</Skill>
+			<Skill enabled="true" slot="Boots" label="" includeInFullDPS="false">
+				<Gem enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemDash" level="9" nameSpec="Dash" quality="0" skillId="Dash" variantId="Dash"/>
+			</Skill>
+		</SkillSet>
+	</Skills>
+	<Config activeConfigSet="1">
+		<ConfigSet id="1" title="Default"/>
+	</Config>
+</PathOfBuilding>

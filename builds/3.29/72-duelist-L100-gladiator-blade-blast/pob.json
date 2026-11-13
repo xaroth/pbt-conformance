@@ -9,6 +9,16 @@
       "Armour": 13181,
       "AverageHit": 2381.445,
       "BlockChance": 81,
+      "Calcs.ChaosMax": 2602.506,
+      "Calcs.ChaosMin": 1731.489,
+      "Calcs.ColdMax": 0,
+      "Calcs.ColdMin": 0,
+      "Calcs.FireMax": 91.74,
+      "Calcs.FireMin": 61.215,
+      "Calcs.LightningMax": 118.47,
+      "Calcs.LightningMin": 78.87,
+      "Calcs.PhysicalMax": 47.175,
+      "Calcs.PhysicalMin": 31.425,
       "ChaosResist": 76,
       "ChaosResistTotal": 95,
       "ColdResist": 90,
@@ -50,7 +60,125 @@
     "mainSkill": {
       "group": 6,
       "id": "BladeBlast",
-      "name": "Blade Blast"
+      "name": "Blade Blast",
+      "level": 21,
+      "quality": 23,
+      "supports": [
+        {
+          "id": "SupportAddedFireDamage",
+          "level": 21,
+          "quality": 30
+        },
+        {
+          "id": "SupportCastWhenStunned",
+          "level": 20,
+          "quality": 30
+        },
+        {
+          "id": "SupportDeadlyAilments",
+          "level": 21,
+          "quality": 30
+        },
+        {
+          "id": "SupportPhysicalToLightning",
+          "level": 21,
+          "quality": 30
+        },
+        {
+          "id": "SupportUnboundAilments",
+          "level": 21,
+          "quality": 20
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 134,
+    "outputs": {
+      "Armour": 11808,
+      "AverageHit": 933.6975,
+      "BlockChance": 81,
+      "Calcs.ChaosMax": 863.8,
+      "Calcs.ChaosMin": 574.7,
+      "Calcs.ColdMax": 0,
+      "Calcs.ColdMin": 0,
+      "Calcs.FireMax": 91.74,
+      "Calcs.FireMin": 61.215,
+      "Calcs.LightningMax": 118.47,
+      "Calcs.LightningMin": 78.87,
+      "Calcs.PhysicalMax": 47.175,
+      "Calcs.PhysicalMin": 31.425,
+      "ChaosResist": 60,
+      "ChaosResistTotal": 60,
+      "ColdResist": -15,
+      "ColdResistTotal": -15,
+      "CombinedDPS": 787541.9639751,
+      "CritChance": 15.4,
+      "Dex": 82,
+      "EnergyShield": 0,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 0,
+      "EnergyShieldRegen": 0,
+      "EnergyShieldRegenRecovery": 0,
+      "Evasion": 822,
+      "FireResist": 3,
+      "FireResistTotal": 3,
+      "HitChance": 100,
+      "HitSpeed": 1,
+      "Int": 36,
+      "Life": 5239,
+      "LifeLeechRate": 0,
+      "LifeRegen": 272.4,
+      "LifeRegenRecovery": 272.4,
+      "LifeUnreserved": 5239,
+      "LightningResist": -14,
+      "LightningResistTotal": -14,
+      "Mana": 0,
+      "ManaRegen": 0,
+      "MissingChaosResist": 16,
+      "MissingColdResist": 96,
+      "MissingFireResist": 79,
+      "MissingLightningResist": 95,
+      "Speed": 7.5757575757576,
+      "SpellBlockChance": 55,
+      "SpellSuppressionChance": 0,
+      "Str": 68,
+      "TotalDPS": 28010.925,
+      "TotalDotDPS": 759531.0389751
+    },
+    "mainSkill": {
+      "group": 6,
+      "id": "BladeBlast",
+      "name": "Blade Blast",
+      "level": 21,
+      "quality": 23,
+      "supports": [
+        {
+          "id": "SupportAddedFireDamage",
+          "level": 21,
+          "quality": 30
+        },
+        {
+          "id": "SupportCastWhenStunned",
+          "level": 20,
+          "quality": 30
+        },
+        {
+          "id": "SupportDeadlyAilments",
+          "level": 21,
+          "quality": 30
+        },
+        {
+          "id": "SupportPhysicalToLightning",
+          "level": 21,
+          "quality": 30
+        },
+        {
+          "id": "SupportUnboundAilments",
+          "level": 21,
+          "quality": 20
+        }
+      ]
     }
   },
   "gear": {

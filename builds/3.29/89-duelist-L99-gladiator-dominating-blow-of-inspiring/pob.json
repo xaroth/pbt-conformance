@@ -8,6 +8,16 @@
     "outputs": {
       "Armour": 10775,
       "BlockChance": 34,
+      "Calcs.MainHand.ChaosMax": 0,
+      "Calcs.MainHand.ChaosMin": 0,
+      "Calcs.MainHand.ColdMax": 0,
+      "Calcs.MainHand.ColdMin": 0,
+      "Calcs.MainHand.FireMax": 0,
+      "Calcs.MainHand.FireMin": 0,
+      "Calcs.MainHand.LightningMax": 0,
+      "Calcs.MainHand.LightningMin": 0,
+      "Calcs.MainHand.PhysicalMax": 89959.716093643,
+      "Calcs.MainHand.PhysicalMin": 46123.829003572,
       "ChaosResist": 75,
       "ChaosResistTotal": 95,
       "ColdResist": 75,
@@ -55,11 +65,138 @@
       "group": 8,
       "id": "DominatingBlowAltX",
       "name": "Dominating Blow of Inspiring",
+      "level": 23,
+      "quality": 40,
       "attack": true,
       "minion": {
         "name": "Sentinel of Dominance",
         "skill": "Default Attack"
-      }
+      },
+      "supports": [
+        {
+          "id": "SupportBrutality",
+          "level": 20,
+          "quality": 38
+        },
+        {
+          "id": "SupportGreaterMultistrike",
+          "level": 3,
+          "quality": 30
+        },
+        {
+          "id": "SupportIncreasedCriticalDamage",
+          "level": 20,
+          "quality": 33
+        },
+        {
+          "id": "SupportIncreasedCriticalStrikes",
+          "level": 20,
+          "quality": 28
+        },
+        {
+          "id": "SupportMeleePhysicalDamage",
+          "level": 20,
+          "quality": 38
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 132,
+    "outputs": {
+      "Armour": 2897,
+      "BlockChance": 34,
+      "Calcs.MainHand.ChaosMax": 0,
+      "Calcs.MainHand.ChaosMin": 0,
+      "Calcs.MainHand.ColdMax": 0,
+      "Calcs.MainHand.ColdMin": 0,
+      "Calcs.MainHand.FireMax": 0,
+      "Calcs.MainHand.FireMin": 0,
+      "Calcs.MainHand.LightningMax": 0,
+      "Calcs.MainHand.LightningMin": 0,
+      "Calcs.MainHand.PhysicalMax": 12689.966284103,
+      "Calcs.MainHand.PhysicalMin": 6845.8272247252,
+      "ChaosResist": 75,
+      "ChaosResistTotal": 95,
+      "ColdResist": 64,
+      "ColdResistTotal": 64,
+      "CombinedDPS": 92629.6838436,
+      "CritChance": 29.452808,
+      "Dex": 144,
+      "EnergyShield": 860,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 287,
+      "EnergyShieldRegen": 0,
+      "EnergyShieldRegenRecovery": 0,
+      "Evasion": 678,
+      "FireResist": 75,
+      "FireResistTotal": 83,
+      "HitChance": 77,
+      "Int": 222,
+      "Life": 3056,
+      "LifeLeechRate": 883.46890515308,
+      "LifeRegen": 30.6,
+      "LifeRegenRecovery": 30.6,
+      "LifeUnreserved": 3056,
+      "LightningResist": 70,
+      "LightningResistTotal": 70,
+      "MainHand.AverageHit": 18843.717215848,
+      "Mana": 879,
+      "ManaRegen": 21.5,
+      "ManaUnreserved": 879,
+      "Minion.CombinedDPS": 75594.316951142,
+      "Minion.HitChance": 100,
+      "Minion.Life": 8928,
+      "Minion.MainHand.AverageHit": 19425.165036981,
+      "MissingChaosResist": 0,
+      "MissingColdResist": 11,
+      "MissingFireResist": 0,
+      "MissingLightningResist": 5,
+      "Speed": 6.384,
+      "SpellBlockChance": 17,
+      "SpellSuppressionChance": 0,
+      "Str": 179,
+      "TotalDPS": 92629.6838436,
+      "TotalDotDPS": 0
+    },
+    "mainSkill": {
+      "group": 8,
+      "id": "DominatingBlowAltX",
+      "name": "Dominating Blow of Inspiring",
+      "level": 23,
+      "quality": 40,
+      "attack": true,
+      "minion": {
+        "name": "Sentinel of Dominance",
+        "skill": "Default Attack"
+      },
+      "supports": [
+        {
+          "id": "SupportBrutality",
+          "level": 20,
+          "quality": 38
+        },
+        {
+          "id": "SupportGreaterMultistrike",
+          "level": 3,
+          "quality": 30
+        },
+        {
+          "id": "SupportIncreasedCriticalDamage",
+          "level": 20,
+          "quality": 33
+        },
+        {
+          "id": "SupportIncreasedCriticalStrikes",
+          "level": 20,
+          "quality": 28
+        },
+        {
+          "id": "SupportMeleePhysicalDamage",
+          "level": 20,
+          "quality": 38
+        }
+      ]
     }
   },
   "gear": {

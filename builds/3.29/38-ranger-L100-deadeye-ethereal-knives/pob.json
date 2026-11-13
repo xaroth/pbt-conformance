@@ -9,6 +9,16 @@
       "Armour": 2513,
       "AverageHit": 1857623.5611895,
       "BlockChance": 0,
+      "Calcs.ChaosMax": 1591087.36138,
+      "Calcs.ChaosMin": 1010627.519,
+      "Calcs.ColdMax": 4505.87907,
+      "Calcs.ColdMin": 2955.10677,
+      "Calcs.FireMax": 44860.300485,
+      "Calcs.FireMin": 29600.096295,
+      "Calcs.LightningMax": 6978.90732,
+      "Calcs.LightningMin": 1592.889375,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
       "ChaosResist": 7,
       "ChaosResistTotal": 7,
       "ColdResist": 75,
@@ -50,7 +60,123 @@
     "mainSkill": {
       "group": 4,
       "id": "EtherealKnives",
-      "name": "Ethereal Knives"
+      "name": "Ethereal Knives",
+      "level": 26,
+      "quality": 72,
+      "supports": [
+        {
+          "id": "SupportArcaneSurge",
+          "level": 20,
+          "quality": 30
+        },
+        {
+          "id": "SupportEclipse",
+          "level": 3,
+          "quality": 20
+        },
+        {
+          "id": "SupportEmpower",
+          "level": 4
+        },
+        {
+          "id": "SupportGreaterSpellEcho",
+          "level": 3,
+          "quality": 30
+        },
+        {
+          "id": "SupportInspiration",
+          "level": 20,
+          "quality": 20
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 133,
+    "outputs": {
+      "Armour": 2513,
+      "AverageHit": 54885.699825,
+      "BlockChance": 0,
+      "Calcs.ChaosMax": 3428.656,
+      "Calcs.ChaosMin": 1662.716,
+      "Calcs.ColdMax": 0,
+      "Calcs.ColdMin": 0,
+      "Calcs.FireMax": 278.6025,
+      "Calcs.FireMin": 179.1405,
+      "Calcs.LightningMax": 191.1195,
+      "Calcs.LightningMin": 23.958,
+      "Calcs.PhysicalMax": 44435.6,
+      "Calcs.PhysicalMin": 29344.7,
+      "ChaosResist": -28,
+      "ChaosResistTotal": -28,
+      "ColdResist": 29,
+      "ColdResistTotal": 29,
+      "CombinedDPS": 245088.9196033,
+      "CritChance": 19,
+      "Dex": 257,
+      "EnergyShield": 219,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 73,
+      "EnergyShieldRegen": 0,
+      "EnergyShieldRegenRecovery": 0,
+      "Evasion": 738,
+      "FireResist": -2,
+      "FireResistTotal": -2,
+      "HitChance": 100,
+      "Int": 99,
+      "Life": 2368,
+      "LifeLeechRate": 0,
+      "LifeRegen": 0,
+      "LifeRegenRecovery": 0,
+      "LifeUnreserved": 2368,
+      "LightningResist": 36,
+      "LightningResistTotal": 36,
+      "Mana": 956,
+      "ManaRegen": 25.1,
+      "ManaUnreserved": 956,
+      "MissingChaosResist": 103,
+      "MissingColdResist": 46,
+      "MissingFireResist": 77,
+      "MissingLightningResist": 39,
+      "Speed": 4.464,
+      "SpellBlockChance": 0,
+      "SpellSuppressionChance": 0,
+      "Str": 146,
+      "TotalDPS": 245009.7640188,
+      "TotalDotDPS": 79.15558450499
+    },
+    "mainSkill": {
+      "group": 4,
+      "id": "EtherealKnives",
+      "name": "Ethereal Knives",
+      "level": 26,
+      "quality": 72,
+      "supports": [
+        {
+          "id": "SupportArcaneSurge",
+          "level": 20,
+          "quality": 30
+        },
+        {
+          "id": "SupportEclipse",
+          "level": 3,
+          "quality": 20
+        },
+        {
+          "id": "SupportEmpower",
+          "level": 4
+        },
+        {
+          "id": "SupportGreaterSpellEcho",
+          "level": 3,
+          "quality": 30
+        },
+        {
+          "id": "SupportInspiration",
+          "level": 20,
+          "quality": 20
+        }
+      ]
     }
   },
   "gear": {

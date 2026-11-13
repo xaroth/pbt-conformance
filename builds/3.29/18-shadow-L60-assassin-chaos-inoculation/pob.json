@@ -8,6 +8,26 @@
     "outputs": {
       "Armour": 1500,
       "BlockChance": 20,
+      "Calcs.MainHand.ChaosMax": 1720.78,
+      "Calcs.MainHand.ChaosMin": 913.74,
+      "Calcs.MainHand.ColdMax": 0,
+      "Calcs.MainHand.ColdMin": 0,
+      "Calcs.MainHand.FireMax": 0,
+      "Calcs.MainHand.FireMin": 0,
+      "Calcs.MainHand.LightningMax": 0,
+      "Calcs.MainHand.LightningMin": 0,
+      "Calcs.MainHand.PhysicalMax": 72.3,
+      "Calcs.MainHand.PhysicalMin": 24.9,
+      "Calcs.OffHand.ChaosMax": 1532.6,
+      "Calcs.OffHand.ChaosMin": 823.53,
+      "Calcs.OffHand.ColdMax": 0,
+      "Calcs.OffHand.ColdMin": 0,
+      "Calcs.OffHand.FireMax": 0,
+      "Calcs.OffHand.FireMin": 0,
+      "Calcs.OffHand.LightningMax": 0,
+      "Calcs.OffHand.LightningMin": 0,
+      "Calcs.OffHand.PhysicalMax": 69.9,
+      "Calcs.OffHand.PhysicalMin": 23.7,
       "ChaosResist": -33,
       "ChaosResistTotal": -33,
       "ColdResist": 75,
@@ -52,7 +72,121 @@
       "group": 1,
       "id": "ViperStrikeAltX",
       "name": "Viper Strike of the Mamba",
-      "attack": true
+      "level": 17,
+      "quality": 10,
+      "attack": true,
+      "supports": [
+        {
+          "id": "SupportAddedChaosDamage",
+          "level": 15
+        },
+        {
+          "id": "SupportCriticalStrikeAffliction",
+          "level": 15,
+          "quality": 10
+        },
+        {
+          "id": "SupportUnboundAilments",
+          "level": 16
+        },
+        {
+          "id": "SupportVoidManipulation",
+          "level": 16
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 85,
+    "outputs": {
+      "Armour": 0,
+      "BlockChance": 20,
+      "Calcs.MainHand.ChaosMax": 1241.8,
+      "Calcs.MainHand.ChaosMin": 659.4,
+      "Calcs.MainHand.ColdMax": 0,
+      "Calcs.MainHand.ColdMin": 0,
+      "Calcs.MainHand.FireMax": 0,
+      "Calcs.MainHand.FireMin": 0,
+      "Calcs.MainHand.LightningMax": 0,
+      "Calcs.MainHand.LightningMin": 0,
+      "Calcs.MainHand.PhysicalMax": 72.3,
+      "Calcs.MainHand.PhysicalMin": 24.9,
+      "Calcs.OffHand.ChaosMax": 1106,
+      "Calcs.OffHand.ChaosMin": 594.3,
+      "Calcs.OffHand.ColdMax": 0,
+      "Calcs.OffHand.ColdMin": 0,
+      "Calcs.OffHand.FireMax": 0,
+      "Calcs.OffHand.FireMin": 0,
+      "Calcs.OffHand.LightningMax": 0,
+      "Calcs.OffHand.LightningMin": 0,
+      "Calcs.OffHand.PhysicalMax": 69.9,
+      "Calcs.OffHand.PhysicalMin": 23.7,
+      "ChaosResist": -33,
+      "ChaosResistTotal": -33,
+      "ColdResist": 75,
+      "ColdResistTotal": 87,
+      "CombinedDPS": 25519.680980667,
+      "CritChance": 75.1032,
+      "Dex": 288,
+      "EnergyShield": 300,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 100,
+      "EnergyShieldRegen": 0,
+      "EnergyShieldRegenRecovery": 0,
+      "Evasion": 1644,
+      "FireResist": 75,
+      "FireResistTotal": 121,
+      "HitChance": 76,
+      "Int": 266,
+      "Life": 1819,
+      "LifeLeechRate": 0,
+      "LifeRegen": 0,
+      "LifeRegenRecovery": 0,
+      "LifeUnreserved": 1819,
+      "LightningResist": 75,
+      "LightningResistTotal": 91,
+      "MainHand.AverageHit": 2597.618401472,
+      "Mana": 776,
+      "ManaRegen": 13.6,
+      "ManaUnreserved": 776,
+      "MissingChaosResist": 108,
+      "MissingColdResist": 0,
+      "MissingFireResist": 0,
+      "MissingLightningResist": 0,
+      "OffHand.AverageHit": 2331.799264612,
+      "Speed": 1.5041210144928,
+      "SpellBlockChance": 0,
+      "SpellSuppressionChance": 39,
+      "Str": 92,
+      "TotalDPS": 5634.9749325843,
+      "TotalDotDPS": 17853.437982643
+    },
+    "mainSkill": {
+      "group": 1,
+      "id": "ViperStrikeAltX",
+      "name": "Viper Strike of the Mamba",
+      "level": 17,
+      "quality": 10,
+      "attack": true,
+      "supports": [
+        {
+          "id": "SupportAddedChaosDamage",
+          "level": 15
+        },
+        {
+          "id": "SupportCriticalStrikeAffliction",
+          "level": 15,
+          "quality": 10
+        },
+        {
+          "id": "SupportUnboundAilments",
+          "level": 16
+        },
+        {
+          "id": "SupportVoidManipulation",
+          "level": 16
+        }
+      ]
     }
   },
   "gear": {

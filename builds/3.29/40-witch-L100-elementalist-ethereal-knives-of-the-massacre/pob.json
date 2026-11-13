@@ -9,6 +9,16 @@
       "Armour": 2123,
       "AverageHit": 820778.0709051,
       "BlockChance": 0,
+      "Calcs.ChaosMax": 446401.6032,
+      "Calcs.ChaosMin": 278363.9775,
+      "Calcs.ColdMax": 39029.44815,
+      "Calcs.ColdMin": 25679.49615,
+      "Calcs.FireMax": 28623.3255,
+      "Calcs.FireMin": 18756.8766,
+      "Calcs.LightningMax": 6181.38675,
+      "Calcs.LightningMin": 1540.43505,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
       "ChaosResist": 37,
       "ChaosResistTotal": 37,
       "ColdResist": 65,
@@ -50,7 +60,125 @@
     "mainSkill": {
       "group": 4,
       "id": "EtherealKnivesAltY",
-      "name": "Ethereal Knives of the Massacre"
+      "name": "Ethereal Knives of the Massacre",
+      "level": 22,
+      "quality": 30,
+      "supports": [
+        {
+          "id": "SupportFasterProjectiles",
+          "level": 23,
+          "quality": 30
+        },
+        {
+          "id": "SupportGreaterChain",
+          "level": 5,
+          "quality": 30
+        },
+        {
+          "id": "SupportGreaterSpellEcho",
+          "level": 3,
+          "quality": 20
+        },
+        {
+          "id": "SupportHypothermia",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportIncreasedCriticalDamage",
+          "level": 20,
+          "quality": 20
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 133,
+    "outputs": {
+      "Armour": 2123,
+      "AverageHit": 15822.1853909,
+      "BlockChance": 0,
+      "Calcs.ChaosMax": 8289.2,
+      "Calcs.ChaosMin": 5432.6,
+      "Calcs.ColdMax": 1546.05,
+      "Calcs.ColdMin": 1013.1,
+      "Calcs.FireMax": 0,
+      "Calcs.FireMin": 0,
+      "Calcs.LightningMax": 0,
+      "Calcs.LightningMin": 0,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
+      "ChaosResist": 2,
+      "ChaosResistTotal": 2,
+      "ColdResist": 50,
+      "ColdResistTotal": 50,
+      "CombinedDPS": 35132.025114171,
+      "CritChance": 13.676,
+      "Dex": 213,
+      "EnergyShield": 281,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 47,
+      "EnergyShieldRegen": 0,
+      "EnergyShieldRegenRecovery": 0,
+      "Evasion": 1300,
+      "FireResist": 3,
+      "FireResistTotal": 3,
+      "HitChance": 100,
+      "Int": 270,
+      "Life": 2689,
+      "LifeLeechRate": 0,
+      "LifeRegen": 4,
+      "LifeRegenRecovery": 4,
+      "LifeUnreserved": 2689,
+      "LightningResist": -6,
+      "LightningResistTotal": -6,
+      "Mana": 861,
+      "ManaRegen": 17,
+      "ManaUnreserved": 861,
+      "MissingChaosResist": 73,
+      "MissingColdResist": 25,
+      "MissingFireResist": 72,
+      "MissingLightningResist": 81,
+      "Speed": 2.16,
+      "SpellBlockChance": 0,
+      "SpellSuppressionChance": 0,
+      "Str": 151,
+      "TotalDPS": 34175.920444344,
+      "TotalDotDPS": 0
+    },
+    "mainSkill": {
+      "group": 4,
+      "id": "EtherealKnivesAltY",
+      "name": "Ethereal Knives of the Massacre",
+      "level": 22,
+      "quality": 30,
+      "supports": [
+        {
+          "id": "SupportFasterProjectiles",
+          "level": 23,
+          "quality": 30
+        },
+        {
+          "id": "SupportGreaterChain",
+          "level": 5,
+          "quality": 30
+        },
+        {
+          "id": "SupportGreaterSpellEcho",
+          "level": 3,
+          "quality": 20
+        },
+        {
+          "id": "SupportHypothermia",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportIncreasedCriticalDamage",
+          "level": 20,
+          "quality": 20
+        }
+      ]
     }
   },
   "gear": {

@@ -6,7 +6,11 @@ import (
 	"errors"
 	"os"
 	"path/filepath"
+	"slices"
 	"testing"
+
+	"github.com/google/go-cmp/cmp"
+	"github.com/google/go-cmp/cmp/cmpopts"
 
 	"github.com/xaroth/pbt-conformance/pins"
 	"github.com/xaroth/pbt-conformance/pob"
@@ -59,7 +63,7 @@ func TestRecord(t *testing.T) {
 		t.Errorf("values: got %+v", v)
 	}
 	checkLayers(t, &v)
-	for _, name := range []string{pob.ValuesFile, pob.GearXML} {
+	for _, name := range []string{pob.ValuesFile, pob.GearXML, pob.SkillXML} {
 		path := filepath.Join(dir, name)
 		stored, err := os.ReadFile(path)
 		if err != nil {
@@ -77,23 +81,36 @@ func TestRecord(t *testing.T) {
 	}
 }
 
-// checkLayers checks that skill outputs are recorded for the full build only, which has skills,
-// and delivery ones for its totem.
+// checkLayers checks that skill outputs are recorded for the full and skill builds only, which
+// have skills, and delivery ones for their totem.
 func checkLayers(t *testing.T, v *pob.Values) {
 	t.Helper()
-	if v.Full.MainSkill == nil || v.Full.MainSkill.ID != "Fireball" || v.Gear.MainSkill != nil || v.TreeOnly.MainSkill != nil {
-		t.Errorf("main skills: got %+v, %+v, %+v", v.Full.MainSkill, v.Gear.MainSkill, v.TreeOnly.MainSkill)
-	}
-	for _, k := range []string{"TotalDPS", "TotemLife"} {
+	checkMainSkills(t, v)
+	for _, k := range []string{"TotalDPS", "TotemLife", "Calcs.FireMax"} {
 		_, full := v.Full.Outputs[k]
+		_, skill := v.Skill.Outputs[k]
 		_, gear := v.Gear.Outputs[k]
 		_, tree := v.TreeOnly.Outputs[k]
-		if !full || gear || tree {
-			t.Errorf("%s recorded in full, gear, tree-only: %v, %v, %v; want only full", k, full, gear, tree)
+		if !full || !skill || gear || tree {
+			t.Errorf("%s recorded in full, skill, gear, tree-only: %v, %v, %v, %v; want full and skill", k, full, skill, gear, tree)
 		}
 	}
 	if _, ok := v.TreeOnly.Outputs["BlockChance"]; !ok {
 		t.Errorf("tree-only: no defence output BlockChance")
+	}
+}
+
+// checkMainSkills checks that the full and skill layers record the totem's main skill with its
+// support, and the other layers none.
+func checkMainSkills(t *testing.T, v *pob.Values) {
+	t.Helper()
+	for _, ms := range []*pob.MainSkill{v.Full.MainSkill, v.Skill.MainSkill} {
+		if ms == nil || ms.ID != "Fireball" || !slices.ContainsFunc(ms.Supports, func(s pob.Support) bool { return s.ID == "SupportSpellTotem" }) {
+			t.Errorf("main skill: got %+v, want Fireball supported by Spell Totem", ms)
+		}
+	}
+	if v.Gear.MainSkill != nil || v.TreeOnly.MainSkill != nil {
+		t.Errorf("main skills: got %+v, %+v in gear, tree-only", v.Gear.MainSkill, v.TreeOnly.MainSkill)
 	}
 }
 
@@ -163,5 +180,33 @@ func TestRecordParty(t *testing.T) {
 	}
 	if err := pob.Record(ctx, root, cache, f, "poe1", "3.29", true); !errors.Is(err, pob.ErrParty) {
 		t.Errorf("missing ally: got %v, want %v", err, pob.ErrParty)
+	}
+}
+
+// TestSkillLayerMainSkill checks that every build's skill layer calculates the full layer's main
+// skill, with the same level, quality and supports; only its group number may differ.
+func TestSkillLayerMainSkill(t *testing.T) {
+	t.Parallel()
+	files, err := filepath.Glob(filepath.Join("..", "builds", "*", "*", pob.ValuesFile))
+	if err != nil {
+		t.Fatal(err)
+	}
+	for _, f := range files {
+		b, err := os.ReadFile(f)
+		if err != nil {
+			t.Fatal(err)
+		}
+		var v pob.Values
+		if err := json.Unmarshal(b, &v); err != nil {
+			t.Fatal(err)
+		}
+		full, skill := v.Full.MainSkill, v.Skill.MainSkill
+		if full == nil || skill == nil {
+			t.Errorf("%s: main skill full %+v, skill %+v", f, full, skill)
+			continue
+		}
+		if diff := cmp.Diff(*full, *skill, cmpopts.IgnoreFields(pob.MainSkill{}, "Group")); diff != "" {
+			t.Errorf("%s: main skill (-full +skill):\n%s", f, diff)
+		}
 	}
 }

@@ -167,6 +167,11 @@ func TestRun(t *testing.T) {
 		t.Errorf("mismatches: %+v", ms)
 	}
 	// The engine gives the sheet of the tree layer and, of its defences, spell block; nothing else.
+	skillGroups := []compare.GroupResult{
+		{Group: pob.GroupSheet, Status: compare.StatusNotCompared}, {Group: pob.GroupSkill, Status: compare.StatusNotCompared},
+		{Group: pob.GroupHitTypes, Status: compare.StatusNotCompared}, {Group: pob.GroupDefence, Status: compare.StatusNotCompared},
+		{Group: pob.GroupDelivery, Status: compare.StatusNotCompared},
+	}
 	want := []compare.Layer{
 		{Name: "tree", Groups: []compare.GroupResult{
 			{Group: pob.GroupSheet, Status: compare.StatusPass},
@@ -179,17 +184,15 @@ func TestRun(t *testing.T) {
 		{Name: "gear", Groups: []compare.GroupResult{
 			{Group: pob.GroupSheet, Status: compare.StatusNotCompared}, {Group: pob.GroupDefence, Status: compare.StatusNotCompared},
 		}},
-		{Name: "full", Groups: []compare.GroupResult{
-			{Group: pob.GroupSheet, Status: compare.StatusNotCompared}, {Group: pob.GroupSkill, Status: compare.StatusNotCompared},
-			{Group: pob.GroupDefence, Status: compare.StatusNotCompared}, {Group: pob.GroupDelivery, Status: compare.StatusNotCompared},
-		}},
+		{Name: "skill", Groups: skillGroups},
+		{Name: "full", Groups: skillGroups},
 	}
 	if diff := cmp.Diff(want, bs[0].Layers); diff != "" {
 		t.Errorf("layers (-want +got):\n%s", diff)
 	}
 	// no party file, no party layer
-	if n := len(bs[0].Layers); n != 3 {
-		t.Errorf("got %d layers, want 3", n)
+	if n := len(bs[0].Layers); n != 4 {
+		t.Errorf("got %d layers, want 4", n)
 	}
 	if bs[0].Meta.Kind != compare.Untagged {
 		t.Errorf("kind: got %q, want %q", bs[0].Meta.Kind, compare.Untagged)
@@ -293,10 +296,10 @@ func TestRunPartyLayer(t *testing.T) {
 	want := compare.Layer{Name: "party", Groups: []compare.GroupResult{
 		{Group: pob.GroupSheet, Status: compare.StatusNotCompared}, {Group: pob.GroupDefence, Status: compare.StatusNotCompared},
 	}}
-	if len(ls) != 4 {
-		t.Fatalf("got %d layers, want 4: %+v", len(ls), ls)
+	if len(ls) != 5 {
+		t.Fatalf("got %d layers, want 5: %+v", len(ls), ls)
 	}
-	if diff := cmp.Diff(want, ls[3]); diff != "" {
+	if diff := cmp.Diff(want, ls[4]); diff != "" {
 		t.Errorf("party layer (-want +got):\n%s", diff)
 	}
 }

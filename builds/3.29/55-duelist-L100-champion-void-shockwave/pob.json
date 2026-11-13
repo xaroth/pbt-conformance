@@ -8,6 +8,16 @@
     "outputs": {
       "Armour": 86633,
       "BlockChance": 61,
+      "Calcs.MainHand.ChaosMax": 0,
+      "Calcs.MainHand.ChaosMin": 0,
+      "Calcs.MainHand.ColdMax": 0,
+      "Calcs.MainHand.ColdMin": 0,
+      "Calcs.MainHand.FireMax": 0,
+      "Calcs.MainHand.FireMin": 0,
+      "Calcs.MainHand.LightningMax": 0,
+      "Calcs.MainHand.LightningMin": 0,
+      "Calcs.MainHand.PhysicalMax": 738259.74,
+      "Calcs.MainHand.PhysicalMin": 441017.352,
       "ChaosResist": 75,
       "ChaosResistTotal": 90,
       "ColdResist": 75,
@@ -51,7 +61,106 @@
       "group": 7,
       "id": "TriggeredSupportVoidShockwave",
       "name": "Void Shockwave",
-      "attack": true
+      "level": 4,
+      "quality": 20,
+      "attack": true,
+      "supports": [
+        {
+          "id": "SupportBrutality",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportMeleePhysicalDamage",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportPulverise",
+          "level": 20,
+          "quality": 30
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 134,
+    "outputs": {
+      "Armour": 23661,
+      "BlockChance": 0,
+      "Calcs.MainHand.ChaosMax": 0,
+      "Calcs.MainHand.ChaosMin": 0,
+      "Calcs.MainHand.ColdMax": 0,
+      "Calcs.MainHand.ColdMin": 0,
+      "Calcs.MainHand.FireMax": 0,
+      "Calcs.MainHand.FireMin": 0,
+      "Calcs.MainHand.LightningMax": 0,
+      "Calcs.MainHand.LightningMin": 0,
+      "Calcs.MainHand.PhysicalMax": 81478,
+      "Calcs.MainHand.PhysicalMin": 48672,
+      "ChaosResist": 75,
+      "ChaosResistTotal": 90,
+      "ColdResist": 75,
+      "ColdResistTotal": 111,
+      "CombinedDPS": 10820.039102244,
+      "CritChance": 4.1625,
+      "Dex": 64,
+      "EnergyShield": 0,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 0,
+      "EnergyShieldRegen": 0,
+      "EnergyShieldRegenRecovery": 0,
+      "Evasion": 0,
+      "FireResist": 76,
+      "FireResistTotal": 105,
+      "HitChance": 37,
+      "Int": 15,
+      "Life": 4666,
+      "LifeLeechRate": 0,
+      "LifeRegen": 89.6,
+      "LifeRegenRecovery": 89.6,
+      "LifeUnreserved": 4666,
+      "LightningResist": 75,
+      "LightningResistTotal": 103,
+      "MainHand.AverageHit": 76397.5619375,
+      "Mana": 811,
+      "ManaRegen": 14.2,
+      "ManaUnreserved": 811,
+      "MissingChaosResist": 0,
+      "MissingColdResist": 0,
+      "MissingFireResist": 0,
+      "MissingLightningResist": 0,
+      "Speed": 0.34037781397719,
+      "SpellBlockChance": 0,
+      "SpellSuppressionChance": 0,
+      "Str": 81,
+      "TotalDPS": 9621.4929964252,
+      "TotalDotDPS": 0
+    },
+    "mainSkill": {
+      "group": 7,
+      "id": "TriggeredSupportVoidShockwave",
+      "name": "Void Shockwave",
+      "level": 4,
+      "quality": 20,
+      "attack": true,
+      "supports": [
+        {
+          "id": "SupportBrutality",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportMeleePhysicalDamage",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportPulverise",
+          "level": 20,
+          "quality": 30
+        }
+      ]
     }
   },
   "gear": {

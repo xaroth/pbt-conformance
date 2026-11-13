@@ -8,6 +8,16 @@
     "outputs": {
       "Armour": 2275,
       "BlockChance": 43,
+      "Calcs.MainHand.ChaosMax": 0,
+      "Calcs.MainHand.ChaosMin": 0,
+      "Calcs.MainHand.ColdMax": 0,
+      "Calcs.MainHand.ColdMin": 0,
+      "Calcs.MainHand.FireMax": 0,
+      "Calcs.MainHand.FireMin": 0,
+      "Calcs.MainHand.LightningMax": 0,
+      "Calcs.MainHand.LightningMin": 0,
+      "Calcs.MainHand.PhysicalMax": 253934.89712735,
+      "Calcs.MainHand.PhysicalMin": 137967.91054225,
       "ChaosResist": -5,
       "ChaosResistTotal": -5,
       "ColdResist": 75,
@@ -52,7 +62,117 @@
       "group": 10,
       "id": "LacerateAltX",
       "name": "Lacerate of Butchering",
-      "attack": true
+      "level": 20,
+      "quality": 30,
+      "attack": true,
+      "supports": [
+        {
+          "id": "GeneralsCrySupport",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportBrutality",
+          "level": 20,
+          "quality": 30
+        },
+        {
+          "id": "SupportMeleePhysicalDamage",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportPulverise",
+          "level": 20,
+          "quality": 20
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 132,
+    "outputs": {
+      "Armour": 2275,
+      "BlockChance": 0,
+      "Calcs.MainHand.ChaosMax": 0,
+      "Calcs.MainHand.ChaosMin": 0,
+      "Calcs.MainHand.ColdMax": 0,
+      "Calcs.MainHand.ColdMin": 0,
+      "Calcs.MainHand.FireMax": 0,
+      "Calcs.MainHand.FireMin": 0,
+      "Calcs.MainHand.LightningMax": 0,
+      "Calcs.MainHand.LightningMin": 0,
+      "Calcs.MainHand.PhysicalMax": 47035.682031177,
+      "Calcs.MainHand.PhysicalMin": 25555.072438425,
+      "ChaosResist": -5,
+      "ChaosResistTotal": -5,
+      "ColdResist": 73,
+      "ColdResistTotal": 73,
+      "CombinedDPS": 109264.53038689,
+      "CritChance": 0,
+      "Dex": 155,
+      "EnergyShield": 52,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 17,
+      "EnergyShieldRegen": 0,
+      "EnergyShieldRegenRecovery": 0,
+      "Evasion": 669,
+      "FireResist": 76,
+      "FireResistTotal": 101,
+      "HitChance": 100,
+      "HitSpeed": 1,
+      "Int": 156,
+      "Life": 3907,
+      "LifeLeechRate": 265.676,
+      "LifeRegen": 101.6,
+      "LifeRegenRecovery": 101.6,
+      "LifeUnreserved": 3907,
+      "LightningResist": 75,
+      "LightningResistTotal": 78,
+      "MainHand.AverageHit": 36295.377234801,
+      "Mana": 759,
+      "ManaRegen": 18.4,
+      "ManaUnreserved": 644,
+      "MissingChaosResist": 80,
+      "MissingColdResist": 2,
+      "MissingFireResist": 0,
+      "MissingLightningResist": 0,
+      "Speed": 0.33712,
+      "SpellBlockChance": 0,
+      "SpellSuppressionChance": 0,
+      "Str": 238,
+      "TotalDPS": 74042.569558994,
+      "TotalDotDPS": 0
+    },
+    "mainSkill": {
+      "group": 10,
+      "id": "LacerateAltX",
+      "name": "Lacerate of Butchering",
+      "level": 20,
+      "quality": 30,
+      "attack": true,
+      "supports": [
+        {
+          "id": "GeneralsCrySupport",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportBrutality",
+          "level": 20,
+          "quality": 30
+        },
+        {
+          "id": "SupportMeleePhysicalDamage",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportPulverise",
+          "level": 20,
+          "quality": 20
+        }
+      ]
     }
   },
   "gear": {

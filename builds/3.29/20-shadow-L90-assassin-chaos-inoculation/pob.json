@@ -8,6 +8,26 @@
     "outputs": {
       "Armour": 0,
       "BlockChance": 20,
+      "Calcs.MainHand.ChaosMax": 857.5,
+      "Calcs.MainHand.ChaosMin": 427.7,
+      "Calcs.MainHand.ColdMax": 0,
+      "Calcs.MainHand.ColdMin": 0,
+      "Calcs.MainHand.FireMax": 0,
+      "Calcs.MainHand.FireMin": 0,
+      "Calcs.MainHand.LightningMax": 0,
+      "Calcs.MainHand.LightningMin": 0,
+      "Calcs.MainHand.PhysicalMax": 152.4,
+      "Calcs.MainHand.PhysicalMin": 75.96,
+      "Calcs.OffHand.ChaosMax": 383.6,
+      "Calcs.OffHand.ChaosMin": 133,
+      "Calcs.OffHand.ColdMax": 0,
+      "Calcs.OffHand.ColdMin": 0,
+      "Calcs.OffHand.FireMax": 0,
+      "Calcs.OffHand.FireMin": 0,
+      "Calcs.OffHand.LightningMax": 0,
+      "Calcs.OffHand.LightningMin": 0,
+      "Calcs.OffHand.PhysicalMax": 68.28,
+      "Calcs.OffHand.PhysicalMin": 23.76,
       "ChaosResist": -10,
       "ChaosResistTotal": -10,
       "ColdResist": 75,
@@ -52,7 +72,137 @@
       "group": 1,
       "id": "ViperStrikeAltX",
       "name": "Viper Strike of the Mamba",
-      "attack": true
+      "level": 20,
+      "quality": 30,
+      "attack": true,
+      "supports": [
+        {
+          "id": "SupportDamageOnFullLife",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportDeadlyAilments",
+          "level": 20,
+          "quality": 30
+        },
+        {
+          "id": "SupportMeleePhysicalDamage",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportNightblade",
+          "level": 20,
+          "quality": 30
+        },
+        {
+          "id": "SupportVoidManipulation",
+          "level": 20,
+          "quality": 30
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 124,
+    "outputs": {
+      "Armour": 0,
+      "BlockChance": 20,
+      "Calcs.MainHand.ChaosMax": 857.5,
+      "Calcs.MainHand.ChaosMin": 427.7,
+      "Calcs.MainHand.ColdMax": 0,
+      "Calcs.MainHand.ColdMin": 0,
+      "Calcs.MainHand.FireMax": 0,
+      "Calcs.MainHand.FireMin": 0,
+      "Calcs.MainHand.LightningMax": 0,
+      "Calcs.MainHand.LightningMin": 0,
+      "Calcs.MainHand.PhysicalMax": 127,
+      "Calcs.MainHand.PhysicalMin": 63.3,
+      "Calcs.OffHand.ChaosMax": 383.6,
+      "Calcs.OffHand.ChaosMin": 133,
+      "Calcs.OffHand.ColdMax": 0,
+      "Calcs.OffHand.ColdMin": 0,
+      "Calcs.OffHand.FireMax": 0,
+      "Calcs.OffHand.FireMin": 0,
+      "Calcs.OffHand.LightningMax": 0,
+      "Calcs.OffHand.LightningMin": 0,
+      "Calcs.OffHand.PhysicalMax": 56.9,
+      "Calcs.OffHand.PhysicalMin": 19.8,
+      "ChaosResist": -10,
+      "ChaosResistTotal": -10,
+      "ColdResist": 75,
+      "ColdResistTotal": 125,
+      "CombinedDPS": 90999.446040036,
+      "CritChance": 84,
+      "Dex": 338,
+      "EnergyShield": 4987,
+      "EnergyShieldLeechRate": 49.9897880832,
+      "EnergyShieldRecharge": 0,
+      "EnergyShieldRegen": 0,
+      "EnergyShieldRegenRecovery": 0,
+      "Evasion": 10849,
+      "FireResist": 75,
+      "FireResistTotal": 160,
+      "HitChance": 84,
+      "Int": 411,
+      "Life": 1,
+      "LifeLeechRate": 0,
+      "LifeRegen": 0,
+      "LifeRegenRecovery": 0,
+      "LifeUnreserved": 1,
+      "LightningResist": 75,
+      "LightningResistTotal": 166,
+      "MainHand.AverageHit": 737.75,
+      "Mana": 1622,
+      "ManaRegen": 28.4,
+      "ManaUnreserved": 1622,
+      "MissingChaosResist": 85,
+      "MissingColdResist": 0,
+      "MissingFireResist": 0,
+      "MissingLightningResist": 0,
+      "OffHand.AverageHit": 296.65,
+      "Speed": 1.4676666666667,
+      "SpellBlockChance": 0,
+      "SpellSuppressionChance": 39,
+      "Str": 114,
+      "TotalDPS": 1275.249696,
+      "TotalDotDPS": 81574.519572
+    },
+    "mainSkill": {
+      "group": 1,
+      "id": "ViperStrikeAltX",
+      "name": "Viper Strike of the Mamba",
+      "level": 20,
+      "quality": 30,
+      "attack": true,
+      "supports": [
+        {
+          "id": "SupportDamageOnFullLife",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportDeadlyAilments",
+          "level": 20,
+          "quality": 30
+        },
+        {
+          "id": "SupportMeleePhysicalDamage",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportNightblade",
+          "level": 20,
+          "quality": 30
+        },
+        {
+          "id": "SupportVoidManipulation",
+          "level": 20,
+          "quality": 30
+        }
+      ]
     }
   },
   "gear": {

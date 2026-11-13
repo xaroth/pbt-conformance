@@ -8,6 +8,16 @@
     "outputs": {
       "Armour": 5660,
       "BlockChance": 65,
+      "Calcs.MainHand.ChaosMax": 134571.248,
+      "Calcs.MainHand.ChaosMin": 87005.38,
+      "Calcs.MainHand.ColdMax": 6206.512,
+      "Calcs.MainHand.ColdMin": 3281.018,
+      "Calcs.MainHand.FireMax": 22070.048,
+      "Calcs.MainHand.FireMin": 13496.132,
+      "Calcs.MainHand.LightningMax": 22965.059,
+      "Calcs.MainHand.LightningMin": 2128.321,
+      "Calcs.MainHand.PhysicalMax": 0,
+      "Calcs.MainHand.PhysicalMin": 0,
       "ChaosResist": 75,
       "ChaosResistTotal": 75,
       "ColdResist": 75,
@@ -51,7 +61,126 @@
       "group": 7,
       "id": "Earthquake",
       "name": "Earthquake",
-      "attack": true
+      "level": 20,
+      "quality": 30,
+      "attack": true,
+      "supports": [
+        {
+          "id": "SupportEnduranceChargeOnMeleeStun",
+          "level": 21,
+          "quality": 27
+        },
+        {
+          "id": "SupportLifetap",
+          "level": 21,
+          "quality": 7
+        },
+        {
+          "id": "SupportMeleePhysicalDamage",
+          "level": 21,
+          "quality": 27
+        },
+        {
+          "id": "SupportPulverise",
+          "level": 21,
+          "quality": 27
+        },
+        {
+          "id": "SupportVoidShockwave",
+          "level": 4,
+          "quality": 37
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 132,
+    "outputs": {
+      "Armour": 2071,
+      "BlockChance": 65,
+      "Calcs.MainHand.ChaosMax": 578.2,
+      "Calcs.MainHand.ChaosMin": 373.8,
+      "Calcs.MainHand.ColdMax": 1399.45,
+      "Calcs.MainHand.ColdMin": 739.7,
+      "Calcs.MainHand.FireMax": 1599,
+      "Calcs.MainHand.FireMin": 859.3,
+      "Calcs.MainHand.LightningMax": 5177.25,
+      "Calcs.MainHand.LightningMin": 479.7,
+      "Calcs.MainHand.PhysicalMax": 11943.993326712,
+      "Calcs.MainHand.PhysicalMin": 7722.2748700716,
+      "ChaosResist": 75,
+      "ChaosResistTotal": 75,
+      "ColdResist": 62,
+      "ColdResistTotal": 62,
+      "CombinedDPS": 54783.159486908,
+      "CritChance": 43.711758,
+      "Dex": 203,
+      "EnergyShield": 59,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 20,
+      "EnergyShieldRegen": 0,
+      "EnergyShieldRegenRecovery": 0,
+      "Evasion": 5911,
+      "FireResist": 64,
+      "FireResistTotal": 64,
+      "HitChance": 87,
+      "Int": 44,
+      "Life": 2913,
+      "LifeLeechRate": 0,
+      "LifeRegen": 91.7,
+      "LifeRegenRecovery": 91.7,
+      "LifeUnreserved": 2913,
+      "LightningResist": 64,
+      "LightningResistTotal": 64,
+      "MainHand.AverageHit": 38885.99003703,
+      "Mana": 693,
+      "ManaRegen": 14.5,
+      "ManaUnreserved": 693,
+      "MissingChaosResist": 0,
+      "MissingColdResist": 13,
+      "MissingFireResist": 11,
+      "MissingLightningResist": 11,
+      "Speed": 1.275768,
+      "SpellBlockChance": 39,
+      "SpellSuppressionChance": 69,
+      "Str": 177,
+      "TotalDPS": 43160.266511678,
+      "TotalDotDPS": 666.26107784814
+    },
+    "mainSkill": {
+      "group": 7,
+      "id": "Earthquake",
+      "name": "Earthquake",
+      "level": 20,
+      "quality": 30,
+      "attack": true,
+      "supports": [
+        {
+          "id": "SupportEnduranceChargeOnMeleeStun",
+          "level": 21,
+          "quality": 27
+        },
+        {
+          "id": "SupportLifetap",
+          "level": 21,
+          "quality": 7
+        },
+        {
+          "id": "SupportMeleePhysicalDamage",
+          "level": 21,
+          "quality": 27
+        },
+        {
+          "id": "SupportPulverise",
+          "level": 21,
+          "quality": 27
+        },
+        {
+          "id": "SupportVoidShockwave",
+          "level": 4,
+          "quality": 37
+        }
+      ]
     }
   },
   "gear": {

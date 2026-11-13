@@ -9,6 +9,16 @@
       "Armour": 7877,
       "AverageHit": 2957945.078556,
       "BlockChance": 20,
+      "Calcs.ChaosMax": 0,
+      "Calcs.ChaosMin": 0,
+      "Calcs.ColdMax": 347475.492,
+      "Calcs.ColdMin": 229121.9892,
+      "Calcs.FireMax": 0,
+      "Calcs.FireMin": 0,
+      "Calcs.LightningMax": 0,
+      "Calcs.LightningMin": 0,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
       "ChaosResist": -14,
       "ChaosResistTotal": -14,
       "ColdResist": 75,
@@ -51,7 +61,124 @@
       "group": 7,
       "id": "FreezingPulse",
       "name": "Freezing Pulse",
-      "mine": true
+      "level": 26,
+      "quality": 30,
+      "mine": true,
+      "supports": [
+        {
+          "id": "SupportChargedMines",
+          "level": 20,
+          "quality": 30
+        },
+        {
+          "id": "SupportHighImpactMine",
+          "level": 21,
+          "quality": 20
+        },
+        {
+          "id": "SupportInspiration",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportMinefield",
+          "level": 21,
+          "quality": 30
+        },
+        {
+          "id": "SupportPowerChargeOnCritical",
+          "level": 20
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 135,
+    "outputs": {
+      "Armour": 705,
+      "AverageHit": 99598.34026104,
+      "BlockChance": 20,
+      "Calcs.ChaosMax": 0,
+      "Calcs.ChaosMin": 0,
+      "Calcs.ColdMax": 21276.54,
+      "Calcs.ColdMin": 14017.89,
+      "Calcs.FireMax": 0,
+      "Calcs.FireMin": 0,
+      "Calcs.LightningMax": 0,
+      "Calcs.LightningMin": 0,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
+      "ChaosResist": -14,
+      "ChaosResistTotal": -14,
+      "ColdResist": 75,
+      "ColdResistTotal": 99,
+      "CombinedDPS": 2562154.1288316,
+      "CritChance": 81.432519,
+      "Dex": 162,
+      "EnergyShield": 755,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 252,
+      "EnergyShieldRegen": 0,
+      "EnergyShieldRegenRecovery": 0,
+      "Evasion": 3920,
+      "FireResist": 37,
+      "FireResistTotal": 37,
+      "HitChance": 100,
+      "Int": 293,
+      "Life": 1775,
+      "LifeLeechRate": 0,
+      "LifeRegen": 0,
+      "LifeRegenRecovery": 0,
+      "LifeUnreserved": 1775,
+      "LightningResist": 57,
+      "LightningResistTotal": 57,
+      "Mana": 1401,
+      "ManaRegen": 32.4,
+      "ManaUnreserved": 1378,
+      "MissingChaosResist": 89,
+      "MissingColdResist": 0,
+      "MissingFireResist": 38,
+      "MissingLightningResist": 18,
+      "Speed": 23.152380952381,
+      "SpellBlockChance": 0,
+      "SpellSuppressionChance": 0,
+      "Str": 114,
+      "TotalDPS": 2305938.7159485,
+      "TotalDotDPS": 0
+    },
+    "mainSkill": {
+      "group": 7,
+      "id": "FreezingPulse",
+      "name": "Freezing Pulse",
+      "level": 26,
+      "quality": 30,
+      "mine": true,
+      "supports": [
+        {
+          "id": "SupportChargedMines",
+          "level": 20,
+          "quality": 30
+        },
+        {
+          "id": "SupportHighImpactMine",
+          "level": 21,
+          "quality": 20
+        },
+        {
+          "id": "SupportInspiration",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportMinefield",
+          "level": 21,
+          "quality": 30
+        },
+        {
+          "id": "SupportPowerChargeOnCritical",
+          "level": 20
+        }
+      ]
     }
   },
   "gear": {

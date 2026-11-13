@@ -9,6 +9,16 @@
       "Armour": 13922,
       "AverageHit": 189125.4332916,
       "BlockChance": 75,
+      "Calcs.ChaosMax": 16279.263,
+      "Calcs.ChaosMin": 10854.207,
+      "Calcs.ColdMax": 0,
+      "Calcs.ColdMin": 0,
+      "Calcs.FireMax": 209309.4432,
+      "Calcs.FireMin": 139551.984,
+      "Calcs.LightningMax": 0,
+      "Calcs.LightningMin": 0,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
       "ChaosResist": 26,
       "ChaosResistTotal": 26,
       "ColdResist": 90,
@@ -51,7 +61,120 @@
       "group": 5,
       "id": "FireTrap",
       "name": "Fire Trap",
-      "trap": true
+      "level": 26,
+      "trap": true,
+      "supports": [
+        {
+          "id": "SupportBurningDamage",
+          "level": 18
+        },
+        {
+          "id": "SupportConcentratedEffect",
+          "level": 18
+        },
+        {
+          "id": "SupportControlledDestruction",
+          "level": 18,
+          "quality": 20
+        },
+        {
+          "id": "SupportLifetap",
+          "level": 18,
+          "quality": 20
+        },
+        {
+          "id": "SupportTrapAndMineDamage",
+          "level": 18,
+          "quality": 30
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 134,
+    "outputs": {
+      "Armour": 5746,
+      "AverageHit": 38015.47747,
+      "BlockChance": 63,
+      "Calcs.ChaosMax": 3812.9,
+      "Calcs.ChaosMin": 2542.4,
+      "Calcs.ColdMax": 0,
+      "Calcs.ColdMin": 0,
+      "Calcs.FireMax": 41530.63,
+      "Calcs.FireMin": 27691.56,
+      "Calcs.LightningMax": 0,
+      "Calcs.LightningMin": 0,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
+      "ChaosResist": -9,
+      "ChaosResistTotal": -9,
+      "ColdResist": 87,
+      "ColdResistTotal": 195,
+      "CombinedDPS": 380525.66338848,
+      "CritChance": 1.2,
+      "Dex": 107,
+      "EnergyShield": 116,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 39,
+      "EnergyShieldRegen": 0,
+      "EnergyShieldRegenRecovery": 0,
+      "Evasion": 18,
+      "FireResist": 87,
+      "FireResistTotal": 331,
+      "HitChance": 100,
+      "Int": 158,
+      "Life": 9051,
+      "LifeLeechRate": 0,
+      "LifeRegen": 846.2,
+      "LifeRegenRecovery": 846.2,
+      "LifeUnreserved": 9051,
+      "LightningResist": 87,
+      "LightningResistTotal": 179,
+      "Mana": 1094,
+      "ManaRegen": 32.7,
+      "ManaUnreserved": 1094,
+      "MissingChaosResist": 84,
+      "MissingColdResist": 0,
+      "MissingFireResist": 0,
+      "MissingLightningResist": 0,
+      "Speed": 1.5,
+      "SpellBlockChance": 12,
+      "SpellSuppressionChance": 0,
+      "Str": 362,
+      "TotalDPS": 57023.216205,
+      "TotalDotDPS": 323502.44718348
+    },
+    "mainSkill": {
+      "group": 5,
+      "id": "FireTrap",
+      "name": "Fire Trap",
+      "level": 26,
+      "trap": true,
+      "supports": [
+        {
+          "id": "SupportBurningDamage",
+          "level": 18
+        },
+        {
+          "id": "SupportConcentratedEffect",
+          "level": 18
+        },
+        {
+          "id": "SupportControlledDestruction",
+          "level": 18,
+          "quality": 20
+        },
+        {
+          "id": "SupportLifetap",
+          "level": 18,
+          "quality": 20
+        },
+        {
+          "id": "SupportTrapAndMineDamage",
+          "level": 18,
+          "quality": 30
+        }
+      ]
     }
   },
   "gear": {

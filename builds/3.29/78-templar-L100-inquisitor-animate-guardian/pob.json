@@ -9,6 +9,16 @@
       "Armour": 41079,
       "AverageHit": 0,
       "BlockChance": 7,
+      "Calcs.ChaosMax": 0,
+      "Calcs.ChaosMin": 0,
+      "Calcs.ColdMax": 0,
+      "Calcs.ColdMin": 0,
+      "Calcs.FireMax": 0,
+      "Calcs.FireMin": 0,
+      "Calcs.LightningMax": 0,
+      "Calcs.LightningMin": 0,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
       "ChaosResist": 43,
       "ChaosResistTotal": 43,
       "ColdResist": 75,
@@ -55,10 +65,114 @@
       "group": 1,
       "id": "AnimateGuardian",
       "name": "Animate Guardian",
+      "level": 20,
+      "quality": 30,
       "minion": {
         "name": "Animated Guardian",
         "skill": "Default Attack"
-      }
+      },
+      "supports": [
+        {
+          "id": "SupportCompanionship",
+          "level": 3,
+          "quality": 30
+        },
+        {
+          "id": "SupportHypothermia",
+          "level": 18
+        },
+        {
+          "id": "SupportMeatShield",
+          "level": 20,
+          "quality": 30
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 133,
+    "outputs": {
+      "Armour": 1609,
+      "AverageHit": 0,
+      "BlockChance": 2,
+      "Calcs.ChaosMax": 0,
+      "Calcs.ChaosMin": 0,
+      "Calcs.ColdMax": 0,
+      "Calcs.ColdMin": 0,
+      "Calcs.FireMax": 0,
+      "Calcs.FireMin": 0,
+      "Calcs.LightningMax": 0,
+      "Calcs.LightningMin": 0,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
+      "ChaosResist": 43,
+      "ChaosResistTotal": 43,
+      "ColdResist": 47,
+      "ColdResistTotal": 47,
+      "CombinedDPS": 0,
+      "CritChance": 0,
+      "Dex": 96,
+      "EnergyShield": 1692,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 564,
+      "EnergyShieldRegen": 10.2,
+      "EnergyShieldRegenRecovery": 10.2,
+      "Evasion": 1614,
+      "FireResist": 41,
+      "FireResistTotal": 41,
+      "HitChance": 100,
+      "Int": 299,
+      "Life": 3266,
+      "LifeLeechRate": 0,
+      "LifeRegen": 86.5,
+      "LifeRegenRecovery": 86.5,
+      "LifeUnreserved": 3266,
+      "LightningResist": 44,
+      "LightningResistTotal": 44,
+      "Mana": 1214,
+      "ManaRegen": 26.4,
+      "ManaUnreserved": 1168,
+      "Minion.CombinedDPS": 414.89828975187,
+      "Minion.HitChance": 100,
+      "Minion.Life": 13607,
+      "Minion.MainHand.AverageHit": 239.9781883,
+      "MissingChaosResist": 32,
+      "MissingColdResist": 28,
+      "MissingFireResist": 34,
+      "MissingLightningResist": 31,
+      "Speed": 1.75,
+      "SpellBlockChance": 0,
+      "SpellSuppressionChance": 0,
+      "Str": 285,
+      "TotalDPS": 0,
+      "TotalDotDPS": 0
+    },
+    "mainSkill": {
+      "group": 1,
+      "id": "AnimateGuardian",
+      "name": "Animate Guardian",
+      "level": 20,
+      "quality": 30,
+      "minion": {
+        "name": "Animated Guardian",
+        "skill": "Default Attack"
+      },
+      "supports": [
+        {
+          "id": "SupportCompanionship",
+          "level": 3,
+          "quality": 30
+        },
+        {
+          "id": "SupportHypothermia",
+          "level": 18
+        },
+        {
+          "id": "SupportMeatShield",
+          "level": 20,
+          "quality": 30
+        }
+      ]
     }
   },
   "gear": {

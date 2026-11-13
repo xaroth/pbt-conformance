@@ -8,6 +8,16 @@
     "outputs": {
       "Armour": 10207,
       "BlockChance": 0,
+      "Calcs.MainHand.ChaosMax": 0,
+      "Calcs.MainHand.ChaosMin": 0,
+      "Calcs.MainHand.ColdMax": 0,
+      "Calcs.MainHand.ColdMin": 0,
+      "Calcs.MainHand.FireMax": 0,
+      "Calcs.MainHand.FireMin": 0,
+      "Calcs.MainHand.LightningMax": 0,
+      "Calcs.MainHand.LightningMin": 0,
+      "Calcs.MainHand.PhysicalMax": 366488.1400852,
+      "Calcs.MainHand.PhysicalMin": 75366.091241048,
       "ChaosResist": 75,
       "ChaosResistTotal": 141,
       "ColdResist": 81,
@@ -51,7 +61,126 @@
       "group": 1,
       "id": "GroundSlamAltX",
       "name": "Ground Slam of Earthshaking",
-      "attack": true
+      "level": 20,
+      "quality": 30,
+      "attack": true,
+      "supports": [
+        {
+          "id": "SupportBrutality",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportFistofWar",
+          "level": 20,
+          "quality": 30
+        },
+        {
+          "id": "SupportFortify",
+          "level": 20,
+          "quality": 30
+        },
+        {
+          "id": "SupportMeleePhysicalDamage",
+          "level": 20,
+          "quality": 30
+        },
+        {
+          "id": "SupportPulverise",
+          "level": 20,
+          "quality": 30
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 123,
+    "outputs": {
+      "Armour": 7655,
+      "BlockChance": 0,
+      "Calcs.MainHand.ChaosMax": 0,
+      "Calcs.MainHand.ChaosMin": 0,
+      "Calcs.MainHand.ColdMax": 0,
+      "Calcs.MainHand.ColdMin": 0,
+      "Calcs.MainHand.FireMax": 0,
+      "Calcs.MainHand.FireMin": 0,
+      "Calcs.MainHand.LightningMax": 0,
+      "Calcs.MainHand.LightningMin": 0,
+      "Calcs.MainHand.PhysicalMax": 282410.82266331,
+      "Calcs.MainHand.PhysicalMin": 58075.854005282,
+      "ChaosResist": 75,
+      "ChaosResistTotal": 106,
+      "ColdResist": 76,
+      "ColdResistTotal": 107,
+      "CombinedDPS": 597392.34358005,
+      "CritChance": 0,
+      "Dex": 158,
+      "EnergyShield": 42,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 14,
+      "EnergyShieldRegen": 0,
+      "EnergyShieldRegenRecovery": 0,
+      "Evasion": 0,
+      "FireResist": 77,
+      "FireResistTotal": 122,
+      "HitChance": 100,
+      "Int": 69,
+      "Life": 5147,
+      "LifeLeechRate": 1511.488608,
+      "LifeRegen": 133.8,
+      "LifeRegenRecovery": 133.8,
+      "LifeUnreserved": 5147,
+      "LightningResist": 76,
+      "LightningResistTotal": 116,
+      "MainHand.AverageHit": 170243.3383343,
+      "Mana": 608,
+      "ManaRegen": 10.6,
+      "ManaUnreserved": 608,
+      "MissingChaosResist": 0,
+      "MissingColdResist": 0,
+      "MissingFireResist": 0,
+      "MissingLightningResist": 0,
+      "Speed": 1.3664,
+      "SpellBlockChance": 0,
+      "SpellSuppressionChance": 0,
+      "Str": 447,
+      "TotalDPS": 232620.49749998,
+      "TotalDotDPS": 245293.37736406
+    },
+    "mainSkill": {
+      "group": 1,
+      "id": "GroundSlamAltX",
+      "name": "Ground Slam of Earthshaking",
+      "level": 20,
+      "quality": 30,
+      "attack": true,
+      "supports": [
+        {
+          "id": "SupportBrutality",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportFistofWar",
+          "level": 20,
+          "quality": 30
+        },
+        {
+          "id": "SupportFortify",
+          "level": 20,
+          "quality": 30
+        },
+        {
+          "id": "SupportMeleePhysicalDamage",
+          "level": 20,
+          "quality": 30
+        },
+        {
+          "id": "SupportPulverise",
+          "level": 20,
+          "quality": 30
+        }
+      ]
     }
   },
   "gear": {

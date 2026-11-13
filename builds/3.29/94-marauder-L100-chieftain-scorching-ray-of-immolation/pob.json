@@ -9,6 +9,16 @@
       "Armour": 22054,
       "AverageHit": 0,
       "BlockChance": 75,
+      "Calcs.ChaosMax": 0,
+      "Calcs.ChaosMin": 0,
+      "Calcs.ColdMax": 0,
+      "Calcs.ColdMin": 0,
+      "Calcs.FireMax": 0,
+      "Calcs.FireMin": 0,
+      "Calcs.LightningMax": 0,
+      "Calcs.LightningMin": 0,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
       "ChaosResist": 75,
       "ChaosResistTotal": 80,
       "ColdResist": 90,
@@ -53,7 +63,116 @@
       "group": 5,
       "id": "ScorchingRayAltX",
       "name": "Scorching Ray of Immolation",
-      "totem": true
+      "level": 21,
+      "quality": 30,
+      "totem": true,
+      "supports": [
+        {
+          "id": "SupportBurningDamage",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportLifetap",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportMultipleTotems",
+          "level": 19,
+          "quality": 28
+        },
+        {
+          "id": "SupportSpellTotem",
+          "level": 21
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 125,
+    "outputs": {
+      "Armour": 13576,
+      "AverageHit": 0,
+      "BlockChance": 75,
+      "Calcs.ChaosMax": 0,
+      "Calcs.ChaosMin": 0,
+      "Calcs.ColdMax": 0,
+      "Calcs.ColdMin": 0,
+      "Calcs.FireMax": 0,
+      "Calcs.FireMin": 0,
+      "Calcs.LightningMax": 0,
+      "Calcs.LightningMin": 0,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
+      "ChaosResist": 75,
+      "ChaosResistTotal": 80,
+      "ColdResist": 85,
+      "ColdResistTotal": 159,
+      "CombinedDPS": 15211.489148814,
+      "CritChance": 0,
+      "Dex": 130,
+      "EnergyShield": 45,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 15,
+      "EnergyShieldRegen": 0,
+      "EnergyShieldRegenRecovery": 0,
+      "Evasion": 420,
+      "FireResist": 85,
+      "FireResistTotal": 162,
+      "HitChance": 100,
+      "Int": 189,
+      "Life": 5845,
+      "LifeLeechRate": 0,
+      "LifeRegen": 817.8,
+      "LifeRegenRecovery": 817.8,
+      "LifeUnreserved": 5845,
+      "LightningResist": 85,
+      "LightningResistTotal": 167,
+      "Mana": 850,
+      "ManaRegen": 14.9,
+      "ManaUnreserved": 850,
+      "MissingChaosResist": 0,
+      "MissingColdResist": 0,
+      "MissingFireResist": 0,
+      "MissingLightningResist": 0,
+      "Speed": 4.1111111111111,
+      "SpellBlockChance": 15,
+      "SpellSuppressionChance": 5,
+      "Str": 332,
+      "TotalDPS": 0,
+      "TotalDotDPS": 15211.489148814,
+      "TotemLife": 1825,
+      "TotemsSummoned": 3
+    },
+    "mainSkill": {
+      "group": 5,
+      "id": "ScorchingRayAltX",
+      "name": "Scorching Ray of Immolation",
+      "level": 21,
+      "quality": 30,
+      "totem": true,
+      "supports": [
+        {
+          "id": "SupportBurningDamage",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportLifetap",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportMultipleTotems",
+          "level": 19,
+          "quality": 28
+        },
+        {
+          "id": "SupportSpellTotem",
+          "level": 21
+        }
+      ]
     }
   },
   "gear": {

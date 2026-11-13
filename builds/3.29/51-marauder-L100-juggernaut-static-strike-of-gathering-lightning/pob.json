@@ -8,6 +8,16 @@
     "outputs": {
       "Armour": 14794,
       "BlockChance": 0,
+      "Calcs.MainHand.ChaosMax": 3137641.3678566,
+      "Calcs.MainHand.ChaosMin": 7695.113580024,
+      "Calcs.MainHand.ColdMax": 0,
+      "Calcs.MainHand.ColdMin": 0,
+      "Calcs.MainHand.FireMax": 0,
+      "Calcs.MainHand.FireMin": 0,
+      "Calcs.MainHand.LightningMax": 0,
+      "Calcs.MainHand.LightningMin": 0,
+      "Calcs.MainHand.PhysicalMax": 0,
+      "Calcs.MainHand.PhysicalMin": 0,
       "ChaosResist": 75,
       "ChaosResistTotal": 76,
       "ColdResist": 82,
@@ -51,7 +61,132 @@
       "group": 4,
       "id": "StaticStrikeAltX",
       "name": "Static Strike of Gathering Lightning",
-      "attack": true
+      "level": 20,
+      "quality": 30,
+      "attack": true,
+      "supports": [
+        {
+          "id": "SupportEnduranceChargeOnMeleeStun",
+          "level": 10
+        },
+        {
+          "id": "SupportFortify",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportGreaterChain",
+          "level": 3,
+          "quality": 23
+        },
+        {
+          "id": "SupportLifetap",
+          "level": 20
+        },
+        {
+          "id": "SupportRuthless",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportVolatility",
+          "level": 20,
+          "quality": 30
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 132,
+    "outputs": {
+      "Armour": 14794,
+      "BlockChance": 0,
+      "Calcs.MainHand.ChaosMax": 492940.032,
+      "Calcs.MainHand.ChaosMin": 1209.243516,
+      "Calcs.MainHand.ColdMax": 0,
+      "Calcs.MainHand.ColdMin": 0,
+      "Calcs.MainHand.FireMax": 0,
+      "Calcs.MainHand.FireMin": 0,
+      "Calcs.MainHand.LightningMax": 0,
+      "Calcs.MainHand.LightningMin": 0,
+      "Calcs.MainHand.PhysicalMax": 0,
+      "Calcs.MainHand.PhysicalMin": 0,
+      "ChaosResist": 75,
+      "ChaosResistTotal": 76,
+      "ColdResist": 44,
+      "ColdResistTotal": 44,
+      "CombinedDPS": 1356439.7612914,
+      "CritChance": 0,
+      "Dex": 234,
+      "EnergyShield": 1206,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 402,
+      "EnergyShieldRegen": 0,
+      "EnergyShieldRegenRecovery": 0,
+      "Evasion": 30,
+      "FireResist": 35,
+      "FireResistTotal": 35,
+      "HitChance": 100,
+      "Int": 212,
+      "Life": 8145,
+      "LifeLeechRate": 1629,
+      "LifeRegen": 370.6,
+      "LifeRegenRecovery": 370.6,
+      "LifeUnreserved": 8145,
+      "LightningResist": 33,
+      "LightningResistTotal": 33,
+      "MainHand.AverageHit": 247074.637758,
+      "Mana": 795,
+      "ManaRegen": 13.9,
+      "ManaUnreserved": 795,
+      "MissingChaosResist": 0,
+      "MissingColdResist": 33,
+      "MissingFireResist": 44,
+      "MissingLightningResist": 44,
+      "Speed": 5.49,
+      "SpellBlockChance": 0,
+      "SpellSuppressionChance": 0,
+      "Str": 1964,
+      "TotalDPS": 1356439.7612914,
+      "TotalDotDPS": 0
+    },
+    "mainSkill": {
+      "group": 4,
+      "id": "StaticStrikeAltX",
+      "name": "Static Strike of Gathering Lightning",
+      "level": 20,
+      "quality": 30,
+      "attack": true,
+      "supports": [
+        {
+          "id": "SupportEnduranceChargeOnMeleeStun",
+          "level": 10
+        },
+        {
+          "id": "SupportFortify",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportGreaterChain",
+          "level": 3,
+          "quality": 23
+        },
+        {
+          "id": "SupportLifetap",
+          "level": 20
+        },
+        {
+          "id": "SupportRuthless",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportVolatility",
+          "level": 20,
+          "quality": 30
+        }
+      ]
     }
   },
   "gear": {

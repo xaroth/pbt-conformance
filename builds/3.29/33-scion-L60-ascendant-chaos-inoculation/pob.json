@@ -8,6 +8,16 @@
     "outputs": {
       "Armour": 12923,
       "BlockChance": 24,
+      "Calcs.MainHand.ChaosMax": 0,
+      "Calcs.MainHand.ChaosMin": 0,
+      "Calcs.MainHand.ColdMax": 0,
+      "Calcs.MainHand.ColdMin": 0,
+      "Calcs.MainHand.FireMax": 0,
+      "Calcs.MainHand.FireMin": 0,
+      "Calcs.MainHand.LightningMax": 5417.28,
+      "Calcs.MainHand.LightningMin": 539.44,
+      "Calcs.MainHand.PhysicalMax": 110.55,
+      "Calcs.MainHand.PhysicalMin": 53.625,
       "ChaosResist": -42,
       "ChaosResistTotal": -42,
       "ColdResist": 75,
@@ -51,7 +61,108 @@
       "group": 1,
       "id": "Smite",
       "name": "Smite",
-      "attack": true
+      "level": 17,
+      "quality": 10,
+      "attack": true,
+      "supports": [
+        {
+          "id": "SupportAddedLightningDamage",
+          "level": 16
+        },
+        {
+          "id": "SupportElementalDamageWithAttacks",
+          "level": 15
+        },
+        {
+          "id": "SupportLightningPenetration",
+          "level": 15
+        },
+        {
+          "id": "SupportMultistrike",
+          "level": 12
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 86,
+    "outputs": {
+      "Armour": 1454,
+      "BlockChance": 24,
+      "Calcs.MainHand.ChaosMax": 0,
+      "Calcs.MainHand.ChaosMin": 0,
+      "Calcs.MainHand.ColdMax": 0,
+      "Calcs.MainHand.ColdMin": 0,
+      "Calcs.MainHand.FireMax": 0,
+      "Calcs.MainHand.FireMin": 0,
+      "Calcs.MainHand.LightningMax": 3712.72,
+      "Calcs.MainHand.LightningMin": 431.2,
+      "Calcs.MainHand.PhysicalMax": 110.55,
+      "Calcs.MainHand.PhysicalMin": 53.625,
+      "ChaosResist": -42,
+      "ChaosResistTotal": -42,
+      "ColdResist": 75,
+      "ColdResistTotal": 136,
+      "CombinedDPS": 3473.2536106868,
+      "CritChance": 0,
+      "Dex": 299,
+      "EnergyShield": 305,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 102,
+      "EnergyShieldRegen": 0,
+      "EnergyShieldRegenRecovery": 0,
+      "Evasion": 0,
+      "FireResist": 75,
+      "FireResistTotal": 133,
+      "HitChance": 71,
+      "Int": 386,
+      "Life": 1588,
+      "LifeLeechRate": 0,
+      "LifeRegen": 0,
+      "LifeRegenRecovery": 0,
+      "LifeUnreserved": 1588,
+      "LightningResist": 75,
+      "LightningResistTotal": 99,
+      "MainHand.AverageHit": 2154.0475,
+      "Mana": 607,
+      "ManaRegen": 10.6,
+      "ManaUnreserved": 607,
+      "MissingChaosResist": 117,
+      "MissingColdResist": 0,
+      "MissingFireResist": 0,
+      "MissingLightningResist": 0,
+      "Speed": 2.27103,
+      "SpellBlockChance": 0,
+      "SpellSuppressionChance": 18,
+      "Str": 226,
+      "TotalDPS": 3473.2536106868,
+      "TotalDotDPS": 0
+    },
+    "mainSkill": {
+      "group": 1,
+      "id": "Smite",
+      "name": "Smite",
+      "level": 17,
+      "quality": 10,
+      "attack": true,
+      "supports": [
+        {
+          "id": "SupportAddedLightningDamage",
+          "level": 16
+        },
+        {
+          "id": "SupportElementalDamageWithAttacks",
+          "level": 15
+        },
+        {
+          "id": "SupportLightningPenetration",
+          "level": 15
+        },
+        {
+          "id": "SupportMultistrike",
+          "level": 12
+        }
+      ]
     }
   },
   "gear": {

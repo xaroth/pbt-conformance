@@ -66,6 +66,9 @@ type MainSkill struct {
 	// ID and Name are the skill's granted effect.
 	ID   string `json:"id"`
 	Name string `json:"name"`
+	// Level and Quality are the skill's, as PoB calculates it.
+	Level   int `json:"level,omitempty"`
+	Quality int `json:"quality,omitempty"`
 	// Attack is set for an attack, as opposed to a spell or another skill.
 	Attack bool `json:"attack,omitempty"`
 	// Totem, Trap and Mine say how the skill is used.
@@ -74,6 +77,18 @@ type MainSkill struct {
 	Mine  bool `json:"mine,omitempty"`
 	// Minion is the minion the skill summons, if any.
 	Minion *Minion `json:"minion,omitempty"`
+	// Supports are the support effects PoB applied to the skill, sorted by id, level and quality:
+	// PoB's own order varies between runs.
+	Supports []Support `json:"supports,omitempty"`
+}
+
+// Support is a support effect applied to the main skill: a support gem's, or one an item or
+// the tree grants.
+type Support struct {
+	// ID is the support's granted effect.
+	ID      string `json:"id"`
+	Level   int    `json:"level"`
+	Quality int    `json:"quality,omitempty"`
 }
 
 // Minion is the main skill's minion and the minion's own main skill.
@@ -95,7 +110,7 @@ func (ms *MainSkill) groups() []Group {
 	if ms == nil {
 		return g
 	}
-	g = append(g, GroupSkill)
+	g = append(g, GroupSkill, GroupHitTypes)
 	if ms.Minion != nil {
 		g = append(g, GroupMinion)
 	}

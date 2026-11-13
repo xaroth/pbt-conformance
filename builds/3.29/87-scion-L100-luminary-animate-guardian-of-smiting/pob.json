@@ -9,6 +9,16 @@
       "Armour": 3420,
       "AverageHit": 0,
       "BlockChance": 21,
+      "Calcs.ChaosMax": 0,
+      "Calcs.ChaosMin": 0,
+      "Calcs.ColdMax": 0,
+      "Calcs.ColdMin": 0,
+      "Calcs.FireMax": 0,
+      "Calcs.FireMin": 0,
+      "Calcs.LightningMax": 0,
+      "Calcs.LightningMin": 0,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
       "ChaosResist": 38,
       "ChaosResistTotal": 38,
       "ColdResist": 78,
@@ -54,10 +64,145 @@
       "group": 2,
       "id": "AnimateGuardianAltX",
       "name": "Animate Guardian of Smiting",
+      "level": 28,
+      "quality": 30,
       "minion": {
         "name": "Animated Guardian",
         "skill": "Smite"
-      }
+      },
+      "supports": [
+        {
+          "id": "SupportElementalArmy",
+          "level": 20
+        },
+        {
+          "id": "SupportElementalDamageWithAttacks",
+          "level": 20
+        },
+        {
+          "id": "SupportEmpower",
+          "level": 5
+        },
+        {
+          "id": "SupportFirePenetration",
+          "level": 20
+        },
+        {
+          "id": "SupportGreaterMultistrike",
+          "level": 4,
+          "quality": 30
+        },
+        {
+          "id": "SupportMinionDamage",
+          "level": 24,
+          "quality": 30
+        },
+        {
+          "id": "SupportMinionSpeed",
+          "level": 20
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 134,
+    "outputs": {
+      "Armour": 3420,
+      "AverageHit": 0,
+      "BlockChance": 21,
+      "Calcs.ChaosMax": 0,
+      "Calcs.ChaosMin": 0,
+      "Calcs.ColdMax": 0,
+      "Calcs.ColdMin": 0,
+      "Calcs.FireMax": 0,
+      "Calcs.FireMin": 0,
+      "Calcs.LightningMax": 0,
+      "Calcs.LightningMin": 0,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
+      "ChaosResist": 38,
+      "ChaosResistTotal": 38,
+      "ColdResist": 78,
+      "ColdResistTotal": 160,
+      "CombinedDPS": 0,
+      "CritChance": 0,
+      "Dex": 160,
+      "EnergyShield": 0,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 0,
+      "EnergyShieldRegen": 0,
+      "EnergyShieldRegenRecovery": 0,
+      "Evasion": 323,
+      "FireResist": 90,
+      "FireResistTotal": 168,
+      "HitChance": 100,
+      "Int": 181,
+      "Life": 17022,
+      "LifeLeechRate": 0,
+      "LifeRegen": 446,
+      "LifeRegenRecovery": 446,
+      "LifeUnreserved": 17022,
+      "LightningResist": 78,
+      "LightningResistTotal": 142,
+      "Mana": 0,
+      "ManaRegen": 0,
+      "Minion.CombinedDPS": 3119456.6783266,
+      "Minion.HitChance": 100,
+      "Minion.Life": 14319,
+      "Minion.MainHand.AverageHit": 367732.921675,
+      "MissingChaosResist": 40,
+      "MissingColdResist": 0,
+      "MissingFireResist": 0,
+      "MissingLightningResist": 0,
+      "Speed": 1.9963333333333,
+      "SpellBlockChance": 0,
+      "SpellSuppressionChance": 0,
+      "Str": 326,
+      "TotalDPS": 0,
+      "TotalDotDPS": 0
+    },
+    "mainSkill": {
+      "group": 2,
+      "id": "AnimateGuardianAltX",
+      "name": "Animate Guardian of Smiting",
+      "level": 28,
+      "quality": 30,
+      "minion": {
+        "name": "Animated Guardian",
+        "skill": "Smite"
+      },
+      "supports": [
+        {
+          "id": "SupportElementalArmy",
+          "level": 20
+        },
+        {
+          "id": "SupportElementalDamageWithAttacks",
+          "level": 20
+        },
+        {
+          "id": "SupportEmpower",
+          "level": 5
+        },
+        {
+          "id": "SupportFirePenetration",
+          "level": 20
+        },
+        {
+          "id": "SupportGreaterMultistrike",
+          "level": 4,
+          "quality": 30
+        },
+        {
+          "id": "SupportMinionDamage",
+          "level": 24,
+          "quality": 30
+        },
+        {
+          "id": "SupportMinionSpeed",
+          "level": 20
+        }
+      ]
     }
   },
   "gear": {

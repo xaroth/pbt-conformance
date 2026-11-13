@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathOfBuilding>
+	<Build level="60" targetVersion="3_0" className="Ranger" ascendClassName="Deadeye" bandit="None" pantheonMajorGod="None" pantheonMinorGod="None" mainSocketGroup="1" viewMode="TREE" characterLevelAutoMode="false"/>
+	<Tree activeSpec="1">
+		<Spec treeVersion="3_28" classId="2" ascendClassId="2" secondaryAscendClassId="0" nodes="1427,1461,2185,4011,5237,6427,6538,6654,6797,6799,6913,8001,8458,8938,9206,9355,9469,10840,11678,12412,12801,12948,13375,13935,14804,18182,18770,19858,20807,20953,22266,23912,24848,28658,28995,29454,30679,30969,31039,32477,32514,32555,35255,36221,36281,36287,38149,38662,38995,39665,41119,42964,44306,44316,45035,45202,45313,45593,46277,49391,49459,49900,49978,50338,51881,53114,53615,55750,56295,59220,59370,59606,59837,62744,63194,63251,63795,64265,64878,65224,65427,65502" masteryEffects="{6427,56951},{31039,9986},{44316,34242},{49391,64511},{53615,61097}">
+			<Sockets>
+			</Sockets>
+		</Spec>
+	</Tree>
+	<Items activeItemSet="1" useSecondWeaponSet="false">
+		<Item id="1">
+Rarity: RARE
+Gale Song
+Thicket Bow
+Item Level: 62
+Quality: 12
+Sockets: G-G-G-G-B
+LevelReq: 56
+Implicits: 0
+Adds 4 to 89 Lightning Damage
+Adds 13 to 25 Cold Damage
+15% increased Attack Speed
++28 to Dexterity
+26% increased Critical Strike Chance
+		</Item>
+		<Item id="2">
+Rarity: RARE
+Storm Fletch
+Spike-Point Arrow Quiver
+Item Level: 60
+Quality: 0
+LevelReq: 40
+Implicits: 1
+25% increased Critical Strike Chance with Bows
++71 to maximum Life
++31% to Cold Resistance
++29% to Lightning Resistance
+Adds 2 to 40 Lightning Damage to Attacks
+20% increased Elemental Damage with Attack Skills
+		</Item>
+		<Item id="3">
+Rarity: RARE
+Dread Visage
+Regicide Mask
+Item Level: 60
+Quality: 0
+Sockets: G-B-G-B
+LevelReq: 52
+Implicits: 0
++38 to Evasion Rating
++22 to maximum Energy Shield
++68 to maximum Life
++33% to Fire Resistance
++24 to Intelligence
+		</Item>
+		<Item id="4">
+Rarity: RARE
+Corpse Shell
+Crimson Raiment
+Item Level: 60
+Quality: 10
+Sockets: G-G-G-G-B-R
+LevelReq: 48
+Implicits: 0
+54% increased Evasion and Energy Shield
++38 to maximum Energy Shield
++32% to Cold Resistance
++27% to Lightning Resistance
++21 to Intelligence
+		</Item>
+		<Item id="5">
+Rarity: RARE
+Mind Clutches
+Carnal Mitts
+Item Level: 58
+Quality: 0
+Sockets: G-B-G-R
+LevelReq: 50
+Implicits: 0
++21 to Evasion Rating
++56 to maximum Life
++30% to Fire Resistance
+Adds 2 to 30 Lightning Damage to Attacks
+9% increased Attack Speed
+		</Item>
+		<Item id="6">
+Rarity: RARE
+Gale Track
+Carnal Boots
+Item Level: 60
+Quality: 0
+Sockets: B-G-G-B
+LevelReq: 55
+Implicits: 0
+25% increased Movement Speed
++64 to maximum Life
++34% to Lightning Resistance
++27% to Cold Resistance
++22 to Dexterity
+		</Item>
+		<Item id="7">
+Rarity: RARE
+Eagle Beads
+Onyx Amulet
+Item Level: 60
+LevelReq: 48
+Implicits: 1
++13 to all Attributes
++62 to maximum Life
++26 to Intelligence
++24% to Fire Resistance
++25% to Global Critical Strike Multiplier
+		</Item>
+		<Item id="8">
+Rarity: RARE
+Storm Spiral
+Two-Stone Ring
+Item Level: 60
+LevelReq: 44
+Implicits: 1
++14% to Fire and Lightning Resistances
++55 to maximum Life
++31% to Cold Resistance
+Adds 2 to 30 Lightning Damage to Attacks
++24 to Intelligence
+		</Item>
+		<Item id="9">
+Rarity: RARE
+Doom Coil
+Amethyst Ring
+Item Level: 58
+LevelReq: 42
+Implicits: 1
++19% to Chaos Resistance
++48 to maximum Life
++29% to Fire Resistance
++27 to Dexterity
+Adds 3 to 7 Cold Damage to Attacks
+		</Item>
+		<Item id="10">
+Rarity: RARE
+Brood Clasp
+Leather Belt
+Item Level: 60
+LevelReq: 50
+Implicits: 1
++34 to maximum Life
++73 to maximum Life
++29% to Lightning Resistance
++33 to Strength
+24% increased Elemental Damage with Attack Skills
+		</Item>
+		<ItemSet id="1" useSecondWeaponSet="false">
+			<Slot name="Weapon 1" itemId="1"/>
+			<Slot name="Weapon 2" itemId="2"/>
+			<Slot name="Helmet" itemId="3"/>
+			<Slot name="Body Armour" itemId="4"/>
+			<Slot name="Gloves" itemId="5"/>
+			<Slot name="Boots" itemId="6"/>
+			<Slot name="Amulet" itemId="7"/>
+			<Slot name="Ring 1" itemId="8"/>
+			<Slot name="Ring 2" itemId="9"/>
+			<Slot name="Belt" itemId="10"/>
+		</ItemSet>
+	</Items>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="0" sortGemsByDPS="true" showSupportGemTypes="ALL" showLegacyGems="false">
+		<SkillSet id="1">
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="1" mainActiveSkillCalcs="1" slot="Body Armour">
+				<Gem nameSpec="Lightning Arrow" level="15" quality="10" enabled="true" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Mirage Archer" level="16" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Added Lightning Damage" level="16" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Elemental Damage with Attacks" level="15" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Trinity" level="15" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Inspiration" level="15" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true" count="1"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="1" mainActiveSkillCalcs="1" slot="Helmet">
+				<Gem nameSpec="Wrath" level="15" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Precision" level="16" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Herald of Ice" level="15" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="1" mainActiveSkillCalcs="1" slot="Weapon 1">
+				<Gem nameSpec="Tornado" level="14" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Cast On Critical Strike" level="12" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Sniper&#x27;s Mark" level="16" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Mark On Hit" level="12" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Power Charge On Critical" level="15" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="1" mainActiveSkillCalcs="1" slot="Gloves">
+				<Gem nameSpec="Frenzy" level="15" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Faster Attacks" level="16" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Frostblink" level="16" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Blink Arrow" level="16" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="1" mainActiveSkillCalcs="1" slot="Boots">
+				<Gem nameSpec="Flame Dash" level="16" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+			</Skill>
+		</SkillSet>
+	</Skills>
+	<Config activeConfigSet="1">
+		<ConfigSet id="1" title="Default"/>
+	</Config>
+</PathOfBuilding>

@@ -9,6 +9,16 @@
       "Armour": 2999,
       "AverageHit": 14654691.957975,
       "BlockChance": 0,
+      "Calcs.ChaosMax": 0,
+      "Calcs.ChaosMin": 0,
+      "Calcs.ColdMax": 1040919.6864,
+      "Calcs.ColdMin": 693979.7082,
+      "Calcs.FireMax": 495531.5466,
+      "Calcs.FireMin": 330371.526,
+      "Calcs.LightningMax": 1909485.1818,
+      "Calcs.LightningMin": 1273051.1556,
+      "Calcs.PhysicalMax": 435393.55569763,
+      "Calcs.PhysicalMin": 290275.88635657,
       "ChaosResist": 75,
       "ChaosResistTotal": 135,
       "ColdResist": 66,
@@ -51,7 +61,122 @@
     "mainSkill": {
       "group": 7,
       "id": "PenanceBrand",
-      "name": "Penance Brand"
+      "name": "Penance Brand",
+      "level": 28,
+      "quality": 30,
+      "supports": [
+        {
+          "id": "SupportArcaneSurge",
+          "level": 19,
+          "quality": 30
+        },
+        {
+          "id": "SupportConcentratedEffect",
+          "level": 18
+        },
+        {
+          "id": "SupportHypothermia",
+          "level": 25
+        },
+        {
+          "id": "SupportInspiration",
+          "level": 19,
+          "quality": 30
+        },
+        {
+          "id": "SupportSwiftbrand",
+          "level": 19,
+          "quality": 30
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 134,
+    "outputs": {
+      "Armour": 1750,
+      "AverageHit": 1490932.2500923,
+      "BlockChance": 0,
+      "Calcs.ChaosMax": 0,
+      "Calcs.ChaosMin": 0,
+      "Calcs.ColdMax": 0,
+      "Calcs.ColdMin": 0,
+      "Calcs.FireMax": 0,
+      "Calcs.FireMin": 0,
+      "Calcs.LightningMax": 434061.936,
+      "Calcs.LightningMin": 289388.484,
+      "Calcs.PhysicalMax": 79692.728473525,
+      "Calcs.PhysicalMin": 53130.826482173,
+      "ChaosResist": 64,
+      "ChaosResistTotal": 64,
+      "ColdResist": 19,
+      "ColdResistTotal": 19,
+      "CombinedDPS": 5367356.1003322,
+      "CritChance": 41.22,
+      "Dex": 87,
+      "EnergyShield": 1843,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 614,
+      "EnergyShieldRegen": 0,
+      "EnergyShieldRegenRecovery": 0,
+      "Evasion": 18,
+      "FireResist": -2,
+      "FireResistTotal": -2,
+      "HitChance": 100,
+      "HitSpeed": 1.62,
+      "Int": 268,
+      "Life": 4264,
+      "LifeLeechRate": 0,
+      "LifeRegen": 89.5,
+      "LifeRegenRecovery": 89.5,
+      "LifeUnreserved": 4264,
+      "LightningResist": 0,
+      "LightningResistTotal": 0,
+      "Mana": 962,
+      "ManaRegen": 22.6,
+      "ManaUnreserved": 962,
+      "MissingChaosResist": 11,
+      "MissingColdResist": 56,
+      "MissingFireResist": 77,
+      "MissingLightningResist": 75,
+      "Speed": 2.88,
+      "SpellBlockChance": 0,
+      "SpellSuppressionChance": 0,
+      "Str": 349,
+      "TotalDPS": 4830620.490299,
+      "TotalDotDPS": 0
+    },
+    "mainSkill": {
+      "group": 7,
+      "id": "PenanceBrand",
+      "name": "Penance Brand",
+      "level": 28,
+      "quality": 30,
+      "supports": [
+        {
+          "id": "SupportArcaneSurge",
+          "level": 19,
+          "quality": 30
+        },
+        {
+          "id": "SupportConcentratedEffect",
+          "level": 18
+        },
+        {
+          "id": "SupportHypothermia",
+          "level": 25
+        },
+        {
+          "id": "SupportInspiration",
+          "level": 19,
+          "quality": 30
+        },
+        {
+          "id": "SupportSwiftbrand",
+          "level": 19,
+          "quality": 30
+        }
+      ]
     }
   },
   "gear": {

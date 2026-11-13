@@ -8,6 +8,16 @@
     "outputs": {
       "Armour": 19852,
       "BlockChance": 70,
+      "Calcs.MainHand.ChaosMax": 0,
+      "Calcs.MainHand.ChaosMin": 0,
+      "Calcs.MainHand.ColdMax": 0,
+      "Calcs.MainHand.ColdMin": 0,
+      "Calcs.MainHand.FireMax": 0,
+      "Calcs.MainHand.FireMin": 0,
+      "Calcs.MainHand.LightningMax": 0,
+      "Calcs.MainHand.LightningMin": 0,
+      "Calcs.MainHand.PhysicalMax": 926235.772,
+      "Calcs.MainHand.PhysicalMin": 465093.2,
       "ChaosResist": 75,
       "ChaosResistTotal": 92,
       "ColdResist": 75,
@@ -51,7 +61,126 @@
       "group": 6,
       "id": "CycloneAltX",
       "name": "Cyclone of Tumult",
-      "attack": true
+      "level": 20,
+      "quality": 33,
+      "attack": true,
+      "supports": [
+        {
+          "id": "SupportBrutality",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportImpale",
+          "level": 21,
+          "quality": 30
+        },
+        {
+          "id": "SupportInfusedChannelling",
+          "level": 20,
+          "quality": 30
+        },
+        {
+          "id": "SupportMeleePhysicalDamage",
+          "level": 20,
+          "quality": 15
+        },
+        {
+          "id": "SupportPulverise",
+          "level": 20,
+          "quality": 20
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 134,
+    "outputs": {
+      "Armour": 8523,
+      "BlockChance": 70,
+      "Calcs.MainHand.ChaosMax": 0,
+      "Calcs.MainHand.ChaosMin": 0,
+      "Calcs.MainHand.ColdMax": 0,
+      "Calcs.MainHand.ColdMin": 0,
+      "Calcs.MainHand.FireMax": 0,
+      "Calcs.MainHand.FireMin": 0,
+      "Calcs.MainHand.LightningMax": 0,
+      "Calcs.MainHand.LightningMin": 0,
+      "Calcs.MainHand.PhysicalMax": 144310.77907136,
+      "Calcs.MainHand.PhysicalMin": 69968.862580052,
+      "ChaosResist": 24,
+      "ChaosResistTotal": 24,
+      "ColdResist": -1,
+      "ColdResistTotal": -1,
+      "CombinedDPS": 3617149.1256889,
+      "CritChance": 25.1685,
+      "Dex": 219,
+      "EnergyShield": 402,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 134,
+      "EnergyShieldRegen": 0,
+      "EnergyShieldRegenRecovery": 0,
+      "Evasion": 0,
+      "FireResist": 20,
+      "FireResistTotal": 20,
+      "HitChance": 90,
+      "Int": 80,
+      "Life": 2989,
+      "LifeLeechRate": 597.8,
+      "LifeRegen": 77.7,
+      "LifeRegenRecovery": 77.7,
+      "LifeUnreserved": 2989,
+      "LightningResist": -40,
+      "LightningResistTotal": -40,
+      "MainHand.AverageHit": 229012.53127082,
+      "Mana": 714,
+      "ManaRegen": 12.5,
+      "ManaUnreserved": 714,
+      "MissingChaosResist": 51,
+      "MissingColdResist": 76,
+      "MissingFireResist": 55,
+      "MissingLightningResist": 115,
+      "Speed": 9.0936,
+      "SpellBlockChance": 68,
+      "SpellSuppressionChance": 0,
+      "Str": 293,
+      "TotalDPS": 1874293.5189279,
+      "TotalDotDPS": 5816.8830684791
+    },
+    "mainSkill": {
+      "group": 6,
+      "id": "CycloneAltX",
+      "name": "Cyclone of Tumult",
+      "level": 20,
+      "quality": 33,
+      "attack": true,
+      "supports": [
+        {
+          "id": "SupportBrutality",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportImpale",
+          "level": 21,
+          "quality": 30
+        },
+        {
+          "id": "SupportInfusedChannelling",
+          "level": 20,
+          "quality": 30
+        },
+        {
+          "id": "SupportMeleePhysicalDamage",
+          "level": 20,
+          "quality": 15
+        },
+        {
+          "id": "SupportPulverise",
+          "level": 20,
+          "quality": 20
+        }
+      ]
     }
   },
   "gear": {

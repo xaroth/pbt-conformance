@@ -9,6 +9,16 @@
       "Armour": 571,
       "AverageHit": 4940469.8469602,
       "BlockChance": 5,
+      "Calcs.ChaosMax": 0,
+      "Calcs.ChaosMin": 0,
+      "Calcs.ColdMax": 95352.3,
+      "Calcs.ColdMin": 63712.89,
+      "Calcs.FireMax": 154190.25,
+      "Calcs.FireMin": 102793.5,
+      "Calcs.LightningMax": 676877.31,
+      "Calcs.LightningMin": 444528.225,
+      "Calcs.PhysicalMax": 36451.378671512,
+      "Calcs.PhysicalMin": 24300.974012815,
       "ChaosResist": 75,
       "ChaosResistTotal": 79,
       "ColdResist": -14,
@@ -50,7 +60,125 @@
     "mainSkill": {
       "group": 6,
       "id": "StormBurstAltX",
-      "name": "Storm Burst of Repulsion"
+      "name": "Storm Burst of Repulsion",
+      "level": 32,
+      "quality": 30,
+      "supports": [
+        {
+          "id": "SupportArcaneSurge",
+          "level": 27,
+          "quality": 30
+        },
+        {
+          "id": "SupportEmpower",
+          "level": 7,
+          "quality": 10
+        },
+        {
+          "id": "SupportIncreasedAreaOfEffect",
+          "level": 22,
+          "quality": 50
+        },
+        {
+          "id": "SupportInspiration",
+          "level": 25,
+          "quality": 53
+        },
+        {
+          "id": "SupportPowerChargeOnCritical",
+          "level": 25,
+          "quality": 30
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 135,
+    "outputs": {
+      "Armour": 571,
+      "AverageHit": 238326.38261362,
+      "BlockChance": 0,
+      "Calcs.ChaosMax": 0,
+      "Calcs.ChaosMin": 0,
+      "Calcs.ColdMax": 0,
+      "Calcs.ColdMin": 0,
+      "Calcs.FireMax": 0,
+      "Calcs.FireMin": 0,
+      "Calcs.LightningMax": 97236,
+      "Calcs.LightningMin": 64824,
+      "Calcs.PhysicalMax": 2647.3043641255,
+      "Calcs.PhysicalMin": 1764.8866831691,
+      "ChaosResist": 75,
+      "ChaosResistTotal": 79,
+      "ColdResist": -30,
+      "ColdResistTotal": -30,
+      "CombinedDPS": 4094095.8614731,
+      "CritChance": 30.63775344,
+      "Dex": 161,
+      "EnergyShield": 246,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 94,
+      "EnergyShieldRegen": 0,
+      "EnergyShieldRegenRecovery": 0,
+      "Evasion": 400,
+      "FireResist": -17,
+      "FireResistTotal": -17,
+      "HitChance": 100,
+      "Int": 251,
+      "Life": 1703,
+      "LifeLeechRate": 0,
+      "LifeRegen": 0,
+      "LifeRegenRecovery": 0,
+      "LifeUnreserved": 1703,
+      "LightningResist": -24,
+      "LightningResistTotal": -24,
+      "Mana": 1111,
+      "ManaRegen": 54.6,
+      "ManaUnreserved": 1111,
+      "MissingChaosResist": 0,
+      "MissingColdResist": 105,
+      "MissingFireResist": 92,
+      "MissingLightningResist": 100,
+      "Speed": 15.466666666667,
+      "SpellBlockChance": 8,
+      "SpellSuppressionChance": 0,
+      "Str": 120,
+      "TotalDPS": 3686114.7177573,
+      "TotalDotDPS": 0
+    },
+    "mainSkill": {
+      "group": 6,
+      "id": "StormBurstAltX",
+      "name": "Storm Burst of Repulsion",
+      "level": 32,
+      "quality": 30,
+      "supports": [
+        {
+          "id": "SupportArcaneSurge",
+          "level": 27,
+          "quality": 30
+        },
+        {
+          "id": "SupportEmpower",
+          "level": 7,
+          "quality": 10
+        },
+        {
+          "id": "SupportIncreasedAreaOfEffect",
+          "level": 22,
+          "quality": 50
+        },
+        {
+          "id": "SupportInspiration",
+          "level": 25,
+          "quality": 53
+        },
+        {
+          "id": "SupportPowerChargeOnCritical",
+          "level": 25,
+          "quality": 30
+        }
+      ]
     }
   },
   "gear": {

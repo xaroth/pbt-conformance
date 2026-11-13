@@ -9,6 +9,16 @@
       "Armour": 42207,
       "AverageHit": 0,
       "BlockChance": 37,
+      "Calcs.ChaosMax": 0,
+      "Calcs.ChaosMin": 0,
+      "Calcs.ColdMax": 0,
+      "Calcs.ColdMin": 0,
+      "Calcs.FireMax": 0,
+      "Calcs.FireMin": 0,
+      "Calcs.LightningMax": 0,
+      "Calcs.LightningMin": 0,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
       "ChaosResist": 9,
       "ChaosResistTotal": 9,
       "ColdResist": 90,
@@ -50,7 +60,121 @@
     "mainSkill": {
       "group": 2,
       "id": "RighteousFireAltX",
-      "name": "Righteous Fire of Arcane Devotion"
+      "name": "Righteous Fire of Arcane Devotion",
+      "level": 21,
+      "quality": 30,
+      "supports": [
+        {
+          "id": "SupportArcaneSurge",
+          "level": 20,
+          "quality": 33
+        },
+        {
+          "id": "SupportBurningDamage",
+          "level": 20
+        },
+        {
+          "id": "SupportControlledDestruction",
+          "level": 21,
+          "quality": 30
+        },
+        {
+          "id": "SupportElementalFocus",
+          "level": 20
+        },
+        {
+          "id": "SupportSwiftAffliction",
+          "level": 21,
+          "quality": 30
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 134,
+    "outputs": {
+      "Armour": 8661,
+      "AverageHit": 0,
+      "BlockChance": 29,
+      "Calcs.ChaosMax": 0,
+      "Calcs.ChaosMin": 0,
+      "Calcs.ColdMax": 0,
+      "Calcs.ColdMin": 0,
+      "Calcs.FireMax": 0,
+      "Calcs.FireMin": 0,
+      "Calcs.LightningMax": 0,
+      "Calcs.LightningMin": 0,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
+      "ChaosResist": 9,
+      "ChaosResistTotal": 9,
+      "ColdResist": 1,
+      "ColdResistTotal": 1,
+      "CombinedDPS": 1090492.3525071,
+      "CritChance": 0,
+      "Dex": 149,
+      "EnergyShield": 7090,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 2363,
+      "EnergyShieldRegen": 666.5,
+      "EnergyShieldRegenRecovery": 666.5,
+      "Evasion": 709,
+      "FireResist": -2,
+      "FireResistTotal": -2,
+      "HitChance": 100,
+      "Int": 415,
+      "Life": 1410,
+      "LifeLeechRate": 0,
+      "LifeRegen": 0,
+      "LifeRegenRecovery": 0,
+      "LifeUnreserved": 1410,
+      "LightningResist": -8,
+      "LightningResistTotal": -8,
+      "Mana": 12125,
+      "ManaRegen": 1363.9,
+      "ManaUnreserved": 12125,
+      "MissingChaosResist": 67,
+      "MissingColdResist": 75,
+      "MissingFireResist": 78,
+      "MissingLightningResist": 84,
+      "Speed": 0,
+      "SpellBlockChance": 0,
+      "SpellSuppressionChance": 0,
+      "Str": 159,
+      "TotalDPS": 0,
+      "TotalDotDPS": 1090492.3525071
+    },
+    "mainSkill": {
+      "group": 2,
+      "id": "RighteousFireAltX",
+      "name": "Righteous Fire of Arcane Devotion",
+      "level": 21,
+      "quality": 30,
+      "supports": [
+        {
+          "id": "SupportArcaneSurge",
+          "level": 20,
+          "quality": 33
+        },
+        {
+          "id": "SupportBurningDamage",
+          "level": 20
+        },
+        {
+          "id": "SupportControlledDestruction",
+          "level": 21,
+          "quality": 30
+        },
+        {
+          "id": "SupportElementalFocus",
+          "level": 20
+        },
+        {
+          "id": "SupportSwiftAffliction",
+          "level": 21,
+          "quality": 30
+        }
+      ]
     }
   },
   "gear": {
