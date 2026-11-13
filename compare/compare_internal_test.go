@@ -16,31 +16,29 @@ import (
 )
 
 // Skill outputs are compared with the skill layer, not the tree-only one, and judged on the
-// skill and full layers.
+// skill and full layers. An output with no PoB key is not compared.
 func TestSkillOutputs(t *testing.T) {
 	t.Parallel()
-	outputs := []simulator.Output{{Key: "player.life"}, {Key: "skill.average_hit"}}
+	outputs := []simulator.Output{{Key: "player.life"}, {Key: "skill.average_hit"}, {Key: "skill.physical_damage_modifier"}}
 	ms := &pob.MainSkill{ID: "Fireball", Name: "Fireball"}
 	v := &pob.Values{
 		TreeOnly: pob.Result{Outputs: map[string]float64{"Life": 1150}},
 		Skill:    pob.Result{Outputs: map[string]float64{"Life": 1300, "AverageHit": 610, "Calcs.FireMin": 400}, MainSkill: ms},
 		Full:     pob.Result{Outputs: map[string]float64{"Life": 2000, "AverageHit": 900}, MainSkill: ms},
 	}
-	tree := map[string]float64{"player.life": 1150, "skill.average_hit": 0}
+	tree := map[string]float64{"player.life": 1150, "skill.average_hit": 0, "skill.physical_damage_modifier": 1}
 
-	got, err := compareOutputs(outputs, ours{tree: tree}, v, "3.29", "01-x")
-	if err != nil {
-		t.Fatal(err)
-	}
+	got := compareOutputs(outputs, ours{tree: tree}, v, "3.29", "01-x")
 	if len(got) != 0 {
 		t.Errorf("without skill values: got mismatches %+v", got)
 	}
 
-	o := ours{tree: tree, skill: map[string]float64{"skill.average_hit": 600}, full: map[string]float64{"skill.average_hit": 900}}
-	got, err = compareOutputs(outputs, o, v, "3.29", "01-x")
-	if err != nil {
-		t.Fatal(err)
+	o := ours{
+		tree:  tree,
+		skill: map[string]float64{"skill.average_hit": 600, "skill.physical_damage_modifier": 1},
+		full:  map[string]float64{"skill.average_hit": 900},
 	}
+	got = compareOutputs(outputs, o, v, "3.29", "01-x")
 	want := []Mismatch{{League: "3.29", Build: "01-x", Output: "skill.average_hit", Ours: 600, PoB: 610, PoBFull: 900, HasPoB: true}}
 	if diff := cmp.Diff(want, got); diff != "" {
 		t.Errorf("mismatches (-want +got):\n%s", diff)

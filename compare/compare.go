@@ -26,7 +26,6 @@ var (
 	ErrDataset = errors.New("dataset not as pinned")
 	// ErrLeague marks a build whose tree is not of the league it is filed under.
 	ErrLeague = errors.New("build tree not of its league")
-	errNoKey  = errors.New("no pob key for output")
 )
 
 // tolerance absorbs float noise in the values of triage entries.
@@ -170,10 +169,7 @@ func compareBuild(dir, league string, reg *dataset.Registry, sim *simulator.Sim)
 	if err != nil {
 		return nil, err
 	}
-	ms, err := compareOutputs(sim.Outputs(), ours, v, league, name)
-	if err != nil {
-		return nil, err
-	}
+	ms := compareOutputs(sim.Outputs(), ours, v, league, name)
 	gems, err := gemNames(full.Skills, s)
 	if err != nil {
 		return nil, err
@@ -340,14 +336,15 @@ func warnings(st *simulator.Stats, league, name string) []Mismatch {
 }
 
 // compareOutputs compares every catalogue output with PoB's values v: the sheet and defences of
-// the tree-only build, and skill outputs of the skill build once the engine simulates it.
-func compareOutputs(outputs []simulator.Output, o ours, v *pob.Values, league, name string) ([]Mismatch, error) {
+// the tree-only build, and skill outputs of the skill build once the engine simulates it. An
+// output with no PoB key in pob.Outputs is not compared.
+func compareOutputs(outputs []simulator.Output, o ours, v *pob.Values, league, name string) []Mismatch {
 	var out []Mismatch
 	table := pobOutputs()
 	for _, so := range outputs {
 		get, ok := table[string(so.Key)]
 		if !ok {
-			return nil, fmt.Errorf("compare: %w %s", errNoKey, so.Key)
+			continue
 		}
 		values, layer := o.tree, v.TreeOnly
 		if get.Group.NeedsSkill() {
@@ -364,7 +361,7 @@ func compareOutputs(outputs []simulator.Output, o ours, v *pob.Values, league, n
 		}
 		out = append(out, Mismatch{League: league, Build: name, Output: string(so.Key), Ours: ours, PoB: p, PoBFull: full, HasPoB: has})
 	}
-	return out, nil
+	return out
 }
 
 // Allocated counts the build's nodes as PoB does: PoB always allocates the class start and,
