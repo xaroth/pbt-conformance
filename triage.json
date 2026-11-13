@@ -48,7 +48,7 @@
     "kind": "pending",
     "league": "3.29",
     "reason": "Tattoos and runegrafts replace a tree node (PoB node overrides); the importer does not import them, so the engine keeps the replaced node's own stats",
-    "evidence": "Recorded again with the overrides removed, PoB's tree-only value matches ours for every value case here; the import notes name the override (Tattoo, Journey Tattoo or Runegraft). In build 43 the secondary ascendancy adds to the gap. Energy shield regeneration in builds 58 and 70 follows the energy shield gap: regeneration as a share of maximum energy shield is the same in ours and PoB's (58: 100 flat plus 1.7%; 70: 5.9%)",
+    "evidence": "Recorded again with the overrides removed, PoB's tree-only value matches ours for every value case here; the import notes name the override (Tattoo, Journey Tattoo or Runegraft). In build 43 the secondary ascendancy adds to the gap. Energy shield regeneration in builds 58 and 70 follows the energy shield gap: regeneration as a share of maximum energy shield is the same in ours and PoB's (58: 100 flat plus 1.7%; 70: 5.9%). Fire and cold resistance in build 84 follow its fire and cold resistance tattoos",
     "cases": [
       {"build": "100-witch-L100-elementalist-glacial-cascade-of-the-fissure", "output": "import:pob-override-ignored", "subject": "node 12125"},
       {"build": "100-witch-L100-elementalist-glacial-cascade-of-the-fissure", "output": "import:pob-override-ignored", "subject": "node 18182"},
@@ -1148,6 +1148,10 @@
       {"build": "84-witch-L100-necromancer-summon-raging-spirit", "output": "player.chaos_resistance", "ours": -44, "pob": -2},
       {"build": "84-witch-L100-necromancer-summon-raging-spirit", "output": "player.uncapped_chaos_resistance", "ours": -44, "pob": -2},
       {"build": "84-witch-L100-necromancer-summon-raging-spirit", "output": "player.mana_regeneration", "ours": 15.1, "pob": 13.2},
+      {"build": "84-witch-L100-necromancer-summon-raging-spirit", "output": "player.fire_resistance", "ours": -30, "pob": 6},
+      {"build": "84-witch-L100-necromancer-summon-raging-spirit", "output": "player.cold_resistance", "ours": -30, "pob": -18},
+      {"build": "84-witch-L100-necromancer-summon-raging-spirit", "output": "player.uncapped_fire_resistance", "ours": -30, "pob": 6},
+      {"build": "84-witch-L100-necromancer-summon-raging-spirit", "output": "player.uncapped_cold_resistance", "ours": -30, "pob": -18},
       {"build": "85-templar-L100-guardian-summon-raging-spirit", "output": "import:pob-override-ignored", "subject": "node 2913"},
       {"build": "85-templar-L100-guardian-summon-raging-spirit", "output": "import:pob-override-ignored", "subject": "node 4367"},
       {"build": "85-templar-L100-guardian-summon-raging-spirit", "output": "import:pob-override-ignored", "subject": "node 5296"},
@@ -1813,39 +1817,6 @@
       {"build": "66-duelist-L100-champion-flicker-strike", "output": "player.evasion_rating", "ours": 35, "pob": 42},
       {"build": "66-duelist-L100-champion-flicker-strike", "output": "player.life_regeneration", "ours": 48.4, "pob": 77.6},
       {"build": "69-duelist-L100-slayer-cyclone", "output": "player.life_regeneration", "ours": 67.5, "pob": 72.7}
-    ]
-  },
-  {
-    "id": "strength-per-mastery",
-    "kind": "pending",
-    "league": "3.29",
-    "reason": "The attributes mastery effect 26621 adds strength per allocated mastery; the engine does not count allocated masteries yet, and life follows strength",
-    "evidence": "The engine notes additional_strength_per_allocated_mastery as not applied (scale)",
-    "cases": [
-      {"build": "60-templar-L100-inquisitor-lancing-steel-of-spraying", "output": "player.strength", "ours": 467, "pob": 495},
-      {"build": "60-templar-L100-inquisitor-lancing-steel-of-spraying", "output": "player.life", "ours": 3580, "pob": 3612},
-      {"build": "60-templar-L100-inquisitor-lancing-steel-of-spraying", "output": "player.unreserved_life", "ours": 3580, "pob": 3612}
-    ]
-  },
-  {
-    "id": "aura-resistances",
-    "kind": "pending",
-    "league": "3.29",
-    "reason": "Commander of Darkness (Necromancer, node 36017): \"You and nearby Allies have +30% to Elemental Resistances\"; the engine applies it only when affected by your auras, which it does not model yet",
-    "evidence": "Without tattoos and runegrafts the gap is 30 on each elemental resistance; the engine notes the stat as not applied (condition). In build 84 its fire and cold resistance tattoos add to the gap: fire 66 (ours -60, PoB 6) and cold 42 (ours -60, PoB -18), each 30 when PoB records it without them",
-    "cases": [
-      {"build": "84-witch-L100-necromancer-summon-raging-spirit", "output": "player.fire_resistance", "ours": -60, "pob": 6},
-      {"build": "84-witch-L100-necromancer-summon-raging-spirit", "output": "player.cold_resistance", "ours": -60, "pob": -18},
-      {"build": "84-witch-L100-necromancer-summon-raging-spirit", "output": "player.lightning_resistance", "ours": -60, "pob": -30},
-      {"build": "84-witch-L100-necromancer-summon-raging-spirit", "output": "player.uncapped_fire_resistance", "ours": -60, "pob": 6},
-      {"build": "84-witch-L100-necromancer-summon-raging-spirit", "output": "player.uncapped_cold_resistance", "ours": -60, "pob": -18},
-      {"build": "84-witch-L100-necromancer-summon-raging-spirit", "output": "player.uncapped_lightning_resistance", "ours": -60, "pob": -30},
-      {"build": "86-witch-L100-necromancer-animate-guardian-of-smiting", "output": "player.fire_resistance", "ours": -34, "pob": -4},
-      {"build": "86-witch-L100-necromancer-animate-guardian-of-smiting", "output": "player.cold_resistance", "ours": -34, "pob": -4},
-      {"build": "86-witch-L100-necromancer-animate-guardian-of-smiting", "output": "player.lightning_resistance", "ours": -34, "pob": -4},
-      {"build": "86-witch-L100-necromancer-animate-guardian-of-smiting", "output": "player.uncapped_fire_resistance", "ours": -34, "pob": -4},
-      {"build": "86-witch-L100-necromancer-animate-guardian-of-smiting", "output": "player.uncapped_cold_resistance", "ours": -34, "pob": -4},
-      {"build": "86-witch-L100-necromancer-animate-guardian-of-smiting", "output": "player.uncapped_lightning_resistance", "ours": -34, "pob": -4}
     ]
   },
   {
