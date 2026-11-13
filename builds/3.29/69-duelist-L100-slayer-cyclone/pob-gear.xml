@@ -670,6 +670,13 @@ You have Tailwind if you have dealt a Critical Strike Recently
 			<SocketIdURL itemPbURL="" name="Jewel 55190" nodeId="55190"/>
 		</ItemSet>
 	</Items>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="nil" showLegacyGems="false" showSupportGemTypes="ALL" sortGemsByDPS="true" sortGemsByDPSField="CombinedDPS">
+		<SkillSet id="1">
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Ring 1" source="Item:25:Miracle Nail, Ruby Ring">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="1" nameSpec="Vulnerability" quality="0" skillId="Vulnerability"/>
+			</Skill>
+		</SkillSet>
+	</Skills>
 	<Tree activeSpec="1">
 		<Spec ascendClassId="1" classId="4" clusterHashFormatVersion="2" masteryEffects="{2841,64875},{8556,28524},{9471,19628},{12169,32255},{35859,62252},{52074,43295}" nodes="476,864,1325,2225,2491,2841,3184,3644,4833,5233,5743,5935,6289,6712,7285,8556,9471,9995,10143,10532,11700,11730,12169,14056,14930,15286,16380,16544,16860,17429,18103,18901,20835,20954,21974,22356,22703,23027,24083,24716,24858,24914,25831,26196,26270,26712,26725,28475,29353,30380,30691,31471,32690,32932,33287,33718,33795,34009,34171,34400,34513,34590,35288,35507,35859,36949,37326,37501,37584,37639,37647,37800,38180,38664,39023,39761,39904,40867,42293,42911,43374,44169,44202,45696,46519,47389,47427,47854,48109,48199,48282,48287,49080,49178,50969,50986,51559,52074,53118,54127,55190,55676,56355,56359,56460,57011,58218,58831,59494,59928,60153,60472,60740,61262,61388,62319,62429,62817,63282,63413,63723,64210,64882,65107,65485,65696,65698,65706,65760,65762,65766,65767,65770" secondaryAscendClassId="0" treeVersion="3_29">
 			<URL>

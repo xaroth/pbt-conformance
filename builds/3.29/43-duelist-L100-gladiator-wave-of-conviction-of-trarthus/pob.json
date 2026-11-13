@@ -189,7 +189,7 @@
       "FireResistTotal": 115,
       "Int": 34,
       "Life": 4613,
-      "LifeLeechRate": 0,
+      "LifeLeechRate": 0.09904125,
       "LifeRegen": 963.7,
       "LifeRegenRecovery": 963.7,
       "LifeUnreserved": 4613,

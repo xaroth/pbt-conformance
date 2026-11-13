@@ -456,6 +456,13 @@ Corrupted
 			<SocketIdURL itemPbURL="" name="Jewel 54127" nodeId="54127"/>
 		</ItemSet>
 	</Items>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="nil" showLegacyGems="false" showSupportGemTypes="ALL" sortGemsByDPS="true" sortGemsByDPSField="CombinedDPS">
+		<SkillSet id="1">
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 1" source="Item:6:Foulborn Uul-Netol&apos;s Kiss, Vaal Axe">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="1" nameSpec="Vulnerability" quality="0" skillId="Vulnerability"/>
+			</Skill>
+		</SkillSet>
+	</Skills>
 	<Tree activeSpec="1">
 		<Spec ascendClassId="3" classId="0" clusterHashFormatVersion="2" masteryEffects="{4139,34242},{6912,1626},{9471,56848},{12169,32255},{25011,47642},{25934,27095},{35321,10268},{43307,38114},{48982,43295},{52074,56133},{55281,16991},{62015,60034},{62588,38454},{64128,61097},{64406,48720},{65395,64875}" nodes="476,864,1325,1564,3644,4139,4833,5197,5233,6289,6741,6912,7442,8544,9194,9471,9995,10311,10861,12169,13498,13703,13714,14056,14930,15438,15451,15726,15739,16544,16860,18103,18302,19144,20018,22703,22908,24083,24716,24858,24914,25011,25682,25933,25934,25944,27123,27140,27301,27422,28330,28475,28728,29933,29937,30380,30691,30733,31080,31471,31683,31878,31961,32095,33287,33508,33566,33718,34009,34400,34513,34590,34666,35237,35321,35406,35436,35503,35877,36881,37326,37584,40841,40907,42086,43307,43374,43412,45503,46479,46578,47785,48109,48199,48287,48438,48807,48828,48982,49178,49412,49635,50679,50858,52074,53118,54127,55281,55485,55676,58336,58382,58833,59833,59928,60153,60963,61190,61262,61388,61602,62015,62588,63033,63282,63723,64128,64406,64587,64816,65107,65395" secondaryAscendClassId="11" treeVersion="3_29_ruthless">
 			<URL>

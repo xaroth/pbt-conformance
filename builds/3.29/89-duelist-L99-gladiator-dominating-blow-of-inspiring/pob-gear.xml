@@ -860,6 +860,22 @@ You can apply an additional Curse
 			<SocketIdURL itemPbURL="" name="Jewel 46519" nodeId="46519"/>
 		</ItemSet>
 	</Items>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="nil" showLegacyGems="false" showSupportGemTypes="ALL" sortGemsByDPS="true" sortGemsByDPSField="CombinedDPS">
+		<SkillSet id="1">
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="1" mainActiveSkillCalcs="1" source="Tree:35011">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="20" nameSpec="" quality="0" skillId="SummonSpectralTiger" skillMinion="SummonedSpectralTiger" skillMinionCalcs="SummonedSpectralTiger" skillMinionSkill="1" skillMinionSkillCalcs="1"/>
+			</Skill>
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 1" source="Item:24:Law of the Wilds, Hellion&apos;s Paw">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="25" nameSpec="Summon Spectral Wolf" quality="0" skillId="SummonSpectralWolf" skillMinion="SummonedSpectralWolf" skillMinionSkill="1" skillMinionSkillCalcs="1"/>
+			</Skill>
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Boots" source="Item:12:Dire League, Leviathan Greaves">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="30" nameSpec="Aspect of the Crab" quality="0" skillId="AspectOfTheCrab"/>
+			</Skill>
+			<Skill enabled="false" includeInFullDPS="nil" label="On Kill Monster Explosion" mainActiveSkill="nil" mainActiveSkillCalcs="nil" source="Explode">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="1" nameSpec="" quality="0" skillId="EnemyExplode" skillPart="1"/>
+			</Skill>
+		</SkillSet>
+	</Skills>
 	<Tree activeSpec="1">
 		<Spec ascendClassId="2" classId="4" clusterHashFormatVersion="2" masteryEffects="{29993,17852},{34552,57179},{35221,39178},{35859,62252},{38921,23442},{52061,19628},{54849,47429},{56595,39154},{62015,60034}" nodes="476,1006,1675,2092,2225,2491,2598,6764,6967,7388,7614,7688,7960,8419,9408,9505,10490,10532,10861,13191,13714,14056,15081,15451,16167,16380,16775,18009,18901,19144,19897,19919,20987,22062,22356,22703,22893,24472,24538,24824,24914,25409,27119,27422,28330,28475,29712,29797,29993,30170,30691,30733,31683,31875,32730,33479,34144,34400,34506,34552,34952,35011,35221,35503,35507,35859,36634,36678,36881,37800,38921,39841,40366,40867,40907,41387,42086,42668,42760,42911,43374,43689,43716,46340,46519,46578,46910,47251,47389,48251,49178,50858,50986,52061,52412,52502,53042,53677,53840,54849,55420,55485,55743,56595,59494,60398,61262,61602,62015,62319,63976,65034,65568,65569,65570,65571,65573,65574,65575,65577,65578,65579,65760,65761,65762,65763,65765,65766,65767,65769,65770,65771" secondaryAscendClassId="11" treeVersion="3_29">
 			<URL>

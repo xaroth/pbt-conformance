@@ -721,6 +721,16 @@ Foil Unique (Sunset)
 			<SocketIdURL itemPbURL="" name="Jewel 64583" nodeId="64583"/>
 		</ItemSet>
 	</Items>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="nil" showLegacyGems="false" showSupportGemTypes="ALL" sortGemsByDPS="true" sortGemsByDPSField="CombinedDPS">
+		<SkillSet id="1">
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="1" mainActiveSkillCalcs="1" source="Tree:35011">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="20" nameSpec="" quality="0" skillId="SummonSpectralTiger" skillMinion="SummonedSpectralTiger" skillMinionCalcs="SummonedSpectralTiger" skillMinionSkill="1" skillMinionSkillCalcs="1"/>
+			</Skill>
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 2 Swap" source="Item:17:Voidfletcher, Ornate Quiver">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="20" nameSpec="Void Shot" quality="0" skillId="VoidShot"/>
+			</Skill>
+		</SkillSet>
+	</Skills>
 	<Tree activeSpec="1">
 		<Spec ascendClassId="2" classId="5" clusterHashFormatVersion="2" masteryEffects="{4492,5356},{7488,62252},{53828,63280},{55491,23621}" nodes="922,1031,2913,3452,4492,5296,6230,7069,7388,7488,7960,8001,9408,10115,10490,10861,11046,11551,12143,13170,13375,14936,15405,16243,16775,18033,18182,19635,20228,20987,21033,21958,21984,22473,22618,22637,24256,24362,24426,24643,25651,25714,26740,26866,26960,27415,27592,27656,27879,28221,28859,29026,29712,29994,30940,31819,32245,32345,32710,33310,33479,33545,33631,33740,33755,34098,34906,34907,35011,35556,36634,36678,36858,37671,38176,38516,38995,39521,39841,39916,41263,41387,42760,42804,43000,44184,44908,44924,45067,45680,46092,46277,46340,46910,48768,48778,48878,49605,49651,50288,50422,50862,51146,51524,51923,52031,52502,53279,53456,53828,55114,55491,55571,55906,56029,56295,60090,60388,60398,60440,61419,61525,61834,63228,63447,63976,64583,65568,65570,65578,65888,65890,65898" secondaryAscendClassId="11" treeVersion="3_29">
 			<URL>

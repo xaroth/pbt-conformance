@@ -700,6 +700,13 @@ Has 1 Abyssal Socket
 			<SocketIdURL itemPbURL="" name="Jewel 64583" nodeId="64583"/>
 		</ItemSet>
 	</Items>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="nil" showLegacyGems="false" showSupportGemTypes="ALL" sortGemsByDPS="true" sortGemsByDPSField="CombinedDPS">
+		<SkillSet id="1">
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 1" source="Item:19:Soulwrest, Ezomyte Staff">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="25" nameSpec="Triggered Summon Phantasm" quality="0" skillId="TriggeredSummonGhostOnKill" skillMinion="SummonedPhantasm" skillMinionSkill="1" skillMinionSkillCalcs="1"/>
+			</Skill>
+		</SkillSet>
+	</Skills>
 	<Tree activeSpec="1">
 		<Spec ascendClassId="2" classId="0" clusterHashFormatVersion="2" masteryEffects="{5230,28589},{18240,31556},{38921,4500},{39332,22149},{53188,64875},{55491,28638},{63482,53046}" nodes="2151,2460,3452,4367,4977,5230,5296,5456,5462,5875,6230,6764,6799,6967,7364,7444,7594,7918,7960,9086,9408,9788,10108,10115,11455,11688,12143,12189,12613,13961,14665,15117,15544,16633,17570,18033,18174,18240,19501,19919,20261,20987,21033,21974,21984,22441,22618,22628,22702,24229,24362,26070,26196,26270,26557,27415,28859,29712,29781,31683,32710,32932,33508,33545,34171,35233,35936,36107,36452,36489,36678,36881,37303,37671,37690,38246,38921,39332,39761,39841,40366,41263,41635,42343,42760,42917,44184,45456,46092,46842,47062,48423,48768,48778,48828,49605,49651,49698,51213,51923,52502,53188,53957,54694,55491,55571,55743,55926,56029,56153,56922,57736,58556,58833,59826,60090,60247,60440,60472,61419,62697,63194,63398,63425,63447,63482,64210,64583,65273,65552,65561,65568,65570,65578,65888,65890,65893,65894,65898" secondaryAscendClassId="7" treeVersion="3_29">
 			<URL>

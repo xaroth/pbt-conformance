@@ -962,6 +962,13 @@ Nearby allies gain 18% increased Damage
 			<SocketIdURL itemPbURL="" name="Jewel 64583" nodeId="64583"/>
 		</ItemSet>
 	</Items>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="nil" showLegacyGems="false" showSupportGemTypes="ALL" sortGemsByDPS="true" sortGemsByDPSField="CombinedDPS">
+		<SkillSet id="1">
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="1" mainActiveSkillCalcs="1" source="Tree:35011">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="20" nameSpec="" quality="0" skillId="SummonSpectralTiger" skillMinion="SummonedSpectralTiger" skillMinionCalcs="SummonedSpectralTiger" skillMinionSkill="1" skillMinionSkillCalcs="1"/>
+			</Skill>
+		</SkillSet>
+	</Skills>
 	<Tree activeSpec="1">
 		<Spec ascendClassId="1" classId="6" clusterHashFormatVersion="2" masteryEffects="{5230,9143},{9586,38070},{14113,48358},{16123,2987},{27307,29586},{34723,40307},{39332,22149}" nodes="885,1945,2311,4036,4242,4367,4977,5230,5296,5462,6064,6764,7364,7388,7444,7960,9261,9408,9586,9797,10575,10861,11334,12613,12783,12850,12888,13170,14113,14745,15117,15228,15365,15549,16123,16954,18335,19501,20528,20546,20987,21033,21301,21984,22618,22702,23659,24229,24324,26196,27307,27415,29199,29712,31703,32710,33310,33864,33954,34098,34173,34723,35011,36452,36634,36678,37671,37999,38129,39332,39841,40291,40366,40927,41263,41387,41635,42760,44184,44683,46340,46676,46842,47306,48778,49605,50029,51801,52407,52502,53573,53957,54645,56158,58229,58402,59585,59728,60398,61308,61419,63398,63447,64583,65273,65552,65554,65562,65568,65569,65570,65571,65573,65577,65578,65579,65872,65875,65881,65888,65889,65890,65891,65893,65894,65895,65897,65898,65899,66576,66578,66586,66896,66898,66906" secondaryAscendClassId="11" treeVersion="3_29">
 			<URL>

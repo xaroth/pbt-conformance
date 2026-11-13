@@ -621,6 +621,13 @@ Fractured Item
 			<SocketIdURL itemPbURL="" name="Jewel 55190" nodeId="55190"/>
 		</ItemSet>
 	</Items>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="nil" showLegacyGems="false" showSupportGemTypes="ALL" sortGemsByDPS="true" sortGemsByDPSField="CombinedDPS">
+		<SkillSet id="1">
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="1" mainActiveSkillCalcs="1" source="Tree:35011">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="20" nameSpec="" quality="0" skillId="SummonSpectralTiger" skillMinion="SummonedSpectralTiger" skillMinionCalcs="SummonedSpectralTiger" skillMinionSkill="1" skillMinionSkillCalcs="1"/>
+			</Skill>
+		</SkillSet>
+	</Skills>
 	<Tree activeSpec="1">
 		<Spec ascendClassId="2" classId="4" clusterHashFormatVersion="2" masteryEffects="{9471,19628},{12169,32255},{16810,35302},{21324,55013},{22480,23442},{33823,2987},{37795,30612},{59335,28469},{62588,34242},{65395,64875}" nodes="476,758,861,1159,1325,1675,2491,2598,3644,5233,5237,6289,6363,6580,6967,8419,8544,9402,9471,10532,10661,10851,10861,12169,12236,12878,13922,14056,14384,14726,14930,15021,15437,15678,16544,16810,16860,17527,18103,18302,18901,19711,19730,21324,22480,22703,22994,24083,24538,24716,24914,25781,25933,26712,26725,27422,28475,29353,29933,29937,30691,31471,32053,32730,32932,33582,33823,34009,34191,34400,34590,35011,35288,36761,37501,37795,38772,39725,40132,40907,41387,42086,43374,44169,44191,46393,46519,46882,48199,48287,48438,48807,48813,49080,49178,49343,49538,49806,50679,50986,54127,55190,56807,58831,58854,59335,59928,60153,60529,61262,62319,62429,62588,63282,63649,63723,65107,65112,65395,65632,65634,65638,65639,65642,65696,65698,65702,65703,65706,65760,65762,65766,65767,65770" secondaryAscendClassId="11" treeVersion="3_29">
 			<URL>

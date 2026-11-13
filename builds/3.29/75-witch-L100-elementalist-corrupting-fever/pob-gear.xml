@@ -756,6 +756,17 @@ Grants Level 30 Herald of the Hive Skill
 			<SocketIdURL itemPbURL="" name="Jewel 64583" nodeId="64583"/>
 		</ItemSet>
 	</Items>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="nil" showLegacyGems="false" showSupportGemTypes="ALL" sortGemsByDPS="true" sortGemsByDPSField="CombinedDPS">
+		<SkillSet id="1">
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Ring 2" source="Item:33:Lost Unity, Formless Ring">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="30" nameSpec="Herald of the Hive" quality="0" skillId="HeraldOfTheBreach"/>
+			</Skill>
+			<Skill enabled="false" includeInFullDPS="nil" label="On Kill Monster Explosion" mainActiveSkill="nil" mainActiveSkillCalcs="nil" source="Explode">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="1" nameSpec="" quality="0" skillId="EnemyExplode" skillPart="1"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="1" nameSpec="" quality="0" skillId="EnemyExplode" skillPart="1"/>
+			</Skill>
+		</SkillSet>
+	</Skills>
 	<Tree activeSpec="1">
 		<Spec ascendClassId="2" classId="3" clusterHashFormatVersion="2" masteryEffects="{16810,30612},{37641,16215},{38921,4500}" nodes="258,861,2491,3533,3644,4367,5233,5296,5743,5935,6712,6764,6967,7374,7444,7600,7960,8948,9386,9402,9408,10532,10851,11088,11730,12246,12738,13170,13961,14057,14930,14936,15117,15167,15405,16023,16810,17527,18901,19501,19919,20987,21033,21650,21678,21929,21958,21974,21984,22618,23027,23659,24872,25831,26196,26270,26557,26712,26725,27038,27137,29353,29712,32210,32245,32932,33310,33631,33864,34171,34400,34506,35233,35288,36678,36949,37641,38176,38836,38921,39841,43061,44169,44184,44191,44202,44967,46519,47873,48813,49080,49605,49651,50197,50422,50570,50862,52502,53123,54279,54447,55190,55743,56461,57226,58218,58998,59928,60472,60989,61419,62319,62429,62697,63039,63282,63447,63723,64210,64583,65108,65568,65570,65578,65696,65698,65706,65760,65762,65770,65888,65890,65898" secondaryAscendClassId="15" treeVersion="3_29">
 			<URL>

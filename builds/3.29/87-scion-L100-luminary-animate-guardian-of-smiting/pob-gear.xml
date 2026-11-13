@@ -1034,6 +1034,13 @@ Nearby Enemies cannot deal Critical Strikes
 			<SocketIdURL itemPbURL="" name="Jewel 55190" nodeId="55190"/>
 		</ItemSet>
 	</Items>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="nil" showLegacyGems="false" showSupportGemTypes="ALL" sortGemsByDPS="true" sortGemsByDPSField="CombinedDPS">
+		<SkillSet id="1">
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 1" source="Item:30:Foulborn Moonbender&apos;s Wing, Tomahawk">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="15" nameSpec="Lightning Warp" quality="0" skillId="LightningWarp"/>
+			</Skill>
+		</SkillSet>
+	</Skills>
 	<Tree activeSpec="1">
 		<Spec ascendClassId="3" classId="0" clusterHashFormatVersion="2" masteryEffects="{4139,34242},{9213,46059},{12382,47642},{18240,51424},{25011,21468},{32241,38454},{41415,64381},{43647,9876},{48505,31822}" nodes="1977,2491,3089,3533,3644,4139,5197,5233,5743,5935,6230,6289,6712,7374,7444,7960,8643,9213,9386,9392,9408,9939,10031,10532,11088,11688,12382,13714,14057,14930,15046,15073,15405,15726,15900,16775,17219,18240,18901,20987,23027,23756,25011,25332,25944,26196,26270,26712,26725,26740,28034,28475,29106,29353,29712,30380,30675,30733,31517,31683,32241,32932,33287,33508,33631,33740,34171,34400,35288,35877,36678,36881,36949,37078,38048,41415,43647,44169,44202,44967,46479,46519,46578,46910,47062,48287,48505,48679,48768,48828,49080,49178,50422,50570,50862,52502,53118,55190,55373,55485,55676,55906,56153,57279,57404,58218,58833,59928,60145,60472,62021,62319,62429,63282,63723,63845,63954,63976,64210,64587,65034,65108,65568,65573,65575,65578,65696,65701,65703,65706,65760,65765,65767,65770" secondaryAscendClassId="12" treeVersion="3_29">
 			<URL>

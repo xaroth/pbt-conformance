@@ -959,6 +959,22 @@ You can apply an additional Curse
 			<SocketIdURL itemPbURL="" name="Jewel 55190" nodeId="55190"/>
 		</ItemSet>
 	</Items>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="nil" showLegacyGems="false" showSupportGemTypes="ALL" sortGemsByDPS="true" sortGemsByDPSField="CombinedDPS">
+		<SkillSet id="1">
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="1" mainActiveSkillCalcs="1" source="Tree:16287">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="20" nameSpec="" quality="0" skillId="SummonAbyssalConstructs" skillMinion="AbyssCurseBot" skillMinionCalcs="AbyssCurseBot" skillMinionSkill="1" skillMinionSkillCalcs="1"/>
+			</Skill>
+			<Skill enabled="false" includeInFullDPS="nil" label="On Kill Monster Explosion" mainActiveSkill="nil" mainActiveSkillCalcs="nil" source="Explode">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="1" nameSpec="" quality="0" skillId="EnemyExplode" skillPart="1"/>
+			</Skill>
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 2 Swap" source="Item:27:Voidfletcher, Ornate Quiver">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="20" nameSpec="Void Shot" quality="0" skillId="VoidShot"/>
+			</Skill>
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Gloves" source="Item:25:Command of the Pit, Riveted Gloves">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="1" nameSpec="Vulnerability" quality="0" skillId="Vulnerability"/>
+			</Skill>
+		</SkillSet>
+	</Skills>
 	<Tree activeSpec="1">
 		<Spec ascendClassId="1" classId="3" clusterHashFormatVersion="2" masteryEffects="{2841,64875},{4139,38454},{22480,44840},{25011,31822},{32241,47642},{38921,55013},{41415,34242},{42792,9074},{43647,41544},{47197,34383},{48290,15574},{54849,11723},{64406,48720}" nodes="1203,2491,2841,3533,3644,4139,4397,5197,5233,5743,5935,6289,6712,6764,6967,7285,7374,7388,9386,9402,10532,10904,11088,11420,13009,14057,14930,15046,15405,15522,16287,17527,17735,18378,18901,19732,19919,21974,22480,23027,23756,24824,25011,25309,25332,25831,25989,26196,26270,26712,26725,27096,27195,27203,29106,29353,30380,30693,31316,31875,31961,31984,32241,32417,32932,33287,33435,33631,34171,34400,34880,34917,35214,35288,36542,36634,36915,36949,37127,37326,37569,38921,41415,41472,42668,42792,43647,43689,44169,44191,44202,44967,46519,47197,48109,48287,48290,48362,49080,49254,50422,50570,50862,53118,54447,54849,55190,55676,56359,57264,58218,58453,58999,59928,60398,60472,62319,62429,62767,63138,63282,63723,64210,64406,64587,65108,65696,65698,65703,65706,65760,65762,65767,65770" secondaryAscendClassId="16" treeVersion="3_29">
 			<URL>

@@ -709,6 +709,16 @@ Corrupted
 			<SocketIdURL itemPbURL="" name="Jewel 55190" nodeId="55190"/>
 		</ItemSet>
 	</Items>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="nil" showLegacyGems="false" showSupportGemTypes="ALL" sortGemsByDPS="true" sortGemsByDPSField="CombinedDPS">
+		<SkillSet id="1">
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="1" mainActiveSkillCalcs="1" source="Tree:35011">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="20" nameSpec="" quality="0" skillId="SummonSpectralTiger" skillMinion="SummonedSpectralTiger" skillMinionCalcs="SummonedSpectralTiger" skillMinionSkill="1" skillMinionSkillCalcs="1"/>
+			</Skill>
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 1" source="Item:27:Foulborn Uul-Netol&apos;s Kiss, Vaal Axe">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="1" nameSpec="Vulnerability" quality="0" skillId="Vulnerability"/>
+			</Skill>
+		</SkillSet>
+	</Skills>
 	<Tree activeSpec="1">
 		<Spec ascendClassId="3" classId="4" clusterHashFormatVersion="2" masteryEffects="{4139,38454},{4424,50175},{8556,64511},{9471,56848},{24224,28354},{25011,47642},{33823,2987},{48859,64875},{55281,16991},{62015,60034},{62588,64381},{64406,48720}" nodes="476,1325,2491,2913,3644,4139,4424,4833,4940,5233,6113,6289,6982,8544,8556,9471,9976,10311,10532,10661,10861,11412,11700,11859,14056,14813,14930,15405,15451,15678,16544,18103,18901,20018,20835,21650,22703,22908,23066,23852,23984,24083,24224,24716,24914,24984,25011,25111,25682,26188,26712,26725,26866,28475,29353,29937,30380,30691,31471,32245,32519,33287,33566,33631,33823,34400,34590,35011,35237,35288,35406,35750,37501,40867,40907,41387,41472,42911,43374,44169,44908,45503,46519,47389,47785,48199,48287,48859,49080,49178,49635,50197,50422,50570,50679,50858,50862,50969,50986,52090,53118,54127,55190,55281,55676,56967,58336,58382,58545,58831,59928,60963,61190,61262,61471,61478,61602,62015,62319,62429,62588,63033,63282,63723,64406,65696,65698,65706,65744,65746,65754,65760,65762,65770" secondaryAscendClassId="11" treeVersion="3_29">
 			<URL>

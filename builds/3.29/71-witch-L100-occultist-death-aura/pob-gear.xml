@@ -773,6 +773,20 @@ Fractured Item
 			<SocketIdURL itemPbURL="" name="Jewel 61666" nodeId="61666"/>
 		</ItemSet>
 	</Items>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="nil" showLegacyGems="false" showSupportGemTypes="ALL" sortGemsByDPS="true" sortGemsByDPSField="CombinedDPS">
+		<SkillSet id="1">
+			<Skill enabled="false" includeInFullDPS="nil" label="On Kill Monster Explosion" mainActiveSkill="1" mainActiveSkillCalcs="1" source="Explode">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="1" nameSpec="" quality="0" skillId="EnemyExplode" skillPart="1" skillPartCalcs="1"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="1" nameSpec="" quality="0" skillId="EnemyExplode" skillPart="1"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="1" nameSpec="" quality="0" skillId="EnemyExplode" skillPart="1"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="1" nameSpec="" quality="0" skillId="EnemyExplode" skillPart="1"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="1" nameSpec="" quality="0" skillId="EnemyExplode" skillPart="1"/>
+			</Skill>
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="1" mainActiveSkillCalcs="1" slot="Body Armour" source="Item:25:Foulborn Death&apos;s Oath, Astral Plate">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="20" nameSpec="Death Aura" quality="0" skillId="DeathAura"/>
+			</Skill>
+		</SkillSet>
+	</Skills>
 	<Tree activeSpec="1">
 		<Spec ascendClassId="1" classId="3" clusterHashFormatVersion="2" masteryEffects="{2828,34420},{16810,30612},{22480,4500},{28680,23471},{47197,56471},{64128,61097}" nodes="861,2311,2491,2828,3644,4177,4397,5233,5743,5935,6289,6712,6967,7388,7444,7938,7960,9392,9402,9408,9432,9995,10532,10851,14930,14993,15365,16810,17018,17527,18378,18901,20987,21974,22480,23027,23984,24970,25309,25831,25970,26196,26270,26712,26725,27096,28680,29353,29712,30380,31316,31344,31875,31984,32417,32932,33287,33718,34098,34157,34171,34400,34423,34513,35288,36542,36634,36678,36949,37127,37569,41472,42760,44169,44191,44202,46340,46519,47197,48118,48287,48813,49080,52502,53118,54447,54657,55190,55332,55676,57264,58218,59928,60398,60472,61308,61666,62319,62429,63282,63723,64128,64210,65552,65555,65558,65568,65570,65574,65575,65578,65680,65682,65690,65696,65698,65706,65744,65746,65754,65760,65762,65766,65767,65770,66576,66585,66704,66706,66714,66768,66777" secondaryAscendClassId="0" treeVersion="3_29">
 			<URL>

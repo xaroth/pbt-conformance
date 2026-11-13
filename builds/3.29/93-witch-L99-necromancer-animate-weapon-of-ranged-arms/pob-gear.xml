@@ -924,6 +924,16 @@ Nearby Allies have +10 Fortification
 			<SocketIdURL itemPbURL="" name="Jewel 61419" nodeId="61419"/>
 		</ItemSet>
 	</Items>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="nil" showLegacyGems="false" showSupportGemTypes="ALL" sortGemsByDPS="true" sortGemsByDPSField="CombinedDPS">
+		<SkillSet id="1">
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 1" source="Item:14:Foulborn United in Dream, Cutlass">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="25" nameSpec="Envy" quality="0" skillId="Envy"/>
+			</Skill>
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 2 Swap" source="Item:11:Voidfletcher, Ornate Quiver">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="20" nameSpec="Void Shot" quality="0" skillId="VoidShot"/>
+			</Skill>
+		</SkillSet>
+	</Skills>
 	<Tree activeSpec="1">
 		<Spec ascendClassId="3" classId="3" clusterHashFormatVersion="2" masteryEffects="{12125,21468},{13712,56471},{13862,64875},{25535,30612},{34552,41544},{38921,4500},{39416,40073},{47197,61097},{48290,46636},{53188,2902},{54849,57179},{61992,11723}" nodes="1031,1203,1593,2913,3167,3533,4397,4854,5743,5935,6359,6764,6967,7374,7388,7688,7960,9386,10904,11088,11420,12125,13712,13862,14057,14603,14936,15046,15081,15405,15631,17735,17821,18174,18309,19635,19897,19919,20261,20832,20987,21330,21413,21958,21974,22062,23185,23215,24362,24824,25332,25535,25831,26070,26196,26270,26298,26866,27203,27308,27611,29106,29712,31875,32932,33631,33740,33755,34144,34171,34552,34880,35214,36542,36634,36678,36915,37569,38921,39416,39648,39818,39841,40366,41472,42668,42760,43133,43689,43716,44908,44967,46340,46910,47197,48290,48362,48719,49254,50422,50826,50862,52412,52502,53188,53279,54159,54267,54447,54849,54954,55485,55646,55743,56922,57264,58218,60388,60398,60472,60554,60791,61419,61471,61992,64210,64426,65034,65108,65153,65552,65555,65561" secondaryAscendClassId="16" treeVersion="3_29_ruthless">
 			<URL>

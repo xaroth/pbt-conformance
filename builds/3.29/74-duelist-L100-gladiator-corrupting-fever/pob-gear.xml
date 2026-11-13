@@ -672,6 +672,13 @@ Corrupted
 			<SocketIdURL itemPbURL="" name="Jewel 55190" nodeId="55190"/>
 		</ItemSet>
 	</Items>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="nil" showLegacyGems="false" showSupportGemTypes="ALL" sortGemsByDPS="true" sortGemsByDPSField="CombinedDPS">
+		<SkillSet id="1">
+			<Skill enabled="false" includeInFullDPS="nil" label="On Kill Monster Explosion" mainActiveSkill="1" mainActiveSkillCalcs="1" source="Explode">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="1" nameSpec="" quality="0" skillId="EnemyExplode" skillPart="1" skillPartCalcs="1"/>
+			</Skill>
+		</SkillSet>
+	</Skills>
 	<Tree activeSpec="1">
 		<Spec ascendClassId="2" classId="4" clusterHashFormatVersion="2" masteryEffects="{22480,23442},{37641,16215},{48717,48720},{52220,18859},{62588,31822}" nodes="476,1325,1572,1675,2491,2598,3644,4833,5197,5233,6204,6230,6289,6712,7600,8419,9402,10532,11730,11859,13714,14930,15405,16544,16775,17527,18103,18901,19144,19609,21650,22480,23027,23066,24083,24256,24538,24544,24914,26196,26564,26712,26725,27137,27864,28330,28475,28498,29353,29933,30380,30691,30733,31471,31683,31961,32245,32690,32730,33179,33287,33631,33725,33740,34171,34207,34400,34906,35288,35503,36881,36949,37326,37623,37641,38906,39678,40818,40867,40907,42911,43374,44169,44191,44202,44207,45803,46519,46578,46636,46910,47389,47421,48109,48287,48423,48717,48760,49080,49178,50197,50422,50570,50862,50986,52220,53118,54127,54629,55190,55485,55676,55854,58921,59928,60472,61262,62319,62429,62588,63282,63723,63976,64221,64587,64882,65034,65696,65698,65706,65760,65762,65770" secondaryAscendClassId="15" treeVersion="3_29">
 			<URL>

@@ -728,6 +728,19 @@ Corrupted
 			<SocketIdURL itemPbURL="" name="Jewel 60735" nodeId="60735"/>
 		</ItemSet>
 	</Items>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="nil" showLegacyGems="false" showSupportGemTypes="ALL" sortGemsByDPS="true" sortGemsByDPSField="CombinedDPS">
+		<SkillSet id="1">
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 1" source="Item:13:Pain Chant, Abyssal Sceptre">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="1" nameSpec="Blood Rage" quality="0" skillId="BloodRage"/>
+			</Skill>
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Helmet" source="Item:23:Lightpoacher, Great Crown">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="20" nameSpec="Spirit Burst" quality="0" skillId="SpiritBurst"/>
+			</Skill>
+			<Skill enabled="false" includeInFullDPS="nil" label="On Kill Monster Explosion" mainActiveSkill="nil" mainActiveSkillCalcs="nil" source="Explode">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="1" nameSpec="" quality="0" skillId="EnemyExplode" skillPart="1"/>
+			</Skill>
+		</SkillSet>
+	</Skills>
 	<Tree activeSpec="1">
 		<Spec ascendClassId="1" classId="4" clusterHashFormatVersion="2" masteryEffects="{4707,40307},{11596,17821},{20730,45317},{21324,4500},{37795,35302},{44316,47642},{48660,17942},{51583,2987}" nodes="476,1159,1325,2491,3184,3319,4656,4707,5237,5408,6363,6580,6633,8544,9206,9469,10532,11497,11596,11651,12412,12878,14292,15021,15286,15344,15437,15842,16079,16213,16306,16544,17566,18103,18302,18670,18901,19069,19858,20730,20807,20954,21324,21435,22266,22994,23066,23951,24083,24721,24772,24865,24914,25933,26528,29937,30679,31471,32555,32690,33795,34009,34031,34400,34483,34678,36221,36281,36736,36761,37504,37647,37795,38180,38664,39085,40132,40867,41866,42293,42720,42911,43413,44207,44316,45436,46393,46519,46882,47389,48438,48614,48660,48807,49109,49343,50150,50679,50845,50986,51583,52230,54127,55420,56807,57011,57449,58271,58541,58854,58921,59220,59866,60735,61262,61636,62319,62817,64878,64882,65485,65502,65632,65634,65638,65639,65642,65760,65762,65766,65767,65770" secondaryAscendClassId="0" treeVersion="3_29">
 			<URL>

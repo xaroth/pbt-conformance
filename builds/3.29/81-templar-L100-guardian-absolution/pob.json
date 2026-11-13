@@ -201,7 +201,7 @@
     "allocated": 133,
     "outputs": {
       "Armour": 15963,
-      "BlockChance": 54,
+      "BlockChance": 75,
       "ChaosResist": 80,
       "ChaosResistTotal": 114,
       "ColdResist": 76,
@@ -230,7 +230,7 @@
       "MissingColdResist": 0,
       "MissingFireResist": 37,
       "MissingLightningResist": 276,
-      "SpellBlockChance": 54,
+      "SpellBlockChance": 29,
       "SpellSuppressionChance": 0,
       "Str": 198
     }

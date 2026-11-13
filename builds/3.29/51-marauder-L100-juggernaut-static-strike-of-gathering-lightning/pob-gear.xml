@@ -986,6 +986,13 @@ Corrupted
 			<SocketIdURL itemPbURL="" name="Jewel 55190" nodeId="55190"/>
 		</ItemSet>
 	</Items>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="nil" showLegacyGems="false" showSupportGemTypes="ALL" sortGemsByDPS="true" sortGemsByDPSField="CombinedDPS">
+		<SkillSet id="1">
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 1" source="Item:20:Soul Bite, Reaver Sword">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="1" nameSpec="Blood Rage" quality="0" skillId="BloodRage"/>
+			</Skill>
+		</SkillSet>
+	</Skills>
 	<Tree activeSpec="1">
 		<Spec ascendClassId="1" classId="1" clusterHashFormatVersion="2" masteryEffects="{4139,34242},{28284,5356},{33657,31331},{56595,39154},{64406,46180}" nodes="476,1325,1734,2092,2491,3469,3644,4139,4833,5152,5233,5237,5819,6043,6289,6580,6712,7600,10532,11730,11859,12795,13714,14930,15027,15405,15868,17765,18009,18302,18901,19711,19884,20010,22627,22994,23027,23471,23972,24083,24383,24865,24914,25531,25933,26196,26712,26725,27119,28284,28475,29353,29797,29933,30380,30733,31080,31471,32115,32739,33287,33631,33657,33740,34009,34031,34171,34400,34590,35288,36047,36949,37326,40132,43374,44169,44202,44297,46393,46519,46578,46882,46910,47175,48109,48287,48438,48807,49080,49153,49178,49412,49772,50288,50340,50422,50570,50862,50904,53118,54127,55190,55485,55676,56001,56595,56789,58556,58854,59928,60031,60472,61198,61262,62319,62429,63048,63282,63417,63620,63723,64406,65034,65632,65634,65642,65696,65698,65706,65760,65762,65770" secondaryAscendClassId="15" treeVersion="3_29">
 			<URL>

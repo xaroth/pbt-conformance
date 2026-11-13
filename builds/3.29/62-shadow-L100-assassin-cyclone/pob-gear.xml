@@ -797,6 +797,13 @@ Magic Utility Flask Effects cannot be removed
 			<SocketIdURL itemPbURL="" name="Jewel 64583" nodeId="64583"/>
 		</ItemSet>
 	</Items>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="nil" showLegacyGems="false" showSupportGemTypes="ALL" sortGemsByDPS="true" sortGemsByDPSField="CombinedDPS">
+		<SkillSet id="1">
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="1" mainActiveSkillCalcs="1" source="Tree:48239">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="30" nameSpec="" quality="0" skillId="AssassinsMark"/>
+			</Skill>
+		</SkillSet>
+	</Skills>
 	<Tree activeSpec="1">
 		<Spec ascendClassId="1" classId="6" clusterHashFormatVersion="2" masteryEffects="{27307,31556},{30393,37614},{32657,48980},{34723,40307},{38921,4500},{45558,30612},{47197,12046}" nodes="1945,2311,3452,4242,4269,4367,5462,5935,6064,6204,6230,6764,6770,6967,7364,7388,7444,7600,7960,9261,9408,9788,10490,10575,11334,11455,12246,12783,12850,12888,13170,15117,15549,16954,18033,18182,18865,19919,20528,20546,20987,21033,21264,21301,21974,21984,22473,22577,22618,23659,24643,25411,25789,25831,26196,27307,27415,27656,28221,28754,29199,29712,30393,31703,32657,32681,32710,32932,33479,33545,33864,33954,34173,34723,35283,35894,35958,36634,36678,36858,37671,37999,38129,38921,39743,39841,40366,40508,41263,42760,44184,44683,45558,46092,46277,46340,46676,47197,47251,48239,48423,48768,48778,49605,50029,51923,52502,53456,55686,55743,55880,56158,56295,58229,58402,60090,60398,60440,61419,61834,63425,63447,63976,64210,64583,65273,65568,65570,65578,65888,65890,65898,66576,66578,66586" secondaryAscendClassId="15" treeVersion="3_29">
 			<URL>

@@ -447,6 +447,13 @@ Gain a Void Charge every second
 			<SocketIdURL itemPbURL="" name="Jewel 61834" nodeId="61834"/>
 		</ItemSet>
 	</Items>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="nil" showLegacyGems="false" showSupportGemTypes="ALL" sortGemsByDPS="true" sortGemsByDPSField="CombinedDPS">
+		<SkillSet id="1">
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 2 Swap" source="Item:13:Voidfletcher, Ornate Quiver">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="20" nameSpec="Void Shot" quality="0" skillId="VoidShot"/>
+			</Skill>
+		</SkillSet>
+	</Skills>
 	<Tree activeSpec="1">
 		<Spec ascendClassId="1" classId="3" clusterHashFormatVersion="2" masteryEffects="{1215,27103},{34723,40307},{55230,62252},{60170,26782},{63861,2987}" nodes="367,1215,3452,4367,4397,5296,5456,5972,6204,6230,6728,7388,7444,7960,8135,8833,9261,9567,10153,10490,10861,11128,11420,11455,11688,11730,12128,12783,12888,13232,13322,14182,14211,15117,16954,18033,18182,18378,19501,20528,20987,21033,21984,22090,22473,22618,23659,24426,25411,25757,26196,26270,27096,27656,31875,32176,32345,32417,32710,33310,33479,33545,33864,34098,34171,34173,34723,35706,36107,36412,36452,36542,36634,36678,36858,37492,37569,37999,39841,40609,41263,42731,42760,43242,44184,45456,46092,46340,46842,47251,47630,48124,48423,48768,48778,49605,50029,51213,51219,51923,52502,53456,54447,55230,56029,56158,56295,57264,60090,60170,60259,60398,60405,60440,60472,61419,61834,61981,62504,63398,63447,63861,63976,64210" secondaryAscendClassId="11" treeVersion="3_29">
 			<URL>

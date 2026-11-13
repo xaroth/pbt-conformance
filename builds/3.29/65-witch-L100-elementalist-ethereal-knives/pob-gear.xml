@@ -836,6 +836,16 @@ Trigger a Socketed Bow Skill when you Attack with a Bow, with a 1 second Cooldow
 			<SocketIdURL itemPbURL="" name="Jewel 64583" nodeId="64583"/>
 		</ItemSet>
 	</Items>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="nil" showLegacyGems="false" showSupportGemTypes="ALL" sortGemsByDPS="true" sortGemsByDPSField="CombinedDPS">
+		<SkillSet id="1">
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Ring 2" source="Item:29:Lost Unity, Formless Ring">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="30" nameSpec="Herald of the Hive" quality="0" skillId="HeraldOfTheBreach"/>
+			</Skill>
+			<Skill enabled="false" includeInFullDPS="nil" label="On Kill Monster Explosion" mainActiveSkill="nil" mainActiveSkillCalcs="nil" source="Explode">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="1" nameSpec="" quality="0" skillId="EnemyExplode" skillPart="1"/>
+			</Skill>
+		</SkillSet>
+	</Skills>
 	<Tree activeSpec="1">
 		<Spec ascendClassId="2" classId="3" clusterHashFormatVersion="2" masteryEffects="{25011,38454},{38921,4500}" nodes="258,2491,3644,4367,4397,5233,5296,5743,5935,6289,6712,6764,6967,7388,7444,7600,7960,9386,9402,9408,10532,11820,12738,13170,14057,14930,14936,15117,15167,16023,17527,18901,19501,19919,20987,21033,21958,21974,21984,22088,22618,23027,24872,25011,25831,26196,26270,26712,26725,29353,29712,31875,32932,33310,34098,34171,34400,34506,35233,35288,36107,36542,36634,36678,36949,37114,37569,38246,38921,39841,42760,44169,44184,44191,44202,46340,46519,47873,48287,49080,49605,51213,52502,52742,53123,54279,54447,55190,55332,55743,56461,57264,58218,59928,60398,60472,60989,61259,61419,62319,62429,63039,63282,63447,63723,64210,64583,65552,65555,65568,65570,65578,65680,65689,65696,65698,65706,65744,65750,65753,65760,65762,65770,65888,65890,65898,66576,66579,66704,66713,66768,66771,66774,66777" secondaryAscendClassId="15" treeVersion="3_29">
 			<URL>

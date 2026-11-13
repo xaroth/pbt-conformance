@@ -1115,6 +1115,13 @@ Corrupted
 			<SocketIdURL itemPbURL="" name="Jewel 61419" nodeId="61419"/>
 		</ItemSet>
 	</Items>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="nil" showLegacyGems="false" showSupportGemTypes="ALL" sortGemsByDPS="true" sortGemsByDPSField="CombinedDPS">
+		<SkillSet id="1">
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Amulet" source="Item:20:Aul&apos;s Uprising, Onyx Amulet">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="15" nameSpec="Envy" quality="0" skillId="Envy"/>
+			</Skill>
+		</SkillSet>
+	</Skills>
 	<Tree activeSpec="1">
 		<Spec ascendClassId="3" classId="3" clusterHashFormatVersion="2" masteryEffects="{34552,9876},{39416,57179},{47197,61097}" nodes="2491,2913,3644,4367,5233,5296,5415,5935,6764,7388,7444,7688,7960,8948,9392,9408,10532,13164,13170,14603,14930,15046,15081,15117,15405,18901,19103,19501,19732,19897,20987,21033,21678,21974,21984,22062,22618,23027,23185,24824,25831,26196,26270,26298,26712,26725,27308,27415,27659,28449,29353,29712,31875,32210,32710,32932,33310,33631,34098,34144,34171,34400,34552,35288,36017,36634,36678,37671,39416,39818,39841,40366,41263,42668,42760,43133,43689,43716,44169,44184,44202,46340,46519,47197,48778,49080,49605,50422,50570,50862,52412,52502,54159,54267,54447,55190,55646,56075,57226,59585,59928,60398,60472,60791,61419,62319,62429,63282,63447,63723,64210,65153,65568,65570,65578,65696,65698,65706,65760,65762,65770,65888,65889,65890,65891,65893,65894,65895,65897,65898,65899,66896,66899" secondaryAscendClassId="0" treeVersion="3_29">
 			<URL>
