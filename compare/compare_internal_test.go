@@ -3,6 +3,7 @@ package compare
 // Internal: the engine gives no skill outputs yet, so they are fed in as it will give them.
 
 import (
+	"errors"
 	"os"
 	"path/filepath"
 	"testing"
@@ -28,7 +29,10 @@ func TestSkillOutputs(t *testing.T) {
 	}
 	tree := map[string]float64{"player.life": 1150, "skill.average_hit": 0, "skill.physical_damage_modifier": 1}
 
-	got := compareOutputs(outputs, ours{tree: tree}, v, "3.29", "01-x")
+	got, err := compareOutputs(outputs, ours{tree: tree}, v, "3.29", "01-x")
+	if err != nil {
+		t.Fatal(err)
+	}
 	if len(got) != 0 {
 		t.Errorf("without skill values: got mismatches %+v", got)
 	}
@@ -38,7 +42,10 @@ func TestSkillOutputs(t *testing.T) {
 		skill: map[string]float64{"skill.average_hit": 600, "skill.physical_damage_modifier": 1},
 		full:  map[string]float64{"skill.average_hit": 900},
 	}
-	got = compareOutputs(outputs, o, v, "3.29", "01-x")
+	got, err = compareOutputs(outputs, o, v, "3.29", "01-x")
+	if err != nil {
+		t.Fatal(err)
+	}
 	want := []Mismatch{{League: "3.29", Build: "01-x", Output: "skill.average_hit", Ours: 600, PoB: 610, PoBFull: 900, HasPoB: true}}
 	if diff := cmp.Diff(want, got); diff != "" {
 		t.Errorf("mismatches (-want +got):\n%s", diff)
@@ -56,6 +63,18 @@ func TestSkillOutputs(t *testing.T) {
 				t.Errorf("%s layer (-want +got):\n%s", l.Name, diff)
 			}
 		}
+	}
+}
+
+// An output with no PoB key fails the comparison unless it is a skill output, so a new sheet or
+// defence output cannot go unchecked.
+func TestUnmappedOutput(t *testing.T) {
+	t.Parallel()
+	v := &pob.Values{TreeOnly: pob.Result{Outputs: map[string]float64{"Life": 1150}}}
+	o := ours{tree: map[string]float64{"player.life": 1150, "player.not_mapped": 1}}
+	_, err := compareOutputs([]simulator.Output{{Key: "player.life"}, {Key: "player.not_mapped"}}, o, v, "3.29", "01-x")
+	if !errors.Is(err, errNoKey) {
+		t.Errorf("got %v, want %v", err, errNoKey)
 	}
 }
 
