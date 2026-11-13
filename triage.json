@@ -1,14 +1,5 @@
 [
   {
-    "id": "spell-block-elementalist-mana-regeneration",
-    "kind": "pending",
-    "league": "3.28",
-    "build": "*-witch-*-elementalist-elemental-overload",
-    "output": "player.mana_regeneration",
-    "reason": "Chance to block spell damage is not a sheet value yet: node 18174 gives 1% increased mana regeneration rate per 1% chance to block spell damage",
-    "evidence": "PoB ManaRegen INC 8 from Tree:18174 (PerStat); the engine notes the stat as not applied (scale)"
-  },
-  {
     "id": "unchecked-body-armour-life-mastery",
     "kind": "pending",
     "build": "*",
@@ -22,7 +13,7 @@
     "kind": "pending",
     "league": "3.29",
     "reason": "Tattoos and runegrafts replace a tree node (PoB node overrides); the importer does not import them, so the engine keeps the replaced node's own stats",
-    "evidence": "Recorded again with the overrides removed, PoB's tree-only value matches ours for every value case here; the import notes name the override (Tattoo, Journey Tattoo or Runegraft). In build 43 the secondary ascendancy adds to the gap. Energy shield regeneration in builds 58 and 70 follows the energy shield gap: regeneration as a share of maximum energy shield is the same in ours and PoB's (58: 100 flat plus 1.7%; 70: 5.9%). Fire and cold resistance in build 84 follow its fire and cold resistance tattoos",
+    "evidence": "Recorded again with the overrides removed, PoB's tree-only value matches ours for every value case here; the import notes name the override (Tattoo, Journey Tattoo or Runegraft). In build 43 the secondary ascendancy adds to the gap. Energy shield regeneration in builds 58 and 70 follows the energy shield gap: regeneration as a share of maximum energy shield is the same in ours and PoB's (58: 100 flat plus 1.7%; 70: 5.9%). Fire and cold resistance in build 84 follow its fire and cold resistance tattoos. Chance to block spell damage in builds 65, 79 and 93 comes from Valako Shieldbearer tattoos: their chance to block attack damage feeds the Block Mastery's +1% chance to block spell damage per 5%",
     "cases": [
       {"build": "100-witch-L100-elementalist-glacial-cascade-of-the-fissure", "output": "import:pob-override-ignored", "subject": "node 12125"},
       {"build": "100-witch-L100-elementalist-glacial-cascade-of-the-fissure", "output": "import:pob-override-ignored", "subject": "node 18182"},
@@ -445,9 +436,11 @@
       {"build": "49-witch-L100-occultist-fireball", "output": "player.intelligence", "ours": 322, "pob": 101},
       {"build": "49-witch-L100-occultist-fireball", "output": "player.mana", "ours": 1168, "pob": 1008},
       {"build": "49-witch-L100-occultist-fireball", "output": "player.unreserved_mana", "ours": 1168, "pob": 1008},
+      {"build": "49-witch-L100-occultist-fireball", "output": "player.energy_shield", "ours": 47, "pob": 54},
       {"build": "49-witch-L100-occultist-fireball", "output": "player.evasion_rating", "ours": 15, "pob": 21},
       {"build": "49-witch-L100-occultist-fireball", "output": "player.fire_resistance", "ours": -52, "pob": -34},
       {"build": "49-witch-L100-occultist-fireball", "output": "player.uncapped_fire_resistance", "ours": -52, "pob": -34},
+      {"build": "49-witch-L100-occultist-fireball", "output": "player.mana_regeneration", "ours": 31.9, "pob": 27.5},
       {"build": "50-scion-L100-luminary-ethereal-knives", "output": "import:pob-override-ignored", "subject": "node 857"},
       {"build": "50-scion-L100-luminary-ethereal-knives", "output": "import:pob-override-ignored", "subject": "node 1461"},
       {"build": "50-scion-L100-luminary-ethereal-knives", "output": "import:pob-override-ignored", "subject": "node 4367"},
@@ -763,6 +756,7 @@
       {"build": "65-witch-L100-elementalist-ethereal-knives", "output": "player.lightning_resistance", "ours": -43, "pob": -7},
       {"build": "65-witch-L100-elementalist-ethereal-knives", "output": "player.uncapped_lightning_resistance", "ours": -43, "pob": -7},
       {"build": "65-witch-L100-elementalist-ethereal-knives", "output": "player.mana_regeneration", "ours": 14.7, "pob": 13.2},
+      {"build": "65-witch-L100-elementalist-ethereal-knives", "output": "player.spell_block_chance", "ours": 0, "pob": 2},
       {"build": "66-duelist-L100-champion-flicker-strike", "output": "import:pob-override-ignored", "subject": "node 28863"},
       {"build": "66-duelist-L100-champion-flicker-strike", "output": "import:pob-override-ignored", "subject": "node 62588"},
       {"build": "67-duelist-L100-slayer-void-shockwave", "output": "import:pob-override-ignored", "subject": "node 3644"},
@@ -998,6 +992,7 @@
       {"build": "79-witch-L100-necromancer-summon-holy-relic-of-conviction", "output": "player.uncapped_fire_resistance", "ours": -31, "pob": 5},
       {"build": "79-witch-L100-necromancer-summon-holy-relic-of-conviction", "output": "player.life_regeneration", "ours": 32.6, "pob": 31.1},
       {"build": "79-witch-L100-necromancer-summon-holy-relic-of-conviction", "output": "player.mana_regeneration", "ours": 15.8, "pob": 14.4},
+      {"build": "79-witch-L100-necromancer-summon-holy-relic-of-conviction", "output": "player.spell_block_chance", "ours": 0, "pob": 1},
       {"build": "80-witch-L100-occultist-summon-holy-relic-of-conviction", "output": "import:pob-override-ignored", "subject": "node 3644"},
       {"build": "80-witch-L100-occultist-summon-holy-relic-of-conviction", "output": "import:pob-override-ignored", "subject": "node 4397"},
       {"build": "80-witch-L100-occultist-summon-holy-relic-of-conviction", "output": "import:pob-override-ignored", "subject": "node 5233"},
@@ -1258,6 +1253,8 @@
       {"build": "93-witch-L99-necromancer-animate-weapon-of-ranged-arms", "output": "player.chaos_resistance", "ours": -6, "pob": 3},
       {"build": "93-witch-L99-necromancer-animate-weapon-of-ranged-arms", "output": "player.uncapped_chaos_resistance", "ours": -6, "pob": 3},
       {"build": "93-witch-L99-necromancer-animate-weapon-of-ranged-arms", "output": "player.life_regeneration", "ours": 140.9, "pob": 137.2},
+      {"build": "93-witch-L99-necromancer-animate-weapon-of-ranged-arms", "output": "player.mana_regeneration", "ours": 43.3, "pob": 42.6},
+      {"build": "93-witch-L99-necromancer-animate-weapon-of-ranged-arms", "output": "player.spell_block_chance", "ours": 8, "pob": 9},
       {"build": "95-templar-L100-hierophant-storm-burst-of-repulsion", "output": "import:pob-override-ignored", "subject": "node 53188"},
       {"build": "98-scion-L100-luminary-artillery-ballista", "output": "import:pob-override-ignored", "subject": "node 292"},
       {"build": "98-scion-L100-luminary-artillery-ballista", "output": "import:pob-override-ignored", "subject": "node 28574"},
@@ -1592,7 +1589,8 @@
       {"build": "45-scion-L100-reliquarian-bladefall-of-trarthus", "output": "player.intelligence", "ours": 310, "pob": 190},
       {"build": "45-scion-L100-reliquarian-bladefall-of-trarthus", "output": "player.mana", "ours": 1357, "pob": 1108},
       {"build": "45-scion-L100-reliquarian-bladefall-of-trarthus", "output": "player.unreserved_mana", "ours": 1357, "pob": 1108},
-      {"build": "45-scion-L100-reliquarian-bladefall-of-trarthus", "output": "player.mana_regeneration", "ours": 33.2, "pob": 27.1},
+      {"build": "45-scion-L100-reliquarian-bladefall-of-trarthus", "output": "player.mana_regeneration", "ours": 34.7, "pob": 27.1},
+      {"build": "45-scion-L100-reliquarian-bladefall-of-trarthus", "output": "player.spell_block_chance", "ours": 6, "pob": 0},
       {"build": "46-shadow-L100-assassin-storm-burst-of-repulsion", "output": "allocated_nodes", "ours": 102, "pob": 97},
       {"build": "46-shadow-L100-assassin-storm-burst-of-repulsion", "output": "warning:nodes-disconnected", "subject": "nodes 2311, 9408, 9797, 12613, 13170, 29712, 59585, 64583"},
       {"build": "47-witch-L100-occultist-essence-drain", "output": "allocated_nodes", "ours": 122, "pob": 119},
@@ -1637,6 +1635,8 @@
       {"build": "64-shadow-L97-assassin-rain-of-arrows-of-saturation", "output": "warning:nodes-disconnected", "subject": "nodes 6910, 10115, 18174, 18436, 20528, 22748, 33753"},
       {"build": "64-shadow-L97-assassin-rain-of-arrows-of-saturation", "output": "player.mana", "ours": 842, "pob": 694},
       {"build": "64-shadow-L97-assassin-rain-of-arrows-of-saturation", "output": "player.unreserved_mana", "ours": 842, "pob": 694},
+      {"build": "64-shadow-L97-assassin-rain-of-arrows-of-saturation", "output": "player.mana_regeneration", "ours": 16.8, "pob": 13.1},
+      {"build": "64-shadow-L97-assassin-rain-of-arrows-of-saturation", "output": "player.spell_block_chance", "ours": 6, "pob": 0},
       {"build": "65-witch-L100-elementalist-ethereal-knives", "output": "allocated_nodes", "ours": 106, "pob": 97},
       {"build": "65-witch-L100-elementalist-ethereal-knives", "output": "warning:nodes-disconnected", "subject": "nodes 9408, 10532, 11820, 13170, 29712, 44169, 46519, 49080, 52742, 64583"},
       {"build": "65-witch-L100-elementalist-ethereal-knives", "output": "player.maximum_fire_resistance", "ours": 76, "pob": 75},
@@ -1747,33 +1747,39 @@
     "id": "mana-regeneration-not-applied",
     "kind": "pending",
     "league": "3.29",
-    "reason": "Mana regeneration from stats the engine notes as not applied: per 1% Chance to Block Spell Damage (Mystic Bulwark, 18174, spell block is not a sheet value), per Summoned Totem (Ritual of Awakening, 34434) and if Exposure was inflicted recently (Mastermind of Discord, 61259)",
-    "evidence": "Each build holds at least one of these nodes; the gap remains with the overrides, secondary ascendancy and jewel-connected nodes removed. In builds 100, 102, 36, 46, 49, 58, 61, 62, 64, 93, 95 a tattoo or runegraft adds to the gap",
+    "reason": "Mana regeneration from stats the engine notes as not applied: per Summoned Totem (Ritual of Awakening, 34434) and if Exposure was inflicted recently (Mastermind of Discord, 61259)",
+    "evidence": "Each build holds at least one of these nodes; the gap remains with the overrides, secondary ascendancy and jewel-connected nodes removed. In builds 100, 102, 36, 46, 58, 61, 62, 95 a tattoo or runegraft adds to the gap",
     "cases": [
       {"build": "100-witch-L100-elementalist-glacial-cascade-of-the-fissure", "output": "player.mana_regeneration", "ours": 28.5, "pob": 37.8},
       {"build": "102-shadow-L100-assassin-freezing-pulse", "output": "player.mana_regeneration", "ours": 23.9, "pob": 23.8},
       {"build": "36-witch-L100-occultist-winter-orb", "output": "player.mana_regeneration", "ours": 27.3, "pob": 22.9},
       {"build": "46-shadow-L100-assassin-storm-burst-of-repulsion", "output": "player.mana_regeneration", "ours": 16.1, "pob": 27.2},
-      {"build": "49-witch-L100-occultist-fireball", "output": "player.mana_regeneration", "ours": 30.3, "pob": 27.5},
       {"build": "58-witch-L100-occultist-cyclone", "output": "player.mana_regeneration", "ours": 23.2, "pob": 19.3},
       {"build": "61-shadow-L100-assassin-lancing-steel-of-spraying", "output": "player.mana_regeneration", "ours": 16, "pob": 13.2},
       {"build": "62-shadow-L100-assassin-cyclone", "output": "player.mana_regeneration", "ours": 27, "pob": 21.8},
-      {"build": "64-shadow-L97-assassin-rain-of-arrows-of-saturation", "output": "player.mana_regeneration", "ours": 15.9, "pob": 13.1},
-      {"build": "86-witch-L100-necromancer-animate-guardian-of-smiting", "output": "player.mana_regeneration", "ours": 25.8, "pob": 27.2},
-      {"build": "93-witch-L99-necromancer-animate-weapon-of-ranged-arms", "output": "player.mana_regeneration", "ours": 41.2, "pob": 42.6},
-      {"build": "95-templar-L100-hierophant-storm-burst-of-repulsion", "output": "player.mana_regeneration", "ours": 278.2, "pob": 262.2},
-      {"build": "96-templar-L100-hierophant-arc", "output": "player.mana_regeneration", "ours": 100.9, "pob": 106.8},
-      {"build": "97-templar-L100-hierophant-freezing-pulse", "output": "player.mana_regeneration", "ours": 43.5, "pob": 45.5}
+      {"build": "95-templar-L100-hierophant-storm-burst-of-repulsion", "output": "player.mana_regeneration", "ours": 278.2, "pob": 262.2}
     ]
   },
   {
-    "id": "vile-bastion",
+    "id": "spell-block-per-attack-block",
     "kind": "pending",
     "league": "3.29",
-    "reason": "Vile Bastion (Occultist, node 37492): \"Maximum Energy Shield is increased by Chance to Block Spell Damage\" waits for spell block",
-    "evidence": "The engine notes the stat as left out; PoB gives build 49 8% chance to block spell damage on the tree-only sheet, builds 36 and 58 none. Build 49 also has a tattoo, which may add to the gap",
+    "reason": "The Block Mastery's \"+1% Chance to Block Spell Damage per 5% Chance to Block Attack Damage\" (spell_block_%_per_5_attack_block): chance to block attack damage is not a sheet value yet, so the engine notes the stat as not applied",
+    "evidence": "Each build holds the mastery effect and nodes with +3% Chance to Block Attack Damage (1675, 24538); recorded again with the overrides removed, PoB gives 6% chance to block attack damage and 1% chance to block spell damage on the tree-only sheet. In build 44 Valako Shieldbearer tattoos add 1% more",
     "cases": [
-      {"build": "49-witch-L100-occultist-fireball", "output": "player.energy_shield", "ours": 45, "pob": 54}
+      {"build": "43-duelist-L100-gladiator-wave-of-conviction-of-trarthus", "output": "player.spell_block_chance", "ours": 0, "pob": 1},
+      {"build": "44-duelist-L100-gladiator-detonate-dead-of-scavenging", "output": "player.spell_block_chance", "ours": 0, "pob": 2},
+      {"build": "72-duelist-L100-gladiator-blade-blast", "output": "player.spell_block_chance", "ours": 0, "pob": 1}
+    ]
+  },
+  {
+    "id": "spell-block-if-cast-spell-recently",
+    "kind": "pending",
+    "league": "3.29",
+    "reason": "Bastion of Hope (Guardian, node 39728): \"If you've Cast a Spell Recently, you and nearby Allies have +25% Chance to Block Spell Damage\"; the engine notes the stat as not applied, since the condition is not set",
+    "evidence": "PoB counts the 25% on the tree-only sheet; the build's other spell block nodes need a staff or shield, which the engine leaves out and PoB does not count",
+    "cases": [
+      {"build": "81-templar-L100-guardian-absolution", "output": "player.spell_block_chance", "ours": 0, "pob": 25}
     ]
   },
   {
