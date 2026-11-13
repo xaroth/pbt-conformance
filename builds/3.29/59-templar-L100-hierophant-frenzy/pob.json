@@ -8,6 +8,16 @@
     "outputs": {
       "Armour": 11636,
       "BlockChance": 63,
+      "Calcs.MainHand.ChaosMax": 436574.3616,
+      "Calcs.MainHand.ChaosMin": 5457.2544,
+      "Calcs.MainHand.ColdMax": 0,
+      "Calcs.MainHand.ColdMin": 0,
+      "Calcs.MainHand.FireMax": 0,
+      "Calcs.MainHand.FireMin": 0,
+      "Calcs.MainHand.LightningMax": 0,
+      "Calcs.MainHand.LightningMin": 0,
+      "Calcs.MainHand.PhysicalMax": 0,
+      "Calcs.MainHand.PhysicalMin": 0,
       "ChaosResist": 75,
       "ChaosResistTotal": 98,
       "ColdResist": 84,
@@ -51,7 +61,102 @@
       "group": 3,
       "id": "Frenzy",
       "name": "Frenzy",
-      "attack": true
+      "attack": true,
+      "supports": [
+        {
+          "id": "SupportLifetap",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportCastOnCriticalStrike",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportFasterAttacks",
+          "level": 20,
+          "quality": 20
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 134,
+    "outputs": {
+      "Armour": 8004,
+      "BlockChance": 63,
+      "Calcs.MainHand.ChaosMax": 97326.32,
+      "Calcs.MainHand.ChaosMin": 1216.8,
+      "Calcs.MainHand.ColdMax": 0,
+      "Calcs.MainHand.ColdMin": 0,
+      "Calcs.MainHand.FireMax": 0,
+      "Calcs.MainHand.FireMin": 0,
+      "Calcs.MainHand.LightningMax": 0,
+      "Calcs.MainHand.LightningMin": 0,
+      "Calcs.MainHand.PhysicalMax": 0,
+      "Calcs.MainHand.PhysicalMin": 0,
+      "ChaosResist": 49,
+      "ChaosResistTotal": 49,
+      "ColdResist": 26,
+      "ColdResistTotal": 26,
+      "CombinedDPS": 245869.99484309,
+      "CritChance": 46.224,
+      "Dex": 179,
+      "EnergyShield": 322,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 107,
+      "EnergyShieldRegen": 0,
+      "EnergyShieldRegenRecovery": 0,
+      "Evasion": 862,
+      "FireResist": 4,
+      "FireResistTotal": 4,
+      "HitChance": 96,
+      "Int": 200,
+      "Life": 6407,
+      "LifeLeechRate": 1070.2203175186,
+      "LifeRegen": 281.9,
+      "LifeRegenRecovery": 281.9,
+      "LifeUnreserved": 6407,
+      "LightningResist": 5,
+      "LightningResistTotal": 5,
+      "MainHand.AverageHit": 94822.1317888,
+      "Mana": 829,
+      "ManaRegen": 26.1,
+      "ManaUnreserved": 829,
+      "MissingChaosResist": 26,
+      "MissingColdResist": 49,
+      "MissingFireResist": 71,
+      "MissingLightningResist": 70,
+      "Speed": 2.701,
+      "SpellBlockChance": 0,
+      "SpellSuppressionChance": 29,
+      "Str": 3158,
+      "TotalDPS": 245869.99484309,
+      "TotalDotDPS": 0
+    },
+    "mainSkill": {
+      "group": 2,
+      "id": "Frenzy",
+      "name": "Frenzy",
+      "attack": true,
+      "supports": [
+        {
+          "id": "SupportLifetap",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportCastOnCriticalStrike",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportFasterAttacks",
+          "level": 20,
+          "quality": 20
+        }
+      ]
     }
   },
   "gear": {

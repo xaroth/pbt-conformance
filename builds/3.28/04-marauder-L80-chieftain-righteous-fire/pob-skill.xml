@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathOfBuilding>
+	<Build level="80" targetVersion="3_0" className="Marauder" ascendClassName="Chieftain" bandit="None" pantheonMajorGod="None" pantheonMinorGod="None" mainSocketGroup="1" viewMode="ITEMS" characterLevelAutoMode="false"/>
+	<Tree activeSpec="1">
+		<Spec treeVersion="3_28" classId="1" ascendClassId="3" secondaryAscendClassId="0" nodes="1731,2550,3533,4139,4367,4713,5152,5368,5643,5743,6204,6245,6446,6712,7374,7444,9052,9386,9971,10031,10221,11088,11505,11730,11924,12125,12382,13559,13714,14057,14936,15064,15117,15405,15631,15868,16775,20551,20987,21958,22285,22627,23027,24383,24704,25970,26196,26270,26725,28475,29049,30380,31080,31462,31931,32241,32249,32738,33287,33740,33755,34171,34423,36047,36678,36949,37326,38119,38508,39713,39841,40653,40907,41415,42659,42760,43374,44184,44429,44967,46910,48118,48267,48423,48480,48505,49178,49412,50422,50862,50904,53118,53793,54396,55332,55485,55649,58218,60472,61198,61419,61804,62017,62363,63048,63447,63976,64210,65034,65108" masteryEffects="{4139,34242},{5368,4500},{11505,36313},{12125,31822},{12382,38454},{32241,64381},{41415,21468},{48267,55308},{48505,47642}">
+			<Sockets>
+				<Socket nodeId="28475" itemId="16"/>
+				<Socket nodeId="26196" itemId="17"/>
+				<Socket nodeId="61419" itemId="18"/>
+				<Socket nodeId="26725" itemId="19"/>
+			</Sockets>
+		</Spec>
+	</Tree>
+	<Items activeItemSet="1" useSecondWeaponSet="false">
+		<Item id="6">
+Rarity: UNIQUE
+Nebulis
+Void Sceptre
+Item Level: 78
+Quality: 0
+Sockets: R-B-B
+Implicits: 1
+40% increased Elemental Damage
+80% increased Implicit Modifier magnitudes
+16% increased Cast Speed
+7% increased Elemental Damage per 1% Fire, Cold, or Lightning Resistance above 75%
+		</Item>
+		<Item id="7">
+Rarity: RARE
+Blood Wall
+Ezomyte Tower Shield
+Armour: 780
+Item Level: 79
+Quality: 20
+Sockets: B-B-R
+Implicits: 1
++36 to maximum Life
++99 to maximum Life
++38% to Fire Resistance
++30% to Cold Resistance
+Recover 3% of Life when you Block
+62% increased Armour
+		</Item>
+		<Item id="8">
+Rarity: RARE
+Dusk Visor
+Eternal Burgonet
+Armour: 420
+Item Level: 79
+Quality: 20
+Sockets: G-G-B-R
+Implicits: 0
++94 to maximum Life
+Regenerate 12.1 Life per second
++40% to Fire Resistance
++27% to Chaos Resistance
+24% increased Burning Damage
+		</Item>
+		<Item id="9">
+Rarity: UNIQUE
+Cloak of Flame
+Scholar's Robe
+Energy Shield: 30
+Item Level: 78
+Quality: 20
+Sockets: G-R-B-B-B-B
+Implicits: 0
++60% to Fire Resistance
+63% increased Ignite Duration on Enemies
+Reflects 100 Fire Damage to Melee Attackers
+40% of Physical Damage taken as Fire Damage
+		</Item>
+		<Item id="10">
+Rarity: RARE
+Corpse Fist
+Titan Gauntlets
+Armour: 340
+Item Level: 78
+Quality: 20
+Sockets: R-G-R-R
+Implicits: 0
++92 to maximum Life
++46 to Dexterity
++29% to Chaos Resistance
+16% increased Life Regeneration rate
+32% increased Armour
+		</Item>
+		<Item id="11">
+Rarity: RARE
+Gale Stride
+Dragonscale Boots
+Armour: 210
+Evasion: 210
+Item Level: 78
+Quality: 20
+Sockets: B-B-B-R
+Implicits: 0
+30% increased Movement Speed
++88 to maximum Life
++41% to Fire Resistance
++25% to Chaos Resistance
++40 to Dexterity
+		</Item>
+		<Item id="12">
+Rarity: RARE
+Doom Locket
+Turquoise Amulet
+Item Level: 80
+Implicits: 1
++20 to Dexterity and Intelligence
++98 to maximum Life
++23% to Damage over Time Multiplier
++36 to Strength
++38% to Fire Resistance
+		</Item>
+		<Item id="13">
+Rarity: RARE
+Sol Knot
+Ruby Ring
+Item Level: 78
+Implicits: 1
++28% to Fire Resistance
++68 to maximum Life
++16% to Damage over Time Multiplier
++42% to Fire Resistance
++29% to Chaos Resistance
+		</Item>
+		<Item id="14">
+Rarity: RARE
+Hate Spiral
+Amethyst Ring
+Item Level: 78
+Implicits: 1
++21% to Chaos Resistance
++71 to maximum Life
++40% to Fire Resistance
++36 to Strength
++30 to Intelligence
+		</Item>
+		<Item id="15">
+Rarity: RARE
+Corpse Cord
+Heavy Belt
+Item Level: 80
+Implicits: 1
++32 to Strength
++109 to maximum Life
++42% to Fire Resistance
++24% to Chaos Resistance
+		</Item>
+		<Item id="16">
+Rarity: RARE
+Gloom Glimmer
+Crimson Jewel
+Item Level: 58
+Implicits: 0
+6% increased maximum Life
+14% increased Burning Damage
++12% to Fire Resistance
+		</Item>
+		<Item id="17">
+Rarity: RARE
+Viper Shard
+Crimson Jewel
+Item Level: 75
+Implicits: 0
+7% increased maximum Life
++1% to maximum Fire Resistance
+16% increased Burning Damage
++13% to Fire Resistance
+		</Item>
+		<Item id="18">
+Rarity: RARE
+Rapture Eye
+Cobalt Jewel
+Item Level: 74
+Implicits: 0
+6% increased maximum Life
++1% to maximum Fire Resistance
++7% to Fire Damage over Time Multiplier
++14% to Chaos Resistance
+		</Item>
+		<Item id="19">
+Rarity: RARE
+Storm Spark
+Viridian Jewel
+Item Level: 76
+Implicits: 0
+7% increased maximum Life
++2% to maximum Fire Resistance
+14% increased Fire Damage
++11% to Chaos Resistance
+		</Item>
+		<ItemSet id="1" useSecondWeaponSet="false">
+			<Slot name="Weapon 1" itemId="6"/>
+			<Slot name="Weapon 2" itemId="7"/>
+			<Slot name="Helmet" itemId="8"/>
+			<Slot name="Body Armour" itemId="9"/>
+			<Slot name="Gloves" itemId="10"/>
+			<Slot name="Boots" itemId="11"/>
+			<Slot name="Amulet" itemId="12"/>
+			<Slot name="Ring 1" itemId="13"/>
+			<Slot name="Ring 2" itemId="14"/>
+			<Slot name="Belt" itemId="15"/>
+		</ItemSet>
+	</Items>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="0">
+		<SkillSet id="1">
+			<Skill enabled="true" slot="Body Armour" label="" mainActiveSkill="1" mainActiveSkillCalcs="1" includeInFullDPS="true">
+				<Gem nameSpec="Righteous Fire" skillId="RighteousFire" gemId="Metadata/Items/Gems/SkillGemRighteousFire" level="20" quality="20" enabled="true" enableGlobal1="true" enableGlobal2="true"/>
+				<Gem nameSpec="Swift Affliction" skillId="SupportSwiftAffliction" gemId="Metadata/Items/Gems/SkillGemSupportSwiftAffliction" level="20" quality="20" enabled="true" enableGlobal1="true" enableGlobal2="true"/>
+				<Gem nameSpec="Burning Damage" skillId="SupportBurningDamage" gemId="Metadata/Items/Gems/SkillGemSupportBurningDamage" level="20" quality="20" enabled="true" enableGlobal1="true" enableGlobal2="true"/>
+				<Gem nameSpec="Efficacy" skillId="SupportEfficacy" gemId="Metadata/Items/Gems/SkillGemSupportEfficacy" level="20" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true"/>
+				<Gem nameSpec="Increased Area of Effect" skillId="SupportIncreasedAreaOfEffect" gemId="Metadata/Items/Gems/SkillGemSupportIncreasedAreaofEffect" level="20" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true"/>
+				<Gem nameSpec="Elemental Focus" skillId="SupportElementalFocus" gemId="Metadata/Items/Gems/SkillGemSupportElementalFocus" level="20" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true"/>
+			</Skill>
+		</SkillSet>
+	</Skills>
+	<Config activeConfigSet="1">
+		<ConfigSet id="1" title="Default"/>
+	</Config>
+</PathOfBuilding>

@@ -9,6 +9,16 @@
       "Armour": 0,
       "AverageHit": 27070320.128001,
       "BlockChance": 5,
+      "Calcs.ChaosMax": 187635.336,
+      "Calcs.ChaosMin": 125605.032,
+      "Calcs.ColdMax": 1670572.89666,
+      "Calcs.ColdMin": 1113980.32722,
+      "Calcs.FireMax": 929327.1444,
+      "Calcs.FireMin": 625317.72696,
+      "Calcs.LightningMax": 0,
+      "Calcs.LightningMin": 0,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
       "ChaosResist": 1,
       "ChaosResistTotal": 1,
       "ColdResist": 31,
@@ -51,7 +61,122 @@
       "group": 1,
       "id": "IcicleMineAltX",
       "name": "Icicle Mine of Fanning",
-      "mine": true
+      "mine": true,
+      "supports": [
+        {
+          "id": "SupportChargedMines",
+          "level": 20,
+          "quality": 30
+        },
+        {
+          "id": "SupportHypothermia",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportInspiration",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportMinefield",
+          "level": 20,
+          "quality": 30
+        },
+        {
+          "id": "SupportTrapAndMineDamage",
+          "level": 21,
+          "quality": 30
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 134,
+    "outputs": {
+      "Armour": 0,
+      "AverageHit": 336616.106112,
+      "BlockChance": 0,
+      "Calcs.ChaosMax": 0,
+      "Calcs.ChaosMin": 0,
+      "Calcs.ColdMax": 84796.8,
+      "Calcs.ColdMin": 56543.52,
+      "Calcs.FireMax": 0,
+      "Calcs.FireMin": 0,
+      "Calcs.LightningMax": 0,
+      "Calcs.LightningMin": 0,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
+      "ChaosResist": -56,
+      "ChaosResistTotal": -56,
+      "ColdResist": 22,
+      "ColdResistTotal": 22,
+      "CombinedDPS": 4862731.2985126,
+      "CritChance": 71.952384,
+      "Dex": 153,
+      "EnergyShield": 0,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 0,
+      "EnergyShieldRegen": 0,
+      "EnergyShieldRegenRecovery": 0,
+      "Evasion": 2093,
+      "FireResist": 14,
+      "FireResistTotal": 14,
+      "HitChance": 100,
+      "Int": 160,
+      "Life": 3100,
+      "LifeLeechRate": 0,
+      "LifeRegen": 0,
+      "LifeRegenRecovery": 0,
+      "LifeUnreserved": 3100,
+      "LightningResist": 5,
+      "LightningResistTotal": 5,
+      "Mana": 814,
+      "ManaRegen": 25.6,
+      "ManaUnreserved": 803,
+      "MissingChaosResist": 131,
+      "MissingColdResist": 53,
+      "MissingFireResist": 61,
+      "MissingLightningResist": 70,
+      "Speed": 13.001333333333,
+      "SpellBlockChance": 0,
+      "SpellSuppressionChance": 0,
+      "Str": 128,
+      "TotalDPS": 4376458.2009308,
+      "TotalDotDPS": 0
+    },
+    "mainSkill": {
+      "group": 1,
+      "id": "IcicleMineAltX",
+      "name": "Icicle Mine of Fanning",
+      "mine": true,
+      "supports": [
+        {
+          "id": "SupportChargedMines",
+          "level": 20,
+          "quality": 30
+        },
+        {
+          "id": "SupportHypothermia",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportInspiration",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportMinefield",
+          "level": 20,
+          "quality": 30
+        },
+        {
+          "id": "SupportTrapAndMineDamage",
+          "level": 21,
+          "quality": 30
+        }
+      ]
     }
   },
   "gear": {

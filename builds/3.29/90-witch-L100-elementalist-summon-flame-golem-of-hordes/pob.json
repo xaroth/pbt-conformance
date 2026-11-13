@@ -9,6 +9,16 @@
       "Armour": 30064,
       "AverageHit": 0,
       "BlockChance": 20,
+      "Calcs.ChaosMax": 0,
+      "Calcs.ChaosMin": 0,
+      "Calcs.ColdMax": 0,
+      "Calcs.ColdMin": 0,
+      "Calcs.FireMax": 0,
+      "Calcs.FireMin": 0,
+      "Calcs.LightningMax": 0,
+      "Calcs.LightningMin": 0,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
       "ChaosResist": 75,
       "ChaosResistTotal": 85,
       "ColdResist": 75,
@@ -58,7 +68,129 @@
       "minion": {
         "name": "Flame Golem",
         "skill": "Immolate"
-      }
+      },
+      "supports": [
+        {
+          "id": "SupportGreaterSpellEcho",
+          "level": 6,
+          "quality": 30
+        },
+        {
+          "id": "SupportMinionDamage",
+          "level": 23,
+          "quality": 20
+        },
+        {
+          "id": "SupportCongregation",
+          "level": 6,
+          "quality": 30
+        },
+        {
+          "id": "SupportGreaterVolley",
+          "level": 23,
+          "quality": 30
+        },
+        {
+          "id": "SupportPredator",
+          "level": 23,
+          "quality": 30
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 134,
+    "outputs": {
+      "Armour": 3439,
+      "AverageHit": 0,
+      "BlockChance": 20,
+      "Calcs.ChaosMax": 0,
+      "Calcs.ChaosMin": 0,
+      "Calcs.ColdMax": 0,
+      "Calcs.ColdMin": 0,
+      "Calcs.FireMax": 0,
+      "Calcs.FireMin": 0,
+      "Calcs.LightningMax": 0,
+      "Calcs.LightningMin": 0,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
+      "ChaosResist": 49,
+      "ChaosResistTotal": 49,
+      "ColdResist": 30,
+      "ColdResistTotal": 30,
+      "CombinedDPS": 0,
+      "CritChance": 0,
+      "Dex": 114,
+      "EnergyShield": 2430,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 810,
+      "EnergyShieldRegen": 0,
+      "EnergyShieldRegenRecovery": 0,
+      "Evasion": 33,
+      "FireResist": 30,
+      "FireResistTotal": 30,
+      "HitChance": 100,
+      "Int": 242,
+      "Life": 2717,
+      "LifeLeechRate": 0,
+      "LifeRegen": 0,
+      "LifeRegenRecovery": 0,
+      "LifeUnreserved": 2717,
+      "LightningResist": 30,
+      "LightningResistTotal": 30,
+      "Mana": 833,
+      "ManaRegen": 22.9,
+      "ManaUnreserved": 833,
+      "Minion.AverageHit": 23027.9223447,
+      "Minion.CombinedDPS": 48677.413499219,
+      "Minion.HitChance": 100,
+      "Minion.Life": 12884,
+      "MissingChaosResist": 26,
+      "MissingColdResist": 45,
+      "MissingFireResist": 45,
+      "MissingLightningResist": 45,
+      "Speed": 1.75,
+      "SpellBlockChance": 0,
+      "SpellSuppressionChance": 0,
+      "Str": 207,
+      "TotalDPS": 0,
+      "TotalDotDPS": 0
+    },
+    "mainSkill": {
+      "group": 1,
+      "id": "SummonFlameGolemAltX",
+      "name": "Summon Flame Golem of Hordes",
+      "minion": {
+        "name": "Flame Golem",
+        "skill": "Immolate"
+      },
+      "supports": [
+        {
+          "id": "SupportGreaterSpellEcho",
+          "level": 6,
+          "quality": 30
+        },
+        {
+          "id": "SupportMinionDamage",
+          "level": 23,
+          "quality": 20
+        },
+        {
+          "id": "SupportCongregation",
+          "level": 6,
+          "quality": 30
+        },
+        {
+          "id": "SupportGreaterVolley",
+          "level": 23,
+          "quality": 30
+        },
+        {
+          "id": "SupportPredator",
+          "level": 23,
+          "quality": 30
+        }
+      ]
     }
   },
   "gear": {

@@ -9,6 +9,16 @@
       "Armour": 13943,
       "AverageHit": 0,
       "BlockChance": 78,
+      "Calcs.ChaosMax": 0,
+      "Calcs.ChaosMin": 0,
+      "Calcs.ColdMax": 0,
+      "Calcs.ColdMin": 0,
+      "Calcs.FireMax": 0,
+      "Calcs.FireMin": 0,
+      "Calcs.LightningMax": 0,
+      "Calcs.LightningMin": 0,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
       "ChaosResist": 52,
       "ChaosResistTotal": 52,
       "ColdResist": 75,
@@ -49,6 +59,93 @@
     },
     "mainSkill": {
       "group": 10,
+      "id": "DeathAura",
+      "name": "Death Aura",
+      "supports": [
+        {
+          "id": "SupportEfficacy",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportSwiftAffliction",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportLessDuration",
+          "level": 20,
+          "quality": 10
+        },
+        {
+          "id": "SupportLifetap",
+          "level": 20,
+          "quality": 10
+        },
+        {
+          "id": "SupportVoidManipulation",
+          "level": 20,
+          "quality": 20
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 132,
+    "outputs": {
+      "Armour": 6691,
+      "AverageHit": 0,
+      "BlockChance": 78,
+      "Calcs.ChaosMax": 0,
+      "Calcs.ChaosMin": 0,
+      "Calcs.ColdMax": 0,
+      "Calcs.ColdMin": 0,
+      "Calcs.FireMax": 0,
+      "Calcs.FireMin": 0,
+      "Calcs.LightningMax": 0,
+      "Calcs.LightningMin": 0,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
+      "ChaosResist": 52,
+      "ChaosResistTotal": 52,
+      "ColdResist": 75,
+      "ColdResistTotal": 91,
+      "CombinedDPS": 29868.41088,
+      "CritChance": 0,
+      "Dex": 197,
+      "EnergyShield": 93,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 31,
+      "EnergyShieldRegen": 0,
+      "EnergyShieldRegenRecovery": 0,
+      "Evasion": 1355,
+      "FireResist": 57,
+      "FireResistTotal": 57,
+      "HitChance": 100,
+      "Int": 222,
+      "Life": 3614,
+      "LifeLeechRate": 0,
+      "LifeRegen": 48.8,
+      "LifeRegenRecovery": 48.8,
+      "LifeUnreserved": 3614,
+      "LightningResist": 56,
+      "LightningResistTotal": 56,
+      "Mana": 867,
+      "ManaRegen": 29.9,
+      "ManaUnreserved": 867,
+      "MissingChaosResist": 23,
+      "MissingColdResist": 0,
+      "MissingFireResist": 19,
+      "MissingLightningResist": 19,
+      "Speed": 1.18,
+      "SpellBlockChance": 37,
+      "SpellSuppressionChance": 0,
+      "Str": 314,
+      "TotalDPS": 0,
+      "TotalDotDPS": 29868.41088
+    },
+    "mainSkill": {
+      "group": 2,
       "id": "DeathAura",
       "name": "Death Aura"
     }

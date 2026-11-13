@@ -9,6 +9,16 @@
       "Armour": 8323,
       "AverageHit": 0,
       "BlockChance": 78,
+      "Calcs.ChaosMax": 0,
+      "Calcs.ChaosMin": 0,
+      "Calcs.ColdMax": 0,
+      "Calcs.ColdMin": 0,
+      "Calcs.FireMax": 0,
+      "Calcs.FireMin": 0,
+      "Calcs.LightningMax": 0,
+      "Calcs.LightningMin": 0,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
       "ChaosResist": 75,
       "ChaosResistTotal": 75,
       "ColdResist": 76,
@@ -58,7 +68,135 @@
       "minion": {
         "name": "Animated Weapon",
         "skill": "Default Attack"
-      }
+      },
+      "supports": [
+        {
+          "id": "SupportAddedChaosDamage",
+          "level": 29
+        },
+        {
+          "id": "SupportGreaterFork",
+          "level": 4,
+          "quality": 20
+        },
+        {
+          "id": "SupportGreaterMultipleProjectiles",
+          "level": 21,
+          "quality": 20
+        },
+        {
+          "id": "SupportVoidManipulation",
+          "level": 22,
+          "quality": 20
+        },
+        {
+          "id": "SupportGreaterUnleash",
+          "level": 4
+        },
+        {
+          "id": "SupportMinionDamage",
+          "level": 22,
+          "quality": 30
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 133,
+    "outputs": {
+      "Armour": 4610,
+      "AverageHit": 0,
+      "BlockChance": 42,
+      "Calcs.ChaosMax": 0,
+      "Calcs.ChaosMin": 0,
+      "Calcs.ColdMax": 0,
+      "Calcs.ColdMin": 0,
+      "Calcs.FireMax": 0,
+      "Calcs.FireMin": 0,
+      "Calcs.LightningMax": 0,
+      "Calcs.LightningMin": 0,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
+      "ChaosResist": 75,
+      "ChaosResistTotal": 75,
+      "ColdResist": 44,
+      "ColdResistTotal": 44,
+      "CombinedDPS": 0,
+      "CritChance": 0,
+      "Dex": 156,
+      "EnergyShield": 1008,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 336,
+      "EnergyShieldRegen": 0,
+      "EnergyShieldRegenRecovery": 0,
+      "Evasion": 20,
+      "FireResist": 48,
+      "FireResistTotal": 48,
+      "HitChance": 100,
+      "Int": 298,
+      "Life": 5477,
+      "LifeLeechRate": 0,
+      "LifeRegen": 256.7,
+      "LifeRegenRecovery": 256.7,
+      "LifeUnreserved": 5477,
+      "LightningResist": 46,
+      "LightningResistTotal": 46,
+      "Mana": 1213,
+      "ManaRegen": 59.4,
+      "ManaUnreserved": 1213,
+      "Minion.CombinedDPS": 127713.59780757,
+      "Minion.HitChance": 100,
+      "Minion.Life": 20418,
+      "Minion.MainHand.AverageHit": 19407.8999835,
+      "MissingChaosResist": 0,
+      "MissingColdResist": 32,
+      "MissingFireResist": 28,
+      "MissingLightningResist": 30,
+      "Speed": 1.4666666666667,
+      "SpellBlockChance": 37,
+      "SpellSuppressionChance": 0,
+      "Str": 194,
+      "TotalDPS": 0,
+      "TotalDotDPS": 0
+    },
+    "mainSkill": {
+      "group": 1,
+      "id": "AnimateWeaponAltY",
+      "name": "Animate Weapon of Ranged Arms",
+      "minion": {
+        "name": "Animated Weapon",
+        "skill": "Default Attack"
+      },
+      "supports": [
+        {
+          "id": "SupportAddedChaosDamage",
+          "level": 29
+        },
+        {
+          "id": "SupportGreaterFork",
+          "level": 4,
+          "quality": 20
+        },
+        {
+          "id": "SupportGreaterMultipleProjectiles",
+          "level": 21,
+          "quality": 20
+        },
+        {
+          "id": "SupportVoidManipulation",
+          "level": 22,
+          "quality": 20
+        },
+        {
+          "id": "SupportGreaterUnleash",
+          "level": 4
+        },
+        {
+          "id": "SupportMinionDamage",
+          "level": 22,
+          "quality": 30
+        }
+      ]
     }
   },
   "gear": {

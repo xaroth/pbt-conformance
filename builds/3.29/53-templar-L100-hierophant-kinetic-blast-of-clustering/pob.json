@@ -8,6 +8,26 @@
     "outputs": {
       "Armour": 1547,
       "BlockChance": 20,
+      "Calcs.MainHand.ChaosMax": 1442.448,
+      "Calcs.MainHand.ChaosMin": 18.144,
+      "Calcs.MainHand.ColdMax": 41216.9472,
+      "Calcs.MainHand.ColdMin": 38678.7456,
+      "Calcs.MainHand.FireMax": 40768.3584,
+      "Calcs.MainHand.FireMin": 38258.0352,
+      "Calcs.MainHand.LightningMax": 55814.3712,
+      "Calcs.MainHand.LightningMin": 49018.032,
+      "Calcs.MainHand.PhysicalMax": 35234.629087329,
+      "Calcs.MainHand.PhysicalMin": 33064.834183244,
+      "Calcs.OffHand.ChaosMax": 1442.448,
+      "Calcs.OffHand.ChaosMin": 18.144,
+      "Calcs.OffHand.ColdMax": 41551.488,
+      "Calcs.OffHand.ColdMin": 38857.4208,
+      "Calcs.OffHand.FireMax": 41099.0976,
+      "Calcs.OffHand.FireMin": 38434.176,
+      "Calcs.OffHand.LightningMax": 56236.32,
+      "Calcs.OffHand.LightningMin": 49241.0016,
+      "Calcs.OffHand.PhysicalMax": 35581.794912583,
+      "Calcs.OffHand.PhysicalMin": 33274.318075203,
       "ChaosResist": 75,
       "ChaosResistTotal": 75,
       "ColdResist": 75,
@@ -52,7 +72,133 @@
       "group": 2,
       "id": "KineticBlastAltX",
       "name": "Kinetic Blast of Clustering",
-      "attack": true
+      "attack": true,
+      "supports": [
+        {
+          "id": "SupportSacredWisps",
+          "level": 19,
+          "quality": 20
+        },
+        {
+          "id": "SupportIncreasedCriticalDamage",
+          "level": 19,
+          "quality": 30
+        },
+        {
+          "id": "SupportReturningProjectiles",
+          "level": 18,
+          "quality": 20
+        },
+        {
+          "id": "SupportGreaterFork",
+          "level": 2,
+          "quality": 20
+        },
+        {
+          "id": "SupportInvertTheRules",
+          "level": 2,
+          "quality": 30
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 133,
+    "outputs": {
+      "Armour": 1547,
+      "BlockChance": 20,
+      "Calcs.MainHand.ChaosMax": 1001.7,
+      "Calcs.MainHand.ChaosMin": 12.6,
+      "Calcs.MainHand.ColdMax": 28622.88,
+      "Calcs.MainHand.ColdMin": 26860.24,
+      "Calcs.MainHand.FireMax": 28311.36,
+      "Calcs.MainHand.FireMin": 26568.08,
+      "Calcs.MainHand.LightningMax": 36134.56,
+      "Calcs.MainHand.LightningMin": 33909.96,
+      "Calcs.MainHand.PhysicalMax": 24468.492421757,
+      "Calcs.MainHand.PhysicalMin": 22961.69040503,
+      "Calcs.OffHand.ChaosMax": 1001.7,
+      "Calcs.OffHand.ChaosMin": 12.6,
+      "Calcs.OffHand.ColdMax": 28855.2,
+      "Calcs.OffHand.ColdMin": 26984.32,
+      "Calcs.OffHand.FireMax": 28541.04,
+      "Calcs.OffHand.FireMin": 26690.4,
+      "Calcs.OffHand.LightningMax": 36427.58,
+      "Calcs.OffHand.LightningMin": 34064.8,
+      "Calcs.OffHand.PhysicalMax": 24709.579800405,
+      "Calcs.OffHand.PhysicalMin": 23107.165330002,
+      "ChaosResist": 75,
+      "ChaosResistTotal": 75,
+      "ColdResist": 7,
+      "ColdResistTotal": 7,
+      "CombinedDPS": 2314709.7040733,
+      "CritChance": 91.455,
+      "Dex": 277,
+      "EnergyShield": 4065,
+      "EnergyShieldLeechRate": 870.14881875,
+      "EnergyShieldRecharge": 0,
+      "EnergyShieldRegen": 325.2,
+      "EnergyShieldRegenRecovery": 325.2,
+      "Evasion": 4011,
+      "FireResist": 7,
+      "FireResistTotal": 7,
+      "HitChance": 100,
+      "Int": 1126,
+      "Life": 1690,
+      "LifeLeechRate": 0,
+      "LifeRegen": 38.9,
+      "LifeRegenRecovery": 38.9,
+      "LifeUnreserved": 1690,
+      "LightningResist": 0,
+      "LightningResistTotal": 0,
+      "MainHand.AverageHit": 419363.56981207,
+      "Mana": 10675,
+      "ManaRegen": 0,
+      "ManaUnreserved": 10675,
+      "MissingChaosResist": 0,
+      "MissingColdResist": 68,
+      "MissingFireResist": 68,
+      "MissingLightningResist": 75,
+      "OffHand.AverageHit": 422101.35625872,
+      "Speed": 2.81175,
+      "SpellBlockChance": 0,
+      "SpellSuppressionChance": 20,
+      "Str": 585,
+      "TotalDPS": 1182994.5029398,
+      "TotalDotDPS": 5037.4230608296
+    },
+    "mainSkill": {
+      "group": 2,
+      "id": "KineticBlastAltX",
+      "name": "Kinetic Blast of Clustering",
+      "attack": true,
+      "supports": [
+        {
+          "id": "SupportSacredWisps",
+          "level": 19,
+          "quality": 20
+        },
+        {
+          "id": "SupportIncreasedCriticalDamage",
+          "level": 19,
+          "quality": 30
+        },
+        {
+          "id": "SupportReturningProjectiles",
+          "level": 18,
+          "quality": 20
+        },
+        {
+          "id": "SupportGreaterFork",
+          "level": 2,
+          "quality": 20
+        },
+        {
+          "id": "SupportInvertTheRules",
+          "level": 2,
+          "quality": 30
+        }
+      ]
     }
   },
   "gear": {

@@ -8,6 +8,16 @@
     "outputs": {
       "Armour": 3494,
       "BlockChance": 75,
+      "Calcs.MainHand.ChaosMax": 111.188,
+      "Calcs.MainHand.ChaosMin": 43.89,
+      "Calcs.MainHand.ColdMax": 0,
+      "Calcs.MainHand.ColdMin": 0,
+      "Calcs.MainHand.FireMax": 138.72,
+      "Calcs.MainHand.FireMin": 67.32,
+      "Calcs.MainHand.LightningMax": 7.14,
+      "Calcs.MainHand.LightningMin": 2.55,
+      "Calcs.MainHand.PhysicalMax": 0,
+      "Calcs.MainHand.PhysicalMin": 0,
       "ChaosResist": 61,
       "ChaosResistTotal": 61,
       "ColdResist": 76,
@@ -51,7 +61,100 @@
       "group": 5,
       "id": "RainOfArrowsAltY",
       "name": "Rain of Arrows of Saturation",
-      "attack": true
+      "attack": true,
+      "supports": [
+        {
+          "id": "SupportIncreasedCriticalStrikes",
+          "level": 21,
+          "quality": 20
+        },
+        {
+          "id": "SupportConcentratedEffect",
+          "level": 19
+        },
+        {
+          "id": "SupportCastOnCriticalStrike",
+          "level": 21,
+          "quality": 30
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 131,
+    "outputs": {
+      "Armour": 3190,
+      "BlockChance": 75,
+      "Calcs.MainHand.ChaosMax": 21.56,
+      "Calcs.MainHand.ChaosMin": 8.47,
+      "Calcs.MainHand.ColdMax": 0,
+      "Calcs.MainHand.ColdMin": 0,
+      "Calcs.MainHand.FireMax": 106.08,
+      "Calcs.MainHand.FireMin": 51.51,
+      "Calcs.MainHand.LightningMax": 5.61,
+      "Calcs.MainHand.LightningMin": 2.55,
+      "Calcs.MainHand.PhysicalMax": 27,
+      "Calcs.MainHand.PhysicalMin": 11,
+      "ChaosResist": 61,
+      "ChaosResistTotal": 61,
+      "ColdResist": 30,
+      "ColdResistTotal": 30,
+      "CombinedDPS": 204.51560556757,
+      "CritChance": 46.806,
+      "Dex": 171,
+      "EnergyShield": 2196,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 842,
+      "EnergyShieldRegen": 0,
+      "EnergyShieldRegenRecovery": 0,
+      "Evasion": 22235,
+      "FireResist": 51,
+      "FireResistTotal": 51,
+      "HitChance": 60,
+      "Int": 173,
+      "Life": 3511,
+      "LifeLeechRate": 1.4726911182186,
+      "LifeRegen": 332,
+      "LifeRegenRecovery": 332,
+      "LifeUnreserved": 3511,
+      "LightningResist": 56,
+      "LightningResistTotal": 56,
+      "MainHand.AverageHit": 152.45249671,
+      "Mana": 878,
+      "ManaRegen": 45,
+      "ManaUnreserved": 878,
+      "MissingChaosResist": 14,
+      "MissingColdResist": 46,
+      "MissingFireResist": 24,
+      "MissingLightningResist": 20,
+      "Speed": 1.61,
+      "SpellBlockChance": 66,
+      "SpellSuppressionChance": 0,
+      "Str": 121,
+      "TotalDPS": 147.26911182186,
+      "TotalDotDPS": 47.909940977229
+    },
+    "mainSkill": {
+      "group": 2,
+      "id": "RainOfArrowsAltY",
+      "name": "Rain of Arrows of Saturation",
+      "attack": true,
+      "supports": [
+        {
+          "id": "SupportIncreasedCriticalStrikes",
+          "level": 21,
+          "quality": 20
+        },
+        {
+          "id": "SupportConcentratedEffect",
+          "level": 19
+        },
+        {
+          "id": "SupportCastOnCriticalStrike",
+          "level": 21,
+          "quality": 30
+        }
+      ]
     }
   },
   "gear": {

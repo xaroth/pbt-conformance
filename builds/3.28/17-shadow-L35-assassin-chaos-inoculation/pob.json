@@ -8,6 +8,26 @@
     "outputs": {
       "Armour": 1500,
       "BlockChance": 20,
+      "Calcs.MainHand.ChaosMax": 381.04,
+      "Calcs.MainHand.ChaosMin": 173.36,
+      "Calcs.MainHand.ColdMax": 0,
+      "Calcs.MainHand.ColdMin": 0,
+      "Calcs.MainHand.FireMax": 0,
+      "Calcs.MainHand.FireMin": 0,
+      "Calcs.MainHand.LightningMax": 0,
+      "Calcs.MainHand.LightningMin": 0,
+      "Calcs.MainHand.PhysicalMax": 25.9,
+      "Calcs.MainHand.PhysicalMin": 8.4,
+      "Calcs.OffHand.ChaosMax": 325.6,
+      "Calcs.OffHand.ChaosMin": 148.72,
+      "Calcs.OffHand.ColdMax": 0,
+      "Calcs.OffHand.ColdMin": 0,
+      "Calcs.OffHand.FireMax": 0,
+      "Calcs.OffHand.FireMin": 0,
+      "Calcs.OffHand.LightningMax": 0,
+      "Calcs.OffHand.LightningMin": 0,
+      "Calcs.OffHand.PhysicalMax": 24.8,
+      "Calcs.OffHand.PhysicalMin": 8,
       "ChaosResist": -50,
       "ChaosResistTotal": -50,
       "ColdResist": 49,
@@ -52,7 +72,107 @@
       "group": 1,
       "id": "ViperStrikeAltX",
       "name": "Viper Strike of the Mamba",
-      "attack": true
+      "attack": true,
+      "supports": [
+        {
+          "id": "SupportAddedChaosDamage",
+          "level": 2
+        },
+        {
+          "id": "SupportVoidManipulation",
+          "level": 8
+        },
+        {
+          "id": "SupportUnboundAilments",
+          "level": 8
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 46,
+    "outputs": {
+      "Armour": 0,
+      "BlockChance": 20,
+      "Calcs.MainHand.ChaosMax": 303.1,
+      "Calcs.MainHand.ChaosMin": 137.9,
+      "Calcs.MainHand.ColdMax": 0,
+      "Calcs.MainHand.ColdMin": 0,
+      "Calcs.MainHand.FireMax": 0,
+      "Calcs.MainHand.FireMin": 0,
+      "Calcs.MainHand.LightningMax": 0,
+      "Calcs.MainHand.LightningMin": 0,
+      "Calcs.MainHand.PhysicalMax": 25.9,
+      "Calcs.MainHand.PhysicalMin": 8.4,
+      "Calcs.OffHand.ChaosMax": 259,
+      "Calcs.OffHand.ChaosMin": 118.3,
+      "Calcs.OffHand.ColdMax": 0,
+      "Calcs.OffHand.ColdMin": 0,
+      "Calcs.OffHand.FireMax": 0,
+      "Calcs.OffHand.FireMin": 0,
+      "Calcs.OffHand.LightningMax": 0,
+      "Calcs.OffHand.LightningMin": 0,
+      "Calcs.OffHand.PhysicalMax": 24.8,
+      "Calcs.OffHand.PhysicalMin": 8,
+      "ChaosResist": -50,
+      "ChaosResistTotal": -50,
+      "ColdResist": 49,
+      "ColdResistTotal": 49,
+      "CombinedDPS": 1879.5361629852,
+      "CritChance": 32.6128,
+      "Dex": 226,
+      "EnergyShield": 106,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 35,
+      "EnergyShieldRegen": 0,
+      "EnergyShieldRegenRecovery": 0,
+      "Evasion": 593,
+      "FireResist": 61,
+      "FireResistTotal": 61,
+      "HitChance": 44,
+      "Int": 152,
+      "Life": 811,
+      "LifeLeechRate": 0,
+      "LifeRegen": 0,
+      "LifeRegenRecovery": 0,
+      "LifeUnreserved": 811,
+      "LightningResist": 31,
+      "LightningResistTotal": 31,
+      "MainHand.AverageHit": 397.308897552,
+      "Mana": 456,
+      "ManaRegen": 10.4,
+      "ManaUnreserved": 456,
+      "MissingChaosResist": 125,
+      "MissingColdResist": 26,
+      "MissingFireResist": 14,
+      "MissingLightningResist": 44,
+      "OffHand.AverageHit": 342.807445584,
+      "Speed": 1.5133416149068,
+      "SpellBlockChance": 0,
+      "SpellSuppressionChance": 0,
+      "Str": 54,
+      "TotalDPS": 492.82149925376,
+      "TotalDotDPS": 1343.2735672735
+    },
+    "mainSkill": {
+      "group": 1,
+      "id": "ViperStrikeAltX",
+      "name": "Viper Strike of the Mamba",
+      "attack": true,
+      "supports": [
+        {
+          "id": "SupportAddedChaosDamage",
+          "level": 2
+        },
+        {
+          "id": "SupportVoidManipulation",
+          "level": 8
+        },
+        {
+          "id": "SupportUnboundAilments",
+          "level": 8
+        }
+      ]
     }
   },
   "gear": {

@@ -9,6 +9,16 @@
       "Armour": 34889,
       "AverageHit": 3559308.7562269,
       "BlockChance": 49,
+      "Calcs.ChaosMax": 0,
+      "Calcs.ChaosMin": 0,
+      "Calcs.ColdMax": 0,
+      "Calcs.ColdMin": 0,
+      "Calcs.FireMax": 0,
+      "Calcs.FireMin": 0,
+      "Calcs.LightningMax": 859881.61791,
+      "Calcs.LightningMin": 561888.08865,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
       "ChaosResist": -150,
       "ChaosResistTotal": -150,
       "ColdResist": -124,
@@ -51,7 +61,102 @@
     "mainSkill": {
       "group": 2,
       "id": "BladefallAltZ",
-      "name": "Bladefall of Trarthus"
+      "name": "Bladefall of Trarthus",
+      "supports": [
+        {
+          "id": "SupportInspiration",
+          "level": 20,
+          "quality": 16
+        },
+        {
+          "id": "SupportIncreasedCriticalDamage",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportPhysicalToLightning",
+          "level": 20,
+          "quality": 30
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 139,
+    "outputs": {
+      "Armour": 2114,
+      "AverageHit": 69457.108456312,
+      "BlockChance": 34,
+      "Calcs.ChaosMax": 0,
+      "Calcs.ChaosMin": 0,
+      "Calcs.ColdMax": 0,
+      "Calcs.ColdMin": 0,
+      "Calcs.FireMax": 0,
+      "Calcs.FireMin": 0,
+      "Calcs.LightningMax": 27519.723,
+      "Calcs.LightningMin": 16967.9895,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
+      "ChaosResist": -28,
+      "ChaosResistTotal": -28,
+      "ColdResist": -63,
+      "ColdResistTotal": -63,
+      "CombinedDPS": 128991.77284744,
+      "CritChance": 41.7,
+      "Dex": 193,
+      "EnergyShield": 1689,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 619,
+      "EnergyShieldRegen": 61,
+      "EnergyShieldRegenRecovery": 61,
+      "Evasion": 30,
+      "FireResist": 19,
+      "FireResistTotal": 19,
+      "HitChance": 100,
+      "HitSpeed": 1.8571428571429,
+      "Int": 296,
+      "Life": 1,
+      "LifeLeechRate": 0,
+      "LifeRegen": 0,
+      "LifeRegenRecovery": 0,
+      "LifeUnreserved": 1,
+      "LightningResist": -112,
+      "LightningResistTotal": -112,
+      "Mana": 1506,
+      "ManaRegen": 75.1,
+      "ManaUnreserved": 1506,
+      "MissingChaosResist": 103,
+      "MissingColdResist": 136,
+      "MissingFireResist": 54,
+      "MissingLightningResist": 185,
+      "Speed": 0,
+      "SpellBlockChance": 53,
+      "SpellSuppressionChance": 0,
+      "Str": 161,
+      "TotalDPS": 128991.77284744,
+      "TotalDotDPS": 0
+    },
+    "mainSkill": {
+      "group": 1,
+      "id": "BladefallAltZ",
+      "name": "Bladefall of Trarthus",
+      "supports": [
+        {
+          "id": "SupportInspiration",
+          "level": 20,
+          "quality": 16
+        },
+        {
+          "id": "SupportIncreasedCriticalDamage",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportPhysicalToLightning",
+          "level": 20,
+          "quality": 30
+        }
+      ]
     }
   },
   "gear": {

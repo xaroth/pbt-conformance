@@ -9,6 +9,16 @@
       "Armour": 71,
       "AverageHit": 3199620.6499622,
       "BlockChance": 23,
+      "Calcs.ChaosMax": 27629.667,
+      "Calcs.ChaosMin": 18420.291,
+      "Calcs.ColdMax": 638558.91,
+      "Calcs.ColdMin": 425707.2666,
+      "Calcs.FireMax": 60749.802,
+      "Calcs.FireMin": 40500.4095,
+      "Calcs.LightningMax": 51525.891,
+      "Calcs.LightningMin": 34351.677,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
       "ChaosResist": 22,
       "ChaosResistTotal": 22,
       "ColdResist": 80,
@@ -51,7 +61,118 @@
       "group": 4,
       "id": "GlacialCascadeAltX",
       "name": "Glacial Cascade of the Fissure",
-      "mine": true
+      "mine": true,
+      "supports": [
+        {
+          "id": "SupportMinefield",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportHighImpactMine",
+          "level": 23
+        },
+        {
+          "id": "SupportPowerChargeOnCritical",
+          "level": 20,
+          "quality": 21
+        },
+        {
+          "id": "SupportChargedMines",
+          "level": 20
+        },
+        {
+          "id": "SupportTrapAndMineDamage",
+          "level": 20,
+          "quality": 20
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 133,
+    "outputs": {
+      "Armour": 71,
+      "AverageHit": 39995.0024584,
+      "BlockChance": 23,
+      "Calcs.ChaosMax": 0,
+      "Calcs.ChaosMin": 0,
+      "Calcs.ColdMax": 22939,
+      "Calcs.ColdMin": 15293.42,
+      "Calcs.FireMax": 3158.6,
+      "Calcs.FireMin": 2105.28,
+      "Calcs.LightningMax": 2601,
+      "Calcs.LightningMin": 1734,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
+      "ChaosResist": -13,
+      "ChaosResistTotal": -13,
+      "ColdResist": 45,
+      "ColdResistTotal": 45,
+      "CombinedDPS": 637227.32993445,
+      "CritChance": 20.88,
+      "Dex": 123,
+      "EnergyShield": 1484,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 495,
+      "EnergyShieldRegen": 0,
+      "EnergyShieldRegenRecovery": 0,
+      "Evasion": 1802,
+      "FireResist": 38,
+      "FireResistTotal": 38,
+      "HitChance": 100,
+      "Int": 301,
+      "Life": 1905,
+      "LifeLeechRate": 0,
+      "LifeRegen": 0,
+      "LifeRegenRecovery": 0,
+      "LifeUnreserved": 1905,
+      "LightningResist": 26,
+      "LightningResistTotal": 26,
+      "Mana": 1448,
+      "ManaRegen": 37,
+      "ManaUnreserved": 1427,
+      "MissingChaosResist": 88,
+      "MissingColdResist": 30,
+      "MissingFireResist": 37,
+      "MissingLightningResist": 49,
+      "Speed": 15.866666666667,
+      "SpellBlockChance": 0,
+      "SpellSuppressionChance": 0,
+      "Str": 184,
+      "TotalDPS": 634587.37233995,
+      "TotalDotDPS": 2639.9575945033
+    },
+    "mainSkill": {
+      "group": 1,
+      "id": "GlacialCascadeAltX",
+      "name": "Glacial Cascade of the Fissure",
+      "mine": true,
+      "supports": [
+        {
+          "id": "SupportMinefield",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportHighImpactMine",
+          "level": 23
+        },
+        {
+          "id": "SupportPowerChargeOnCritical",
+          "level": 20,
+          "quality": 21
+        },
+        {
+          "id": "SupportChargedMines",
+          "level": 20
+        },
+        {
+          "id": "SupportTrapAndMineDamage",
+          "level": 20,
+          "quality": 20
+        }
+      ]
     }
   },
   "gear": {

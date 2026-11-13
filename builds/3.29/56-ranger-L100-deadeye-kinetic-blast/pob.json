@@ -8,6 +8,16 @@
     "outputs": {
       "Armour": 324,
       "BlockChance": 24,
+      "Calcs.MainHand.ChaosMax": 149.205,
+      "Calcs.MainHand.ChaosMin": 82.418,
+      "Calcs.MainHand.ColdMax": 420.36,
+      "Calcs.MainHand.ColdMin": 228.712,
+      "Calcs.MainHand.FireMax": 0,
+      "Calcs.MainHand.FireMin": 0,
+      "Calcs.MainHand.LightningMax": 352.56,
+      "Calcs.MainHand.LightningMin": 17.176,
+      "Calcs.MainHand.PhysicalMax": 0,
+      "Calcs.MainHand.PhysicalMin": 0,
       "ChaosResist": -32,
       "ChaosResistTotal": -32,
       "ColdResist": 75,
@@ -51,7 +61,96 @@
       "group": 3,
       "id": "KineticBlast",
       "name": "Kinetic Blast",
-      "attack": true
+      "attack": true,
+      "supports": [
+        {
+          "id": "SupportTrinity",
+          "level": 7
+        },
+        {
+          "id": "SupportIncreasedCriticalDamage",
+          "level": 7
+        },
+        {
+          "id": "SupportReturningProjectiles",
+          "level": 4
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 96,
+    "outputs": {
+      "Armour": 324,
+      "BlockChance": 24,
+      "Calcs.MainHand.ChaosMax": 0,
+      "Calcs.MainHand.ChaosMin": 0,
+      "Calcs.MainHand.ColdMax": 238.7,
+      "Calcs.MainHand.ColdMin": 130.2,
+      "Calcs.MainHand.FireMax": 0,
+      "Calcs.MainHand.FireMin": 0,
+      "Calcs.MainHand.LightningMax": 0,
+      "Calcs.MainHand.LightningMin": 0,
+      "Calcs.MainHand.PhysicalMax": 26.25,
+      "Calcs.MainHand.PhysicalMin": 14.5,
+      "ChaosResist": -32,
+      "ChaosResistTotal": -32,
+      "ColdResist": 75,
+      "ColdResistTotal": 100,
+      "CombinedDPS": 1434.494871455,
+      "CritChance": 37.16064,
+      "Dex": 237,
+      "EnergyShield": 344,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 115,
+      "EnergyShieldRegen": 0,
+      "EnergyShieldRegenRecovery": 0,
+      "Evasion": 2164,
+      "FireResist": 75,
+      "FireResistTotal": 166,
+      "HitChance": 88,
+      "Int": 209,
+      "Life": 2298,
+      "LifeLeechRate": 14.34494871455,
+      "LifeRegen": 52.7,
+      "LifeRegenRecovery": 52.7,
+      "LifeUnreserved": 2298,
+      "LightningResist": 75,
+      "LightningResistTotal": 86,
+      "MainHand.AverageHit": 449.9129844336,
+      "Mana": 1217,
+      "ManaRegen": 21.3,
+      "ManaUnreserved": 1217,
+      "MissingChaosResist": 107,
+      "MissingColdResist": 0,
+      "MissingFireResist": 0,
+      "MissingLightningResist": 0,
+      "Speed": 3.6231624,
+      "SpellBlockChance": 0,
+      "SpellSuppressionChance": 24,
+      "Str": 149,
+      "TotalDPS": 1434.494871455,
+      "TotalDotDPS": 0
+    },
+    "mainSkill": {
+      "group": 1,
+      "id": "KineticBlast",
+      "name": "Kinetic Blast",
+      "attack": true,
+      "supports": [
+        {
+          "id": "SupportTrinity",
+          "level": 7
+        },
+        {
+          "id": "SupportIncreasedCriticalDamage",
+          "level": 7
+        },
+        {
+          "id": "SupportReturningProjectiles",
+          "level": 4
+        }
+      ]
     }
   },
   "gear": {

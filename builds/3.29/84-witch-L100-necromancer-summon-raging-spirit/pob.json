@@ -9,6 +9,16 @@
       "Armour": 4120,
       "AverageHit": 0,
       "BlockChance": 47,
+      "Calcs.ChaosMax": 0,
+      "Calcs.ChaosMin": 0,
+      "Calcs.ColdMax": 0,
+      "Calcs.ColdMin": 0,
+      "Calcs.FireMax": 0,
+      "Calcs.FireMin": 0,
+      "Calcs.LightningMax": 0,
+      "Calcs.LightningMin": 0,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
       "ChaosResist": 75,
       "ChaosResistTotal": 77,
       "ColdResist": 75,
@@ -58,7 +68,137 @@
       "minion": {
         "name": "Raging Spirit",
         "skill": "Melee"
-      }
+      },
+      "supports": [
+        {
+          "id": "SupportAddedChaosDamage",
+          "level": 29
+        },
+        {
+          "id": "SupportRuthless",
+          "level": 21,
+          "quality": 20
+        },
+        {
+          "id": "SupportVileToxins",
+          "level": 21,
+          "quality": 30
+        },
+        {
+          "id": "SupportMinionDamage",
+          "level": 23,
+          "quality": 30
+        },
+        {
+          "id": "SupportVoidManipulation",
+          "level": 21,
+          "quality": 33
+        },
+        {
+          "id": "SupportGreaterMultistrike",
+          "level": 4,
+          "quality": 24
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 133,
+    "outputs": {
+      "Armour": 309,
+      "AverageHit": 0,
+      "BlockChance": 35,
+      "Calcs.ChaosMax": 0,
+      "Calcs.ChaosMin": 0,
+      "Calcs.ColdMax": 0,
+      "Calcs.ColdMin": 0,
+      "Calcs.FireMax": 0,
+      "Calcs.FireMin": 0,
+      "Calcs.LightningMax": 0,
+      "Calcs.LightningMin": 0,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
+      "ChaosResist": 75,
+      "ChaosResistTotal": 77,
+      "ColdResist": 30,
+      "ColdResistTotal": 30,
+      "CombinedDPS": 0,
+      "CritChance": 0,
+      "Dex": 51,
+      "EnergyShield": 1132,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 189,
+      "EnergyShieldRegen": 0,
+      "EnergyShieldRegenRecovery": 0,
+      "Evasion": 921,
+      "FireResist": 48,
+      "FireResistTotal": 48,
+      "HitChance": 100,
+      "Int": 155,
+      "Life": 1775,
+      "LifeLeechRate": 0,
+      "LifeRegen": 21.3,
+      "LifeRegenRecovery": 21.3,
+      "LifeUnreserved": 1775,
+      "LightningResist": 65,
+      "LightningResistTotal": 65,
+      "Mana": 792,
+      "ManaRegen": 15.9,
+      "ManaUnreserved": 792,
+      "Minion.CombinedDPS": 641364.24621864,
+      "Minion.HitChance": 100,
+      "Minion.Life": 10277,
+      "Minion.MainHand.AverageHit": 32637.0688749,
+      "MissingChaosResist": 0,
+      "MissingColdResist": 45,
+      "MissingFireResist": 27,
+      "MissingLightningResist": 10,
+      "Speed": 2.42,
+      "SpellBlockChance": 0,
+      "SpellSuppressionChance": 49,
+      "Str": 131,
+      "TotalDPS": 0,
+      "TotalDotDPS": 0
+    },
+    "mainSkill": {
+      "group": 1,
+      "id": "SummonRagingSpirit",
+      "name": "Summon Raging Spirit",
+      "minion": {
+        "name": "Raging Spirit",
+        "skill": "Melee"
+      },
+      "supports": [
+        {
+          "id": "SupportAddedChaosDamage",
+          "level": 29
+        },
+        {
+          "id": "SupportRuthless",
+          "level": 21,
+          "quality": 20
+        },
+        {
+          "id": "SupportVileToxins",
+          "level": 21,
+          "quality": 30
+        },
+        {
+          "id": "SupportMinionDamage",
+          "level": 23,
+          "quality": 30
+        },
+        {
+          "id": "SupportVoidManipulation",
+          "level": 21,
+          "quality": 33
+        },
+        {
+          "id": "SupportGreaterMultistrike",
+          "level": 4,
+          "quality": 24
+        }
+      ]
     }
   },
   "gear": {

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathOfBuilding>
+	<Build level="90" targetVersion="3_0" className="Shadow" ascendClassName="Assassin" bandit="None" pantheonMajorGod="None" pantheonMinorGod="None" mainSocketGroup="1" viewMode="ITEMS" characterLevelAutoMode="false"/>
+	<Tree activeSpec="1">
+		<Spec treeVersion="3_28" classId="6" ascendClassId="1" secondaryAscendClassId="0" nodes="857,1215,1405,1461,1648,1891,3359,3424,3863,4011,4219,4242,5802,5823,6064,6250,6538,6570,6797,6799,7263,7634,8640,8920,8938,9014,9015,9355,9469,11018,11455,11489,11811,12412,12850,14292,15852,18182,18769,18770,19083,20807,21264,22535,22618,23334,23407,23439,23449,24426,25789,26148,27656,28012,28754,28782,28903,29454,30205,30767,31197,31359,32176,32227,33903,33989,35255,35283,35851,35894,36287,36858,37663,39524,39861,42104,42804,43215,44134,44988,45272,45838,46277,46408,46676,47422,47484,48698,49308,49605,49621,49820,49900,49978,52157,52714,53456,54452,55414,56090,56295,57080,58229,58302,58968,59009,59220,59606,60180,60259,60440,60592,60735,61653,61834,62744,63194,63228,63251,64265,64509,64769,65502" masteryEffects="{857,31556},{1215,11541},{6570,43250},{7634,44869},{26148,57597},{28903,62897},{31197,20515},{49820,58447},{58302,64775}">
+			<Sockets>
+				<Socket nodeId="33989" itemId="16"/>
+				<Socket nodeId="61834" itemId="17"/>
+			</Sockets>
+		</Spec>
+	</Tree>
+	<Items activeItemSet="1" useSecondWeaponSet="false">
+		<Item id="1">
+Rarity: UNIQUE
+Bino's Kitchen Knife
+Slaughter Knife
+Item Level: 83
+Quality: 20
+Sockets: G-B-G
+Implicits: 1
+30% increased Global Critical Strike Chance
+Adds 145 to 225 Physical Damage
+46% increased Critical Strike Chance
++21% to Global Critical Strike Multiplier
++23% to Chaos Resistance
+On Killing a Poisoned Enemy, Enemies within 3 metres are Poisoned
+and nearby Allies Regenerate 400 Life per second
+		</Item>
+		<Item id="2">
+Rarity: RARE
+Agony Sting
+Platinum Kris
+Item Level: 85
+Quality: 20
+Sockets: G-B-G
+Implicits: 1
+64% increased Global Critical Strike Chance
+Adds 24 to 44 Physical Damage
+23% increased Attack Speed
++27% to Chaos Damage over Time Multiplier
++33% to Global Critical Strike Multiplier
++45 to Intelligence
+		</Item>
+		<Item id="3">
+Rarity: RARE
+Dusk Mask
+Torturer's Mask
+Item Level: 86
+Quality: 20
+Sockets: G-B-G-G
+Implicits: 0
++78 to maximum Energy Shield
+108% increased Evasion and Energy Shield
++44% to Fire Resistance
++40% to Lightning Resistance
++48 to Intelligence
+		</Item>
+		<Item id="4">
+Rarity: RARE
+Soul Veil
+Necrotic Armour
+Item Level: 86
+Quality: 20
+Sockets: G-G-G-B-B-G
+Implicits: 1
++28 to maximum Mana
++108 to maximum Energy Shield
+112% increased Evasion and Energy Shield
++45% to Cold Resistance
++42% to Fire Resistance
++52 to Dexterity
+12% increased maximum Energy Shield
+		</Item>
+		<Item id="5">
+Rarity: RARE
+Viper Grip
+Phantom Mitts
+Item Level: 85
+Quality: 20
+Sockets: G-B-G-B
+Implicits: 0
++62 to maximum Energy Shield
+88% increased Evasion and Energy Shield
++42% to Cold Resistance
++40% to Lightning Resistance
+15% increased Attack Speed
+		</Item>
+		<Item id="6">
+Rarity: RARE
+Wraith Stride
+Phantom Boots
+Item Level: 85
+Quality: 20
+Sockets: G-G-B-B
+Implicits: 0
++68 to maximum Energy Shield
+82% increased Evasion and Energy Shield
+30% increased Movement Speed
++42% to Cold Resistance
++44% to Fire Resistance
++46 to Intelligence
+		</Item>
+		<Item id="7">
+Rarity: RARE
+Hex Torc
+Turquoise Amulet
+Item Level: 86
+Quality: 0
+Implicits: 1
++29 to Dexterity and Intelligence
++64 to maximum Energy Shield
+19% increased maximum Energy Shield
++38% to Global Critical Strike Multiplier
++44% to Lightning Resistance
++48 to Intelligence
++21% to Damage over Time Multiplier
+		</Item>
+		<Item id="8">
+Rarity: RARE
+Pandemonium Band
+Two-Stone Ring (Cold/Lightning)
+Item Level: 84
+Quality: 0
+Implicits: 1
++16% to Cold and Lightning Resistances
++52 to maximum Energy Shield
++46% to Fire Resistance
++42 to Intelligence
++64 to maximum Mana
++210 to Evasion Rating
+		</Item>
+		<Item id="9">
+Rarity: RARE
+Behemoth Whorl
+Diamond Ring
+Item Level: 85
+Quality: 0
+Implicits: 1
+29% increased Global Critical Strike Chance
++50 to maximum Energy Shield
++44% to Lightning Resistance
++40% to Cold Resistance
++44 to Dexterity
++190 to Evasion Rating
+		</Item>
+		<Item id="10">
+Rarity: RARE
+Gloom Coil
+Crystal Belt
+Item Level: 86
+Quality: 0
+Implicits: 1
++78 to maximum Energy Shield
++56 to maximum Energy Shield
++44% to Fire Resistance
++42% to Lightning Resistance
++50 to Strength
+20% increased Flask Effect Duration
+		</Item>
+		<Item id="16">
+Rarity: UNIQUE
+Watcher's Eye
+Prismatic Jewel
+Item Level: 86
+Implicits: 0
+6% increased maximum Energy Shield
+6% increased maximum Mana
+Regenerate 1.95% of Energy Shield per Second while affected by Discipline
+Gain 10% of Maximum Mana as Extra Maximum Energy Shield while affected by Clarity
+Damaging Ailments you inflict deal Damage 15% faster while affected by Malevolence
+		</Item>
+		<Item id="17">
+Rarity: RARE
+Rapture Spark
+Cobalt Jewel
+Item Level: 84
+Quality: 0
+Implicits: 0
+8% increased maximum Energy Shield
++15% to Global Critical Strike Multiplier
++8% to Chaos Damage over Time Multiplier
++5% to Damage over Time Multiplier
+		</Item>
+		<ItemSet id="1" useSecondWeaponSet="false">
+			<Slot name="Weapon 1" itemId="1"/>
+			<Slot name="Weapon 2" itemId="2"/>
+			<Slot name="Helmet" itemId="3"/>
+			<Slot name="Body Armour" itemId="4"/>
+			<Slot name="Gloves" itemId="5"/>
+			<Slot name="Boots" itemId="6"/>
+			<Slot name="Amulet" itemId="7"/>
+			<Slot name="Ring 1" itemId="8"/>
+			<Slot name="Ring 2" itemId="9"/>
+			<Slot name="Belt" itemId="10"/>
+		</ItemSet>
+	</Items>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="0">
+		<SkillSet id="1">
+			<Skill enabled="true" slot="Body Armour" label="" mainActiveSkill="1" mainActiveSkillCalcs="1" includeInFullDPS="true">
+				<Gem enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SkillGemViperStrikeAltX" level="20" nameSpec="Viper Strike of the Mamba" quality="20" skillId="ViperStrikeAltX" variantId="ViperStrikeAltX"/>
+				<Gem enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SkillGemSupportVoidManipulation" level="20" nameSpec="Void Manipulation" quality="20" skillId="SupportVoidManipulation" variantId="SupportVoidManipulation"/>
+				<Gem enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SkillGemSupportNightblade" level="20" nameSpec="Nightblade" quality="20" skillId="SupportNightblade" variantId="SupportNightblade"/>
+				<Gem enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SkillGemSupportDamageOnFullLife" level="20" nameSpec="Damage on Full Life" quality="20" skillId="SupportDamageOnFullLife" variantId="SupportDamageOnFullLife"/>
+				<Gem enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SkillGemSupportMeleePhysicalDamage" level="20" nameSpec="Melee Physical Damage" quality="20" skillId="SupportMeleePhysicalDamage" variantId="SupportMeleePhysicalDamage"/>
+				<Gem enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SkillGemSupportDeadlyAilments" level="20" nameSpec="Deadly Ailments" quality="20" skillId="SupportDeadlyAilments" variantId="SupportDeadlyAilments"/>
+			</Skill>
+		</SkillSet>
+	</Skills>
+	<Config activeConfigSet="1">
+		<ConfigSet id="1" title="Default"/>
+	</Config>
+</PathOfBuilding>

@@ -9,6 +9,16 @@
       "Armour": 80,
       "AverageHit": 70944001.084529,
       "BlockChance": 5,
+      "Calcs.ChaosMax": 346692.15,
+      "Calcs.ChaosMin": 229111.848,
+      "Calcs.ColdMax": 3186203.202,
+      "Calcs.ColdMin": 2120513.85,
+      "Calcs.FireMax": 1221048.2214,
+      "Calcs.FireMin": 812709.261,
+      "Calcs.LightningMax": 88961.8842,
+      "Calcs.LightningMin": 9884.322,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
       "ChaosResist": 16,
       "ChaosResistTotal": 16,
       "ColdResist": 52,
@@ -51,7 +61,122 @@
       "group": 7,
       "id": "IceTrap",
       "name": "Ice Trap",
-      "trap": true
+      "trap": true,
+      "supports": [
+        {
+          "id": "SupportChargedTraps",
+          "level": 20,
+          "quality": 50
+        },
+        {
+          "id": "SupportTrapAndMineDamage",
+          "level": 20,
+          "quality": 50
+        },
+        {
+          "id": "SupportEmpower",
+          "level": 6,
+          "quality": 30
+        },
+        {
+          "id": "SupportSwiftAssembly",
+          "level": 21,
+          "quality": 50
+        },
+        {
+          "id": "SupportConcentratedEffect",
+          "level": 22,
+          "quality": 50
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 135,
+    "outputs": {
+      "Armour": 80,
+      "AverageHit": 4391623.9415412,
+      "BlockChance": 0,
+      "Calcs.ChaosMax": 0,
+      "Calcs.ChaosMin": 0,
+      "Calcs.ColdMax": 361763.28,
+      "Calcs.ColdMin": 241207.2,
+      "Calcs.FireMax": 0,
+      "Calcs.FireMin": 0,
+      "Calcs.LightningMax": 0,
+      "Calcs.LightningMin": 0,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
+      "ChaosResist": -43,
+      "ChaosResistTotal": -43,
+      "ColdResist": 10,
+      "ColdResistTotal": 10,
+      "CombinedDPS": 19709604.77021,
+      "CritChance": 96.332775,
+      "Dex": 155,
+      "EnergyShield": 261,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 44,
+      "EnergyShieldRegen": 0,
+      "EnergyShieldRegenRecovery": 0,
+      "Evasion": 808,
+      "FireResist": 5,
+      "FireResistTotal": 5,
+      "HitChance": 100,
+      "Int": 335,
+      "Life": 1302,
+      "LifeLeechRate": 0,
+      "LifeRegen": 2.6,
+      "LifeRegenRecovery": 2.6,
+      "LifeUnreserved": 1302,
+      "LightningResist": -11,
+      "LightningResistTotal": -11,
+      "Mana": 993,
+      "ManaRegen": 51.8,
+      "ManaUnreserved": 993,
+      "MissingChaosResist": 118,
+      "MissingColdResist": 65,
+      "MissingFireResist": 70,
+      "MissingLightningResist": 86,
+      "Speed": 4.0392,
+      "SpellBlockChance": 0,
+      "SpellSuppressionChance": 0,
+      "Str": 128,
+      "TotalDPS": 17738647.424673,
+      "TotalDotDPS": 0
+    },
+    "mainSkill": {
+      "group": 1,
+      "id": "IceTrap",
+      "name": "Ice Trap",
+      "trap": true,
+      "supports": [
+        {
+          "id": "SupportChargedTraps",
+          "level": 20,
+          "quality": 50
+        },
+        {
+          "id": "SupportTrapAndMineDamage",
+          "level": 20,
+          "quality": 50
+        },
+        {
+          "id": "SupportEmpower",
+          "level": 6,
+          "quality": 30
+        },
+        {
+          "id": "SupportSwiftAssembly",
+          "level": 21,
+          "quality": 50
+        },
+        {
+          "id": "SupportConcentratedEffect",
+          "level": 22,
+          "quality": 50
+        }
+      ]
     }
   },
   "gear": {

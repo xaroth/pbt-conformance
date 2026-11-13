@@ -9,6 +9,16 @@
       "Armour": 1330,
       "AverageHit": 228502.652884,
       "BlockChance": 0,
+      "Calcs.ChaosMax": 272566.771,
+      "Calcs.ChaosMin": 181712.857,
+      "Calcs.ColdMax": 0,
+      "Calcs.ColdMin": 0,
+      "Calcs.FireMax": 0,
+      "Calcs.FireMin": 0,
+      "Calcs.LightningMax": 0,
+      "Calcs.LightningMin": 0,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
       "ChaosResist": 75,
       "ChaosResistTotal": 90,
       "ColdResist": 75,
@@ -50,7 +60,121 @@
     "mainSkill": {
       "group": 3,
       "id": "EssenceDrain",
-      "name": "Essence Drain"
+      "name": "Essence Drain",
+      "supports": [
+        {
+          "id": "SupportVoidManipulation",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportEfficacy",
+          "level": 20,
+          "quality": 30
+        },
+        {
+          "id": "SupportArcaneSurge",
+          "level": 20,
+          "quality": 33
+        },
+        {
+          "id": "SupportCruelty",
+          "level": 20,
+          "quality": 30
+        },
+        {
+          "id": "SupportControlledDestruction",
+          "level": 20,
+          "quality": 20
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 134,
+    "outputs": {
+      "Armour": 1330,
+      "AverageHit": 61959.6909,
+      "BlockChance": 0,
+      "Calcs.ChaosMax": 73908,
+      "Calcs.ChaosMin": 49272.3,
+      "Calcs.ColdMax": 0,
+      "Calcs.ColdMin": 0,
+      "Calcs.FireMax": 0,
+      "Calcs.FireMin": 0,
+      "Calcs.LightningMax": 0,
+      "Calcs.LightningMin": 0,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
+      "ChaosResist": 68,
+      "ChaosResistTotal": 68,
+      "ColdResist": 75,
+      "ColdResistTotal": 107,
+      "CombinedDPS": 61959.6909,
+      "CritChance": 1.2,
+      "Dex": 170,
+      "EnergyShield": 2796,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 932,
+      "EnergyShieldRegen": 0,
+      "EnergyShieldRegenRecovery": 0,
+      "Evasion": 10174,
+      "FireResist": 75,
+      "FireResistTotal": 77,
+      "HitChance": 100,
+      "Int": 165,
+      "Life": 4939,
+      "LifeLeechRate": 0,
+      "LifeRegen": 128.4,
+      "LifeRegenRecovery": 128.4,
+      "LifeUnreserved": 4939,
+      "LightningResist": 75,
+      "LightningResistTotal": 128,
+      "Mana": 1658,
+      "ManaRegen": 42.4,
+      "ManaUnreserved": 1658,
+      "MissingChaosResist": 7,
+      "MissingColdResist": 0,
+      "MissingFireResist": 0,
+      "MissingLightningResist": 0,
+      "Speed": 3.2428571428571,
+      "SpellBlockChance": 25,
+      "SpellSuppressionChance": 8,
+      "Str": 105,
+      "TotalDPS": 200926.42620429,
+      "TotalDotDPS": 793463.22043517
+    },
+    "mainSkill": {
+      "group": 2,
+      "id": "EssenceDrain",
+      "name": "Essence Drain",
+      "supports": [
+        {
+          "id": "SupportVoidManipulation",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportEfficacy",
+          "level": 20,
+          "quality": 30
+        },
+        {
+          "id": "SupportArcaneSurge",
+          "level": 20,
+          "quality": 33
+        },
+        {
+          "id": "SupportCruelty",
+          "level": 20,
+          "quality": 30
+        },
+        {
+          "id": "SupportControlledDestruction",
+          "level": 20,
+          "quality": 20
+        }
+      ]
     }
   },
   "gear": {

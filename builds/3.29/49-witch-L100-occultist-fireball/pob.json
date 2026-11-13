@@ -9,6 +9,16 @@
       "Armour": 925,
       "AverageHit": 3074680.3457518,
       "BlockChance": 67,
+      "Calcs.ChaosMax": 0,
+      "Calcs.ChaosMin": 0,
+      "Calcs.ColdMax": 0,
+      "Calcs.ColdMin": 0,
+      "Calcs.FireMax": 777159.8024,
+      "Calcs.FireMin": 518108.5812,
+      "Calcs.LightningMax": 10742.9,
+      "Calcs.LightningMin": 539.72,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
       "ChaosResist": -90,
       "ChaosResistTotal": -90,
       "ColdResist": 75,
@@ -50,7 +60,121 @@
     "mainSkill": {
       "group": 9,
       "id": "Fireball",
-      "name": "Fireball"
+      "name": "Fireball",
+      "supports": [
+        {
+          "id": "SupportOverloadedIntensity",
+          "level": 8,
+          "quality": 20
+        },
+        {
+          "id": "SupportPinpoint",
+          "level": 22,
+          "quality": 23
+        },
+        {
+          "id": "SupportEmpower",
+          "level": 6,
+          "quality": 10
+        },
+        {
+          "id": "SupportGreaterSpellEcho",
+          "level": 5,
+          "quality": 30
+        },
+        {
+          "id": "SupportGreaterDevour",
+          "level": 4,
+          "quality": 20
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 134,
+    "outputs": {
+      "Armour": 925,
+      "AverageHit": 66745.7948555,
+      "BlockChance": 67,
+      "Calcs.ChaosMax": 0,
+      "Calcs.ChaosMin": 0,
+      "Calcs.ColdMax": 0,
+      "Calcs.ColdMin": 0,
+      "Calcs.FireMax": 62055.16,
+      "Calcs.FireMin": 41370.57,
+      "Calcs.LightningMax": 0,
+      "Calcs.LightningMin": 0,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
+      "ChaosResist": -90,
+      "ChaosResistTotal": -90,
+      "ColdResist": 7,
+      "ColdResistTotal": 7,
+      "CombinedDPS": 265611.36266292,
+      "CritChance": 16.15,
+      "Dex": 155,
+      "EnergyShield": 5321,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 2483,
+      "EnergyShieldRegen": 100,
+      "EnergyShieldRegenRecovery": 100,
+      "Evasion": 26,
+      "FireResist": 75,
+      "FireResistTotal": 153,
+      "HitChance": 100,
+      "Int": 224,
+      "Life": 1,
+      "LifeLeechRate": 0,
+      "LifeRegen": 11.1,
+      "LifeRegenRecovery": 11.1,
+      "LifeUnreserved": 1,
+      "LightningResist": -13,
+      "LightningResistTotal": -13,
+      "Mana": 1646,
+      "ManaRegen": 89.9,
+      "ManaUnreserved": 1646,
+      "MissingChaosResist": 165,
+      "MissingColdResist": 68,
+      "MissingFireResist": 0,
+      "MissingLightningResist": 89,
+      "Speed": 3.6330666666667,
+      "SpellBlockChance": 31,
+      "SpellSuppressionChance": 0,
+      "Str": 161,
+      "TotalDPS": 242491.92242969,
+      "TotalDotDPS": 23119.440233227
+    },
+    "mainSkill": {
+      "group": 1,
+      "id": "Fireball",
+      "name": "Fireball",
+      "supports": [
+        {
+          "id": "SupportOverloadedIntensity",
+          "level": 8,
+          "quality": 20
+        },
+        {
+          "id": "SupportPinpoint",
+          "level": 22,
+          "quality": 23
+        },
+        {
+          "id": "SupportEmpower",
+          "level": 6,
+          "quality": 10
+        },
+        {
+          "id": "SupportGreaterSpellEcho",
+          "level": 5,
+          "quality": 30
+        },
+        {
+          "id": "SupportGreaterDevour",
+          "level": 4,
+          "quality": 20
+        }
+      ]
     }
   },
   "gear": {

@@ -9,6 +9,16 @@
       "Armour": 0,
       "AverageHit": 1497703.5784698,
       "BlockChance": 20,
+      "Calcs.ChaosMax": 17116.1032,
+      "Calcs.ChaosMin": 11412.1952,
+      "Calcs.ColdMax": 196511.655414,
+      "Calcs.ColdMin": 131018.604886,
+      "Calcs.FireMax": 95660.833824,
+      "Calcs.FireMin": 63780.245312,
+      "Calcs.LightningMax": 8556.89424,
+      "Calcs.LightningMin": 5704.59616,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
       "ChaosResist": 75,
       "ChaosResistTotal": 78,
       "ColdResist": 75,
@@ -51,7 +61,122 @@
       "group": 1,
       "id": "Exsanguinate",
       "name": "Exsanguinate",
-      "mine": true
+      "mine": true,
+      "supports": [
+        {
+          "id": "SupportMinefield",
+          "level": 21,
+          "quality": 30
+        },
+        {
+          "id": "SupportTrapAndMineDamage",
+          "level": 21,
+          "quality": 20
+        },
+        {
+          "id": "SupportHighImpactMine",
+          "level": 21,
+          "quality": 20
+        },
+        {
+          "id": "SupportChargedMines",
+          "level": 21,
+          "quality": 20
+        },
+        {
+          "id": "SupportIncreasedCriticalDamage",
+          "level": 21,
+          "quality": 30
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 134,
+    "outputs": {
+      "Armour": 0,
+      "AverageHit": 79263.7232027,
+      "BlockChance": 20,
+      "Calcs.ChaosMax": 3657.92,
+      "Calcs.ChaosMin": 2438.345,
+      "Calcs.ColdMax": 28566.8625,
+      "Calcs.ColdMin": 19046.5875,
+      "Calcs.FireMax": 0,
+      "Calcs.FireMin": 0,
+      "Calcs.LightningMax": 0,
+      "Calcs.LightningMin": 0,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
+      "ChaosResist": 75,
+      "ChaosResistTotal": 78,
+      "ColdResist": 75,
+      "ColdResistTotal": 84,
+      "CombinedDPS": 1107619.3129111,
+      "CritChance": 41.7,
+      "Dex": 207,
+      "EnergyShield": 2019,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 740,
+      "EnergyShieldRegen": 0,
+      "EnergyShieldRegenRecovery": 0,
+      "Evasion": 10962,
+      "FireResist": 75,
+      "FireResistTotal": 81,
+      "HitChance": 100,
+      "Int": 173,
+      "Life": 3617,
+      "LifeLeechRate": 0,
+      "LifeRegen": 372.1,
+      "LifeRegenRecovery": 372.1,
+      "LifeUnreserved": 3514,
+      "LightningResist": 75,
+      "LightningResistTotal": 81,
+      "Mana": 1045,
+      "ManaRegen": 32.9,
+      "ManaUnreserved": 1045,
+      "MissingChaosResist": 0,
+      "MissingColdResist": 0,
+      "MissingFireResist": 0,
+      "MissingLightningResist": 0,
+      "Speed": 11.625,
+      "SpellBlockChance": 0,
+      "SpellSuppressionChance": 100,
+      "Str": 129,
+      "TotalDPS": 921440.78223139,
+      "TotalDotDPS": 75625.6673424
+    },
+    "mainSkill": {
+      "group": 1,
+      "id": "Exsanguinate",
+      "name": "Exsanguinate",
+      "mine": true,
+      "supports": [
+        {
+          "id": "SupportMinefield",
+          "level": 21,
+          "quality": 30
+        },
+        {
+          "id": "SupportTrapAndMineDamage",
+          "level": 21,
+          "quality": 20
+        },
+        {
+          "id": "SupportHighImpactMine",
+          "level": 21,
+          "quality": 20
+        },
+        {
+          "id": "SupportChargedMines",
+          "level": 21,
+          "quality": 20
+        },
+        {
+          "id": "SupportIncreasedCriticalDamage",
+          "level": 21,
+          "quality": 30
+        }
+      ]
     }
   },
   "gear": {

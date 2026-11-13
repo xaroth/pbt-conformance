@@ -8,6 +8,16 @@
     "outputs": {
       "Armour": 12923,
       "BlockChance": 24,
+      "Calcs.MainHand.ChaosMax": 0,
+      "Calcs.MainHand.ChaosMin": 0,
+      "Calcs.MainHand.ColdMax": 0,
+      "Calcs.MainHand.ColdMin": 0,
+      "Calcs.MainHand.FireMax": 342.65,
+      "Calcs.MainHand.FireMin": 42.35,
+      "Calcs.MainHand.LightningMax": 1269.4,
+      "Calcs.MainHand.LightningMin": 20.9,
+      "Calcs.MainHand.PhysicalMax": 77.77,
+      "Calcs.MainHand.PhysicalMin": 9.68,
       "ChaosResist": -42,
       "ChaosResistTotal": -42,
       "ColdResist": 75,
@@ -51,7 +61,104 @@
       "group": 1,
       "id": "MoltenStrike",
       "name": "Molten Strike",
-      "attack": true
+      "attack": true,
+      "supports": [
+        {
+          "id": "SupportAncestralCall",
+          "level": 15
+        },
+        {
+          "id": "SupportElementalDamageWithAttacks",
+          "level": 15
+        },
+        {
+          "id": "SupportMultistrike",
+          "level": 12
+        },
+        {
+          "id": "SupportVolatility",
+          "level": 13
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 86,
+    "outputs": {
+      "Armour": 1454,
+      "BlockChance": 24,
+      "Calcs.MainHand.ChaosMax": 0,
+      "Calcs.MainHand.ChaosMin": 0,
+      "Calcs.MainHand.ColdMax": 0,
+      "Calcs.MainHand.ColdMin": 0,
+      "Calcs.MainHand.FireMax": 342.65,
+      "Calcs.MainHand.FireMin": 42.35,
+      "Calcs.MainHand.LightningMax": 339.35,
+      "Calcs.MainHand.LightningMin": 5.5,
+      "Calcs.MainHand.PhysicalMax": 77.77,
+      "Calcs.MainHand.PhysicalMin": 9.68,
+      "ChaosResist": -42,
+      "ChaosResistTotal": -42,
+      "ColdResist": 75,
+      "ColdResistTotal": 136,
+      "CombinedDPS": 797.0366811,
+      "CritChance": 0,
+      "Dex": 329,
+      "EnergyShield": 338,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 124,
+      "EnergyShieldRegen": 0,
+      "EnergyShieldRegenRecovery": 0,
+      "Evasion": 0,
+      "FireResist": 75,
+      "FireResistTotal": 133,
+      "HitChance": 73,
+      "Int": 336,
+      "Life": 1497,
+      "LifeLeechRate": 0,
+      "LifeRegen": 0,
+      "LifeRegenRecovery": 0,
+      "LifeUnreserved": 1497,
+      "LightningResist": 75,
+      "LightningResistTotal": 99,
+      "MainHand.AverageHit": 408.65,
+      "Mana": 607,
+      "ManaRegen": 10.6,
+      "ManaUnreserved": 607,
+      "MissingChaosResist": 117,
+      "MissingColdResist": 0,
+      "MissingFireResist": 0,
+      "MissingLightningResist": 0,
+      "Speed": 2.6718,
+      "SpellBlockChance": 0,
+      "SpellSuppressionChance": 18,
+      "Str": 196,
+      "TotalDPS": 797.0366811,
+      "TotalDotDPS": 0
+    },
+    "mainSkill": {
+      "group": 1,
+      "id": "MoltenStrike",
+      "name": "Molten Strike",
+      "attack": true,
+      "supports": [
+        {
+          "id": "SupportAncestralCall",
+          "level": 15
+        },
+        {
+          "id": "SupportElementalDamageWithAttacks",
+          "level": 15
+        },
+        {
+          "id": "SupportMultistrike",
+          "level": 12
+        },
+        {
+          "id": "SupportVolatility",
+          "level": 13
+        }
+      ]
     }
   },
   "gear": {

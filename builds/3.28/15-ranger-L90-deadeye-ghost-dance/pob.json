@@ -8,6 +8,16 @@
     "outputs": {
       "Armour": 0,
       "BlockChance": 0,
+      "Calcs.MainHand.ChaosMax": 0,
+      "Calcs.MainHand.ChaosMin": 0,
+      "Calcs.MainHand.ColdMax": 7597.8,
+      "Calcs.MainHand.ColdMin": 3237.105,
+      "Calcs.MainHand.FireMax": 0,
+      "Calcs.MainHand.FireMin": 0,
+      "Calcs.MainHand.LightningMax": 15034.8,
+      "Calcs.MainHand.LightningMin": 5577.75,
+      "Calcs.MainHand.PhysicalMax": 342.705,
+      "Calcs.MainHand.PhysicalMin": 145.97625,
       "ChaosResist": 49,
       "ChaosResistTotal": 49,
       "ColdResist": 75,
@@ -51,7 +61,116 @@
       "group": 1,
       "id": "LightningArrow",
       "name": "Lightning Arrow",
-      "attack": true
+      "attack": true,
+      "supports": [
+        {
+          "id": "SupportTrinity",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportElementalDamageWithAttacks",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportInspiration",
+          "level": 20
+        },
+        {
+          "id": "SupportGreaterFork",
+          "level": 3
+        },
+        {
+          "id": "SupportIncreasedCriticalDamage",
+          "level": 20
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 123,
+    "outputs": {
+      "Armour": 0,
+      "BlockChance": 0,
+      "Calcs.MainHand.ChaosMax": 0,
+      "Calcs.MainHand.ChaosMin": 0,
+      "Calcs.MainHand.ColdMax": 0,
+      "Calcs.MainHand.ColdMin": 0,
+      "Calcs.MainHand.FireMax": 0,
+      "Calcs.MainHand.FireMin": 0,
+      "Calcs.MainHand.LightningMax": 10761.75,
+      "Calcs.MainHand.LightningMin": 3993,
+      "Calcs.MainHand.PhysicalMax": 255.75,
+      "Calcs.MainHand.PhysicalMin": 108.9375,
+      "ChaosResist": 49,
+      "ChaosResistTotal": 49,
+      "ColdResist": 75,
+      "ColdResistTotal": 85,
+      "CombinedDPS": 54657.647047165,
+      "CritChance": 39.900756,
+      "Dex": 500,
+      "EnergyShield": 1140,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 380,
+      "EnergyShieldRegen": 0,
+      "EnergyShieldRegenRecovery": 0,
+      "Evasion": 9479,
+      "FireResist": 75,
+      "FireResistTotal": 79,
+      "HitChance": 83,
+      "Int": 185,
+      "Life": 3795,
+      "LifeLeechRate": 497.76500344567,
+      "LifeRegen": 0,
+      "LifeRegenRecovery": 0,
+      "LifeUnreserved": 3795,
+      "LightningResist": 58,
+      "LightningResistTotal": 58,
+      "MainHand.AverageHit": 21616.072536493,
+      "Mana": 666,
+      "ManaRegen": 11.7,
+      "ManaUnreserved": 666,
+      "MissingChaosResist": 26,
+      "MissingColdResist": 0,
+      "MissingFireResist": 0,
+      "MissingLightningResist": 19,
+      "Speed": 3.046464,
+      "SpellBlockChance": 0,
+      "SpellSuppressionChance": 100,
+      "Str": 130,
+      "TotalDPS": 54657.647047165,
+      "TotalDotDPS": 0
+    },
+    "mainSkill": {
+      "group": 1,
+      "id": "LightningArrow",
+      "name": "Lightning Arrow",
+      "attack": true,
+      "supports": [
+        {
+          "id": "SupportTrinity",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportElementalDamageWithAttacks",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportInspiration",
+          "level": 20
+        },
+        {
+          "id": "SupportGreaterFork",
+          "level": 3
+        },
+        {
+          "id": "SupportIncreasedCriticalDamage",
+          "level": 20
+        }
+      ]
     }
   },
   "gear": {

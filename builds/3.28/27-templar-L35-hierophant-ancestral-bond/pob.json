@@ -8,6 +8,16 @@
     "outputs": {
       "Armour": 271,
       "BlockChance": 24,
+      "Calcs.MainHand.ChaosMax": 0,
+      "Calcs.MainHand.ChaosMin": 0,
+      "Calcs.MainHand.ColdMax": 45.56,
+      "Calcs.MainHand.ColdMin": 21.08,
+      "Calcs.MainHand.FireMax": 96.56,
+      "Calcs.MainHand.FireMin": 55.76,
+      "Calcs.MainHand.LightningMax": 99.96,
+      "Calcs.MainHand.LightningMin": 3.4,
+      "Calcs.MainHand.PhysicalMax": 14,
+      "Calcs.MainHand.PhysicalMin": 5,
       "ChaosResist": -60,
       "ChaosResistTotal": -60,
       "ColdResist": 65,
@@ -54,7 +64,99 @@
       "id": "KineticFusillade",
       "name": "Kinetic Fusillade",
       "attack": true,
-      "totem": true
+      "totem": true,
+      "supports": [
+        {
+          "id": "SupportBallistaTotem",
+          "level": 8
+        },
+        {
+          "id": "SupportVolley",
+          "level": 9
+        },
+        {
+          "id": "SupportLessDuration",
+          "level": 2
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 44,
+    "outputs": {
+      "Armour": 271,
+      "BlockChance": 24,
+      "Calcs.MainHand.ChaosMax": 0,
+      "Calcs.MainHand.ChaosMin": 0,
+      "Calcs.MainHand.ColdMax": 29,
+      "Calcs.MainHand.ColdMin": 13.5,
+      "Calcs.MainHand.FireMax": 36,
+      "Calcs.MainHand.FireMin": 17.5,
+      "Calcs.MainHand.LightningMax": 63.5,
+      "Calcs.MainHand.LightningMin": 2,
+      "Calcs.MainHand.PhysicalMax": 14,
+      "Calcs.MainHand.PhysicalMin": 5,
+      "ChaosResist": -60,
+      "ChaosResistTotal": -60,
+      "ColdResist": 50,
+      "ColdResistTotal": 50,
+      "CombinedDPS": 241.62077757576,
+      "CritChance": 3.7392,
+      "Dex": 71,
+      "EnergyShield": 127,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 42,
+      "EnergyShieldRegen": 0,
+      "EnergyShieldRegenRecovery": 0,
+      "Evasion": 93,
+      "FireResist": 56,
+      "FireResistTotal": 56,
+      "HitChance": 41,
+      "Int": 228,
+      "Life": 1163,
+      "LifeLeechRate": 0,
+      "LifeRegen": 11.6,
+      "LifeRegenRecovery": 11.6,
+      "LifeUnreserved": 1163,
+      "LightningResist": 53,
+      "LightningResistTotal": 53,
+      "MainHand.AverageHit": 91.937314,
+      "Mana": 358,
+      "ManaRegen": 10.7,
+      "ManaUnreserved": 358,
+      "MissingChaosResist": 135,
+      "MissingColdResist": 25,
+      "MissingFireResist": 19,
+      "MissingLightningResist": 22,
+      "Speed": 2.117,
+      "SpellBlockChance": 0,
+      "SpellSuppressionChance": 0,
+      "Str": 129,
+      "TotalDPS": 228.45029539394,
+      "TotalDotDPS": 13.170482181818,
+      "TotemLife": 179,
+      "TotemsSummoned": 5
+    },
+    "mainSkill": {
+      "group": 1,
+      "id": "KineticFusillade",
+      "name": "Kinetic Fusillade",
+      "attack": true,
+      "totem": true,
+      "supports": [
+        {
+          "id": "SupportBallistaTotem",
+          "level": 8
+        },
+        {
+          "id": "SupportVolley",
+          "level": 9
+        },
+        {
+          "id": "SupportLessDuration",
+          "level": 2
+        }
+      ]
     }
   },
   "gear": {

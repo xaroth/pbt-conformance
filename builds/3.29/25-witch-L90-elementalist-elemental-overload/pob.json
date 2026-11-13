@@ -9,6 +9,16 @@
       "Armour": 17705,
       "AverageHit": 363684.46753354,
       "BlockChance": 48,
+      "Calcs.ChaosMax": 16150.4,
+      "Calcs.ChaosMin": 10767.4,
+      "Calcs.ColdMax": 40177.5,
+      "Calcs.ColdMin": 26865.5,
+      "Calcs.FireMax": 299930.8,
+      "Calcs.FireMin": 199968.6,
+      "Calcs.LightningMax": 79845,
+      "Calcs.LightningMin": 49378.5,
+      "Calcs.PhysicalMax": 2571.0497279573,
+      "Calcs.PhysicalMin": 1714.1853391225,
       "ChaosResist": 75,
       "ChaosResistTotal": 115,
       "ColdResist": 80,
@@ -51,7 +61,110 @@
     "mainSkill": {
       "group": 1,
       "id": "PenanceBrand",
-      "name": "Penance Brand"
+      "name": "Penance Brand",
+      "supports": [
+        {
+          "id": "SupportBurningDamage",
+          "level": 20
+        },
+        {
+          "id": "SupportCruelty",
+          "level": 18,
+          "quality": 30
+        },
+        {
+          "id": "SupportInspiration",
+          "level": 18,
+          "quality": 30
+        },
+        {
+          "id": "SupportSwiftAffliction",
+          "level": 18,
+          "quality": 30
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 123,
+    "outputs": {
+      "Armour": 6604,
+      "AverageHit": 122184.74,
+      "BlockChance": 48,
+      "Calcs.ChaosMax": 6233.5,
+      "Calcs.ChaosMin": 4155.9,
+      "Calcs.ColdMax": 18195,
+      "Calcs.ColdMin": 12130.5,
+      "Calcs.FireMax": 82816.5,
+      "Calcs.FireMin": 55215.03,
+      "Calcs.LightningMax": 38505.5,
+      "Calcs.LightningMin": 25672,
+      "Calcs.PhysicalMax": 867.3,
+      "Calcs.PhysicalMin": 578.25,
+      "ChaosResist": 75,
+      "ChaosResistTotal": 81,
+      "ColdResist": 80,
+      "ColdResistTotal": 166,
+      "CombinedDPS": 1018311.340002,
+      "CritChance": 11.28,
+      "Dex": 168,
+      "EnergyShield": 1789,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 596,
+      "EnergyShieldRegen": 0,
+      "EnergyShieldRegenRecovery": 0,
+      "Evasion": 20,
+      "FireResist": 75,
+      "FireResistTotal": 118,
+      "HitChance": 100,
+      "HitSpeed": 0.545,
+      "Int": 312,
+      "Life": 3298,
+      "LifeLeechRate": 0,
+      "LifeRegen": 0,
+      "LifeRegenRecovery": 0,
+      "LifeUnreserved": 3298,
+      "LightningResist": 75,
+      "LightningResistTotal": 107,
+      "Mana": 1104,
+      "ManaRegen": 36.4,
+      "ManaUnreserved": 1104,
+      "MissingChaosResist": 0,
+      "MissingColdResist": 0,
+      "MissingFireResist": 0,
+      "MissingLightningResist": 0,
+      "Speed": 1.4533333333333,
+      "SpellBlockChance": 44,
+      "SpellSuppressionChance": 0,
+      "Str": 170,
+      "TotalDPS": 133181.3666,
+      "TotalDotDPS": 885129.973402
+    },
+    "mainSkill": {
+      "group": 1,
+      "id": "PenanceBrand",
+      "name": "Penance Brand",
+      "supports": [
+        {
+          "id": "SupportBurningDamage",
+          "level": 20
+        },
+        {
+          "id": "SupportCruelty",
+          "level": 18,
+          "quality": 30
+        },
+        {
+          "id": "SupportInspiration",
+          "level": 18,
+          "quality": 30
+        },
+        {
+          "id": "SupportSwiftAffliction",
+          "level": 18,
+          "quality": 30
+        }
+      ]
     }
   },
   "gear": {

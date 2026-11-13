@@ -8,6 +8,26 @@
     "outputs": {
       "Armour": 230557,
       "BlockChance": 30,
+      "Calcs.MainHand.ChaosMax": 0,
+      "Calcs.MainHand.ChaosMin": 0,
+      "Calcs.MainHand.ColdMax": 733.15,
+      "Calcs.MainHand.ColdMin": 72.05,
+      "Calcs.MainHand.FireMax": 8563.5,
+      "Calcs.MainHand.FireMin": 911.35,
+      "Calcs.MainHand.LightningMax": 162709.404,
+      "Calcs.MainHand.LightningMin": 1794.936,
+      "Calcs.MainHand.PhysicalMax": 3352.7518932153,
+      "Calcs.MainHand.PhysicalMin": 356.88841667505,
+      "Calcs.OffHand.ChaosMax": 0,
+      "Calcs.OffHand.ChaosMin": 0,
+      "Calcs.OffHand.ColdMax": 733.15,
+      "Calcs.OffHand.ColdMin": 72.05,
+      "Calcs.OffHand.FireMax": 7698.35,
+      "Calcs.OffHand.FireMin": 929.5,
+      "Calcs.OffHand.LightningMax": 162709.404,
+      "Calcs.OffHand.LightningMin": 1794.936,
+      "Calcs.OffHand.PhysicalMax": 2821.8967030289,
+      "Calcs.OffHand.PhysicalMin": 340.722020346,
       "ChaosResist": -33,
       "ChaosResistTotal": -33,
       "ColdResist": 79,
@@ -52,7 +72,133 @@
       "group": 1,
       "id": "MoltenStrike",
       "name": "Molten Strike",
-      "attack": true
+      "attack": true,
+      "supports": [
+        {
+          "id": "SupportDamageOnFullLife",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportGreaterMultistrike",
+          "level": 3,
+          "quality": 20
+        },
+        {
+          "id": "SupportVolatility",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportGreaterAncestralCall",
+          "level": 3,
+          "quality": 20
+        },
+        {
+          "id": "SupportGreaterMultipleProjectiles",
+          "level": 20,
+          "quality": 20
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 130,
+    "outputs": {
+      "Armour": 12445,
+      "BlockChance": 30,
+      "Calcs.MainHand.ChaosMax": 0,
+      "Calcs.MainHand.ChaosMin": 0,
+      "Calcs.MainHand.ColdMax": 143.55,
+      "Calcs.MainHand.ColdMin": 14.3,
+      "Calcs.MainHand.FireMax": 1916.2,
+      "Calcs.MainHand.FireMin": 204.05,
+      "Calcs.MainHand.LightningMax": 0,
+      "Calcs.MainHand.LightningMin": 0,
+      "Calcs.MainHand.PhysicalMax": 514.36,
+      "Calcs.MainHand.PhysicalMin": 54.78,
+      "Calcs.OffHand.ChaosMax": 0,
+      "Calcs.OffHand.ChaosMin": 0,
+      "Calcs.OffHand.ColdMax": 143.55,
+      "Calcs.OffHand.ColdMin": 14.3,
+      "Calcs.OffHand.FireMax": 1722.05,
+      "Calcs.OffHand.FireMin": 207.9,
+      "Calcs.OffHand.LightningMax": 0,
+      "Calcs.OffHand.LightningMin": 0,
+      "Calcs.OffHand.PhysicalMax": 462.33,
+      "Calcs.OffHand.PhysicalMin": 55.77,
+      "ChaosResist": -33,
+      "ChaosResistTotal": -33,
+      "ColdResist": -16,
+      "ColdResistTotal": -16,
+      "CombinedDPS": 5047.699041,
+      "CritChance": 0,
+      "Dex": 449,
+      "EnergyShield": 4551,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 1669,
+      "EnergyShieldRegen": 45.5,
+      "EnergyShieldRegenRecovery": 45.5,
+      "Evasion": 0,
+      "FireResist": 71,
+      "FireResistTotal": 104,
+      "HitChance": 85,
+      "Int": 529,
+      "Life": 1,
+      "LifeLeechRate": 0.218513,
+      "LifeRegen": 0,
+      "LifeRegenRecovery": 0,
+      "LifeUnreserved": 1,
+      "LightningResist": -21,
+      "LightningResistTotal": -21,
+      "MainHand.AverageHit": 1423.62,
+      "Mana": 1458,
+      "ManaRegen": 35.7,
+      "ManaUnreserved": 1458,
+      "MissingChaosResist": 108,
+      "MissingColdResist": 87,
+      "MissingFireResist": 0,
+      "MissingLightningResist": 92,
+      "OffHand.AverageHit": 1302.95,
+      "Speed": 4.356,
+      "SpellBlockChance": 0,
+      "SpellSuppressionChance": 18,
+      "Str": 234,
+      "TotalDPS": 5047.699041,
+      "TotalDotDPS": 0
+    },
+    "mainSkill": {
+      "group": 1,
+      "id": "MoltenStrike",
+      "name": "Molten Strike",
+      "attack": true,
+      "supports": [
+        {
+          "id": "SupportDamageOnFullLife",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportGreaterMultistrike",
+          "level": 3,
+          "quality": 20
+        },
+        {
+          "id": "SupportVolatility",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportGreaterAncestralCall",
+          "level": 3,
+          "quality": 20
+        },
+        {
+          "id": "SupportGreaterMultipleProjectiles",
+          "level": 20,
+          "quality": 20
+        }
+      ]
     }
   },
   "gear": {

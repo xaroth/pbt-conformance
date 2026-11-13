@@ -9,6 +9,16 @@
       "Armour": 0,
       "AverageHit": 785.145275,
       "BlockChance": 24,
+      "Calcs.ChaosMax": 0,
+      "Calcs.ChaosMin": 0,
+      "Calcs.ColdMax": 0,
+      "Calcs.ColdMin": 0,
+      "Calcs.FireMax": 456.4,
+      "Calcs.FireMin": 270.9,
+      "Calcs.LightningMax": 366,
+      "Calcs.LightningMin": 243.5,
+      "Calcs.PhysicalMax": 134.625,
+      "Calcs.PhysicalMin": 89.5,
       "ChaosResist": -60,
       "ChaosResistTotal": -60,
       "ColdResist": 60,
@@ -51,7 +61,96 @@
     "mainSkill": {
       "group": 1,
       "id": "PenanceBrand",
-      "name": "Penance Brand"
+      "name": "Penance Brand",
+      "supports": [
+        {
+          "id": "SupportCombustion",
+          "level": 8
+        },
+        {
+          "id": "SupportElementalFocus",
+          "level": 6
+        },
+        {
+          "id": "SupportControlledDestruction",
+          "level": 6
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 45,
+    "outputs": {
+      "Armour": 0,
+      "AverageHit": 476.026625,
+      "BlockChance": 24,
+      "Calcs.ChaosMax": 0,
+      "Calcs.ChaosMin": 0,
+      "Calcs.ColdMax": 0,
+      "Calcs.ColdMin": 0,
+      "Calcs.FireMax": 129.5,
+      "Calcs.FireMin": 65,
+      "Calcs.LightningMax": 331,
+      "Calcs.LightningMin": 220.5,
+      "Calcs.PhysicalMax": 120.375,
+      "Calcs.PhysicalMin": 80,
+      "ChaosResist": -60,
+      "ChaosResistTotal": -60,
+      "ColdResist": 60,
+      "ColdResistTotal": 60,
+      "CombinedDPS": 249.913978125,
+      "CritChance": 1.2,
+      "Dex": 19,
+      "EnergyShield": 112,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 37,
+      "EnergyShieldRegen": 0,
+      "EnergyShieldRegenRecovery": 0,
+      "Evasion": 84,
+      "FireResist": 75,
+      "FireResistTotal": 110,
+      "HitChance": 100,
+      "HitSpeed": 0.525,
+      "Int": 270,
+      "Life": 922,
+      "LifeLeechRate": 0,
+      "LifeRegen": 0,
+      "LifeRegenRecovery": 0,
+      "LifeUnreserved": 922,
+      "LightningResist": 59,
+      "LightningResistTotal": 59,
+      "Mana": 395,
+      "ManaRegen": 9,
+      "ManaUnreserved": 395,
+      "MissingChaosResist": 135,
+      "MissingColdResist": 15,
+      "MissingFireResist": 0,
+      "MissingLightningResist": 16,
+      "Speed": 1.4,
+      "SpellBlockChance": 0,
+      "SpellSuppressionChance": 0,
+      "Str": 64,
+      "TotalDPS": 249.913978125,
+      "TotalDotDPS": 0
+    },
+    "mainSkill": {
+      "group": 1,
+      "id": "PenanceBrand",
+      "name": "Penance Brand",
+      "supports": [
+        {
+          "id": "SupportCombustion",
+          "level": 8
+        },
+        {
+          "id": "SupportElementalFocus",
+          "level": 6
+        },
+        {
+          "id": "SupportControlledDestruction",
+          "level": 6
+        }
+      ]
     }
   },
   "gear": {

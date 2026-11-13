@@ -9,6 +9,16 @@
       "Armour": 7938,
       "AverageHit": 1933937.2886185,
       "BlockChance": 68,
+      "Calcs.ChaosMax": 0,
+      "Calcs.ChaosMin": 0,
+      "Calcs.ColdMax": 307393.0392,
+      "Calcs.ColdMin": 204880.5096,
+      "Calcs.FireMax": 1295105.1168,
+      "Calcs.FireMin": 863202.8592,
+      "Calcs.LightningMax": 467555.2752,
+      "Calcs.LightningMin": 287598.6984,
+      "Calcs.PhysicalMax": 265308.12591957,
+      "Calcs.PhysicalMin": 176830.95291736,
       "ChaosResist": 75,
       "ChaosResistTotal": 114,
       "ColdResist": 75,
@@ -50,7 +60,121 @@
     "mainSkill": {
       "group": 2,
       "id": "EtherealKnives",
-      "name": "Ethereal Knives"
+      "name": "Ethereal Knives",
+      "supports": [
+        {
+          "id": "SupportMinionPact",
+          "level": 4,
+          "quality": 33
+        },
+        {
+          "id": "SupportCruelty",
+          "level": 21,
+          "quality": 20
+        },
+        {
+          "id": "SupportSwiftAffliction",
+          "level": 21,
+          "quality": 20
+        },
+        {
+          "id": "SupportBurningDamage",
+          "level": 21,
+          "quality": 20
+        },
+        {
+          "id": "SupportInspiration",
+          "level": 21,
+          "quality": 30
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 134,
+    "outputs": {
+      "Armour": 1257,
+      "AverageHit": 14522.57625,
+      "BlockChance": 68,
+      "Calcs.ChaosMax": 0,
+      "Calcs.ChaosMin": 0,
+      "Calcs.ColdMax": 4211.5,
+      "Calcs.ColdMin": 2807,
+      "Calcs.FireMax": 6452.16,
+      "Calcs.FireMin": 4299.68,
+      "Calcs.LightningMax": 5615.5,
+      "Calcs.LightningMin": 3742.5,
+      "Calcs.PhysicalMax": 1150.3125,
+      "Calcs.PhysicalMin": 766.5,
+      "ChaosResist": 45,
+      "ChaosResistTotal": 45,
+      "ColdResist": 75,
+      "ColdResistTotal": 133,
+      "CombinedDPS": 137464.3227109,
+      "CritChance": 16.5,
+      "Dex": 65,
+      "EnergyShield": 1745,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 582,
+      "EnergyShieldRegen": 0,
+      "EnergyShieldRegenRecovery": 0,
+      "Evasion": 15,
+      "FireResist": 75,
+      "FireResistTotal": 131,
+      "HitChance": 100,
+      "Int": 32,
+      "Life": 2766,
+      "LifeLeechRate": 0,
+      "LifeRegen": 77.5,
+      "LifeRegenRecovery": 77.5,
+      "LifeUnreserved": 2766,
+      "LightningResist": 75,
+      "LightningResistTotal": 78,
+      "Mana": 741,
+      "ManaRegen": 20.4,
+      "ManaUnreserved": 741,
+      "MissingChaosResist": 30,
+      "MissingColdResist": 0,
+      "MissingFireResist": 0,
+      "MissingLightningResist": 0,
+      "Speed": 1.7333333333333,
+      "SpellBlockChance": 45,
+      "SpellSuppressionChance": 0,
+      "Str": 56,
+      "TotalDPS": 25172.4655,
+      "TotalDotDPS": 112291.8572109
+    },
+    "mainSkill": {
+      "group": 1,
+      "id": "EtherealKnives",
+      "name": "Ethereal Knives",
+      "supports": [
+        {
+          "id": "SupportMinionPact",
+          "level": 4,
+          "quality": 33
+        },
+        {
+          "id": "SupportCruelty",
+          "level": 21,
+          "quality": 20
+        },
+        {
+          "id": "SupportSwiftAffliction",
+          "level": 21,
+          "quality": 20
+        },
+        {
+          "id": "SupportBurningDamage",
+          "level": 21,
+          "quality": 20
+        },
+        {
+          "id": "SupportInspiration",
+          "level": 21,
+          "quality": 30
+        }
+      ]
     }
   },
   "gear": {

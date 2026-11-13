@@ -9,6 +9,16 @@
       "Armour": 6757,
       "AverageHit": 222800.1090643,
       "BlockChance": 65,
+      "Calcs.ChaosMax": 6489.875,
+      "Calcs.ChaosMin": 4326,
+      "Calcs.ColdMax": 34563,
+      "Calcs.ColdMin": 23038.925,
+      "Calcs.FireMax": 170996.6295,
+      "Calcs.FireMin": 113979.309,
+      "Calcs.LightningMax": 30330.775,
+      "Calcs.LightningMin": 17392.2,
+      "Calcs.PhysicalMax": 26691.799973062,
+      "Calcs.PhysicalMin": 17791.704655536,
       "ChaosResist": 75,
       "ChaosResistTotal": 80,
       "ColdResist": 75,
@@ -50,7 +60,119 @@
     "mainSkill": {
       "group": 4,
       "id": "Reap",
-      "name": "Reap"
+      "name": "Reap",
+      "supports": [
+        {
+          "id": "SupportBurningDamage",
+          "level": 21,
+          "quality": 30
+        },
+        {
+          "id": "SupportDeadlyAilments",
+          "level": 21,
+          "quality": 30
+        },
+        {
+          "id": "SupportEclipse",
+          "level": 4,
+          "quality": 20
+        },
+        {
+          "id": "SupportCruelty",
+          "level": 21,
+          "quality": 30
+        },
+        {
+          "id": "SupportEmpower",
+          "level": 4
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 134,
+    "outputs": {
+      "Armour": 5193,
+      "AverageHit": 17174.98302151,
+      "BlockChance": 65,
+      "Calcs.ChaosMax": 816.9,
+      "Calcs.ChaosMin": 544.6,
+      "Calcs.ColdMax": 4726,
+      "Calcs.ColdMin": 3150.5,
+      "Calcs.FireMax": 10271.36,
+      "Calcs.FireMin": 6847.28,
+      "Calcs.LightningMax": 3289.5,
+      "Calcs.LightningMin": 2193,
+      "Calcs.PhysicalMax": 1506.4956258115,
+      "Calcs.PhysicalMin": 1004.3304172077,
+      "ChaosResist": 26,
+      "ChaosResistTotal": 26,
+      "ColdResist": 75,
+      "ColdResistTotal": 111,
+      "CombinedDPS": 2252572.3653538,
+      "CritChance": 7.08,
+      "Dex": 67,
+      "EnergyShield": 855,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 285,
+      "EnergyShieldRegen": 0,
+      "EnergyShieldRegenRecovery": 0,
+      "Evasion": 22,
+      "FireResist": 75,
+      "FireResistTotal": 201,
+      "HitChance": 100,
+      "Int": 38,
+      "Life": 2787,
+      "LifeLeechRate": 0,
+      "LifeRegen": 201,
+      "LifeRegenRecovery": 201,
+      "LifeUnreserved": 2787,
+      "LightningResist": 75,
+      "LightningResistTotal": 116,
+      "Mana": 689,
+      "ManaRegen": 18.9,
+      "ManaUnreserved": 689,
+      "MissingChaosResist": 49,
+      "MissingColdResist": 0,
+      "MissingFireResist": 0,
+      "MissingLightningResist": 0,
+      "Speed": 1.3,
+      "SpellBlockChance": 53,
+      "SpellSuppressionChance": 0,
+      "Str": 68,
+      "TotalDPS": 22327.477927962,
+      "TotalDotDPS": 2230244.8874259
+    },
+    "mainSkill": {
+      "group": 1,
+      "id": "Reap",
+      "name": "Reap",
+      "supports": [
+        {
+          "id": "SupportBurningDamage",
+          "level": 21,
+          "quality": 30
+        },
+        {
+          "id": "SupportDeadlyAilments",
+          "level": 21,
+          "quality": 30
+        },
+        {
+          "id": "SupportEclipse",
+          "level": 4,
+          "quality": 20
+        },
+        {
+          "id": "SupportCruelty",
+          "level": 21,
+          "quality": 30
+        },
+        {
+          "id": "SupportEmpower",
+          "level": 4
+        }
+      ]
     }
   },
   "gear": {

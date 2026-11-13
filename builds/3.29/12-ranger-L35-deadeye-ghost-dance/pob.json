@@ -8,6 +8,16 @@
     "outputs": {
       "Armour": 1500,
       "BlockChance": 0,
+      "Calcs.MainHand.ChaosMax": 0,
+      "Calcs.MainHand.ChaosMin": 0,
+      "Calcs.MainHand.ColdMax": 54,
+      "Calcs.MainHand.ColdMin": 34.8,
+      "Calcs.MainHand.FireMax": 0,
+      "Calcs.MainHand.FireMin": 0,
+      "Calcs.MainHand.LightningMax": 603.6,
+      "Calcs.MainHand.LightningMin": 57.6,
+      "Calcs.MainHand.PhysicalMax": 27.9,
+      "Calcs.MainHand.PhysicalMin": 7.05,
       "ChaosResist": -60,
       "ChaosResistTotal": -60,
       "ColdResist": 48,
@@ -51,7 +61,112 @@
       "group": 1,
       "id": "LightningArrow",
       "name": "Lightning Arrow",
-      "attack": true
+      "attack": true,
+      "supports": [
+        {
+          "id": "SupportMirageArcher",
+          "level": 9
+        },
+        {
+          "id": "SupportAddedLightningDamage",
+          "level": 8
+        },
+        {
+          "id": "SupportElementalDamageWithAttacks",
+          "level": 6
+        },
+        {
+          "id": "SupportTrinity",
+          "level": 6
+        },
+        {
+          "id": "SupportFasterAttacks",
+          "level": 8
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 45,
+    "outputs": {
+      "Armour": 0,
+      "BlockChance": 0,
+      "Calcs.MainHand.ChaosMax": 0,
+      "Calcs.MainHand.ChaosMin": 0,
+      "Calcs.MainHand.ColdMax": 0,
+      "Calcs.MainHand.ColdMin": 0,
+      "Calcs.MainHand.FireMax": 0,
+      "Calcs.MainHand.FireMin": 0,
+      "Calcs.MainHand.LightningMax": 464.5,
+      "Calcs.MainHand.LightningMin": 44.5,
+      "Calcs.MainHand.PhysicalMax": 23.25,
+      "Calcs.MainHand.PhysicalMin": 5.875,
+      "ChaosResist": -60,
+      "ChaosResistTotal": -60,
+      "ColdResist": 48,
+      "ColdResistTotal": 48,
+      "CombinedDPS": 469.03113132632,
+      "CritChance": 7.34314,
+      "Dex": 229,
+      "EnergyShield": 23,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 8,
+      "EnergyShieldRegen": 0,
+      "EnergyShieldRegenRecovery": 0,
+      "Evasion": 313,
+      "FireResist": 45,
+      "FireResistTotal": 45,
+      "HitChance": 49,
+      "Int": 66,
+      "Life": 1177,
+      "LifeLeechRate": 3.729998574177,
+      "LifeRegen": 0,
+      "LifeRegenRecovery": 0,
+      "LifeUnreserved": 1177,
+      "LightningResist": 21,
+      "LightningResistTotal": 21,
+      "MainHand.AverageHit": 286.05406701375,
+      "Mana": 277,
+      "ManaRegen": 6.3,
+      "ManaUnreserved": 277,
+      "MissingChaosResist": 135,
+      "MissingColdResist": 27,
+      "MissingFireResist": 30,
+      "MissingLightningResist": 54,
+      "Speed": 2.66112,
+      "SpellBlockChance": 0,
+      "SpellSuppressionChance": 0,
+      "Str": 39,
+      "TotalDPS": 372.9998574177,
+      "TotalDotDPS": 0
+    },
+    "mainSkill": {
+      "group": 1,
+      "id": "LightningArrow",
+      "name": "Lightning Arrow",
+      "attack": true,
+      "supports": [
+        {
+          "id": "SupportMirageArcher",
+          "level": 9
+        },
+        {
+          "id": "SupportAddedLightningDamage",
+          "level": 8
+        },
+        {
+          "id": "SupportElementalDamageWithAttacks",
+          "level": 6
+        },
+        {
+          "id": "SupportTrinity",
+          "level": 6
+        },
+        {
+          "id": "SupportFasterAttacks",
+          "level": 8
+        }
+      ]
     }
   },
   "gear": {

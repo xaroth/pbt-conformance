@@ -9,6 +9,16 @@
       "Armour": 1462,
       "AverageHit": 377721.5405916,
       "BlockChance": 58,
+      "Calcs.ChaosMax": 0,
+      "Calcs.ChaosMin": 0,
+      "Calcs.ColdMax": 147428.505,
+      "Calcs.ColdMin": 98316.099,
+      "Calcs.FireMax": 39947.298,
+      "Calcs.FireMin": 26640.5064,
+      "Calcs.LightningMax": 0,
+      "Calcs.LightningMin": 0,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
       "ChaosResist": -41,
       "ChaosResistTotal": -41,
       "ColdResist": 75,
@@ -53,7 +63,132 @@
       "group": 4,
       "id": "FreezingPulse",
       "name": "Freezing Pulse",
-      "totem": true
+      "totem": true,
+      "supports": [
+        {
+          "id": "SupportSpellTotem",
+          "level": 20
+        },
+        {
+          "id": "SupportMultipleTotems",
+          "level": 20,
+          "quality": 30
+        },
+        {
+          "id": "SupportIncreasedCriticalDamage",
+          "level": 19,
+          "quality": 10
+        },
+        {
+          "id": "SupportGreaterMultipleProjectiles",
+          "level": 22,
+          "quality": 20
+        },
+        {
+          "id": "SupportReturningProjectiles",
+          "level": 22,
+          "quality": 20
+        },
+        {
+          "id": "SupportHypothermia",
+          "level": 20,
+          "quality": 20
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 133,
+    "outputs": {
+      "Armour": 534,
+      "AverageHit": 31085.869905937,
+      "BlockChance": 58,
+      "Calcs.ChaosMax": 0,
+      "Calcs.ChaosMin": 0,
+      "Calcs.ColdMax": 17772.96,
+      "Calcs.ColdMin": 11852.91,
+      "Calcs.FireMax": 0,
+      "Calcs.FireMin": 0,
+      "Calcs.LightningMax": 0,
+      "Calcs.LightningMin": 0,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
+      "ChaosResist": -41,
+      "ChaosResistTotal": -41,
+      "ColdResist": 75,
+      "ColdResistTotal": 84,
+      "CombinedDPS": 68388.913793062,
+      "CritChance": 39.375,
+      "Dex": 152,
+      "EnergyShield": 464,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 155,
+      "EnergyShieldRegen": 0,
+      "EnergyShieldRegenRecovery": 0,
+      "Evasion": 684,
+      "FireResist": 75,
+      "FireResistTotal": 78,
+      "HitChance": 100,
+      "Int": 327,
+      "Life": 2881,
+      "LifeLeechRate": 0,
+      "LifeRegen": 167.1,
+      "LifeRegenRecovery": 167.1,
+      "LifeUnreserved": 2881,
+      "LightningResist": 74,
+      "LightningResistTotal": 74,
+      "Mana": 1620,
+      "ManaRegen": 224.5,
+      "ManaUnreserved": 1620,
+      "MissingChaosResist": 116,
+      "MissingColdResist": 0,
+      "MissingFireResist": 0,
+      "MissingLightningResist": 1,
+      "Speed": 2.2,
+      "SpellBlockChance": 80,
+      "SpellSuppressionChance": 0,
+      "Str": 137,
+      "TotalDPS": 68388.913793062,
+      "TotalDotDPS": 0,
+      "TotemLife": 2660,
+      "TotemsSummoned": 5
+    },
+    "mainSkill": {
+      "group": 1,
+      "id": "FreezingPulse",
+      "name": "Freezing Pulse",
+      "totem": true,
+      "supports": [
+        {
+          "id": "SupportSpellTotem",
+          "level": 20
+        },
+        {
+          "id": "SupportMultipleTotems",
+          "level": 20,
+          "quality": 30
+        },
+        {
+          "id": "SupportIncreasedCriticalDamage",
+          "level": 19,
+          "quality": 10
+        },
+        {
+          "id": "SupportGreaterMultipleProjectiles",
+          "level": 22,
+          "quality": 20
+        },
+        {
+          "id": "SupportReturningProjectiles",
+          "level": 22,
+          "quality": 20
+        },
+        {
+          "id": "SupportHypothermia",
+          "level": 20,
+          "quality": 20
+        }
+      ]
     }
   },
   "gear": {

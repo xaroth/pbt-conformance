@@ -9,6 +9,16 @@
       "Armour": 35405,
       "AverageHit": 389607.99247406,
       "BlockChance": 54,
+      "Calcs.ChaosMax": 0,
+      "Calcs.ChaosMin": 0,
+      "Calcs.ColdMax": 0,
+      "Calcs.ColdMin": 0,
+      "Calcs.FireMax": 0,
+      "Calcs.FireMin": 0,
+      "Calcs.LightningMax": 253695,
+      "Calcs.LightningMin": 169088.4,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
       "ChaosResist": 80,
       "ChaosResistTotal": 114,
       "ColdResist": 76,
@@ -58,7 +68,129 @@
       "minion": {
         "name": "Sentinel of Absolution",
         "skill": "Default Attack"
-      }
+      },
+      "supports": [
+        {
+          "id": "SupportIncreasedCriticalStrikes",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportPhysicalToLightning",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportSpellEcho",
+          "level": 20,
+          "quality": 30
+        },
+        {
+          "id": "SupportIncreasedCriticalDamage",
+          "level": 20,
+          "quality": 30
+        },
+        {
+          "id": "SupportMinionDamage",
+          "level": 20,
+          "quality": 20
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 133,
+    "outputs": {
+      "Armour": 15963,
+      "AverageHit": 149695.114392,
+      "BlockChance": 54,
+      "Calcs.ChaosMax": 0,
+      "Calcs.ChaosMin": 0,
+      "Calcs.ColdMax": 0,
+      "Calcs.ColdMin": 0,
+      "Calcs.FireMax": 0,
+      "Calcs.FireMin": 0,
+      "Calcs.LightningMax": 128220,
+      "Calcs.LightningMin": 85458,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
+      "ChaosResist": 80,
+      "ChaosResistTotal": 114,
+      "ColdResist": 76,
+      "ColdResistTotal": 104,
+      "CombinedDPS": 373086.28510006,
+      "CritChance": 19.76,
+      "Dex": 170,
+      "EnergyShield": 394,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 66,
+      "EnergyShieldRegen": 0,
+      "EnergyShieldRegenRecovery": 0,
+      "Evasion": 146,
+      "FireResist": 41,
+      "FireResistTotal": 41,
+      "HitChance": 100,
+      "Int": 208,
+      "Life": 4912,
+      "LifeLeechRate": 0,
+      "LifeRegen": 171.9,
+      "LifeRegenRecovery": 171.9,
+      "LifeUnreserved": 4912,
+      "LightningResist": -200,
+      "LightningResistTotal": -283,
+      "Mana": 901,
+      "ManaRegen": 23.3,
+      "ManaUnreserved": 901,
+      "Minion.CombinedDPS": 524928.6754144,
+      "Minion.HitChance": 100,
+      "Minion.Life": 22311,
+      "Minion.MainHand.AverageHit": 218519.559056,
+      "MissingChaosResist": 0,
+      "MissingColdResist": 0,
+      "MissingFireResist": 37,
+      "MissingLightningResist": 276,
+      "Speed": 2.4923076923077,
+      "SpellBlockChance": 54,
+      "SpellSuppressionChance": 0,
+      "Str": 198,
+      "TotalDPS": 373086.28510006,
+      "TotalDotDPS": 0
+    },
+    "mainSkill": {
+      "group": 3,
+      "id": "Absolution",
+      "name": "Absolution",
+      "minion": {
+        "name": "Sentinel of Absolution",
+        "skill": "Default Attack"
+      },
+      "supports": [
+        {
+          "id": "SupportIncreasedCriticalStrikes",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportPhysicalToLightning",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportSpellEcho",
+          "level": 20,
+          "quality": 30
+        },
+        {
+          "id": "SupportIncreasedCriticalDamage",
+          "level": 20,
+          "quality": 30
+        },
+        {
+          "id": "SupportMinionDamage",
+          "level": 20,
+          "quality": 20
+        }
+      ]
     }
   },
   "gear": {

@@ -9,6 +9,16 @@
       "Armour": 2040,
       "AverageHit": 165699.612,
       "BlockChance": 51,
+      "Calcs.ChaosMax": 0,
+      "Calcs.ChaosMin": 0,
+      "Calcs.ColdMax": 33708.96,
+      "Calcs.ColdMin": 22460.4,
+      "Calcs.FireMax": 0,
+      "Calcs.FireMin": 0,
+      "Calcs.LightningMax": 0,
+      "Calcs.LightningMin": 0,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
       "ChaosResist": 75,
       "ChaosResistTotal": 84,
       "ColdResist": 75,
@@ -51,7 +61,120 @@
     "mainSkill": {
       "group": 8,
       "id": "WinterOrb",
-      "name": "Winter Orb"
+      "name": "Winter Orb",
+      "supports": [
+        {
+          "id": "SupportIncreasedCriticalDamage",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportInfusedChannelling",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportFocusedChannelling",
+          "level": 20,
+          "quality": 30
+        },
+        {
+          "id": "SupportPowerChargeOnCritical",
+          "level": 20
+        },
+        {
+          "id": "SupportIncreasedCriticalStrikes",
+          "level": 20,
+          "quality": 20
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 134,
+    "outputs": {
+      "Armour": 0,
+      "AverageHit": 14318.33885888,
+      "BlockChance": 39,
+      "Calcs.ChaosMax": 0,
+      "Calcs.ChaosMin": 0,
+      "Calcs.ColdMax": 4130.56,
+      "Calcs.ColdMin": 2755.2,
+      "Calcs.FireMax": 0,
+      "Calcs.FireMin": 0,
+      "Calcs.LightningMax": 0,
+      "Calcs.LightningMin": 0,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
+      "ChaosResist": 75,
+      "ChaosResistTotal": 84,
+      "ColdResist": 75,
+      "ColdResistTotal": 76,
+      "CombinedDPS": 79252.005583901,
+      "CritChance": 68.97,
+      "Dex": 141,
+      "EnergyShield": 4408,
+      "EnergyShieldLeechRate": 616.62860307115,
+      "EnergyShieldRecharge": 1469,
+      "EnergyShieldRegen": 0,
+      "EnergyShieldRegenRecovery": 0,
+      "Evasion": 218,
+      "FireResist": 75,
+      "FireResistTotal": 84,
+      "HitChance": 100,
+      "HitSpeed": 5.535,
+      "Int": 408,
+      "Life": 3799,
+      "LifeLeechRate": 0,
+      "LifeRegen": 0,
+      "LifeRegenRecovery": 0,
+      "LifeUnreserved": 3799,
+      "LightningResist": 75,
+      "LightningResistTotal": 83,
+      "Mana": 1445,
+      "ManaRegen": 37.4,
+      "ManaUnreserved": 1445,
+      "MissingChaosResist": 0,
+      "MissingColdResist": 0,
+      "MissingFireResist": 0,
+      "MissingLightningResist": 0,
+      "Speed": 7.0304,
+      "SpellBlockChance": 26,
+      "SpellSuppressionChance": 8,
+      "Str": 101,
+      "TotalDPS": 79252.005583901,
+      "TotalDotDPS": 0
+    },
+    "mainSkill": {
+      "group": 1,
+      "id": "WinterOrb",
+      "name": "Winter Orb",
+      "supports": [
+        {
+          "id": "SupportIncreasedCriticalDamage",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportInfusedChannelling",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportFocusedChannelling",
+          "level": 20,
+          "quality": 30
+        },
+        {
+          "id": "SupportPowerChargeOnCritical",
+          "level": 20
+        },
+        {
+          "id": "SupportIncreasedCriticalStrikes",
+          "level": 20,
+          "quality": 20
+        }
+      ]
     }
   },
   "gear": {

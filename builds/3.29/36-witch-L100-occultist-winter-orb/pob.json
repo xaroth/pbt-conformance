@@ -9,6 +9,16 @@
       "Armour": 531,
       "AverageHit": 644.2530792,
       "BlockChance": 24,
+      "Calcs.ChaosMax": 0,
+      "Calcs.ChaosMin": 0,
+      "Calcs.ColdMax": 367.08,
+      "Calcs.ColdMin": 243.96,
+      "Calcs.FireMax": 0,
+      "Calcs.FireMin": 0,
+      "Calcs.LightningMax": 0,
+      "Calcs.LightningMin": 0,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
       "ChaosResist": -60,
       "ChaosResistTotal": -60,
       "ColdResist": 44,
@@ -51,7 +61,112 @@
     "mainSkill": {
       "group": 1,
       "id": "WinterOrb",
-      "name": "Winter Orb"
+      "name": "Winter Orb",
+      "supports": [
+        {
+          "id": "SupportGreaterMultipleProjectiles",
+          "level": 2
+        },
+        {
+          "id": "SupportAddedLightningDamage",
+          "level": 7
+        },
+        {
+          "id": "SupportFasterCasting",
+          "level": 5
+        },
+        {
+          "id": "SupportAddedColdDamage",
+          "level": 7
+        },
+        {
+          "id": "SupportEnergyLeech",
+          "level": 3
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 124,
+    "outputs": {
+      "Armour": 531,
+      "AverageHit": 287.3253036,
+      "BlockChance": 24,
+      "Calcs.ChaosMax": 0,
+      "Calcs.ChaosMin": 0,
+      "Calcs.ColdMax": 228.76,
+      "Calcs.ColdMin": 152,
+      "Calcs.FireMax": 0,
+      "Calcs.FireMin": 0,
+      "Calcs.LightningMax": 0,
+      "Calcs.LightningMin": 0,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
+      "ChaosResist": -60,
+      "ChaosResistTotal": -60,
+      "ColdResist": 44,
+      "ColdResistTotal": 44,
+      "CombinedDPS": 1185.21687735,
+      "CritChance": 31.05,
+      "Dex": 144,
+      "EnergyShield": 1408,
+      "EnergyShieldLeechRate": 39.598095872263,
+      "EnergyShieldRecharge": 0,
+      "EnergyShieldRegen": 100,
+      "EnergyShieldRegenRecovery": 100,
+      "Evasion": 29,
+      "FireResist": 1,
+      "FireResistTotal": 1,
+      "HitChance": 100,
+      "HitSpeed": 4.125,
+      "Int": 224,
+      "Life": 1,
+      "LifeLeechRate": 0,
+      "LifeRegen": 184.6,
+      "LifeRegenRecovery": 184.6,
+      "LifeUnreserved": 1,
+      "LightningResist": 38,
+      "LightningResistTotal": 38,
+      "Mana": 1143,
+      "ManaRegen": 41.8,
+      "ManaUnreserved": 1143,
+      "MissingChaosResist": 135,
+      "MissingColdResist": 31,
+      "MissingFireResist": 74,
+      "MissingLightningResist": 40,
+      "Speed": 5.4,
+      "SpellBlockChance": 12,
+      "SpellSuppressionChance": 0,
+      "Str": 112,
+      "TotalDPS": 1185.21687735,
+      "TotalDotDPS": 0
+    },
+    "mainSkill": {
+      "group": 1,
+      "id": "WinterOrb",
+      "name": "Winter Orb",
+      "supports": [
+        {
+          "id": "SupportGreaterMultipleProjectiles",
+          "level": 2
+        },
+        {
+          "id": "SupportAddedLightningDamage",
+          "level": 7
+        },
+        {
+          "id": "SupportFasterCasting",
+          "level": 5
+        },
+        {
+          "id": "SupportAddedColdDamage",
+          "level": 7
+        },
+        {
+          "id": "SupportEnergyLeech",
+          "level": 3
+        }
+      ]
     }
   },
   "gear": {

@@ -8,6 +8,26 @@
     "outputs": {
       "Armour": 1500,
       "BlockChance": 20,
+      "Calcs.MainHand.ChaosMax": 1782.72,
+      "Calcs.MainHand.ChaosMin": 952.32,
+      "Calcs.MainHand.ColdMax": 0,
+      "Calcs.MainHand.ColdMin": 0,
+      "Calcs.MainHand.FireMax": 0,
+      "Calcs.MainHand.FireMin": 0,
+      "Calcs.MainHand.LightningMax": 0,
+      "Calcs.MainHand.LightningMin": 0,
+      "Calcs.MainHand.PhysicalMax": 73,
+      "Calcs.MainHand.PhysicalMin": 25.2,
+      "Calcs.OffHand.ChaosMax": 1584.96,
+      "Calcs.OffHand.ChaosMin": 858.24,
+      "Calcs.OffHand.ColdMax": 0,
+      "Calcs.OffHand.ColdMin": 0,
+      "Calcs.OffHand.FireMax": 0,
+      "Calcs.OffHand.FireMin": 0,
+      "Calcs.OffHand.LightningMax": 0,
+      "Calcs.OffHand.LightningMin": 0,
+      "Calcs.OffHand.PhysicalMax": 70.5,
+      "Calcs.OffHand.PhysicalMin": 23.9,
       "ChaosResist": -33,
       "ChaosResistTotal": -33,
       "ColdResist": 75,
@@ -52,7 +72,115 @@
       "group": 1,
       "id": "ViperStrikeAltX",
       "name": "Viper Strike of the Mamba",
-      "attack": true
+      "attack": true,
+      "supports": [
+        {
+          "id": "SupportCriticalStrikeAffliction",
+          "level": 15
+        },
+        {
+          "id": "SupportVoidManipulation",
+          "level": 16
+        },
+        {
+          "id": "SupportUnboundAilments",
+          "level": 16
+        },
+        {
+          "id": "SupportAddedChaosDamage",
+          "level": 15
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 85,
+    "outputs": {
+      "Armour": 0,
+      "BlockChance": 20,
+      "Calcs.MainHand.ChaosMax": 1299.9,
+      "Calcs.MainHand.ChaosMin": 694.4,
+      "Calcs.MainHand.ColdMax": 0,
+      "Calcs.MainHand.ColdMin": 0,
+      "Calcs.MainHand.FireMax": 0,
+      "Calcs.MainHand.FireMin": 0,
+      "Calcs.MainHand.LightningMax": 0,
+      "Calcs.MainHand.LightningMin": 0,
+      "Calcs.MainHand.PhysicalMax": 73,
+      "Calcs.MainHand.PhysicalMin": 25.2,
+      "Calcs.OffHand.ChaosMax": 1155.7,
+      "Calcs.OffHand.ChaosMin": 625.8,
+      "Calcs.OffHand.ColdMax": 0,
+      "Calcs.OffHand.ColdMin": 0,
+      "Calcs.OffHand.FireMax": 0,
+      "Calcs.OffHand.FireMin": 0,
+      "Calcs.OffHand.LightningMax": 0,
+      "Calcs.OffHand.LightningMin": 0,
+      "Calcs.OffHand.PhysicalMax": 70.5,
+      "Calcs.OffHand.PhysicalMin": 23.9,
+      "ChaosResist": -33,
+      "ChaosResistTotal": -33,
+      "ColdResist": 75,
+      "ColdResistTotal": 87,
+      "CombinedDPS": 29365.88844836,
+      "CritChance": 88,
+      "Dex": 288,
+      "EnergyShield": 300,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 100,
+      "EnergyShieldRegen": 0,
+      "EnergyShieldRegenRecovery": 0,
+      "Evasion": 1644,
+      "FireResist": 75,
+      "FireResistTotal": 121,
+      "HitChance": 88,
+      "Int": 266,
+      "Life": 1819,
+      "LifeLeechRate": 0,
+      "LifeRegen": 0,
+      "LifeRegenRecovery": 0,
+      "LifeUnreserved": 1819,
+      "LightningResist": 75,
+      "LightningResistTotal": 91,
+      "MainHand.AverageHit": 3670.245,
+      "Mana": 776,
+      "ManaRegen": 13.6,
+      "ManaUnreserved": 776,
+      "MissingChaosResist": 108,
+      "MissingColdResist": 0,
+      "MissingFireResist": 0,
+      "MissingLightningResist": 0,
+      "OffHand.AverageHit": 3290.3286,
+      "Speed": 1.6421137681159,
+      "SpellBlockChance": 0,
+      "SpellSuppressionChance": 59,
+      "Str": 92,
+      "TotalDPS": 10058.447293439,
+      "TotalDotDPS": 16508.0051136
+    },
+    "mainSkill": {
+      "group": 1,
+      "id": "ViperStrikeAltX",
+      "name": "Viper Strike of the Mamba",
+      "attack": true,
+      "supports": [
+        {
+          "id": "SupportCriticalStrikeAffliction",
+          "level": 15
+        },
+        {
+          "id": "SupportVoidManipulation",
+          "level": 16
+        },
+        {
+          "id": "SupportUnboundAilments",
+          "level": 16
+        },
+        {
+          "id": "SupportAddedChaosDamage",
+          "level": 15
+        }
+      ]
     }
   },
   "gear": {

@@ -9,6 +9,16 @@
       "Armour": 4626,
       "AverageHit": 1863558.2330591,
       "BlockChance": 68,
+      "Calcs.ChaosMax": 15784.146,
+      "Calcs.ChaosMin": 10524.066,
+      "Calcs.ColdMax": 0,
+      "Calcs.ColdMin": 0,
+      "Calcs.FireMax": 1211948.937,
+      "Calcs.FireMin": 808061.934,
+      "Calcs.LightningMax": 0,
+      "Calcs.LightningMin": 0,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
       "ChaosResist": -60,
       "ChaosResistTotal": -60,
       "ColdResist": 75,
@@ -50,7 +60,107 @@
     "mainSkill": {
       "group": 8,
       "id": "Fireball",
-      "name": "Fireball"
+      "name": "Fireball",
+      "supports": [
+        {
+          "id": "SupportIncreasedAreaOfEffect",
+          "level": 20
+        },
+        {
+          "id": "SupportHypothermia",
+          "level": 20
+        },
+        {
+          "id": "SupportGreaterSpellEcho",
+          "level": 3,
+          "quality": 30
+        },
+        {
+          "id": "SupportInspiration",
+          "level": 18,
+          "quality": 30
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 134,
+    "outputs": {
+      "Armour": 3569,
+      "AverageHit": 201422.253298,
+      "BlockChance": 68,
+      "Calcs.ChaosMax": 3163.3,
+      "Calcs.ChaosMin": 2109.1,
+      "Calcs.ColdMax": 0,
+      "Calcs.ColdMin": 0,
+      "Calcs.FireMax": 186417,
+      "Calcs.FireMin": 124292.85,
+      "Calcs.LightningMax": 0,
+      "Calcs.LightningMin": 0,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
+      "ChaosResist": -60,
+      "ChaosResistTotal": -60,
+      "ColdResist": 51,
+      "ColdResistTotal": 51,
+      "CombinedDPS": 1348953.5457029,
+      "CritChance": 19.92,
+      "Dex": 109,
+      "EnergyShield": 7556,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 2771,
+      "EnergyShieldRegen": 485.1,
+      "EnergyShieldRegenRecovery": 485.1,
+      "Evasion": 24,
+      "FireResist": 75,
+      "FireResistTotal": 172,
+      "HitChance": 100,
+      "Int": 312,
+      "Life": 1,
+      "LifeLeechRate": 0,
+      "LifeRegen": 0,
+      "LifeRegenRecovery": 0,
+      "LifeUnreserved": 1,
+      "LightningResist": -5,
+      "LightningResistTotal": -5,
+      "Mana": 1070,
+      "ManaRegen": 53.2,
+      "ManaUnreserved": 1070,
+      "MissingChaosResist": 135,
+      "MissingColdResist": 24,
+      "MissingFireResist": 0,
+      "MissingLightningResist": 80,
+      "Speed": 6.4133333333333,
+      "SpellBlockChance": 41,
+      "SpellSuppressionChance": 0,
+      "Str": 144,
+      "TotalDPS": 1291788.0511512,
+      "TotalDotDPS": 57165.494551739
+    },
+    "mainSkill": {
+      "group": 1,
+      "id": "Fireball",
+      "name": "Fireball",
+      "supports": [
+        {
+          "id": "SupportIncreasedAreaOfEffect",
+          "level": 20
+        },
+        {
+          "id": "SupportHypothermia",
+          "level": 20
+        },
+        {
+          "id": "SupportGreaterSpellEcho",
+          "level": 3,
+          "quality": 30
+        },
+        {
+          "id": "SupportInspiration",
+          "level": 18,
+          "quality": 30
+        }
+      ]
     }
   },
   "gear": {

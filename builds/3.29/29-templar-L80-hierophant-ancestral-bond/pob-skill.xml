@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathOfBuilding>
+	<Build level="80" targetVersion="3_0" className="Templar" ascendClassName="Hierophant" bandit="None" pantheonMajorGod="None" pantheonMinorGod="None" mainSocketGroup="1" viewMode="TREE" characterLevelAutoMode="false"/>
+	<Tree activeSpec="1">
+		<Spec treeVersion="3_29" classId="5" ascendClassId="2" secondaryAscendClassId="0" nodes="1031,1105,1203,4300,4367,4397,5296,5743,5935,6237,6764,6770,6967,7444,7938,9261,9386,10115,11190,11420,11551,11689,12246,12783,12888,13164,14057,14151,14870,14936,16243,16954,17735,19008,19501,19635,19919,20142,20528,21958,21974,22637,22972,25651,25831,26270,26714,26866,27323,27564,27879,29061,30926,30940,31875,32932,33310,33435,33755,33779,34098,34434,34487,35038,35910,36678,39521,39841,41251,41472,41476,41970,43000,43061,44184,44298,44529,44562,44799,45366,46904,47197,48878,49254,50472,51146,51524,52031,52848,54043,54694,55993,56066,56128,56158,58210,58218,58402,60398,60472,61471,62767,63067,63138,63447,63635,63944,63965,64210" masteryEffects="{34487,27718},{35038,42540},{44298,17942},{47197,61097},{56128,63280}">
+			<Sockets>
+			</Sockets>
+		</Spec>
+	</Tree>
+	<Items activeItemSet="1" useSecondWeaponSet="false">
+		<Item id="1">
+Rarity: RARE
+Blood Chant
+Kinetic Wand
+Item Level: 78
+Quality: 20
+Sockets: B-B-G
+Implicits: 1
+Cannot roll Caster Modifiers
+Adds 72 to 128 Fire Damage
+Adds 12 to 196 Lightning Damage
++150 to Accuracy Rating
+22% increased Critical Strike Chance
+		</Item>
+		<Item id="2">
+Rarity: RARE
+Kraken Star
+Ancient Spirit Shield
+Item Level: 79
+Sockets: B-B-R
+Implicits: 1
+9% increased Spell Damage
++85 to maximum Life
++12% to all Elemental Resistances
++29% to Fire Resistance
++38% to Lightning Resistance
++25 to Dexterity
+		</Item>
+		<Item id="3">
+Rarity: UNIQUE
+Wilma's Requital
+Solaris Circlet
+Item Level: 71
+Quality: 20
+Sockets: B-B-B-R
+Implicits: 0
++420 to Accuracy Rating
+230% increased Energy Shield
+25% increased Elemental Damage with Attack Skills
+Increases and Reductions to Cast Speed apply to Attack Speed
+Ancestral Bond
+		</Item>
+		<Item id="4">
+Rarity: RARE
+Sorrow Carapace
+Occultist's Vestment
+Item Level: 80
+Quality: 20
+Sockets: B-R-B-G-B-B
+Implicits: 1
+10% increased Spell Damage
++16 to Intelligence
++20 to maximum Energy Shield
+15% increased Energy Shield
++80 to maximum Life
++58 to maximum Mana
++30% to Cold Resistance
+		</Item>
+		<Item id="5">
+Rarity: RARE
+Rune Hold
+Vaal Gauntlets
+Item Level: 75
+Sockets: R-B-G-B
+Implicits: 0
++33 to Strength
+Adds 3 to 42 Lightning Damage to Attacks
+10% increased Attack Speed
+81% increased Armour
++90 to maximum Life
+		</Item>
+		<Item id="6">
+Rarity: RARE
+Armageddon Track
+Conjurer Boots
+Item Level: 73
+Sockets: B-B-R-G
+Implicits: 0
++95 to maximum Life
++60 to maximum Mana
++29% to Fire Resistance
++27% to Lightning Resistance
+30% increased Movement Speed
+{crafted}+14% to Lightning and Chaos Resistances
+		</Item>
+		<Item id="7">
+Rarity: RARE
+Chimeric Heart
+Onyx Amulet
+Item Level: 78
+Implicits: 1
++16 to all Attributes
++47 to Dexterity
+25% increased Spell Damage
++30% to Global Critical Strike Multiplier
++90 to maximum Life
+{crafted}+13% to Cold and Chaos Resistances
+		</Item>
+		<Item id="8">
+Rarity: RARE
+Cataclysm Circle
+Amethyst Ring
+Item Level: 80
+Implicits: 1
++23% to Chaos Resistance
++46 to maximum Energy Shield
++75 to maximum Life
++31% to Cold Resistance
+32% increased Elemental Damage with Attack Skills
+		</Item>
+		<Item id="9">
+Rarity: RARE
+Armageddon Nail
+Two-Stone Ring
+Item Level: 80
+Implicits: 1
++13% to Cold and Lightning Resistances
++55 to Strength
++41 to Dexterity
+Adds 2 to 42 Lightning Damage to Attacks
++75 to maximum Life
+{crafted}Adds 14 to 26 Cold Damage to Attacks
+		</Item>
+		<Item id="10">
+Rarity: RARE
+Rift Girdle
+Heavy Belt
+Item Level: 80
+Implicits: 1
++30 to Strength
++50 to Strength
++100 to maximum Life
++67 to maximum Mana
++43% to Fire Resistance
++19% to Cold Resistance
+{crafted}32% increased Elemental Damage with Attack Skills
+		</Item>
+		<ItemSet id="1" useSecondWeaponSet="false">
+			<Slot name="Weapon 1" itemId="1"/>
+			<Slot name="Weapon 2" itemId="2"/>
+			<Slot name="Helmet" itemId="3"/>
+			<Slot name="Body Armour" itemId="4"/>
+			<Slot name="Gloves" itemId="5"/>
+			<Slot name="Boots" itemId="6"/>
+			<Slot name="Amulet" itemId="7"/>
+			<Slot name="Ring 1" itemId="8"/>
+			<Slot name="Ring 2" itemId="9"/>
+			<Slot name="Belt" itemId="10"/>
+		</ItemSet>
+	</Items>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="0">
+		<SkillSet id="1">
+			<Skill enabled="true" includeInFullDPS="false" mainActiveSkill="1" mainActiveSkillCalcs="1" slot="Body Armour">
+				<Gem nameSpec="Kinetic Fusillade" skillId="KineticFusillade" gemId="Metadata/Items/Gems/SkillGemKineticFusillade" level="20" quality="20" enabled="true"/>
+				<Gem nameSpec="Ballista Totem" skillId="SupportBallistaTotem" gemId="Metadata/Items/Gems/SkillGemSupportBallistaTotem" level="20" quality="0" enabled="true"/>
+				<Gem nameSpec="Greater Volley" skillId="SupportGreaterVolley" gemId="Metadata/Items/Gems/SkillGemSupportGreaterVolley" level="20" quality="0" enabled="true"/>
+				<Gem nameSpec="Elemental Damage with Attacks" skillId="SupportElementalDamageWithAttacks" gemId="Metadata/Items/Gems/SkillGemSupportElementalDamageWithAttacks" level="20" quality="0" enabled="true"/>
+				<Gem nameSpec="Less Duration" skillId="SupportLessDuration" gemId="Metadata/Items/Gems/SkillGemSupportLessDuration" level="20" quality="20" enabled="true"/>
+				<Gem nameSpec="Increased Critical Damage" skillId="SupportIncreasedCriticalDamage" gemId="Metadata/Items/Gems/SkillGemSupportIncreasedCriticalDamage" level="20" quality="0" enabled="true"/>
+			</Skill>
+		</SkillSet>
+	</Skills>
+	<Config activeConfigSet="1">
+		<ConfigSet id="1">
+		</ConfigSet>
+	</Config>
+</PathOfBuilding>

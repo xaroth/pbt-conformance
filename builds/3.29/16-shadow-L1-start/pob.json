@@ -53,6 +53,56 @@
       "attack": true
     }
   },
+  "skill": {
+    "allocated": 1,
+    "outputs": {
+      "Armour": 0,
+      "BlockChance": 0,
+      "ChaosResist": -60,
+      "ChaosResistTotal": -60,
+      "ColdResist": -60,
+      "ColdResistTotal": -60,
+      "CombinedDPS": 0.063,
+      "CritChance": 0,
+      "Dex": 23,
+      "EnergyShield": 0,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 0,
+      "EnergyShieldRegen": 0,
+      "EnergyShieldRegenRecovery": 0,
+      "Evasion": 16,
+      "FireResist": -60,
+      "FireResistTotal": -60,
+      "HitChance": 6,
+      "Int": 23,
+      "Life": 57,
+      "LifeLeechRate": 0,
+      "LifeRegen": 0,
+      "LifeRegenRecovery": 0,
+      "LifeUnreserved": 57,
+      "LightningResist": -60,
+      "LightningResistTotal": -60,
+      "MainHand.AverageHit": 0.875,
+      "Mana": 51,
+      "ManaRegen": 0.9,
+      "ManaUnreserved": 51,
+      "MissingChaosResist": 135,
+      "MissingColdResist": 135,
+      "MissingFireResist": 135,
+      "MissingLightningResist": 135,
+      "Speed": 1.2,
+      "SpellBlockChance": 0,
+      "SpellSuppressionChance": 0,
+      "Str": 14,
+      "TotalDPS": 0.063,
+      "TotalDotDPS": 0
+    },
+    "mainSkill": {
+      "id": "Melee",
+      "name": "Default Attack",
+      "attack": true
+    }
+  },
   "gear": {
     "allocated": 1,
     "outputs": {

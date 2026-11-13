@@ -9,6 +9,16 @@
       "Armour": 8700,
       "AverageHit": 0,
       "BlockChance": 78,
+      "Calcs.ChaosMax": 0,
+      "Calcs.ChaosMin": 0,
+      "Calcs.ColdMax": 0,
+      "Calcs.ColdMin": 0,
+      "Calcs.FireMax": 0,
+      "Calcs.FireMin": 0,
+      "Calcs.LightningMax": 0,
+      "Calcs.LightningMin": 0,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
       "ChaosResist": 78,
       "ChaosResistTotal": 107,
       "ColdResist": 90,
@@ -57,7 +67,98 @@
       "minion": {
         "name": "Animated Guardian",
         "skill": "Default Attack"
-      }
+      },
+      "supports": [
+        {
+          "id": "SupportMinionLife",
+          "level": 20,
+          "quality": 30
+        },
+        {
+          "id": "SupportMeatShield",
+          "level": 20,
+          "quality": 20
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 134,
+    "outputs": {
+      "Armour": 6450,
+      "AverageHit": 0,
+      "BlockChance": 78,
+      "Calcs.ChaosMax": 0,
+      "Calcs.ChaosMin": 0,
+      "Calcs.ColdMax": 0,
+      "Calcs.ColdMin": 0,
+      "Calcs.FireMax": 0,
+      "Calcs.FireMin": 0,
+      "Calcs.LightningMax": 0,
+      "Calcs.LightningMin": 0,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
+      "ChaosResist": 78,
+      "ChaosResistTotal": 96,
+      "ColdResist": 81,
+      "ColdResistTotal": 81,
+      "CombinedDPS": 0,
+      "CritChance": 0,
+      "Dex": 120,
+      "EnergyShield": 0,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRegen": 0,
+      "EnergyShieldRegenRecovery": 0,
+      "Evasion": 22,
+      "FireResist": 61,
+      "FireResistTotal": 61,
+      "HitChance": 100,
+      "Int": 173,
+      "Life": 24398,
+      "LifeLeechRate": 0,
+      "LifeRecharge": 8133,
+      "LifeRegen": 85.4,
+      "LifeRegenRecovery": 85.4,
+      "LifeUnreserved": 24398,
+      "LightningResist": 79,
+      "LightningResistTotal": 79,
+      "Mana": 0,
+      "ManaRegen": 0,
+      "Minion.CombinedDPS": 417.1826215935,
+      "Minion.HitChance": 100,
+      "Minion.Life": 22659,
+      "Minion.MainHand.AverageHit": 268.232895,
+      "MissingChaosResist": 0,
+      "MissingColdResist": 9,
+      "MissingFireResist": 29,
+      "MissingLightningResist": 11,
+      "Speed": 1.7666666666667,
+      "SpellBlockChance": 76,
+      "SpellSuppressionChance": 0,
+      "Str": 250,
+      "TotalDPS": 0,
+      "TotalDotDPS": 0
+    },
+    "mainSkill": {
+      "group": 1,
+      "id": "AnimateGuardian",
+      "name": "Animate Guardian",
+      "minion": {
+        "name": "Animated Guardian",
+        "skill": "Default Attack"
+      },
+      "supports": [
+        {
+          "id": "SupportMinionLife",
+          "level": 20,
+          "quality": 30
+        },
+        {
+          "id": "SupportMeatShield",
+          "level": 20,
+          "quality": 20
+        }
+      ]
     }
   },
   "gear": {

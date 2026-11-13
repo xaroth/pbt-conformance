@@ -8,6 +8,16 @@
     "outputs": {
       "Armour": 5064,
       "BlockChance": 70,
+      "Calcs.MainHand.ChaosMax": 0,
+      "Calcs.MainHand.ChaosMin": 0,
+      "Calcs.MainHand.ColdMax": 475453.652436,
+      "Calcs.MainHand.ColdMin": 310389.324588,
+      "Calcs.MainHand.FireMax": 7275.82014,
+      "Calcs.MainHand.FireMin": 3636.9324,
+      "Calcs.MainHand.LightningMax": 0,
+      "Calcs.MainHand.LightningMin": 0,
+      "Calcs.MainHand.PhysicalMax": 12958.811873217,
+      "Calcs.MainHand.PhysicalMin": 4983.9807560868,
       "ChaosResist": 75,
       "ChaosResistTotal": 77,
       "ColdResist": 20,
@@ -51,7 +61,118 @@
       "group": 3,
       "id": "FlickerStrike",
       "name": "Flicker Strike",
-      "attack": true
+      "attack": true,
+      "supports": [
+        {
+          "id": "SupportItemRarity",
+          "level": 4
+        },
+        {
+          "id": "SupportIceBite",
+          "level": 32
+        },
+        {
+          "id": "SupportGreaterMultistrike",
+          "level": 3,
+          "quality": 33
+        },
+        {
+          "id": "SupportFortify",
+          "level": 21,
+          "quality": 20
+        },
+        {
+          "id": "SupportEnduranceChargeOnMeleeStun",
+          "level": 21,
+          "quality": 20
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 133,
+    "outputs": {
+      "Armour": 4961,
+      "BlockChance": 70,
+      "Calcs.MainHand.ChaosMax": 0,
+      "Calcs.MainHand.ChaosMin": 0,
+      "Calcs.MainHand.ColdMax": 28330.6065,
+      "Calcs.MainHand.ColdMin": 17940.699,
+      "Calcs.MainHand.FireMax": 1030.575,
+      "Calcs.MainHand.FireMin": 515.2875,
+      "Calcs.MainHand.LightningMax": 0,
+      "Calcs.MainHand.LightningMin": 0,
+      "Calcs.MainHand.PhysicalMax": 1360.0125,
+      "Calcs.MainHand.PhysicalMin": 523.1625,
+      "ChaosResist": 75,
+      "ChaosResistTotal": 77,
+      "ColdResist": 20,
+      "ColdResistTotal": 20,
+      "CombinedDPS": 444488.49112986,
+      "CritChance": 31.647,
+      "Dex": 389,
+      "EnergyShield": 314,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 105,
+      "EnergyShieldRegen": 0,
+      "EnergyShieldRegenRecovery": 0,
+      "Evasion": 8601,
+      "FireResist": 75,
+      "FireResistTotal": 77,
+      "HitChance": 100,
+      "Int": 136,
+      "Life": 3149,
+      "LifeLeechRate": 1029.8664519114,
+      "LifeRegen": 50.4,
+      "LifeRegenRecovery": 50.4,
+      "LifeUnreserved": 3149,
+      "LightningResist": 66,
+      "LightningResistTotal": 66,
+      "MainHand.AverageHit": 44770.504170717,
+      "Mana": 908,
+      "ManaRegen": 15.9,
+      "ManaUnreserved": 908,
+      "MissingChaosResist": 0,
+      "MissingColdResist": 56,
+      "MissingFireResist": 0,
+      "MissingLightningResist": 9,
+      "Speed": 7.9212,
+      "SpellBlockChance": 18,
+      "SpellSuppressionChance": 47,
+      "Str": 249,
+      "TotalDPS": 354636.11763709,
+      "TotalDotDPS": 954.6752668016
+    },
+    "mainSkill": {
+      "group": 1,
+      "id": "FlickerStrike",
+      "name": "Flicker Strike",
+      "attack": true,
+      "supports": [
+        {
+          "id": "SupportItemRarity",
+          "level": 4
+        },
+        {
+          "id": "SupportIceBite",
+          "level": 32
+        },
+        {
+          "id": "SupportGreaterMultistrike",
+          "level": 3,
+          "quality": 33
+        },
+        {
+          "id": "SupportFortify",
+          "level": 21,
+          "quality": 20
+        },
+        {
+          "id": "SupportEnduranceChargeOnMeleeStun",
+          "level": 21,
+          "quality": 20
+        }
+      ]
     }
   },
   "gear": {

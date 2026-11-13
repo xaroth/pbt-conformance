@@ -9,6 +9,16 @@
       "Armour": 33962,
       "AverageHit": 0,
       "BlockChance": 75,
+      "Calcs.ChaosMax": 0,
+      "Calcs.ChaosMin": 0,
+      "Calcs.ColdMax": 0,
+      "Calcs.ColdMin": 0,
+      "Calcs.FireMax": 0,
+      "Calcs.FireMin": 0,
+      "Calcs.LightningMax": 0,
+      "Calcs.LightningMin": 0,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
       "ChaosResist": 75,
       "ChaosResistTotal": 78,
       "ColdResist": 90,
@@ -58,7 +68,127 @@
       "minion": {
         "name": "Holy Relic",
         "skill": "Nova"
-      }
+      },
+      "supports": [
+        {
+          "id": "SupportVoidManipulation",
+          "level": 23,
+          "quality": 30
+        },
+        {
+          "id": "SupportAwakenedEnhance",
+          "level": 7
+        },
+        {
+          "id": "SupportEmpower",
+          "level": 6,
+          "quality": 30
+        },
+        {
+          "id": "SupportMinionDamage",
+          "level": 23,
+          "quality": 30
+        },
+        {
+          "id": "SupportUnboundAilments",
+          "level": 23,
+          "quality": 30
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 134,
+    "outputs": {
+      "Armour": 4099,
+      "AverageHit": 0,
+      "BlockChance": 39,
+      "Calcs.ChaosMax": 0,
+      "Calcs.ChaosMin": 0,
+      "Calcs.ColdMax": 0,
+      "Calcs.ColdMin": 0,
+      "Calcs.FireMax": 0,
+      "Calcs.FireMin": 0,
+      "Calcs.LightningMax": 0,
+      "Calcs.LightningMin": 0,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
+      "ChaosResist": 75,
+      "ChaosResistTotal": 78,
+      "ColdResist": -23,
+      "ColdResistTotal": -23,
+      "CombinedDPS": 0,
+      "CritChance": 0,
+      "Dex": 156,
+      "EnergyShield": 917,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 306,
+      "EnergyShieldRegen": 0,
+      "EnergyShieldRegenRecovery": 0,
+      "Evasion": 559,
+      "FireResist": 53,
+      "FireResistTotal": 53,
+      "HitChance": 100,
+      "Int": 221,
+      "Life": 4584,
+      "LifeLeechRate": 0,
+      "LifeRegen": 45.8,
+      "LifeRegenRecovery": 45.8,
+      "LifeUnreserved": 4584,
+      "LightningResist": 55,
+      "LightningResistTotal": 55,
+      "Mana": 1039,
+      "ManaRegen": 18.2,
+      "ManaUnreserved": 1039,
+      "Minion.AverageHit": 69346.06875,
+      "Minion.CombinedDPS": 69346.06875,
+      "Minion.HitChance": 100,
+      "Minion.Life": 38303,
+      "MissingChaosResist": 0,
+      "MissingColdResist": 104,
+      "MissingFireResist": 28,
+      "MissingLightningResist": 26,
+      "Speed": 0.49677098857427,
+      "SpellBlockChance": 24,
+      "SpellSuppressionChance": 0,
+      "Str": 274,
+      "TotalDPS": 0,
+      "TotalDotDPS": 0
+    },
+    "mainSkill": {
+      "group": 1,
+      "id": "SummonHolyRelicAltX",
+      "name": "Summon Holy Relic of Conviction",
+      "minion": {
+        "name": "Holy Relic",
+        "skill": "Nova"
+      },
+      "supports": [
+        {
+          "id": "SupportVoidManipulation",
+          "level": 23,
+          "quality": 30
+        },
+        {
+          "id": "SupportAwakenedEnhance",
+          "level": 7
+        },
+        {
+          "id": "SupportEmpower",
+          "level": 6,
+          "quality": 30
+        },
+        {
+          "id": "SupportMinionDamage",
+          "level": 23,
+          "quality": 30
+        },
+        {
+          "id": "SupportUnboundAilments",
+          "level": 23,
+          "quality": 30
+        }
+      ]
     }
   },
   "gear": {

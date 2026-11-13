@@ -9,6 +9,16 @@
       "Armour": 9372,
       "AverageHit": 0,
       "BlockChance": 75,
+      "Calcs.ChaosMax": 0,
+      "Calcs.ChaosMin": 0,
+      "Calcs.ColdMax": 0,
+      "Calcs.ColdMin": 0,
+      "Calcs.FireMax": 0,
+      "Calcs.FireMin": 0,
+      "Calcs.LightningMax": 0,
+      "Calcs.LightningMin": 0,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
       "ChaosResist": 75,
       "ChaosResistTotal": 144,
       "ColdResist": 89,
@@ -50,7 +60,111 @@
     "mainSkill": {
       "group": 1,
       "id": "RighteousFire",
-      "name": "Righteous Fire"
+      "name": "Righteous Fire",
+      "supports": [
+        {
+          "id": "SupportBurningDamage",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportEfficacy",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportIncreasedAreaOfEffect",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportElementalFocus",
+          "level": 20,
+          "quality": 20
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 123,
+    "outputs": {
+      "Armour": 3580,
+      "AverageHit": 0,
+      "BlockChance": 75,
+      "Calcs.ChaosMax": 0,
+      "Calcs.ChaosMin": 0,
+      "Calcs.ColdMax": 0,
+      "Calcs.ColdMin": 0,
+      "Calcs.FireMax": 0,
+      "Calcs.FireMin": 0,
+      "Calcs.LightningMax": 0,
+      "Calcs.LightningMin": 0,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
+      "ChaosResist": 75,
+      "ChaosResistTotal": 144,
+      "ColdResist": 84,
+      "ColdResistTotal": 207,
+      "CombinedDPS": 111394.90688743,
+      "CritChance": 0,
+      "Dex": 220,
+      "EnergyShield": 144,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRegen": 0,
+      "EnergyShieldRegenRecovery": 0,
+      "Evasion": 262,
+      "FireResist": 84,
+      "FireResistTotal": 305,
+      "HitChance": 100,
+      "Int": 210,
+      "Life": 8567,
+      "LifeLeechRate": 0,
+      "LifeRecharge": 2856,
+      "LifeRegen": 504.8,
+      "LifeRegenRecovery": 504.8,
+      "LifeUnreserved": 8567,
+      "LightningResist": 84,
+      "LightningResistTotal": 128,
+      "Mana": 788,
+      "ManaRegen": 19.3,
+      "ManaUnreserved": 788,
+      "MissingChaosResist": 0,
+      "MissingColdResist": 0,
+      "MissingFireResist": 0,
+      "MissingLightningResist": 0,
+      "Speed": 0,
+      "SpellBlockChance": 30,
+      "SpellSuppressionChance": 0,
+      "Str": 355,
+      "TotalDPS": 0,
+      "TotalDotDPS": 111394.90688743
+    },
+    "mainSkill": {
+      "group": 1,
+      "id": "RighteousFire",
+      "name": "Righteous Fire",
+      "supports": [
+        {
+          "id": "SupportBurningDamage",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportEfficacy",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportIncreasedAreaOfEffect",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportElementalFocus",
+          "level": 20,
+          "quality": 20
+        }
+      ]
     }
   },
   "gear": {

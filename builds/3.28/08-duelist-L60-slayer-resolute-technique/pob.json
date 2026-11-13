@@ -8,6 +8,16 @@
     "outputs": {
       "Armour": 9379,
       "BlockChance": 0,
+      "Calcs.MainHand.ChaosMax": 0,
+      "Calcs.MainHand.ChaosMin": 0,
+      "Calcs.MainHand.ColdMax": 0,
+      "Calcs.MainHand.ColdMin": 0,
+      "Calcs.MainHand.FireMax": 0,
+      "Calcs.MainHand.FireMin": 0,
+      "Calcs.MainHand.LightningMax": 0,
+      "Calcs.MainHand.LightningMin": 0,
+      "Calcs.MainHand.PhysicalMax": 40001.055398357,
+      "Calcs.MainHand.PhysicalMin": 9008.296163587,
       "ChaosResist": -17,
       "ChaosResistTotal": -17,
       "ColdResist": 77,
@@ -51,7 +61,104 @@
       "group": 1,
       "id": "GroundSlamAltX",
       "name": "Ground Slam of Earthshaking",
-      "attack": true
+      "attack": true,
+      "supports": [
+        {
+          "id": "SupportMeleePhysicalDamage",
+          "level": 15
+        },
+        {
+          "id": "SupportBrutality",
+          "level": 12
+        },
+        {
+          "id": "SupportChanceToBleed",
+          "level": 17
+        },
+        {
+          "id": "SupportFortify",
+          "level": 15
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 84,
+    "outputs": {
+      "Armour": 2747,
+      "BlockChance": 0,
+      "Calcs.MainHand.ChaosMax": 0,
+      "Calcs.MainHand.ChaosMin": 0,
+      "Calcs.MainHand.ColdMax": 0,
+      "Calcs.MainHand.ColdMin": 0,
+      "Calcs.MainHand.FireMax": 0,
+      "Calcs.MainHand.FireMin": 0,
+      "Calcs.MainHand.LightningMax": 0,
+      "Calcs.MainHand.LightningMin": 0,
+      "Calcs.MainHand.PhysicalMax": 29577.453401008,
+      "Calcs.MainHand.PhysicalMin": 6661.1831679103,
+      "ChaosResist": -17,
+      "ChaosResistTotal": -17,
+      "ColdResist": 66,
+      "ColdResistTotal": 66,
+      "CombinedDPS": 81845.615651284,
+      "CritChance": 0,
+      "Dex": 154,
+      "EnergyShield": 0,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 0,
+      "EnergyShieldRegen": 0,
+      "EnergyShieldRegenRecovery": 0,
+      "Evasion": 0,
+      "FireResist": 77,
+      "FireResistTotal": 98,
+      "HitChance": 100,
+      "Int": 62,
+      "Life": 3120,
+      "LifeLeechRate": 303.06516717133,
+      "LifeRegen": 137.3,
+      "LifeRegenRecovery": 137.3,
+      "LifeUnreserved": 3120,
+      "LightningResist": 52,
+      "LightningResistTotal": 52,
+      "MainHand.AverageHit": 18119.318284459,
+      "Mana": 425,
+      "ManaRegen": 7.4,
+      "ManaUnreserved": 425,
+      "MissingChaosResist": 92,
+      "MissingColdResist": 11,
+      "MissingFireResist": 0,
+      "MissingLightningResist": 26,
+      "Speed": 1.39384,
+      "SpellBlockChance": 0,
+      "SpellSuppressionChance": 0,
+      "Str": 491,
+      "TotalDPS": 25255.430597611,
+      "TotalDotDPS": 40221.061923416
+    },
+    "mainSkill": {
+      "group": 1,
+      "id": "GroundSlamAltX",
+      "name": "Ground Slam of Earthshaking",
+      "attack": true,
+      "supports": [
+        {
+          "id": "SupportMeleePhysicalDamage",
+          "level": 15
+        },
+        {
+          "id": "SupportBrutality",
+          "level": 12
+        },
+        {
+          "id": "SupportChanceToBleed",
+          "level": 17
+        },
+        {
+          "id": "SupportFortify",
+          "level": 15
+        }
+      ]
     }
   },
   "gear": {

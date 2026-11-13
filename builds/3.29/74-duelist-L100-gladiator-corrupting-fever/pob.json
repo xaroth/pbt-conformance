@@ -9,6 +9,16 @@
       "Armour": 33051,
       "AverageHit": 0,
       "BlockChance": 68,
+      "Calcs.ChaosMax": 0,
+      "Calcs.ChaosMin": 0,
+      "Calcs.ColdMax": 0,
+      "Calcs.ColdMin": 0,
+      "Calcs.FireMax": 0,
+      "Calcs.FireMin": 0,
+      "Calcs.LightningMax": 0,
+      "Calcs.LightningMin": 0,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
       "ChaosResist": 75,
       "ChaosResistTotal": 102,
       "ColdResist": 75,
@@ -50,7 +60,109 @@
     "mainSkill": {
       "group": 2,
       "id": "CorruptingFever",
-      "name": "Corrupting Fever"
+      "name": "Corrupting Fever",
+      "supports": [
+        {
+          "id": "SupportBrutality",
+          "level": 21,
+          "quality": 20
+        },
+        {
+          "id": "SupportEfficacy",
+          "level": 23,
+          "quality": 20
+        },
+        {
+          "id": "SupportSwiftAffliction",
+          "level": 23,
+          "quality": 20
+        },
+        {
+          "id": "SupportEmpower",
+          "level": 5
+        }
+      ]
+    }
+  },
+  "skill": {
+    "allocated": 133,
+    "outputs": {
+      "Armour": 15632,
+      "AverageHit": 0,
+      "BlockChance": 68,
+      "Calcs.ChaosMax": 0,
+      "Calcs.ChaosMin": 0,
+      "Calcs.ColdMax": 0,
+      "Calcs.ColdMin": 0,
+      "Calcs.FireMax": 0,
+      "Calcs.FireMin": 0,
+      "Calcs.LightningMax": 0,
+      "Calcs.LightningMin": 0,
+      "Calcs.PhysicalMax": 0,
+      "Calcs.PhysicalMin": 0,
+      "ChaosResist": 34,
+      "ChaosResistTotal": 34,
+      "ColdResist": 75,
+      "ColdResistTotal": 89,
+      "CombinedDPS": 773000.7923092,
+      "CritChance": 0,
+      "Dex": 72,
+      "EnergyShield": 0,
+      "EnergyShieldLeechRate": 0,
+      "EnergyShieldRecharge": 0,
+      "EnergyShieldRegen": 0,
+      "EnergyShieldRegenRecovery": 0,
+      "Evasion": 1139,
+      "FireResist": 76,
+      "FireResistTotal": 78,
+      "HitChance": 100,
+      "Int": 34,
+      "Life": 4114,
+      "LifeLeechRate": 0,
+      "LifeRegen": 249.8,
+      "LifeRegenRecovery": 249.8,
+      "LifeUnreserved": 4114,
+      "LightningResist": 75,
+      "LightningResistTotal": 86,
+      "Mana": 710,
+      "ManaRegen": 19.9,
+      "ManaUnreserved": 710,
+      "MissingChaosResist": 41,
+      "MissingColdResist": 0,
+      "MissingFireResist": 0,
+      "MissingLightningResist": 0,
+      "Speed": 0,
+      "SpellBlockChance": 52,
+      "SpellSuppressionChance": 0,
+      "Str": 33,
+      "TotalDPS": 0,
+      "TotalDotDPS": 773000.7923092
+    },
+    "mainSkill": {
+      "group": 2,
+      "id": "CorruptingFever",
+      "name": "Corrupting Fever",
+      "supports": [
+        {
+          "id": "SupportBrutality",
+          "level": 21,
+          "quality": 20
+        },
+        {
+          "id": "SupportEfficacy",
+          "level": 23,
+          "quality": 20
+        },
+        {
+          "id": "SupportSwiftAffliction",
+          "level": 23,
+          "quality": 20
+        },
+        {
+          "id": "SupportEmpower",
+          "level": 5
+        }
+      ]
     }
   },
   "gear": {
