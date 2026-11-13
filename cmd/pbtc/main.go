@@ -63,6 +63,7 @@ import (
 	"github.com/xaroth/pbt-conformance/runtime"
 
 	"github.com/xaroth/pbt-engine/dataset/remote"
+	"github.com/xaroth/pbt-engine/dataset/remote/httpfetch"
 )
 
 const game = "poe1"
@@ -279,7 +280,7 @@ func runCompareFrom(ctx context.Context, f *pins.File, cache, datasets, league s
 // their directory.
 func pullData(ctx context.Context, notes io.Writer, f *pins.File, cache string) (string, error) {
 	dir := filepath.Join(cache, "data", game)
-	src := remote.HTTP{Base: remote.DefaultSource}
+	src := httpfetch.Source{Base: remote.DefaultSource}
 	var errs []error
 	for _, league := range leagues(f, "") {
 		id := f.Games[game].Leagues[league].Dataset.ID
