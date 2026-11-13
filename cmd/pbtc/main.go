@@ -15,8 +15,8 @@
 // party.json is run once more with the party buffs of the ally it names. With --check it
 // writes nothing and fails when a stored derived XML or pob.json differs from a fresh run.
 //
-// data pulls the datasets of every pinned league from the pinned pbt-data commit into
-// <cache>/data/<commit>/<game> and prints that directory; a later run fetches nothing.
+// data pulls the pinned dataset of every pinned league by its id from pbt-data's bucket into
+// <cache>/data/<game>/<league> and prints <cache>/data/<game>; a later run fetches nothing.
 //
 // compare computes pbt-engine's sheet for every build of a league (default: every pinned
 // league) with the pinned dataset, from --datasets (directories of datasets, one per league or
@@ -274,19 +274,27 @@ func runCompareFrom(ctx context.Context, f *pins.File, cache, datasets, league s
 	return runCompare(os.Stdout, f, datasets, league, out)
 }
 
-// pullData brings the pinned leagues' datasets of the pinned pbt-data commit up to date under
-// cache, noting what it did on notes, and returns their directory.
+// pullData brings the pinned leagues' datasets up to date under cache, one directory per league,
+// pulling each by its pinned id from pbt-data's bucket. It notes what it did on notes and returns
+// their directory.
 func pullData(ctx context.Context, notes io.Writer, f *pins.File, cache string) (string, error) {
-	dir := filepath.Join(cache, "data", f.Data.Commit, game)
-	rs, err := remote.Pull(ctx, remote.HTTP{Base: f.Data.RawURL()}, dir, game, leagues(f, "")...)
-	for _, r := range rs {
+	dir := filepath.Join(cache, "data", game)
+	src := remote.HTTP{Base: remote.DefaultSource}
+	var errs []error
+	for _, league := range leagues(f, "") {
+		id := f.Games[game].Leagues[league].Dataset.ID
+		r, err := remote.PullID(ctx, src, filepath.Join(dir, league), id)
+		if err != nil {
+			errs = append(errs, fmt.Errorf("%s %s: %w", game, league, err))
+			continue
+		}
 		state := "current"
 		if r.Updated {
 			state = fmt.Sprintf("pulled, %d files", r.Fetched)
 		}
-		fmt.Fprintf(notes, "pbtc: %s %s %s (%s)\n", game, r.League, r.Version, state)
+		fmt.Fprintf(notes, "pbtc: %s %s %s (%s)\n", game, league, r.Version, state)
 	}
-	if err != nil {
+	if err := errors.Join(errs...); err != nil {
 		return "", fmt.Errorf("data: %w", err)
 	}
 	return dir, nil
