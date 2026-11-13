@@ -8,13 +8,15 @@ import (
 const (
 	LayerTree = "tree"
 	LayerGear = "gear"
-	LayerFull = "full"
+	// LayerSkill is the gear with the main skill alone against the enemy.
+	LayerSkill = "skill"
+	LayerFull  = "full"
 	// LayerParty is the full build with its ally's party buffs; only builds with an ally have it.
 	LayerParty = "party"
 )
 
 // Layers returns the layers in report order.
-func Layers() []string { return []string{LayerTree, LayerGear, LayerFull, LayerParty} }
+func Layers() []string { return []string{LayerTree, LayerGear, LayerSkill, LayerFull, LayerParty} }
 
 // Status is how a build fares on one group of outputs in one layer.
 type Status string
@@ -47,14 +49,14 @@ type GroupResult struct {
 	Missing []string `json:"missing,omitempty"`
 }
 
-// judgeLayers judges each layer of PoB's values v against our values for it, the party layer
-// only when v has one. The engine simulates the tree-only build only, so ours are the tree
-// layer's.
-func judgeLayers(v *pob.Values, ours map[string]float64) []Layer {
+// judgeLayers judges each layer of PoB's values v against ours, the party layer only when v has
+// one. The engine gives the tree layer and the skill outputs of the skill and full layers.
+func judgeLayers(v *pob.Values, o ours) []Layer {
 	ls := []Layer{
-		judgeLayer(LayerTree, v.TreeOnly, ours),
+		judgeLayer(LayerTree, v.TreeOnly, o.tree),
 		judgeLayer(LayerGear, v.Gear, nil),
-		judgeLayer(LayerFull, v.Full, nil),
+		judgeLayer(LayerSkill, v.Skill, o.skill),
+		judgeLayer(LayerFull, v.Full, o.full),
 	}
 	if v.Party != nil {
 		ls = append(ls, judgeLayer(LayerParty, *v.Party, nil))

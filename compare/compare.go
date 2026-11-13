@@ -47,8 +47,9 @@ type Mismatch struct {
 	League string `json:"league"`
 	Build  string `json:"build"`
 	Output string `json:"output"`
-	// Ours is pbt-engine's value; PoB is PoB's for the tree-only build, which is what the
-	// engine models, and PoBFull PoB's for the full build. HasPoB is false when PoB has no value.
+	// Ours is pbt-engine's value; PoB is PoB's for the layer the output is compared on, the
+	// tree-only build for the sheet and defences and the skill build for skill outputs, and
+	// PoBFull PoB's for the full build. HasPoB is false when PoB has no value.
 	Ours    float64 `json:"ours"`
 	PoB     float64 `json:"pob"`
 	PoBFull float64 `json:"pobFull"`
@@ -165,7 +166,7 @@ func compareBuild(dir, league string, reg *dataset.Registry, sim *simulator.Sim)
 	}
 	out = append(out, allocatedMismatches(c, v, league, name)...)
 	out = append(out, warnings(st, league, name)...)
-	ours, err := engineValues(sim.Outputs(), st)
+	ours, err := oursOf(dir, reg, sim, st, full)
 	if err != nil {
 		return nil, err
 	}
@@ -213,7 +214,52 @@ func allocatedMismatches(c *build.Checked, v *pob.Values, league, name string) [
 	}}
 }
 
-// engineValues returns the value of every catalogue output of st.
+// ours holds pbt-engine's values per layer: every output for the tree-only build, and the skill
+// outputs for the skill and full builds.
+type ours struct {
+	tree, skill, full map[string]float64
+}
+
+// oursOf simulates the skill and full builds of the build in dir, the tree-only one st already
+// simulated, while the engine gives skill outputs.
+func oursOf(dir string, reg *dataset.Registry, sim *simulator.Sim, st *simulator.Stats, full *build.Build) (ours, error) {
+	tree, err := engineValues(sim.Outputs(), st)
+	if err != nil {
+		return ours{}, err
+	}
+	o := ours{tree: tree}
+	var skillOutputs []simulator.Output
+	table := pobOutputs()
+	for _, out := range sim.Outputs() {
+		if get, ok := table[string(out.Key)]; ok && get.Group.NeedsSkill() {
+			skillOutputs = append(skillOutputs, out)
+		}
+	}
+	if len(skillOutputs) == 0 {
+		return o, nil
+	}
+	skill, _, err := importFile(dir, pob.SkillXML, reg)
+	if err != nil {
+		return ours{}, err
+	}
+	if o.skill, err = simulateValues(sim, skillOutputs, skill); err != nil {
+		return ours{}, err
+	}
+	if o.full, err = simulateValues(sim, skillOutputs, full); err != nil {
+		return ours{}, err
+	}
+	return o, nil
+}
+
+func simulateValues(sim *simulator.Sim, outputs []simulator.Output, b *build.Build) (map[string]float64, error) {
+	st, err := sim.Simulate(b)
+	if err != nil {
+		return nil, fmt.Errorf("compare: %w", err)
+	}
+	return engineValues(outputs, st)
+}
+
+// engineValues returns the value of each of outputs in st.
 func engineValues(outputs []simulator.Output, st *simulator.Stats) (map[string]float64, error) {
 	m := make(map[string]float64, len(outputs))
 	for _, o := range outputs {
@@ -291,22 +337,30 @@ func warnings(st *simulator.Stats, league, name string) []Mismatch {
 	return out
 }
 
-// compareOutputs compares every catalogue output, with our values in values, with PoB's values v.
-func compareOutputs(outputs []simulator.Output, values map[string]float64, v *pob.Values, league, name string) ([]Mismatch, error) {
+// compareOutputs compares every catalogue output with PoB's values v: the sheet and defences of
+// the tree-only build, and skill outputs of the skill build once the engine simulates it.
+func compareOutputs(outputs []simulator.Output, o ours, v *pob.Values, league, name string) ([]Mismatch, error) {
 	var out []Mismatch
 	table := pobOutputs()
-	for _, o := range outputs {
-		get, ok := table[string(o.Key)]
+	for _, so := range outputs {
+		get, ok := table[string(so.Key)]
 		if !ok {
-			return nil, fmt.Errorf("compare: %w %s", errNoKey, o.Key)
+			return nil, fmt.Errorf("compare: %w %s", errNoKey, so.Key)
 		}
-		ours := values[string(o.Key)]
-		p, has := get.Value(v.TreeOnly.Outputs)
+		values, layer := o.tree, v.TreeOnly
+		if get.Group.NeedsSkill() {
+			values, layer = o.skill, v.Skill
+		}
+		ours, given := values[string(so.Key)]
+		if !given {
+			continue
+		}
+		p, has := get.Value(layer.Outputs)
 		full, _ := get.Value(v.Full.Outputs)
 		if has && get.Matches(ours, p) {
 			continue
 		}
-		out = append(out, Mismatch{League: league, Build: name, Output: string(o.Key), Ours: ours, PoB: p, PoBFull: full, HasPoB: has})
+		out = append(out, Mismatch{League: league, Build: name, Output: string(so.Key), Ours: ours, PoB: p, PoBFull: full, HasPoB: has})
 	}
 	return out, nil
 }

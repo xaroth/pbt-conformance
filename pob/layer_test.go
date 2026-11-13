@@ -110,16 +110,85 @@ Crimson Jewel
 	}
 }
 
-func TestGearInvalid(t *testing.T) {
+func TestSkill(t *testing.T) {
+	t.Parallel()
+	full := `<PathOfBuilding>
+	<Build level="90" bandit="Alira" mainSocketGroup="3"/>
+	<Tree activeSpec="1"/>
+	<Items activeItemSet="1">
+		<Item id="1">
+Divine Life Flask
+		</Item>
+		<ItemSet id="1">
+			<Slot name="Flask 1" itemId="1"/>
+		</ItemSet>
+	</Items>
+	<Skills activeSkillSet="2">
+		<SkillSet id="1">
+			<Skill enabled="true"><Gem nameSpec="Fireball"/></Skill>
+		</SkillSet>
+		<SkillSet id="2">
+			<Skill enabled="true"><Gem nameSpec="Determination"/></Skill>
+			<Skill enabled="true" source="Item:2:Doom Crown" slot="Helmet"><Gem skillId="HeraldOfBreach"/></Skill>
+			<Skill enabled="true" slot="Body Armour"><Gem nameSpec="Arc" skillPart="2"/><Gem nameSpec="Spell Echo Support"/></Skill>
+			<Skill enabled="true"><Gem nameSpec="Flame Dash"/></Skill>
+		</SkillSet>
+	</Skills>
+	<Config activeConfigSet="1">
+		<ConfigSet id="1" title="Default">
+			<Input name="enemyIsBoss" string="Uber"/>
+			<Input name="conditionStationary" boolean="true"/>
+			<Placeholder name="enemyLevel" number="84"/>
+			<CustomModifierBlock>+1 to Level of all Spell Skill Gems</CustomModifierBlock>
+		</ConfigSet>
+		<ConfigSet id="2" title="Other">
+			<Input name="enemyLevel" number="70"/>
+		</ConfigSet>
+	</Config>
+	<Party/>
+</PathOfBuilding>
+`
+	want := `<PathOfBuilding>
+	<Build level="90" bandit="None" mainSocketGroup="2"/>
+	<Tree activeSpec="1"/>
+	<Items activeItemSet="1">
+		<ItemSet id="1">
+		</ItemSet>
+	</Items>
+	<Skills activeSkillSet="2">
+		<SkillSet id="2">
+			<Skill enabled="false" source="Item:2:Doom Crown" slot="Helmet"><Gem skillId="HeraldOfBreach"/></Skill>
+			<Skill enabled="true" slot="Body Armour"><Gem nameSpec="Arc" skillPart="2"/><Gem nameSpec="Spell Echo Support"/></Skill>
+		</SkillSet>
+	</Skills>
+	<Config activeConfigSet="1">
+		<ConfigSet id="1" title="Default">
+			<Input name="enemyIsBoss" string="Uber"/>
+		</ConfigSet>
+	</Config>
+</PathOfBuilding>
+`
+	got, err := pob.Skill([]byte(full))
+	if err != nil {
+		t.Fatal(err)
+	}
+	if diff := cmp.Diff(want, string(got)); diff != "" {
+		t.Errorf("(-want +got)\n%s", diff)
+	}
+}
+
+func TestDeriveInvalid(t *testing.T) {
 	t.Parallel()
 	for _, full := range []string{"<PathOfBuilding><Build>", "<Other/>", ""} {
-		if _, err := pob.Gear([]byte(full)); err == nil {
-			t.Errorf("%q: got no error", full)
+		for name, derive := range pob.Derived() {
+			if _, err := derive([]byte(full)); err == nil {
+				t.Errorf("%s of %q: got no error", name, full)
+			}
 		}
 	}
 }
 
-// TestDerivedFiles checks that every stored gear and tree-only XML is what pob derives from its
+// TestDerivedFiles checks that every stored derived XML is what pob derives from its
 // build, so a changed pob.xml cannot go unrecorded without the PoB runtime.
 func TestDerivedFiles(t *testing.T) {
 	t.Parallel()

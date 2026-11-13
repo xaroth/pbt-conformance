@@ -20,12 +20,15 @@ import (
 const (
 	// FullXML is the build as complete as PoB holds it: tree, items, skills.
 	FullXML = "pob.xml"
+	// SkillXML is the gear with the main skill alone against the enemy, derived from FullXML by
+	// Skill.
+	SkillXML = "pob-skill.xml"
 	// GearXML is the tree and the gear, derived from FullXML by Gear.
 	GearXML = "pob-gear.xml"
 	// TreeOnlyXML is the same build with only the tree, to tell tree and gear causes apart,
 	// derived from FullXML by TreeOnly.
 	TreeOnlyXML = "pob-treeonly.xml"
-	// ValuesFile holds what PoB computed for the three XMLs.
+	// ValuesFile holds what PoB computed for the four XMLs.
 	ValuesFile = "pob.json"
 	// PartyFile names the build's ally in its league: the build whose party buffs it is
 	// recorded with too.
@@ -37,12 +40,13 @@ var ErrStale = errors.New("stored pob files differ from a fresh run")
 
 const filePerm = 0o644
 
-// Values is a build's values file: PoB's results for the three XMLs and the release that made
-// them. The skill, minion and delivery outputs are recorded for the full build only: the other
-// layers have no skills of their own.
+// Values is a build's values file: PoB's results for the four XMLs and the release that made
+// them. The skill, minion and delivery outputs are recorded for the full and skill layers only:
+// the others have no skills.
 type Values struct {
 	PoB      pins.Release `json:"pob"`
 	Full     Result       `json:"full"`
+	Skill    Result       `json:"skill"`
 	Gear     Result       `json:"gear"`
 	TreeOnly Result       `json:"treeOnly"`
 	// Party is the full build with the party buffs of the ally its party file names, recorded
@@ -72,9 +76,9 @@ func BuildDirs(root, league string) ([]string, error) {
 	return dirs, nil
 }
 
-// Record derives each build's gear XML, runs every build of league under root through its
+// Record derives each build's XMLs, runs every build of league under root through its
 // pinned PoB in cache and writes each build's values file. With check it writes nothing and
-// fails with ErrStale when a stored gear XML or values file differs from a fresh run, naming
+// fails with ErrStale when a stored derived XML or values file differs from a fresh run, naming
 // the builds.
 func Record(ctx context.Context, root, cache string, f *pins.File, game, league string, check bool) error {
 	l, ok := f.Games[game].Leagues[league]
@@ -159,7 +163,7 @@ func allyOf(dir string) (string, error) {
 
 // Derived returns the XMLs derived from a build's full XML, by file name.
 func Derived() map[string]func([]byte) ([]byte, error) {
-	return map[string]func([]byte) ([]byte, error){GearXML: Gear, TreeOnlyXML: TreeOnly}
+	return map[string]func([]byte) ([]byte, error){GearXML: Gear, SkillXML: Skill, TreeOnlyXML: TreeOnly}
 }
 
 // deriveAll writes each build's derived XMLs, or with check fails with ErrStale when one
@@ -196,7 +200,10 @@ func storeAll(dirs []string, allies []bool, r pins.Release, res []Result, check 
 	var stale []string
 	party := res[len(xmlNames())*len(dirs):]
 	for i, d := range dirs {
-		v := Values{PoB: r, Full: res[0].restrict(true), Gear: res[1].restrict(false), TreeOnly: res[2].restrict(false)}
+		v := Values{
+			PoB: r, Full: res[0].restrict(true), Skill: res[1].restrict(true),
+			Gear: res[2].restrict(false), TreeOnly: res[3].restrict(false),
+		}
 		res = res[len(xmlNames()):]
 		if allies[i] {
 			p := party[0].restrict(true)
@@ -219,7 +226,7 @@ func storeAll(dirs []string, allies []bool, r pins.Release, res []Result, check 
 
 // xmlNames returns the XMLs run per build, in the order storeAll reads their results.
 func xmlNames() []string {
-	return []string{FullXML, GearXML, TreeOnlyXML}
+	return []string{FullXML, SkillXML, GearXML, TreeOnlyXML}
 }
 
 // xmlFiles returns the XMLs of each build directory, absolute, in order.

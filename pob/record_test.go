@@ -6,6 +6,7 @@ import (
 	"errors"
 	"os"
 	"path/filepath"
+	"slices"
 	"testing"
 
 	"github.com/xaroth/pbt-conformance/pins"
@@ -59,7 +60,7 @@ func TestRecord(t *testing.T) {
 		t.Errorf("values: got %+v", v)
 	}
 	checkLayers(t, &v)
-	for _, name := range []string{pob.ValuesFile, pob.GearXML} {
+	for _, name := range []string{pob.ValuesFile, pob.GearXML, pob.SkillXML} {
 		path := filepath.Join(dir, name)
 		stored, err := os.ReadFile(path)
 		if err != nil {
@@ -77,23 +78,36 @@ func TestRecord(t *testing.T) {
 	}
 }
 
-// checkLayers checks that skill outputs are recorded for the full build only, which has skills,
-// and delivery ones for its totem.
+// checkLayers checks that skill outputs are recorded for the full and skill builds only, which
+// have skills, and delivery ones for their totem.
 func checkLayers(t *testing.T, v *pob.Values) {
 	t.Helper()
-	if v.Full.MainSkill == nil || v.Full.MainSkill.ID != "Fireball" || v.Gear.MainSkill != nil || v.TreeOnly.MainSkill != nil {
-		t.Errorf("main skills: got %+v, %+v, %+v", v.Full.MainSkill, v.Gear.MainSkill, v.TreeOnly.MainSkill)
-	}
-	for _, k := range []string{"TotalDPS", "TotemLife"} {
+	checkMainSkills(t, v)
+	for _, k := range []string{"TotalDPS", "TotemLife", "Calcs.FireMax"} {
 		_, full := v.Full.Outputs[k]
+		_, skill := v.Skill.Outputs[k]
 		_, gear := v.Gear.Outputs[k]
 		_, tree := v.TreeOnly.Outputs[k]
-		if !full || gear || tree {
-			t.Errorf("%s recorded in full, gear, tree-only: %v, %v, %v; want only full", k, full, gear, tree)
+		if !full || !skill || gear || tree {
+			t.Errorf("%s recorded in full, skill, gear, tree-only: %v, %v, %v, %v; want full and skill", k, full, skill, gear, tree)
 		}
 	}
 	if _, ok := v.TreeOnly.Outputs["BlockChance"]; !ok {
 		t.Errorf("tree-only: no defence output BlockChance")
+	}
+}
+
+// checkMainSkills checks that the full and skill layers record the totem's main skill with its
+// support, and the other layers none.
+func checkMainSkills(t *testing.T, v *pob.Values) {
+	t.Helper()
+	for _, ms := range []*pob.MainSkill{v.Full.MainSkill, v.Skill.MainSkill} {
+		if ms == nil || ms.ID != "Fireball" || !slices.ContainsFunc(ms.Supports, func(s pob.Support) bool { return s.ID == "SupportSpellTotem" }) {
+			t.Errorf("main skill: got %+v, want Fireball supported by Spell Totem", ms)
+		}
+	}
+	if v.Gear.MainSkill != nil || v.TreeOnly.MainSkill != nil {
+		t.Errorf("main skills: got %+v, %+v in gear, tree-only", v.Gear.MainSkill, v.TreeOnly.MainSkill)
 	}
 }
 

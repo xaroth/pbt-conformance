@@ -1,9 +1,10 @@
 -- Runs build XMLs through Path of Building headless. Reads one XML path per line from stdin and
 -- writes one line per build to stdout: "PBTC " followed by JSON with the file, PoB's
--- allocated node count, its main skill and the requested output keys (arguments). A dotted key
--- such as "Minion.<key>" or "MainHand.<key>" is read from that table of PoB's outputs: the main
--- skill's minion's or one hand's. PoB writes its own lines
--- to stdout too; the prefix tells ours apart.
+-- allocated node count, its main skill with the supports applied to it and the requested output
+-- keys (arguments). A dotted key such as "Minion.<key>" or "MainHand.<key>" is read from that
+-- table of PoB's outputs: the main skill's minion's or one hand's. A key "Calcs.<key>" is read
+-- from PoB's Calcs tab, set to the main skill, for outputs PoB computes there only. PoB writes its
+-- own lines to stdout too; the prefix tells ours apart.
 --
 -- A line "<path>\t<ally path>" runs the build with its ally's party buffs, as PoB's Party tab
 -- imports them: the ally is calculated with "Export support" on, and the buffs it exports
@@ -62,6 +63,34 @@ local function lookup(outputs, key)
 	return v
 end
 
+-- calcsOutput returns PoB's Calcs tab outputs with the tab showing the main skill as the main
+-- calculation does: its socket group, active skill and per-gem choices. Nil when the Calcs tab
+-- still takes another skill.
+local function calcsOutput()
+	local tab, skill = build.calcsTab, build.calcsTab.mainEnv.player.mainSkill
+	local group = skill.socketGroup
+	if not group then
+		return nil
+	end
+	for i, g in ipairs(build.skillsTab.socketGroupList) do
+		if g == group then
+			tab.input.skill_number = i
+		end
+	end
+	group.mainActiveSkillCalcs = group.mainActiveSkill
+	for _, gem in ipairs(group.gemList) do
+		for _, f in ipairs({ "skillPart", "skillStageCount", "skillMineCount", "skillMinion", "skillMinionSkill", "skillMinionItemSet" }) do
+			gem[f .. "Calcs"] = gem[f]
+		end
+	end
+	local env = tab.calcs.buildOutput(build, "CALCS")
+	local calcs = env.player.mainSkill
+	if calcs.activeEffect.grantedEffect.id ~= skill.activeEffect.grantedEffect.id or calcs.skillPart ~= skill.skillPart then
+		return nil
+	end
+	return env.player.output
+end
+
 local function mainSkill()
 	local skill = build.calcsTab.mainEnv.player.mainSkill
 	local flags = skill.skillFlags or {}
@@ -77,6 +106,11 @@ local function mainSkill()
 		if g == skill.socketGroup then
 			res.group = i
 		end
+	end
+	for i = 2, #skill.effectList do
+		local e = skill.effectList[i]
+		res.supports = res.supports or {}
+		table.insert(res.supports, { id = e.grantedEffect.id, level = e.level, quality = e.quality ~= 0 and e.quality or nil })
 	end
 	local minion = skill.minion
 	if minion and minion.mainSkill then
@@ -122,9 +156,16 @@ local function run(line)
 	for _ in pairs(build.spec.allocNodes) do
 		allocated = allocated + 1
 	end
-	local outputs = {}
+	local outputs, calcs = {}, nil
 	for _, k in ipairs(keys) do
-		local v = lookup(build.calcsTab.mainOutput, k)
+		local v
+		local ck = k:match("^Calcs%.(.+)$")
+		if ck then
+			calcs = calcs or calcsOutput() or {}
+			v = lookup(calcs, ck)
+		else
+			v = lookup(build.calcsTab.mainOutput, k)
+		end
 		if type(v) == "number" then
 			outputs[k] = v
 		end

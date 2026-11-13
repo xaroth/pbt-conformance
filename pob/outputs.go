@@ -4,6 +4,7 @@ import (
 	"maps"
 	"math"
 	"slices"
+	"strings"
 )
 
 // Group is a set of outputs a build passes or fails together.
@@ -15,6 +16,8 @@ const (
 	GroupSheet Group = "sheet"
 	// GroupSkill is the main skill's damage.
 	GroupSkill Group = "skill"
+	// GroupHitTypes is the main skill's hit damage per damage type, minimum and maximum.
+	GroupHitTypes Group = "hit-types"
 	// GroupDefence is block, spell suppression and recovery.
 	GroupDefence Group = "defence"
 	// GroupMinion is the main skill's minion and the minion's own main skill.
@@ -23,9 +26,14 @@ const (
 	GroupDelivery Group = "delivery"
 )
 
+// NeedsSkill reports whether g is of a main skill: recorded only for layers with skills.
+func (g Group) NeedsSkill() bool {
+	return g != GroupSheet && g != GroupDefence
+}
+
 // Groups returns every group, in report order.
 func Groups() []Group {
-	return []Group{GroupSheet, GroupSkill, GroupDefence, GroupMinion, GroupDelivery}
+	return []Group{GroupSheet, GroupSkill, GroupHitTypes, GroupDefence, GroupMinion, GroupDelivery}
 }
 
 // Output is one output we compare, and how its value is read from PoB's output keys.
@@ -76,6 +84,10 @@ func (o Output) tenths() Output {
 // runner reads it from PoB's outputs of the minion.
 const minionPrefix = "Minion."
 
+// calcsPrefix marks a PoB output key that PoB computes in its Calcs tab only; the runner reads
+// it there, with the tab set to the main skill.
+const calcsPrefix = "Calcs."
+
 // Outputs returns the table of every output and its PoB keys, in report order.
 func Outputs() []Output {
 	out := []Output{
@@ -101,7 +113,7 @@ func Outputs() []Output {
 			key("player.uncapped_"+e.ours+"_resistance", GroupSheet, e.pob+"ResistTotal"),
 		)
 	}
-	out = append(out, averageHit("skill", GroupSkill, "")...)
+	out = append(out, perHand("skill.", "average_hit", GroupSkill, "", "AverageHit")...)
 	out = append(out,
 		key("skill.hit_chance", GroupSkill, "HitChance"),
 		// PoB's hit DPS uses HitSpeed where the skill hits at another rate than it is used.
@@ -110,6 +122,13 @@ func Outputs() []Output {
 		key("skill.hit_dps", GroupSkill, "TotalDPS"),
 		key("skill.dot_dps", GroupSkill, "TotalDotDPS"),
 		key("skill.total_dps", GroupSkill, "CombinedDPS"),
+	)
+	for _, t := range []string{"Physical", "Lightning", "Cold", "Fire", "Chaos"} {
+		lower := strings.ToLower(t)
+		out = append(out, perHand("skill.", lower+"_minimum", GroupHitTypes, calcsPrefix, t+"Min")...)
+		out = append(out, perHand("skill.", lower+"_maximum", GroupHitTypes, calcsPrefix, t+"Max")...)
+	}
+	out = append(out,
 
 		key("player.block_chance", GroupDefence, "BlockChance"),
 		key("player.spell_block_chance", GroupDefence, "SpellBlockChance"),
@@ -123,7 +142,7 @@ func Outputs() []Output {
 
 		key("minion.life", GroupMinion, minionPrefix+"Life"),
 	)
-	out = append(out, averageHit("minion", GroupMinion, minionPrefix)...)
+	out = append(out, perHand("minion.", "average_hit", GroupMinion, minionPrefix, "AverageHit")...)
 	return append(out,
 		key("minion.hit_chance", GroupMinion, minionPrefix+"HitChance"),
 		key("minion.total_dps", GroupMinion, minionPrefix+"CombinedDPS"),
@@ -133,28 +152,29 @@ func Outputs() []Output {
 	)
 }
 
-// averageHit returns the average hit outputs of actor ("skill" or "minion"), whose PoB keys
-// start with prefix. PoB gives a skill's average hit as AverageHit, and an attack's per hand
-// (MainHand.AverageHit, OffHand.AverageHit) without combining them: an attack with both hands
-// alternates them or hits with both at once, depending on the skill. So <actor>.average_hit is
-// AverageHit, or the one hand's for an attack with one hand, and absent when both hands attack;
-// then <actor>.main_hand_average_hit and <actor>.off_hand_average_hit give each hand's.
-func averageHit(actor string, g Group, prefix string) []Output {
-	whole, mh, oh := prefix+"AverageHit", prefix+"MainHand.AverageHit", prefix+"OffHand.AverageHit"
+// perHand returns the outputs <actor>name, <actor>main_hand_name and <actor>off_hand_name of the
+// PoB key k, read as prefix+k. PoB gives a skill's value as k, and an
+// attack's per hand (MainHand.k, OffHand.k) without combining them: an attack with both hands
+// alternates them or hits with both at once, depending on the skill. So <actor>name is k, or the
+// one hand's for an attack with one hand, and absent when both hands attack; then the hand
+// outputs give each hand's.
+func perHand(actor, name string, g Group, prefix, k string) []Output {
+	mh, oh := prefix+"MainHand."+k, prefix+"OffHand."+k
+	k = prefix + k
 	bothHands := func(o map[string]float64) bool {
 		_, ok1 := o[mh]
 		_, ok2 := o[oh]
 		return ok1 && ok2
 	}
-	hand := func(name, k string) Output {
-		return Output{Name: name, Group: g, keys: []string{mh, oh}, value: func(o map[string]float64) (float64, bool) {
-			v, ok := o[k]
+	hand := func(handName, hk string) Output {
+		return Output{Name: actor + handName + name, Group: g, keys: []string{mh, oh}, value: func(o map[string]float64) (float64, bool) {
+			v, ok := o[hk]
 			return v, ok && bothHands(o)
 		}}
 	}
 	return []Output{
-		{Name: actor + ".average_hit", Group: g, keys: []string{whole, mh, oh}, value: func(o map[string]float64) (float64, bool) {
-			if v, ok := o[whole]; ok {
+		{Name: actor + name, Group: g, keys: []string{k, mh, oh}, value: func(o map[string]float64) (float64, bool) {
+			if v, ok := o[k]; ok {
 				return v, true
 			}
 			if bothHands(o) {
@@ -166,8 +186,8 @@ func averageHit(actor string, g Group, prefix string) []Output {
 			v, ok := o[oh]
 			return v, ok
 		}},
-		hand(actor+".main_hand_average_hit", mh),
-		hand(actor+".off_hand_average_hit", oh),
+		hand("main_hand_", mh),
+		hand("off_hand_", oh),
 	}
 }
 
