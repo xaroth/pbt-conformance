@@ -166,10 +166,10 @@ func TestRun(t *testing.T) {
 	if ms := compare.Mismatches(bs); len(ms) != 0 {
 		t.Errorf("mismatches: %+v", ms)
 	}
-	// The engine gives the sheet of the tree layer but unreserved life and mana; nothing else.
+	// The engine gives the sheet of the tree layer; nothing else.
 	want := []compare.Layer{
 		{Name: "tree", Groups: []compare.GroupResult{
-			{Group: pob.GroupSheet, Status: compare.StatusIncomplete, Missing: []string{"player.unreserved_life", "player.unreserved_mana"}},
+			{Group: pob.GroupSheet, Status: compare.StatusPass},
 			{Group: pob.GroupDefence, Status: compare.StatusNotCompared},
 		}},
 		{Name: "gear", Groups: []compare.GroupResult{

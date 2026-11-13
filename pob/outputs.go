@@ -83,9 +83,9 @@ func Outputs() []Output {
 		key("player.dexterity", GroupSheet, "Dex"),
 		key("player.intelligence", GroupSheet, "Int"),
 		key("player.life", GroupSheet, "Life"),
-		key("player.unreserved_life", GroupSheet, "LifeUnreserved"),
+		unreserved("player.unreserved_life", "Life"),
 		key("player.mana", GroupSheet, "Mana"),
-		key("player.unreserved_mana", GroupSheet, "ManaUnreserved"),
+		unreserved("player.unreserved_mana", "Mana"),
 		key("player.energy_shield", GroupSheet, "EnergyShield"),
 		key("player.armour", GroupSheet, "Armour"),
 		key("player.evasion_rating", GroupSheet, "Evasion"),
@@ -201,6 +201,19 @@ func sum(name string, g Group, a, b string) Output {
 		va, ok1 := o[a]
 		vb, ok2 := o[b]
 		return va + vb, ok1 && ok2
+	}}
+}
+
+// unreserved is the unreserved part of PoB's pool, <pool>Unreserved. PoB gives none when the
+// pool is 0, so then it is 0.
+func unreserved(name, pool string) Output {
+	k := pool + "Unreserved"
+	return Output{Name: name, Group: GroupSheet, keys: []string{k, pool}, value: func(o map[string]float64) (float64, bool) {
+		if v, ok := o[k]; ok {
+			return v, true
+		}
+		v, ok := o[pool]
+		return 0, ok && v == 0
 	}}
 }
 
