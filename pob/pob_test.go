@@ -71,8 +71,8 @@ func TestRunMainSkill(t *testing.T) {
 		t.Fatal(err)
 	}
 	wantSkills := []*pob.MainSkill{
-		{Group: 1, ID: "RaiseZombie", Name: "Raise Zombie", Minion: &pob.Minion{Name: "Raised Zombie", Skill: "Default Attack"}},
-		{Group: 1, ID: "Fireball", Name: "Fireball", Totem: true, Supports: []pob.Support{{ID: "SupportSpellTotem", Level: 20}}},
+		{Group: 1, ID: "RaiseZombie", Name: "Raise Zombie", Level: 20, Minion: &pob.Minion{Name: "Raised Zombie", Skill: "Default Attack"}},
+		{Group: 1, ID: "Fireball", Name: "Fireball", Level: 20, Totem: true, Supports: []pob.Support{{ID: "SupportSpellTotem", Level: 20}}},
 	}
 	for i, want := range wantSkills {
 		if diff := cmp.Diff(want, res[i].MainSkill); diff != "" {

@@ -9,6 +9,9 @@ import (
 	"slices"
 	"testing"
 
+	"github.com/google/go-cmp/cmp"
+	"github.com/google/go-cmp/cmp/cmpopts"
+
 	"github.com/xaroth/pbt-conformance/pins"
 	"github.com/xaroth/pbt-conformance/pob"
 )
@@ -177,5 +180,33 @@ func TestRecordParty(t *testing.T) {
 	}
 	if err := pob.Record(ctx, root, cache, f, "poe1", "3.29", true); !errors.Is(err, pob.ErrParty) {
 		t.Errorf("missing ally: got %v, want %v", err, pob.ErrParty)
+	}
+}
+
+// TestSkillLayerMainSkill checks that every build's skill layer calculates the full layer's main
+// skill, with the same level, quality and supports; only its group number may differ.
+func TestSkillLayerMainSkill(t *testing.T) {
+	t.Parallel()
+	files, err := filepath.Glob(filepath.Join("..", "builds", "*", "*", pob.ValuesFile))
+	if err != nil {
+		t.Fatal(err)
+	}
+	for _, f := range files {
+		b, err := os.ReadFile(f)
+		if err != nil {
+			t.Fatal(err)
+		}
+		var v pob.Values
+		if err := json.Unmarshal(b, &v); err != nil {
+			t.Fatal(err)
+		}
+		full, skill := v.Full.MainSkill, v.Skill.MainSkill
+		if full == nil || skill == nil {
+			t.Errorf("%s: main skill full %+v, skill %+v", f, full, skill)
+			continue
+		}
+		if diff := cmp.Diff(*full, *skill, cmpopts.IgnoreFields(pob.MainSkill{}, "Group")); diff != "" {
+			t.Errorf("%s: main skill (-full +skill):\n%s", f, diff)
+		}
 	}
 }

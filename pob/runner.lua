@@ -97,6 +97,8 @@ local function mainSkill()
 	local res = {
 		id = skill.activeEffect.grantedEffect.id,
 		name = skill.activeEffect.grantedEffect.name,
+		level = skill.activeEffect.level,
+		quality = skill.activeEffect.quality ~= 0 and skill.activeEffect.quality or nil,
 		attack = flags.attack or nil,
 		totem = flags.totem or nil,
 		trap = flags.trap or nil,
@@ -111,6 +113,18 @@ local function mainSkill()
 		local e = skill.effectList[i]
 		res.supports = res.supports or {}
 		table.insert(res.supports, { id = e.grantedEffect.id, level = e.level, quality = e.quality ~= 0 and e.quality or nil })
+	end
+	-- PoB adds supports from other groups in table order, which varies between runs.
+	if res.supports then
+		table.sort(res.supports, function(a, b)
+			if a.id ~= b.id then
+				return a.id < b.id
+			end
+			if a.level ~= b.level then
+				return a.level < b.level
+			end
+			return (a.quality or 0) < (b.quality or 0)
+		end)
 	end
 	local minion = skill.minion
 	if minion and minion.mainSkill then

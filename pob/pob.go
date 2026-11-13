@@ -66,6 +66,9 @@ type MainSkill struct {
 	// ID and Name are the skill's granted effect.
 	ID   string `json:"id"`
 	Name string `json:"name"`
+	// Level and Quality are the skill's, as PoB calculates it.
+	Level   int `json:"level,omitempty"`
+	Quality int `json:"quality,omitempty"`
 	// Attack is set for an attack, as opposed to a spell or another skill.
 	Attack bool `json:"attack,omitempty"`
 	// Totem, Trap and Mine say how the skill is used.
@@ -74,7 +77,8 @@ type MainSkill struct {
 	Mine  bool `json:"mine,omitempty"`
 	// Minion is the minion the skill summons, if any.
 	Minion *Minion `json:"minion,omitempty"`
-	// Supports are the support effects PoB applied to the skill, in its order.
+	// Supports are the support effects PoB applied to the skill, sorted by id, level and quality:
+	// PoB's own order varies between runs.
 	Supports []Support `json:"supports,omitempty"`
 }
 

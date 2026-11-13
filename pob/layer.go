@@ -82,10 +82,13 @@ func TreeOnly(full []byte) ([]byte, error) {
 }
 
 // Skill derives a build's skill layer from its full PoB XML: the gear layer plus the main socket
-// group of the active skill set and the enemy inputs of the active config set. Other skill sets,
-// config sets and groups are dropped, except groups granted by items or the tree, which are kept
-// disabled: PoB would add them back enabled. mainSocketGroup on <Build> is renumbered to the main
-// group's place among the groups kept.
+// group of the active skill set and the enemy inputs of the active config set. Other skill sets
+// and config sets are dropped. Of the other groups of the active set, groups granted by items or
+// the tree are kept disabled, since PoB would add them back enabled; disabled groups are dropped;
+// enabled ones are kept with only their support gems enabled, since PoB applies supports across
+// groups (to a skill an item grants, and through linked slots). A gem is a support when its
+// skillId starts with "Support"; a gem without a skillId counts as an active one.
+// mainSocketGroup on <Build> is renumbered to the main group's place among the groups kept.
 func Skill(full []byte) ([]byte, error) {
 	b, err := derive(full, layerSkill)
 	if err != nil {
@@ -249,7 +252,7 @@ func (w *layerWalk) openItems(t xml.StartElement, start int64) (bool, error) {
 	return false, nil
 }
 
-// openSkills keeps the active skill set's main group and its granted groups, disabled.
+// openSkills keeps the active skill set's groups as Skill says.
 func (w *layerWalk) openSkills(t xml.StartElement, start int64) (bool, error) {
 	parent := w.path[len(w.path)-1]
 	switch {
@@ -259,29 +262,46 @@ func (w *layerWalk) openSkills(t xml.StartElement, start int64) (bool, error) {
 		}
 		return true, w.drop(start)
 	case t.Name.Local == "Skill" && (parent == "SkillSet" || parent == elemSkills):
-		return true, w.group(t, start)
+		return w.group(t, start)
+	// Only groups kept with their supports alone are descended into.
+	case t.Name.Local == "Gem" && parent == "Skill" && !strings.HasPrefix(attr(t, "skillId"), "Support"):
+		w.disable(start)
 	}
 	return false, nil
 }
 
-// group keeps or drops the skill group t of the active skill set.
-func (w *layerWalk) group(t xml.StartElement, start int64) error {
+// group keeps or drops the skill group t of the active skill set; it descends into a group whose
+// active gems it disables.
+func (w *layerWalk) group(t xml.StartElement, start int64) (bool, error) {
 	w.groups++
 	switch {
 	case w.groups == w.mainGroup:
-		w.kept++
-		w.newMain = w.kept
+		w.newMain = w.kept + 1
 	case attr(t, "source") != "":
-		w.kept++
-		tag := w.full[start:w.d.InputOffset()]
-		w.edits = append(w.edits, edit{start, w.d.InputOffset(), enabledAttr.ReplaceAll(tag, []byte(`$1="false"`))})
+		w.disable(start)
+	case attr(t, "enabled") != "true" && attr(t, "active") != "true":
+		return true, w.drop(start)
 	default:
-		return w.drop(start)
+		w.kept++
+		return false, nil
 	}
+	w.kept++
 	if err := w.d.Skip(); err != nil {
-		return fmt.Errorf("reading xml: %w", err)
+		return true, fmt.Errorf("reading xml: %w", err)
 	}
-	return nil
+	return true, nil
+}
+
+// disable sets enabled="false" on the start tag that began at start and was just read.
+func (w *layerWalk) disable(start int64) {
+	end := w.d.InputOffset()
+	tag := w.full[start:end]
+	repl := enabledAttr.ReplaceAll(tag, []byte(`$1="false"`))
+	if !enabledAttr.Match(tag) {
+		i := bytes.IndexAny(tag, " \t\n/>")
+		repl = slices.Concat(tag[:i], []byte(` enabled="false"`), tag[i:])
+	}
+	w.edits = append(w.edits, edit{start, end, repl})
 }
 
 // openConfig keeps the enemy inputs of the active config set.

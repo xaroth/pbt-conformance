@@ -131,7 +131,11 @@ Divine Life Flask
 			<Skill enabled="true"><Gem nameSpec="Determination"/></Skill>
 			<Skill enabled="true" source="Item:2:Doom Crown" slot="Helmet"><Gem skillId="HeraldOfBreach"/></Skill>
 			<Skill enabled="true" slot="Body Armour"><Gem nameSpec="Arc" skillPart="2"/><Gem nameSpec="Spell Echo Support"/></Skill>
-			<Skill enabled="true"><Gem nameSpec="Flame Dash"/></Skill>
+			<Skill enabled="false"><Gem skillId="FlameDash"/></Skill>
+			<Skill enabled="true" slot="Gloves">
+				<Gem skillId="Clarity" enabled="true"/>
+				<Gem skillId="SupportElementalPenetration" enabled="true"/>
+			</Skill>
 		</SkillSet>
 	</Skills>
 	<Config activeConfigSet="1">
@@ -149,7 +153,7 @@ Divine Life Flask
 </PathOfBuilding>
 `
 	want := `<PathOfBuilding>
-	<Build level="90" bandit="None" mainSocketGroup="2"/>
+	<Build level="90" bandit="None" mainSocketGroup="3"/>
 	<Tree activeSpec="1"/>
 	<Items activeItemSet="1">
 		<ItemSet id="1">
@@ -157,8 +161,13 @@ Divine Life Flask
 	</Items>
 	<Skills activeSkillSet="2">
 		<SkillSet id="2">
+			<Skill enabled="true"><Gem enabled="false" nameSpec="Determination"/></Skill>
 			<Skill enabled="false" source="Item:2:Doom Crown" slot="Helmet"><Gem skillId="HeraldOfBreach"/></Skill>
 			<Skill enabled="true" slot="Body Armour"><Gem nameSpec="Arc" skillPart="2"/><Gem nameSpec="Spell Echo Support"/></Skill>
+			<Skill enabled="true" slot="Gloves">
+				<Gem skillId="Clarity" enabled="false"/>
+				<Gem skillId="SupportElementalPenetration" enabled="true"/>
+			</Skill>
 		</SkillSet>
 	</Skills>
 	<Config activeConfigSet="1">
