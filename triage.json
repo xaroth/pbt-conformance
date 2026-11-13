@@ -48,7 +48,7 @@
     "kind": "pending",
     "league": "3.29",
     "reason": "Tattoos and runegrafts replace a tree node (PoB node overrides); the importer does not import them, so the engine keeps the replaced node's own stats",
-    "evidence": "Recorded again with the overrides removed, PoB's tree-only value matches ours for every value case here; the import notes name the override (Tattoo, Journey Tattoo or Runegraft). In build 43 the secondary ascendancy adds to the gap",
+    "evidence": "Recorded again with the overrides removed, PoB's tree-only value matches ours for every value case here; the import notes name the override (Tattoo, Journey Tattoo or Runegraft). In build 43 the secondary ascendancy adds to the gap. Energy shield regeneration in builds 58 and 70 follows the energy shield gap: regeneration as a share of maximum energy shield is the same in ours and PoB's (58: 100 flat plus 1.7%; 70: 5.9%)",
     "cases": [
       {"build": "100-witch-L100-elementalist-glacial-cascade-of-the-fissure", "output": "import:pob-override-ignored", "subject": "node 12125"},
       {"build": "100-witch-L100-elementalist-glacial-cascade-of-the-fissure", "output": "import:pob-override-ignored", "subject": "node 18182"},
@@ -612,6 +612,7 @@
       {"build": "58-witch-L100-occultist-cyclone", "output": "player.mana", "ours": 897, "pob": 746},
       {"build": "58-witch-L100-occultist-cyclone", "output": "player.unreserved_mana", "ours": 897, "pob": 746},
       {"build": "58-witch-L100-occultist-cyclone", "output": "player.energy_shield", "ours": 63, "pob": 95},
+      {"build": "58-witch-L100-occultist-cyclone", "output": "player.energy_shield_regeneration", "ours": 101.1, "pob": 101.6},
       {"build": "58-witch-L100-occultist-cyclone", "output": "player.evasion_rating", "ours": 16, "pob": 22},
       {"build": "59-templar-L100-hierophant-frenzy", "output": "import:pob-override-ignored", "subject": "node 2913"},
       {"build": "59-templar-L100-hierophant-frenzy", "output": "import:pob-override-ignored", "subject": "node 5237"},
@@ -843,6 +844,7 @@
       {"build": "70-templar-L100-hierophant-righteous-fire-of-arcane-devotion", "output": "player.mana", "ours": 3323, "pob": 4452},
       {"build": "70-templar-L100-hierophant-righteous-fire-of-arcane-devotion", "output": "player.unreserved_mana", "ours": 3323, "pob": 4452},
       {"build": "70-templar-L100-hierophant-righteous-fire-of-arcane-devotion", "output": "player.energy_shield", "ours": 821, "pob": 1087},
+      {"build": "70-templar-L100-hierophant-righteous-fire-of-arcane-devotion", "output": "player.energy_shield_regeneration", "ours": 48.4, "pob": 64.1},
       {"build": "70-templar-L100-hierophant-righteous-fire-of-arcane-devotion", "output": "player.mana_regeneration", "ours": 279.5, "pob": 369.5},
       {"build": "72-duelist-L100-gladiator-blade-blast", "output": "import:pob-override-ignored", "subject": "node 238"},
       {"build": "72-duelist-L100-gladiator-blade-blast", "output": "import:pob-override-ignored", "subject": "node 476"},
@@ -1793,24 +1795,10 @@
     "id": "vile-bastion",
     "kind": "pending",
     "league": "3.29",
-    "reason": "Vile Bastion (Occultist, node 37492): \"Regenerate 100 Energy Shield per second\" has no meaning in the engine yet, and \"Maximum Energy Shield is increased by Chance to Block Spell Damage\" waits for spell block",
-    "evidence": "PoB gives 100 more energy shield regeneration per second than ours; the engine notes both stats as left out. In builds 49, 58 a tattoo or runegraft adds to the gap",
+    "reason": "Vile Bastion (Occultist, node 37492): \"Maximum Energy Shield is increased by Chance to Block Spell Damage\" waits for spell block",
+    "evidence": "The engine notes the stat as left out; PoB gives build 49 8% chance to block spell damage on the tree-only sheet, builds 36 and 58 none. Build 49 also has a tattoo, which may add to the gap",
     "cases": [
-      {"build": "36-witch-L100-occultist-winter-orb", "output": "player.energy_shield_regeneration", "ours": 0, "pob": 100},
-      {"build": "49-witch-L100-occultist-fireball", "output": "player.energy_shield", "ours": 45, "pob": 54},
-      {"build": "49-witch-L100-occultist-fireball", "output": "player.energy_shield_regeneration", "ours": 0, "pob": 100},
-      {"build": "58-witch-L100-occultist-cyclone", "output": "player.energy_shield_regeneration", "ours": 1.1, "pob": 101.6}
-    ]
-  },
-  {
-    "id": "energy-shield-regeneration-mastery",
-    "kind": "pending",
-    "league": "3.29",
-    "reason": "The energy shield mastery effect 35810 (regenerate a percentage of energy shield per second, base_energy_shield_regeneration_rate_per_minute_%) has no meaning in the engine yet",
-    "evidence": "The engine notes the stat as left out; the gap remains with the overrides, secondary ascendancy and jewel-connected nodes removed. In build 70 a tattoo or runegraft adds to the gap",
-    "cases": [
-      {"build": "70-templar-L100-hierophant-righteous-fire-of-arcane-devotion", "output": "player.energy_shield_regeneration", "ours": 32, "pob": 64.1},
-      {"build": "77-scion-L100-ascendant-animate-guardian", "output": "player.energy_shield_regeneration", "ours": 0, "pob": 1}
+      {"build": "49-witch-L100-occultist-fireball", "output": "player.energy_shield", "ours": 45, "pob": 54}
     ]
   },
   {
