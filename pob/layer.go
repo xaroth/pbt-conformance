@@ -18,6 +18,14 @@ var choiceAttr = regexp.MustCompile(`(\s(?:bandit|pantheonMajorGod|pantheonMinor
 
 var errNoRoot = errors.New("no PathOfBuilding element")
 
+// layer is what a derived file keeps of the full build.
+type layer int
+
+const (
+	layerTreeOnly layer = iota
+	layerGear
+)
+
 // edit replaces full[start:end] with repl.
 type edit struct {
 	start, end int64
@@ -29,7 +37,7 @@ type edit struct {
 // are dropped, and the bandit and pantheon choices on <Build> are reset to None. The rest is
 // kept byte for byte.
 func Gear(full []byte) ([]byte, error) {
-	b, err := derive(full, false)
+	b, err := derive(full, layerGear)
 	if err != nil {
 		return nil, fmt.Errorf("pob: gear: %w", err)
 	}
@@ -40,15 +48,15 @@ func Gear(full []byte) ([]byte, error) {
 // no jewels in its sockets. Every other top-level element is dropped and the bandit and pantheon
 // choices on <Build> are reset to None, as in Gear.
 func TreeOnly(full []byte) ([]byte, error) {
-	b, err := derive(full, true)
+	b, err := derive(full, layerTreeOnly)
 	if err != nil {
 		return nil, fmt.Errorf("pob: tree only: %w", err)
 	}
 	return b, nil
 }
 
-func derive(full []byte, treeOnly bool) ([]byte, error) {
-	edits, err := layerEdits(full, treeOnly)
+func derive(full []byte, l layer) ([]byte, error) {
+	edits, err := layerEdits(full, l)
 	if err != nil {
 		return nil, err
 	}
@@ -64,20 +72,20 @@ func derive(full []byte, treeOnly bool) ([]byte, error) {
 	return out.Bytes(), nil
 }
 
-// layerWalk collects the edits that turn a full XML into its gear or tree-only layer.
+// layerWalk collects the edits that turn a full XML into one of its layers.
 type layerWalk struct {
-	treeOnly bool
-	d        *xml.Decoder
-	full     []byte
-	edits    []edit
-	path     []string
-	items    map[string]edit
-	flasks   []string
-	root     bool
+	layer  layer
+	d      *xml.Decoder
+	full   []byte
+	edits  []edit
+	path   []string
+	items  map[string]edit
+	flasks []string
+	root   bool
 }
 
-func layerEdits(full []byte, treeOnly bool) ([]edit, error) {
-	w := &layerWalk{treeOnly: treeOnly, d: xml.NewDecoder(bytes.NewReader(full)), full: full, items: map[string]edit{}}
+func layerEdits(full []byte, l layer) ([]edit, error) {
+	w := &layerWalk{layer: l, d: xml.NewDecoder(bytes.NewReader(full)), full: full, items: map[string]edit{}}
 	for {
 		start := w.d.InputOffset()
 		tok, err := w.d.Token()
@@ -120,13 +128,8 @@ func (w *layerWalk) open(t xml.StartElement, start int64) error {
 		w.root = t.Name.Local == "PathOfBuilding"
 	case len(w.path) == 1:
 		skipped, err = w.openTop(t, start)
-	case slices.Contains(w.path, "Items"):
-		skipped, err = w.openItems(t, start)
-	case w.treeOnly && t.Name.Local == "Socket" && slices.Contains(w.path, "Tree"):
-		var e edit
-		e, err = w.skip(start)
-		w.edits = append(w.edits, e)
-		skipped = true
+	default:
+		skipped, err = w.openIn(w.path[1], t, start)
 	}
 	if err != nil || skipped {
 		return err
@@ -135,24 +138,32 @@ func (w *layerWalk) open(t xml.StartElement, start int64) error {
 	return nil
 }
 
+// openIn handles an element inside the kept top-level element top.
+func (w *layerWalk) openIn(top string, t xml.StartElement, start int64) (bool, error) {
+	switch top {
+	case "Items":
+		return w.openItems(t, start)
+	case "Tree":
+		if w.layer == layerTreeOnly && t.Name.Local == "Socket" {
+			return true, w.drop(start)
+		}
+	}
+	return false, nil
+}
+
 // openTop resets the choices on <Build> and drops every top-level element the layer does not
 // keep, so PoB uses its defaults for them.
 func (w *layerWalk) openTop(t xml.StartElement, start int64) (bool, error) {
-	switch t.Name.Local {
-	case "Build":
+	switch name := t.Name.Local; {
+	case name == "Build":
 		tag := w.full[start:w.d.InputOffset()]
 		w.edits = append(w.edits, edit{start, w.d.InputOffset(), choiceAttr.ReplaceAll(tag, []byte(`$1="None"`))})
 		return false, nil
-	case "Tree":
+	case name == "Tree",
+		name == "Items" && w.layer >= layerGear:
 		return false, nil
-	case "Items":
-		if !w.treeOnly {
-			return false, nil
-		}
 	}
-	e, err := w.skip(start)
-	w.edits = append(w.edits, e)
-	return true, err
+	return true, w.drop(start)
 }
 
 // openItems drops flask slots and notes every item; the flasks' items are dropped once all
@@ -160,16 +171,21 @@ func (w *layerWalk) openTop(t xml.StartElement, start int64) (bool, error) {
 func (w *layerWalk) openItems(t xml.StartElement, start int64) (bool, error) {
 	switch {
 	case t.Name.Local == "Slot" && strings.HasPrefix(attr(t, "name"), "Flask "):
-		e, err := w.skip(start)
-		w.edits = append(w.edits, e)
 		w.flasks = append(w.flasks, attr(t, "itemId"))
-		return true, err
+		return true, w.drop(start)
 	case t.Name.Local == "Item":
 		e, err := w.skip(start)
 		w.items[attr(t, "id")] = e
 		return true, err
 	}
 	return false, nil
+}
+
+// drop removes the element whose start tag began at start.
+func (w *layerWalk) drop(start int64) error {
+	e, err := w.skip(start)
+	w.edits = append(w.edits, e)
+	return err
 }
 
 // skip reads past the element whose start tag began at start and returns its removal.
