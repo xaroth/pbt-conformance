@@ -6,6 +6,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"io/fs"
 	"maps"
 	"os"
 	"path/filepath"
@@ -210,8 +211,8 @@ func allocatedMismatches(c *build.Checked, v *pob.Values, league, name string) [
 	}}
 }
 
-// ours holds pbt-engine's values per layer: every output for the tree-only build, and the skill
-// outputs for the skill and full builds.
+// ours holds pbt-engine's values per layer: every output for the tree-only build, and the
+// outputs that read skills (pob.Group.ReadsSkills) for the skill and full builds.
 type ours struct {
 	tree, skill, full map[string]float64
 }
@@ -223,7 +224,7 @@ func oursOf(dir string, reg *dataset.Registry, sim *simulator.Sim, st *simulator
 	var skillOutputs []simulator.Output
 	table := pobOutputs()
 	for _, out := range sim.Outputs() {
-		if get, ok := table[string(out.Key)]; ok && get.Group.NeedsSkill() {
+		if get, ok := table[string(out.Key)]; ok && get.Group.ReadsSkills() {
 			skillOutputs = append(skillOutputs, out)
 		}
 	}
@@ -231,11 +232,15 @@ func oursOf(dir string, reg *dataset.Registry, sim *simulator.Sim, st *simulator
 		return o, nil
 	}
 	skill, _, err := importFile(dir, pob.SkillXML, reg)
-	if err != nil {
+	switch {
+	case errors.Is(err, fs.ErrNotExist):
+		// A build recorded without a skill layer has none to compare.
+	case err != nil:
 		return ours{}, err
-	}
-	if o.skill, err = simulateValues(sim, skillOutputs, skill); err != nil {
-		return ours{}, err
+	default:
+		if o.skill, err = simulateValues(sim, skillOutputs, skill); err != nil {
+			return ours{}, err
+		}
 	}
 	if o.full, err = simulateValues(sim, skillOutputs, full); err != nil {
 		return ours{}, err
@@ -347,7 +352,7 @@ func compareOutputs(outputs []simulator.Output, o ours, v *pob.Values, league, n
 			continue
 		}
 		values, layer := o.tree, v.TreeOnly
-		if get.Group.NeedsSkill() {
+		if get.Group.ReadsSkills() {
 			values, layer = o.skill, v.Skill
 		}
 		ours, given := values[string(so.Key)]
