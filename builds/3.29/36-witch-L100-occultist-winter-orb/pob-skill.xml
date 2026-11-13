@@ -461,6 +461,9 @@ Gain a Void Charge every second
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemAddedColdDamage" level="7" nameSpec="Added Cold Damage" quality="0" skillId="SupportAddedColdDamage" variantId="SupportAddedColdDamage"/>
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemEnergyShieldLeech" level="3" nameSpec="Energy Leech" quality="0" skillId="SupportEnergyLeech" variantId="SupportEnergyLeech"/>
 			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Gloves">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemFlameDash" level="6" nameSpec="Flame Dash" quality="0" skillId="FlameDash" variantId="FlameDash"/>
+			</Skill>
 			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 2 Swap" source="Item:13:Voidfletcher, Ornate Quiver">
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" level="20" nameSpec="Void Shot" quality="0" skillId="VoidShot"/>
 			</Skill>

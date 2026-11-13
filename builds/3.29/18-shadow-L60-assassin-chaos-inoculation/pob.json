@@ -72,24 +72,26 @@
       "group": 1,
       "id": "ViperStrikeAltX",
       "name": "Viper Strike of the Mamba",
+      "level": 17,
+      "quality": 10,
       "attack": true,
       "supports": [
+        {
+          "id": "SupportAddedChaosDamage",
+          "level": 15
+        },
         {
           "id": "SupportCriticalStrikeAffliction",
           "level": 15,
           "quality": 10
         },
         {
-          "id": "SupportVoidManipulation",
-          "level": 16
-        },
-        {
           "id": "SupportUnboundAilments",
           "level": 16
         },
         {
-          "id": "SupportAddedChaosDamage",
-          "level": 15
+          "id": "SupportVoidManipulation",
+          "level": 16
         }
       ]
     }
@@ -163,24 +165,26 @@
       "group": 1,
       "id": "ViperStrikeAltX",
       "name": "Viper Strike of the Mamba",
+      "level": 17,
+      "quality": 10,
       "attack": true,
       "supports": [
+        {
+          "id": "SupportAddedChaosDamage",
+          "level": 15
+        },
         {
           "id": "SupportCriticalStrikeAffliction",
           "level": 15,
           "quality": 10
         },
         {
-          "id": "SupportVoidManipulation",
-          "level": 16
-        },
-        {
           "id": "SupportUnboundAilments",
           "level": 16
         },
         {
-          "id": "SupportAddedChaosDamage",
-          "level": 15
+          "id": "SupportVoidManipulation",
+          "level": 16
         }
       ]
     }

@@ -61,22 +61,9 @@
       "group": 6,
       "id": "BladeBlast",
       "name": "Blade Blast",
+      "level": 21,
+      "quality": 23,
       "supports": [
-        {
-          "id": "SupportPhysicalToLightning",
-          "level": 21,
-          "quality": 30
-        },
-        {
-          "id": "SupportUnboundAilments",
-          "level": 21,
-          "quality": 20
-        },
-        {
-          "id": "SupportDeadlyAilments",
-          "level": 21,
-          "quality": 30
-        },
         {
           "id": "SupportAddedFireDamage",
           "level": 21,
@@ -86,6 +73,21 @@
           "id": "SupportCastWhenStunned",
           "level": 20,
           "quality": 30
+        },
+        {
+          "id": "SupportDeadlyAilments",
+          "level": 21,
+          "quality": 30
+        },
+        {
+          "id": "SupportPhysicalToLightning",
+          "level": 21,
+          "quality": 30
+        },
+        {
+          "id": "SupportUnboundAilments",
+          "level": 21,
+          "quality": 20
         }
       ]
     }
@@ -145,25 +147,12 @@
       "TotalDotDPS": 759531.0389751
     },
     "mainSkill": {
-      "group": 2,
+      "group": 6,
       "id": "BladeBlast",
       "name": "Blade Blast",
+      "level": 21,
+      "quality": 23,
       "supports": [
-        {
-          "id": "SupportPhysicalToLightning",
-          "level": 21,
-          "quality": 30
-        },
-        {
-          "id": "SupportUnboundAilments",
-          "level": 21,
-          "quality": 20
-        },
-        {
-          "id": "SupportDeadlyAilments",
-          "level": 21,
-          "quality": 30
-        },
         {
           "id": "SupportAddedFireDamage",
           "level": 21,
@@ -173,6 +162,21 @@
           "id": "SupportCastWhenStunned",
           "level": 20,
           "quality": 30
+        },
+        {
+          "id": "SupportDeadlyAilments",
+          "level": 21,
+          "quality": 30
+        },
+        {
+          "id": "SupportPhysicalToLightning",
+          "level": 21,
+          "quality": 30
+        },
+        {
+          "id": "SupportUnboundAilments",
+          "level": 21,
+          "quality": 20
         }
       ]
     }

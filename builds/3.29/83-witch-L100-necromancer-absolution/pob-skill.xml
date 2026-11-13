@@ -970,6 +970,36 @@ Nearby Allies have +10 Fortification
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemPhysicalToLightning" level="21" nameSpec="Physical to Lightning" quality="20" skillId="SupportPhysicalToLightning" variantId="SupportPhysicalToLightning"/>
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SkillGemVaalAbsolution" level="21" nameSpec="Vaal Absolution" quality="20" skillId="VaalAbsolution" skillMinion="AbsolutionTemplarJudge" skillMinionSkill="1" skillMinionSkillCalcs="1" variantId="VaalAbsolution"/>
 			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Boots">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemSteelskin" level="21" nameSpec="Steelskin" quality="20" skillId="QuickGuard" variantId="QuickGuard"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemConvocationNew" level="1" nameSpec="Convocation" quality="20" skillId="Convocation" variantId="Convocation"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemShieldCharge" level="21" nameSpec="Shield Charge" quality="20" skillId="ShieldCharge" variantId="ShieldCharge"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemAutomation" level="21" nameSpec="Automation" quality="20" skillId="Automation" variantId="Automation"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 1">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemDesecrate" level="1" nameSpec="Desecrate" quality="23" skillId="Desecrate" variantId="Desecrate"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemBoneOffering" level="21" nameSpec="Bone Offering" quality="23" skillId="BoneOffering" variantId="BoneOffering"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemAdditionalQuality" level="4" nameSpec="Enhance" quality="20" skillId="SupportEnhance" variantId="SupportEnhance"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 2">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemMinionLife" level="20" nameSpec="Minion Life" quality="20" skillId="SupportMinionLife" variantId="SupportMinionLife"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemSummonRockGolem" level="21" nameSpec="Summon Stone Golem of Safeguarding" quality="23" skillId="SummonStoneGolemAltY" skillMinion="SummonedStoneGolem" skillMinionSkill="1" skillMinionSkillCalcs="1" variantId="SummonStoneGolemAltY"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemFeedingFrenzy" level="20" nameSpec="Feeding Frenzy" quality="23" skillId="SupportFeedingFrenzy" variantId="SupportFeedingFrenzy"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Gloves">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemColdResistAura" level="21" nameSpec="Purity of Ice" quality="20" skillId="PurityOfIce" variantId="PurityOfIce"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemEternalBlessing" level="20" nameSpec="Eternal Blessing" quality="20" skillId="SupportEternalBlessing" variantId="SupportEternalBlessing"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemCriticalWeakness" level="21" nameSpec="Assassin&apos;s Mark" quality="20" skillId="AssassinsMark" variantId="AssassinsMark"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemFrostblink" level="21" nameSpec="Frostblink" quality="20" skillId="Frostblink" variantId="Frostblink"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="1" mainActiveSkillCalcs="nil" slot="Body Armour">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemCongregation" level="3" nameSpec="Congregation" quality="20" skillId="SupportCongregation" variantId="SupportCongregation"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemMeatShield" level="21" nameSpec="Meat Shield" quality="20" skillId="SupportMeatShield" variantId="SupportMeatShield"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemMinionLife" level="21" nameSpec="Minion Life" quality="20" skillId="SupportMinionLife" variantId="SupportMinionLife"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemAdditionalLevel" level="3" nameSpec="Empower" quality="0" skillId="SupportEmpower" variantId="SupportEmpower"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemAnimateArmour" level="21" nameSpec="Animate Guardian of Smiting" quality="20" skillId="AnimateGuardianAltX" skillMinion="AnimatedArmour" skillMinionItemSet="2" skillMinionItemSetCalcs="2" skillMinionSkill="2" skillMinionSkillCalcs="2" variantId="AnimateGuardianAltX"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemRaiseSpectre" level="21" nameSpec="Raise Spectre" quality="20" skillId="RaiseSpectre" variantId="RaiseSpectre"/>
+			</Skill>
 			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Ring 1" source="Item:16:Sorrow Eye, Bone Ring">
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" level="30" nameSpec="Aspect of the Spider" quality="0" skillId="AspectOfTheSpider"/>
 			</Skill>

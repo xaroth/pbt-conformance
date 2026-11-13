@@ -60,26 +60,28 @@
       "group": 11,
       "id": "WaveOfConvictionAltY",
       "name": "Wave of Conviction of Trarthus",
+      "level": 25,
+      "quality": 30,
       "supports": [
-        {
-          "id": "SupportCastWhenStunned",
-          "level": 20,
-          "quality": 33
-        },
-        {
-          "id": "SupportCruelty",
-          "level": 21,
-          "quality": 30
-        },
         {
           "id": "SupportAwakenedEmpower",
           "level": 5,
           "quality": 16
         },
         {
+          "id": "SupportCastWhenStunned",
+          "level": 20,
+          "quality": 33
+        },
+        {
           "id": "SupportCombustion",
           "level": 21,
           "quality": 20
+        },
+        {
+          "id": "SupportCruelty",
+          "level": 21,
+          "quality": 30
         }
       ]
     }
@@ -138,29 +140,31 @@
       "TotalDotDPS": 20970.762788697
     },
     "mainSkill": {
-      "group": 2,
+      "group": 11,
       "id": "WaveOfConvictionAltY",
       "name": "Wave of Conviction of Trarthus",
+      "level": 25,
+      "quality": 30,
       "supports": [
-        {
-          "id": "SupportCastWhenStunned",
-          "level": 20,
-          "quality": 33
-        },
-        {
-          "id": "SupportCruelty",
-          "level": 21,
-          "quality": 30
-        },
         {
           "id": "SupportAwakenedEmpower",
           "level": 5,
           "quality": 16
         },
         {
+          "id": "SupportCastWhenStunned",
+          "level": 20,
+          "quality": 33
+        },
+        {
           "id": "SupportCombustion",
           "level": 21,
           "quality": 20
+        },
+        {
+          "id": "SupportCruelty",
+          "level": 21,
+          "quality": 30
         }
       ]
     }

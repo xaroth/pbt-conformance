@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PathOfBuilding>
-	<Build ascendClassName="Luminary" bandit="None" characterLevelAutoMode="false" className="Scion" level="100" mainSocketGroup="1" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="3_0" viewMode="TREE">
+	<Build ascendClassName="Luminary" bandit="None" characterLevelAutoMode="false" className="Scion" level="100" mainSocketGroup="4" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="3_0" viewMode="TREE">
 		<PlayerStat stat="AverageHit" value="863639.90423984"/>
 		<PlayerStat stat="AverageBurstDamage" value="2590919.7127195"/>
 		<PlayerStat stat="Speed" value="4.785"/>
@@ -1052,6 +1052,18 @@ You and nearby allies gain 50% increased Damage
 	</Items>
 	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="nil" showLegacyGems="false" showSupportGemTypes="ALL" sortGemsByDPS="true" sortGemsByDPSField="CombinedDPS">
 		<SkillSet id="1">
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="1" slot="Boots">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemHeraldOfIce" level="21" nameSpec="Herald of Ice" quality="20" skillId="HeraldOfIce" variantId="HeraldOfIce"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemHeraldOfPurity" level="21" nameSpec="Herald of Purity" quality="0" skillId="HeraldOfPurity" skillMinion="AxisEliteSoldierHeraldOfLight" skillMinionSkill="1" skillMinionSkillCalcs="1" variantId="HeraldOfPurity"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Boots">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemAdditionalXP" level="4" nameSpec="Enlighten" quality="20" skillId="SupportEnlighten" variantId="SupportEnlighten"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemPrecision" level="21" nameSpec="Precision" quality="0" skillId="Precision" variantId="Precision"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Gloves">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemCriticalWeakness" level="21" nameSpec="Assassin&apos;s Mark" quality="20" skillId="AssassinsMark" variantId="AssassinsMark"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemMarkOnHit" level="21" nameSpec="Mark On Hit" quality="20" skillId="SupportMarkOnHit" variantId="SupportMarkOnHit"/>
+			</Skill>
 			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="1" mainActiveSkillCalcs="1" slot="Body Armour">
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemInvertTheRules" level="4" nameSpec="Invert the Rules" quality="23" skillId="SupportInvertTheRules" variantId="SupportInvertTheRules"/>
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemIncreasedCriticalDamage" level="21" nameSpec="Increased Critical Damage" quality="20" skillId="SupportIncreasedCriticalDamage" variantId="SupportIncreasedCriticalDamage"/>
@@ -1059,6 +1071,20 @@ You and nearby allies gain 50% increased Damage
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemReducedMana" level="21" nameSpec="Inspiration" quality="20" skillId="SupportInspiration" variantId="SupportInspiration"/>
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemGreaterSpellEcho" level="4" nameSpec="Greater Spell Echo" quality="20" skillId="SupportGreaterSpellEcho" variantId="SupportGreaterSpellEcho"/>
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemEmpowerPlus" level="5" nameSpec="Awakened Empower" quality="20" skillId="SupportAwakenedEmpower" variantId="SupportAwakenedEmpower"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Helmet">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemPurity" level="21" nameSpec="Purity of Elements" quality="20" skillId="PurityOfElements" variantId="PurityOfElements"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemHeraldOfAsh" level="21" nameSpec="Herald of Ash" quality="20" skillId="HeraldOfAsh" variantId="HeraldOfAsh"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemHatred" level="21" nameSpec="Hatred" quality="0" skillId="Hatred" variantId="Hatred"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemEnlightenPlus" level="5" nameSpec="Awakened Enlighten" quality="15" skillId="SupportAwakenedEnlighten" variantId="SupportAwakenedEnlighten"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 1">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemAnimateArmour" level="21" nameSpec="Animate Guardian" quality="20" skillId="AnimateGuardian" skillMinion="AnimatedArmour" skillMinionItemSet="2" skillMinionItemSetCalcs="2" skillMinionSkill="1" skillMinionSkillCalcs="1" variantId="AnimateGuardian"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemRaiseSpectre" level="21" nameSpec="Raise Spectre" quality="20" skillId="RaiseSpectre" variantId="RaiseSpectre"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemMeatShield" level="21" nameSpec="Meat Shield" quality="20" skillId="SupportMeatShield" variantId="SupportMeatShield"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemAutomation" level="20" nameSpec="Automation" quality="20" skillId="Automation" variantId="Automation"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemConvocationNew" level="1" nameSpec="Convocation" quality="20" skillId="Convocation" variantId="Convocation"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemMinionLife" level="21" nameSpec="Minion Life" quality="20" skillId="SupportMinionLife" variantId="SupportMinionLife"/>
 			</Skill>
 			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Gloves" source="Item:24:Morbid Knuckle, Conjurer Gloves">
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" level="1" nameSpec="Elemental Weakness" quality="0" skillId="ElementalWeakness"/>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PathOfBuilding>
-	<Build ascendClassName="Hierophant" bandit="None" characterLevelAutoMode="false" className="Templar" level="100" mainSocketGroup="2" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="3_0" viewMode="TREE">
+	<Build ascendClassName="Hierophant" bandit="None" characterLevelAutoMode="false" className="Templar" level="100" mainSocketGroup="3" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="3_0" viewMode="TREE">
 		<PlayerStat stat="AverageDamage" value="489508.17642755"/>
 		<PlayerStat stat="AverageBurstDamage" value="489508.17642755"/>
 		<PlayerStat stat="Speed" value="4.964"/>
@@ -730,6 +730,12 @@ Reflects opposite Ring
 			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="1" mainActiveSkillCalcs="1" source="Tree:35011">
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" level="20" nameSpec="" quality="0" skillId="SummonSpectralTiger" skillMinion="SummonedSpectralTiger" skillMinionCalcs="SummonedSpectralTiger" skillMinionSkill="1" skillMinionSkillCalcs="1"/>
 			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Helmet">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemPurity" level="21" nameSpec="Purity of Elements" quality="20" skillId="PurityOfElements" variantId="PurityOfElements"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemPrecision" level="1" nameSpec="Precision" quality="0" skillId="Precision" variantId="Precision"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemAdditionalXP" level="3" nameSpec="Enlighten" quality="6" skillId="SupportEnlighten" variantId="SupportEnlighten"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemGrace" level="21" nameSpec="Grace" quality="0" skillId="Grace" variantId="Grace"/>
+			</Skill>
 			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="3" mainActiveSkillCalcs="3" slot="Weapon 1">
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemLifetap" level="20" nameSpec="Lifetap" quality="20" skillId="SupportLifetap" variantId="SupportLifetap"/>
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SkillGemSummonIceGolem" level="20" nameSpec="Summon Ice Golem" quality="20" skillId="SummonIceGolem" skillMinion="SummonedIceGolem" skillMinionSkill="1" skillMinionSkillCalcs="1" variantId="SummonIceGolem"/>
@@ -737,6 +743,27 @@ Reflects opposite Ring
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SkillGemFrenzy" level="21" nameSpec="Frenzy" quality="23" skillId="Frenzy" variantId="Frenzy"/>
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemCastOnCrit" level="20" nameSpec="Cast On Critical Strike" quality="20" skillId="SupportCastOnCriticalStrike" variantId="SupportCastOnCriticalStrike"/>
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemFasterAttack" level="20" nameSpec="Faster Attacks" quality="20" skillId="SupportFasterAttacks" variantId="SupportFasterAttacks"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Boots">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemItemRarity" level="20" nameSpec="Item Rarity" quality="20" skillId="SupportItemRarity" variantId="SupportItemRarity"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Boots">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemSteelskin" level="20" nameSpec="Steelskin" quality="20" skillId="QuickGuard" variantId="QuickGuard"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemAutomation" level="20" nameSpec="Automation" quality="20" skillId="Automation" variantId="Automation"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Body Armour">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemLifetap" level="21" nameSpec="Lifetap" quality="0" skillId="SupportLifetap" variantId="SupportLifetap"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemVolatility" level="21" nameSpec="Volatility" quality="20" skillId="SupportVolatility" variantId="SupportVolatility"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemVoidManipulation" level="21" nameSpec="Void Manipulation" quality="20" skillId="SupportVoidManipulation" variantId="SupportVoidManipulation"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemIncreasedCriticalStrikes" level="21" nameSpec="Increased Critical Strikes" quality="20" skillId="SupportIncreasedCriticalStrikes" variantId="SupportIncreasedCriticalStrikes"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemChaosAttacks" level="21" nameSpec="Withering Touch" quality="20" skillId="SupportWitheringTouch" variantId="SupportWitheringTouch"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemShrapnelBallista" level="21" nameSpec="Shrapnel Ballista" quality="20" skillId="ShrapnelBallista" variantId="ShrapnelBallista"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Gloves">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemLifetap" level="20" nameSpec="Lifetap" quality="0" skillId="SupportLifetap" variantId="SupportLifetap"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemSecondWind" level="20" nameSpec="Second Wind" quality="20" skillId="SupportSecondWind" variantId="SupportSecondWind"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemBloodRage" level="21" nameSpec="Blood Rage" quality="20" skillId="BloodRage" variantId="BloodRage"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemDash" level="21" nameSpec="Dash" quality="20" skillId="Dash" variantId="Dash"/>
 			</Skill>
 		</SkillSet>
 	</Skills>

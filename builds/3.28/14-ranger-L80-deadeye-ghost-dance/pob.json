@@ -61,21 +61,14 @@
       "group": 1,
       "id": "LightningArrow",
       "name": "Lightning Arrow",
+      "level": 20,
+      "quality": 20,
       "attack": true,
       "supports": [
-        {
-          "id": "SupportTrinity",
-          "level": 20,
-          "quality": 20
-        },
         {
           "id": "SupportElementalDamageWithAttacks",
           "level": 20,
           "quality": 20
-        },
-        {
-          "id": "SupportInspiration",
-          "level": 20
         },
         {
           "id": "SupportGreaterFork",
@@ -84,6 +77,15 @@
         {
           "id": "SupportIncreasedCriticalDamage",
           "level": 20
+        },
+        {
+          "id": "SupportInspiration",
+          "level": 20
+        },
+        {
+          "id": "SupportTrinity",
+          "level": 20,
+          "quality": 20
         }
       ]
     }
@@ -146,21 +148,14 @@
       "group": 1,
       "id": "LightningArrow",
       "name": "Lightning Arrow",
+      "level": 20,
+      "quality": 20,
       "attack": true,
       "supports": [
-        {
-          "id": "SupportTrinity",
-          "level": 20,
-          "quality": 20
-        },
         {
           "id": "SupportElementalDamageWithAttacks",
           "level": 20,
           "quality": 20
-        },
-        {
-          "id": "SupportInspiration",
-          "level": 20
         },
         {
           "id": "SupportGreaterFork",
@@ -169,6 +164,15 @@
         {
           "id": "SupportIncreasedCriticalDamage",
           "level": 20
+        },
+        {
+          "id": "SupportInspiration",
+          "level": 20
+        },
+        {
+          "id": "SupportTrinity",
+          "level": 20,
+          "quality": 20
         }
       ]
     }

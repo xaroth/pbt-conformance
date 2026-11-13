@@ -61,23 +61,25 @@
       "group": 1,
       "id": "Smite",
       "name": "Smite",
+      "level": 17,
+      "quality": 10,
       "attack": true,
       "supports": [
         {
-          "id": "SupportLightningPenetration",
-          "level": 15
+          "id": "SupportAddedLightningDamage",
+          "level": 16
         },
         {
           "id": "SupportElementalDamageWithAttacks",
           "level": 15
         },
         {
-          "id": "SupportMultistrike",
-          "level": 12
+          "id": "SupportLightningPenetration",
+          "level": 15
         },
         {
-          "id": "SupportAddedLightningDamage",
-          "level": 16
+          "id": "SupportMultistrike",
+          "level": 12
         }
       ]
     }
@@ -140,23 +142,25 @@
       "group": 1,
       "id": "Smite",
       "name": "Smite",
+      "level": 17,
+      "quality": 10,
       "attack": true,
       "supports": [
         {
-          "id": "SupportLightningPenetration",
-          "level": 15
+          "id": "SupportAddedLightningDamage",
+          "level": 16
         },
         {
           "id": "SupportElementalDamageWithAttacks",
           "level": 15
         },
         {
-          "id": "SupportMultistrike",
-          "level": 12
+          "id": "SupportLightningPenetration",
+          "level": 15
         },
         {
-          "id": "SupportAddedLightningDamage",
-          "level": 16
+          "id": "SupportMultistrike",
+          "level": 12
         }
       ]
     }

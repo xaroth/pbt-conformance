@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PathOfBuilding>
-	<Build ascendClassName="Occultist" bandit="None" characterLevelAutoMode="false" className="Witch" level="100" mainSocketGroup="1" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="3_0" viewMode="TREE">
+	<Build ascendClassName="Occultist" bandit="None" characterLevelAutoMode="false" className="Witch" level="100" mainSocketGroup="4" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="3_0" viewMode="TREE">
 		<PlayerStat stat="AverageHit" value="3199620.6499622"/>
 		<PlayerStat stat="AverageBurstDamage" value="3199620.6499622"/>
 		<PlayerStat stat="Speed" value="15.866666666667"/>
@@ -673,6 +673,19 @@ Corrupted
 	</Items>
 	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="nil" showLegacyGems="false" showSupportGemTypes="ALL" sortGemsByDPS="true" sortGemsByDPSField="CombinedDPS">
 		<SkillSet id="1">
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="1" slot="Weapon 1">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemFasterAttack" level="20" nameSpec="Faster Attacks" quality="20" skillId="SupportFasterAttacks" variantId="SupportFasterAttacks"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemFlameDash" level="2" nameSpec="Flame Dash" quality="0" skillId="FlameDash" variantId="FlameDash"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 1">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemHeraldOfPurity" level="20" nameSpec="Herald of Purity" quality="23" skillId="HeraldOfPurity" skillMinion="AxisEliteSoldierHeraldOfLight" skillMinionSkill="1" skillMinionSkillCalcs="1" variantId="HeraldOfPurity"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Boots">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemPurity" level="21" nameSpec="Purity of Elements" quality="0" skillId="PurityOfElements" variantId="PurityOfElements"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemDetonateMines" level="1" nameSpec="Detonate Mines" quality="0" skillId="GemDetonateMines" variantId="GemDetonateMines"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemShieldCharge" level="14" nameSpec="Shield Charge" quality="0" skillId="ShieldCharge" variantId="ShieldCharge"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemAutomation" level="20" nameSpec="Automation" quality="0" skillId="Automation" variantId="Automation"/>
+			</Skill>
 			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="1" mainActiveSkillCalcs="1" slot="Body Armour">
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SkillGemGlacialCascade" level="20" nameSpec="Glacial Cascade of the Fissure" quality="21" skillId="GlacialCascadeAltX" variantId="GlacialCascadeAltX"/>
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemMinefield" level="20" nameSpec="Minefield" quality="20" skillId="SupportMinefield" variantId="SupportMinefield"/>
@@ -680,6 +693,23 @@ Corrupted
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemPowerChargeOnCrit" level="20" nameSpec="Power Charge On Critical" quality="21" skillId="SupportPowerChargeOnCritical" variantId="SupportPowerChargeOnCritical"/>
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemChargedMines" level="20" nameSpec="Charged Mines" quality="0" skillId="SupportChargedMines" variantId="SupportChargedMines"/>
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemTrapAndMineDamage" level="20" nameSpec="Trap and Mine Damage" quality="20" skillId="SupportTrapAndMineDamage" variantId="SupportTrapAndMineDamage"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Helmet">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemVitality" level="20" nameSpec="Vitality" quality="0" skillId="Vitality" variantId="Vitality"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemBloodMagic" level="20" nameSpec="Arrogance" quality="23" skillId="SupportArrogance" variantId="SupportArrogance"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemClarity" level="21" nameSpec="Clarity" quality="0" skillId="Clarity" variantId="Clarity"/>
+				<Gem count="nil" enableGlobal1="false" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemVaalRighteousFire" level="20" nameSpec="Vaal Righteous Fire" quality="0" skillId="VaalRighteousFire" variantId="VaalRighteousFire"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Gloves">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemFrostbite" level="20" nameSpec="Frostbite" quality="0" skillId="Frostbite" variantId="Frostbite"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemCriticalWeakness" level="20" nameSpec="Assassin&apos;s Mark" quality="0" skillId="AssassinsMark" variantId="AssassinsMark"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemArcanistBrand" level="21" nameSpec="Arcanist Brand" quality="0" skillId="BrandSupport" variantId="BrandSupport"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemBearTrap" level="1" nameSpec="Bear Trap" quality="0" skillId="BearTrap" variantId="BearTrap"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 2">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemBonechill" level="21" nameSpec="Bonechill" quality="0" skillId="SupportBonechill" variantId="SupportBonechill"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemSummonSkitterbots" level="21" nameSpec="Summon Skitterbots" quality="0" skillId="SummonSkitterbots" skillMinion="SkitterbotCold" skillMinionSkill="1" skillMinionSkillCalcs="1" variantId="SummonSkitterbots"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemUnboundAilments" level="20" nameSpec="Unbound Ailments" quality="0" skillId="SupportUnboundAilments" variantId="SupportUnboundAilments"/>
 			</Skill>
 		</SkillSet>
 	</Skills>

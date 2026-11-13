@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PathOfBuilding>
-	<Build ascendClassName="Elementalist" bandit="None" characterLevelAutoMode="false" className="Witch" level="100" mainSocketGroup="1" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="3_0" viewMode="TREE">
+	<Build ascendClassName="Elementalist" bandit="None" characterLevelAutoMode="false" className="Witch" level="100" mainSocketGroup="2" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="3_0" viewMode="TREE">
 		<PlayerStat stat="AverageHit" value="1933937.2886185"/>
 		<PlayerStat stat="AverageBurstDamage" value="1933937.2886185"/>
 		<PlayerStat stat="Speed" value="3.05"/>
@@ -842,6 +842,11 @@ Trigger a Socketed Bow Skill when you Attack with a Bow, with a 1 second Cooldow
 	</Items>
 	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="nil" showLegacyGems="false" showSupportGemTypes="ALL" sortGemsByDPS="true" sortGemsByDPSField="CombinedDPS">
 		<SkillSet id="1">
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="1" slot="Weapon 2">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemFlameWhip" level="20" nameSpec="Flame Surge" quality="0" skillId="FlameSurge" variantId="FlameSurge"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemFlammability" level="21" nameSpec="Flammability" quality="20" skillId="Flammability" variantId="Flammability"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemElementalWeakness" level="21" nameSpec="Elemental Weakness" quality="20" skillId="ElementalWeakness" variantId="ElementalWeakness"/>
+			</Skill>
 			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="1" mainActiveSkillCalcs="1" slot="Body Armour">
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemMinionPact" level="4" nameSpec="Communion" quality="23" skillId="SupportMinionPact" variantId="SupportMinionPact"/>
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemCruelty" level="21" nameSpec="Cruelty" quality="20" skillId="SupportCruelty" variantId="SupportCruelty"/>
@@ -849,6 +854,44 @@ Trigger a Socketed Bow Skill when you Attack with a Bow, with a 1 second Cooldow
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemIncreasedBurningDamage" level="21" nameSpec="Burning Damage" quality="20" skillId="SupportBurningDamage" variantId="SupportBurningDamage"/>
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SkillGemEtherealKnives" level="21" nameSpec="Ethereal Knives" quality="20" skillId="EtherealKnives" variantId="EtherealKnives"/>
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemReducedMana" level="21" nameSpec="Inspiration" quality="20" skillId="SupportInspiration" variantId="SupportInspiration"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Gloves">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemSummonRockGolem" level="20" nameSpec="Summon Stone Golem of Safeguarding" quality="20" skillId="SummonStoneGolemAltY" skillMinion="SummonedStoneGolem" skillMinionSkill="1" skillMinionSkillCalcs="1" variantId="SummonStoneGolemAltY"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemSummonLightningGolem" level="20" nameSpec="Summon Lightning Golem" quality="20" skillId="SummonLightningGolem" skillMinion="SummonedLightningGolem" skillMinionSkill="1" skillMinionSkillCalcs="1" variantId="SummonLightningGolem"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemFasterCast" level="21" nameSpec="Faster Casting" quality="20" skillId="SupportFasterCasting" variantId="SupportFasterCasting"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemFlameDash" level="21" nameSpec="Flame Dash" quality="20" skillId="FlameDash" variantId="FlameDash"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Boots">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemSummonRockGolem" level="20" nameSpec="Summon Stone Golem" quality="20" skillId="SummonStoneGolem" skillMinion="SummonedStoneGolem" skillMinionSkill="1" skillMinionSkillCalcs="1" variantId="SummonStoneGolem"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemSummonFlameGolem" level="20" nameSpec="Summon Flame Golem" quality="20" skillId="SummonFlameGolem" skillMinion="SummonedFlameGolem" skillMinionSkill="1" skillMinionSkillCalcs="1" variantId="SummonFlameGolem"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemHeraldOfPurity" level="21" nameSpec="Herald of Purity" quality="0" skillId="HeraldOfPurity" skillMinion="AxisEliteSoldierHeraldOfLight" skillMinionSkill="1" skillMinionSkillCalcs="1" variantId="HeraldOfPurity"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemHeraldOfAsh" level="21" nameSpec="Herald of Ash" quality="20" skillId="HeraldOfAsh" variantId="HeraldOfAsh"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 1">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemSummonCarrionGolem" level="20" nameSpec="Summon Carrion Golem of Hordes" quality="0" skillId="SummonCarrionGolemAltX" skillMinion="SummonedCarrionGolem" skillMinionSkill="1" skillMinionSkillCalcs="1" variantId="SummonCarrionGolemAltX"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemCongregation" level="4" nameSpec="Congregation" quality="20" skillId="SupportCongregation" variantId="SupportCongregation"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemSummonChaosGolem" level="20" nameSpec="Summon Chaos Golem" quality="20" skillId="SummonChaosGolem" skillMinion="SummonedChaosGolem" skillMinionSkill="1" skillMinionSkillCalcs="1" variantId="SummonChaosGolem"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Helmet">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemPactOfBeidat" level="20" nameSpec="Pact of Beidat" quality="20" skillId="PactOfBeidat" variantId="PactOfBeidat"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemTempestShield" level="21" nameSpec="Tempest Shield" quality="20" skillId="TempestShield" variantId="TempestShield"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemHeraldOfThunder" level="20" nameSpec="Herald of Thunder" quality="20" skillId="HeraldOfThunder" variantId="HeraldOfThunder"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemDamageOverTimeAura" level="20" nameSpec="Malevolence" quality="0" skillId="Malevolence" variantId="Malevolence"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 1 Swap">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemReducedMana" level="20" nameSpec="Inspiration" quality="0" skillId="SupportInspiration" variantId="SupportInspiration"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemReducedMana" level="20" nameSpec="Inspiration" quality="0" skillId="SupportInspiration" variantId="SupportInspiration"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemReducedMana" level="20" nameSpec="Inspiration" quality="0" skillId="SupportInspiration" variantId="SupportInspiration"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemReducedMana" level="20" nameSpec="Inspiration" quality="0" skillId="SupportInspiration" variantId="SupportInspiration"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemReducedMana" level="20" nameSpec="Inspiration" quality="0" skillId="SupportInspiration" variantId="SupportInspiration"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemReducedMana" level="20" nameSpec="Inspiration" quality="0" skillId="SupportInspiration" variantId="SupportInspiration"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 2 Swap">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemReducedMana" level="20" nameSpec="Inspiration" quality="0" skillId="SupportInspiration" variantId="SupportInspiration"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemReducedMana" level="20" nameSpec="Inspiration" quality="0" skillId="SupportInspiration" variantId="SupportInspiration"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 2 Swap">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemReducedMana" level="20" nameSpec="Inspiration" quality="0" skillId="SupportInspiration" variantId="SupportInspiration"/>
 			</Skill>
 			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Ring 2" source="Item:29:Lost Unity, Formless Ring">
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" level="30" nameSpec="Herald of the Hive" quality="0" skillId="HeraldOfTheBreach"/>

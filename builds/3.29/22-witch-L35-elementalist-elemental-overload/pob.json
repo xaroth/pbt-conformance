@@ -62,17 +62,18 @@
       "group": 1,
       "id": "PenanceBrand",
       "name": "Penance Brand",
+      "level": 3,
       "supports": [
         {
           "id": "SupportCombustion",
           "level": 8
         },
         {
-          "id": "SupportElementalFocus",
+          "id": "SupportControlledDestruction",
           "level": 6
         },
         {
-          "id": "SupportControlledDestruction",
+          "id": "SupportElementalFocus",
           "level": 6
         }
       ]
@@ -137,17 +138,18 @@
       "group": 1,
       "id": "PenanceBrand",
       "name": "Penance Brand",
+      "level": 3,
       "supports": [
         {
           "id": "SupportCombustion",
           "level": 8
         },
         {
-          "id": "SupportElementalFocus",
+          "id": "SupportControlledDestruction",
           "level": 6
         },
         {
-          "id": "SupportControlledDestruction",
+          "id": "SupportElementalFocus",
           "level": 6
         }
       ]

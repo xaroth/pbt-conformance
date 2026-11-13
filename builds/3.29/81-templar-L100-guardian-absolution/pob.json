@@ -65,13 +65,25 @@
       "group": 7,
       "id": "Absolution",
       "name": "Absolution",
+      "level": 30,
+      "quality": 30,
       "minion": {
         "name": "Sentinel of Absolution",
         "skill": "Default Attack"
       },
       "supports": [
         {
+          "id": "SupportIncreasedCriticalDamage",
+          "level": 20,
+          "quality": 30
+        },
+        {
           "id": "SupportIncreasedCriticalStrikes",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportMinionDamage",
           "level": 20,
           "quality": 20
         },
@@ -84,16 +96,6 @@
           "id": "SupportSpellEcho",
           "level": 20,
           "quality": 30
-        },
-        {
-          "id": "SupportIncreasedCriticalDamage",
-          "level": 20,
-          "quality": 30
-        },
-        {
-          "id": "SupportMinionDamage",
-          "level": 20,
-          "quality": 20
         }
       ]
     }
@@ -157,16 +159,28 @@
       "TotalDotDPS": 0
     },
     "mainSkill": {
-      "group": 3,
+      "group": 7,
       "id": "Absolution",
       "name": "Absolution",
+      "level": 30,
+      "quality": 30,
       "minion": {
         "name": "Sentinel of Absolution",
         "skill": "Default Attack"
       },
       "supports": [
         {
+          "id": "SupportIncreasedCriticalDamage",
+          "level": 20,
+          "quality": 30
+        },
+        {
           "id": "SupportIncreasedCriticalStrikes",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportMinionDamage",
           "level": 20,
           "quality": 20
         },
@@ -179,16 +193,6 @@
           "id": "SupportSpellEcho",
           "level": 20,
           "quality": 30
-        },
-        {
-          "id": "SupportIncreasedCriticalDamage",
-          "level": 20,
-          "quality": 30
-        },
-        {
-          "id": "SupportMinionDamage",
-          "level": 20,
-          "quality": 20
         }
       ]
     }

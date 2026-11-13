@@ -61,25 +61,27 @@
       "group": 4,
       "id": "GlacialCascadeAltX",
       "name": "Glacial Cascade of the Fissure",
+      "level": 23,
+      "quality": 21,
       "mine": true,
       "supports": [
         {
-          "id": "SupportMinefield",
-          "level": 20,
-          "quality": 20
+          "id": "SupportChargedMines",
+          "level": 20
         },
         {
           "id": "SupportHighImpactMine",
           "level": 23
         },
         {
+          "id": "SupportMinefield",
+          "level": 20,
+          "quality": 20
+        },
+        {
           "id": "SupportPowerChargeOnCritical",
           "level": 20,
           "quality": 21
-        },
-        {
-          "id": "SupportChargedMines",
-          "level": 20
         },
         {
           "id": "SupportTrapAndMineDamage",
@@ -144,28 +146,30 @@
       "TotalDotDPS": 2639.9575945033
     },
     "mainSkill": {
-      "group": 1,
+      "group": 4,
       "id": "GlacialCascadeAltX",
       "name": "Glacial Cascade of the Fissure",
+      "level": 23,
+      "quality": 21,
       "mine": true,
       "supports": [
         {
-          "id": "SupportMinefield",
-          "level": 20,
-          "quality": 20
+          "id": "SupportChargedMines",
+          "level": 20
         },
         {
           "id": "SupportHighImpactMine",
           "level": 23
         },
         {
+          "id": "SupportMinefield",
+          "level": 20,
+          "quality": 20
+        },
+        {
           "id": "SupportPowerChargeOnCritical",
           "level": 20,
           "quality": 21
-        },
-        {
-          "id": "SupportChargedMines",
-          "level": 20
         },
         {
           "id": "SupportTrapAndMineDamage",

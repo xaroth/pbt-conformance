@@ -65,6 +65,8 @@
       "group": 1,
       "id": "AnimateWeaponAltY",
       "name": "Animate Weapon of Ranged Arms",
+      "level": 25,
+      "quality": 60,
       "minion": {
         "name": "Animated Weapon",
         "skill": "Default Attack"
@@ -85,11 +87,6 @@
           "quality": 20
         },
         {
-          "id": "SupportVoidManipulation",
-          "level": 22,
-          "quality": 20
-        },
-        {
           "id": "SupportGreaterUnleash",
           "level": 4
         },
@@ -97,6 +94,11 @@
           "id": "SupportMinionDamage",
           "level": 22,
           "quality": 30
+        },
+        {
+          "id": "SupportVoidManipulation",
+          "level": 22,
+          "quality": 20
         }
       ]
     }
@@ -163,6 +165,8 @@
       "group": 1,
       "id": "AnimateWeaponAltY",
       "name": "Animate Weapon of Ranged Arms",
+      "level": 25,
+      "quality": 60,
       "minion": {
         "name": "Animated Weapon",
         "skill": "Default Attack"
@@ -183,11 +187,6 @@
           "quality": 20
         },
         {
-          "id": "SupportVoidManipulation",
-          "level": 22,
-          "quality": 20
-        },
-        {
           "id": "SupportGreaterUnleash",
           "level": 4
         },
@@ -195,6 +194,11 @@
           "id": "SupportMinionDamage",
           "level": 22,
           "quality": 30
+        },
+        {
+          "id": "SupportVoidManipulation",
+          "level": 22,
+          "quality": 20
         }
       ]
     }

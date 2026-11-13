@@ -63,29 +63,12 @@
       "group": 4,
       "id": "FreezingPulse",
       "name": "Freezing Pulse",
+      "level": 22,
+      "quality": 10,
       "totem": true,
       "supports": [
         {
-          "id": "SupportSpellTotem",
-          "level": 20
-        },
-        {
-          "id": "SupportMultipleTotems",
-          "level": 20,
-          "quality": 30
-        },
-        {
-          "id": "SupportIncreasedCriticalDamage",
-          "level": 19,
-          "quality": 10
-        },
-        {
           "id": "SupportGreaterMultipleProjectiles",
-          "level": 22,
-          "quality": 20
-        },
-        {
-          "id": "SupportReturningProjectiles",
           "level": 22,
           "quality": 20
         },
@@ -93,6 +76,25 @@
           "id": "SupportHypothermia",
           "level": 20,
           "quality": 20
+        },
+        {
+          "id": "SupportIncreasedCriticalDamage",
+          "level": 19,
+          "quality": 10
+        },
+        {
+          "id": "SupportMultipleTotems",
+          "level": 20,
+          "quality": 30
+        },
+        {
+          "id": "SupportReturningProjectiles",
+          "level": 22,
+          "quality": 20
+        },
+        {
+          "id": "SupportSpellTotem",
+          "level": 20
         }
       ]
     }
@@ -154,32 +156,15 @@
       "TotemsSummoned": 5
     },
     "mainSkill": {
-      "group": 1,
+      "group": 4,
       "id": "FreezingPulse",
       "name": "Freezing Pulse",
+      "level": 22,
+      "quality": 10,
       "totem": true,
       "supports": [
         {
-          "id": "SupportSpellTotem",
-          "level": 20
-        },
-        {
-          "id": "SupportMultipleTotems",
-          "level": 20,
-          "quality": 30
-        },
-        {
-          "id": "SupportIncreasedCriticalDamage",
-          "level": 19,
-          "quality": 10
-        },
-        {
           "id": "SupportGreaterMultipleProjectiles",
-          "level": 22,
-          "quality": 20
-        },
-        {
-          "id": "SupportReturningProjectiles",
           "level": 22,
           "quality": 20
         },
@@ -187,6 +172,25 @@
           "id": "SupportHypothermia",
           "level": 20,
           "quality": 20
+        },
+        {
+          "id": "SupportIncreasedCriticalDamage",
+          "level": 19,
+          "quality": 10
+        },
+        {
+          "id": "SupportMultipleTotems",
+          "level": 20,
+          "quality": 30
+        },
+        {
+          "id": "SupportReturningProjectiles",
+          "level": 22,
+          "quality": 20
+        },
+        {
+          "id": "SupportSpellTotem",
+          "level": 20
         }
       ]
     }

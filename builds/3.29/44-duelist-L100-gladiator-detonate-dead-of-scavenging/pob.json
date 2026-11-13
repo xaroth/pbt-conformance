@@ -60,14 +60,11 @@
       "group": 10,
       "id": "DetonateDeadAltX",
       "name": "Detonate Dead of Scavenging",
+      "level": 20,
+      "quality": 30,
       "supports": [
         {
           "id": "SupportCastWhenStunned",
-          "level": 21,
-          "quality": 30
-        },
-        {
-          "id": "SupportUnboundAilments",
           "level": 21,
           "quality": 30
         },
@@ -80,6 +77,11 @@
           "id": "SupportIgniteProliferation",
           "level": 21,
           "quality": 20
+        },
+        {
+          "id": "SupportUnboundAilments",
+          "level": 21,
+          "quality": 30
         }
       ]
     }
@@ -138,17 +140,14 @@
       "TotalDotDPS": 9494.838
     },
     "mainSkill": {
-      "group": 1,
+      "group": 10,
       "id": "DetonateDeadAltX",
       "name": "Detonate Dead of Scavenging",
+      "level": 20,
+      "quality": 30,
       "supports": [
         {
           "id": "SupportCastWhenStunned",
-          "level": 21,
-          "quality": 30
-        },
-        {
-          "id": "SupportUnboundAilments",
           "level": 21,
           "quality": 30
         },
@@ -161,6 +160,11 @@
           "id": "SupportIgniteProliferation",
           "level": 21,
           "quality": 20
+        },
+        {
+          "id": "SupportUnboundAilments",
+          "level": 21,
+          "quality": 30
         }
       ]
     }

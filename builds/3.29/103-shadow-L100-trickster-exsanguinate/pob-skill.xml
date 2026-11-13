@@ -672,6 +672,34 @@ Regenerate 75.3 Life per second
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemChargedMines" level="21" nameSpec="Charged Mines" quality="20" skillId="SupportChargedMines" variantId="SupportChargedMines"/>
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemIncreasedCriticalDamage" level="21" nameSpec="Increased Critical Damage" quality="20" skillId="SupportIncreasedCriticalDamage" variantId="SupportIncreasedCriticalDamage"/>
 			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 2">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemWhirlingBlades" level="21" nameSpec="Whirling Blades" quality="20" skillId="WhirlingBlades" variantId="WhirlingBlades"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemFasterAttack" level="21" nameSpec="Faster Attacks" quality="20" skillId="SupportFasterAttacks" variantId="SupportFasterAttacks"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemOnslaught" level="21" nameSpec="Momentum" quality="20" skillId="SupportMomentum" variantId="SupportMomentum"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Gloves">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemElementalWeakness" level="20" nameSpec="Elemental Weakness" quality="23" skillId="ElementalWeakness" variantId="ElementalWeakness"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemAdditionalQuality" level="4" nameSpec="Enhance" quality="0" skillId="SupportEnhance" variantId="SupportEnhance"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemFrostblink" level="21" nameSpec="Frostblink" quality="20" skillId="Frostblink" variantId="Frostblink"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemLifetap" level="1" nameSpec="Lifetap" quality="0" skillId="SupportLifetap" variantId="SupportLifetap"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Helmet">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemGrace" level="21" nameSpec="Grace" quality="0" skillId="Grace" variantId="Grace"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemHatred" level="21" nameSpec="Hatred" quality="0" skillId="Hatred" variantId="Hatred"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemHeraldOfPurity" level="21" nameSpec="Herald of Purity" quality="0" skillId="HeraldOfPurity" skillMinion="AxisEliteSoldierHeraldOfLight" skillMinionSkill="1" skillMinionSkillCalcs="1" variantId="HeraldOfPurity"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemAdditionalXP" level="4" nameSpec="Enlighten" quality="0" skillId="SupportEnlighten" variantId="SupportEnlighten"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Boots">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemAdditionalXP" level="4" nameSpec="Enlighten" quality="0" skillId="SupportEnlighten" variantId="SupportEnlighten"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemBonechill" level="21" nameSpec="Bonechill" quality="20" skillId="SupportBonechill" variantId="SupportBonechill"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemSummonSkitterbots" level="21" nameSpec="Summon Skitterbots" quality="20" skillId="SummonSkitterbots" skillMinion="SkitterbotCold" skillMinionSkill="1" skillMinionSkillCalcs="1" variantId="SummonSkitterbots"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemUnboundAilments" level="21" nameSpec="Unbound Ailments" quality="0" skillId="SupportUnboundAilments" variantId="SupportUnboundAilments"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 1">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemAutomation" level="21" nameSpec="Automation" quality="20" skillId="Automation" variantId="Automation"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemDetonateMines" level="1" nameSpec="Detonate Mines" quality="23" skillId="GemDetonateMines" variantId="GemDetonateMines"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemAdditionalQuality" level="4" nameSpec="Enhance" quality="0" skillId="SupportEnhance" variantId="SupportEnhance"/>
+			</Skill>
 		</SkillSet>
 	</Skills>
 	<Tree activeSpec="1">

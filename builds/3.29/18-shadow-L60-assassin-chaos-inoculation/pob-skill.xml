@@ -194,6 +194,18 @@ Implicits: 0
 				<Gem enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SkillGemSupportUnboundAilments" level="16" nameSpec="Unbound Ailments" quality="0" skillId="SupportUnboundAilments" variantId="SupportUnboundAilments"/>
 				<Gem enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SkillGemSupportAddedChaosDamage" level="15" nameSpec="Added Chaos Damage" quality="0" skillId="SupportAddedChaosDamage" variantId="SupportAddedChaosDamage"/>
 			</Skill>
+			<Skill enabled="true" slot="Helmet" label="" includeInFullDPS="false">
+				<Gem enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemHeraldOfAgony" level="15" nameSpec="Herald of Agony" quality="0" skillId="HeraldOfAgony" variantId="HeraldOfAgony"/>
+				<Gem enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemGrace" level="15" nameSpec="Grace" quality="0" skillId="Grace" variantId="Grace"/>
+				<Gem enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemPrecision" level="7" nameSpec="Precision" quality="0" skillId="Precision" variantId="Precision"/>
+			</Skill>
+			<Skill enabled="true" slot="Gloves" label="" includeInFullDPS="false">
+				<Gem enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemWitheringStep" level="16" nameSpec="Withering Step" quality="0" skillId="WitheringStep" variantId="WitheringStep"/>
+				<Gem enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemDespair" level="15" nameSpec="Despair" quality="0" skillId="Despair" variantId="Despair"/>
+			</Skill>
+			<Skill enabled="true" slot="Boots" label="" includeInFullDPS="false">
+				<Gem enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemDash" level="16" nameSpec="Dash" quality="0" skillId="Dash" variantId="Dash"/>
+			</Skill>
 		</SkillSet>
 	</Skills>
 	<Config activeConfigSet="1">

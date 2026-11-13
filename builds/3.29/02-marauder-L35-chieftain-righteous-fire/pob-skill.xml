@@ -159,6 +159,18 @@ Implicits: 1
 				<Gem nameSpec="Elemental Focus" skillId="SupportElementalFocus" gemId="Metadata/Items/Gems/SkillGemSupportElementalFocus" level="6" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true"/>
 				<Gem nameSpec="Burning Damage" skillId="SupportBurningDamage" gemId="Metadata/Items/Gems/SkillGemSupportBurningDamage" level="2" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true"/>
 			</Skill>
+			<Skill enabled="true" slot="Helmet" label="" includeInFullDPS="false">
+				<Gem nameSpec="Purity of Fire" skillId="PurityOfFire" gemId="Metadata/Items/Gems/SkillGemPurityOfFire" level="4" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true"/>
+			</Skill>
+			<Skill enabled="true" slot="Gloves" label="" includeInFullDPS="false">
+				<Gem nameSpec="Vitality" skillId="Vitality" gemId="Metadata/Items/Gems/SkillGemVitality" level="7" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true"/>
+			</Skill>
+			<Skill enabled="true" slot="Boots" label="" includeInFullDPS="false">
+				<Gem nameSpec="Flame Dash" skillId="FlameDash" gemId="Metadata/Items/Gems/SkillGemFlameDash" level="7" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true"/>
+			</Skill>
+			<Skill enabled="true" slot="Weapon 2" label="" includeInFullDPS="false">
+				<Gem nameSpec="Molten Shell" skillId="MoltenShell" gemId="Metadata/Items/Gems/SkillGemMoltenShell" level="6" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true"/>
+			</Skill>
 		</SkillSet>
 	</Skills>
 	<Config activeConfigSet="1">

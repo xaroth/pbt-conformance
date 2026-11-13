@@ -65,25 +65,22 @@
       "group": 1,
       "id": "Absolution",
       "name": "Absolution",
+      "level": 25,
+      "quality": 49,
       "minion": {
         "name": "Sentinel of Absolution",
         "skill": "Default Attack"
       },
       "supports": [
         {
-          "id": "SupportPhysicalToLightning",
-          "level": 20,
-          "quality": 30
-        },
-        {
-          "id": "SupportMinionDamage",
-          "level": 20,
-          "quality": 30
-        },
-        {
           "id": "SupportGreaterSpellEcho",
           "level": 2,
           "quality": 30
+        },
+        {
+          "id": "SupportIncreasedCriticalDamage",
+          "level": 20,
+          "quality": 20
         },
         {
           "id": "SupportIncreasedCriticalStrikes",
@@ -91,9 +88,14 @@
           "quality": 23
         },
         {
-          "id": "SupportIncreasedCriticalDamage",
+          "id": "SupportMinionDamage",
           "level": 20,
-          "quality": 20
+          "quality": 30
+        },
+        {
+          "id": "SupportPhysicalToLightning",
+          "level": 20,
+          "quality": 30
         }
       ]
     }
@@ -160,25 +162,22 @@
       "group": 1,
       "id": "Absolution",
       "name": "Absolution",
+      "level": 25,
+      "quality": 49,
       "minion": {
         "name": "Sentinel of Absolution",
         "skill": "Default Attack"
       },
       "supports": [
         {
-          "id": "SupportPhysicalToLightning",
-          "level": 20,
-          "quality": 30
-        },
-        {
-          "id": "SupportMinionDamage",
-          "level": 20,
-          "quality": 30
-        },
-        {
           "id": "SupportGreaterSpellEcho",
           "level": 2,
           "quality": 30
+        },
+        {
+          "id": "SupportIncreasedCriticalDamage",
+          "level": 20,
+          "quality": 20
         },
         {
           "id": "SupportIncreasedCriticalStrikes",
@@ -186,9 +185,14 @@
           "quality": 23
         },
         {
-          "id": "SupportIncreasedCriticalDamage",
+          "id": "SupportMinionDamage",
           "level": 20,
-          "quality": 20
+          "quality": 30
+        },
+        {
+          "id": "SupportPhysicalToLightning",
+          "level": 20,
+          "quality": 30
         }
       ]
     }

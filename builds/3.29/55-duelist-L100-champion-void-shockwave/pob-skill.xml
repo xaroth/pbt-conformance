@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PathOfBuilding>
-	<Build ascendClassName="Champion" bandit="None" characterLevelAutoMode="false" className="Duelist" level="100" mainSocketGroup="2" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="3_0" viewMode="TREE">
+	<Build ascendClassName="Champion" bandit="None" characterLevelAutoMode="false" className="Duelist" level="100" mainSocketGroup="7" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="3_0" viewMode="TREE">
 		<PlayerStat stat="AverageDamage" value="2490939.1699527"/>
 		<PlayerStat stat="AverageBurstDamage" value="2490939.1699527"/>
 		<PlayerStat stat="Speed" value="1.4896"/>
@@ -717,6 +717,39 @@ Corrupted
 		<SkillSet id="1">
 			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="1" mainActiveSkillCalcs="1" source="Tree:35011">
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" level="20" nameSpec="" quality="0" skillId="SummonSpectralTiger" skillMinion="SummonedSpectralTiger" skillMinionCalcs="SummonedSpectralTiger" skillMinionSkill="1" skillMinionSkillCalcs="1"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Boots">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemBloodRage" level="20" nameSpec="Blood Rage" quality="23" skillId="BloodRage" variantId="BloodRage"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemBattlemagesCry" level="1" nameSpec="Battlemage&apos;s Cry" quality="23" skillId="BattlemagesCry" variantId="BattlemagesCry"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemCallToArms" level="20" nameSpec="Autoexertion" quality="20" skillId="Autoexertion" variantId="Autoexertion"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Gloves">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemBloodAndSand" level="7" nameSpec="Blood and Sand" quality="0" skillId="BloodAndSand" variantId="BloodAndSand"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemRallyingCry" level="20" nameSpec="Rallying Cry" quality="20" skillId="RallyingCry" variantId="RallyingCry"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemFlameDash" level="4" nameSpec="Flame Dash" quality="20" skillId="FlameDash" variantId="FlameDash"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemPride" level="21" nameSpec="Pride" quality="0" skillId="Pride" variantId="Pride"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Body Armour">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemAbyssalCry" level="1" nameSpec="Infernal Cry" quality="23" skillId="InfernalCry" variantId="InfernalCry"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemSeismicCry" level="20" nameSpec="Seismic Cry" quality="23" skillId="SeismicCry" variantId="SeismicCry"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemIntimidatingCry" level="1" nameSpec="Intimidating Cry" quality="23" skillId="IntimidatingCry" variantId="IntimidatingCry"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemGeneralsCry" level="1" nameSpec="General&apos;s Cry" quality="0" skillId="GeneralsCry" variantId="GeneralsCry"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemCallToArms" level="21" nameSpec="Autoexertion" quality="20" skillId="Autoexertion" variantId="Autoexertion"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemAdditionalXP" level="4" nameSpec="Enlighten" quality="11" skillId="SupportEnlighten" variantId="SupportEnlighten"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Helmet">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemDreadBanner" level="21" nameSpec="Dread Banner" quality="20" skillId="DreadBanner" variantId="DreadBanner"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemWarBanner" level="21" nameSpec="War Banner" quality="20" skillId="WarBanner" variantId="WarBanner"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemAdditionalLevel" level="3" nameSpec="Empower" quality="2" skillId="SupportEmpower" variantId="SupportEmpower"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemDefianceBanner" level="21" nameSpec="Defiance Banner" quality="20" skillId="DefianceBanner" variantId="DefianceBanner"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 1 Swap">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemRageVortex" level="21" nameSpec="Rage Vortex of Berserking" quality="20" skillId="RageVortexAltX" variantId="RageVortexAltX"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemMeleePhysicalDamage" level="20" nameSpec="Melee Physical Damage" quality="20" skillId="SupportMeleePhysicalDamage" variantId="SupportMeleePhysicalDamage"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemBrutality" level="20" nameSpec="Brutality" quality="20" skillId="SupportBrutality" variantId="SupportBrutality"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemOverexertion" level="20" nameSpec="Overexertion" quality="20" skillId="SupportOverexertion" variantId="SupportOverexertion"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemFasterAttack" level="20" nameSpec="Faster Attacks" quality="20" skillId="SupportFasterAttacks" variantId="SupportFasterAttacks"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemPulverise" level="20" nameSpec="Pulverise" quality="20" skillId="SupportPulverise" variantId="SupportPulverise"/>
 			</Skill>
 			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="1" mainActiveSkillCalcs="1" slot="Weapon 1">
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemOverexertion" level="20" nameSpec="Overexertion" quality="23" skillId="SupportOverexertion" variantId="SupportOverexertion"/>

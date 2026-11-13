@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PathOfBuilding>
-	<Build ascendClassName="Elementalist" bandit="None" characterLevelAutoMode="false" className="Witch" level="100" mainSocketGroup="1" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="3_0" viewMode="TREE">
+	<Build ascendClassName="Elementalist" bandit="None" characterLevelAutoMode="false" className="Witch" level="100" mainSocketGroup="4" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="3_0" viewMode="TREE">
 		<PlayerStat stat="AverageHit" value="222800.1090643"/>
 		<PlayerStat stat="AverageBurstDamage" value="222800.1090643"/>
 		<PlayerStat stat="Speed" value="1.9"/>
@@ -767,6 +767,23 @@ Trigger a Socketed Elemental Spell on Block, with a 0.25 second Cooldown
 	</Items>
 	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="nil" showLegacyGems="false" showSupportGemTypes="ALL" sortGemsByDPS="true" sortGemsByDPSField="CombinedDPS">
 		<SkillSet id="1">
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="1" slot="Weapon 1">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemFrostblink" level="20" nameSpec="Frostblink" quality="20" skillId="Frostblink" variantId="Frostblink"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemMoltenShell" level="21" nameSpec="Molten Shell" quality="20" skillId="MoltenShell" variantId="MoltenShell"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemHeraldOfPurity" level="21" nameSpec="Herald of Purity" quality="20" skillId="HeraldOfPurity" skillMinion="AxisEliteSoldierHeraldOfLight" skillMinionSkill="1" skillMinionSkillCalcs="1" variantId="HeraldOfPurity"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Helmet">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemFlammability" level="21" nameSpec="Flammability" quality="23" skillId="Flammability" variantId="Flammability"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemElementalWeakness" level="21" nameSpec="Elemental Weakness" quality="23" skillId="ElementalWeakness" variantId="ElementalWeakness"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemFlameWhip" level="21" nameSpec="Flame Surge" quality="23" skillId="FlameSurge" variantId="FlameSurge"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemArcanistBrand" level="21" nameSpec="Arcanist Brand" quality="23" skillId="BrandSupport" variantId="BrandSupport"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Gloves">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemSummonFlameGolem" level="20" nameSpec="Summon Flame Golem" quality="23" skillId="SummonFlameGolem" skillMinion="SummonedFlameGolem" skillMinionSkill="1" skillMinionSkillCalcs="1" variantId="SummonFlameGolem"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemSummonRockGolem" level="20" nameSpec="Summon Stone Golem" quality="23" skillId="SummonStoneGolem" skillMinion="SummonedStoneGolem" skillMinionSkill="1" skillMinionSkillCalcs="1" variantId="SummonStoneGolem"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemSummonLightningGolem" level="20" nameSpec="Summon Lightning Golem" quality="23" skillId="SummonLightningGolem" skillMinion="SummonedLightningGolem" skillMinionSkill="1" skillMinionSkillCalcs="1" variantId="SummonLightningGolem"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemSummonChaosGolem" level="21" nameSpec="Summon Chaos Golem" quality="23" skillId="SummonChaosGolem" skillMinion="SummonedChaosGolem" skillMinionSkill="1" skillMinionSkillCalcs="1" variantId="SummonChaosGolem"/>
+			</Skill>
 			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="2" mainActiveSkillCalcs="2" slot="Body Armour">
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SkillGemVaalReap" level="21" nameSpec="Vaal Reap" quality="20" skillId="VaalReap" variantId="VaalReap"/>
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemIncreasedBurningDamage" level="21" nameSpec="Burning Damage" quality="20" skillId="SupportBurningDamage" variantId="SupportBurningDamage"/>
@@ -774,6 +791,17 @@ Trigger a Socketed Elemental Spell on Block, with a 0.25 second Cooldown
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemEclipse" level="4" nameSpec="Eclipse" quality="20" skillId="SupportEclipse" variantId="SupportEclipse"/>
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemCruelty" level="21" nameSpec="Cruelty" quality="20" skillId="SupportCruelty" variantId="SupportCruelty"/>
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemAdditionalLevel" level="4" nameSpec="Empower" quality="0" skillId="SupportEmpower" variantId="SupportEmpower"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Boots">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemHeraldOfThunder" level="21" nameSpec="Herald of Thunder" quality="20" skillId="HeraldOfThunder" variantId="HeraldOfThunder"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemHeraldOfAsh" level="21" nameSpec="Herald of Ash" quality="20" skillId="HeraldOfAsh" variantId="HeraldOfAsh"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemDamageOverTimeAura" level="21" nameSpec="Malevolence" quality="0" skillId="Malevolence" variantId="Malevolence"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemAdditionalXP" level="3" nameSpec="Enlighten" quality="20" skillId="SupportEnlighten" variantId="SupportEnlighten"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 2">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemShieldCharge" level="21" nameSpec="Shield Charge" quality="20" skillId="ShieldCharge" variantId="ShieldCharge"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemTempestShield" level="21" nameSpec="Tempest Shield" quality="0" skillId="TempestShield" variantId="TempestShield"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemFasterAttack" level="21" nameSpec="Faster Attacks" quality="20" skillId="SupportFasterAttacks" variantId="SupportFasterAttacks"/>
 			</Skill>
 			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Ring 2" source="Item:17:Lost Unity, Formless Ring">
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" level="30" nameSpec="Herald of the Hive" quality="0" skillId="HeraldOfTheBreach"/>

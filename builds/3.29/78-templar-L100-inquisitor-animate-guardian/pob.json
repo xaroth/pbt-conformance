@@ -65,11 +65,18 @@
       "group": 1,
       "id": "AnimateGuardian",
       "name": "Animate Guardian",
+      "level": 20,
+      "quality": 30,
       "minion": {
         "name": "Animated Guardian",
         "skill": "Default Attack"
       },
       "supports": [
+        {
+          "id": "SupportCompanionship",
+          "level": 3,
+          "quality": 30
+        },
         {
           "id": "SupportHypothermia",
           "level": 18
@@ -77,11 +84,6 @@
         {
           "id": "SupportMeatShield",
           "level": 20,
-          "quality": 30
-        },
-        {
-          "id": "SupportCompanionship",
-          "level": 3,
           "quality": 30
         }
       ]
@@ -149,11 +151,18 @@
       "group": 1,
       "id": "AnimateGuardian",
       "name": "Animate Guardian",
+      "level": 20,
+      "quality": 30,
       "minion": {
         "name": "Animated Guardian",
         "skill": "Default Attack"
       },
       "supports": [
+        {
+          "id": "SupportCompanionship",
+          "level": 3,
+          "quality": 30
+        },
         {
           "id": "SupportHypothermia",
           "level": 18
@@ -161,11 +170,6 @@
         {
           "id": "SupportMeatShield",
           "level": 20,
-          "quality": 30
-        },
-        {
-          "id": "SupportCompanionship",
-          "level": 3,
           "quality": 30
         }
       ]

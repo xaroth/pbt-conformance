@@ -63,6 +63,8 @@
       "group": 1,
       "id": "KineticFusillade",
       "name": "Kinetic Fusillade",
+      "level": 20,
+      "quality": 30,
       "attack": true,
       "totem": true,
       "supports": [
@@ -72,22 +74,22 @@
           "quality": 10
         },
         {
-          "id": "SupportGreaterVolley",
-          "level": 20
-        },
-        {
           "id": "SupportElementalDamageWithAttacks",
           "level": 20
         },
         {
-          "id": "SupportLessDuration",
-          "level": 20,
-          "quality": 20
+          "id": "SupportGreaterVolley",
+          "level": 20
         },
         {
           "id": "SupportIncreasedCriticalDamage",
           "level": 20,
           "quality": 10
+        },
+        {
+          "id": "SupportLessDuration",
+          "level": 20,
+          "quality": 20
         }
       ]
     }
@@ -152,6 +154,8 @@
       "group": 1,
       "id": "KineticFusillade",
       "name": "Kinetic Fusillade",
+      "level": 20,
+      "quality": 30,
       "attack": true,
       "totem": true,
       "supports": [
@@ -161,22 +165,22 @@
           "quality": 10
         },
         {
-          "id": "SupportGreaterVolley",
-          "level": 20
-        },
-        {
           "id": "SupportElementalDamageWithAttacks",
           "level": 20
         },
         {
-          "id": "SupportLessDuration",
-          "level": 20,
-          "quality": 20
+          "id": "SupportGreaterVolley",
+          "level": 20
         },
         {
           "id": "SupportIncreasedCriticalDamage",
           "level": 20,
           "quality": 10
+        },
+        {
+          "id": "SupportLessDuration",
+          "level": 20,
+          "quality": 20
         }
       ]
     }

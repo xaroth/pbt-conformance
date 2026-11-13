@@ -61,13 +61,10 @@
       "group": 3,
       "id": "Frenzy",
       "name": "Frenzy",
+      "level": 21,
+      "quality": 33,
       "attack": true,
       "supports": [
-        {
-          "id": "SupportLifetap",
-          "level": 20,
-          "quality": 20
-        },
         {
           "id": "SupportCastOnCriticalStrike",
           "level": 20,
@@ -75,6 +72,11 @@
         },
         {
           "id": "SupportFasterAttacks",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportLifetap",
           "level": 20,
           "quality": 20
         }
@@ -136,16 +138,13 @@
       "TotalDotDPS": 0
     },
     "mainSkill": {
-      "group": 2,
+      "group": 3,
       "id": "Frenzy",
       "name": "Frenzy",
+      "level": 21,
+      "quality": 33,
       "attack": true,
       "supports": [
-        {
-          "id": "SupportLifetap",
-          "level": 20,
-          "quality": 20
-        },
         {
           "id": "SupportCastOnCriticalStrike",
           "level": 20,
@@ -153,6 +152,11 @@
         },
         {
           "id": "SupportFasterAttacks",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportLifetap",
           "level": 20,
           "quality": 20
         }

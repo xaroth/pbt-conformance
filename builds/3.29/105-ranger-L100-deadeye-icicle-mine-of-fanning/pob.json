@@ -61,21 +61,13 @@
       "group": 1,
       "id": "IcicleMineAltX",
       "name": "Icicle Mine of Fanning",
+      "level": 30,
+      "quality": 30,
       "mine": true,
       "supports": [
         {
-          "id": "SupportTrapAndMineDamage",
-          "level": 23,
-          "quality": 30
-        },
-        {
           "id": "SupportChargedMines",
           "level": 26,
-          "quality": 20
-        },
-        {
-          "id": "SupportMinefield",
-          "level": 23,
           "quality": 20
         },
         {
@@ -87,6 +79,16 @@
           "id": "SupportInspiration",
           "level": 24,
           "quality": 20
+        },
+        {
+          "id": "SupportMinefield",
+          "level": 23,
+          "quality": 20
+        },
+        {
+          "id": "SupportTrapAndMineDamage",
+          "level": 23,
+          "quality": 30
         }
       ]
     }
@@ -149,21 +151,13 @@
       "group": 1,
       "id": "IcicleMineAltX",
       "name": "Icicle Mine of Fanning",
+      "level": 30,
+      "quality": 30,
       "mine": true,
       "supports": [
         {
-          "id": "SupportTrapAndMineDamage",
-          "level": 23,
-          "quality": 30
-        },
-        {
           "id": "SupportChargedMines",
           "level": 26,
-          "quality": 20
-        },
-        {
-          "id": "SupportMinefield",
-          "level": 23,
           "quality": 20
         },
         {
@@ -175,6 +169,16 @@
           "id": "SupportInspiration",
           "level": 24,
           "quality": 20
+        },
+        {
+          "id": "SupportMinefield",
+          "level": 23,
+          "quality": 20
+        },
+        {
+          "id": "SupportTrapAndMineDamage",
+          "level": 23,
+          "quality": 30
         }
       ]
     }

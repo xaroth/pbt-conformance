@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PathOfBuilding>
-	<Build ascendClassName="Occultist" bandit="None" characterLevelAutoMode="false" className="Witch" level="100" mainSocketGroup="2" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="3_0" viewMode="TREE">
+	<Build ascendClassName="Occultist" bandit="None" characterLevelAutoMode="false" className="Witch" level="100" mainSocketGroup="3" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="3_0" viewMode="TREE">
 		<PlayerStat stat="AverageHit" value="228502.652884"/>
 		<PlayerStat stat="AverageBurstDamage" value="228502.652884"/>
 		<PlayerStat stat="Speed" value="3.2428571428571"/>
@@ -667,6 +667,12 @@ Pact Skills grant Boons instead of Afflictions
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" level="1" nameSpec="" quality="0" skillId="EnemyExplode" skillPart="1" skillPartCalcs="1"/>
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" level="1" nameSpec="" quality="0" skillId="EnemyExplode" skillPart="1"/>
 			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Helmet">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemPactOfBeidat" level="20" nameSpec="Pact of Beidat" quality="20" skillId="PactOfBeidat" variantId="PactOfBeidat"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemFasterCast" level="20" nameSpec="Faster Casting" quality="20" skillId="SupportFasterCasting" variantId="SupportFasterCasting"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemFrostblink" level="20" nameSpec="Frostblink of Wintry Blast" quality="0" skillId="FrostblinkAltX" variantId="FrostblinkAltX"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemPactOfGhorr" level="20" nameSpec="Pact of Ghorr" quality="20" skillId="PactOfGhorr" variantId="PactOfGhorr"/>
+			</Skill>
 			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="1" mainActiveSkillCalcs="1" slot="Weapon 1">
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemVoidManipulation" level="20" nameSpec="Void Manipulation" quality="20" skillId="SupportVoidManipulation" variantId="SupportVoidManipulation"/>
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemEfficacy" level="20" nameSpec="Efficacy" quality="20" skillId="SupportEfficacy" variantId="SupportEfficacy"/>
@@ -674,6 +680,36 @@ Pact Skills grant Boons instead of Afflictions
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemArcaneSurge" level="20" nameSpec="Arcane Surge" quality="23" skillId="SupportArcaneSurge" variantId="SupportArcaneSurge"/>
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemCruelty" level="20" nameSpec="Cruelty" quality="20" skillId="SupportCruelty" variantId="SupportCruelty"/>
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemControlledDestruction" level="20" nameSpec="Controlled Destruction" quality="20" skillId="SupportControlledDestruction" variantId="SupportControlledDestruction"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Body Armour">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemVoidManipulation" level="20" nameSpec="Void Manipulation" quality="20" skillId="SupportVoidManipulation" variantId="SupportVoidManipulation"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemGreaterMultipleProjectiles" level="20" nameSpec="Greater Multiple Projectiles" quality="20" skillId="SupportGreaterMultipleProjectiles" variantId="SupportGreaterMultipleProjectiles"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemArcaneSurge" level="20" nameSpec="Arcane Surge" quality="20" skillId="SupportArcaneSurge" variantId="SupportArcaneSurge"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemCruelty" level="20" nameSpec="Cruelty" quality="20" skillId="SupportCruelty" variantId="SupportCruelty"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemSoulrend" level="21" nameSpec="Soulrend" quality="20" skillId="Soulrend" variantId="Soulrend"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemControlledDestruction" level="20" nameSpec="Controlled Destruction" quality="20" skillId="SupportControlledDestruction" variantId="SupportControlledDestruction"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 2 Swap">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemPurity" level="20" nameSpec="Purity of Elements" quality="20" skillId="PurityOfElements" variantId="PurityOfElements"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemRaiseSpectre" level="20" nameSpec="Raise Spectre" quality="20" skillId="RaiseSpectre" variantId="RaiseSpectre"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemPurity" level="20" nameSpec="Purity of Elements" quality="20" skillId="PurityOfElements" variantId="PurityOfElements"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Boots">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemDamageOverTimeAura" level="20" nameSpec="Malevolence" quality="0" skillId="Malevolence" variantId="Malevolence"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemClarity" level="20" nameSpec="Clarity" quality="0" skillId="Clarity" variantId="Clarity"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemGrace" level="20" nameSpec="Grace" quality="0" skillId="Grace" variantId="Grace"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemWitheringStep" level="21" nameSpec="Withering Step" quality="20" skillId="WitheringStep" variantId="WitheringStep"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Gloves">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemVaalBlight" level="20" nameSpec="Vaal Blight" quality="20" skillId="VaalBlight" skillPart="1" variantId="VaalBlight"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemRaiseSpectre" level="21" nameSpec="Raise Spectre" quality="20" skillId="RaiseSpectre" variantId="RaiseSpectre"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemSummonChaosGolem" level="20" nameSpec="Summon Chaos Golem" quality="20" skillId="SummonChaosGolem" skillMinion="SummonedChaosGolem" skillMinionSkill="1" skillMinionSkillCalcs="1" variantId="SummonChaosGolem"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemMinionLife" level="19" nameSpec="Minion Life" quality="20" skillId="SupportMinionLife" variantId="SupportMinionLife"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 1 Swap">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemPurity" level="20" nameSpec="Purity of Elements" quality="20" skillId="PurityOfElements" variantId="PurityOfElements"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemPurity" level="20" nameSpec="Purity of Elements" quality="20" skillId="PurityOfElements" variantId="PurityOfElements"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemPurity" level="20" nameSpec="Purity of Elements" quality="20" skillId="PurityOfElements" variantId="PurityOfElements"/>
 			</Skill>
 			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Gloves" source="Item:19:Asenath&apos;s Gentle Touch, Silk Gloves">
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" level="1" nameSpec="Despair" quality="0" skillId="Despair"/>

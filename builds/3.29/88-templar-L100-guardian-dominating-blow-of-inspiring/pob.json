@@ -65,17 +65,14 @@
       "group": 8,
       "id": "DominatingBlowAltX",
       "name": "Dominating Blow of Inspiring",
+      "level": 25,
+      "quality": 33,
       "attack": true,
       "minion": {
         "name": "Sentinel of Dominance",
         "skill": "Default Attack"
       },
       "supports": [
-        {
-          "id": "SupportInspiration",
-          "level": 20,
-          "quality": 20
-        },
         {
           "id": "SupportDamageOnFullLife",
           "level": 21,
@@ -87,13 +84,18 @@
           "quality": 20
         },
         {
+          "id": "SupportGreaterMultistrike",
+          "level": 3
+        },
+        {
           "id": "SupportIncreasedCriticalDamage",
           "level": 21,
           "quality": 30
         },
         {
-          "id": "SupportGreaterMultistrike",
-          "level": 3
+          "id": "SupportInspiration",
+          "level": 20,
+          "quality": 20
         }
       ]
     }
@@ -157,20 +159,17 @@
       "TotalDotDPS": 18838.395528726
     },
     "mainSkill": {
-      "group": 4,
+      "group": 8,
       "id": "DominatingBlowAltX",
       "name": "Dominating Blow of Inspiring",
+      "level": 25,
+      "quality": 33,
       "attack": true,
       "minion": {
         "name": "Sentinel of Dominance",
         "skill": "Default Attack"
       },
       "supports": [
-        {
-          "id": "SupportInspiration",
-          "level": 20,
-          "quality": 20
-        },
         {
           "id": "SupportDamageOnFullLife",
           "level": 21,
@@ -182,13 +181,18 @@
           "quality": 20
         },
         {
+          "id": "SupportGreaterMultistrike",
+          "level": 3
+        },
+        {
           "id": "SupportIncreasedCriticalDamage",
           "level": 21,
           "quality": 30
         },
         {
-          "id": "SupportGreaterMultistrike",
-          "level": 3
+          "id": "SupportInspiration",
+          "level": 20,
+          "quality": 20
         }
       ]
     }

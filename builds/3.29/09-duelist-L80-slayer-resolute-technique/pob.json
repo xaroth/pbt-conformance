@@ -61,8 +61,15 @@
       "group": 1,
       "id": "GroundSlamAltX",
       "name": "Ground Slam of Earthshaking",
+      "level": 20,
+      "quality": 30,
       "attack": true,
       "supports": [
+        {
+          "id": "SupportBrutality",
+          "level": 20,
+          "quality": 20
+        },
         {
           "id": "SupportFistofWar",
           "level": 20,
@@ -77,11 +84,6 @@
           "id": "SupportMeleePhysicalDamage",
           "level": 20,
           "quality": 30
-        },
-        {
-          "id": "SupportBrutality",
-          "level": 20,
-          "quality": 20
         },
         {
           "id": "SupportPulverise",
@@ -149,8 +151,15 @@
       "group": 1,
       "id": "GroundSlamAltX",
       "name": "Ground Slam of Earthshaking",
+      "level": 20,
+      "quality": 30,
       "attack": true,
       "supports": [
+        {
+          "id": "SupportBrutality",
+          "level": 20,
+          "quality": 20
+        },
         {
           "id": "SupportFistofWar",
           "level": 20,
@@ -165,11 +174,6 @@
           "id": "SupportMeleePhysicalDamage",
           "level": 20,
           "quality": 30
-        },
-        {
-          "id": "SupportBrutality",
-          "level": 20,
-          "quality": 20
         },
         {
           "id": "SupportPulverise",

@@ -61,11 +61,13 @@
       "group": 6,
       "id": "StormBurstAltX",
       "name": "Storm Burst of Repulsion",
+      "level": 32,
+      "quality": 30,
       "supports": [
         {
-          "id": "SupportIncreasedAreaOfEffect",
-          "level": 22,
-          "quality": 50
+          "id": "SupportArcaneSurge",
+          "level": 27,
+          "quality": 30
         },
         {
           "id": "SupportEmpower",
@@ -73,9 +75,9 @@
           "quality": 10
         },
         {
-          "id": "SupportArcaneSurge",
-          "level": 27,
-          "quality": 30
+          "id": "SupportIncreasedAreaOfEffect",
+          "level": 22,
+          "quality": 50
         },
         {
           "id": "SupportInspiration",
@@ -145,14 +147,16 @@
       "TotalDotDPS": 0
     },
     "mainSkill": {
-      "group": 2,
+      "group": 6,
       "id": "StormBurstAltX",
       "name": "Storm Burst of Repulsion",
+      "level": 32,
+      "quality": 30,
       "supports": [
         {
-          "id": "SupportIncreasedAreaOfEffect",
-          "level": 22,
-          "quality": 50
+          "id": "SupportArcaneSurge",
+          "level": 27,
+          "quality": 30
         },
         {
           "id": "SupportEmpower",
@@ -160,9 +164,9 @@
           "quality": 10
         },
         {
-          "id": "SupportArcaneSurge",
-          "level": 27,
-          "quality": 30
+          "id": "SupportIncreasedAreaOfEffect",
+          "level": 22,
+          "quality": 50
         },
         {
           "id": "SupportInspiration",

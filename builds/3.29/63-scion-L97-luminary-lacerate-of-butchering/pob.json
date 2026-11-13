@@ -62,25 +62,27 @@
       "group": 10,
       "id": "LacerateAltX",
       "name": "Lacerate of Butchering",
+      "level": 20,
+      "quality": 30,
       "attack": true,
       "supports": [
-        {
-          "id": "SupportBrutality",
-          "level": 20,
-          "quality": 30
-        },
         {
           "id": "GeneralsCrySupport",
           "level": 20,
           "quality": 20
         },
         {
-          "id": "SupportPulverise",
+          "id": "SupportBrutality",
+          "level": 20,
+          "quality": 30
+        },
+        {
+          "id": "SupportMeleePhysicalDamage",
           "level": 20,
           "quality": 20
         },
         {
-          "id": "SupportMeleePhysicalDamage",
+          "id": "SupportPulverise",
           "level": 20,
           "quality": 20
         }
@@ -143,28 +145,30 @@
       "TotalDotDPS": 0
     },
     "mainSkill": {
-      "group": 1,
+      "group": 10,
       "id": "LacerateAltX",
       "name": "Lacerate of Butchering",
+      "level": 20,
+      "quality": 30,
       "attack": true,
       "supports": [
-        {
-          "id": "SupportBrutality",
-          "level": 20,
-          "quality": 30
-        },
         {
           "id": "GeneralsCrySupport",
           "level": 20,
           "quality": 20
         },
         {
-          "id": "SupportPulverise",
+          "id": "SupportBrutality",
+          "level": 20,
+          "quality": 30
+        },
+        {
+          "id": "SupportMeleePhysicalDamage",
           "level": 20,
           "quality": 20
         },
         {
-          "id": "SupportMeleePhysicalDamage",
+          "id": "SupportPulverise",
           "level": 20,
           "quality": 20
         }

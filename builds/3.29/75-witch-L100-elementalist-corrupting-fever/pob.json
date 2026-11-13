@@ -61,12 +61,9 @@
       "group": 2,
       "id": "CorruptingFever",
       "name": "Corrupting Fever",
+      "level": 32,
+      "quality": 36,
       "supports": [
-        {
-          "id": "SupportSwiftAffliction",
-          "level": 22,
-          "quality": 10
-        },
         {
           "id": "SupportBrutality",
           "level": 22,
@@ -80,6 +77,11 @@
         {
           "id": "SupportEmpower",
           "level": 5,
+          "quality": 10
+        },
+        {
+          "id": "SupportSwiftAffliction",
+          "level": 22,
           "quality": 10
         }
       ]
@@ -140,15 +142,12 @@
       "TotalDotDPS": 73788.100465333
     },
     "mainSkill": {
-      "group": 1,
+      "group": 2,
       "id": "CorruptingFever",
       "name": "Corrupting Fever",
+      "level": 32,
+      "quality": 36,
       "supports": [
-        {
-          "id": "SupportSwiftAffliction",
-          "level": 22,
-          "quality": 10
-        },
         {
           "id": "SupportBrutality",
           "level": 22,
@@ -162,6 +161,11 @@
         {
           "id": "SupportEmpower",
           "level": 5,
+          "quality": 10
+        },
+        {
+          "id": "SupportSwiftAffliction",
+          "level": 22,
           "quality": 10
         }
       ]

@@ -72,22 +72,19 @@
       "group": 1,
       "id": "ViperStrikeAltX",
       "name": "Viper Strike of the Mamba",
+      "level": 20,
+      "quality": 30,
       "attack": true,
       "supports": [
-        {
-          "id": "SupportVoidManipulation",
-          "level": 20,
-          "quality": 30
-        },
-        {
-          "id": "SupportNightblade",
-          "level": 20,
-          "quality": 30
-        },
         {
           "id": "SupportDamageOnFullLife",
           "level": 20,
           "quality": 20
+        },
+        {
+          "id": "SupportDeadlyAilments",
+          "level": 20,
+          "quality": 30
         },
         {
           "id": "SupportMeleePhysicalDamage",
@@ -95,7 +92,12 @@
           "quality": 20
         },
         {
-          "id": "SupportDeadlyAilments",
+          "id": "SupportNightblade",
+          "level": 20,
+          "quality": 30
+        },
+        {
+          "id": "SupportVoidManipulation",
           "level": 20,
           "quality": 30
         }
@@ -171,22 +173,19 @@
       "group": 1,
       "id": "ViperStrikeAltX",
       "name": "Viper Strike of the Mamba",
+      "level": 20,
+      "quality": 30,
       "attack": true,
       "supports": [
-        {
-          "id": "SupportVoidManipulation",
-          "level": 20,
-          "quality": 30
-        },
-        {
-          "id": "SupportNightblade",
-          "level": 20,
-          "quality": 30
-        },
         {
           "id": "SupportDamageOnFullLife",
           "level": 20,
           "quality": 20
+        },
+        {
+          "id": "SupportDeadlyAilments",
+          "level": 20,
+          "quality": 30
         },
         {
           "id": "SupportMeleePhysicalDamage",
@@ -194,7 +193,12 @@
           "quality": 20
         },
         {
-          "id": "SupportDeadlyAilments",
+          "id": "SupportNightblade",
+          "level": 20,
+          "quality": 30
+        },
+        {
+          "id": "SupportVoidManipulation",
           "level": 20,
           "quality": 30
         }

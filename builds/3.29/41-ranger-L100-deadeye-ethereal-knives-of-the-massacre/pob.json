@@ -61,9 +61,11 @@
       "group": 3,
       "id": "EtherealKnivesAltY",
       "name": "Ethereal Knives of the Massacre",
+      "level": 23,
+      "quality": 49,
       "supports": [
         {
-          "id": "SupportInspiration",
+          "id": "SupportArcaneSurge",
           "level": 21,
           "quality": 30
         },
@@ -73,18 +75,18 @@
           "quality": 20
         },
         {
-          "id": "SupportUnholyTrinity",
-          "level": 4,
+          "id": "SupportGreaterFork",
+          "level": 3,
           "quality": 20
         },
         {
-          "id": "SupportArcaneSurge",
+          "id": "SupportInspiration",
           "level": 21,
           "quality": 30
         },
         {
-          "id": "SupportGreaterFork",
-          "level": 3,
+          "id": "SupportUnholyTrinity",
+          "level": 4,
           "quality": 20
         }
       ]
@@ -145,12 +147,14 @@
       "TotalDotDPS": 0
     },
     "mainSkill": {
-      "group": 1,
+      "group": 3,
       "id": "EtherealKnivesAltY",
       "name": "Ethereal Knives of the Massacre",
+      "level": 23,
+      "quality": 49,
       "supports": [
         {
-          "id": "SupportInspiration",
+          "id": "SupportArcaneSurge",
           "level": 21,
           "quality": 30
         },
@@ -160,18 +164,18 @@
           "quality": 20
         },
         {
-          "id": "SupportUnholyTrinity",
-          "level": 4,
+          "id": "SupportGreaterFork",
+          "level": 3,
           "quality": 20
         },
         {
-          "id": "SupportArcaneSurge",
+          "id": "SupportInspiration",
           "level": 21,
           "quality": 30
         },
         {
-          "id": "SupportGreaterFork",
-          "level": 3,
+          "id": "SupportUnholyTrinity",
+          "level": 4,
           "quality": 20
         }
       ]

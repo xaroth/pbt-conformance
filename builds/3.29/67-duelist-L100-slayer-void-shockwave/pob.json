@@ -61,12 +61,10 @@
       "group": 7,
       "id": "TriggeredSupportVoidShockwave",
       "name": "Void Shockwave",
+      "level": 3,
+      "quality": 30,
       "attack": true,
       "supports": [
-        {
-          "id": "SupportPulverise",
-          "level": 20
-        },
         {
           "id": "SupportBrutality",
           "level": 20,
@@ -76,6 +74,10 @@
           "id": "SupportMeleePhysicalDamage",
           "level": 20,
           "quality": 30
+        },
+        {
+          "id": "SupportPulverise",
+          "level": 20
         }
       ]
     }
@@ -135,15 +137,13 @@
       "TotalDotDPS": 0
     },
     "mainSkill": {
-      "group": 1,
+      "group": 7,
       "id": "TriggeredSupportVoidShockwave",
       "name": "Void Shockwave",
+      "level": 3,
+      "quality": 30,
       "attack": true,
       "supports": [
-        {
-          "id": "SupportPulverise",
-          "level": 20
-        },
         {
           "id": "SupportBrutality",
           "level": 20,
@@ -153,6 +153,10 @@
           "id": "SupportMeleePhysicalDamage",
           "level": 20,
           "quality": 30
+        },
+        {
+          "id": "SupportPulverise",
+          "level": 20
         }
       ]
     }

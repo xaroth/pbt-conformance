@@ -61,6 +61,8 @@
       "group": 1,
       "id": "IcicleMineAltX",
       "name": "Icicle Mine of Fanning",
+      "level": 29,
+      "quality": 20,
       "mine": true,
       "supports": [
         {
@@ -149,6 +151,8 @@
       "group": 1,
       "id": "IcicleMineAltX",
       "name": "Icicle Mine of Fanning",
+      "level": 29,
+      "quality": 20,
       "mine": true,
       "supports": [
         {

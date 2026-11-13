@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PathOfBuilding>
-	<Build ascendClassName="Guardian" bandit="None" characterLevelAutoMode="false" className="Templar" level="100" mainSocketGroup="3" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="3_0" viewMode="TREE">
+	<Build ascendClassName="Guardian" bandit="None" characterLevelAutoMode="false" className="Templar" level="100" mainSocketGroup="7" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="3_0" viewMode="TREE">
 		<PlayerStat stat="ActiveMinionLimit" value="3"/>
 		<PlayerStat stat="AverageHit" value="389607.99247406"/>
 		<PlayerStat stat="AverageBurstDamage" value="779215.98494813"/>
@@ -1010,6 +1010,27 @@ Enemy for 4 seconds, dealing 8% of the Killed Enemy&apos;s Life as Fire Damage p
 			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" source="Tree:19641">
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" level="20" nameSpec="" quality="0" skillId="SummonElementalRelic" skillMinion="GuardianRelicAll" skillMinionSkill="1" skillMinionSkillCalcs="1"/>
 			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 2 Swap">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemSummonRockGolem" level="20" nameSpec="Summon Stone Golem" quality="0" skillId="SummonStoneGolem" variantId="SummonStoneGolem"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemSummonRockGolem" level="20" nameSpec="Summon Stone Golem" quality="0" skillId="SummonStoneGolem" variantId="SummonStoneGolem"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemSummonRockGolem" level="20" nameSpec="Summon Stone Golem" quality="0" skillId="SummonStoneGolem" variantId="SummonStoneGolem"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 1 Swap">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemSummonRockGolem" level="20" nameSpec="Summon Stone Golem" quality="0" skillId="SummonStoneGolem" variantId="SummonStoneGolem"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemSummonRockGolem" level="20" nameSpec="Summon Stone Golem" quality="0" skillId="SummonStoneGolem" variantId="SummonStoneGolem"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemSummonRockGolem" level="20" nameSpec="Summon Stone Golem" quality="0" skillId="SummonStoneGolem" variantId="SummonStoneGolem"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 2">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemAutomation" level="20" nameSpec="Automation" quality="20" skillId="Automation" variantId="Automation"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemMoltenShell" level="20" nameSpec="Molten Shell" quality="20" skillId="MoltenShell" variantId="MoltenShell"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemConvocationNew" level="1" nameSpec="Convocation" quality="20" skillId="Convocation" variantId="Convocation"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Boots">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemSpellDamageAura" level="20" nameSpec="Zealotry" quality="20" skillId="Zealotry" variantId="Zealotry"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemFleshAndStone" level="20" nameSpec="Flesh and Stone" quality="0" skillId="FleshAndStone" variantId="FleshAndStone"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemCastOnDamageTaken" level="20" nameSpec="Cast when Damage Taken" quality="20" skillId="SupportCastWhenDamageTaken" variantId="SupportCastWhenDamageTaken"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemSummonRockGolem" level="20" nameSpec="Summon Stone Golem" quality="20" skillId="SummonStoneGolem" skillMinion="SummonedStoneGolem" skillMinionSkill="1" skillMinionSkillCalcs="1" variantId="SummonStoneGolem"/>
+			</Skill>
 			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="2" mainActiveSkillCalcs="2" slot="Body Armour">
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemIncreasedCriticalStrikes" level="20" nameSpec="Increased Critical Strikes" quality="20" skillId="SupportIncreasedCriticalStrikes" variantId="SupportIncreasedCriticalStrikes"/>
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SkillGemVaalAbsolution" level="21" nameSpec="Vaal Absolution" quality="20" skillId="VaalAbsolution" skillMinion="AbsolutionTemplarJudge" skillMinionSkill="1" skillMinionSkillCalcs="1" variantId="VaalAbsolution"/>
@@ -1017,6 +1038,27 @@ Enemy for 4 seconds, dealing 8% of the Killed Enemy&apos;s Life as Fire Damage p
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemMulticast" level="20" nameSpec="Spell Echo" quality="20" skillId="SupportSpellEcho" variantId="SupportSpellEcho"/>
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemIncreasedCriticalDamage" level="20" nameSpec="Increased Critical Damage" quality="20" skillId="SupportIncreasedCriticalDamage" variantId="SupportIncreasedCriticalDamage"/>
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemMinionDamage" level="20" nameSpec="Minion Damage" quality="20" skillId="SupportMinionDamage" variantId="SupportMinionDamage"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Gloves">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemFrostblink" level="20" nameSpec="Frostblink" quality="0" skillId="Frostblink" variantId="Frostblink"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemTempestShield" level="20" nameSpec="Tempest Shield" quality="0" skillId="TempestShield" variantId="TempestShield"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Gloves">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemFireResistAura" level="20" nameSpec="Purity of Fire" quality="20" skillId="PurityOfFire" variantId="PurityOfFire"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemShieldCharge" level="20" nameSpec="Shield Charge" quality="20" skillId="ShieldCharge" variantId="ShieldCharge"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 1">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemCriticalWeakness" level="20" nameSpec="Assassin&apos;s Mark" quality="0" skillId="AssassinsMark" variantId="AssassinsMark"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemSpiritOffering" level="20" nameSpec="Spirit Offering" quality="0" skillId="SpiritOffering" variantId="SpiritOffering"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 1">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemDesecrate" level="20" nameSpec="Desecrate" quality="0" skillId="Desecrate" variantId="Desecrate"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Helmet">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemRaiseSpectre" level="21" nameSpec="Raise Spectre" quality="0" skillId="RaiseSpectre" variantId="RaiseSpectre"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemFeedingFrenzy" level="20" nameSpec="Feeding Frenzy" quality="20" skillId="SupportFeedingFrenzy" variantId="SupportFeedingFrenzy"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemAnimateArmour" level="20" nameSpec="Animate Guardian" quality="0" skillId="AnimateGuardian" skillMinion="AnimatedArmour" skillMinionItemSet="2" skillMinionItemSetCalcs="2" skillMinionSkill="1" skillMinionSkillCalcs="1" variantId="AnimateGuardian"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemMinionLife" level="20" nameSpec="Minion Life" quality="20" skillId="SupportMinionLife" variantId="SupportMinionLife"/>
 			</Skill>
 		</SkillSet>
 	</Skills>

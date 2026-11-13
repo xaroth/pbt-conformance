@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PathOfBuilding>
-	<Build ascendClassName="Deadeye" bandit="None" characterLevelAutoMode="false" className="Ranger" level="100" mainSocketGroup="1" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="3_0" viewMode="TREE">
+	<Build ascendClassName="Deadeye" bandit="None" characterLevelAutoMode="false" className="Ranger" level="100" mainSocketGroup="3" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="3_0" viewMode="TREE">
 		<PlayerStat stat="AverageDamage" value="1364.2714490573"/>
 		<PlayerStat stat="AverageBurstDamage" value="1364.2714490573"/>
 		<PlayerStat stat="Speed" value="4.0911112"/>
@@ -419,11 +419,39 @@ Rampage
 	</Items>
 	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="nil" showLegacyGems="false" showSupportGemTypes="ALL" sortGemsByDPS="true" sortGemsByDPSField="CombinedDPS">
 		<SkillSet id="1">
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="1" slot="Weapon 2">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemNewArcticArmour" level="7" nameSpec="Arctic Armour" quality="0" skillId="ArcticArmour" variantId="ArcticArmour"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemSigilOfPower" level="5" nameSpec="Sigil of Power" quality="0" skillId="SigilOfPower" variantId="SigilOfPower"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemSummonIceGolem" level="5" nameSpec="Summon Ice Golem" quality="0" skillId="SummonIceGolem" skillMinion="SummonedIceGolem" skillMinionSkill="1" skillMinionSkillCalcs="1" variantId="SummonIceGolem"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="1" mainActiveSkillCalcs="nil" slot="Boots">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemBloodRage" level="7" nameSpec="Blood Rage" quality="0" skillId="BloodRage" variantId="BloodRage"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemMarkOnHit" level="4" nameSpec="Mark On Hit" quality="0" skillId="SupportMarkOnHit" variantId="SupportMarkOnHit"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemProjectileWeakness" level="10" nameSpec="Sniper&apos;s Mark" quality="0" skillId="SnipersMark" variantId="SnipersMark"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemLifetap" level="9" nameSpec="Lifetap" quality="0" skillId="SupportLifetap" variantId="SupportLifetap"/>
+			</Skill>
 			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="1" mainActiveSkillCalcs="1" slot="Body Armour">
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SkillGemKineticBlast" level="5" nameSpec="Kinetic Blast" quality="0" skillId="KineticBlast" skillPart="1" variantId="KineticBlast"/>
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemTrinity" level="7" nameSpec="Trinity" quality="0" skillId="SupportTrinity" variantId="SupportTrinity"/>
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemIncreasedCriticalDamage" level="7" nameSpec="Increased Critical Damage" quality="0" skillId="SupportIncreasedCriticalDamage" variantId="SupportIncreasedCriticalDamage"/>
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemReturningProjectiles" level="4" nameSpec="Returning Projectiles" quality="0" skillId="SupportReturningProjectiles" variantId="SupportReturningProjectiles"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Helmet">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemKineticBolt" level="10" nameSpec="Kinetic Bolt" quality="0" skillId="KineticBolt" variantId="KineticBolt"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemRangedAttackTotem" level="9" nameSpec="Ballista Totem" quality="0" skillId="SupportBallistaTotem" variantId="SupportBallistaTotem"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemWeaponElementalDamage" level="7" nameSpec="Elemental Damage with Attacks" quality="0" skillId="SupportElementalDamageWithAttacks" variantId="SupportElementalDamageWithAttacks"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemFocusedBallista" level="6" nameSpec="Focused Ballista" quality="0" skillId="SupportFocusedBallista" variantId="SupportFocusedBallista"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 1">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemTornado" level="5" nameSpec="Tornado" quality="0" skillId="Tornado" variantId="Tornado"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemSpellslinger" level="6" nameSpec="Spellslinger" quality="0" skillId="Spellslinger" variantId="Spellslinger"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemPurity" level="6" nameSpec="Purity of Elements" quality="0" skillId="PurityOfElements" variantId="PurityOfElements"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Gloves">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemShieldCharge" level="10" nameSpec="Shield Charge" quality="0" skillId="ShieldCharge" variantId="ShieldCharge"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemFrostblink" level="10" nameSpec="Frostblink" quality="0" skillId="Frostblink" variantId="Frostblink"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemFasterAttack" level="9" nameSpec="Faster Attacks" quality="0" skillId="SupportFasterAttacks" variantId="SupportFasterAttacks"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemOnslaught" level="10" nameSpec="Momentum" quality="0" skillId="SupportMomentum" variantId="SupportMomentum"/>
 			</Skill>
 		</SkillSet>
 	</Skills>

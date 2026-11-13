@@ -63,21 +63,19 @@
       "group": 2,
       "id": "Arc",
       "name": "Arc",
+      "level": 30,
+      "quality": 20,
       "totem": true,
       "supports": [
         {
-          "id": "SupportSpellTotem",
-          "level": 20
+          "id": "SupportEmpower",
+          "level": 4,
+          "quality": 17
         },
         {
           "id": "SupportGreaterChain",
           "level": 4,
           "quality": 20
-        },
-        {
-          "id": "SupportMultipleTotems",
-          "level": 14,
-          "quality": 30
         },
         {
           "id": "SupportIncreasedCriticalDamage",
@@ -90,9 +88,13 @@
           "quality": 33
         },
         {
-          "id": "SupportEmpower",
-          "level": 4,
-          "quality": 17
+          "id": "SupportMultipleTotems",
+          "level": 14,
+          "quality": 30
+        },
+        {
+          "id": "SupportSpellTotem",
+          "level": 20
         }
       ]
     }
@@ -154,24 +156,22 @@
       "TotemsSummoned": 6
     },
     "mainSkill": {
-      "group": 1,
+      "group": 2,
       "id": "Arc",
       "name": "Arc",
+      "level": 30,
+      "quality": 20,
       "totem": true,
       "supports": [
         {
-          "id": "SupportSpellTotem",
-          "level": 20
+          "id": "SupportEmpower",
+          "level": 4,
+          "quality": 17
         },
         {
           "id": "SupportGreaterChain",
           "level": 4,
           "quality": 20
-        },
-        {
-          "id": "SupportMultipleTotems",
-          "level": 14,
-          "quality": 30
         },
         {
           "id": "SupportIncreasedCriticalDamage",
@@ -184,9 +184,13 @@
           "quality": 33
         },
         {
-          "id": "SupportEmpower",
-          "level": 4,
-          "quality": 17
+          "id": "SupportMultipleTotems",
+          "level": 14,
+          "quality": 30
+        },
+        {
+          "id": "SupportSpellTotem",
+          "level": 20
         }
       ]
     }

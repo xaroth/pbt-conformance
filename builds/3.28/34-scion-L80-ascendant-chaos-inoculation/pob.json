@@ -72,10 +72,20 @@
       "group": 1,
       "id": "MoltenStrike",
       "name": "Molten Strike",
+      "level": 20,
+      "quality": 20,
       "attack": true,
       "supports": [
         {
+          "id": "SupportAncestralCall",
+          "level": 20
+        },
+        {
           "id": "SupportDamageOnFullLife",
+          "level": 20
+        },
+        {
+          "id": "SupportGreaterMultipleProjectiles",
           "level": 20
         },
         {
@@ -84,14 +94,6 @@
         },
         {
           "id": "SupportVolatility",
-          "level": 20
-        },
-        {
-          "id": "SupportAncestralCall",
-          "level": 20
-        },
-        {
-          "id": "SupportGreaterMultipleProjectiles",
           "level": 20
         }
       ]
@@ -166,10 +168,20 @@
       "group": 1,
       "id": "MoltenStrike",
       "name": "Molten Strike",
+      "level": 20,
+      "quality": 20,
       "attack": true,
       "supports": [
         {
+          "id": "SupportAncestralCall",
+          "level": 20
+        },
+        {
           "id": "SupportDamageOnFullLife",
+          "level": 20
+        },
+        {
+          "id": "SupportGreaterMultipleProjectiles",
           "level": 20
         },
         {
@@ -178,14 +190,6 @@
         },
         {
           "id": "SupportVolatility",
-          "level": 20
-        },
-        {
-          "id": "SupportAncestralCall",
-          "level": 20
-        },
-        {
-          "id": "SupportGreaterMultipleProjectiles",
           "level": 20
         }
       ]

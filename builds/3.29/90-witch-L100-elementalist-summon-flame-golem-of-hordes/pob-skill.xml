@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PathOfBuilding>
-	<Build ascendClassName="Elementalist" bandit="None" characterLevelAutoMode="false" className="Witch" level="100" mainSocketGroup="1" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="3_0" viewMode="TREE">
+	<Build ascendClassName="Elementalist" bandit="None" characterLevelAutoMode="false" className="Witch" level="100" mainSocketGroup="8" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="3_0" viewMode="TREE">
 		<PlayerStat stat="ActiveMinionLimit" value="29"/>
 		<PlayerStat stat="AverageHit" value="0"/>
 		<PlayerStat stat="AverageBurstDamage" value="0"/>
@@ -998,6 +998,37 @@ Strike Chance of your Main Hand Weapon
 	</Items>
 	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="nil" showLegacyGems="false" showSupportGemTypes="ALL" sortGemsByDPS="true" sortGemsByDPSField="CombinedDPS">
 		<SkillSet id="1">
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="1" slot="Helmet">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemDetermination" level="21" nameSpec="Determination" quality="0" skillId="Determination" variantId="Determination"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemEnlightenPlus" level="5" nameSpec="Awakened Enlighten" quality="0" skillId="SupportAwakenedEnlighten" variantId="SupportAwakenedEnlighten"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemSpellDamageAura" level="21" nameSpec="Zealotry" quality="0" skillId="Zealotry" variantId="Zealotry"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemPurity" level="21" nameSpec="Purity of Elements" quality="20" skillId="PurityOfElements" variantId="PurityOfElements"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Gloves">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemSummonLightningGolem" level="20" nameSpec="Summon Lightning Golem" quality="23" skillId="SummonLightningGolem" skillMinion="SummonedLightningGolem" skillMinionSkill="1" skillMinionSkillCalcs="1" variantId="SummonLightningGolem"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemSummonIceGolem" level="20" nameSpec="Summon Ice Golem" quality="23" skillId="SummonIceGolem" skillMinion="SummonedIceGolem" skillMinionSkill="1" skillMinionSkillCalcs="1" variantId="SummonIceGolem"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemFeedingFrenzy" level="20" nameSpec="Feeding Frenzy" quality="20" skillId="SupportFeedingFrenzy" variantId="SupportFeedingFrenzy"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemSummonCarrionGolem" level="21" nameSpec="Summon Carrion Golem of Scavenging" quality="20" skillId="SummonCarrionGolemAltY" skillMinion="SummonedCarrionGolem" skillMinionSkill="1" skillMinionSkillCalcs="1" variantId="SummonCarrionGolemAltY"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Boots">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemFlammability" level="21" nameSpec="Flammability" quality="0" skillId="Flammability" variantId="Flammability"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemCurseOnHit" level="21" nameSpec="Hextouch" quality="0" skillId="SupportHextouch" variantId="SupportHextouch"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemPunishment" level="20" nameSpec="Punishment" quality="23" skillId="Punishment" variantId="Punishment"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemPowerSiphon" level="21" nameSpec="Power Siphon" quality="0" skillId="PowerSiphon" variantId="PowerSiphon"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 1">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemSpiritOffering" level="21" nameSpec="Spirit Offering" quality="23" skillId="SpiritOffering" variantId="SpiritOffering"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemCriticalWeakness" level="21" nameSpec="Assassin&apos;s Mark" quality="20" skillId="AssassinsMark" variantId="AssassinsMark"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 1">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemDesecrate" level="1" nameSpec="Desecrate" quality="23" skillId="Desecrate" variantId="Desecrate"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Ring 2">
+				<Gem count="nil" enableGlobal1="false" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemVaalMoltenShell" level="21" nameSpec="Vaal Molten Shell" quality="0" skillId="VaalMoltenShell" variantId="VaalMoltenShell"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Ring 1">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemSummonRockGolem" level="21" nameSpec="Summon Stone Golem" quality="23" skillId="SummonStoneGolem" skillMinion="SummonedStoneGolem" skillMinionSkill="1" skillMinionSkillCalcs="1" variantId="SummonStoneGolem"/>
+			</Skill>
 			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="1" mainActiveSkillCalcs="1" slot="Body Armour">
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SkillGemSummonFlameGolem" level="21" nameSpec="Summon Flame Golem of Hordes" quality="23" skillId="SummonFlameGolemAltX" skillMinion="SummonedFlameGolem" skillMinionSkill="1" skillMinionSkillCalcs="1" variantId="SummonFlameGolemAltX"/>
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemGreaterSpellEcho" level="4" nameSpec="Greater Spell Echo" quality="20" skillId="SupportGreaterSpellEcho" variantId="SupportGreaterSpellEcho"/>
@@ -1005,6 +1036,28 @@ Strike Chance of your Main Hand Weapon
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemCongregation" level="4" nameSpec="Congregation" quality="20" skillId="SupportCongregation" variantId="SupportCongregation"/>
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemGreaterVolley" level="21" nameSpec="Greater Volley" quality="20" skillId="SupportGreaterVolley" variantId="SupportGreaterVolley"/>
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemDeathmark" level="21" nameSpec="Predator" quality="20" skillId="SupportPredator" variantId="SupportPredator"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 2">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemSummonChaosGolem" level="20" nameSpec="Summon Chaos Golem" quality="23" skillId="SummonChaosGolem" skillMinion="SummonedChaosGolem" skillMinionSkill="1" skillMinionSkillCalcs="1" variantId="SummonChaosGolem"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 2">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemConvocationNew" level="1" nameSpec="Convocation" quality="23" skillId="Convocation" variantId="Convocation"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 2">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemFlameDash" level="8" nameSpec="Flame Dash" quality="23" skillId="FlameDash" variantId="FlameDash"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 1 Swap">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemAdditionalLevel" level="3" nameSpec="Empower" quality="20" skillId="SupportEmpower" variantId="SupportEmpower"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemAdditionalQuality" level="3" nameSpec="Enhance" quality="20" skillId="SupportEnhance" variantId="SupportEnhance"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 1 Swap">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemCullTheWeak" level="1" nameSpec="Cull the Weak" quality="0" skillId="SupportCullTheWeak" variantId="SupportCullTheWeak"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 2 Swap">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemFoulgrasp" level="2" nameSpec="Foulgrasp" quality="0" skillId="SupportFoulgrasp" variantId="SupportFoulgrasp"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 2 Swap">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemFrostmage" level="2" nameSpec="Frostmage" quality="0" skillId="SupportFrostmage" variantId="SupportFrostmage"/>
 			</Skill>
 		</SkillSet>
 	</Skills>

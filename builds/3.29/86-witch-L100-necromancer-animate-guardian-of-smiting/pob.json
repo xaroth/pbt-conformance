@@ -65,16 +65,13 @@
       "group": 1,
       "id": "AnimateGuardianAltX",
       "name": "Animate Guardian of Smiting",
+      "level": 20,
+      "quality": 30,
       "minion": {
         "name": "Animated Guardian",
         "skill": "Smite"
       },
       "supports": [
-        {
-          "id": "SupportMeatShield",
-          "level": 20,
-          "quality": 20
-        },
         {
           "id": "SupportElementalArmy",
           "level": 20,
@@ -82,6 +79,11 @@
         },
         {
           "id": "SupportFeedingFrenzy",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportMeatShield",
           "level": 20,
           "quality": 20
         }
@@ -150,16 +152,13 @@
       "group": 1,
       "id": "AnimateGuardianAltX",
       "name": "Animate Guardian of Smiting",
+      "level": 20,
+      "quality": 30,
       "minion": {
         "name": "Animated Guardian",
         "skill": "Smite"
       },
       "supports": [
-        {
-          "id": "SupportMeatShield",
-          "level": 20,
-          "quality": 20
-        },
         {
           "id": "SupportElementalArmy",
           "level": 20,
@@ -167,6 +166,11 @@
         },
         {
           "id": "SupportFeedingFrenzy",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportMeatShield",
           "level": 20,
           "quality": 20
         }

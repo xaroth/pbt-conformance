@@ -61,17 +61,9 @@
       "group": 6,
       "id": "LightningTendrilsAltX",
       "name": "Lightning Tendrils of Eccentricity",
+      "level": 22,
+      "quality": 33,
       "supports": [
-        {
-          "id": "SupportCruelty",
-          "level": 19,
-          "quality": 33
-        },
-        {
-          "id": "SupportInspiration",
-          "level": 19,
-          "quality": 33
-        },
         {
           "id": "SupportArcaneSurge",
           "level": 19,
@@ -83,9 +75,19 @@
           "quality": 33
         },
         {
+          "id": "SupportCruelty",
+          "level": 19,
+          "quality": 33
+        },
+        {
           "id": "SupportInfusedChannelling",
           "level": 19,
           "quality": 23
+        },
+        {
+          "id": "SupportInspiration",
+          "level": 19,
+          "quality": 33
         }
       ]
     }
@@ -145,20 +147,12 @@
       "TotalDotDPS": 0
     },
     "mainSkill": {
-      "group": 1,
+      "group": 6,
       "id": "LightningTendrilsAltX",
       "name": "Lightning Tendrils of Eccentricity",
+      "level": 22,
+      "quality": 33,
       "supports": [
-        {
-          "id": "SupportCruelty",
-          "level": 19,
-          "quality": 33
-        },
-        {
-          "id": "SupportInspiration",
-          "level": 19,
-          "quality": 33
-        },
         {
           "id": "SupportArcaneSurge",
           "level": 19,
@@ -170,9 +164,19 @@
           "quality": 33
         },
         {
+          "id": "SupportCruelty",
+          "level": 19,
+          "quality": 33
+        },
+        {
           "id": "SupportInfusedChannelling",
           "level": 19,
           "quality": 23
+        },
+        {
+          "id": "SupportInspiration",
+          "level": 19,
+          "quality": 33
         }
       ]
     }

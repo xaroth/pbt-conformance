@@ -212,6 +212,33 @@ Implicits: 0
 				<Gem nameSpec="Less Duration" skillId="SupportLessDuration" gemId="Metadata/Items/Gems/SkillGemSupportLessDuration" level="20" quality="20" enabled="true"/>
 				<Gem nameSpec="Increased Critical Damage" skillId="SupportIncreasedCriticalDamage" gemId="Metadata/Items/Gems/SkillGemSupportIncreasedCriticalDamage" level="20" quality="0" enabled="true"/>
 			</Skill>
+			<Skill enabled="true" includeInFullDPS="false" mainActiveSkill="1" mainActiveSkillCalcs="1" slot="Helmet">
+				<Gem nameSpec="Tempest Shield" skillId="TempestShield" gemId="Metadata/Items/Gems/SkillGemTempestShield" level="20" quality="0" enabled="false"/>
+				<Gem nameSpec="Determination" skillId="Determination" gemId="Metadata/Items/Gems/SkillGemDetermination" level="20" quality="0" enabled="false"/>
+				<Gem nameSpec="Anger" skillId="Anger" gemId="Metadata/Items/Gems/SkillGemAnger" level="20" quality="0" enabled="false"/>
+				<Gem nameSpec="Enlighten" skillId="SupportEnlighten" gemId="Metadata/Items/Gems/SkillGemSupportEnlighten" level="3" quality="0" enabled="true"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="false" mainActiveSkill="1" mainActiveSkillCalcs="1" slot="Gloves">
+				<Gem nameSpec="Frenzy" skillId="Frenzy" gemId="Metadata/Items/Gems/SkillGemFrenzy" level="1" quality="0" enabled="false"/>
+				<Gem nameSpec="Cast On Critical Strike" skillId="SupportCastOnCriticalStrike" gemId="Metadata/Items/Gems/SkillGemSupportCastOnCriticalStrike" level="20" quality="0" enabled="true"/>
+				<Gem nameSpec="Elemental Weakness" skillId="ElementalWeakness" gemId="Metadata/Items/Gems/SkillGemElementalWeakness" level="20" quality="0" enabled="false"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="false" mainActiveSkill="1" mainActiveSkillCalcs="1" slot="Weapon 1">
+				<Gem nameSpec="Flame Wall" skillId="FlameWall" gemId="Metadata/Items/Gems/SkillGemFlameWall" level="20" quality="0" enabled="false"/>
+				<Gem nameSpec="Frostblink" skillId="Frostblink" gemId="Metadata/Items/Gems/SkillGemFrostblink" level="20" quality="0" enabled="false"/>
+				<Gem nameSpec="More Duration" skillId="SupportMoreDuration" gemId="Metadata/Items/Gems/SkillGemSupportMoreDuration" level="20" quality="0" enabled="true"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="false" mainActiveSkill="1" mainActiveSkillCalcs="1" slot="Weapon 2">
+				<Gem nameSpec="Shield Charge" skillId="ShieldCharge" gemId="Metadata/Items/Gems/SkillGemShieldCharge" level="20" quality="0" enabled="false"/>
+				<Gem nameSpec="Faster Attacks" skillId="SupportFasterAttacks" gemId="Metadata/Items/Gems/SkillGemSupportFasterAttacks" level="20" quality="0" enabled="true"/>
+				<Gem nameSpec="Momentum" skillId="SupportMomentum" gemId="Metadata/Items/Gems/SkillGemSupportMomentum" level="20" quality="0" enabled="true"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="false" mainActiveSkill="1" mainActiveSkillCalcs="1" slot="Boots">
+				<Gem nameSpec="Molten Shell" skillId="MoltenShell" gemId="Metadata/Items/Gems/SkillGemMoltenShell" level="20" quality="0" enabled="false"/>
+				<Gem nameSpec="Cast when Damage Taken" skillId="SupportCastWhenDamageTaken" gemId="Metadata/Items/Gems/SkillGemSupportCastWhenDamageTaken" level="20" quality="0" enabled="true"/>
+				<Gem nameSpec="Precision" skillId="Precision" gemId="Metadata/Items/Gems/SkillGemPrecision" level="9" quality="0" enabled="false"/>
+				<Gem nameSpec="More Duration" skillId="SupportMoreDuration" gemId="Metadata/Items/Gems/SkillGemSupportMoreDuration" level="20" quality="0" enabled="true"/>
+			</Skill>
 		</SkillSet>
 	</Skills>
 	<Config activeConfigSet="1">

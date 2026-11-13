@@ -61,21 +61,18 @@
       "group": 3,
       "id": "EssenceDrain",
       "name": "Essence Drain",
+      "level": 27,
+      "quality": 30,
       "supports": [
-        {
-          "id": "SupportVoidManipulation",
-          "level": 20,
-          "quality": 20
-        },
-        {
-          "id": "SupportEfficacy",
-          "level": 20,
-          "quality": 30
-        },
         {
           "id": "SupportArcaneSurge",
           "level": 20,
           "quality": 33
+        },
+        {
+          "id": "SupportControlledDestruction",
+          "level": 20,
+          "quality": 20
         },
         {
           "id": "SupportCruelty",
@@ -83,7 +80,12 @@
           "quality": 30
         },
         {
-          "id": "SupportControlledDestruction",
+          "id": "SupportEfficacy",
+          "level": 20,
+          "quality": 30
+        },
+        {
+          "id": "SupportVoidManipulation",
           "level": 20,
           "quality": 20
         }
@@ -145,24 +147,21 @@
       "TotalDotDPS": 793463.22043517
     },
     "mainSkill": {
-      "group": 2,
+      "group": 3,
       "id": "EssenceDrain",
       "name": "Essence Drain",
+      "level": 27,
+      "quality": 30,
       "supports": [
-        {
-          "id": "SupportVoidManipulation",
-          "level": 20,
-          "quality": 20
-        },
-        {
-          "id": "SupportEfficacy",
-          "level": 20,
-          "quality": 30
-        },
         {
           "id": "SupportArcaneSurge",
           "level": 20,
           "quality": 33
+        },
+        {
+          "id": "SupportControlledDestruction",
+          "level": 20,
+          "quality": 20
         },
         {
           "id": "SupportCruelty",
@@ -170,7 +169,12 @@
           "quality": 30
         },
         {
-          "id": "SupportControlledDestruction",
+          "id": "SupportEfficacy",
+          "level": 20,
+          "quality": 30
+        },
+        {
+          "id": "SupportVoidManipulation",
           "level": 20,
           "quality": 20
         }

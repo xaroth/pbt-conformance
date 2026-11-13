@@ -173,6 +173,27 @@ Implicits: 1
 				<Gem nameSpec="Trinity" level="15" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true" count="1"/>
 				<Gem nameSpec="Inspiration" level="15" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true" count="1"/>
 			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="1" mainActiveSkillCalcs="1" slot="Helmet">
+				<Gem nameSpec="Wrath" level="15" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Precision" level="16" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Herald of Ice" level="15" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="1" mainActiveSkillCalcs="1" slot="Weapon 1">
+				<Gem nameSpec="Tornado" level="14" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Cast On Critical Strike" level="12" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Sniper&#x27;s Mark" level="16" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Mark On Hit" level="12" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Power Charge On Critical" level="15" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="1" mainActiveSkillCalcs="1" slot="Gloves">
+				<Gem nameSpec="Frenzy" level="15" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Faster Attacks" level="16" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Frostblink" level="16" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Blink Arrow" level="16" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="1" mainActiveSkillCalcs="1" slot="Boots">
+				<Gem nameSpec="Flame Dash" level="16" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+			</Skill>
 		</SkillSet>
 	</Skills>
 	<Config activeConfigSet="1">

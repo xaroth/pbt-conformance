@@ -60,11 +60,9 @@
       "group": 1,
       "id": "RighteousFire",
       "name": "Righteous Fire",
+      "level": 20,
+      "quality": 30,
       "supports": [
-        {
-          "id": "SupportIncreasedAreaOfEffect",
-          "level": 25
-        },
         {
           "id": "SupportBurningDamage",
           "level": 25
@@ -74,14 +72,18 @@
           "level": 25
         },
         {
-          "id": "SupportLifetap",
-          "level": 20,
-          "quality": 10
-        },
-        {
           "id": "SupportElementalFocus",
           "level": 21,
           "quality": 30
+        },
+        {
+          "id": "SupportIncreasedAreaOfEffect",
+          "level": 25
+        },
+        {
+          "id": "SupportLifetap",
+          "level": 20,
+          "quality": 10
         },
         {
           "id": "SupportSwiftAffliction",
@@ -148,11 +150,9 @@
       "group": 1,
       "id": "RighteousFire",
       "name": "Righteous Fire",
+      "level": 20,
+      "quality": 30,
       "supports": [
-        {
-          "id": "SupportIncreasedAreaOfEffect",
-          "level": 25
-        },
         {
           "id": "SupportBurningDamage",
           "level": 25
@@ -162,14 +162,18 @@
           "level": 25
         },
         {
-          "id": "SupportLifetap",
-          "level": 20,
-          "quality": 10
-        },
-        {
           "id": "SupportElementalFocus",
           "level": 21,
           "quality": 30
+        },
+        {
+          "id": "SupportIncreasedAreaOfEffect",
+          "level": 25
+        },
+        {
+          "id": "SupportLifetap",
+          "level": 20,
+          "quality": 10
         },
         {
           "id": "SupportSwiftAffliction",

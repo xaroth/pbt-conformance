@@ -64,20 +64,22 @@
       "group": 1,
       "id": "AnimateGuardian",
       "name": "Animate Guardian",
+      "level": 20,
+      "quality": 30,
       "minion": {
         "name": "Animated Guardian",
         "skill": "Default Attack"
       },
       "supports": [
         {
-          "id": "SupportMinionLife",
-          "level": 20,
-          "quality": 30
-        },
-        {
           "id": "SupportMeatShield",
           "level": 20,
           "quality": 20
+        },
+        {
+          "id": "SupportMinionLife",
+          "level": 20,
+          "quality": 30
         }
       ]
     }
@@ -143,20 +145,22 @@
       "group": 1,
       "id": "AnimateGuardian",
       "name": "Animate Guardian",
+      "level": 20,
+      "quality": 30,
       "minion": {
         "name": "Animated Guardian",
         "skill": "Default Attack"
       },
       "supports": [
         {
-          "id": "SupportMinionLife",
-          "level": 20,
-          "quality": 30
-        },
-        {
           "id": "SupportMeatShield",
           "level": 20,
           "quality": 20
+        },
+        {
+          "id": "SupportMinionLife",
+          "level": 20,
+          "quality": 30
         }
       ]
     }

@@ -61,21 +61,23 @@
       "group": 5,
       "id": "RainOfArrowsAltY",
       "name": "Rain of Arrows of Saturation",
+      "level": 20,
+      "quality": 33,
       "attack": true,
       "supports": [
         {
-          "id": "SupportIncreasedCriticalStrikes",
+          "id": "SupportCastOnCriticalStrike",
           "level": 21,
-          "quality": 20
+          "quality": 30
         },
         {
           "id": "SupportConcentratedEffect",
           "level": 19
         },
         {
-          "id": "SupportCastOnCriticalStrike",
+          "id": "SupportIncreasedCriticalStrikes",
           "level": 21,
-          "quality": 30
+          "quality": 20
         }
       ]
     }
@@ -135,24 +137,26 @@
       "TotalDotDPS": 47.909940977229
     },
     "mainSkill": {
-      "group": 2,
+      "group": 5,
       "id": "RainOfArrowsAltY",
       "name": "Rain of Arrows of Saturation",
+      "level": 20,
+      "quality": 33,
       "attack": true,
       "supports": [
         {
-          "id": "SupportIncreasedCriticalStrikes",
+          "id": "SupportCastOnCriticalStrike",
           "level": 21,
-          "quality": 20
+          "quality": 30
         },
         {
           "id": "SupportConcentratedEffect",
           "level": 19
         },
         {
-          "id": "SupportCastOnCriticalStrike",
+          "id": "SupportIncreasedCriticalStrikes",
           "level": 21,
-          "quality": 30
+          "quality": 20
         }
       ]
     }

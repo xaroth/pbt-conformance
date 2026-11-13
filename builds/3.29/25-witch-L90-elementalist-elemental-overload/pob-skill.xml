@@ -233,6 +233,41 @@ Implicits: 0
 				<Gem nameSpec="Inspiration" gemId="Metadata/Items/Gems/SupportGemReducedMana" skillId="SupportInspiration" variantId="SupportInspiration" level="20" quality="20" enabled="true" enableGlobal1="true" enableGlobal2="false" count="1"/>
 				<Gem nameSpec="Swift Affliction" gemId="Metadata/Items/Gems/SupportGemRapidDecay" skillId="SupportSwiftAffliction" variantId="SupportSwiftAffliction" level="20" quality="20" enabled="true" enableGlobal1="true" enableGlobal2="false" count="1"/>
 			</Skill>
+			<Skill enabled="true" slot="Body Armour" mainActiveSkill="1" mainActiveSkillCalcs="1" includeInFullDPS="false">
+				<Gem nameSpec="Herald of Ash" gemId="Metadata/Items/Gems/SkillGemHeraldOfAsh" skillId="HeraldOfAsh" variantId="HeraldOfAsh" level="20" quality="20" enabled="false" enableGlobal1="true" enableGlobal2="false" count="1"/>
+				<Gem nameSpec="Herald of Thunder" gemId="Metadata/Items/Gems/SkillGemHeraldOfThunder" skillId="HeraldOfThunder" variantId="HeraldOfThunder" level="20" quality="20" enabled="false" enableGlobal1="true" enableGlobal2="false" count="1"/>
+				<Gem nameSpec="Herald of Purity" gemId="Metadata/Items/Gems/SkillGemHeraldOfPurity" skillId="HeraldOfPurity" variantId="HeraldOfPurity" level="20" quality="20" enabled="false" enableGlobal1="true" enableGlobal2="false" count="1"/>
+				<Gem nameSpec="Enlighten" gemId="Metadata/Items/Gems/SupportGemAdditionalXP" skillId="SupportEnlighten" variantId="SupportEnlighten" level="3" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="false" count="1"/>
+				<Gem nameSpec="Tempest Shield" gemId="Metadata/Items/Gems/SkillGemTempestShield" skillId="TempestShield" variantId="TempestShield" level="20" quality="20" enabled="false" enableGlobal1="true" enableGlobal2="false" count="1"/>
+			</Skill>
+			<Skill enabled="true" slot="Boots" mainActiveSkill="1" mainActiveSkillCalcs="1" includeInFullDPS="false">
+				<Gem nameSpec="Herald of Agony" gemId="Metadata/Items/Gems/SkillGemHeraldOfAgony" skillId="HeraldOfAgony" variantId="HeraldOfAgony" level="20" quality="20" enabled="false" enableGlobal1="true" enableGlobal2="false" count="1"/>
+				<Gem nameSpec="Herald of Ice" gemId="Metadata/Items/Gems/SkillGemHeraldOfIce" skillId="HeraldOfIce" variantId="HeraldOfIce" level="20" quality="20" enabled="false" enableGlobal1="true" enableGlobal2="false" count="1"/>
+				<Gem nameSpec="Summon Lightning Golem" gemId="Metadata/Items/Gems/SkillGemSummonLightningGolem" skillId="SummonLightningGolem" variantId="SummonLightningGolem" level="20" quality="20" enabled="false" enableGlobal1="true" enableGlobal2="false" count="1"/>
+			</Skill>
+			<Skill enabled="true" slot="Gloves" mainActiveSkill="1" mainActiveSkillCalcs="1" includeInFullDPS="false">
+				<Gem nameSpec="Flammability" gemId="Metadata/Items/Gems/SkillGemFlammability" skillId="Flammability" variantId="Flammability" level="20" quality="20" enabled="false" enableGlobal1="true" enableGlobal2="false" count="1"/>
+			</Skill>
+			<Skill enabled="true" slot="Gloves" mainActiveSkill="1" mainActiveSkillCalcs="1" includeInFullDPS="false">
+				<Gem nameSpec="Molten Shell" gemId="Metadata/Items/Gems/SkillGemMoltenShell" skillId="MoltenShell" variantId="MoltenShell" level="20" quality="20" enabled="false" enableGlobal1="true" enableGlobal2="false" count="1"/>
+				<Gem nameSpec="Cast when Damage Taken" gemId="Metadata/Items/Gems/SupportGemCastOnDamageTaken" skillId="SupportCastWhenDamageTaken" variantId="SupportCastWhenDamageTaken" level="20" quality="20" enabled="true" enableGlobal1="true" enableGlobal2="false" count="1"/>
+			</Skill>
+			<Skill enabled="true" slot="Gloves" mainActiveSkill="1" mainActiveSkillCalcs="1" includeInFullDPS="false">
+				<Gem nameSpec="Summon Stone Golem" gemId="Metadata/Items/Gems/SkillGemSummonRockGolem" skillId="SummonStoneGolem" variantId="SummonStoneGolem" level="20" quality="20" enabled="false" enableGlobal1="true" enableGlobal2="false" count="1"/>
+			</Skill>
+			<Skill enabled="true" slot="Weapon 1" mainActiveSkill="1" mainActiveSkillCalcs="1" includeInFullDPS="false">
+				<Gem nameSpec="Flame Dash" gemId="Metadata/Items/Gems/SkillGemFlameDash" skillId="FlameDash" variantId="FlameDash" level="20" quality="20" enabled="false" enableGlobal1="true" enableGlobal2="false" count="1"/>
+			</Skill>
+			<Skill enabled="true" slot="Weapon 1" mainActiveSkill="1" mainActiveSkillCalcs="1" includeInFullDPS="false">
+				<Gem nameSpec="Summon Chaos Golem" gemId="Metadata/Items/Gems/SkillGemSummonChaosGolem" skillId="SummonChaosGolem" variantId="SummonChaosGolem" level="20" quality="20" enabled="false" enableGlobal1="true" enableGlobal2="false" count="1"/>
+			</Skill>
+			<Skill enabled="true" slot="Weapon 2" mainActiveSkill="1" mainActiveSkillCalcs="1" includeInFullDPS="false">
+				<Gem nameSpec="Frostblink" gemId="Metadata/Items/Gems/SkillGemFrostblink" skillId="Frostblink" variantId="Frostblink" level="20" quality="20" enabled="false" enableGlobal1="true" enableGlobal2="false" count="1"/>
+				<Gem nameSpec="Summon Flame Golem" gemId="Metadata/Items/Gems/SkillGemSummonFlameGolem" skillId="SummonFlameGolem" variantId="SummonFlameGolem" level="20" quality="20" enabled="false" enableGlobal1="true" enableGlobal2="false" count="1"/>
+			</Skill>
+			<Skill enabled="true" slot="Weapon 2" mainActiveSkill="1" mainActiveSkillCalcs="1" includeInFullDPS="false">
+				<Gem nameSpec="Elemental Weakness" gemId="Metadata/Items/Gems/SkillGemElementalWeakness" skillId="ElementalWeakness" variantId="ElementalWeakness" level="20" quality="20" enabled="false" enableGlobal1="true" enableGlobal2="false" count="1"/>
+			</Skill>
 		</SkillSet>
 	</Skills>
 	<Config activeConfigSet="1">

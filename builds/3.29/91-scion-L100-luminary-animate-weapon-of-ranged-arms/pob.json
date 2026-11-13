@@ -65,6 +65,8 @@
       "group": 10,
       "id": "AnimateWeaponAltY",
       "name": "Animate Weapon of Ranged Arms",
+      "level": 23,
+      "quality": 20,
       "minion": {
         "name": "Animated Weapon",
         "skill": "Default Attack"
@@ -75,7 +77,17 @@
           "level": 29
         },
         {
+          "id": "SupportGreaterUnleash",
+          "level": 4,
+          "quality": 20
+        },
+        {
           "id": "SupportLesserMultipleProjectiles",
+          "level": 21,
+          "quality": 20
+        },
+        {
+          "id": "SupportMinionDamage",
           "level": 21,
           "quality": 20
         },
@@ -85,17 +97,7 @@
           "quality": 20
         },
         {
-          "id": "SupportGreaterUnleash",
-          "level": 4,
-          "quality": 20
-        },
-        {
           "id": "SupportVileToxins",
-          "level": 21,
-          "quality": 20
-        },
-        {
-          "id": "SupportMinionDamage",
           "level": 21,
           "quality": 20
         },
@@ -150,10 +152,10 @@
       "Mana": 1123,
       "ManaRegen": 27.5,
       "ManaUnreserved": 1123,
-      "Minion.CombinedDPS": 106479.33348029,
+      "Minion.CombinedDPS": 127126.84789698,
       "Minion.HitChance": 100,
       "Minion.Life": 10044,
-      "Minion.MainHand.AverageHit": 10882.120686327,
+      "Minion.MainHand.AverageHit": 13193.853081327,
       "MissingChaosResist": 0,
       "MissingColdResist": 0,
       "MissingFireResist": 0,
@@ -166,9 +168,11 @@
       "TotalDotDPS": 0
     },
     "mainSkill": {
-      "group": 1,
+      "group": 10,
       "id": "AnimateWeaponAltY",
       "name": "Animate Weapon of Ranged Arms",
+      "level": 23,
+      "quality": 20,
       "minion": {
         "name": "Animated Weapon",
         "skill": "Default Attack"
@@ -179,7 +183,17 @@
           "level": 29
         },
         {
+          "id": "SupportGreaterUnleash",
+          "level": 4,
+          "quality": 20
+        },
+        {
           "id": "SupportLesserMultipleProjectiles",
+          "level": 21,
+          "quality": 20
+        },
+        {
+          "id": "SupportMinionDamage",
           "level": 21,
           "quality": 20
         },
@@ -189,18 +203,13 @@
           "quality": 20
         },
         {
-          "id": "SupportGreaterUnleash",
-          "level": 4,
-          "quality": 20
-        },
-        {
           "id": "SupportVileToxins",
           "level": 21,
           "quality": 20
         },
         {
-          "id": "SupportMinionDamage",
-          "level": 21,
+          "id": "SupportWitheringTouch",
+          "level": 20,
           "quality": 20
         }
       ]

@@ -61,19 +61,21 @@
       "group": 8,
       "id": "Fireball",
       "name": "Fireball",
+      "level": 29,
+      "quality": 60,
       "supports": [
         {
-          "id": "SupportIncreasedAreaOfEffect",
-          "level": 20
+          "id": "SupportGreaterSpellEcho",
+          "level": 3,
+          "quality": 30
         },
         {
           "id": "SupportHypothermia",
           "level": 20
         },
         {
-          "id": "SupportGreaterSpellEcho",
-          "level": 3,
-          "quality": 30
+          "id": "SupportIncreasedAreaOfEffect",
+          "level": 20
         },
         {
           "id": "SupportInspiration",
@@ -138,22 +140,24 @@
       "TotalDotDPS": 57165.494551739
     },
     "mainSkill": {
-      "group": 1,
+      "group": 8,
       "id": "Fireball",
       "name": "Fireball",
+      "level": 29,
+      "quality": 60,
       "supports": [
         {
-          "id": "SupportIncreasedAreaOfEffect",
-          "level": 20
+          "id": "SupportGreaterSpellEcho",
+          "level": 3,
+          "quality": 30
         },
         {
           "id": "SupportHypothermia",
           "level": 20
         },
         {
-          "id": "SupportGreaterSpellEcho",
-          "level": 3,
-          "quality": 30
+          "id": "SupportIncreasedAreaOfEffect",
+          "level": 20
         },
         {
           "id": "SupportInspiration",

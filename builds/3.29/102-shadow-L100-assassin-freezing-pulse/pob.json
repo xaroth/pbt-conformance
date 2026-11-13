@@ -61,6 +61,8 @@
       "group": 7,
       "id": "FreezingPulse",
       "name": "Freezing Pulse",
+      "level": 26,
+      "quality": 30,
       "mine": true,
       "supports": [
         {
@@ -69,23 +71,23 @@
           "quality": 30
         },
         {
-          "id": "SupportMinefield",
-          "level": 21,
-          "quality": 30
-        },
-        {
           "id": "SupportHighImpactMine",
           "level": 21,
           "quality": 20
         },
         {
-          "id": "SupportPowerChargeOnCritical",
-          "level": 20
-        },
-        {
           "id": "SupportInspiration",
           "level": 20,
           "quality": 20
+        },
+        {
+          "id": "SupportMinefield",
+          "level": 21,
+          "quality": 30
+        },
+        {
+          "id": "SupportPowerChargeOnCritical",
+          "level": 20
         }
       ]
     }
@@ -145,9 +147,11 @@
       "TotalDotDPS": 0
     },
     "mainSkill": {
-      "group": 1,
+      "group": 7,
       "id": "FreezingPulse",
       "name": "Freezing Pulse",
+      "level": 26,
+      "quality": 30,
       "mine": true,
       "supports": [
         {
@@ -156,23 +160,23 @@
           "quality": 30
         },
         {
-          "id": "SupportMinefield",
-          "level": 21,
-          "quality": 30
-        },
-        {
           "id": "SupportHighImpactMine",
           "level": 21,
           "quality": 20
         },
         {
-          "id": "SupportPowerChargeOnCritical",
-          "level": 20
-        },
-        {
           "id": "SupportInspiration",
           "level": 20,
           "quality": 20
+        },
+        {
+          "id": "SupportMinefield",
+          "level": 21,
+          "quality": 30
+        },
+        {
+          "id": "SupportPowerChargeOnCritical",
+          "level": 20
         }
       ]
     }

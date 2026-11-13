@@ -214,6 +214,28 @@ Implicits: 0
 				<Gem nameSpec="Increased Area of Effect" skillId="SupportIncreasedAreaOfEffect" gemId="Metadata/Items/Gems/SkillGemSupportIncreasedAreaofEffect" level="20" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true"/>
 				<Gem nameSpec="Elemental Focus" skillId="SupportElementalFocus" gemId="Metadata/Items/Gems/SkillGemSupportElementalFocus" level="20" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true"/>
 			</Skill>
+			<Skill enabled="true" slot="Boots" label="" includeInFullDPS="false">
+				<Gem nameSpec="Malevolence" skillId="Malevolence" gemId="Metadata/Items/Gems/SkillGemMalevolence" level="20" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true"/>
+				<Gem nameSpec="Flesh and Stone" skillId="FleshAndStone" gemId="Metadata/Items/Gems/SkillGemFleshAndStone" level="20" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true"/>
+				<Gem nameSpec="Enlighten" skillId="SupportEnlighten" gemId="Metadata/Items/Gems/SkillGemSupportEnlighten" level="3" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true"/>
+			</Skill>
+			<Skill enabled="true" slot="Helmet" label="" includeInFullDPS="false">
+				<Gem nameSpec="Fire Trap" skillId="FireTrap" gemId="Metadata/Items/Gems/SkillGemFireTrap" level="20" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true"/>
+				<Gem nameSpec="Trap and Mine Damage" skillId="SupportTrapAndMineDamage" gemId="Metadata/Items/Gems/SkillGemSupportTrapAndMineDamage" level="20" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true"/>
+				<Gem nameSpec="Swift Affliction" skillId="SupportSwiftAffliction" gemId="Metadata/Items/Gems/SkillGemSupportSwiftAffliction" level="20" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true"/>
+				<Gem nameSpec="Controlled Destruction" skillId="SupportControlledDestruction" gemId="Metadata/Items/Gems/SkillGemSupportControlledDestruction" level="20" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true"/>
+			</Skill>
+			<Skill enabled="true" slot="Gloves" label="" includeInFullDPS="false">
+				<Gem nameSpec="Shield Charge" skillId="ShieldCharge" gemId="Metadata/Items/Gems/SkillGemShieldCharge" level="20" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true"/>
+				<Gem nameSpec="Faster Attacks" skillId="SupportFasterAttacks" gemId="Metadata/Items/Gems/SkillGemSupportFasterAttacks" level="20" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true"/>
+			</Skill>
+			<Skill enabled="true" slot="Weapon 2" label="" includeInFullDPS="false">
+				<Gem nameSpec="Frostblink" skillId="Frostblink" gemId="Metadata/Items/Gems/SkillGemFrostblink" level="20" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true"/>
+				<Gem nameSpec="Enduring Cry" skillId="EnduringCry" gemId="Metadata/Items/Gems/SkillGemEnduringCry" level="20" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true"/>
+			</Skill>
+			<Skill enabled="true" slot="Weapon 1" label="" includeInFullDPS="false">
+				<Gem nameSpec="Blood Rage" skillId="BloodRage" gemId="Metadata/Items/Gems/SkillGemBloodRage" level="11" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true"/>
+			</Skill>
 		</SkillSet>
 	</Skills>
 	<Config activeConfigSet="1">

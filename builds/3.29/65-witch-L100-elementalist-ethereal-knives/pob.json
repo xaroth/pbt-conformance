@@ -61,11 +61,13 @@
       "group": 2,
       "id": "EtherealKnives",
       "name": "Ethereal Knives",
+      "level": 25,
+      "quality": 30,
       "supports": [
         {
-          "id": "SupportMinionPact",
-          "level": 4,
-          "quality": 33
+          "id": "SupportBurningDamage",
+          "level": 21,
+          "quality": 20
         },
         {
           "id": "SupportCruelty",
@@ -73,19 +75,19 @@
           "quality": 20
         },
         {
-          "id": "SupportSwiftAffliction",
-          "level": 21,
-          "quality": 20
-        },
-        {
-          "id": "SupportBurningDamage",
-          "level": 21,
-          "quality": 20
-        },
-        {
           "id": "SupportInspiration",
           "level": 21,
           "quality": 30
+        },
+        {
+          "id": "SupportMinionPact",
+          "level": 4,
+          "quality": 33
+        },
+        {
+          "id": "SupportSwiftAffliction",
+          "level": 21,
+          "quality": 20
         }
       ]
     }
@@ -145,14 +147,16 @@
       "TotalDotDPS": 112291.8572109
     },
     "mainSkill": {
-      "group": 1,
+      "group": 2,
       "id": "EtherealKnives",
       "name": "Ethereal Knives",
+      "level": 25,
+      "quality": 30,
       "supports": [
         {
-          "id": "SupportMinionPact",
-          "level": 4,
-          "quality": 33
+          "id": "SupportBurningDamage",
+          "level": 21,
+          "quality": 20
         },
         {
           "id": "SupportCruelty",
@@ -160,19 +164,19 @@
           "quality": 20
         },
         {
-          "id": "SupportSwiftAffliction",
-          "level": 21,
-          "quality": 20
-        },
-        {
-          "id": "SupportBurningDamage",
-          "level": 21,
-          "quality": 20
-        },
-        {
           "id": "SupportInspiration",
           "level": 21,
           "quality": 30
+        },
+        {
+          "id": "SupportMinionPact",
+          "level": 4,
+          "quality": 33
+        },
+        {
+          "id": "SupportSwiftAffliction",
+          "level": 21,
+          "quality": 20
         }
       ]
     }

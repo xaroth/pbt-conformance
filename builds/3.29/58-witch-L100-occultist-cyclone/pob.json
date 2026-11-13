@@ -61,10 +61,12 @@
       "group": 9,
       "id": "Cyclone",
       "name": "Cyclone",
+      "level": 21,
+      "quality": 30,
       "attack": true,
       "supports": [
         {
-          "id": "SupportVoidManipulation",
+          "id": "SupportCastOnCriticalStrike",
           "level": 21,
           "quality": 20
         },
@@ -74,7 +76,7 @@
           "quality": 20
         },
         {
-          "id": "SupportCastOnCriticalStrike",
+          "id": "SupportVoidManipulation",
           "level": 21,
           "quality": 20
         }
@@ -136,13 +138,15 @@
       "TotalDotDPS": 0
     },
     "mainSkill": {
-      "group": 1,
+      "group": 9,
       "id": "Cyclone",
       "name": "Cyclone",
+      "level": 21,
+      "quality": 30,
       "attack": true,
       "supports": [
         {
-          "id": "SupportVoidManipulation",
+          "id": "SupportCastOnCriticalStrike",
           "level": 21,
           "quality": 20
         },
@@ -152,7 +156,7 @@
           "quality": 20
         },
         {
-          "id": "SupportCastOnCriticalStrike",
+          "id": "SupportVoidManipulation",
           "level": 21,
           "quality": 20
         }

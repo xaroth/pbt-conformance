@@ -61,15 +61,11 @@
       "group": 1,
       "id": "Exsanguinate",
       "name": "Exsanguinate",
+      "level": 29,
       "mine": true,
       "supports": [
         {
-          "id": "SupportMinefield",
-          "level": 21,
-          "quality": 30
-        },
-        {
-          "id": "SupportTrapAndMineDamage",
+          "id": "SupportChargedMines",
           "level": 21,
           "quality": 20
         },
@@ -79,14 +75,19 @@
           "quality": 20
         },
         {
-          "id": "SupportChargedMines",
-          "level": 21,
-          "quality": 20
-        },
-        {
           "id": "SupportIncreasedCriticalDamage",
           "level": 21,
           "quality": 30
+        },
+        {
+          "id": "SupportMinefield",
+          "level": 21,
+          "quality": 30
+        },
+        {
+          "id": "SupportTrapAndMineDamage",
+          "level": 21,
+          "quality": 20
         }
       ]
     }
@@ -149,15 +150,11 @@
       "group": 1,
       "id": "Exsanguinate",
       "name": "Exsanguinate",
+      "level": 29,
       "mine": true,
       "supports": [
         {
-          "id": "SupportMinefield",
-          "level": 21,
-          "quality": 30
-        },
-        {
-          "id": "SupportTrapAndMineDamage",
+          "id": "SupportChargedMines",
           "level": 21,
           "quality": 20
         },
@@ -167,14 +164,19 @@
           "quality": 20
         },
         {
-          "id": "SupportChargedMines",
-          "level": 21,
-          "quality": 20
-        },
-        {
           "id": "SupportIncreasedCriticalDamage",
           "level": 21,
           "quality": 30
+        },
+        {
+          "id": "SupportMinefield",
+          "level": 21,
+          "quality": 30
+        },
+        {
+          "id": "SupportTrapAndMineDamage",
+          "level": 21,
+          "quality": 20
         }
       ]
     }

@@ -62,9 +62,21 @@
       "group": 8,
       "id": "WinterOrb",
       "name": "Winter Orb",
+      "level": 22,
+      "quality": 30,
       "supports": [
         {
+          "id": "SupportFocusedChannelling",
+          "level": 20,
+          "quality": 30
+        },
+        {
           "id": "SupportIncreasedCriticalDamage",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportIncreasedCriticalStrikes",
           "level": 20,
           "quality": 20
         },
@@ -74,18 +86,8 @@
           "quality": 20
         },
         {
-          "id": "SupportFocusedChannelling",
-          "level": 20,
-          "quality": 30
-        },
-        {
           "id": "SupportPowerChargeOnCritical",
           "level": 20
-        },
-        {
-          "id": "SupportIncreasedCriticalStrikes",
-          "level": 20,
-          "quality": 20
         }
       ]
     }
@@ -146,12 +148,24 @@
       "TotalDotDPS": 0
     },
     "mainSkill": {
-      "group": 1,
+      "group": 8,
       "id": "WinterOrb",
       "name": "Winter Orb",
+      "level": 22,
+      "quality": 30,
       "supports": [
         {
+          "id": "SupportFocusedChannelling",
+          "level": 20,
+          "quality": 30
+        },
+        {
           "id": "SupportIncreasedCriticalDamage",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportIncreasedCriticalStrikes",
           "level": 20,
           "quality": 20
         },
@@ -161,18 +175,8 @@
           "quality": 20
         },
         {
-          "id": "SupportFocusedChannelling",
-          "level": 20,
-          "quality": 30
-        },
-        {
           "id": "SupportPowerChargeOnCritical",
           "level": 20
-        },
-        {
-          "id": "SupportIncreasedCriticalStrikes",
-          "level": 20,
-          "quality": 20
         }
       ]
     }

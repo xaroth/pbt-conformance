@@ -61,7 +61,24 @@
       "group": 9,
       "id": "Fireball",
       "name": "Fireball",
+      "level": 31,
+      "quality": 60,
       "supports": [
+        {
+          "id": "SupportEmpower",
+          "level": 6,
+          "quality": 10
+        },
+        {
+          "id": "SupportGreaterDevour",
+          "level": 4,
+          "quality": 20
+        },
+        {
+          "id": "SupportGreaterSpellEcho",
+          "level": 5,
+          "quality": 30
+        },
         {
           "id": "SupportOverloadedIntensity",
           "level": 8,
@@ -71,21 +88,6 @@
           "id": "SupportPinpoint",
           "level": 22,
           "quality": 23
-        },
-        {
-          "id": "SupportEmpower",
-          "level": 6,
-          "quality": 10
-        },
-        {
-          "id": "SupportGreaterSpellEcho",
-          "level": 5,
-          "quality": 30
-        },
-        {
-          "id": "SupportGreaterDevour",
-          "level": 4,
-          "quality": 20
         }
       ]
     }
@@ -145,10 +147,27 @@
       "TotalDotDPS": 23119.440233227
     },
     "mainSkill": {
-      "group": 1,
+      "group": 9,
       "id": "Fireball",
       "name": "Fireball",
+      "level": 31,
+      "quality": 60,
       "supports": [
+        {
+          "id": "SupportEmpower",
+          "level": 6,
+          "quality": 10
+        },
+        {
+          "id": "SupportGreaterDevour",
+          "level": 4,
+          "quality": 20
+        },
+        {
+          "id": "SupportGreaterSpellEcho",
+          "level": 5,
+          "quality": 30
+        },
         {
           "id": "SupportOverloadedIntensity",
           "level": 8,
@@ -158,21 +177,6 @@
           "id": "SupportPinpoint",
           "level": 22,
           "quality": 23
-        },
-        {
-          "id": "SupportEmpower",
-          "level": 6,
-          "quality": 10
-        },
-        {
-          "id": "SupportGreaterSpellEcho",
-          "level": 5,
-          "quality": 30
-        },
-        {
-          "id": "SupportGreaterDevour",
-          "level": 4,
-          "quality": 20
         }
       ]
     }

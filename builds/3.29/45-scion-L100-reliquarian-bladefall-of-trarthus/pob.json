@@ -62,16 +62,18 @@
       "group": 2,
       "id": "BladefallAltZ",
       "name": "Bladefall of Trarthus",
+      "level": 22,
+      "quality": 30,
       "supports": [
-        {
-          "id": "SupportInspiration",
-          "level": 20,
-          "quality": 16
-        },
         {
           "id": "SupportIncreasedCriticalDamage",
           "level": 20,
           "quality": 20
+        },
+        {
+          "id": "SupportInspiration",
+          "level": 20,
+          "quality": 16
         },
         {
           "id": "SupportPhysicalToLightning",
@@ -137,19 +139,21 @@
       "TotalDotDPS": 0
     },
     "mainSkill": {
-      "group": 1,
+      "group": 2,
       "id": "BladefallAltZ",
       "name": "Bladefall of Trarthus",
+      "level": 22,
+      "quality": 30,
       "supports": [
-        {
-          "id": "SupportInspiration",
-          "level": 20,
-          "quality": 16
-        },
         {
           "id": "SupportIncreasedCriticalDamage",
           "level": 20,
           "quality": 20
+        },
+        {
+          "id": "SupportInspiration",
+          "level": 20,
+          "quality": 16
         },
         {
           "id": "SupportPhysicalToLightning",

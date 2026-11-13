@@ -65,6 +65,8 @@
       "group": 8,
       "id": "SummonRagingSpirit",
       "name": "Summon Raging Spirit",
+      "level": 27,
+      "quality": 30,
       "minion": {
         "name": "Raging Spirit",
         "skill": "Melee"
@@ -73,6 +75,16 @@
         {
           "id": "SupportAddedChaosDamage",
           "level": 29
+        },
+        {
+          "id": "SupportGreaterMultistrike",
+          "level": 4,
+          "quality": 24
+        },
+        {
+          "id": "SupportMinionDamage",
+          "level": 23,
+          "quality": 30
         },
         {
           "id": "SupportRuthless",
@@ -85,19 +97,9 @@
           "quality": 30
         },
         {
-          "id": "SupportMinionDamage",
-          "level": 23,
-          "quality": 30
-        },
-        {
           "id": "SupportVoidManipulation",
           "level": 21,
           "quality": 33
-        },
-        {
-          "id": "SupportGreaterMultistrike",
-          "level": 4,
-          "quality": 24
         }
       ]
     }
@@ -161,9 +163,11 @@
       "TotalDotDPS": 0
     },
     "mainSkill": {
-      "group": 1,
+      "group": 8,
       "id": "SummonRagingSpirit",
       "name": "Summon Raging Spirit",
+      "level": 27,
+      "quality": 30,
       "minion": {
         "name": "Raging Spirit",
         "skill": "Melee"
@@ -172,6 +176,16 @@
         {
           "id": "SupportAddedChaosDamage",
           "level": 29
+        },
+        {
+          "id": "SupportGreaterMultistrike",
+          "level": 4,
+          "quality": 24
+        },
+        {
+          "id": "SupportMinionDamage",
+          "level": 23,
+          "quality": 30
         },
         {
           "id": "SupportRuthless",
@@ -184,19 +198,9 @@
           "quality": 30
         },
         {
-          "id": "SupportMinionDamage",
-          "level": 23,
-          "quality": 30
-        },
-        {
           "id": "SupportVoidManipulation",
           "level": 21,
           "quality": 33
-        },
-        {
-          "id": "SupportGreaterMultistrike",
-          "level": 4,
-          "quality": 24
         }
       ]
     }

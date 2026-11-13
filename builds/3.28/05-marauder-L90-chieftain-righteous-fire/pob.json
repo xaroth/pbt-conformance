@@ -61,6 +61,8 @@
       "group": 1,
       "id": "RighteousFire",
       "name": "Righteous Fire",
+      "level": 21,
+      "quality": 20,
       "supports": [
         {
           "id": "SupportBurningDamage",
@@ -73,12 +75,12 @@
           "quality": 20
         },
         {
-          "id": "SupportIncreasedAreaOfEffect",
+          "id": "SupportElementalFocus",
           "level": 20,
           "quality": 20
         },
         {
-          "id": "SupportElementalFocus",
+          "id": "SupportIncreasedAreaOfEffect",
           "level": 20,
           "quality": 20
         }
@@ -143,6 +145,8 @@
       "group": 1,
       "id": "RighteousFire",
       "name": "Righteous Fire",
+      "level": 21,
+      "quality": 20,
       "supports": [
         {
           "id": "SupportBurningDamage",
@@ -155,12 +159,12 @@
           "quality": 20
         },
         {
-          "id": "SupportIncreasedAreaOfEffect",
+          "id": "SupportElementalFocus",
           "level": 20,
           "quality": 20
         },
         {
-          "id": "SupportElementalFocus",
+          "id": "SupportIncreasedAreaOfEffect",
           "level": 20,
           "quality": 20
         }

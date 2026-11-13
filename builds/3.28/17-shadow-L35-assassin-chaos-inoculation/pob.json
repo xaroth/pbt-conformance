@@ -72,6 +72,7 @@
       "group": 1,
       "id": "ViperStrikeAltX",
       "name": "Viper Strike of the Mamba",
+      "level": 10,
       "attack": true,
       "supports": [
         {
@@ -79,11 +80,11 @@
           "level": 2
         },
         {
-          "id": "SupportVoidManipulation",
+          "id": "SupportUnboundAilments",
           "level": 8
         },
         {
-          "id": "SupportUnboundAilments",
+          "id": "SupportVoidManipulation",
           "level": 8
         }
       ]
@@ -158,6 +159,7 @@
       "group": 1,
       "id": "ViperStrikeAltX",
       "name": "Viper Strike of the Mamba",
+      "level": 10,
       "attack": true,
       "supports": [
         {
@@ -165,11 +167,11 @@
           "level": 2
         },
         {
-          "id": "SupportVoidManipulation",
+          "id": "SupportUnboundAilments",
           "level": 8
         },
         {
-          "id": "SupportUnboundAilments",
+          "id": "SupportVoidManipulation",
           "level": 8
         }
       ]

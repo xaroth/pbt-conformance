@@ -150,6 +150,22 @@ Adds 1 to 64 Lightning Damage to Attacks
 				<Gem nameSpec="Volley" skillId="SupportVolley" gemId="Metadata/Items/Gems/SkillGemSupportVolley" level="9" quality="0" enabled="true"/>
 				<Gem nameSpec="Less Duration" skillId="SupportLessDuration" gemId="Metadata/Items/Gems/SkillGemSupportLessDuration" level="2" quality="0" enabled="true"/>
 			</Skill>
+			<Skill enabled="true" includeInFullDPS="false" mainActiveSkill="1" mainActiveSkillCalcs="1" slot="Gloves">
+				<Gem nameSpec="Anger" skillId="Anger" gemId="Metadata/Items/Gems/SkillGemAnger" level="4" quality="0" enabled="false"/>
+				<Gem nameSpec="Frostblink" skillId="Frostblink" gemId="Metadata/Items/Gems/SkillGemFrostblink" level="9" quality="0" enabled="false"/>
+				<Gem nameSpec="Faster Attacks" skillId="SupportFasterAttacks" gemId="Metadata/Items/Gems/SkillGemSupportFasterAttacks" level="8" quality="0" enabled="true"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="false" mainActiveSkill="1" mainActiveSkillCalcs="1" slot="Helmet">
+				<Gem nameSpec="Flame Wall" skillId="FlameWall" gemId="Metadata/Items/Gems/SkillGemFlameWall" level="9" quality="0" enabled="false"/>
+				<Gem nameSpec="Elemental Weakness" skillId="ElementalWeakness" gemId="Metadata/Items/Gems/SkillGemElementalWeakness" level="4" quality="0" enabled="false"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="false" mainActiveSkill="1" mainActiveSkillCalcs="1" slot="Weapon 1">
+				<Gem nameSpec="Precision" skillId="Precision" gemId="Metadata/Items/Gems/SkillGemPrecision" level="7" quality="0" enabled="false"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="false" mainActiveSkill="1" mainActiveSkillCalcs="1" slot="Boots">
+				<Gem nameSpec="Shield Charge" skillId="ShieldCharge" gemId="Metadata/Items/Gems/SkillGemShieldCharge" level="9" quality="0" enabled="false"/>
+				<Gem nameSpec="Momentum" skillId="SupportMomentum" gemId="Metadata/Items/Gems/SkillGemSupportMomentum" level="10" quality="0" enabled="true"/>
+			</Skill>
 		</SkillSet>
 	</Skills>
 	<Config activeConfigSet="1">

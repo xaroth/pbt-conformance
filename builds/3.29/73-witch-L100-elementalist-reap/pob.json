@@ -61,9 +61,16 @@
       "group": 4,
       "id": "Reap",
       "name": "Reap",
+      "level": 27,
+      "quality": 75,
       "supports": [
         {
           "id": "SupportBurningDamage",
+          "level": 21,
+          "quality": 30
+        },
+        {
+          "id": "SupportCruelty",
           "level": 21,
           "quality": 30
         },
@@ -76,11 +83,6 @@
           "id": "SupportEclipse",
           "level": 4,
           "quality": 20
-        },
-        {
-          "id": "SupportCruelty",
-          "level": 21,
-          "quality": 30
         },
         {
           "id": "SupportEmpower",
@@ -144,12 +146,19 @@
       "TotalDotDPS": 2230244.8874259
     },
     "mainSkill": {
-      "group": 1,
+      "group": 4,
       "id": "Reap",
       "name": "Reap",
+      "level": 27,
+      "quality": 75,
       "supports": [
         {
           "id": "SupportBurningDamage",
+          "level": 21,
+          "quality": 30
+        },
+        {
+          "id": "SupportCruelty",
           "level": 21,
           "quality": 30
         },
@@ -162,11 +171,6 @@
           "id": "SupportEclipse",
           "level": 4,
           "quality": 20
-        },
-        {
-          "id": "SupportCruelty",
-          "level": 21,
-          "quality": 30
         },
         {
           "id": "SupportEmpower",

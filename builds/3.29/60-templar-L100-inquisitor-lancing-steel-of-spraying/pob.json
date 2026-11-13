@@ -60,6 +60,8 @@
       "group": 3,
       "id": "LancingSteelAltX",
       "name": "Lancing Steel of Spraying",
+      "level": 13,
+      "quality": 20,
       "attack": true,
       "supports": [
         {
@@ -68,14 +70,14 @@
           "quality": 22
         },
         {
-          "id": "SupportIncreasedCriticalDamage",
-          "level": 20,
-          "quality": 30
-        },
-        {
           "id": "SupportEnergyLeech",
           "level": 20,
           "quality": 23
+        },
+        {
+          "id": "SupportIncreasedCriticalDamage",
+          "level": 20,
+          "quality": 30
         }
       ]
     }
@@ -134,9 +136,11 @@
       "TotalDotDPS": 0
     },
     "mainSkill": {
-      "group": 1,
+      "group": 3,
       "id": "LancingSteelAltX",
       "name": "Lancing Steel of Spraying",
+      "level": 13,
+      "quality": 20,
       "attack": true,
       "supports": [
         {
@@ -145,14 +149,14 @@
           "quality": 22
         },
         {
-          "id": "SupportIncreasedCriticalDamage",
-          "level": 20,
-          "quality": 30
-        },
-        {
           "id": "SupportEnergyLeech",
           "level": 20,
           "quality": 23
+        },
+        {
+          "id": "SupportIncreasedCriticalDamage",
+          "level": 20,
+          "quality": 30
         }
       ]
     }

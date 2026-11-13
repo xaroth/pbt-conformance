@@ -62,6 +62,8 @@
       "group": 1,
       "id": "PenanceBrand",
       "name": "Penance Brand",
+      "level": 24,
+      "quality": 30,
       "supports": [
         {
           "id": "SupportBurningDamage",
@@ -144,6 +146,8 @@
       "group": 1,
       "id": "PenanceBrand",
       "name": "Penance Brand",
+      "level": 24,
+      "quality": 30,
       "supports": [
         {
           "id": "SupportBurningDamage",

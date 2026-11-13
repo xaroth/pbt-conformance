@@ -63,26 +63,28 @@
       "group": 5,
       "id": "ScorchingRayAltX",
       "name": "Scorching Ray of Immolation",
+      "level": 21,
+      "quality": 30,
       "totem": true,
       "supports": [
-        {
-          "id": "SupportLifetap",
-          "level": 20,
-          "quality": 20
-        },
         {
           "id": "SupportBurningDamage",
           "level": 20,
           "quality": 20
         },
         {
-          "id": "SupportSpellTotem",
-          "level": 21
+          "id": "SupportLifetap",
+          "level": 20,
+          "quality": 20
         },
         {
           "id": "SupportMultipleTotems",
           "level": 19,
           "quality": 28
+        },
+        {
+          "id": "SupportSpellTotem",
+          "level": 21
         }
       ]
     }
@@ -144,29 +146,31 @@
       "TotemsSummoned": 3
     },
     "mainSkill": {
-      "group": 2,
+      "group": 5,
       "id": "ScorchingRayAltX",
       "name": "Scorching Ray of Immolation",
+      "level": 21,
+      "quality": 30,
       "totem": true,
       "supports": [
-        {
-          "id": "SupportLifetap",
-          "level": 20,
-          "quality": 20
-        },
         {
           "id": "SupportBurningDamage",
           "level": 20,
           "quality": 20
         },
         {
-          "id": "SupportSpellTotem",
-          "level": 21
+          "id": "SupportLifetap",
+          "level": 20,
+          "quality": 20
         },
         {
           "id": "SupportMultipleTotems",
           "level": 19,
           "quality": 28
+        },
+        {
+          "id": "SupportSpellTotem",
+          "level": 21
         }
       ]
     }

@@ -144,6 +144,18 @@ Gain 50 Life when you Stun an Enemy
 				<Gem nameSpec="Ruthless" level="10" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true" count="1"/>
 				<Gem nameSpec="Pulverise" level="2" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true" count="1"/>
 			</Skill>
+			<Skill slot="Helmet" enabled="true" mainActiveSkill="1" mainActiveSkillCalcs="1">
+				<Gem nameSpec="Pride" level="4" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Herald of Purity" level="6" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+			</Skill>
+			<Skill slot="Boots" enabled="true" mainActiveSkill="1" mainActiveSkillCalcs="1">
+				<Gem nameSpec="Leap Slam" level="7" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Faster Attacks" level="8" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+			</Skill>
+			<Skill slot="Gloves" enabled="true" mainActiveSkill="1" mainActiveSkillCalcs="1">
+				<Gem nameSpec="Blood Rage" level="6" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Enduring Cry" level="3" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+			</Skill>
 		</SkillSet>
 	</Skills>
 	<Config activeConfigSet="1">

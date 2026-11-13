@@ -164,6 +164,18 @@ Implicits: 1
 				<Gem nameSpec="Multistrike" level="12" quality="0" enabled="true"/>
 				<Gem nameSpec="Added Lightning Damage" level="16" quality="0" enabled="true"/>
 			</Skill>
+			<Skill enabled="true" includeInFullDPS="false" slot="Helmet">
+				<Gem nameSpec="Wrath" level="15" quality="0" enabled="false"/>
+				<Gem nameSpec="Determination" level="15" quality="0" enabled="false"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="false" slot="Gloves">
+				<Gem nameSpec="Leap Slam" level="16" quality="0" enabled="false"/>
+				<Gem nameSpec="Faster Attacks" level="16" quality="0" enabled="false"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="false" slot="Boots">
+				<Gem nameSpec="Cast when Damage Taken" level="3" quality="0" enabled="false"/>
+				<Gem nameSpec="Molten Shell" level="6" quality="0" enabled="false"/>
+			</Skill>
 		</SkillSet>
 	</Skills>
 	<Config activeConfigSet="1">

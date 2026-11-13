@@ -61,6 +61,8 @@
       "group": 7,
       "id": "IceTrap",
       "name": "Ice Trap",
+      "level": 34,
+      "quality": 30,
       "trap": true,
       "supports": [
         {
@@ -69,8 +71,8 @@
           "quality": 50
         },
         {
-          "id": "SupportTrapAndMineDamage",
-          "level": 20,
+          "id": "SupportConcentratedEffect",
+          "level": 22,
           "quality": 50
         },
         {
@@ -84,8 +86,8 @@
           "quality": 50
         },
         {
-          "id": "SupportConcentratedEffect",
-          "level": 22,
+          "id": "SupportTrapAndMineDamage",
+          "level": 20,
           "quality": 50
         }
       ]
@@ -146,9 +148,11 @@
       "TotalDotDPS": 0
     },
     "mainSkill": {
-      "group": 1,
+      "group": 7,
       "id": "IceTrap",
       "name": "Ice Trap",
+      "level": 34,
+      "quality": 30,
       "trap": true,
       "supports": [
         {
@@ -157,8 +161,8 @@
           "quality": 50
         },
         {
-          "id": "SupportTrapAndMineDamage",
-          "level": 20,
+          "id": "SupportConcentratedEffect",
+          "level": 22,
           "quality": 50
         },
         {
@@ -172,8 +176,8 @@
           "quality": 50
         },
         {
-          "id": "SupportConcentratedEffect",
-          "level": 22,
+          "id": "SupportTrapAndMineDamage",
+          "level": 20,
           "quality": 50
         }
       ]

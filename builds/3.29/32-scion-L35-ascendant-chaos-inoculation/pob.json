@@ -61,6 +61,7 @@
       "group": 1,
       "id": "Smite",
       "name": "Smite",
+      "level": 10,
       "attack": true,
       "supports": [
         {
@@ -68,12 +69,12 @@
           "level": 8
         },
         {
-          "id": "SupportElementalDamageWithAttacks",
-          "level": 6
-        },
-        {
           "id": "SupportAncestralCall",
           "level": 8
+        },
+        {
+          "id": "SupportElementalDamageWithAttacks",
+          "level": 6
         }
       ]
     }
@@ -136,6 +137,7 @@
       "group": 1,
       "id": "Smite",
       "name": "Smite",
+      "level": 10,
       "attack": true,
       "supports": [
         {
@@ -143,12 +145,12 @@
           "level": 8
         },
         {
-          "id": "SupportElementalDamageWithAttacks",
-          "level": 6
-        },
-        {
           "id": "SupportAncestralCall",
           "level": 8
+        },
+        {
+          "id": "SupportElementalDamageWithAttacks",
+          "level": 6
         }
       ]
     }

@@ -61,14 +61,20 @@
       "group": 1,
       "id": "Smite",
       "name": "Smite",
+      "level": 20,
+      "quality": 30,
       "attack": true,
       "supports": [
         {
-          "id": "SupportLightningPenetration",
+          "id": "SupportDamageOnFullLife",
           "level": 20
         },
         {
           "id": "SupportElementalDamageWithAttacks",
+          "level": 20
+        },
+        {
+          "id": "SupportLightningPenetration",
           "level": 20
         },
         {
@@ -79,10 +85,6 @@
           "id": "SupportVolatility",
           "level": 20,
           "quality": 10
-        },
-        {
-          "id": "SupportDamageOnFullLife",
-          "level": 20
         }
       ]
     }
@@ -145,14 +147,20 @@
       "group": 1,
       "id": "Smite",
       "name": "Smite",
+      "level": 20,
+      "quality": 30,
       "attack": true,
       "supports": [
         {
-          "id": "SupportLightningPenetration",
+          "id": "SupportDamageOnFullLife",
           "level": 20
         },
         {
           "id": "SupportElementalDamageWithAttacks",
+          "level": 20
+        },
+        {
+          "id": "SupportLightningPenetration",
           "level": 20
         },
         {
@@ -163,10 +171,6 @@
           "id": "SupportVolatility",
           "level": 20,
           "quality": 10
-        },
-        {
-          "id": "SupportDamageOnFullLife",
-          "level": 20
         }
       ]
     }

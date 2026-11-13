@@ -222,6 +222,34 @@ Elemental Resistances are capped by your highest Maximum Elemental Resistance in
 				<Gem nameSpec="Volatility" level="20" quality="0" enabled="true"/>
 				<Gem nameSpec="Damage on Full Life" level="20" quality="0" enabled="true"/>
 			</Skill>
+			<Skill enabled="true" includeInFullDPS="false" slot="Helmet">
+				<Gem nameSpec="Wrath" level="20" quality="20" enabled="false"/>
+				<Gem nameSpec="Grace" level="20" quality="0" enabled="false"/>
+				<Gem nameSpec="Vaal Discipline" level="20" quality="0" enabled="false"/>
+				<Gem nameSpec="Enlighten" level="4" quality="0" enabled="false"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="false" slot="Gloves">
+				<Gem nameSpec="Purity of Elements" level="20" quality="0" enabled="false"/>
+				<Gem nameSpec="Enlighten" level="4" quality="0" enabled="false"/>
+				<Gem nameSpec="Vaal Haste" level="20" quality="0" enabled="false"/>
+				<Gem nameSpec="Precision" level="1" quality="0" enabled="false"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="false" slot="Boots">
+				<Gem nameSpec="Determination" level="20" quality="0" enabled="false"/>
+				<Gem nameSpec="Vitality" level="20" quality="0" enabled="false"/>
+				<Gem nameSpec="Purity of Fire" level="20" quality="0" enabled="false"/>
+				<Gem nameSpec="Leap Slam" level="20" quality="0" enabled="false"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="false" slot="Weapon 2">
+				<Gem nameSpec="Cast when Damage Taken" level="1" quality="0" enabled="false"/>
+				<Gem nameSpec="Molten Shell" level="4" quality="0" enabled="false"/>
+				<Gem nameSpec="Warlord&#x27;s Mark" level="15" quality="0" enabled="false"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="false" slot="Weapon 1">
+				<Gem nameSpec="Vaal Smite" level="20" quality="0" enabled="false"/>
+				<Gem nameSpec="Faster Attacks" level="20" quality="0" enabled="false"/>
+				<Gem nameSpec="More Duration" level="20" quality="0" enabled="false"/>
+			</Skill>
 		</SkillSet>
 	</Skills>
 	<Config activeConfigSet="1">

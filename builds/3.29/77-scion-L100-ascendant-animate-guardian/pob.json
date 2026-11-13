@@ -65,22 +65,23 @@
       "group": 11,
       "id": "AnimateGuardian",
       "name": "Animate Guardian",
+      "level": 20,
       "minion": {
         "name": "Animated Guardian",
         "skill": "Default Attack"
       },
       "supports": [
         {
-          "id": "SupportMinionLife",
-          "level": 20,
-          "quality": 10
-        },
-        {
           "id": "SupportCompanionship",
           "level": 3
         },
         {
           "id": "SupportMeatShield",
+          "level": 20,
+          "quality": 10
+        },
+        {
+          "id": "SupportMinionLife",
           "level": 20,
           "quality": 10
         }
@@ -146,25 +147,26 @@
       "TotalDotDPS": 0
     },
     "mainSkill": {
-      "group": 1,
+      "group": 11,
       "id": "AnimateGuardian",
       "name": "Animate Guardian",
+      "level": 20,
       "minion": {
         "name": "Animated Guardian",
         "skill": "Default Attack"
       },
       "supports": [
         {
-          "id": "SupportMinionLife",
-          "level": 20,
-          "quality": 10
-        },
-        {
           "id": "SupportCompanionship",
           "level": 3
         },
         {
           "id": "SupportMeatShield",
+          "level": 20,
+          "quality": 10
+        },
+        {
+          "id": "SupportMinionLife",
           "level": 20,
           "quality": 10
         }

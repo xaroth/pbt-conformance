@@ -63,12 +63,10 @@
       "group": 1,
       "id": "StormBurstAltX",
       "name": "Storm Burst of Repulsion",
+      "level": 21,
+      "quality": 60,
       "totem": true,
       "supports": [
-        {
-          "id": "SupportInvertTheRules",
-          "level": 3
-        },
         {
           "id": "SupportIncreasedCriticalDamage",
           "level": 20,
@@ -79,14 +77,18 @@
           "level": 20
         },
         {
-          "id": "SupportSpellTotem",
-          "level": 20,
-          "quality": 20
+          "id": "SupportInvertTheRules",
+          "level": 3
         },
         {
           "id": "SupportMoreDuration",
           "level": 20,
           "quality": 30
+        },
+        {
+          "id": "SupportSpellTotem",
+          "level": 20,
+          "quality": 20
         }
       ]
     }
@@ -151,12 +153,10 @@
       "group": 1,
       "id": "StormBurstAltX",
       "name": "Storm Burst of Repulsion",
+      "level": 21,
+      "quality": 60,
       "totem": true,
       "supports": [
-        {
-          "id": "SupportInvertTheRules",
-          "level": 3
-        },
         {
           "id": "SupportIncreasedCriticalDamage",
           "level": 20,
@@ -167,14 +167,18 @@
           "level": 20
         },
         {
-          "id": "SupportSpellTotem",
-          "level": 20,
-          "quality": 20
+          "id": "SupportInvertTheRules",
+          "level": 3
         },
         {
           "id": "SupportMoreDuration",
           "level": 20,
           "quality": 30
+        },
+        {
+          "id": "SupportSpellTotem",
+          "level": 20,
+          "quality": 20
         }
       ]
     }

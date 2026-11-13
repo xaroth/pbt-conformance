@@ -214,6 +214,30 @@ Implicits: 0
 				<Gem nameSpec="Greater Fork" level="1" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true" count="1"/>
 				<Gem nameSpec="Increased Critical Damage" level="20" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true" count="1"/>
 			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="1" mainActiveSkillCalcs="1" slot="Helmet">
+				<Gem nameSpec="Hatred" level="20" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Vaal Haste" level="20" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Purity of Elements" level="20" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Enlighten" level="5" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="1" mainActiveSkillCalcs="1" slot="Weapon 1">
+				<Gem nameSpec="Storm Rain" level="20" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Manaforged Arrows" level="20" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Tornado" level="20" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Frenzy" level="20" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Sniper&#x27;s Mark" level="20" quality="20" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Power Charge On Critical" level="20" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="1" mainActiveSkillCalcs="1" slot="Gloves">
+				<Gem nameSpec="Precision" level="20" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Steelskin" level="10" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Automation" level="20" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="1" mainActiveSkillCalcs="1" slot="Boots">
+				<Gem nameSpec="Blink Arrow" level="20" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Frostblink" level="20" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Cooldown Recovery" level="1" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+			</Skill>
 		</SkillSet>
 	</Skills>
 	<Config activeConfigSet="1">

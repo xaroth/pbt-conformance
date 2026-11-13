@@ -173,6 +173,34 @@ Implicits: 1
 				<Gem nameSpec="Less Duration" skillId="SupportLessDuration" gemId="Metadata/Items/Gems/SkillGemSupportLessDuration" level="20" quality="20" enabled="true"/>
 				<Gem nameSpec="Increased Critical Damage" skillId="SupportIncreasedCriticalDamage" gemId="Metadata/Items/Gems/SkillGemSupportIncreasedCriticalDamage" level="20" quality="0" enabled="true"/>
 			</Skill>
+			<Skill enabled="true" includeInFullDPS="false" mainActiveSkill="1" mainActiveSkillCalcs="1" slot="Weapon 1">
+				<Gem nameSpec="Precision" skillId="Precision" gemId="Metadata/Items/Gems/SkillGemPrecision" level="20" quality="0" enabled="false"/>
+				<Gem nameSpec="Arrogance" skillId="SupportArrogance" gemId="Metadata/Items/Gems/SkillGemSupportArrogance" level="20" quality="0" enabled="true"/>
+				<Gem nameSpec="Frenzy" skillId="Frenzy" gemId="Metadata/Items/Gems/SkillGemFrenzy" level="2" quality="0" enabled="false"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="false" mainActiveSkill="1" mainActiveSkillCalcs="1" slot="Weapon 2">
+				<Gem nameSpec="Shield Charge" skillId="ShieldCharge" gemId="Metadata/Items/Gems/SkillGemShieldCharge" level="20" quality="0" enabled="false"/>
+				<Gem nameSpec="Faster Attacks" skillId="SupportFasterAttacks" gemId="Metadata/Items/Gems/SkillGemSupportFasterAttacks" level="20" quality="0" enabled="true"/>
+				<Gem nameSpec="Momentum" skillId="SupportMomentum" gemId="Metadata/Items/Gems/SkillGemSupportMomentum" level="15" quality="0" enabled="true"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="false" mainActiveSkill="1" mainActiveSkillCalcs="1" slot="Boots">
+				<Gem nameSpec="Tornado" skillId="Tornado" gemId="Metadata/Items/Gems/SkillGemTornado" level="2" quality="0" enabled="false"/>
+				<Gem nameSpec="Flame Wall" skillId="FlameWall" gemId="Metadata/Items/Gems/SkillGemFlameWall" level="20" quality="0" enabled="false"/>
+				<Gem nameSpec="Elemental Weakness" skillId="ElementalWeakness" gemId="Metadata/Items/Gems/SkillGemElementalWeakness" level="20" quality="0" enabled="false"/>
+				<Gem nameSpec="Arcanist Brand" skillId="BrandSupport" gemId="Metadata/Items/Gems/SkillGemBrandSupport" level="8" quality="0" enabled="false"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="false" mainActiveSkill="1" mainActiveSkillCalcs="1" slot="Gloves">
+				<Gem nameSpec="Summon Stone Golem" skillId="SummonStoneGolem" gemId="Metadata/Items/Gems/SkillGemSummonStoneGolem" level="20" quality="0" enabled="false"/>
+				<Gem nameSpec="Anger" skillId="Anger" gemId="Metadata/Items/Gems/SkillGemAnger" level="20" quality="0" enabled="false"/>
+				<Gem nameSpec="Frostblink" skillId="Frostblink" gemId="Metadata/Items/Gems/SkillGemFrostblink" level="20" quality="0" enabled="false"/>
+				<Gem nameSpec="Tempest Shield" skillId="TempestShield" gemId="Metadata/Items/Gems/SkillGemTempestShield" level="20" quality="0" enabled="false"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="false" mainActiveSkill="1" mainActiveSkillCalcs="1" slot="Helmet">
+				<Gem nameSpec="Steelskin" skillId="QuickGuard" gemId="Metadata/Items/Gems/SkillGemQuickGuard" level="20" quality="0" enabled="false"/>
+				<Gem nameSpec="Cast when Damage Taken" skillId="SupportCastWhenDamageTaken" gemId="Metadata/Items/Gems/SkillGemSupportCastWhenDamageTaken" level="20" quality="0" enabled="true"/>
+				<Gem nameSpec="More Duration" skillId="SupportMoreDuration" gemId="Metadata/Items/Gems/SkillGemSupportMoreDuration" level="20" quality="0" enabled="true"/>
+				<Gem nameSpec="Vaal Haste" skillId="VaalHaste" gemId="Metadata/Items/Gems/SkillGemVaalHaste" level="20" quality="0" enabled="false"/>
+			</Skill>
 		</SkillSet>
 	</Skills>
 	<Config activeConfigSet="1">

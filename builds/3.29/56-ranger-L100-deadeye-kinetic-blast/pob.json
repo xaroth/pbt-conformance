@@ -61,12 +61,9 @@
       "group": 3,
       "id": "KineticBlast",
       "name": "Kinetic Blast",
+      "level": 5,
       "attack": true,
       "supports": [
-        {
-          "id": "SupportTrinity",
-          "level": 7
-        },
         {
           "id": "SupportIncreasedCriticalDamage",
           "level": 7
@@ -74,6 +71,10 @@
         {
           "id": "SupportReturningProjectiles",
           "level": 4
+        },
+        {
+          "id": "SupportTrinity",
+          "level": 7
         }
       ]
     }
@@ -133,15 +134,12 @@
       "TotalDotDPS": 0
     },
     "mainSkill": {
-      "group": 1,
+      "group": 3,
       "id": "KineticBlast",
       "name": "Kinetic Blast",
+      "level": 5,
       "attack": true,
       "supports": [
-        {
-          "id": "SupportTrinity",
-          "level": 7
-        },
         {
           "id": "SupportIncreasedCriticalDamage",
           "level": 7
@@ -149,6 +147,10 @@
         {
           "id": "SupportReturningProjectiles",
           "level": 4
+        },
+        {
+          "id": "SupportTrinity",
+          "level": 7
         }
       ]
     }

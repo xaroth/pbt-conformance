@@ -61,12 +61,24 @@
       "group": 5,
       "id": "Exsanguinate",
       "name": "Exsanguinate",
+      "level": 34,
+      "quality": 10,
       "mine": true,
       "supports": [
+        {
+          "id": "SupportChargedMines",
+          "level": 20,
+          "quality": 30
+        },
         {
           "id": "SupportEmpower",
           "level": 5,
           "quality": 18
+        },
+        {
+          "id": "SupportHighImpactMine",
+          "level": 20,
+          "quality": 20
         },
         {
           "id": "SupportMinefield",
@@ -76,16 +88,6 @@
         {
           "id": "SupportTrapAndMineDamage",
           "level": 21,
-          "quality": 30
-        },
-        {
-          "id": "SupportHighImpactMine",
-          "level": 20,
-          "quality": 20
-        },
-        {
-          "id": "SupportChargedMines",
-          "level": 20,
           "quality": 30
         }
       ]
@@ -146,15 +148,27 @@
       "TotalDotDPS": 113605.91088
     },
     "mainSkill": {
-      "group": 1,
+      "group": 5,
       "id": "Exsanguinate",
       "name": "Exsanguinate",
+      "level": 34,
+      "quality": 10,
       "mine": true,
       "supports": [
+        {
+          "id": "SupportChargedMines",
+          "level": 20,
+          "quality": 30
+        },
         {
           "id": "SupportEmpower",
           "level": 5,
           "quality": 18
+        },
+        {
+          "id": "SupportHighImpactMine",
+          "level": 20,
+          "quality": 20
         },
         {
           "id": "SupportMinefield",
@@ -164,16 +178,6 @@
         {
           "id": "SupportTrapAndMineDamage",
           "level": 21,
-          "quality": 30
-        },
-        {
-          "id": "SupportHighImpactMine",
-          "level": 20,
-          "quality": 20
-        },
-        {
-          "id": "SupportChargedMines",
-          "level": 20,
           "quality": 30
         }
       ]

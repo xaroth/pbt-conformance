@@ -61,6 +61,8 @@
       "group": 4,
       "id": "StaticStrikeAltX",
       "name": "Static Strike of Gathering Lightning",
+      "level": 20,
+      "quality": 30,
       "attack": true,
       "supports": [
         {
@@ -68,8 +70,9 @@
           "level": 10
         },
         {
-          "id": "SupportLifetap",
-          "level": 20
+          "id": "SupportFortify",
+          "level": 20,
+          "quality": 20
         },
         {
           "id": "SupportGreaterChain",
@@ -77,12 +80,11 @@
           "quality": 23
         },
         {
-          "id": "SupportRuthless",
-          "level": 20,
-          "quality": 20
+          "id": "SupportLifetap",
+          "level": 20
         },
         {
-          "id": "SupportFortify",
+          "id": "SupportRuthless",
           "level": 20,
           "quality": 20
         },
@@ -149,9 +151,11 @@
       "TotalDotDPS": 0
     },
     "mainSkill": {
-      "group": 1,
+      "group": 4,
       "id": "StaticStrikeAltX",
       "name": "Static Strike of Gathering Lightning",
+      "level": 20,
+      "quality": 30,
       "attack": true,
       "supports": [
         {
@@ -159,8 +163,9 @@
           "level": 10
         },
         {
-          "id": "SupportLifetap",
-          "level": 20
+          "id": "SupportFortify",
+          "level": 20,
+          "quality": 20
         },
         {
           "id": "SupportGreaterChain",
@@ -168,12 +173,11 @@
           "quality": 23
         },
         {
-          "id": "SupportRuthless",
-          "level": 20,
-          "quality": 20
+          "id": "SupportLifetap",
+          "level": 20
         },
         {
-          "id": "SupportFortify",
+          "id": "SupportRuthless",
           "level": 20,
           "quality": 20
         },

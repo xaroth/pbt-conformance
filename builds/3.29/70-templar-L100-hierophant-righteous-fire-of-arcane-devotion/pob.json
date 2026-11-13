@@ -61,19 +61,17 @@
       "group": 2,
       "id": "RighteousFireAltX",
       "name": "Righteous Fire of Arcane Devotion",
+      "level": 21,
+      "quality": 30,
       "supports": [
         {
-          "id": "SupportElementalFocus",
-          "level": 20
+          "id": "SupportArcaneSurge",
+          "level": 20,
+          "quality": 33
         },
         {
           "id": "SupportBurningDamage",
           "level": 20
-        },
-        {
-          "id": "SupportSwiftAffliction",
-          "level": 21,
-          "quality": 30
         },
         {
           "id": "SupportControlledDestruction",
@@ -81,9 +79,13 @@
           "quality": 30
         },
         {
-          "id": "SupportArcaneSurge",
-          "level": 20,
-          "quality": 33
+          "id": "SupportElementalFocus",
+          "level": 20
+        },
+        {
+          "id": "SupportSwiftAffliction",
+          "level": 21,
+          "quality": 30
         }
       ]
     }
@@ -143,22 +145,20 @@
       "TotalDotDPS": 1090492.3525071
     },
     "mainSkill": {
-      "group": 1,
+      "group": 2,
       "id": "RighteousFireAltX",
       "name": "Righteous Fire of Arcane Devotion",
+      "level": 21,
+      "quality": 30,
       "supports": [
         {
-          "id": "SupportElementalFocus",
-          "level": 20
+          "id": "SupportArcaneSurge",
+          "level": 20,
+          "quality": 33
         },
         {
           "id": "SupportBurningDamage",
           "level": 20
-        },
-        {
-          "id": "SupportSwiftAffliction",
-          "level": 21,
-          "quality": 30
         },
         {
           "id": "SupportControlledDestruction",
@@ -166,9 +166,13 @@
           "quality": 30
         },
         {
-          "id": "SupportArcaneSurge",
-          "level": 20,
-          "quality": 33
+          "id": "SupportElementalFocus",
+          "level": 20
+        },
+        {
+          "id": "SupportSwiftAffliction",
+          "level": 21,
+          "quality": 30
         }
       ]
     }

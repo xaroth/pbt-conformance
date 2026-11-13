@@ -61,11 +61,18 @@
       "group": 4,
       "id": "EtherealKnives",
       "name": "Ethereal Knives",
+      "level": 29,
+      "quality": 30,
       "supports": [
         {
-          "id": "SupportInvertTheRules",
+          "id": "SupportAwakenedEmpower",
+          "level": 5,
+          "quality": 20
+        },
+        {
+          "id": "SupportGreaterSpellEcho",
           "level": 4,
-          "quality": 33
+          "quality": 30
         },
         {
           "id": "SupportIncreasedCriticalDamage",
@@ -78,14 +85,9 @@
           "quality": 30
         },
         {
-          "id": "SupportGreaterSpellEcho",
+          "id": "SupportInvertTheRules",
           "level": 4,
-          "quality": 30
-        },
-        {
-          "id": "SupportAwakenedEmpower",
-          "level": 5,
-          "quality": 20
+          "quality": 33
         }
       ]
     }
@@ -145,14 +147,21 @@
       "TotalDotDPS": 5390.3688373887
     },
     "mainSkill": {
-      "group": 1,
+      "group": 4,
       "id": "EtherealKnives",
       "name": "Ethereal Knives",
+      "level": 29,
+      "quality": 30,
       "supports": [
         {
-          "id": "SupportInvertTheRules",
+          "id": "SupportAwakenedEmpower",
+          "level": 5,
+          "quality": 20
+        },
+        {
+          "id": "SupportGreaterSpellEcho",
           "level": 4,
-          "quality": 33
+          "quality": 30
         },
         {
           "id": "SupportIncreasedCriticalDamage",
@@ -165,14 +174,9 @@
           "quality": 30
         },
         {
-          "id": "SupportGreaterSpellEcho",
+          "id": "SupportInvertTheRules",
           "level": 4,
-          "quality": 30
-        },
-        {
-          "id": "SupportAwakenedEmpower",
-          "level": 5,
-          "quality": 20
+          "quality": 33
         }
       ]
     }

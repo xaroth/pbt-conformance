@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PathOfBuilding>
-	<Build ascendClassName="Ascendant" bandit="None" characterLevelAutoMode="false" className="Scion" level="100" mainSocketGroup="1" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="3_0" viewMode="TREE">
+	<Build ascendClassName="Ascendant" bandit="None" characterLevelAutoMode="false" className="Scion" level="100" mainSocketGroup="8" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="3_0" viewMode="TREE">
 		<PlayerStat stat="AverageDamage" value="68810.276489239"/>
 		<PlayerStat stat="AverageBurstDamage" value="68810.276489239"/>
 		<PlayerStat stat="Speed" value="4.8373416"/>
@@ -741,6 +741,29 @@ Eat a Soul when you Hit a Rare or Unique Enemy, no more than once every 0.5 seco
 	</Items>
 	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="nil" showLegacyGems="false" showSupportGemTypes="ALL" sortGemsByDPS="true" sortGemsByDPSField="CombinedDPS">
 		<SkillSet id="1">
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Helmet">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemScornfulHerald" level="2" nameSpec="Scornful Herald" quality="0" skillId="SupportScornfulHerald" variantId="SupportScornfulHerald"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Helmet">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemScornfulHerald" level="2" nameSpec="Scornful Herald" quality="0" skillId="SupportScornfulHerald" variantId="SupportScornfulHerald"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemScornfulHerald" level="2" nameSpec="Scornful Herald" quality="0" skillId="SupportScornfulHerald" variantId="SupportScornfulHerald"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 1">
+				<Gem count="nil" enableGlobal1="false" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemVaalHaste" level="20" nameSpec="Vaal Haste" quality="0" skillId="VaalHaste" variantId="VaalHaste"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 1">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemWrath" level="21" nameSpec="Wrath" quality="0" skillId="Wrath" variantId="Wrath"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 1">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemPrecision" level="20" nameSpec="Precision" quality="0" skillId="Precision" variantId="Precision"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 2">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemFasterAttack" level="20" nameSpec="Faster Attacks" quality="20" skillId="SupportFasterAttacks" variantId="SupportFasterAttacks"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemShieldCharge" level="20" nameSpec="Shield Charge" quality="0" skillId="ShieldCharge" variantId="ShieldCharge"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 2">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemScornfulHerald" level="2" nameSpec="Scornful Herald" quality="0" skillId="SupportScornfulHerald" variantId="SupportScornfulHerald"/>
+			</Skill>
 			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="1" mainActiveSkillCalcs="1" slot="Body Armour">
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemGreaterFork" level="4" nameSpec="Greater Fork" quality="0" skillId="SupportGreaterFork" variantId="SupportGreaterFork"/>
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemTrinity" level="20" nameSpec="Trinity" quality="20" skillId="SupportTrinity" variantId="SupportTrinity"/>
@@ -748,6 +771,19 @@ Eat a Soul when you Hit a Rare or Unique Enemy, no more than once every 0.5 seco
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemVolatility" level="20" nameSpec="Volatility" quality="20" skillId="SupportVolatility" variantId="SupportVolatility"/>
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemReducedMana" level="20" nameSpec="Inspiration" quality="0" skillId="SupportInspiration" variantId="SupportInspiration"/>
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SkillGemKineticBlast" level="21" nameSpec="Kinetic Blast" quality="20" skillId="KineticBlast" skillPart="1" variantId="KineticBlast"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Boots">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemScornfulHerald" level="2" nameSpec="Scornful Herald" quality="0" skillId="SupportScornfulHerald" variantId="SupportScornfulHerald"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 1 Swap">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemScornfulHerald" level="2" nameSpec="Scornful Herald" quality="0" skillId="SupportScornfulHerald" variantId="SupportScornfulHerald"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 1 Swap">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemScornfulHerald" level="2" nameSpec="Scornful Herald" quality="0" skillId="SupportScornfulHerald" variantId="SupportScornfulHerald"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemScornfulHerald" level="2" nameSpec="Scornful Herald" quality="0" skillId="SupportScornfulHerald" variantId="SupportScornfulHerald"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Gloves">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemScornfulHerald" level="2" nameSpec="Scornful Herald" quality="0" skillId="SupportScornfulHerald" variantId="SupportScornfulHerald"/>
 			</Skill>
 			<Skill enabled="false" includeInFullDPS="nil" label="On Kill Monster Explosion" mainActiveSkill="nil" mainActiveSkillCalcs="nil" source="Explode">
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" level="1" nameSpec="" quality="0" skillId="EnemyExplode" skillPart="1"/>

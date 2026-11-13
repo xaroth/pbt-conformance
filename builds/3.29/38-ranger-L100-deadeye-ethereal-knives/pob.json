@@ -61,11 +61,22 @@
       "group": 4,
       "id": "EtherealKnives",
       "name": "Ethereal Knives",
+      "level": 26,
+      "quality": 72,
       "supports": [
+        {
+          "id": "SupportArcaneSurge",
+          "level": 20,
+          "quality": 30
+        },
         {
           "id": "SupportEclipse",
           "level": 3,
           "quality": 20
+        },
+        {
+          "id": "SupportEmpower",
+          "level": 4
         },
         {
           "id": "SupportGreaterSpellEcho",
@@ -76,15 +87,6 @@
           "id": "SupportInspiration",
           "level": 20,
           "quality": 20
-        },
-        {
-          "id": "SupportEmpower",
-          "level": 4
-        },
-        {
-          "id": "SupportArcaneSurge",
-          "level": 20,
-          "quality": 30
         }
       ]
     }
@@ -144,14 +146,25 @@
       "TotalDotDPS": 79.15558450499
     },
     "mainSkill": {
-      "group": 1,
+      "group": 4,
       "id": "EtherealKnives",
       "name": "Ethereal Knives",
+      "level": 26,
+      "quality": 72,
       "supports": [
+        {
+          "id": "SupportArcaneSurge",
+          "level": 20,
+          "quality": 30
+        },
         {
           "id": "SupportEclipse",
           "level": 3,
           "quality": 20
+        },
+        {
+          "id": "SupportEmpower",
+          "level": 4
         },
         {
           "id": "SupportGreaterSpellEcho",
@@ -162,15 +175,6 @@
           "id": "SupportInspiration",
           "level": 20,
           "quality": 20
-        },
-        {
-          "id": "SupportEmpower",
-          "level": 4
-        },
-        {
-          "id": "SupportArcaneSurge",
-          "level": 20,
-          "quality": 30
         }
       ]
     }

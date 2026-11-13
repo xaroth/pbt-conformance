@@ -63,16 +63,18 @@
       "group": 4,
       "id": "ArtilleryBallista",
       "name": "Artillery Ballista",
+      "level": 22,
+      "quality": 60,
       "attack": true,
       "totem": true,
       "supports": [
         {
-          "id": "SupportVoidManipulation",
+          "id": "SupportAddedLightningDamage",
           "level": 21,
           "quality": 20
         },
         {
-          "id": "SupportAddedLightningDamage",
+          "id": "SupportElementalDamageWithAttacks",
           "level": 21,
           "quality": 20
         },
@@ -82,12 +84,12 @@
           "quality": 20
         },
         {
-          "id": "SupportVolatility",
+          "id": "SupportVoidManipulation",
           "level": 21,
           "quality": 20
         },
         {
-          "id": "SupportElementalDamageWithAttacks",
+          "id": "SupportVolatility",
           "level": 21,
           "quality": 20
         }
@@ -151,19 +153,21 @@
       "TotemsSummoned": 8
     },
     "mainSkill": {
-      "group": 1,
+      "group": 4,
       "id": "ArtilleryBallista",
       "name": "Artillery Ballista",
+      "level": 22,
+      "quality": 60,
       "attack": true,
       "totem": true,
       "supports": [
         {
-          "id": "SupportVoidManipulation",
+          "id": "SupportAddedLightningDamage",
           "level": 21,
           "quality": 20
         },
         {
-          "id": "SupportAddedLightningDamage",
+          "id": "SupportElementalDamageWithAttacks",
           "level": 21,
           "quality": 20
         },
@@ -173,12 +177,12 @@
           "quality": 20
         },
         {
-          "id": "SupportVolatility",
+          "id": "SupportVoidManipulation",
           "level": 21,
           "quality": 20
         },
         {
-          "id": "SupportElementalDamageWithAttacks",
+          "id": "SupportVolatility",
           "level": 21,
           "quality": 20
         }

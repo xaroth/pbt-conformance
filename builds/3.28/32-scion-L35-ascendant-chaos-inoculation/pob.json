@@ -61,8 +61,13 @@
       "group": 1,
       "id": "MoltenStrike",
       "name": "Molten Strike",
+      "level": 10,
       "attack": true,
       "supports": [
+        {
+          "id": "SupportAddedLightningDamage",
+          "level": 8
+        },
         {
           "id": "SupportAncestralCall",
           "level": 9
@@ -70,10 +75,6 @@
         {
           "id": "SupportElementalDamageWithAttacks",
           "level": 6
-        },
-        {
-          "id": "SupportAddedLightningDamage",
-          "level": 8
         }
       ]
     }
@@ -136,8 +137,13 @@
       "group": 1,
       "id": "MoltenStrike",
       "name": "Molten Strike",
+      "level": 10,
       "attack": true,
       "supports": [
+        {
+          "id": "SupportAddedLightningDamage",
+          "level": 8
+        },
         {
           "id": "SupportAncestralCall",
           "level": 9
@@ -145,10 +151,6 @@
         {
           "id": "SupportElementalDamageWithAttacks",
           "level": 6
-        },
-        {
-          "id": "SupportAddedLightningDamage",
-          "level": 8
         }
       ]
     }

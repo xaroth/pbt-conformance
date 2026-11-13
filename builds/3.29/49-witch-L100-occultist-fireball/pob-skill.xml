@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PathOfBuilding>
-	<Build ascendClassName="Occultist" bandit="None" characterLevelAutoMode="false" className="Witch" level="100" mainSocketGroup="1" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="3_0" viewMode="TREE">
+	<Build ascendClassName="Occultist" bandit="None" characterLevelAutoMode="false" className="Witch" level="100" mainSocketGroup="9" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="3_0" viewMode="TREE">
 		<PlayerStat stat="AverageHit" value="3074680.3457518"/>
 		<PlayerStat stat="AverageBurstDamage" value="9224041.0372554"/>
 		<PlayerStat stat="Speed" value="5.1584"/>
@@ -821,6 +821,41 @@ Unaffected by Blind
 	</Items>
 	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="nil" showLegacyGems="false" showSupportGemTypes="ALL" sortGemsByDPS="true" sortGemsByDPSField="CombinedDPS">
 		<SkillSet id="1">
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="1" slot="Gloves">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemDiscipline" level="21" nameSpec="Discipline" quality="0" skillId="Discipline" variantId="Discipline"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemTempestShield" level="20" nameSpec="Tempest Shield" quality="20" skillId="TempestShield" variantId="TempestShield"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemAdditionalXP" level="4" nameSpec="Enlighten" quality="20" skillId="SupportEnlighten" variantId="SupportEnlighten"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemSpellDamageAura" level="21" nameSpec="Zealotry" quality="0" skillId="Zealotry" variantId="Zealotry"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 2 Swap">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemGluttony" level="2" nameSpec="Gluttony" quality="0" skillId="SupportGluttony" variantId="SupportGluttony"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemGreaterKineticInstability" level="2" nameSpec="Greater Kinetic Instability" quality="0" skillId="SupportGreaterKineticInstability" variantId="SupportGreaterKineticInstability"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 2 Swap">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemFrostmage" level="2" nameSpec="Frostmage" quality="0" skillId="SupportFrostmage" variantId="SupportFrostmage"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 1 Swap">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemOverloadedIntensity" level="2" nameSpec="Overloaded Intensity" quality="0" skillId="SupportOverloadedIntensity" variantId="SupportOverloadedIntensity"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Helmet">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemCastOnWardBreak" level="1" nameSpec="Cast on Ward Break" quality="0" skillId="SupportCastOnWardBreak" variantId="SupportCastOnWardBreak"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemProjectileWeakness" level="20" nameSpec="Sniper&apos;s Mark" quality="20" skillId="SnipersMark" variantId="SnipersMark"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemPactOfBeidat" level="20" nameSpec="Pact of Beidat" quality="20" skillId="PactOfBeidat" variantId="PactOfBeidat"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemFlammability" level="21" nameSpec="Flammability" quality="0" skillId="Flammability" variantId="Flammability"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Boots">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemFrostblink" level="20" nameSpec="Frostblink of Wintry Blast" quality="20" skillId="FrostblinkAltX" variantId="FrostblinkAltX"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemArcaneSurge" level="20" nameSpec="Arcane Surge" quality="20" skillId="SupportArcaneSurge" variantId="SupportArcaneSurge"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemFasterCast" level="20" nameSpec="Faster Casting" quality="20" skillId="SupportFasterCasting" variantId="SupportFasterCasting"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Boots">
+				<Gem count="nil" enableGlobal1="false" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemVaalClarity" level="20" nameSpec="Vaal Clarity" quality="0" skillId="VaalClarity" variantId="VaalClarity"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 2">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemFrostShield" level="20" nameSpec="Frost Shield" quality="0" skillId="FrostShield" variantId="FrostShield"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemFrostBomb" level="20" nameSpec="Frost Bomb" quality="0" skillId="FrostBomb" variantId="FrostBomb"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemSigilOfPower" level="20" nameSpec="Sigil of Power" quality="19" skillId="SigilOfPower" variantId="SigilOfPower"/>
+			</Skill>
 			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="1" mainActiveSkillCalcs="1" slot="Body Armour">
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemOverloadedIntensity" level="3" nameSpec="Overloaded Intensity" quality="20" skillId="SupportOverloadedIntensity" variantId="SupportOverloadedIntensity"/>
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SkillGemFireball" level="21" nameSpec="Fireball" quality="20" skillId="Fireball" skillPart="1" variantId="Fireball"/>
@@ -828,6 +863,11 @@ Unaffected by Blind
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemAdditionalLevel" level="4" nameSpec="Empower" quality="0" skillId="SupportEmpower" variantId="SupportEmpower"/>
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemGreaterSpellEcho" level="3" nameSpec="Greater Spell Echo" quality="20" skillId="SupportGreaterSpellEcho" variantId="SupportGreaterSpellEcho"/>
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemGreaterDevour" level="2" nameSpec="Greater Devour" quality="20" skillId="SupportGreaterDevour" variantId="SupportGreaterDevour"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 1">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemImmortalCall" level="20" nameSpec="Immortal Call" quality="20" skillId="ImmortalCall" variantId="ImmortalCall"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemCastOnDamageTaken" level="20" nameSpec="Cast when Damage Taken" quality="20" skillId="SupportCastWhenDamageTaken" variantId="SupportCastWhenDamageTaken"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemIncreasedDuration" level="20" nameSpec="More Duration" quality="20" skillId="SupportMoreDuration" variantId="SupportMoreDuration"/>
 			</Skill>
 		</SkillSet>
 	</Skills>

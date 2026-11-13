@@ -237,6 +237,33 @@ Implicits: 0
 				<Gem nameSpec="Greater Ancestral Call" level="3" quality="20" enabled="true"/>
 				<Gem nameSpec="Greater Multiple Projectiles" level="20" quality="20" enabled="true"/>
 			</Skill>
+			<Skill enabled="true" includeInFullDPS="false" slot="Helmet">
+				<Gem nameSpec="Wrath" level="20" quality="0" enabled="false"/>
+				<Gem nameSpec="Enlighten" level="4" quality="0" enabled="false"/>
+				<Gem nameSpec="Discipline" level="20" quality="0" enabled="false"/>
+				<Gem nameSpec="Grace" level="20" quality="0" enabled="false"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="false" slot="Gloves">
+				<Gem nameSpec="Determination" level="20" quality="0" enabled="false"/>
+				<Gem nameSpec="Purity of Fire" level="20" quality="20" enabled="false"/>
+				<Gem nameSpec="Purity of Elements" level="20" quality="20" enabled="false"/>
+				<Gem nameSpec="Enlighten" level="4" quality="0" enabled="false"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="false" slot="Weapon 1">
+				<Gem nameSpec="Cast when Damage Taken" level="1" quality="20" enabled="false"/>
+				<Gem nameSpec="Vaal Molten Shell" level="7" quality="20" enabled="false"/>
+				<Gem nameSpec="Leap Slam" level="20" quality="0" enabled="false"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="false" slot="Weapon 2">
+				<Gem nameSpec="Mark On Hit" level="20" quality="20" enabled="false"/>
+				<Gem nameSpec="Sniper&#x27;s Mark" level="20" quality="20" enabled="false"/>
+				<Gem nameSpec="Vaal Haste" level="20" quality="0" enabled="false"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="false" slot="Boots">
+				<Gem nameSpec="Blood and Sand" level="7" quality="0" enabled="false"/>
+				<Gem nameSpec="Frost Shield" level="20" quality="0" enabled="false"/>
+				<Gem nameSpec="Vaal Smite" level="20" quality="20" enabled="false"/>
+			</Skill>
 		</SkillSet>
 	</Skills>
 	<Config activeConfigSet="1">

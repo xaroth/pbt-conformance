@@ -61,13 +61,10 @@
       "group": 1,
       "id": "LightningArrow",
       "name": "Lightning Arrow",
+      "level": 15,
+      "quality": 20,
       "attack": true,
       "supports": [
-        {
-          "id": "SupportMirageArcher",
-          "level": 16,
-          "quality": 10
-        },
         {
           "id": "SupportAddedLightningDamage",
           "level": 16
@@ -77,12 +74,17 @@
           "level": 15
         },
         {
-          "id": "SupportTrinity",
+          "id": "SupportInspiration",
           "level": 15,
           "quality": 10
         },
         {
-          "id": "SupportInspiration",
+          "id": "SupportMirageArcher",
+          "level": 16,
+          "quality": 10
+        },
+        {
+          "id": "SupportTrinity",
           "level": 15,
           "quality": 10
         }
@@ -147,13 +149,10 @@
       "group": 1,
       "id": "LightningArrow",
       "name": "Lightning Arrow",
+      "level": 15,
+      "quality": 20,
       "attack": true,
       "supports": [
-        {
-          "id": "SupportMirageArcher",
-          "level": 16,
-          "quality": 10
-        },
         {
           "id": "SupportAddedLightningDamage",
           "level": 16
@@ -163,12 +162,17 @@
           "level": 15
         },
         {
-          "id": "SupportTrinity",
+          "id": "SupportInspiration",
           "level": 15,
           "quality": 10
         },
         {
-          "id": "SupportInspiration",
+          "id": "SupportMirageArcher",
+          "level": 16,
+          "quality": 10
+        },
+        {
+          "id": "SupportTrinity",
           "level": 15,
           "quality": 10
         }

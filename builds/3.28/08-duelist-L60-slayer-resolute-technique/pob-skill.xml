@@ -156,6 +156,22 @@ Gain 50 Life when you Stun an Enemy
 				<Gem nameSpec="Chance to Bleed" level="17" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true" count="1"/>
 				<Gem nameSpec="Fortify" level="15" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="true" count="1"/>
 			</Skill>
+			<Skill slot="Helmet" enabled="true" mainActiveSkill="1" mainActiveSkillCalcs="1">
+				<Gem nameSpec="Pride" level="15" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Herald of Purity" level="15" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Seismic Cry" level="15" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Autoexertion" level="15" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+			</Skill>
+			<Skill slot="Gloves" enabled="true" mainActiveSkill="1" mainActiveSkillCalcs="1">
+				<Gem nameSpec="Leap Slam" level="16" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Faster Attacks" level="16" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Momentum" level="17" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Maim" level="16" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+			</Skill>
+			<Skill slot="Boots" enabled="true" mainActiveSkill="1" mainActiveSkillCalcs="1">
+				<Gem nameSpec="Blood Rage" level="15" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+				<Gem nameSpec="Enduring Cry" level="16" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true" count="1"/>
+			</Skill>
 		</SkillSet>
 	</Skills>
 	<Config activeConfigSet="1">

@@ -61,10 +61,22 @@
       "group": 7,
       "id": "Earthquake",
       "name": "Earthquake",
+      "level": 20,
+      "quality": 30,
       "attack": true,
       "supports": [
         {
           "id": "SupportEnduranceChargeOnMeleeStun",
+          "level": 21,
+          "quality": 27
+        },
+        {
+          "id": "SupportLifetap",
+          "level": 21,
+          "quality": 7
+        },
+        {
+          "id": "SupportMeleePhysicalDamage",
           "level": 21,
           "quality": 27
         },
@@ -77,16 +89,6 @@
           "id": "SupportVoidShockwave",
           "level": 4,
           "quality": 37
-        },
-        {
-          "id": "SupportMeleePhysicalDamage",
-          "level": 21,
-          "quality": 27
-        },
-        {
-          "id": "SupportLifetap",
-          "level": 21,
-          "quality": 7
         }
       ]
     }
@@ -146,13 +148,25 @@
       "TotalDotDPS": 666.26107784814
     },
     "mainSkill": {
-      "group": 1,
+      "group": 7,
       "id": "Earthquake",
       "name": "Earthquake",
+      "level": 20,
+      "quality": 30,
       "attack": true,
       "supports": [
         {
           "id": "SupportEnduranceChargeOnMeleeStun",
+          "level": 21,
+          "quality": 27
+        },
+        {
+          "id": "SupportLifetap",
+          "level": 21,
+          "quality": 7
+        },
+        {
+          "id": "SupportMeleePhysicalDamage",
           "level": 21,
           "quality": 27
         },
@@ -165,16 +179,6 @@
           "id": "SupportVoidShockwave",
           "level": 4,
           "quality": 37
-        },
-        {
-          "id": "SupportMeleePhysicalDamage",
-          "level": 21,
-          "quality": 27
-        },
-        {
-          "id": "SupportLifetap",
-          "level": 21,
-          "quality": 7
         }
       ]
     }

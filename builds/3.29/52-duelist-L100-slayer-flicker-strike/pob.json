@@ -61,20 +61,14 @@
       "group": 3,
       "id": "FlickerStrike",
       "name": "Flicker Strike",
+      "level": 21,
+      "quality": 30,
       "attack": true,
       "supports": [
         {
-          "id": "SupportItemRarity",
-          "level": 4
-        },
-        {
-          "id": "SupportIceBite",
-          "level": 32
-        },
-        {
-          "id": "SupportGreaterMultistrike",
-          "level": 3,
-          "quality": 33
+          "id": "SupportEnduranceChargeOnMeleeStun",
+          "level": 21,
+          "quality": 20
         },
         {
           "id": "SupportFortify",
@@ -82,9 +76,17 @@
           "quality": 20
         },
         {
-          "id": "SupportEnduranceChargeOnMeleeStun",
-          "level": 21,
-          "quality": 20
+          "id": "SupportGreaterMultistrike",
+          "level": 3,
+          "quality": 33
+        },
+        {
+          "id": "SupportIceBite",
+          "level": 32
+        },
+        {
+          "id": "SupportItemRarity",
+          "level": 4
         }
       ]
     }
@@ -144,23 +146,17 @@
       "TotalDotDPS": 954.6752668016
     },
     "mainSkill": {
-      "group": 1,
+      "group": 3,
       "id": "FlickerStrike",
       "name": "Flicker Strike",
+      "level": 21,
+      "quality": 30,
       "attack": true,
       "supports": [
         {
-          "id": "SupportItemRarity",
-          "level": 4
-        },
-        {
-          "id": "SupportIceBite",
-          "level": 32
-        },
-        {
-          "id": "SupportGreaterMultistrike",
-          "level": 3,
-          "quality": 33
+          "id": "SupportEnduranceChargeOnMeleeStun",
+          "level": 21,
+          "quality": 20
         },
         {
           "id": "SupportFortify",
@@ -168,9 +164,17 @@
           "quality": 20
         },
         {
-          "id": "SupportEnduranceChargeOnMeleeStun",
-          "level": 21,
-          "quality": 20
+          "id": "SupportGreaterMultistrike",
+          "level": 3,
+          "quality": 33
+        },
+        {
+          "id": "SupportIceBite",
+          "level": 32
+        },
+        {
+          "id": "SupportItemRarity",
+          "level": 4
         }
       ]
     }

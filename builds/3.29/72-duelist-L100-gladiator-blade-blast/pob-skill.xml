@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PathOfBuilding>
-	<Build ascendClassName="Gladiator" bandit="None" characterLevelAutoMode="false" className="Duelist" level="100" mainSocketGroup="2" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="3_0" viewMode="TREE">
+	<Build ascendClassName="Gladiator" bandit="None" characterLevelAutoMode="false" className="Duelist" level="100" mainSocketGroup="6" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="3_0" viewMode="TREE">
 		<PlayerStat stat="AverageHit" value="2381.445"/>
 		<PlayerStat stat="AverageBurstDamage" value="2381.445"/>
 		<PlayerStat stat="Speed" value="7.5757575757576"/>
@@ -650,6 +650,29 @@ Magic Utility Flask Effects cannot be removed
 			<Skill enabled="false" includeInFullDPS="nil" label="On Kill Monster Explosion" mainActiveSkill="1" mainActiveSkillCalcs="1" source="Explode">
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" level="1" nameSpec="" quality="0" skillId="EnemyExplode" skillPart="1" skillPartCalcs="1"/>
 			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Boots">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemSanctify" level="20" nameSpec="Purifying Flame of Revelations" quality="20" skillId="PurifyingFlameAltX" skillPart="1" variantId="PurifyingFlameAltX"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemVulnerability" level="21" nameSpec="Despair" quality="23" skillId="Despair" variantId="Despair"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemEnfeeble" level="20" nameSpec="Enfeeble" quality="20" skillId="Enfeeble" variantId="Enfeeble"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemCastOnStunned" level="20" nameSpec="Cast when Stunned" quality="20" skillId="SupportCastWhenStunned" variantId="SupportCastWhenStunned"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="2" mainActiveSkillCalcs="2" slot="Helmet">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemCastOnStunned" level="20" nameSpec="Cast when Stunned" quality="20" skillId="SupportCastWhenStunned" variantId="SupportCastWhenStunned"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemGreaterSpellCascade" level="3" nameSpec="Greater Spell Cascade" quality="23" skillId="SupportGreaterSpellCascade" variantId="SupportGreaterSpellCascade"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemVoidSphere" level="20" nameSpec="Void Sphere of Rending" quality="20" skillId="VoidSphereAltX" variantId="VoidSphereAltX"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemBladefall" level="21" nameSpec="Bladefall" quality="20" skillId="Bladefall" variantId="Bladefall"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="1" mainActiveSkillCalcs="1" slot="Gloves">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemReturningProjectiles" level="20" nameSpec="Returning Projectiles" quality="23" skillId="SupportReturningProjectiles" variantId="SupportReturningProjectiles"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemCastOnStunned" level="20" nameSpec="Cast when Stunned" quality="20" skillId="SupportCastWhenStunned" variantId="SupportCastWhenStunned"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemEtherealKnives" level="21" nameSpec="Ethereal Knives of Lingering Blades" quality="20" skillId="EtherealKnivesAltX" variantId="EtherealKnivesAltX"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemEssenceDrain" level="21" nameSpec="Essence Drain of Wickedness" quality="20" skillId="EssenceDrainAltY" variantId="EssenceDrainAltY"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 1">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemWitheringStep" level="21" nameSpec="Withering Step" quality="23" skillId="WitheringStep" variantId="WitheringStep"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemTempestShield" level="21" nameSpec="Tempest Shield" quality="20" skillId="TempestShield" variantId="TempestShield"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemVitality" level="1" nameSpec="Vitality" quality="0" skillId="Vitality" variantId="Vitality"/>
+			</Skill>
 			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="1" mainActiveSkillCalcs="1" slot="Body Armour">
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemPhysicalToLightning" level="21" nameSpec="Physical to Lightning" quality="20" skillId="SupportPhysicalToLightning" variantId="SupportPhysicalToLightning"/>
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemUnboundAilments" level="21" nameSpec="Unbound Ailments" quality="20" skillId="SupportUnboundAilments" variantId="SupportUnboundAilments"/>
@@ -657,6 +680,11 @@ Magic Utility Flask Effects cannot be removed
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemDeadlyAilments" level="21" nameSpec="Deadly Ailments" quality="20" skillId="SupportDeadlyAilments" variantId="SupportDeadlyAilments"/>
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemAddedFireDamage" level="21" nameSpec="Added Fire Damage" quality="20" skillId="SupportAddedFireDamage" variantId="SupportAddedFireDamage"/>
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemCastOnStunned" level="20" nameSpec="Cast when Stunned" quality="20" skillId="SupportCastWhenStunned" variantId="SupportCastWhenStunned"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 2">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemPetrifiedBlood" level="21" nameSpec="Petrified Blood" quality="20" skillId="PetrifiedBlood" variantId="PetrifiedBlood"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemEternalBlessing" level="20" nameSpec="Eternal Blessing" quality="20" skillId="SupportEternalBlessing" variantId="SupportEternalBlessing"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemDamageOverTimeAura" level="21" nameSpec="Malevolence" quality="0" skillId="Malevolence" variantId="Malevolence"/>
 			</Skill>
 			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Body Armour" source="Item:19:The Brass Dome, Gladiator Plate">
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" level="20" nameSpec="Death Aura" quality="0" skillId="DeathAura"/>

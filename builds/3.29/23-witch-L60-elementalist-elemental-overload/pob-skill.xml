@@ -161,6 +161,21 @@ Implicits: 1
 				<Gem nameSpec="Elemental Focus" gemId="Metadata/Items/Gems/SupportGemElementalFocus" skillId="SupportElementalFocus" variantId="SupportElementalFocus" level="15" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="false" count="1"/>
 				<Gem nameSpec="Swift Affliction" gemId="Metadata/Items/Gems/SupportGemRapidDecay" skillId="SupportSwiftAffliction" variantId="SupportSwiftAffliction" level="15" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="false" count="1"/>
 			</Skill>
+			<Skill enabled="true" slot="Gloves" mainActiveSkill="1" mainActiveSkillCalcs="1" includeInFullDPS="false">
+				<Gem nameSpec="Herald of Ash" gemId="Metadata/Items/Gems/SkillGemHeraldOfAsh" skillId="HeraldOfAsh" variantId="HeraldOfAsh" level="15" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="false" count="1"/>
+				<Gem nameSpec="Herald of Purity" gemId="Metadata/Items/Gems/SkillGemHeraldOfPurity" skillId="HeraldOfPurity" variantId="HeraldOfPurity" level="15" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="false" count="1"/>
+				<Gem nameSpec="Flammability" gemId="Metadata/Items/Gems/SkillGemFlammability" skillId="Flammability" variantId="Flammability" level="15" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="false" count="1"/>
+				<Gem nameSpec="Arcane Surge" gemId="Metadata/Items/Gems/SupportGemArcaneSurge" skillId="SupportArcaneSurge" variantId="SupportArcaneSurge" level="17" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="false" count="1"/>
+			</Skill>
+			<Skill enabled="true" slot="Boots" mainActiveSkill="1" mainActiveSkillCalcs="1" includeInFullDPS="false">
+				<Gem nameSpec="Flame Dash" gemId="Metadata/Items/Gems/SkillGemFlameDash" skillId="FlameDash" variantId="FlameDash" level="16" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="false" count="1"/>
+				<Gem nameSpec="Summon Flame Golem" gemId="Metadata/Items/Gems/SkillGemSummonFlameGolem" skillId="SummonFlameGolem" variantId="SummonFlameGolem" level="14" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="false" count="1"/>
+				<Gem nameSpec="Elemental Weakness" gemId="Metadata/Items/Gems/SkillGemElementalWeakness" skillId="ElementalWeakness" variantId="ElementalWeakness" level="15" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="false" count="1"/>
+			</Skill>
+			<Skill enabled="true" slot="Helmet" mainActiveSkill="1" mainActiveSkillCalcs="1" includeInFullDPS="false">
+				<Gem nameSpec="Molten Shell" gemId="Metadata/Items/Gems/SkillGemMoltenShell" skillId="MoltenShell" variantId="MoltenShell" level="15" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="false" count="1"/>
+				<Gem nameSpec="Cast when Damage Taken" gemId="Metadata/Items/Gems/SupportGemCastOnDamageTaken" skillId="SupportCastWhenDamageTaken" variantId="SupportCastWhenDamageTaken" level="12" quality="0" enabled="true" enableGlobal1="true" enableGlobal2="false" count="1"/>
+			</Skill>
 		</SkillSet>
 	</Skills>
 	<Config activeConfigSet="1">

@@ -72,20 +72,17 @@
       "group": 1,
       "id": "ViperStrikeAltX",
       "name": "Viper Strike of the Mamba",
+      "level": 20,
+      "quality": 10,
       "attack": true,
       "supports": [
         {
-          "id": "SupportVoidManipulation",
-          "level": 20,
-          "quality": 10
-        },
-        {
-          "id": "SupportNightblade",
-          "level": 20,
-          "quality": 10
-        },
-        {
           "id": "SupportDamageOnFullLife",
+          "level": 20,
+          "quality": 10
+        },
+        {
+          "id": "SupportDeadlyAilments",
           "level": 20,
           "quality": 10
         },
@@ -95,7 +92,12 @@
           "quality": 10
         },
         {
-          "id": "SupportDeadlyAilments",
+          "id": "SupportNightblade",
+          "level": 20,
+          "quality": 10
+        },
+        {
+          "id": "SupportVoidManipulation",
           "level": 20,
           "quality": 10
         }
@@ -171,20 +173,17 @@
       "group": 1,
       "id": "ViperStrikeAltX",
       "name": "Viper Strike of the Mamba",
+      "level": 20,
+      "quality": 10,
       "attack": true,
       "supports": [
         {
-          "id": "SupportVoidManipulation",
-          "level": 20,
-          "quality": 10
-        },
-        {
-          "id": "SupportNightblade",
-          "level": 20,
-          "quality": 10
-        },
-        {
           "id": "SupportDamageOnFullLife",
+          "level": 20,
+          "quality": 10
+        },
+        {
+          "id": "SupportDeadlyAilments",
           "level": 20,
           "quality": 10
         },
@@ -194,7 +193,12 @@
           "quality": 10
         },
         {
-          "id": "SupportDeadlyAilments",
+          "id": "SupportNightblade",
+          "level": 20,
+          "quality": 10
+        },
+        {
+          "id": "SupportVoidManipulation",
           "level": 20,
           "quality": 10
         }

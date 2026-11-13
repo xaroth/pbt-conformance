@@ -61,14 +61,10 @@
       "group": 10,
       "id": "DeathAura",
       "name": "Death Aura",
+      "level": 20,
       "supports": [
         {
           "id": "SupportEfficacy",
-          "level": 20,
-          "quality": 20
-        },
-        {
-          "id": "SupportSwiftAffliction",
           "level": 20,
           "quality": 20
         },
@@ -81,6 +77,11 @@
           "id": "SupportLifetap",
           "level": 20,
           "quality": 10
+        },
+        {
+          "id": "SupportSwiftAffliction",
+          "level": 20,
+          "quality": 20
         },
         {
           "id": "SupportVoidManipulation",
@@ -110,7 +111,7 @@
       "ChaosResistTotal": 52,
       "ColdResist": 75,
       "ColdResistTotal": 91,
-      "CombinedDPS": 29868.41088,
+      "CombinedDPS": 85716.86409216,
       "CritChance": 0,
       "Dex": 197,
       "EnergyShield": 93,
@@ -142,12 +143,40 @@
       "SpellSuppressionChance": 0,
       "Str": 314,
       "TotalDPS": 0,
-      "TotalDotDPS": 29868.41088
+      "TotalDotDPS": 85716.86409216
     },
     "mainSkill": {
-      "group": 2,
+      "group": 10,
       "id": "DeathAura",
-      "name": "Death Aura"
+      "name": "Death Aura",
+      "level": 20,
+      "supports": [
+        {
+          "id": "SupportEfficacy",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportLessDuration",
+          "level": 20,
+          "quality": 10
+        },
+        {
+          "id": "SupportLifetap",
+          "level": 20,
+          "quality": 10
+        },
+        {
+          "id": "SupportSwiftAffliction",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportVoidManipulation",
+          "level": 20,
+          "quality": 20
+        }
+      ]
     }
   },
   "gear": {

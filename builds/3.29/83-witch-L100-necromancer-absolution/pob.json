@@ -64,32 +64,34 @@
       "group": 1,
       "id": "Absolution",
       "name": "Absolution",
+      "level": 28,
+      "quality": 30,
       "minion": {
         "name": "Sentinel of Absolution",
         "skill": "Default Attack"
       },
       "supports": [
         {
+          "id": "SupportAnnhilation",
+          "level": 6,
+          "quality": 20
+        },
+        {
           "id": "SupportConcentratedEffect",
           "level": 20
         },
         {
-          "id": "SupportMinionDamage",
-          "level": 20
+          "id": "SupportGreaterSpellEcho",
+          "level": 6,
+          "quality": 31
         },
         {
           "id": "SupportHypothermia",
           "level": 20
         },
         {
-          "id": "SupportAnnhilation",
-          "level": 6,
-          "quality": 20
-        },
-        {
-          "id": "SupportGreaterSpellEcho",
-          "level": 6,
-          "quality": 31
+          "id": "SupportMinionDamage",
+          "level": 20
         },
         {
           "id": "SupportPhysicalToLightning",
@@ -160,32 +162,34 @@
       "group": 1,
       "id": "Absolution",
       "name": "Absolution",
+      "level": 28,
+      "quality": 30,
       "minion": {
         "name": "Sentinel of Absolution",
         "skill": "Default Attack"
       },
       "supports": [
         {
+          "id": "SupportAnnhilation",
+          "level": 6,
+          "quality": 20
+        },
+        {
           "id": "SupportConcentratedEffect",
           "level": 20
         },
         {
-          "id": "SupportMinionDamage",
-          "level": 20
+          "id": "SupportGreaterSpellEcho",
+          "level": 6,
+          "quality": 31
         },
         {
           "id": "SupportHypothermia",
           "level": 20
         },
         {
-          "id": "SupportAnnhilation",
-          "level": 6,
-          "quality": 20
-        },
-        {
-          "id": "SupportGreaterSpellEcho",
-          "level": 6,
-          "quality": 31
+          "id": "SupportMinionDamage",
+          "level": 20
         },
         {
           "id": "SupportPhysicalToLightning",

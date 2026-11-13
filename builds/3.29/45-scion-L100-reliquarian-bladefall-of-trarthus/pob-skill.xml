@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PathOfBuilding>
-	<Build ascendClassName="Reliquarian" bandit="None" characterLevelAutoMode="false" className="Scion" level="100" mainSocketGroup="1" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="3_0" viewMode="TREE">
+	<Build ascendClassName="Reliquarian" bandit="None" characterLevelAutoMode="false" className="Scion" level="100" mainSocketGroup="2" pantheonMajorGod="None" pantheonMinorGod="None" targetVersion="3_0" viewMode="TREE">
 		<PlayerStat stat="AverageHit" value="3559308.7562269"/>
 		<PlayerStat stat="AverageBurstDamage" value="3559308.7562269"/>
 		<PlayerStat stat="Speed" value="0"/>
@@ -706,6 +706,12 @@ Has 1 Abyssal Socket
 	</Items>
 	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="nil" showLegacyGems="false" showSupportGemTypes="ALL" sortGemsByDPS="true" sortGemsByDPSField="CombinedDPS">
 		<SkillSet id="1">
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="1" slot="Helmet">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemWrath" level="20" nameSpec="Wrath" quality="0" skillId="Wrath" variantId="Wrath"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemDetermination" level="16" nameSpec="Determination" quality="0" skillId="Determination" variantId="Determination"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemFireResistAura" level="21" nameSpec="Purity of Fire" quality="20" skillId="PurityOfFire" variantId="PurityOfFire"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemAdditionalXP" level="4" nameSpec="Enlighten" quality="12" skillId="SupportEnlighten" variantId="SupportEnlighten"/>
+			</Skill>
 			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="1" mainActiveSkillCalcs="1" slot="Body Armour">
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemReducedMana" level="20" nameSpec="Inspiration" quality="16" skillId="SupportInspiration" variantId="SupportInspiration"/>
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemIncreasedCriticalDamage" level="20" nameSpec="Increased Critical Damage" quality="20" skillId="SupportIncreasedCriticalDamage" variantId="SupportIncreasedCriticalDamage"/>
@@ -713,6 +719,34 @@ Has 1 Abyssal Socket
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemMulticast" level="20" nameSpec="Spell Echo" quality="0" skillId="SupportSpellEcho" variantId="SupportSpellEcho"/>
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemPhysicalToLightning" level="20" nameSpec="Physical to Lightning" quality="20" skillId="SupportPhysicalToLightning" variantId="SupportPhysicalToLightning"/>
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SkillGemBladeBlast" level="20" nameSpec="Blade Blast" quality="20" skillId="BladeBlast" skillPart="2" skillPartCalcs="2" skillStageCount="9" skillStageCountCalcs="9" variantId="BladeBlast"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 1 Swap">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemGluttony" level="1" nameSpec="Gluttony" quality="0" skillId="SupportGluttony" variantId="SupportGluttony"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemGluttony" level="1" nameSpec="Gluttony" quality="0" skillId="SupportGluttony" variantId="SupportGluttony"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemGluttony" level="1" nameSpec="Gluttony" quality="0" skillId="SupportGluttony" variantId="SupportGluttony"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemGluttony" level="1" nameSpec="Gluttony" quality="0" skillId="SupportGluttony" variantId="SupportGluttony"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Gloves">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemDesecrate" level="16" nameSpec="Desecrate" quality="20" skillId="Desecrate" variantId="Desecrate"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemCastWhileChannelling" level="20" nameSpec="Cast while Channelling" quality="0" skillId="SupportCastWhileChannelling" variantId="SupportCastWhileChannelling"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemVolatileDead" level="19" nameSpec="Volatile Dead of Seething" quality="0" skillId="VolatileDeadAltY" skillPart="1" variantId="VolatileDeadAltY"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemCyclone" level="19" nameSpec="Cyclone" quality="0" skillId="Cyclone" variantId="Cyclone"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 1">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemMoltenShell" level="16" nameSpec="Molten Shell" quality="0" skillId="MoltenShell" variantId="MoltenShell"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemNewPhaseRun" level="20" nameSpec="Phase Run" quality="0" skillId="PhaseRun" variantId="PhaseRun"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemSummonGhostOnKill" level="21" nameSpec="Summon Phantasm" quality="20" skillId="SupportSummonPhantasm" variantId="SupportSummonPhantasm"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemIncreasedDuration" level="21" nameSpec="More Duration" quality="0" skillId="SupportMoreDuration" variantId="SupportMoreDuration"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemAutomation" level="21" nameSpec="Automation" quality="0" skillId="Automation" variantId="Automation"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 1">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemCongregation" level="1" nameSpec="Congregation" quality="20" skillId="SupportCongregation" variantId="SupportCongregation"/>
+			</Skill>
+			<Skill enabled="true" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Boots">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemManaInfusedStaff" level="21" nameSpec="Mana-Infused Staff" quality="0" skillId="ManaInfusedStaff" variantId="ManaInfusedStaff"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemHeraldOfPurity" level="20" nameSpec="Herald of Purity" quality="12" skillId="HeraldOfPurity" skillMinion="AxisEliteSoldierHeraldOfLight" skillMinionSkill="1" skillMinionSkillCalcs="1" variantId="HeraldOfPurity"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SupportGemMarkOnHit" level="20" nameSpec="Mark On Hit" quality="20" skillId="SupportMarkOnHit" variantId="SupportMarkOnHit"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemCriticalWeakness" level="20" nameSpec="Assassin&apos;s Mark" quality="20" skillId="AssassinsMark" variantId="AssassinsMark"/>
 			</Skill>
 			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 1" source="Item:19:Soulwrest, Ezomyte Staff">
 				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="true" level="25" nameSpec="Triggered Summon Phantasm" quality="0" skillId="TriggeredSummonGhostOnKill" skillMinion="SummonedPhantasm" skillMinionSkill="1" skillMinionSkillCalcs="1"/>

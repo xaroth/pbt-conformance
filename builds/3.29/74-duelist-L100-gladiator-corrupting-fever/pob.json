@@ -61,6 +61,8 @@
       "group": 2,
       "id": "CorruptingFever",
       "name": "Corrupting Fever",
+      "level": 29,
+      "quality": 10,
       "supports": [
         {
           "id": "SupportBrutality",
@@ -73,13 +75,13 @@
           "quality": 20
         },
         {
+          "id": "SupportEmpower",
+          "level": 5
+        },
+        {
           "id": "SupportSwiftAffliction",
           "level": 23,
           "quality": 20
-        },
-        {
-          "id": "SupportEmpower",
-          "level": 5
         }
       ]
     }
@@ -142,6 +144,8 @@
       "group": 2,
       "id": "CorruptingFever",
       "name": "Corrupting Fever",
+      "level": 29,
+      "quality": 10,
       "supports": [
         {
           "id": "SupportBrutality",
@@ -154,13 +158,13 @@
           "quality": 20
         },
         {
+          "id": "SupportEmpower",
+          "level": 5
+        },
+        {
           "id": "SupportSwiftAffliction",
           "level": 23,
           "quality": 20
-        },
-        {
-          "id": "SupportEmpower",
-          "level": 5
         }
       ]
     }

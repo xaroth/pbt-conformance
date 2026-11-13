@@ -62,26 +62,27 @@
       "group": 1,
       "id": "WinterOrb",
       "name": "Winter Orb",
+      "level": 3,
       "supports": [
         {
-          "id": "SupportGreaterMultipleProjectiles",
-          "level": 2
+          "id": "SupportAddedColdDamage",
+          "level": 7
         },
         {
           "id": "SupportAddedLightningDamage",
           "level": 7
         },
         {
+          "id": "SupportEnergyLeech",
+          "level": 3
+        },
+        {
           "id": "SupportFasterCasting",
           "level": 5
         },
         {
-          "id": "SupportAddedColdDamage",
-          "level": 7
-        },
-        {
-          "id": "SupportEnergyLeech",
-          "level": 3
+          "id": "SupportGreaterMultipleProjectiles",
+          "level": 2
         }
       ]
     }
@@ -145,26 +146,27 @@
       "group": 1,
       "id": "WinterOrb",
       "name": "Winter Orb",
+      "level": 3,
       "supports": [
         {
-          "id": "SupportGreaterMultipleProjectiles",
-          "level": 2
+          "id": "SupportAddedColdDamage",
+          "level": 7
         },
         {
           "id": "SupportAddedLightningDamage",
           "level": 7
         },
         {
+          "id": "SupportEnergyLeech",
+          "level": 3
+        },
+        {
           "id": "SupportFasterCasting",
           "level": 5
         },
         {
-          "id": "SupportAddedColdDamage",
-          "level": 7
-        },
-        {
-          "id": "SupportEnergyLeech",
-          "level": 3
+          "id": "SupportGreaterMultipleProjectiles",
+          "level": 2
         }
       ]
     }

@@ -199,6 +199,23 @@ Implicits: 0
 				<Gem enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SkillGemSupportMeleePhysicalDamage" level="20" nameSpec="Melee Physical Damage" quality="10" skillId="SupportMeleePhysicalDamage" variantId="SupportMeleePhysicalDamage"/>
 				<Gem enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SkillGemSupportDeadlyAilments" level="20" nameSpec="Deadly Ailments" quality="10" skillId="SupportDeadlyAilments" variantId="SupportDeadlyAilments"/>
 			</Skill>
+			<Skill enabled="true" slot="Helmet" label="" includeInFullDPS="false">
+				<Gem enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemDiscipline" level="20" nameSpec="Discipline" quality="10" skillId="Discipline" variantId="Discipline"/>
+				<Gem enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemFleshAndStone" level="20" nameSpec="Flesh and Stone" quality="10" skillId="FleshAndStone" variantId="FleshAndStone"/>
+				<Gem enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemPurityOfElements" level="20" nameSpec="Purity of Elements" quality="10" skillId="PurityOfElements" variantId="PurityOfElements"/>
+			</Skill>
+			<Skill enabled="true" slot="Gloves" label="" includeInFullDPS="false">
+				<Gem enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemPrecision" level="1" nameSpec="Precision" quality="0" skillId="Precision" variantId="Precision"/>
+				<Gem enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemClarity" level="1" nameSpec="Clarity" quality="0" skillId="Clarity" variantId="Clarity"/>
+			</Skill>
+			<Skill enabled="true" slot="Boots" label="" includeInFullDPS="false">
+				<Gem enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemAlchemistsMark" level="20" nameSpec="Alchemist's Mark" quality="10" skillId="AlchemistsMark" variantId="AlchemistsMark"/>
+				<Gem enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemWitheringStep" level="20" nameSpec="Withering Step" quality="10" skillId="WitheringStep" variantId="WitheringStep"/>
+			</Skill>
+			<Skill enabled="true" slot="Weapon 2" label="" includeInFullDPS="false">
+				<Gem enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemWhirlingBlades" level="20" nameSpec="Whirling Blades" quality="10" skillId="WhirlingBlades" variantId="WhirlingBlades"/>
+				<Gem enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SkillGemSupportFasterAttacks" level="20" nameSpec="Faster Attacks" quality="10" skillId="SupportFasterAttacks" variantId="SupportFasterAttacks"/>
+			</Skill>
 		</SkillSet>
 	</Skills>
 	<Config activeConfigSet="1">

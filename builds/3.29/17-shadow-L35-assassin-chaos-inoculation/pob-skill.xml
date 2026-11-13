@@ -164,6 +164,17 @@ Implicits: 1
 				<Gem enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SkillGemSupportVoidManipulation" level="8" nameSpec="Void Manipulation" quality="0" skillId="SupportVoidManipulation" variantId="SupportVoidManipulation"/>
 				<Gem enableGlobal1="true" enableGlobal2="true" enabled="true" gemId="Metadata/Items/Gems/SkillGemSupportUnboundAilments" level="8" nameSpec="Unbound Ailments" quality="0" skillId="SupportUnboundAilments" variantId="SupportUnboundAilments"/>
 			</Skill>
+			<Skill enabled="true" slot="Helmet" label="" includeInFullDPS="false">
+				<Gem enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemHeraldOfAgony" level="6" nameSpec="Herald of Agony" quality="0" skillId="HeraldOfAgony" variantId="HeraldOfAgony"/>
+				<Gem enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemPrecision" level="7" nameSpec="Precision" quality="0" skillId="Precision" variantId="Precision"/>
+			</Skill>
+			<Skill enabled="true" slot="Gloves" label="" includeInFullDPS="false">
+				<Gem enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemWitheringStep" level="7" nameSpec="Withering Step" quality="0" skillId="WitheringStep" variantId="WitheringStep"/>
+				<Gem enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemDespair" level="4" nameSpec="Despair" quality="0" skillId="Despair" variantId="Despair"/>
+			</Skill>
+			<Skill enabled="true" slot="Boots" label="" includeInFullDPS="false">
+				<Gem enableGlobal1="true" enableGlobal2="true" enabled="false" gemId="Metadata/Items/Gems/SkillGemDash" level="9" nameSpec="Dash" quality="0" skillId="Dash" variantId="Dash"/>
+			</Skill>
 		</SkillSet>
 	</Skills>
 	<Config activeConfigSet="1">

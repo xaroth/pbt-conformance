@@ -61,6 +61,8 @@
       "group": 5,
       "id": "LancingSteelAltX",
       "name": "Lancing Steel of Spraying",
+      "level": 27,
+      "quality": 20,
       "attack": true,
       "supports": [
         {
@@ -69,8 +71,8 @@
           "quality": 10
         },
         {
-          "id": "SupportReturningProjectiles",
-          "level": 23,
+          "id": "SupportCastOnCriticalStrike",
+          "level": 21,
           "quality": 30
         },
         {
@@ -79,8 +81,8 @@
           "quality": 30
         },
         {
-          "id": "SupportCastOnCriticalStrike",
-          "level": 21,
+          "id": "SupportReturningProjectiles",
+          "level": 23,
           "quality": 30
         }
       ]
@@ -141,9 +143,11 @@
       "TotalDotDPS": 0
     },
     "mainSkill": {
-      "group": 3,
+      "group": 5,
       "id": "LancingSteelAltX",
       "name": "Lancing Steel of Spraying",
+      "level": 27,
+      "quality": 20,
       "attack": true,
       "supports": [
         {
@@ -152,8 +156,8 @@
           "quality": 10
         },
         {
-          "id": "SupportReturningProjectiles",
-          "level": 23,
+          "id": "SupportCastOnCriticalStrike",
+          "level": 21,
           "quality": 30
         },
         {
@@ -162,8 +166,8 @@
           "quality": 30
         },
         {
-          "id": "SupportCastOnCriticalStrike",
-          "level": 21,
+          "id": "SupportReturningProjectiles",
+          "level": 23,
           "quality": 30
         }
       ]

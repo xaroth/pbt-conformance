@@ -65,23 +65,20 @@
       "group": 8,
       "id": "SummonFlameGolemAltX",
       "name": "Summon Flame Golem of Hordes",
+      "level": 28,
+      "quality": 33,
       "minion": {
         "name": "Flame Golem",
         "skill": "Immolate"
       },
       "supports": [
         {
-          "id": "SupportGreaterSpellEcho",
+          "id": "SupportCongregation",
           "level": 6,
           "quality": 30
         },
         {
-          "id": "SupportMinionDamage",
-          "level": 23,
-          "quality": 20
-        },
-        {
-          "id": "SupportCongregation",
+          "id": "SupportGreaterSpellEcho",
           "level": 6,
           "quality": 30
         },
@@ -89,6 +86,11 @@
           "id": "SupportGreaterVolley",
           "level": 23,
           "quality": 30
+        },
+        {
+          "id": "SupportMinionDamage",
+          "level": 23,
+          "quality": 20
         },
         {
           "id": "SupportPredator",
@@ -157,26 +159,23 @@
       "TotalDotDPS": 0
     },
     "mainSkill": {
-      "group": 1,
+      "group": 8,
       "id": "SummonFlameGolemAltX",
       "name": "Summon Flame Golem of Hordes",
+      "level": 28,
+      "quality": 33,
       "minion": {
         "name": "Flame Golem",
         "skill": "Immolate"
       },
       "supports": [
         {
-          "id": "SupportGreaterSpellEcho",
+          "id": "SupportCongregation",
           "level": 6,
           "quality": 30
         },
         {
-          "id": "SupportMinionDamage",
-          "level": 23,
-          "quality": 20
-        },
-        {
-          "id": "SupportCongregation",
+          "id": "SupportGreaterSpellEcho",
           "level": 6,
           "quality": 30
         },
@@ -184,6 +183,11 @@
           "id": "SupportGreaterVolley",
           "level": 23,
           "quality": 30
+        },
+        {
+          "id": "SupportMinionDamage",
+          "level": 23,
+          "quality": 20
         },
         {
           "id": "SupportPredator",

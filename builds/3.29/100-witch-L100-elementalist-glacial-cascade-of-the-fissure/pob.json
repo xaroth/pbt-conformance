@@ -61,15 +61,14 @@
       "group": 3,
       "id": "GlacialCascadeAltX",
       "name": "Glacial Cascade of the Fissure",
+      "level": 32,
+      "quality": 30,
       "mine": true,
       "supports": [
         {
-          "id": "SupportIncreasedAreaOfEffect",
-          "level": 16
-        },
-        {
-          "id": "SupportHypothermia",
-          "level": 16
+          "id": "SupportChargedMines",
+          "level": 18,
+          "quality": 20
         },
         {
           "id": "SupportHighImpactMine",
@@ -77,12 +76,15 @@
           "quality": 20
         },
         {
-          "id": "SupportMinefield",
-          "level": 18,
-          "quality": 20
+          "id": "SupportHypothermia",
+          "level": 16
         },
         {
-          "id": "SupportChargedMines",
+          "id": "SupportIncreasedAreaOfEffect",
+          "level": 16
+        },
+        {
+          "id": "SupportMinefield",
           "level": 18,
           "quality": 20
         }
@@ -144,18 +146,17 @@
       "TotalDotDPS": 0
     },
     "mainSkill": {
-      "group": 2,
+      "group": 3,
       "id": "GlacialCascadeAltX",
       "name": "Glacial Cascade of the Fissure",
+      "level": 32,
+      "quality": 30,
       "mine": true,
       "supports": [
         {
-          "id": "SupportIncreasedAreaOfEffect",
-          "level": 16
-        },
-        {
-          "id": "SupportHypothermia",
-          "level": 16
+          "id": "SupportChargedMines",
+          "level": 18,
+          "quality": 20
         },
         {
           "id": "SupportHighImpactMine",
@@ -163,12 +164,15 @@
           "quality": 20
         },
         {
-          "id": "SupportMinefield",
-          "level": 18,
-          "quality": 20
+          "id": "SupportHypothermia",
+          "level": 16
         },
         {
-          "id": "SupportChargedMines",
+          "id": "SupportIncreasedAreaOfEffect",
+          "level": 16
+        },
+        {
+          "id": "SupportMinefield",
           "level": 18,
           "quality": 20
         }

@@ -64,25 +64,27 @@
       "group": 2,
       "id": "AnimateGuardianAltX",
       "name": "Animate Guardian of Smiting",
+      "level": 28,
+      "quality": 30,
       "minion": {
         "name": "Animated Guardian",
         "skill": "Smite"
       },
       "supports": [
         {
-          "id": "SupportMinionSpeed",
-          "level": 20
-        },
-        {
           "id": "SupportElementalArmy",
           "level": 20
         },
         {
-          "id": "SupportFirePenetration",
+          "id": "SupportElementalDamageWithAttacks",
           "level": 20
         },
         {
-          "id": "SupportElementalDamageWithAttacks",
+          "id": "SupportEmpower",
+          "level": 5
+        },
+        {
+          "id": "SupportFirePenetration",
           "level": 20
         },
         {
@@ -91,13 +93,13 @@
           "quality": 30
         },
         {
-          "id": "SupportEmpower",
-          "level": 5
-        },
-        {
           "id": "SupportMinionDamage",
           "level": 24,
           "quality": 30
+        },
+        {
+          "id": "SupportMinionSpeed",
+          "level": 20
         }
       ]
     }
@@ -160,28 +162,30 @@
       "TotalDotDPS": 0
     },
     "mainSkill": {
-      "group": 1,
+      "group": 2,
       "id": "AnimateGuardianAltX",
       "name": "Animate Guardian of Smiting",
+      "level": 28,
+      "quality": 30,
       "minion": {
         "name": "Animated Guardian",
         "skill": "Smite"
       },
       "supports": [
         {
-          "id": "SupportMinionSpeed",
-          "level": 20
-        },
-        {
           "id": "SupportElementalArmy",
           "level": 20
         },
         {
-          "id": "SupportFirePenetration",
+          "id": "SupportElementalDamageWithAttacks",
           "level": 20
         },
         {
-          "id": "SupportElementalDamageWithAttacks",
+          "id": "SupportEmpower",
+          "level": 5
+        },
+        {
+          "id": "SupportFirePenetration",
           "level": 20
         },
         {
@@ -190,13 +194,13 @@
           "quality": 30
         },
         {
-          "id": "SupportEmpower",
-          "level": 5
-        },
-        {
           "id": "SupportMinionDamage",
           "level": 24,
           "quality": 30
+        },
+        {
+          "id": "SupportMinionSpeed",
+          "level": 20
         }
       ]
     }

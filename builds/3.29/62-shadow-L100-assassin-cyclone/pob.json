@@ -61,17 +61,19 @@
       "group": 2,
       "id": "Cyclone",
       "name": "Cyclone",
+      "level": 20,
+      "quality": 30,
       "attack": true,
       "supports": [
-        {
-          "id": "SupportIncreasedCriticalDamage",
-          "level": 20,
-          "quality": 30
-        },
         {
           "id": "SupportCastOnCriticalStrike",
           "level": 21,
           "quality": 20
+        },
+        {
+          "id": "SupportIncreasedCriticalDamage",
+          "level": 20,
+          "quality": 30
         },
         {
           "id": "SupportPowerChargeOnCritical",
@@ -139,17 +141,19 @@
       "group": 2,
       "id": "Cyclone",
       "name": "Cyclone",
+      "level": 20,
+      "quality": 30,
       "attack": true,
       "supports": [
-        {
-          "id": "SupportIncreasedCriticalDamage",
-          "level": 20,
-          "quality": 30
-        },
         {
           "id": "SupportCastOnCriticalStrike",
           "level": 21,
           "quality": 20
+        },
+        {
+          "id": "SupportIncreasedCriticalDamage",
+          "level": 20,
+          "quality": 30
         },
         {
           "id": "SupportPowerChargeOnCritical",

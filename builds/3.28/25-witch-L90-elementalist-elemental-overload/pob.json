@@ -62,6 +62,8 @@
       "group": 1,
       "id": "PenanceBrand",
       "name": "Penance Brand",
+      "level": 20,
+      "quality": 20,
       "supports": [
         {
           "id": "SupportBurningDamage",
@@ -69,12 +71,7 @@
           "quality": 20
         },
         {
-          "id": "SupportSwiftbrand",
-          "level": 20,
-          "quality": 20
-        },
-        {
-          "id": "SupportSpellblade",
+          "id": "SupportCruelty",
           "level": 20,
           "quality": 20
         },
@@ -84,7 +81,12 @@
           "quality": 20
         },
         {
-          "id": "SupportCruelty",
+          "id": "SupportSpellblade",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportSwiftbrand",
           "level": 20,
           "quality": 20
         }
@@ -150,6 +152,8 @@
       "group": 1,
       "id": "PenanceBrand",
       "name": "Penance Brand",
+      "level": 20,
+      "quality": 20,
       "supports": [
         {
           "id": "SupportBurningDamage",
@@ -157,12 +161,7 @@
           "quality": 20
         },
         {
-          "id": "SupportSwiftbrand",
-          "level": 20,
-          "quality": 20
-        },
-        {
-          "id": "SupportSpellblade",
+          "id": "SupportCruelty",
           "level": 20,
           "quality": 20
         },
@@ -172,7 +171,12 @@
           "quality": 20
         },
         {
-          "id": "SupportCruelty",
+          "id": "SupportSpellblade",
+          "level": 20,
+          "quality": 20
+        },
+        {
+          "id": "SupportSwiftbrand",
           "level": 20,
           "quality": 20
         }

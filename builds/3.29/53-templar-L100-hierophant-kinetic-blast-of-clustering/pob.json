@@ -72,11 +72,13 @@
       "group": 2,
       "id": "KineticBlastAltX",
       "name": "Kinetic Blast of Clustering",
+      "level": 20,
+      "quality": 30,
       "attack": true,
       "supports": [
         {
-          "id": "SupportSacredWisps",
-          "level": 19,
+          "id": "SupportGreaterFork",
+          "level": 2,
           "quality": 20
         },
         {
@@ -85,19 +87,19 @@
           "quality": 30
         },
         {
+          "id": "SupportInvertTheRules",
+          "level": 2,
+          "quality": 30
+        },
+        {
           "id": "SupportReturningProjectiles",
           "level": 18,
           "quality": 20
         },
         {
-          "id": "SupportGreaterFork",
-          "level": 2,
+          "id": "SupportSacredWisps",
+          "level": 19,
           "quality": 20
-        },
-        {
-          "id": "SupportInvertTheRules",
-          "level": 2,
-          "quality": 30
         }
       ]
     }
@@ -171,11 +173,13 @@
       "group": 2,
       "id": "KineticBlastAltX",
       "name": "Kinetic Blast of Clustering",
+      "level": 20,
+      "quality": 30,
       "attack": true,
       "supports": [
         {
-          "id": "SupportSacredWisps",
-          "level": 19,
+          "id": "SupportGreaterFork",
+          "level": 2,
           "quality": 20
         },
         {
@@ -184,19 +188,19 @@
           "quality": 30
         },
         {
+          "id": "SupportInvertTheRules",
+          "level": 2,
+          "quality": 30
+        },
+        {
           "id": "SupportReturningProjectiles",
           "level": 18,
           "quality": 20
         },
         {
-          "id": "SupportGreaterFork",
-          "level": 2,
+          "id": "SupportSacredWisps",
+          "level": 19,
           "quality": 20
-        },
-        {
-          "id": "SupportInvertTheRules",
-          "level": 2,
-          "quality": 30
         }
       ]
     }

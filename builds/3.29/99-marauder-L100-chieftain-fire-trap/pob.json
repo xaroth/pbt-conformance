@@ -61,6 +61,7 @@
       "group": 5,
       "id": "FireTrap",
       "name": "Fire Trap",
+      "level": 26,
       "trap": true,
       "supports": [
         {
@@ -72,12 +73,12 @@
           "level": 18
         },
         {
-          "id": "SupportLifetap",
+          "id": "SupportControlledDestruction",
           "level": 18,
           "quality": 20
         },
         {
-          "id": "SupportControlledDestruction",
+          "id": "SupportLifetap",
           "level": 18,
           "quality": 20
         },
@@ -144,9 +145,10 @@
       "TotalDotDPS": 323502.44718348
     },
     "mainSkill": {
-      "group": 2,
+      "group": 5,
       "id": "FireTrap",
       "name": "Fire Trap",
+      "level": 26,
       "trap": true,
       "supports": [
         {
@@ -158,12 +160,12 @@
           "level": 18
         },
         {
-          "id": "SupportLifetap",
+          "id": "SupportControlledDestruction",
           "level": 18,
           "quality": 20
         },
         {
-          "id": "SupportControlledDestruction",
+          "id": "SupportLifetap",
           "level": 18,
           "quality": 20
         },

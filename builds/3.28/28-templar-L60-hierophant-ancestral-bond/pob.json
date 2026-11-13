@@ -63,6 +63,7 @@
       "group": 1,
       "id": "KineticFusillade",
       "name": "Kinetic Fusillade",
+      "level": 15,
       "attack": true,
       "totem": true,
       "supports": [
@@ -71,15 +72,15 @@
           "level": 16
         },
         {
+          "id": "SupportElementalDamageWithAttacks",
+          "level": 15
+        },
+        {
           "id": "SupportGreaterVolley",
           "level": 12
         },
         {
           "id": "SupportLessDuration",
-          "level": 15
-        },
-        {
-          "id": "SupportElementalDamageWithAttacks",
           "level": 15
         }
       ]
@@ -145,6 +146,7 @@
       "group": 1,
       "id": "KineticFusillade",
       "name": "Kinetic Fusillade",
+      "level": 15,
       "attack": true,
       "totem": true,
       "supports": [
@@ -153,15 +155,15 @@
           "level": 16
         },
         {
+          "id": "SupportElementalDamageWithAttacks",
+          "level": 15
+        },
+        {
           "id": "SupportGreaterVolley",
           "level": 12
         },
         {
           "id": "SupportLessDuration",
-          "level": 15
-        },
-        {
-          "id": "SupportElementalDamageWithAttacks",
           "level": 15
         }
       ]

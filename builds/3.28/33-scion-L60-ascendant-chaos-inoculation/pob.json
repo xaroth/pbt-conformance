@@ -61,6 +61,7 @@
       "group": 1,
       "id": "MoltenStrike",
       "name": "Molten Strike",
+      "level": 17,
       "attack": true,
       "supports": [
         {
@@ -140,6 +141,7 @@
       "group": 1,
       "id": "MoltenStrike",
       "name": "Molten Strike",
+      "level": 17,
       "attack": true,
       "supports": [
         {

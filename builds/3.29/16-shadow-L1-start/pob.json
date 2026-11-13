@@ -50,6 +50,7 @@
     "mainSkill": {
       "id": "Melee",
       "name": "Default Attack",
+      "level": 1,
       "attack": true
     }
   },
@@ -100,6 +101,7 @@
     "mainSkill": {
       "id": "Melee",
       "name": "Default Attack",
+      "level": 1,
       "attack": true
     }
   },

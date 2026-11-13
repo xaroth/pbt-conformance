@@ -61,21 +61,22 @@
       "group": 1,
       "id": "RighteousFire",
       "name": "Righteous Fire",
+      "level": 15,
       "supports": [
-        {
-          "id": "SupportEfficacy",
-          "level": 15
-        },
-        {
-          "id": "SupportElementalFocus",
-          "level": 15
-        },
         {
           "id": "SupportBurningDamage",
           "level": 15
         },
         {
           "id": "SupportConcentratedEffect",
+          "level": 15
+        },
+        {
+          "id": "SupportEfficacy",
+          "level": 15
+        },
+        {
+          "id": "SupportElementalFocus",
           "level": 15
         }
       ]
@@ -139,21 +140,22 @@
       "group": 1,
       "id": "RighteousFire",
       "name": "Righteous Fire",
+      "level": 15,
       "supports": [
-        {
-          "id": "SupportEfficacy",
-          "level": 15
-        },
-        {
-          "id": "SupportElementalFocus",
-          "level": 15
-        },
         {
           "id": "SupportBurningDamage",
           "level": 15
         },
         {
           "id": "SupportConcentratedEffect",
+          "level": 15
+        },
+        {
+          "id": "SupportEfficacy",
+          "level": 15
+        },
+        {
+          "id": "SupportElementalFocus",
           "level": 15
         }
       ]

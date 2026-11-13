@@ -227,6 +227,21 @@ Implicits: 0
 				<Gem nameSpec="Elemental Focus" skillId="SupportElementalFocus" gemId="Metadata/Items/Gems/SkillGemSupportElementalFocus" level="20" quality="20" enabled="true" enableGlobal1="true" enableGlobal2="true"/>
 				<Gem nameSpec="Burning Damage" skillId="SupportBurningDamage" gemId="Metadata/Items/Gems/SkillGemSupportBurningDamage" level="20" quality="20" enabled="true" enableGlobal1="true" enableGlobal2="true"/>
 			</Skill>
+			<Skill enabled="true" slot="Gloves" label="" includeInFullDPS="false">
+				<Gem nameSpec="Malevolence" skillId="Malevolence" gemId="Metadata/Items/Gems/SkillGemMalevolence" level="20" quality="20" enabled="false" enableGlobal1="true" enableGlobal2="true"/>
+				<Gem nameSpec="Eternal Blessing" skillId="SupportEternalBlessing" gemId="Metadata/Items/Gems/SkillGemSupportEternalBlessing" level="20" quality="20" enabled="true" enableGlobal1="true" enableGlobal2="true"/>
+				<Gem nameSpec="Blood Rage" skillId="BloodRage" gemId="Metadata/Items/Gems/SkillGemBloodRage" level="11" quality="0" enabled="false" enableGlobal1="true" enableGlobal2="true"/>
+			</Skill>
+			<Skill enabled="true" slot="Boots" label="" includeInFullDPS="false">
+				<Gem nameSpec="Shield Charge" skillId="ShieldCharge" gemId="Metadata/Items/Gems/SkillGemShieldCharge" level="20" quality="20" enabled="false" enableGlobal1="true" enableGlobal2="true"/>
+				<Gem nameSpec="Frostblink" skillId="Frostblink" gemId="Metadata/Items/Gems/SkillGemFrostblink" level="20" quality="20" enabled="false" enableGlobal1="true" enableGlobal2="true"/>
+			</Skill>
+			<Skill enabled="true" slot="Weapon 1" label="" includeInFullDPS="false">
+				<Gem nameSpec="Punishment" skillId="Punishment" gemId="Metadata/Items/Gems/SkillGemPunishment" level="20" quality="20" enabled="false" enableGlobal1="true" enableGlobal2="true"/>
+			</Skill>
+			<Skill enabled="true" slot="Weapon 2" label="" includeInFullDPS="false">
+				<Gem nameSpec="Enduring Cry" skillId="EnduringCry" gemId="Metadata/Items/Gems/SkillGemEnduringCry" level="20" quality="20" enabled="false" enableGlobal1="true" enableGlobal2="true"/>
+			</Skill>
 		</SkillSet>
 	</Skills>
 	<Config activeConfigSet="1">

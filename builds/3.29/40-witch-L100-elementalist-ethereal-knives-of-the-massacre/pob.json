@@ -61,16 +61,23 @@
       "group": 4,
       "id": "EtherealKnivesAltY",
       "name": "Ethereal Knives of the Massacre",
+      "level": 22,
+      "quality": 30,
       "supports": [
         {
-          "id": "SupportGreaterSpellEcho",
-          "level": 3,
-          "quality": 20
+          "id": "SupportFasterProjectiles",
+          "level": 23,
+          "quality": 30
         },
         {
           "id": "SupportGreaterChain",
           "level": 5,
           "quality": 30
+        },
+        {
+          "id": "SupportGreaterSpellEcho",
+          "level": 3,
+          "quality": 20
         },
         {
           "id": "SupportHypothermia",
@@ -81,11 +88,6 @@
           "id": "SupportIncreasedCriticalDamage",
           "level": 20,
           "quality": 20
-        },
-        {
-          "id": "SupportFasterProjectiles",
-          "level": 23,
-          "quality": 30
         }
       ]
     }
@@ -145,19 +147,26 @@
       "TotalDotDPS": 0
     },
     "mainSkill": {
-      "group": 2,
+      "group": 4,
       "id": "EtherealKnivesAltY",
       "name": "Ethereal Knives of the Massacre",
+      "level": 22,
+      "quality": 30,
       "supports": [
         {
-          "id": "SupportGreaterSpellEcho",
-          "level": 3,
-          "quality": 20
+          "id": "SupportFasterProjectiles",
+          "level": 23,
+          "quality": 30
         },
         {
           "id": "SupportGreaterChain",
           "level": 5,
           "quality": 30
+        },
+        {
+          "id": "SupportGreaterSpellEcho",
+          "level": 3,
+          "quality": 20
         },
         {
           "id": "SupportHypothermia",
@@ -168,11 +177,6 @@
           "id": "SupportIncreasedCriticalDamage",
           "level": 20,
           "quality": 20
-        },
-        {
-          "id": "SupportFasterProjectiles",
-          "level": 23,
-          "quality": 30
         }
       ]
     }

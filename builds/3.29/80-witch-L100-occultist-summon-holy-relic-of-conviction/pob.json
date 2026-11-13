@@ -65,25 +65,17 @@
       "group": 8,
       "id": "SummonHolyRelicAltX",
       "name": "Summon Holy Relic of Conviction",
+      "level": 30,
+      "quality": 108,
       "minion": {
         "name": "Holy Relic",
         "skill": "Nova"
       },
       "supports": [
         {
-          "id": "SupportVoidManipulation",
-          "level": 22,
-          "quality": 53
-        },
-        {
           "id": "SupportEmpower",
           "level": 6,
           "quality": 10
-        },
-        {
-          "id": "SupportUnboundAilments",
-          "level": 22,
-          "quality": 50
         },
         {
           "id": "SupportEnhance",
@@ -92,6 +84,16 @@
         },
         {
           "id": "SupportMinionDamage",
+          "level": 22,
+          "quality": 53
+        },
+        {
+          "id": "SupportUnboundAilments",
+          "level": 22,
+          "quality": 50
+        },
+        {
+          "id": "SupportVoidManipulation",
           "level": 22,
           "quality": 53
         }
@@ -157,28 +159,20 @@
       "TotalDotDPS": 0
     },
     "mainSkill": {
-      "group": 3,
+      "group": 8,
       "id": "SummonHolyRelicAltX",
       "name": "Summon Holy Relic of Conviction",
+      "level": 30,
+      "quality": 108,
       "minion": {
         "name": "Holy Relic",
         "skill": "Nova"
       },
       "supports": [
         {
-          "id": "SupportVoidManipulation",
-          "level": 22,
-          "quality": 53
-        },
-        {
           "id": "SupportEmpower",
           "level": 6,
           "quality": 10
-        },
-        {
-          "id": "SupportUnboundAilments",
-          "level": 22,
-          "quality": 50
         },
         {
           "id": "SupportEnhance",
@@ -187,6 +181,16 @@
         },
         {
           "id": "SupportMinionDamage",
+          "level": 22,
+          "quality": 53
+        },
+        {
+          "id": "SupportUnboundAilments",
+          "level": 22,
+          "quality": 50
+        },
+        {
+          "id": "SupportVoidManipulation",
           "level": 22,
           "quality": 53
         }
