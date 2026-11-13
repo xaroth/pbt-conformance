@@ -24,16 +24,22 @@ const (
 	GroupMinion Group = "minion"
 	// GroupDelivery is a main skill used by a totem, trap or mine.
 	GroupDelivery Group = "delivery"
+	// GroupReservation is the life and mana every skill of the build reserves.
+	GroupReservation Group = "reservation"
 )
 
 // NeedsSkill reports whether g is of a main skill: recorded only for layers with skills.
 func (g Group) NeedsSkill() bool {
-	return g != GroupSheet && g != GroupDefence
+	return g != GroupSheet && g != GroupDefence && g != GroupReservation
 }
+
+// ReadsSkills reports whether the engine needs a build's skills for g: its values are compared
+// on the skill layer and judged on the skill and full layers.
+func (g Group) ReadsSkills() bool { return g.NeedsSkill() || g == GroupReservation }
 
 // Groups returns every group, in report order.
 func Groups() []Group {
-	return []Group{GroupSheet, GroupSkill, GroupHitTypes, GroupDefence, GroupMinion, GroupDelivery}
+	return []Group{GroupSheet, GroupReservation, GroupSkill, GroupHitTypes, GroupDefence, GroupMinion, GroupDelivery}
 }
 
 // Output is one output we compare, and how its value is read from PoB's output keys.
@@ -107,6 +113,7 @@ func Outputs() []Output {
 		// PoB's effective modifier also holds action speed, which ours leaves out.
 		percent("player.movement_speed", GroupSheet, "MovementSpeedMod"),
 	}
+	out = append(out, reserved("player.reserved_life", "Life"), reserved("player.reserved_mana", "Mana"))
 	for _, e := range []struct{ ours, pob string }{{"fire", "Fire"}, {"cold", "Cold"}, {"lightning", "Lightning"}, {"chaos", "Chaos"}} {
 		out = append(out,
 			key("player."+e.ours+"_resistance", GroupSheet, e.pob+"Resist"),
@@ -245,6 +252,22 @@ func unreserved(name, pool string) Output {
 		}
 		v, ok := o[pool]
 		return 0, ok && v == 0
+	}}
+}
+
+// reserved is what PoB reserves of pool: the pool less its unreserved part, 0 when the pool is
+// empty and PoB gives no unreserved part.
+func reserved(name, pool string) Output {
+	k := pool + "Unreserved"
+	return Output{Name: name, Group: GroupReservation, keys: []string{pool, k}, value: func(o map[string]float64) (float64, bool) {
+		p, ok := o[pool]
+		if !ok {
+			return 0, false
+		}
+		if u, ok := o[k]; ok {
+			return p - u, true
+		}
+		return 0, p == 0
 	}}
 }
 
