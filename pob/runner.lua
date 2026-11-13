@@ -64,8 +64,8 @@ local function lookup(outputs, key)
 end
 
 -- calcsOutput returns PoB's Calcs tab outputs with the tab showing the main skill as the main
--- calculation does: its socket group, active skill and per-gem choices. Nil when the Calcs tab
--- still takes another skill.
+-- calculation does: its socket group, active skill, per-gem choices and buff mode. Nil when the
+-- Calcs tab still takes another skill.
 local function calcsOutput()
 	local tab, skill = build.calcsTab, build.calcsTab.mainEnv.player.mainSkill
 	local group = skill.socketGroup
@@ -78,6 +78,8 @@ local function calcsOutput()
 		end
 	end
 	group.mainActiveSkillCalcs = group.mainActiveSkill
+	-- the main calculation's buff mode, whatever mode the build was saved with
+	tab.input.misc_buffMode = "EFFECTIVE"
 	for _, gem in ipairs(group.gemList) do
 		for _, f in ipairs({ "skillPart", "skillStageCount", "skillMineCount", "skillMinion", "skillMinionSkill", "skillMinionItemSet" }) do
 			gem[f .. "Calcs"] = gem[f]
