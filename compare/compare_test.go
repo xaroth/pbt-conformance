@@ -166,11 +166,15 @@ func TestRun(t *testing.T) {
 	if ms := compare.Mismatches(bs); len(ms) != 0 {
 		t.Errorf("mismatches: %+v", ms)
 	}
-	// The engine gives the sheet of the tree layer; nothing else.
+	// The engine gives the sheet of the tree layer and, of its defences, spell block; nothing else.
 	want := []compare.Layer{
 		{Name: "tree", Groups: []compare.GroupResult{
 			{Group: pob.GroupSheet, Status: compare.StatusPass},
-			{Group: pob.GroupDefence, Status: compare.StatusNotCompared},
+			{Group: pob.GroupDefence, Status: compare.StatusIncomplete, Missing: []string{
+				"player.block_chance", "player.spell_suppression_chance",
+				"player.life_regeneration_recovery", "player.energy_shield_regeneration_recovery",
+				"player.life_leech_rate", "player.energy_shield_leech_rate", "player.energy_shield_recharge",
+			}},
 		}},
 		{Name: "gear", Groups: []compare.GroupResult{
 			{Group: pob.GroupSheet, Status: compare.StatusNotCompared}, {Group: pob.GroupDefence, Status: compare.StatusNotCompared},
