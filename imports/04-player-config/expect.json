@@ -144,17 +144,14 @@
     },
     "config": {
       "bandits": "kill-all",
-      "campaign": "acts-6-10"
+      "campaign": "acts-6-10",
+      "enemy": "pinnacle"
     }
   },
   "warnings": [
     {
       "code": "pob-config-ignored",
       "subject": "usePowerCharges"
-    },
-    {
-      "code": "pob-config-ignored",
-      "subject": "enemyIsBoss"
     }
   ]
 }

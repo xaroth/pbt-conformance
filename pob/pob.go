@@ -106,7 +106,7 @@ func (r Result) Groups() []Group {
 
 // groups returns the groups of outputs that apply to a build with main skill ms.
 func (ms *MainSkill) groups() []Group {
-	g := []Group{GroupSheet, GroupDefence}
+	g := []Group{GroupSheet, GroupReservation, GroupDefence}
 	if ms == nil {
 		return g
 	}

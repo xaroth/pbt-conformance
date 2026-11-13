@@ -168,13 +168,15 @@ func TestRun(t *testing.T) {
 	}
 	// The engine gives the sheet of the tree layer and, of its defences, spell block; nothing else.
 	skillGroups := []compare.GroupResult{
-		{Group: pob.GroupSheet, Status: compare.StatusNotCompared}, {Group: pob.GroupSkill, Status: compare.StatusNotCompared},
+		{Group: pob.GroupSheet, Status: compare.StatusNotCompared}, {Group: pob.GroupReservation, Status: compare.StatusPass},
+		{Group: pob.GroupSkill, Status: compare.StatusNotCompared},
 		{Group: pob.GroupHitTypes, Status: compare.StatusNotCompared}, {Group: pob.GroupDefence, Status: compare.StatusNotCompared},
 		{Group: pob.GroupDelivery, Status: compare.StatusNotCompared},
 	}
 	want := []compare.Layer{
 		{Name: "tree", Groups: []compare.GroupResult{
 			{Group: pob.GroupSheet, Status: compare.StatusPass},
+			{Group: pob.GroupReservation, Status: compare.StatusPass},
 			{Group: pob.GroupDefence, Status: compare.StatusIncomplete, Missing: []string{
 				"player.block_chance", "player.spell_suppression_chance",
 				"player.life_regeneration_recovery", "player.energy_shield_regeneration_recovery",
@@ -182,7 +184,8 @@ func TestRun(t *testing.T) {
 			}},
 		}},
 		{Name: "gear", Groups: []compare.GroupResult{
-			{Group: pob.GroupSheet, Status: compare.StatusNotCompared}, {Group: pob.GroupDefence, Status: compare.StatusNotCompared},
+			{Group: pob.GroupSheet, Status: compare.StatusNotCompared}, {Group: pob.GroupReservation, Status: compare.StatusNotCompared},
+			{Group: pob.GroupDefence, Status: compare.StatusNotCompared},
 		}},
 		{Name: "skill", Groups: skillGroups},
 		{Name: "full", Groups: skillGroups},
