@@ -409,6 +409,7 @@
       {"build": "48-witch-L100-elementalist-fireball", "output": "player.fire_resistance", "ours": -46, "pob": -28},
       {"build": "48-witch-L100-elementalist-fireball", "output": "player.uncapped_fire_resistance", "ours": -46, "pob": -28},
       {"build": "48-witch-L100-elementalist-fireball", "output": "player.mana_regeneration", "ours": 25.1, "pob": 23.9},
+      {"build": "48-witch-L100-elementalist-fireball", "output": "player.energy_shield_regeneration", "ours": 0.6, "pob": 0.8},
       {"build": "49-witch-L100-occultist-fireball", "output": "import:pob-override-ignored", "subject": "node 857"},
       {"build": "49-witch-L100-occultist-fireball", "output": "import:pob-override-ignored", "subject": "node 1461"},
       {"build": "49-witch-L100-occultist-fireball", "output": "import:pob-override-ignored", "subject": "node 4367"},
@@ -1747,16 +1748,6 @@
     "cases": [
       {"build": "70-templar-L100-hierophant-righteous-fire-of-arcane-devotion", "output": "player.energy_shield_regeneration", "ours": 32, "pob": 64.1},
       {"build": "77-scion-L100-ascendant-animate-guardian", "output": "player.energy_shield_regeneration", "ours": 0, "pob": 1}
-    ]
-  },
-  {
-    "id": "regeneration-per-negative-fire-resistance",
-    "kind": "pending",
-    "league": "3.29",
-    "reason": "The fire mastery effect 55308, \"Regenerate 1 Life per second for each 1% Uncapped Fire Resistance\", with Zealot's Oath: the engine applies it with negative uncapped fire resistance and gives negative energy shield regeneration; PoB gives none for a negative resistance",
-    "evidence": "Ours -45.4 from the tree-only uncapped fire resistance; PoB's 0.8 is Shaper's 1% of energy shield alone. In build 48 a tattoo or runegraft changes PoB's value too",
-    "cases": [
-      {"build": "48-witch-L100-elementalist-fireball", "output": "player.energy_shield_regeneration", "ours": -45.4, "pob": 0.8}
     ]
   },
   {
