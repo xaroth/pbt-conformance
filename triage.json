@@ -1,31 +1,5 @@
 [
   {
-    "id": "charges-hierophant-mana-regeneration",
-    "kind": "pending",
-    "build": "*-templar-*-hierophant-ancestral-bond",
-    "output": "player.mana_regeneration",
-    "reason": "Power charges are not modelled: node 12888 gives 8% increased mana regeneration rate per power charge; PoB counts the minimum power charges from nodes 25651 and 9261",
-    "evidence": "PoB ManaRegen INC from Tree:12888 is 8 per power charge times PowerChargesMin; the engine notes the stat as not applied (charges)"
-  },
-  {
-    "id": "charges-slayer-armour",
-    "kind": "pending",
-    "league": "3.28",
-    "build": "*-duelist-*-slayer-resolute-technique",
-    "output": "player.armour",
-    "reason": "Endurance charges are not modelled: node 65485, 5% increased armour per endurance charge; PoB counts one",
-    "evidence": "PoB Armour INC 5 from Tree:65485 (Multiplier); the engine notes the stat as not applied (charges)"
-  },
-  {
-    "id": "charges-slayer-life-regeneration",
-    "kind": "pending",
-    "league": "3.28",
-    "build": "*-duelist-L[89]0-slayer-resolute-technique",
-    "output": "player.life_regeneration",
-    "reason": "Endurance charges are not modelled: node 48109 regenerates 0.2% of life per second per endurance charge; PoB counts one",
-    "evidence": "PoB LifeRegenPercent 0.2 from Tree:48109; PoB gives 116.5 and 129.4 against our 111.5 and 123.7, a gap of 0.2% of PoB life (2533 and 2812)"
-  },
-  {
     "id": "spell-block-elementalist-mana-regeneration",
     "kind": "pending",
     "league": "3.28",
@@ -970,7 +944,6 @@
       {"build": "74-duelist-L100-gladiator-corrupting-fever", "output": "player.mana", "ours": 939, "pob": 932},
       {"build": "74-duelist-L100-gladiator-corrupting-fever", "output": "player.unreserved_mana", "ours": 939, "pob": 932},
       {"build": "74-duelist-L100-gladiator-corrupting-fever", "output": "player.evasion_rating", "ours": 21, "pob": 20},
-      {"build": "74-duelist-L100-gladiator-corrupting-fever", "output": "player.life_regeneration", "ours": 40.1, "pob": 36.3},
       {"build": "74-duelist-L100-gladiator-corrupting-fever", "output": "player.mana_regeneration", "ours": 23, "pob": 22.8},
       {"build": "76-witch-L100-elementalist-righteous-fire", "output": "import:pob-override-ignored", "subject": "node 4397"},
       {"build": "76-witch-L100-elementalist-righteous-fire", "output": "import:pob-override-ignored", "subject": "node 23027"},
@@ -1674,6 +1647,7 @@
       {"build": "66-duelist-L100-champion-flicker-strike", "output": "player.strength", "ours": 93, "pob": 73},
       {"build": "66-duelist-L100-champion-flicker-strike", "output": "player.life", "ours": 1862, "pob": 1847},
       {"build": "66-duelist-L100-champion-flicker-strike", "output": "player.unreserved_life", "ours": 1862, "pob": 1847},
+      {"build": "66-duelist-L100-champion-flicker-strike", "output": "player.life_regeneration", "ours": 96.8, "pob": 77.6},
       {"build": "67-duelist-L100-slayer-void-shockwave", "output": "allocated_nodes", "ours": 122, "pob": 116},
       {"build": "67-duelist-L100-slayer-void-shockwave", "output": "warning:nodes-disconnected", "subject": "nodes 10532, 22994, 44169, 46393, 46519, 49080"},
       {"build": "68-duelist-L100-gladiator-cyclone-of-tumult", "output": "allocated_nodes", "ours": 116, "pob": 111},
@@ -1694,6 +1668,7 @@
       {"build": "73-witch-L100-elementalist-reap", "output": "warning:nodes-disconnected", "subject": "nodes 2311, 9408, 12613, 14993, 24970, 29712, 44169, 49080"},
       {"build": "74-duelist-L100-gladiator-corrupting-fever", "output": "allocated_nodes", "ours": 126, "pob": 118},
       {"build": "74-duelist-L100-gladiator-corrupting-fever", "output": "warning:nodes-disconnected", "subject": "nodes 10532, 32690, 33725, 44169, 44207, 46519, 49080, 58921, 64882"},
+      {"build": "74-duelist-L100-gladiator-corrupting-fever", "output": "player.life_regeneration", "ours": 43.2, "pob": 36.3},
       {"build": "75-witch-L100-elementalist-corrupting-fever", "output": "allocated_nodes", "ours": 120, "pob": 113},
       {"build": "75-witch-L100-elementalist-corrupting-fever", "output": "warning:nodes-disconnected", "subject": "nodes 9408, 10532, 13170, 29712, 44169, 46519, 49080, 64583"},
       {"build": "76-witch-L100-elementalist-righteous-fire", "output": "allocated_nodes", "ours": 122, "pob": 117},
@@ -1772,26 +1747,22 @@
     "id": "mana-regeneration-not-applied",
     "kind": "pending",
     "league": "3.29",
-    "reason": "Mana regeneration from stats the engine notes as not applied: per Power Charge (node 12888, charges), per 1% Chance to Block Spell Damage (Mystic Bulwark, 18174, spell block is not a sheet value), per Summoned Totem (Ritual of Awakening, 34434) and if Exposure was inflicted recently (Mastermind of Discord, 61259)",
+    "reason": "Mana regeneration from stats the engine notes as not applied: per 1% Chance to Block Spell Damage (Mystic Bulwark, 18174, spell block is not a sheet value), per Summoned Totem (Ritual of Awakening, 34434) and if Exposure was inflicted recently (Mastermind of Discord, 61259)",
     "evidence": "Each build holds at least one of these nodes; the gap remains with the overrides, secondary ascendancy and jewel-connected nodes removed. In builds 100, 102, 36, 46, 49, 58, 61, 62, 64, 93, 95 a tattoo or runegraft adds to the gap",
     "cases": [
-      {"build": "100-witch-L100-elementalist-glacial-cascade-of-the-fissure", "output": "player.mana_regeneration", "ours": 26.7, "pob": 37.8},
-      {"build": "101-witch-L100-occultist-glacial-cascade-of-the-fissure", "output": "player.mana_regeneration", "ours": 28.1, "pob": 30},
-      {"build": "102-shadow-L100-assassin-freezing-pulse", "output": "player.mana_regeneration", "ours": 22.4, "pob": 23.8},
-      {"build": "107-shadow-L100-assassin-ice-trap", "output": "player.mana_regeneration", "ours": 15.3, "pob": 16.5},
-      {"build": "36-witch-L100-occultist-winter-orb", "output": "player.mana_regeneration", "ours": 25.8, "pob": 22.9},
-      {"build": "37-witch-L100-elementalist-winter-orb", "output": "player.mana_regeneration", "ours": 32.9, "pob": 34.8},
-      {"build": "40-witch-L100-elementalist-ethereal-knives-of-the-massacre", "output": "player.mana_regeneration", "ours": 14.9, "pob": 16},
-      {"build": "46-shadow-L100-assassin-storm-burst-of-repulsion", "output": "player.mana_regeneration", "ours": 14.9, "pob": 27.2},
-      {"build": "49-witch-L100-occultist-fireball", "output": "player.mana_regeneration", "ours": 28.6, "pob": 27.5},
-      {"build": "58-witch-L100-occultist-cyclone", "output": "player.mana_regeneration", "ours": 22, "pob": 19.3},
-      {"build": "61-shadow-L100-assassin-lancing-steel-of-spraying", "output": "player.mana_regeneration", "ours": 14.8, "pob": 13.2},
-      {"build": "62-shadow-L100-assassin-cyclone", "output": "player.mana_regeneration", "ours": 25.5, "pob": 21.8},
-      {"build": "64-shadow-L97-assassin-rain-of-arrows-of-saturation", "output": "player.mana_regeneration", "ours": 14.7, "pob": 13.1},
+      {"build": "100-witch-L100-elementalist-glacial-cascade-of-the-fissure", "output": "player.mana_regeneration", "ours": 28.5, "pob": 37.8},
+      {"build": "102-shadow-L100-assassin-freezing-pulse", "output": "player.mana_regeneration", "ours": 23.9, "pob": 23.8},
+      {"build": "36-witch-L100-occultist-winter-orb", "output": "player.mana_regeneration", "ours": 27.3, "pob": 22.9},
+      {"build": "46-shadow-L100-assassin-storm-burst-of-repulsion", "output": "player.mana_regeneration", "ours": 16.1, "pob": 27.2},
+      {"build": "49-witch-L100-occultist-fireball", "output": "player.mana_regeneration", "ours": 30.3, "pob": 27.5},
+      {"build": "58-witch-L100-occultist-cyclone", "output": "player.mana_regeneration", "ours": 23.2, "pob": 19.3},
+      {"build": "61-shadow-L100-assassin-lancing-steel-of-spraying", "output": "player.mana_regeneration", "ours": 16, "pob": 13.2},
+      {"build": "62-shadow-L100-assassin-cyclone", "output": "player.mana_regeneration", "ours": 27, "pob": 21.8},
+      {"build": "64-shadow-L97-assassin-rain-of-arrows-of-saturation", "output": "player.mana_regeneration", "ours": 15.9, "pob": 13.1},
       {"build": "86-witch-L100-necromancer-animate-guardian-of-smiting", "output": "player.mana_regeneration", "ours": 25.8, "pob": 27.2},
       {"build": "93-witch-L99-necromancer-animate-weapon-of-ranged-arms", "output": "player.mana_regeneration", "ours": 41.2, "pob": 42.6},
-      {"build": "95-templar-L100-hierophant-storm-burst-of-repulsion", "output": "player.mana_regeneration", "ours": 243.4, "pob": 262.2},
-      {"build": "96-templar-L100-hierophant-arc", "output": "player.mana_regeneration", "ours": 85.9, "pob": 106.8},
+      {"build": "95-templar-L100-hierophant-storm-burst-of-repulsion", "output": "player.mana_regeneration", "ours": 278.2, "pob": 262.2},
+      {"build": "96-templar-L100-hierophant-arc", "output": "player.mana_regeneration", "ours": 100.9, "pob": 106.8},
       {"build": "97-templar-L100-hierophant-freezing-pulse", "output": "player.mana_regeneration", "ours": 43.5, "pob": 45.5}
     ]
   },
@@ -1803,20 +1774,6 @@
     "evidence": "The engine notes the stat as left out; PoB gives build 49 8% chance to block spell damage on the tree-only sheet, builds 36 and 58 none. Build 49 also has a tattoo, which may add to the gap",
     "cases": [
       {"build": "49-witch-L100-occultist-fireball", "output": "player.energy_shield", "ours": 45, "pob": 54}
-    ]
-  },
-  {
-    "id": "charges-and-fortification",
-    "kind": "pending",
-    "league": "3.29",
-    "reason": "Evasion and life regeneration from stats that wait for charges and Fortification: evasion per Frenzy Charge (nodes 16079, 57449), life regeneration per Endurance Charge (48109) and per Fortification (Steadfast, 13922)",
-    "evidence": "The engine notes each stat as not applied; PoB counts its default charges and Fortification",
-    "cases": [
-      {"build": "52-duelist-L100-slayer-flicker-strike", "output": "player.evasion_rating", "ours": 35, "pob": 36},
-      {"build": "54-duelist-L100-slayer-earthquake", "output": "player.evasion_rating", "ours": 37, "pob": 38},
-      {"build": "66-duelist-L100-champion-flicker-strike", "output": "player.evasion_rating", "ours": 35, "pob": 42},
-      {"build": "66-duelist-L100-champion-flicker-strike", "output": "player.life_regeneration", "ours": 48.4, "pob": 77.6},
-      {"build": "69-duelist-L100-slayer-cyclone", "output": "player.life_regeneration", "ours": 67.5, "pob": 72.7}
     ]
   },
   {
