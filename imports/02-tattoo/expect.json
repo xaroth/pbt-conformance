@@ -142,14 +142,12 @@
       "4139": 47642,
       "41415": 38454
     },
+    "overrides": {
+      "5152": "Ramako4"
+    },
     "config": {
       "bandits": "kill-all"
     }
   },
-  "warnings": [
-    {
-      "code": "pob-override-ignored",
-      "subject": "node 5152"
-    }
-  ]
+  "warnings": []
 }

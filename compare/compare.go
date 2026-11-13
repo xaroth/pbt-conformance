@@ -320,13 +320,19 @@ func sameTree(a, b *build.Build) bool {
 		a.Ascendancy == b.Ascendancy && a.Level == b.Level && slices.Equal(a.Nodes, b.Nodes) && maps.Equal(a.Masteries, b.Masteries)
 }
 
+// ignoredByPoB are the check's warnings about choices PoB ignores too: an override on a node
+// that is not allocated, and a mastery effect on a mastery an override replaces.
+func ignoredByPoB() []build.Code {
+	return []build.Code{build.OverrideNotAllocated, build.MasteryOverridden}
+}
+
 // warnings turns the simulation's warnings into mismatches, except stats left out as not
-// modelled, which the output mismatches show: a dropped node or mastery choice would otherwise
-// change values silently and land on an entry for another cause.
+// modelled, which the output mismatches show, and choices PoB ignores too: a dropped node or
+// mastery choice would otherwise change values silently and land on an entry for another cause.
 func warnings(st *simulator.Stats, league, name string) []Mismatch {
 	var out []Mismatch
 	for _, w := range st.Warnings() {
-		if w.Code == simulator.UnmodelledStat {
+		if w.Code == simulator.UnmodelledStat || slices.Contains(ignoredByPoB(), w.Code) {
 			continue
 		}
 		out = append(out, Mismatch{
