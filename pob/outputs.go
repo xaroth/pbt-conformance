@@ -104,6 +104,8 @@ func Outputs() []Output {
 		key("player.life_regeneration", GroupSheet, "LifeRegen").tenths(),
 		key("player.mana_regeneration", GroupSheet, "ManaRegen").tenths(),
 		key("player.energy_shield_regeneration", GroupSheet, "EnergyShieldRegen").tenths(),
+		// PoB's effective modifier also holds action speed, which ours leaves out.
+		percent("player.movement_speed", GroupSheet, "MovementSpeedMod"),
 	}
 	for _, e := range []struct{ ours, pob string }{{"fire", "Fire"}, {"cold", "Cold"}, {"lightning", "Lightning"}, {"chaos", "Chaos"}} {
 		out = append(out,
@@ -221,6 +223,15 @@ func sum(name string, g Group, a, b string) Output {
 		va, ok1 := o[a]
 		vb, ok2 := o[b]
 		return va + vb, ok1 && ok2
+	}}
+}
+
+// percent is PoB's multiplier k as a percentage.
+func percent(name string, g Group, k string) Output {
+	const toPercent = 100
+	return Output{Name: name, Group: g, keys: []string{k}, value: func(o map[string]float64) (float64, bool) {
+		v, ok := o[k]
+		return v * toPercent, ok
 	}}
 }
 

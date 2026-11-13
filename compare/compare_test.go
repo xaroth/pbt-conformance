@@ -274,6 +274,23 @@ func TestRunReportsWarnings(t *testing.T) {
 	}
 }
 
+// An override on a node the build has not allocated is dropped, as PoB does; it is no mismatch.
+func TestRunSkipsOverrideNotAllocated(t *testing.T) {
+	t.Parallel()
+	datasets := env(t, "PBT_DATASETS")
+	override := `<Overrides><Override dn="Tattoo of the Hinekora Shaman" nodeId="18182"/></Overrides></Spec>`
+	xml := strings.Replace(string(fixture(t)), `nodes="47175,31628"/>`, `nodes="47175,31628">`+override, 1)
+	root := writeBuild(t, "01-marauder-override", xml, xml)
+	bs, err := compare.Run(root, datasets, repoPins(t), "poe1", "3.29")
+	if err != nil {
+		t.Fatal(err)
+	}
+	ms := compare.Mismatches(bs)
+	if got := append(outputs(ms, "warning:"), outputs(ms, "import:")...); len(got) != 0 {
+		t.Errorf("got %v, want no warning or import mismatches", got)
+	}
+}
+
 // A build recorded with an ally has a party layer, not compared: the engine does not simulate
 // party buffs yet. A build without one has no party layer.
 func TestRunPartyLayer(t *testing.T) {

@@ -60,6 +60,7 @@
       "MissingColdResist": 0,
       "MissingFireResist": 0,
       "MissingLightningResist": 0,
+      "MovementSpeedMod": 1.93,
       "OffHand.AverageHit": 3416.393458,
       "Speed": 1.7111101449275,
       "SpellBlockChance": 0,
@@ -153,6 +154,7 @@
       "MissingColdResist": 0,
       "MissingFireResist": 0,
       "MissingLightningResist": 0,
+      "MovementSpeedMod": 1.33,
       "OffHand.AverageHit": 2331.799264612,
       "Speed": 1.5041210144928,
       "SpellBlockChance": 0,
@@ -222,6 +224,7 @@
       "MissingColdResist": 0,
       "MissingFireResist": 0,
       "MissingLightningResist": 0,
+      "MovementSpeedMod": 1.33,
       "SpellBlockChance": 0,
       "SpellSuppressionChance": 39,
       "Str": 92
@@ -260,6 +263,7 @@
       "MissingColdResist": 135,
       "MissingFireResist": 135,
       "MissingLightningResist": 135,
+      "MovementSpeedMod": 1.11,
       "SpellBlockChance": 0,
       "SpellSuppressionChance": 39,
       "Str": 64

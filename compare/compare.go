@@ -10,6 +10,7 @@ import (
 	"os"
 	"path/filepath"
 	"slices"
+	"strings"
 
 	"github.com/xaroth/pbt-conformance/pins"
 	"github.com/xaroth/pbt-conformance/pob"
@@ -223,11 +224,7 @@ type ours struct {
 // oursOf simulates the skill and full builds of the build in dir, the tree-only one st already
 // simulated, while the engine gives skill outputs.
 func oursOf(dir string, reg *dataset.Registry, sim *simulator.Sim, st *simulator.Stats, full *build.Build) (ours, error) {
-	tree, err := engineValues(sim.Outputs(), st)
-	if err != nil {
-		return ours{}, err
-	}
-	o := ours{tree: tree}
+	o := ours{tree: engineValues(sim.Outputs(), st)}
 	var skillOutputs []simulator.Output
 	table := pobOutputs()
 	for _, out := range sim.Outputs() {
@@ -256,20 +253,20 @@ func simulateValues(sim *simulator.Sim, outputs []simulator.Output, b *build.Bui
 	if err != nil {
 		return nil, fmt.Errorf("compare: %w", err)
 	}
-	return engineValues(outputs, st)
+	return engineValues(outputs, st), nil
 }
 
-// engineValues returns the value of each of outputs in st.
-func engineValues(outputs []simulator.Output, st *simulator.Stats) (map[string]float64, error) {
+// engineValues returns the value of each of outputs st gives. The engine gives some outputs only
+// for some builds, such as those of a main skill; one it does not give is left out, so it is not
+// compared and judged as missing.
+func engineValues(outputs []simulator.Output, st *simulator.Stats) map[string]float64 {
 	m := make(map[string]float64, len(outputs))
 	for _, o := range outputs {
-		v, ok := st.Get(o.Key)
-		if !ok {
-			return nil, fmt.Errorf("compare: %w %s", errNoKey, o.Key)
+		if v, ok := st.Get(o.Key); ok {
+			m[string(o.Key)] = v
 		}
-		m[string(o.Key)] = v
 	}
-	return m, nil
+	return m
 }
 
 func importFile(dir, file string, reg *dataset.Registry) (*build.Build, []build.Warning, error) {
@@ -320,13 +317,19 @@ func sameTree(a, b *build.Build) bool {
 		a.Ascendancy == b.Ascendancy && a.Level == b.Level && slices.Equal(a.Nodes, b.Nodes) && maps.Equal(a.Masteries, b.Masteries)
 }
 
+// ignoredByPoB are the check's warnings about choices PoB ignores too: an override on a node
+// that is not allocated, and a mastery effect on a mastery an override replaces.
+func ignoredByPoB() []build.Code {
+	return []build.Code{build.OverrideNotAllocated, build.MasteryOverridden}
+}
+
 // warnings turns the simulation's warnings into mismatches, except stats left out as not
-// modelled, which the output mismatches show: a dropped node or mastery choice would otherwise
-// change values silently and land on an entry for another cause.
+// modelled, which the output mismatches show, and choices PoB ignores too: a dropped node or
+// mastery choice would otherwise change values silently and land on an entry for another cause.
 func warnings(st *simulator.Stats, league, name string) []Mismatch {
 	var out []Mismatch
 	for _, w := range st.Warnings() {
-		if w.Code == simulator.UnmodelledStat {
+		if w.Code == simulator.UnmodelledStat || slices.Contains(ignoredByPoB(), w.Code) {
 			continue
 		}
 		out = append(out, Mismatch{
@@ -337,14 +340,22 @@ func warnings(st *simulator.Stats, league, name string) []Mismatch {
 	return out
 }
 
+// skillPrefix marks the engine's outputs of the main skill, which pob.Outputs maps only in part.
+const skillPrefix = "skill."
+
 // compareOutputs compares every catalogue output with PoB's values v: the sheet and defences of
-// the tree-only build, and skill outputs of the skill build once the engine simulates it.
+// the tree-only build, and skill outputs of the skill build once the engine simulates it. A
+// skill output with no PoB key in pob.Outputs is not compared; any other is an error, so a new
+// sheet or defence output cannot go unchecked.
 func compareOutputs(outputs []simulator.Output, o ours, v *pob.Values, league, name string) ([]Mismatch, error) {
 	var out []Mismatch
 	table := pobOutputs()
 	for _, so := range outputs {
 		get, ok := table[string(so.Key)]
 		if !ok {
+			if strings.HasPrefix(string(so.Key), skillPrefix) {
+				continue
+			}
 			return nil, fmt.Errorf("compare: %w %s", errNoKey, so.Key)
 		}
 		values, layer := o.tree, v.TreeOnly
