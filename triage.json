@@ -584,17 +584,33 @@
     ]
   },
   {
-    "id": "mine-reservation",
+    "id": "mine-cost-as-reservation",
     "kind": "pending",
     "league": "3.29",
-    "reason": "The main skill is thrown as a mine. Mines reserve per mine placed (PoB multiplies the reservation by its count of active mines) and Minefield's, High-Impact Mine's and Charged Mines' cost and reservation multipliers apply; the engine reserves once for the skill, and life for mine skills that reserve it is left out",
+    "reason": "The main skill is thrown as a mine by a support. Being mined by a support turns the skill's cost into reservation (PoB: remote_mined_by_support gives ManaCostGainAsReservation or LifeCostGainAsReservation); the engine gives the skill no reservation",
     "cases": [
       {"build": "100-witch-L100-elementalist-glacial-cascade-of-the-fissure", "output": "player.reserved_mana", "ours": 0, "pob": 25},
       {"build": "101-witch-L100-occultist-glacial-cascade-of-the-fissure", "output": "player.reserved_mana", "ours": 0, "pob": 21},
       {"build": "102-shadow-L100-assassin-freezing-pulse", "output": "player.reserved_mana", "ours": 0, "pob": 23},
       {"build": "103-shadow-L100-trickster-exsanguinate", "output": "player.reserved_life", "ours": 0, "pob": 103},
-      {"build": "104-shadow-L100-assassin-exsanguinate", "output": "player.reserved_life", "ours": 0, "pob": 125},
-      {"build": "105-ranger-L100-deadeye-icicle-mine-of-fanning", "output": "player.reserved_mana", "ours": 14, "pob": 13},
+      {"build": "104-shadow-L100-assassin-exsanguinate", "output": "player.reserved_life", "ours": 0, "pob": 125}
+    ]
+  },
+  {
+    "id": "socketed-cost-reservation-multiplier",
+    "kind": "pending",
+    "league": "3.29",
+    "reason": "The item the main skill is socketed in has \"Socketed Skill Gems get a 90% Cost & Reservation Multiplier\" (local_display_socketed_gems_get_mana_multplier_%), which the engine does not apply",
+    "cases": [
+      {"build": "105-ranger-L100-deadeye-icicle-mine-of-fanning", "output": "player.reserved_mana", "ours": 14, "pob": 13}
+    ]
+  },
+  {
+    "id": "icicle-mine-reservation",
+    "kind": "pending",
+    "league": "3.29",
+    "reason": "Icicle Mine of Fanning reserves 13 against PoB's 11; the cause is not found yet",
+    "cases": [
       {"build": "106-shadow-L100-assassin-icicle-mine-of-fanning", "output": "player.reserved_mana", "ours": 13, "pob": 11}
     ]
   },
