@@ -496,14 +496,15 @@
     "kind": "pending",
     "league": "3.29",
     "reason": "The Block Mastery's \"+1% Chance to Block Spell Damage per 5% Chance to Block Attack Damage\" (spell_block_%_per_5_attack_block): chance to block attack damage is not a sheet value yet, so the engine notes the stat as not applied",
-    "evidence": "Each build holds the mastery effect and chance to block attack damage: nodes with +3% Chance to Block Attack Damage (1675, 24538) in builds 43, 44 and 72, Valako Shieldbearer tattoos (+1% each) in builds 44, 65, 79 and 93. Recorded again with the overrides removed, PoB gives 6% chance to block attack damage and 1% chance to block spell damage on the tree-only sheet of builds 43 and 72",
+    "evidence": "Each build holds the mastery effect and chance to block attack damage: nodes with +3% Chance to Block Attack Damage (1675, 24538) in builds 43, 44 and 72, Valako Shieldbearer tattoos (+1% each) in builds 44, 65, 79 and 93. Recorded again with the overrides removed, PoB gives 6% chance to block attack damage and 1% chance to block spell damage on the tree-only sheet of builds 43 and 72. In build 93 mana regeneration follows through Mystic Bulwark (18174, 1% increased Mana Regeneration Rate per 1% Chance to Block Spell Damage): the other increases sum to 60%, so 68% with our 8 spell block against 69% with PoB's 9",
     "cases": [
       {"build": "43-duelist-L100-gladiator-wave-of-conviction-of-trarthus", "output": "player.spell_block_chance", "ours": 0, "pob": 1},
       {"build": "44-duelist-L100-gladiator-detonate-dead-of-scavenging", "output": "player.spell_block_chance", "ours": 0, "pob": 2},
       {"build": "72-duelist-L100-gladiator-blade-blast", "output": "player.spell_block_chance", "ours": 0, "pob": 1},
       {"build": "65-witch-L100-elementalist-ethereal-knives", "output": "player.spell_block_chance", "ours": 0, "pob": 2},
       {"build": "79-witch-L100-necromancer-summon-holy-relic-of-conviction", "output": "player.spell_block_chance", "ours": 0, "pob": 1},
-      {"build": "93-witch-L99-necromancer-animate-weapon-of-ranged-arms", "output": "player.spell_block_chance", "ours": 8, "pob": 9}
+      {"build": "93-witch-L99-necromancer-animate-weapon-of-ranged-arms", "output": "player.spell_block_chance", "ours": 8, "pob": 9},
+      {"build": "93-witch-L99-necromancer-animate-weapon-of-ranged-arms", "output": "player.mana_regeneration", "ours": 42.4, "pob": 42.6}
     ]
   },
   {
@@ -521,20 +522,10 @@
     "kind": "pending",
     "league": "3.29",
     "reason": "The mastery effect \"10% increased Movement Speed if you haven't taken Damage Recently\" (movement_speed_+%_if_have_not_taken_damage_recently, effect 6462): the engine notes the stat as not applied, since the condition is not set",
-    "evidence": "PoB reads the condition as not Hit Recently, which its config leaves unset, so it counts the 10% on the tree-only sheet; the gap is exactly 10",
+    "evidence": "PoB parses \"if you haven't taken damage recently\" as not BeenHitRecently, which its config (\"Have you been Hit Recently?\") leaves unset, so it counts the 10% on the tree-only sheet; the gap is exactly 10",
     "cases": [
       {"build": "106-shadow-L100-assassin-icicle-mine-of-fanning", "output": "player.movement_speed", "ours": 108, "pob": 118},
       {"build": "64-shadow-L97-assassin-rain-of-arrows-of-saturation", "output": "player.movement_speed", "ours": 105, "pob": 115}
-    ]
-  },
-  {
-    "id": "mana-regeneration-gap",
-    "kind": "pending",
-    "league": "3.29",
-    "reason": "Mana regeneration 0.2 short of PoB's; cause not found",
-    "evidence": "Ours is (1.75% of 1155 mana + 5) with 68% increased; PoB's value fits 69%. Mana matches, and none of the build's tattoos or runegrafts holds mana regeneration",
-    "cases": [
-      {"build": "93-witch-L99-necromancer-animate-weapon-of-ranged-arms", "output": "player.mana_regeneration", "ours": 42.4, "pob": 42.6}
     ]
   },
   {
