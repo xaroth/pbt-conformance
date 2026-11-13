@@ -800,6 +800,25 @@ Enemy for 4 seconds, dealing 8% of the Killed Enemy&apos;s Life as Fire Damage p
 			<SocketIdURL itemPbURL="" name="Jewel 61419" nodeId="61419"/>
 		</ItemSet>
 	</Items>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="nil" showLegacyGems="false" showSupportGemTypes="ALL" sortGemsByDPS="true" sortGemsByDPSField="CombinedDPS">
+		<SkillSet id="1">
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 1" source="Item:13:Severed in Sleep, Cutlass">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="25" nameSpec="Envy" quality="0" skillId="Envy"/>
+			</Skill>
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Body Armour" source="Item:16:Chains of Command, Saintly Chainmail">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="20" nameSpec="Animate Guardian&apos;s Weapon" quality="0" skillId="AnimateGuardiansWeapon" skillMinion="AnimatedWeapon" skillMinionItemSet="2" skillMinionItemSetCalcs="2" skillMinionSkill="1" skillMinionSkillCalcs="1"/>
+			</Skill>
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Body Armour" source="Item:16:Chains of Command, Saintly Chainmail">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="18" nameSpec="Animate Guardian&apos;s Weapon" quality="0" skillId="AnimateGuardiansWeapon" skillMinion="AnimatedWeapon" skillMinionItemSet="2" skillMinionItemSetCalcs="2" skillMinionSkill="1" skillMinionSkillCalcs="1"/>
+			</Skill>
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Boots" source="Item:15:Corpsewalker, Carnal Boots">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="20" nameSpec="Corpse Walk" quality="0" skillId="CorpseWalk"/>
+			</Skill>
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Amulet" source="Item:7:Hyrri&apos;s Truth, Jade Amulet">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="30" nameSpec="Precision" quality="0" skillId="Precision"/>
+			</Skill>
+		</SkillSet>
+	</Skills>
 	<Tree activeSpec="1">
 		<Spec ascendClassId="3" classId="3" clusterHashFormatVersion="2" masteryEffects="{6570,34663},{13862,64875},{14505,9876},{18750,29214},{30393,16215},{32241,38454},{34552,57179},{43818,47642},{47197,56471},{48290,15574}" nodes="1031,1203,1609,1722,2292,3359,4397,5296,5415,5743,5935,6250,6570,6685,6764,7388,7444,7688,7898,7960,8135,8302,9370,9386,9392,9408,10904,11128,11420,11490,11551,12143,13009,13862,14057,14505,15046,15081,17735,17821,18174,18750,19103,19635,20528,20987,21330,21958,21974,22062,22535,24824,25332,25831,26196,26270,26298,26481,26866,27203,27575,27611,28859,29106,29381,29712,30393,30767,31875,31958,32241,32932,33310,33755,34171,34173,34552,34880,35685,35791,35958,36017,36542,36634,36678,36915,37569,38176,39648,39818,41190,41472,42668,42981,43689,43818,44360,46897,47197,48290,48362,48713,49254,49605,49651,50826,52502,53279,53802,54159,54447,55563,55571,57264,58218,60398,60440,60472,60547,60554,60648,60791,61419,61471,64210,65153,65568,65570,65573,65574,65575,65577,65578" secondaryAscendClassId="9" treeVersion="3_29">
 			<URL>

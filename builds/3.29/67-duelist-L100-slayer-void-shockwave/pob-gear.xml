@@ -640,6 +640,13 @@ Attacks have +1.81% to Critical Strike Chance
 			<SocketIdURL itemPbURL="" name="Jewel 55190" nodeId="55190"/>
 		</ItemSet>
 	</Items>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="nil" showLegacyGems="false" showSupportGemTypes="ALL" sortGemsByDPS="true" sortGemsByDPSField="CombinedDPS">
+		<SkillSet id="1">
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Ring 1" source="Item:13:Beast Eye, Amethyst Ring">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="1" nameSpec="Vulnerability" quality="0" skillId="Vulnerability"/>
+			</Skill>
+		</SkillSet>
+	</Skills>
 	<Tree activeSpec="1">
 		<Spec ascendClassId="1" classId="4" clusterHashFormatVersion="2" masteryEffects="{4139,47642},{9471,19628},{12169,32255},{33823,2987},{35118,35582},{35859,62252},{39338,27095},{47059,43295},{48859,64875},{62416,22149}" nodes="864,1325,1909,2491,3184,3644,4139,4378,4833,5233,5237,6580,6712,8533,9471,10143,10532,11859,12169,14813,14930,15286,15678,16113,16754,16860,17201,17383,18302,18901,18990,19711,20010,20954,22356,22994,23027,23471,24083,24716,24858,24914,25933,26712,26725,29185,29353,29547,29933,30380,31471,32059,33287,33582,33795,33823,34009,34031,34191,34400,34590,34666,35118,35288,35859,36949,37326,37501,37647,37800,38180,38664,39338,39725,39761,40132,42293,42917,43412,44169,44202,45696,46393,46519,46882,47059,48109,48199,48282,48438,48807,48859,49080,49318,49806,50679,50986,51559,53118,54127,54667,55190,55676,56001,56381,56460,58803,58831,58854,59928,60153,60529,61262,61388,62319,62416,62429,62817,63282,63649,63723,65107,65632,65634,65642,65696,65698,65702,65703,65706,65760,65762,65770" secondaryAscendClassId="0" treeVersion="3_29">
 			<URL>

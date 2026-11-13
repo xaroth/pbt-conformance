@@ -657,6 +657,23 @@ Pact Skills grant Boons instead of Afflictions
 			<SocketIdURL itemPbURL="" name="Jewel 64583" nodeId="64583"/>
 		</ItemSet>
 	</Items>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="nil" showLegacyGems="false" showSupportGemTypes="ALL" sortGemsByDPS="true" sortGemsByDPSField="CombinedDPS">
+		<SkillSet id="1">
+			<Skill enabled="false" includeInFullDPS="nil" label="On Kill Monster Explosion" mainActiveSkill="1" mainActiveSkillCalcs="1" source="Explode">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="1" nameSpec="" quality="0" skillId="EnemyExplode" skillPart="1" skillPartCalcs="1"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="1" nameSpec="" quality="0" skillId="EnemyExplode" skillPart="1"/>
+			</Skill>
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Gloves" source="Item:19:Asenath&apos;s Gentle Touch, Silk Gloves">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="1" nameSpec="Despair" quality="0" skillId="Despair"/>
+			</Skill>
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Gloves" source="Item:19:Asenath&apos;s Gentle Touch, Silk Gloves">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="1" nameSpec="Enfeeble" quality="0" skillId="Enfeeble"/>
+			</Skill>
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Gloves" source="Item:19:Asenath&apos;s Gentle Touch, Silk Gloves">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="1" nameSpec="Temporal Chains" quality="0" skillId="TemporalChains"/>
+			</Skill>
+		</SkillSet>
+	</Skills>
 	<Tree activeSpec="1">
 		<Spec ascendClassId="1" classId="3" clusterHashFormatVersion="2" masteryEffects="{292,34242},{857,31556},{6570,13382},{10495,64875},{41273,1251},{47294,2459},{60210,64264},{60512,23471},{65528,28676}" nodes="292,857,1822,2292,3656,4011,4502,4973,5018,5129,5823,6538,6570,6799,7112,7600,8938,8948,9355,9797,9864,9877,10495,11984,12032,12143,12801,13170,13885,15452,17018,18182,18378,18769,18865,20546,21033,21301,21678,21835,21984,22535,22618,23616,25058,25260,25309,27096,27203,27623,27659,27788,27929,28859,30110,30338,30767,31316,31344,31984,32176,32210,32314,32417,33783,33989,34763,35255,35894,36858,37127,37663,37671,38176,38190,39861,40362,41263,41273,41989,42804,42907,43010,44988,45593,46289,46408,46896,47085,47294,47362,47504,48778,49605,49651,49978,50082,51212,53013,53114,53213,53456,54447,55247,55571,57226,58032,58968,59585,60085,60210,60259,60440,60512,61320,61653,61834,63194,63228,63799,64265,64583,65528,65872,65874,65882,65888,65890,65894,65895,65898,66896,66899,66905" secondaryAscendClassId="15" treeVersion="3_29">
 			<URL>

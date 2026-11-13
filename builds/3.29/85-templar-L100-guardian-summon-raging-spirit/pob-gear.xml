@@ -969,6 +969,19 @@ You and nearby allies gain 50% increased Damage
 			<SocketIdURL itemPbURL="" name="Jewel 64583" nodeId="64583"/>
 		</ItemSet>
 	</Items>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="nil" showLegacyGems="false" showSupportGemTypes="ALL" sortGemsByDPS="true" sortGemsByDPSField="CombinedDPS">
+		<SkillSet id="1">
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="1" mainActiveSkillCalcs="1" source="Tree:4494">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="20" nameSpec="" quality="0" skillId="SummonSentinelOfRadiance" skillMinion="GuardianSentinel" skillMinionCalcs="GuardianSentinel" skillMinionSkill="1" skillMinionSkillCalcs="1"/>
+			</Skill>
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" source="Tree:19641">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="20" nameSpec="" quality="0" skillId="SummonElementalRelic" skillMinion="GuardianRelicAll" skillMinionSkill="1" skillMinionSkillCalcs="1"/>
+			</Skill>
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 1" source="Item:18:Dragon Scratch, Convening Wand">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="30" nameSpec="Aspect of the Spider" quality="0" skillId="AspectOfTheSpider"/>
+			</Skill>
+		</SkillSet>
+	</Skills>
 	<Tree activeSpec="1">
 		<Spec ascendClassId="3" classId="5" clusterHashFormatVersion="2" masteryEffects="{34552,41544},{38921,4500},{39416,57179},{47197,61097},{48290,46636},{61992,9876}" nodes="409,1203,2311,2913,3533,4367,4494,5296,5743,5935,6712,6764,6967,7374,7388,7444,7600,7688,7960,9386,9392,9408,10904,11088,13009,13170,14057,14936,15046,15081,15117,15405,15631,16745,17735,19501,19641,19897,19919,20050,20228,20987,21033,21958,21984,22062,22618,23027,23185,24824,25332,25989,26196,26270,26866,27195,27308,29106,29712,31875,32932,33310,33631,33755,34098,34144,34171,34552,34880,34917,35556,35958,36634,36678,36915,36949,37419,38921,39416,39713,39841,39916,40010,41472,42264,42668,43133,43689,43716,44184,44908,44967,46897,47197,48290,49254,49605,50422,50862,52412,52502,54267,55743,56075,58218,60398,60472,61419,61471,61525,61992,62767,63138,63447,64210,64583,64768,65108,65568,65570,65578,65888,65889,65890,65891,65893,65894,65895,65897,65898,65899,66576,66578,66586" secondaryAscendClassId="15" treeVersion="3_29">
 			<URL>

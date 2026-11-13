@@ -761,6 +761,17 @@ Trigger a Socketed Elemental Spell on Block, with a 0.25 second Cooldown
 			<SocketIdURL itemPbURL="" name="Jewel 61419" nodeId="61419"/>
 		</ItemSet>
 	</Items>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="nil" showLegacyGems="false" showSupportGemTypes="ALL" sortGemsByDPS="true" sortGemsByDPSField="CombinedDPS">
+		<SkillSet id="1">
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Ring 2" source="Item:17:Lost Unity, Formless Ring">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="30" nameSpec="Herald of the Hive" quality="0" skillId="HeraldOfTheBreach"/>
+			</Skill>
+			<Skill enabled="false" includeInFullDPS="nil" label="On Kill Monster Explosion" mainActiveSkill="nil" mainActiveSkillCalcs="nil" source="Explode">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="1" nameSpec="" quality="0" skillId="EnemyExplode" skillPart="1"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="1" nameSpec="" quality="0" skillId="EnemyExplode" skillPart="1"/>
+			</Skill>
+		</SkillSet>
+	</Skills>
 	<Tree activeSpec="1">
 		<Spec ascendClassId="2" classId="3" clusterHashFormatVersion="2" masteryEffects="{2828,1251},{11505,55308},{26393,61283},{30393,16215},{34927,6216},{38921,4500},{39836,28638},{44298,25681},{45558,30612}" nodes="258,2311,2828,4184,4367,4397,4713,5743,5916,5935,6712,6764,6770,6967,7388,7444,7600,7960,8198,9386,9408,10031,11420,11505,11730,11924,12246,12536,12613,12738,13164,13559,14057,14936,14993,15064,15117,15167,16023,19501,19919,20987,21958,21974,22088,22577,23027,24872,24970,25831,25970,26196,26270,26393,26712,29049,29061,29353,29712,30393,31462,31875,32932,33435,34098,34171,34423,34506,34661,34927,35233,35288,35958,36542,36634,36678,36949,37114,37569,38921,39836,39841,41472,42760,44169,44184,44202,44298,44799,45558,46340,46897,47873,48118,49080,52502,53123,54279,54447,55190,55332,55743,55993,56461,57264,58218,58556,60398,60472,60989,61259,61419,61804,63039,63447,64210,65552,65554,65562,65568,65570,65578,65680,65682,65690,65696,65698,65706,66576,66579,66585,66704,66707,66713" secondaryAscendClassId="15" treeVersion="3_29">
 			<URL>

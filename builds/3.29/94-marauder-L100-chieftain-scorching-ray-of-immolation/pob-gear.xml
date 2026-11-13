@@ -491,6 +491,14 @@ Implicits: 1
 			<SocketIdURL itemPbURL="" name="Jewel 28475" nodeId="28475"/>
 		</ItemSet>
 	</Items>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="nil" showLegacyGems="false" showSupportGemTypes="ALL" sortGemsByDPS="true" sortGemsByDPSField="CombinedDPS">
+		<SkillSet id="1">
+			<Skill enabled="false" includeInFullDPS="nil" label="On Kill Monster Explosion" mainActiveSkill="1" mainActiveSkillCalcs="1" source="Explode">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="1" nameSpec="" quality="0" skillId="EnemyExplode" skillPart="1" skillPartCalcs="1"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="1" nameSpec="" quality="0" skillId="EnemyExplode" skillPart="1"/>
+			</Skill>
+		</SkillSet>
+	</Skills>
 	<Tree activeSpec="1">
 		<Spec ascendClassId="3" classId="1" clusterHashFormatVersion="2" masteryEffects="{2828,11521},{5368,4500},{11505,36313},{29993,17852},{34927,37},{48267,55308},{54340,7137},{64406,48720},{65154,27718}" nodes="487,1696,1731,2550,2828,4713,5152,5197,5368,5643,5743,6043,6245,6289,6446,6712,7162,7444,8198,9052,9695,9971,10031,10221,10238,11505,11730,11924,12536,13164,13559,13714,14936,15064,15631,15868,16167,19144,21958,22285,22627,22893,23027,24383,24472,24704,25732,25970,25989,26196,26270,26866,27166,28330,28475,29049,29061,29993,30733,31080,31462,31931,32249,32738,33287,33435,34171,34423,34927,36047,36678,36949,37326,38119,38508,39841,40653,40927,41472,42009,42659,42760,42800,43374,44184,44429,44799,44967,46578,47175,48118,48267,48287,48480,48929,49178,49412,50340,50422,50904,53042,53118,53793,54340,54396,55332,55485,55649,55993,58218,60031,60472,61198,61308,61355,61471,61804,62017,63048,63447,63933,64210,64406,64587,65154" secondaryAscendClassId="0" treeVersion="3_29">
 			<URL>

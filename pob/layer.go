@@ -59,9 +59,12 @@ type edit struct {
 }
 
 // Gear derives a build's gear layer from its full PoB XML: the build, its tree with the jewels
-// in its sockets, and its items without flasks. Skills, config and every other top-level element
-// are dropped, and the bandit and pantheon choices on <Build> are reset to None. The rest is
-// kept byte for byte.
+// in its sockets, and its items without flasks. Of the skills it keeps only the groups of the
+// active skill set granted by items or the tree, disabled with their gems, since PoB would add
+// them back enabled; a disabled group still counts when mainSocketGroup points at it, which it
+// does once the other groups are gone. Config and every other top-level element are dropped,
+// and the bandit and pantheon choices on <Build> are reset to None. The rest is kept byte for
+// byte.
 func Gear(full []byte) ([]byte, error) {
 	b, err := derive(full, layerGear)
 	if err != nil {
@@ -227,7 +230,7 @@ func (w *layerWalk) openTop(t xml.StartElement, start int64) (bool, error) {
 	case name == "Tree",
 		name == "Items" && w.layer >= layerGear:
 		return false, nil
-	case name == elemSkills && w.layer == layerSkill:
+	case name == elemSkills && w.layer >= layerGear:
 		w.activeSkillSet = cmp.Or(attr(t, "activeSkillSet"), "1")
 		return false, nil
 	case name == elemConfig && w.layer == layerSkill:
@@ -252,7 +255,7 @@ func (w *layerWalk) openItems(t xml.StartElement, start int64) (bool, error) {
 	return false, nil
 }
 
-// openSkills keeps the active skill set's groups as Skill says.
+// openSkills keeps the active skill set's groups as Gear and Skill say.
 func (w *layerWalk) openSkills(t xml.StartElement, start int64) (bool, error) {
 	parent := w.path[len(w.path)-1]
 	switch {
@@ -263,21 +266,33 @@ func (w *layerWalk) openSkills(t xml.StartElement, start int64) (bool, error) {
 		return true, w.drop(start)
 	case t.Name.Local == "Skill" && (parent == "SkillSet" || parent == elemSkills):
 		return w.group(t, start)
-	// Only groups kept with their supports alone are descended into.
-	case t.Name.Local == "Gem" && parent == "Skill" && !strings.HasPrefix(attr(t, "skillId"), "Support"):
+	case t.Name.Local == "Gem" && parent == "Skill" && w.disablesGem(t):
 		w.disable(start)
 	}
 	return false, nil
 }
 
+// disablesGem reports whether gem t of a group descended into is disabled. The gear layer
+// descends only into granted groups and disables every gem; the skill layer only into groups
+// kept with their supports alone.
+func (w *layerWalk) disablesGem(t xml.StartElement) bool {
+	return w.layer == layerGear || !strings.HasPrefix(attr(t, "skillId"), "Support")
+}
+
 // group keeps or drops the skill group t of the active skill set; it descends into a group whose
-// active gems it disables.
+// gems it disables.
 func (w *layerWalk) group(t xml.StartElement, start int64) (bool, error) {
 	w.groups++
+	granted := attr(t, "source") != ""
 	switch {
+	case w.layer == layerGear && granted:
+		w.disable(start)
+		return false, nil
+	case w.layer == layerGear:
+		return true, w.drop(start)
 	case w.groups == w.mainGroup:
 		w.newMain = w.kept + 1
-	case attr(t, "source") != "":
+	case granted:
 		w.disable(start)
 	case attr(t, "enabled") != "true" && attr(t, "active") != "true":
 		return true, w.drop(start)

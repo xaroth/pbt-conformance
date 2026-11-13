@@ -964,6 +964,13 @@ Nearby Allies have +10 Fortification
 			<SocketIdURL itemPbURL="" name="Jewel 64583" nodeId="64583"/>
 		</ItemSet>
 	</Items>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="nil" showLegacyGems="false" showSupportGemTypes="ALL" sortGemsByDPS="true" sortGemsByDPSField="CombinedDPS">
+		<SkillSet id="1">
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 1" source="Item:27:Severed in Sleep, Cutlass">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="25" nameSpec="Envy" quality="0" skillId="Envy"/>
+			</Skill>
+		</SkillSet>
+	</Skills>
 	<Tree activeSpec="1">
 		<Spec ascendClassId="3" classId="0" clusterHashFormatVersion="2" masteryEffects="{8732,64875},{25535,30612},{38921,4500},{47197,56471},{54849,41544}" nodes="1203,1564,1593,2913,4367,5296,5743,5935,6230,6764,6967,7388,7444,7903,7960,8732,9086,9386,9408,10031,10904,12143,13009,13170,14057,14936,15064,15117,15405,15631,15726,16775,17309,17735,19501,19732,19897,19919,20310,20832,20987,21033,21958,21974,21984,22618,24256,24824,25535,25831,25989,26196,26270,26740,26866,27123,28859,29199,29712,31683,31931,32669,32932,33310,33435,33508,33631,33740,34144,34173,34880,34906,35877,36634,36678,36881,36915,36949,37999,38048,38921,39841,41472,42668,43689,43716,44184,44848,44908,45887,46479,46910,47197,48828,49254,49605,50862,52412,52502,52633,54849,55373,55485,55571,55743,55906,56075,58218,58833,59976,60398,60440,61198,61419,61471,63447,63976,64210,64426,64583,65568,65570,65571,65577,65578,65579,65888,65889,65890,65891,65895,65897,65898,65899" secondaryAscendClassId="7" treeVersion="3_29">
 			<URL>

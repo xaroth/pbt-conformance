@@ -751,6 +751,13 @@ Reflects opposite Ring
 			<SocketIdURL itemPbURL="" name="Jewel 61419" nodeId="61419"/>
 		</ItemSet>
 	</Items>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="nil" showLegacyGems="false" showSupportGemTypes="ALL" sortGemsByDPS="true" sortGemsByDPSField="CombinedDPS">
+		<SkillSet id="1">
+			<Skill enabled="false" includeInFullDPS="nil" label="On Kill Monster Explosion" mainActiveSkill="nil" mainActiveSkillCalcs="nil" source="Explode">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="1" nameSpec="" quality="0" skillId="EnemyExplode" skillPart="1"/>
+			</Skill>
+		</SkillSet>
+	</Skills>
 	<Tree activeSpec="1">
 		<Spec ascendClassId="2" classId="3" clusterHashFormatVersion="2" masteryEffects="{4139,31822},{11505,36313},{12125,64381},{12382,38454},{25011,21468},{32241,34242},{41415,47642},{64406,7137}" nodes="1031,1325,2491,3644,4139,4367,4397,4713,5197,5233,5743,5916,6230,6289,6712,7388,7444,7600,7938,7960,9408,10532,11505,12125,12382,12738,13714,14930,14936,15117,15405,16023,16544,16775,18103,18901,19144,19595,20987,21650,21958,23027,24083,24914,25011,26196,26270,26712,26725,26740,27038,28330,28475,29049,29353,29712,30380,30733,31471,31683,31875,32241,32245,33287,33631,33740,33755,34171,34400,35288,35503,36542,36634,36678,36881,36949,37114,37569,39841,41415,44169,44184,44202,46519,46578,46910,48287,49080,49178,50197,50422,50570,50862,52502,53118,53123,54127,54447,55190,55485,55676,55906,57197,57264,57279,58218,58998,59928,60398,60472,61259,61262,61419,62319,62429,63282,63447,63723,63976,64210,64406,64587,65034,65568,65570,65574,65575,65578,65696,65698,65706,65760,65762,65770" secondaryAscendClassId="15" treeVersion="3_29">
 			<URL>

@@ -641,6 +641,16 @@ Magic Utility Flask Effects cannot be removed
 			<SocketIdURL itemPbURL="" name="Jewel 55190" nodeId="55190"/>
 		</ItemSet>
 	</Items>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="nil" showLegacyGems="false" showSupportGemTypes="ALL" sortGemsByDPS="true" sortGemsByDPSField="CombinedDPS">
+		<SkillSet id="1">
+			<Skill enabled="false" includeInFullDPS="nil" label="On Kill Monster Explosion" mainActiveSkill="1" mainActiveSkillCalcs="1" source="Explode">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="1" nameSpec="" quality="0" skillId="EnemyExplode" skillPart="1" skillPartCalcs="1"/>
+			</Skill>
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Body Armour" source="Item:19:The Brass Dome, Gladiator Plate">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="20" nameSpec="Death Aura" quality="0" skillId="DeathAura"/>
+			</Skill>
+		</SkillSet>
+	</Skills>
 	<Tree activeSpec="1">
 		<Spec ascendClassId="2" classId="4" clusterHashFormatVersion="2" masteryEffects="{2828,34420},{4139,47642},{12382,38454},{13712,23621},{22480,44840},{25011,34242},{32241,21468},{38921,4500},{41415,31822},{62588,64381},{64406,59936}" nodes="476,1325,1675,2598,2828,3644,4139,4833,5197,5233,5743,6204,6230,6289,6712,6764,6770,6967,7960,8419,8638,9386,9402,11730,11859,12246,12382,13712,13714,14057,14930,15405,16775,17527,19144,19732,19919,20261,20987,21650,22088,22480,22577,23027,24538,24865,25011,25970,26070,26196,26270,26712,26725,27869,28330,28475,29353,29933,30380,30691,30733,31683,31958,32241,32245,32730,33287,33631,33740,34031,34171,34423,35288,35503,36020,36678,36881,36949,37326,38921,40366,40867,41415,42760,42911,43374,44169,44191,44202,46578,46910,47389,47767,48109,48118,48287,48423,49080,49178,50197,50422,50570,50862,50986,52502,53118,54127,55190,55332,55485,55676,55743,56001,56922,57279,58218,59928,60472,62429,62588,63282,63723,63976,64210,64406,64587,65034,65552,65555,65558,65561,65696,65698,65706" secondaryAscendClassId="9" treeVersion="3_29">
 			<URL>

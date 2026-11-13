@@ -659,6 +659,13 @@ Gain 72% of Physical Damage as Extra Chaos Damage
 			<SocketIdURL itemPbURL="" name="Jewel 61834" nodeId="61834"/>
 		</ItemSet>
 	</Items>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="nil" showLegacyGems="false" showSupportGemTypes="ALL" sortGemsByDPS="true" sortGemsByDPSField="CombinedDPS">
+		<SkillSet id="1">
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="1" mainActiveSkillCalcs="1" source="Tree:48239">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="30" nameSpec="" quality="0" skillId="AssassinsMark"/>
+			</Skill>
+		</SkillSet>
+	</Skills>
 	<Tree activeSpec="1">
 		<Spec ascendClassId="1" classId="6" clusterHashFormatVersion="2" masteryEffects="{292,34242},{857,31556},{12125,47642},{20675,18859},{26148,9755},{27371,6462},{65528,57074}" nodes="292,857,1461,1822,1945,3359,4242,4367,5296,5823,6064,6250,6797,6910,8001,9261,9877,10115,11239,12125,12783,12850,12888,14292,14936,15117,16954,18174,18182,18436,18769,18770,19210,19501,20528,20675,20807,21264,21958,22535,22748,23334,23659,24133,25058,25067,25260,25411,26148,27276,27371,27656,27788,28012,29454,29629,30205,30767,31315,31958,32176,32763,33310,33753,33755,33864,33903,33954,35255,35851,36287,36858,38190,38995,39718,40362,41689,41989,43316,44184,44683,45272,46277,46408,46676,47065,47362,47484,47949,48239,48556,48971,49605,49900,50029,51219,51220,52714,53114,53456,54307,54338,55686,56295,58229,59252,59606,60259,60440,60592,60735,61419,61653,61834,62744,62831,63251,63447,64235,65528,65792,65796,65808,65811,65824,65826,65834,66816,66820,66832,66841" secondaryAscendClassId="9" treeVersion="3_29_ruthless">
 			<URL>

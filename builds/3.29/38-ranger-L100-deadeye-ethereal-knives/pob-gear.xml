@@ -826,6 +826,22 @@ Grants Level 30 Herald of the Hive Skill
 			<SocketIdURL itemPbURL="" name="Jewel 64583" nodeId="64583"/>
 		</ItemSet>
 	</Items>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="nil" showLegacyGems="false" showSupportGemTypes="ALL" sortGemsByDPS="true" sortGemsByDPSField="CombinedDPS">
+		<SkillSet id="1">
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Helmet" source="Item:33:The Gull, Raven Mask">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="1" nameSpec="Create Lesser Shrine" quality="0" skillId="TriggeredSummonLesserShrine"/>
+			</Skill>
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Gloves" source="Item:23:Maligaro&apos;s Virtuosity, Deerskin Gloves">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="1" nameSpec="Despair" quality="0" skillId="Despair"/>
+			</Skill>
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Ring 2" source="Item:34:Lost Unity, Formless Ring">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="30" nameSpec="Herald of the Hive" quality="0" skillId="HeraldOfTheBreach"/>
+			</Skill>
+			<Skill enabled="false" includeInFullDPS="nil" label="On Kill Monster Explosion" mainActiveSkill="nil" mainActiveSkillCalcs="nil" source="Explode">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="1" nameSpec="" quality="0" skillId="EnemyExplode" skillPart="1"/>
+			</Skill>
+		</SkillSet>
+	</Skills>
 	<Tree activeSpec="1">
 		<Spec ascendClassId="2" classId="2" clusterHashFormatVersion="2" masteryEffects="{292,47642},{5826,1167},{12125,34242},{23547,65015},{39836,28638},{53188,64875}" nodes="292,1461,2311,3872,4367,5082,5296,5826,6538,6797,6910,7960,8001,8638,8938,9408,9797,10843,12125,12613,13170,14936,15117,18182,18436,19501,20987,21033,21958,21984,22618,22748,23334,23547,24362,24848,25260,25411,27415,27656,27788,29629,29712,29781,31703,31958,32176,32710,32740,32763,33310,33753,33989,35233,35255,36107,36287,36678,36858,37671,38246,38662,38947,38995,39836,39841,39861,41263,44184,45035,45329,46277,47767,47949,48556,48778,48971,49605,49900,49978,50338,50459,51213,52502,53188,53456,56295,56856,59370,59585,59606,59837,60259,60440,60989,61419,61627,61834,63039,63447,63795,64583,65552,65554,65562,65568,65570,65578,65808,65811,65817,65824,65826,65829,65830,65834,65872,65874,65882,65888,65890,65894,65895,65898,66576,66579,66585,66832,66835,66841,66896,66898,66906" secondaryAscendClassId="9" treeVersion="3_29">
 			<URL>

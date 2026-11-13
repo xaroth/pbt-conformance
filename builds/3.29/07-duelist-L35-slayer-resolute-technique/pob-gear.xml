@@ -135,4 +135,8 @@ Gain 50 Life when you Stun an Enemy
 			<Slot name="Belt" itemId="9"/>
 		</ItemSet>
 	</Items>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="0">
+		<SkillSet id="1">
+		</SkillSet>
+	</Skills>
 </PathOfBuilding>

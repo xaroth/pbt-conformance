@@ -958,6 +958,13 @@ Nearby Allies have +10 Fortification
 			<SocketIdURL itemPbURL="" name="Jewel 64583" nodeId="64583"/>
 		</ItemSet>
 	</Items>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="nil" showLegacyGems="false" showSupportGemTypes="ALL" sortGemsByDPS="true" sortGemsByDPSField="CombinedDPS">
+		<SkillSet id="1">
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Ring 1" source="Item:16:Sorrow Eye, Bone Ring">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="30" nameSpec="Aspect of the Spider" quality="0" skillId="AspectOfTheSpider"/>
+			</Skill>
+		</SkillSet>
+	</Skills>
 	<Tree activeSpec="1">
 		<Spec ascendClassId="3" classId="3" clusterHashFormatVersion="2" masteryEffects="{857,30520},{14505,11723},{34552,41544},{38921,4500},{41415,47642},{48290,15574},{54413,45317},{54849,57179},{55230,62252}" nodes="857,1203,1822,2292,4397,4502,5743,6712,6764,6967,7388,7403,7444,7688,7898,8948,9386,9567,9769,10904,11420,13009,13170,13232,14057,14505,14603,15046,15081,17297,17735,18309,18769,19919,21033,21984,22062,22618,23027,24067,24824,25332,26196,26270,26298,26712,26725,27203,27415,27659,27929,29106,29353,30380,31703,31875,32710,33310,33783,34171,34552,34880,35288,35685,36542,36634,36915,36949,37569,37671,38190,38921,41263,41415,41472,42668,43689,44169,44202,48290,48362,48713,48719,48778,49080,49254,49515,49605,49785,51219,53118,54159,54413,54447,54849,55190,55230,55646,55743,57264,57279,57290,58218,59928,60398,60472,60791,61198,61653,62429,62791,63282,63723,64210,64583,65696,65697,65698,65699,65701,65702,65703,65705,65706,65707,65888,65889,65890,65891,65893,65894,65895,65897,65898,65899" secondaryAscendClassId="4" treeVersion="3_29">
 			<URL>

@@ -951,6 +951,13 @@ Implicits: 0
 			<SocketIdURL itemPbURL="" name="Jewel 61419" nodeId="61419"/>
 		</ItemSet>
 	</Items>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="nil" showLegacyGems="false" showSupportGemTypes="ALL" sortGemsByDPS="true" sortGemsByDPSField="CombinedDPS">
+		<SkillSet id="1">
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 2 Swap" source="Item:21:Seablister, Spiny Round Shield">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="20" nameSpec="Savage Barnacle" quality="0" skillId="BarnacleSnap"/>
+			</Skill>
+		</SkillSet>
+	</Skills>
 	<Tree activeSpec="1">
 		<Spec ascendClassId="3" classId="0" clusterHashFormatVersion="2" masteryEffects="{12125,47642},{14505,57179},{25535,30612},{27733,23471},{32241,38454},{38921,4500},{41522,17852},{47197,61097},{48290,58106}" nodes="1006,1564,1593,2913,4177,4367,5296,5743,5935,6230,6764,6967,7388,7403,7444,7614,7688,7898,7960,9386,9408,10490,10904,11689,12125,12613,13009,13191,14057,14505,14936,15046,15081,15117,15405,15631,15726,16775,17297,17735,19008,19103,19501,19732,19897,19919,20832,20987,21958,21974,22062,23185,24824,25535,25831,25944,26196,26270,26481,26740,27123,27308,27733,29712,31875,32241,32669,32932,33310,33479,33631,33740,34144,34171,34880,35260,35685,35877,36634,36678,36915,38048,38921,38989,39841,41190,41522,42668,43133,43689,43716,44184,44967,46479,46904,46910,47197,47251,48290,48713,49785,50422,50862,52412,52502,54267,55373,55743,55906,56075,57290,58210,58218,58833,60398,60472,61419,62214,63447,63976,64210,64426,65552,65554,65562,65568,65569,65570,65571,65573,65574,65575,65577,65578,65579" secondaryAscendClassId="4" treeVersion="3_29">
 			<URL>

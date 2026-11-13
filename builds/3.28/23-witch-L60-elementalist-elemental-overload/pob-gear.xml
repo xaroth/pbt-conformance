@@ -152,4 +152,8 @@ Implicits: 1
 			<Slot name="Belt" itemId="10"/>
 		</ItemSet>
 	</Items>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="0">
+		<SkillSet id="1">
+		</SkillSet>
+	</Skills>
 </PathOfBuilding>

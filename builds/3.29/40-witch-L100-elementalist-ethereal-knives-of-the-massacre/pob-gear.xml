@@ -838,6 +838,24 @@ Grants Level 30 Herald of the Hive Skill
 			<SocketIdURL itemPbURL="" name="Jewel 64583" nodeId="64583"/>
 		</ItemSet>
 	</Items>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="nil" showLegacyGems="false" showSupportGemTypes="ALL" sortGemsByDPS="true" sortGemsByDPSField="CombinedDPS">
+		<SkillSet id="1">
+			<Skill enabled="false" includeInFullDPS="nil" label="On Kill Monster Explosion" mainActiveSkill="1" mainActiveSkillCalcs="1" source="Explode">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="1" nameSpec="" quality="0" skillId="EnemyExplode" skillPart="1" skillPartCalcs="1"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="1" nameSpec="" quality="0" skillId="EnemyExplode" skillPart="1"/>
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="1" nameSpec="" quality="0" skillId="EnemyExplode" skillPart="1"/>
+			</Skill>
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Helmet" source="Item:23:The Gull, Raven Mask">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="1" nameSpec="Create Lesser Shrine" quality="0" skillId="TriggeredSummonLesserShrine"/>
+			</Skill>
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Gloves" source="Item:33:Hrimsorrow, Goathide Gloves">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="1" nameSpec="Despair" quality="0" skillId="Despair"/>
+			</Skill>
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Ring 2" source="Item:35:Lost Unity, Formless Ring">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="30" nameSpec="Herald of the Hive" quality="0" skillId="HeraldOfTheBreach"/>
+			</Skill>
+		</SkillSet>
+	</Skills>
 	<Tree activeSpec="1">
 		<Spec ascendClassId="2" classId="3" clusterHashFormatVersion="2" masteryEffects="{857,51424},{5826,2198},{9586,9986},{12125,34242},{34723,40307},{39836,28638},{63861,2987}" nodes="258,857,1461,2311,3872,4036,4367,5296,5826,6797,6910,7960,8638,8948,9261,9408,9586,9797,10843,12125,12613,12783,12888,13170,14292,14936,15117,15228,16023,16954,18182,18436,18769,19501,20528,20807,20987,21033,21678,21958,21984,22618,22748,23334,25260,25757,27038,27415,27656,27659,27788,29629,29712,31703,31958,32210,32710,32740,32763,33310,33753,34723,35233,35255,36287,36678,36858,37671,38947,39836,39841,41263,41635,44184,45329,46277,47306,47767,47873,47949,48556,48778,48971,49605,49900,52502,53456,54447,56075,56158,56295,57226,58998,59585,60405,60440,60735,60989,61419,61653,61834,61981,63039,63447,63861,64583,65552,65554,65562,65568,65570,65578,65808,65810,65818,65824,65826,65834,65872,65875,65881,65888,65890,65898,66576,66578,66586,66832,66834,66842,66896,66899,66905" secondaryAscendClassId="9" treeVersion="3_29">
 			<URL>

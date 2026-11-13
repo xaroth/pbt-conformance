@@ -1000,6 +1000,13 @@ You and Nearby Allies have 47 to 61 added Chaos Damage per White Socket
 			<SocketIdURL itemPbURL="" name="Jewel 55190" nodeId="55190"/>
 		</ItemSet>
 	</Items>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="nil" showLegacyGems="false" showSupportGemTypes="ALL" sortGemsByDPS="true" sortGemsByDPSField="CombinedDPS">
+		<SkillSet id="1">
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 2 Swap" source="Item:21:Voidfletcher, Ornate Quiver">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="20" nameSpec="Void Shot" quality="0" skillId="VoidShot"/>
+			</Skill>
+		</SkillSet>
+	</Skills>
 	<Tree activeSpec="1">
 		<Spec ascendClassId="3" classId="0" clusterHashFormatVersion="2" masteryEffects="{4139,31822},{9213,46059},{12382,64381},{18240,51424},{22480,4500},{25011,34242},{32241,38454},{41415,47642},{45558,30612},{48505,21468}" nodes="2491,3089,3533,3644,4139,5197,5233,5743,6230,6289,6712,6764,6770,6967,7374,7444,7600,7960,8643,9213,9386,9402,9408,10031,10532,11088,11688,12246,12382,13714,14057,14930,15405,15726,15900,17219,17527,18240,18901,19144,19919,20987,21650,22480,23027,23756,25011,26196,26270,26712,26725,27323,28034,28330,28475,29353,29712,30380,30675,30733,31517,31683,32241,32669,33287,33508,33631,33740,34171,34400,35288,35503,35877,36678,36881,36949,37078,38048,41415,43061,43645,44169,44191,44202,44967,45558,46479,46519,46578,46910,47062,48287,48505,48679,48768,48828,49080,49178,50422,50570,50862,52502,53118,55190,55373,55485,55676,55743,55906,56153,57279,57404,58218,58833,59928,60145,60472,62319,62429,62767,63282,63723,63845,63954,64210,64587,65034,65108,65568,65578,65696,65706,65760,65770" secondaryAscendClassId="15" treeVersion="3_29">
 			<URL>

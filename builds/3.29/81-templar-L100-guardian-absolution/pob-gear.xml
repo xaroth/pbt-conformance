@@ -998,6 +998,16 @@ Enemy for 4 seconds, dealing 8% of the Killed Enemy&apos;s Life as Fire Damage p
 			<SocketIdURL itemPbURL="" name="Jewel 64583" nodeId="64583"/>
 		</ItemSet>
 	</Items>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="nil" showLegacyGems="false" showSupportGemTypes="ALL" sortGemsByDPS="true" sortGemsByDPSField="CombinedDPS">
+		<SkillSet id="1">
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="1" mainActiveSkillCalcs="1" source="Tree:4494">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="20" nameSpec="" quality="0" skillId="SummonSentinelOfRadiance" skillMinion="GuardianSentinel" skillMinionCalcs="GuardianSentinel" skillMinionSkill="1" skillMinionSkillCalcs="1"/>
+			</Skill>
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" source="Tree:19641">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="20" nameSpec="" quality="0" skillId="SummonElementalRelic" skillMinion="GuardianRelicAll" skillMinionSkill="1" skillMinionSkillCalcs="1"/>
+			</Skill>
+		</SkillSet>
+	</Skills>
 	<Tree activeSpec="1">
 		<Spec ascendClassId="3" classId="5" clusterHashFormatVersion="2" masteryEffects="{14505,9876},{32241,47642},{43647,57179},{48290,58106},{53188,64875}" nodes="409,1203,1722,4177,4367,4494,5296,5743,5935,6712,6764,6967,7388,7444,7960,9386,9408,10904,11730,13009,13170,14057,14151,14505,15046,15117,16745,17735,19103,19501,19641,19919,20528,20832,20987,21033,21413,21974,21984,22618,23027,24362,25831,26196,26270,26481,26712,27564,29353,29712,29781,32241,32364,32932,32992,33310,34171,34880,35260,35288,35685,35791,36634,36678,36915,36949,38989,39728,39841,40010,40351,41190,41472,42668,43647,43689,44169,44184,44202,48290,48713,49080,49254,49605,52502,53188,55146,55190,55743,56075,56158,58218,58402,60398,60472,61419,61525,63447,63965,64210,64583,65108,65568,65569,65570,65571,65573,65574,65575,65577,65578,65579,65696,65697,65698,65699,65701,65703,65705,65706,65707,65856,65860,65888,65889,65890,65891,65893,65894,65895,65897,65898,65899" secondaryAscendClassId="0" treeVersion="3_29">
 			<URL>

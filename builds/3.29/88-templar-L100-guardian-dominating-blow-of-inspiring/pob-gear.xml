@@ -983,6 +983,19 @@ Nearby Enemies cannot deal Critical Strikes
 			<SocketIdURL itemPbURL="" name="Jewel 61419" nodeId="61419"/>
 		</ItemSet>
 	</Items>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="nil" showLegacyGems="false" showSupportGemTypes="ALL" sortGemsByDPS="true" sortGemsByDPSField="CombinedDPS">
+		<SkillSet id="1">
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="1" mainActiveSkillCalcs="1" source="Tree:4494">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="20" nameSpec="" quality="0" skillId="SummonSentinelOfRadiance" skillMinion="GuardianSentinel" skillMinionCalcs="GuardianSentinel" skillMinionSkill="1" skillMinionSkillCalcs="1"/>
+			</Skill>
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" source="Tree:35011">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="20" nameSpec="" quality="0" skillId="SummonSpectralTiger" skillMinion="SummonedSpectralTiger" skillMinionSkill="1" skillMinionSkillCalcs="1"/>
+			</Skill>
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" source="Tree:19641">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="20" nameSpec="" quality="0" skillId="SummonElementalRelic" skillMinion="GuardianRelicAll" skillMinionSkill="1" skillMinionSkillCalcs="1"/>
+			</Skill>
+		</SkillSet>
+	</Skills>
 	<Tree activeSpec="1">
 		<Spec ascendClassId="3" classId="5" clusterHashFormatVersion="2" masteryEffects="{9471,19628},{22480,4500},{26697,47595},{27307,35810},{30393,8653},{33823,9986},{45558,45307},{54849,47429},{56595,28524}" nodes="409,2092,2491,3644,4367,4494,5233,5296,5935,6764,6770,6967,7444,7960,9402,9408,9471,10532,10575,10861,11455,11730,12246,14151,14930,15117,15678,16745,17527,17735,18009,18901,19501,19641,19732,19919,20987,21929,21974,22480,22577,23027,23659,24716,24824,25831,26196,26270,26697,26712,26725,27119,27137,27307,27564,29353,29712,29797,30393,32932,33310,33823,33864,34171,34400,34590,34952,35011,35053,35288,35958,36678,37501,38836,39841,40010,40508,41387,42668,43514,43689,44169,44184,44191,44202,45558,46519,46897,48199,48251,49080,49254,49605,50029,52502,54849,55190,55743,56595,57839,58402,58831,59928,60440,60472,61419,61525,62319,62429,63282,63425,63447,63723,63965,64210,65552,65558,65561,65568,65570,65571,65577,65578,65579,65696,65697,65698,65699,65705,65706,65707,65760,65762,65770" secondaryAscendClassId="11" treeVersion="3_29">
 			<URL>

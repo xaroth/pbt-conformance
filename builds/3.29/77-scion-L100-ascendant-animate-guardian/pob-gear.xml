@@ -907,6 +907,16 @@ You can apply an additional Curse
 			<SocketIdURL itemPbURL="" name="Jewel 64583" nodeId="64583"/>
 		</ItemSet>
 	</Items>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="nil" showLegacyGems="false" showSupportGemTypes="ALL" sortGemsByDPS="true" sortGemsByDPSField="CombinedDPS">
+		<SkillSet id="1">
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 1" source="Item:16:Sign of the Sin Eater, Tyrant&apos;s Sekhem">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="30" nameSpec="Smite" quality="0" skillId="Smite" skillPart="1"/>
+			</Skill>
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Boots" source="Item:12:Bubonic Trail, Murder Boots">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="20" nameSpec="Death Walk" quality="0" skillId="DeathWalk"/>
+			</Skill>
+		</SkillSet>
+	</Skills>
 	<Tree activeSpec="1">
 		<Spec ascendClassId="1" classId="0" clusterHashFormatVersion="2" masteryEffects="{1215,27103},{6507,56471},{27307,35810},{30393,16215},{48007,64875},{54413,45317},{55491,61097}" nodes="607,918,1215,2521,3452,4367,4502,5296,5935,6507,6799,7444,7594,7960,9392,9408,9769,9920,10099,10829,11455,12143,13170,13322,14182,14211,14936,15117,15144,18033,18182,18769,19501,20812,20987,21033,21958,21974,21984,22473,22618,23659,24067,24496,24643,24798,25831,26270,27307,27415,28221,28424,28574,28859,29712,30393,32091,32176,32710,32932,33310,33545,33864,33989,34907,35255,35754,35958,36107,36678,36858,37671,38246,39598,39841,39861,41263,41996,42731,44103,44184,45067,46092,46897,48007,48679,48778,49515,49605,50029,51213,51782,51786,51923,52502,53456,54413,55491,55571,56116,56722,57736,58029,58833,60090,60259,60440,61419,61653,62162,63194,63425,63447,64210,64583,65097,65536,65538,65540,65568,65570,65571,65573,65575,65856,65858,65860,65888,65890,65898,66048,66050,66052,66560,66562,66564,66880,66882,66884" secondaryAscendClassId="6" treeVersion="3_29">
 			<URL>

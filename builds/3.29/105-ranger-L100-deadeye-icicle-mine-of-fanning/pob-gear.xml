@@ -931,6 +931,13 @@ You and nearby allies gain 50% increased Damage
 			<SocketIdURL itemPbURL="" name="Jewel 64583" nodeId="64583"/>
 		</ItemSet>
 	</Items>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="nil" showLegacyGems="false" showSupportGemTypes="ALL" sortGemsByDPS="true" sortGemsByDPSField="CombinedDPS">
+		<SkillSet id="1">
+			<Skill enabled="false" includeInFullDPS="nil" label="" mainActiveSkill="nil" mainActiveSkillCalcs="nil" slot="Weapon 2 Swap" source="Item:13:Perepiteia, Ezomyte Spiked Shield">
+				<Gem count="nil" enableGlobal1="true" enableGlobal2="true" enabled="false" level="20" nameSpec="Lightning Aegis" quality="0" skillId="LightningAegis"/>
+			</Skill>
+		</SkillSet>
+	</Skills>
 	<Tree activeSpec="1">
 		<Spec ascendClassId="2" classId="2" clusterHashFormatVersion="2" masteryEffects="{9586,38070},{10495,64875},{31039,2987},{38207,38814},{53615,23621}" nodes="1461,1655,2260,3656,4036,4502,5082,6538,6797,6799,6910,7920,8027,8938,9206,9469,9586,9797,10495,10763,11716,12412,12801,12831,13170,14292,15228,16079,18182,18661,18770,19858,20807,20852,21033,21984,22618,22852,23169,23334,24050,24848,25260,25411,26067,27656,27788,28754,29454,29549,31039,31958,32710,32763,33310,33777,33783,33989,35283,35334,35894,36221,36287,36585,36858,37504,38207,38662,39861,40644,41635,41866,41870,42006,42443,42649,42686,42744,42804,44102,45035,45593,45608,46277,46965,47306,47507,48614,49605,49900,49929,49978,50338,50459,53005,53114,53213,53456,53615,56134,56295,56856,59220,59370,59585,59606,59837,60405,60440,60735,61627,61689,61834,61981,62744,63194,63228,63251,63795,64265,64583,65502,65808,65811,65817,65872,65874,65882,65888,65890,65898,66896,66899,66905" secondaryAscendClassId="9" treeVersion="3_29">
 			<URL>

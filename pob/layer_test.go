@@ -16,7 +16,7 @@ func TestGear(t *testing.T) {
 		name, full, want string
 	}{
 		{
-			name: "drops skills, config, flasks; resets choices",
+			name: "keeps granted groups disabled; drops other skills, config, flasks; resets choices",
 			full: `<?xml version="1.0" encoding="UTF-8"?>
 <PathOfBuilding>
 	<Build level="90" className="Witch" bandit="Alira" pantheonMajorGod="Lunaris" pantheonMinorGod="Abberath" viewMode="ITEMS"/>
@@ -50,9 +50,17 @@ Crimson Jewel
 			<Slot name="Helmet" itemId="2"/>
 		</ItemSet>
 	</Items>
-	<Skills activeSkillSet="1">
+	<Skills activeSkillSet="2">
 		<SkillSet id="1">
+			<Skill enabled="true" source="Item:4:Ring"><Gem skillId="Anger" enabled="true"/></Skill>
+		</SkillSet>
+		<SkillSet id="2">
 			<Skill enabled="true"><Gem nameSpec="Determination"/></Skill>
+			<Skill enabled="true" source="Item:2:Doom Crown">
+				<Gem skillId="Anger" enabled="true"/>
+				<Gem skillId="SupportGenerosity"/>
+			</Skill>
+			<Skill enabled="true" source="Tree:123"><Gem skillId="Herald"/></Skill>
 		</SkillSet>
 	</Skills>
 	<Config activeConfigSet="1">
@@ -87,6 +95,15 @@ Crimson Jewel
 			<Slot name="Helmet" itemId="2"/>
 		</ItemSet>
 	</Items>
+	<Skills activeSkillSet="2">
+		<SkillSet id="2">
+			<Skill enabled="false" source="Item:2:Doom Crown">
+				<Gem skillId="Anger" enabled="false"/>
+				<Gem enabled="false" skillId="SupportGenerosity"/>
+			</Skill>
+			<Skill enabled="false" source="Tree:123"><Gem enabled="false" skillId="Herald"/></Skill>
+		</SkillSet>
+	</Skills>
 </PathOfBuilding>
 `,
 		},

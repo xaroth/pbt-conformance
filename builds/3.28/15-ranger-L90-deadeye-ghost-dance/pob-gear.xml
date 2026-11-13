@@ -209,4 +209,8 @@ Implicits: 0
 			<SocketIdURL name="Jewel 33989" nodeId="33989" itemPbURL=""/>
 		</ItemSet>
 	</Items>
+	<Skills activeSkillSet="1" defaultGemLevel="normalMaximum" defaultGemQuality="0" sortGemsByDPS="true" showSupportGemTypes="ALL" showLegacyGems="false">
+		<SkillSet id="1">
+		</SkillSet>
+	</Skills>
 </PathOfBuilding>
