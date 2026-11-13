@@ -38,7 +38,7 @@ go run ./cmd/pbtc pob --cache ~/.cache/pbt-conformance --check    # fail if a st
 
 | Group | Outputs | Layers |
 |---|---|---|
-| `sheet` | attributes, life, mana, energy shield, armour, evasion, the resistances and their maximums, life, mana and energy shield regeneration, unreserved life and mana | all |
+| `sheet` | attributes, life, mana, energy shield, armour, evasion, the resistances and their maximums, life, mana and energy shield regeneration, unreserved life and mana, movement speed | all |
 | `defence` | block, spell block, spell suppression, life and energy shield regeneration recovery, life and energy shield leech rates, life and energy shield recharge | all |
 | `skill` | the main skill's average hit, chance to hit, hits per second, critical strike chance, hit, damage over time and total damage per second | skill, full |
 | `hit-types` | the main skill's hit damage per damage type (physical, lightning, cold, fire, chaos), minimum and maximum | skill, full |
