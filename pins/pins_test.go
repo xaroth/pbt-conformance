@@ -19,9 +19,6 @@ func TestReadRepoPins(t *testing.T) {
 	if f.Games["poe1"].Current == "" {
 		t.Error("no current poe1 league")
 	}
-	if got := f.Data.RawURL(); !strings.HasPrefix(got, "https://raw.githubusercontent.com/xaroth/pbt-data/") || !strings.HasSuffix(got, f.Data.Commit+"/") {
-		t.Errorf("RawURL: %s", got)
-	}
 }
 
 func TestReadRejects(t *testing.T) {
@@ -30,8 +27,7 @@ func TestReadRejects(t *testing.T) {
 		commit = "f9f4f3b4ab6a3a37d2eb693265b5c73317ff42a6"
 		id     = "51c9afc83cb9e1db75822ba2efdd7c3786e243fb24a439f4052be98ab80ade1c"
 	)
-	runtime := `"runtime": {"luajit": {"repo": "https://x", "commit": "` + commit + `"}, "luautf8": {"repo": "https://y", "commit": "` + commit + `"}}, ` +
-		`"data": {"repo": "https://github.com/xaroth/pbt-data", "commit": "` + commit + `"}`
+	runtime := `"runtime": {"luajit": {"repo": "https://x", "commit": "` + commit + `"}, "luautf8": {"repo": "https://y", "commit": "` + commit + `"}}`
 	league := func(tree, version, c string) string {
 		return `{"pob": {"tag": "v1", "commit": "` + c + `"}, "tree": "` + tree + `", "dataset": {"version": "` + version + `", "id": "` + id + `"}}`
 	}
@@ -48,11 +44,6 @@ func TestReadRejects(t *testing.T) {
 		{"tree of another league", file("3.28", league("3_29", "3.28.0.16", commit)), `tree "3_29" is not the league's tree`},
 		{"dataset of another league", file("3.28", league("3_28", "3.29.3.3", commit)), "is not a patch of the league"},
 		{"short commit", file("3.28", league("3_28", "3.28.0.16", "f9f4f3b")), "want lowercase hex digits, 40 of them"},
-		{
-			"data not on GitHub",
-			strings.Replace(file("3.28", league("3_28", "3.28.0.16", commit)), "https://github.com/xaroth/pbt-data", "https://example.com/d", 1),
-			"want a https://github.com/ repository",
-		},
 		{"http repo", strings.Replace(file("3.28", league("3_28", "3.28.0.16", commit)), "https://x", "http://x", 1), "want an https URL"},
 	}
 	for _, testCase := range testCases {
