@@ -223,11 +223,7 @@ type ours struct {
 // oursOf simulates the skill and full builds of the build in dir, the tree-only one st already
 // simulated, while the engine gives skill outputs.
 func oursOf(dir string, reg *dataset.Registry, sim *simulator.Sim, st *simulator.Stats, full *build.Build) (ours, error) {
-	tree, err := engineValues(sim.Outputs(), st)
-	if err != nil {
-		return ours{}, err
-	}
-	o := ours{tree: tree}
+	o := ours{tree: engineValues(sim.Outputs(), st)}
 	var skillOutputs []simulator.Output
 	table := pobOutputs()
 	for _, out := range sim.Outputs() {
@@ -256,20 +252,20 @@ func simulateValues(sim *simulator.Sim, outputs []simulator.Output, b *build.Bui
 	if err != nil {
 		return nil, fmt.Errorf("compare: %w", err)
 	}
-	return engineValues(outputs, st)
+	return engineValues(outputs, st), nil
 }
 
-// engineValues returns the value of each of outputs in st.
-func engineValues(outputs []simulator.Output, st *simulator.Stats) (map[string]float64, error) {
+// engineValues returns the value of each of outputs st gives. The engine gives some outputs only
+// for some builds, such as those of a main skill; one it does not give is left out, so it is not
+// compared and judged as missing.
+func engineValues(outputs []simulator.Output, st *simulator.Stats) map[string]float64 {
 	m := make(map[string]float64, len(outputs))
 	for _, o := range outputs {
-		v, ok := st.Get(o.Key)
-		if !ok {
-			return nil, fmt.Errorf("compare: %w %s", errNoKey, o.Key)
+		if v, ok := st.Get(o.Key); ok {
+			m[string(o.Key)] = v
 		}
-		m[string(o.Key)] = v
 	}
-	return m, nil
+	return m
 }
 
 func importFile(dir, file string, reg *dataset.Registry) (*build.Build, []build.Warning, error) {

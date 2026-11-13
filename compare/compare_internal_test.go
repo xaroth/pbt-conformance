@@ -3,10 +3,13 @@ package compare
 // Internal: the engine gives no skill outputs yet, so they are fed in as it will give them.
 
 import (
+	"os"
+	"path/filepath"
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
 
+	"github.com/xaroth/pbt-conformance/pins"
 	"github.com/xaroth/pbt-conformance/pob"
 
 	"github.com/xaroth/pbt-engine/simulator"
@@ -55,5 +58,39 @@ func TestSkillOutputs(t *testing.T) {
 				t.Errorf("%s layer (-want +got):\n%s", l.Name, diff)
 			}
 		}
+	}
+}
+
+// An output the engine does not give for a build, such as one of a main skill, is left out
+// rather than failing the build, so it is judged as missing.
+func TestEngineValuesLeavesOutMissing(t *testing.T) {
+	t.Parallel()
+	datasets := os.Getenv("PBT_DATASETS")
+	if datasets == "" {
+		t.Skip("PBT_DATASETS not set")
+	}
+	f, err := pins.Read(os.DirFS(".."))
+	if err != nil {
+		t.Fatal(err)
+	}
+	reg, s, err := openPinned(datasets, "poe1", f.Games["poe1"].Leagues["3.29"].Dataset)
+	if err != nil {
+		t.Fatal(err)
+	}
+	sim, err := simulator.New(s)
+	if err != nil {
+		t.Fatal(err)
+	}
+	b, _, err := importFile(filepath.Join("..", "testdata"), "marauder-life-node.xml", reg)
+	if err != nil {
+		t.Fatal(err)
+	}
+	st, err := sim.Simulate(b)
+	if err != nil {
+		t.Fatal(err)
+	}
+	got := engineValues([]simulator.Output{{Key: "player.life"}, {Key: "skill.not_given"}}, st)
+	if _, ok := got["player.life"]; !ok || len(got) != 1 {
+		t.Errorf("got %v, want player.life alone", got)
 	}
 }
