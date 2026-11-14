@@ -173,11 +173,12 @@ func TestRun(t *testing.T) {
 	if diff := cmp.Diff([]string{"skill.average_hit", "skill.fire_minimum", "skill.fire_maximum"}, outputs); diff != "" {
 		t.Errorf("mismatches (-want +got):\n%s", diff)
 	}
-	// The engine gives the sheet of the tree layer and, of its defences, spell block, and a
-	// spell's hit; nothing else.
+	// The engine gives the sheet of the tree layer and, of its defences, spell block, reservation,
+	// a skill's costs and a spell's hit; nothing else.
 	skillGroups := []compare.GroupResult{
 		{Group: pob.GroupSheet, Status: compare.StatusNotCompared}, {Group: pob.GroupReservation, Status: compare.StatusPass},
 		{Group: pob.GroupSkill, Status: compare.StatusMismatch, Missing: []string{"skill.hits_per_second", "skill.hit_dps", "skill.dot_dps", "skill.total_dps"}},
+		{Group: pob.GroupCost, Status: compare.StatusPass},
 		{Group: pob.GroupHitTypes, Status: compare.StatusMismatch}, {Group: pob.GroupDefence, Status: compare.StatusNotCompared},
 		{Group: pob.GroupDelivery, Status: compare.StatusNotCompared},
 	}

@@ -16,6 +16,8 @@ const (
 	GroupSheet Group = "sheet"
 	// GroupSkill is the main skill's damage.
 	GroupSkill Group = "skill"
+	// GroupCost is the main skill's mana and life cost.
+	GroupCost Group = "cost"
 	// GroupHitTypes is the main skill's hit damage per damage type, minimum and maximum.
 	GroupHitTypes Group = "hit-types"
 	// GroupDefence is block, spell suppression and recovery.
@@ -39,7 +41,7 @@ func (g Group) ReadsSkills() bool { return g.NeedsSkill() || g == GroupReservati
 
 // Groups returns every group, in report order.
 func Groups() []Group {
-	return []Group{GroupSheet, GroupReservation, GroupSkill, GroupHitTypes, GroupDefence, GroupMinion, GroupDelivery}
+	return []Group{GroupSheet, GroupReservation, GroupSkill, GroupCost, GroupHitTypes, GroupDefence, GroupMinion, GroupDelivery}
 }
 
 // Output is one output we compare, and how its value is read from PoB's output keys.
@@ -67,7 +69,7 @@ const floatNoise = 1e-9
 
 // Exact reports whether the output must match as displayed, rather than within relTolerance.
 func (o Output) Exact() bool {
-	return o.Group == GroupSheet || o.Group == GroupDefence
+	return o.Group == GroupSheet || o.Group == GroupDefence || o.Group == GroupCost
 }
 
 // Matches reports whether our value matches PoB's: as displayed for exact outputs, else
@@ -83,6 +85,12 @@ func (o Output) Matches(ours, pob float64) bool {
 // tenths has an exact output displayed with one decimal; the default is whole numbers.
 func (o Output) tenths() Output {
 	o.decimals = 1
+	return o
+}
+
+// hundredths has an exact output compared at two decimals.
+func (o Output) hundredths() Output {
+	o.decimals = 2
 	return o
 }
 
@@ -122,16 +130,7 @@ func Outputs() []Output {
 			key("player.uncapped_"+e.ours+"_resistance", GroupSheet, e.pob+"ResistTotal"),
 		)
 	}
-	out = append(out, perHand("skill.", "average_hit", GroupSkill, "", "AverageHit")...)
-	out = append(out,
-		key("skill.hit_chance", GroupSkill, "HitChance"),
-		// PoB's hit DPS uses HitSpeed where the skill hits at another rate than it is used.
-		first("skill.hits_per_second", GroupSkill, "HitSpeed", "Speed"),
-		key("skill.critical_strike_chance", GroupSkill, "CritChance"),
-		key("skill.hit_dps", GroupSkill, "TotalDPS"),
-		key("skill.dot_dps", GroupSkill, "TotalDotDPS"),
-		key("skill.total_dps", GroupSkill, "CombinedDPS"),
-	)
+	out = append(out, skillOutputs()...)
 	for _, t := range []string{"Physical", "Lightning", "Cold", "Fire", "Chaos"} {
 		lower := strings.ToLower(t)
 		out = append(out, perHand("skill.", lower+"_minimum", GroupHitTypes, calcsPrefix, t+"Min")...)
@@ -158,6 +157,22 @@ func Outputs() []Output {
 
 		key("delivery.totem_life", GroupDelivery, "TotemLife"),
 		deliveryDPS("delivery.total_dps"),
+	)
+}
+
+// skillOutputs returns the outputs of the main skill's damage and costs.
+func skillOutputs() []Output {
+	return append(perHand("skill.", "average_hit", GroupSkill, "", "AverageHit"),
+		key("skill.hit_chance", GroupSkill, "HitChance"),
+		// PoB's hit DPS uses HitSpeed where the skill hits at another rate than it is used.
+		first("skill.hits_per_second", GroupSkill, "HitSpeed", "Speed"),
+		key("skill.critical_strike_chance", GroupSkill, "CritChance"),
+		key("skill.hit_dps", GroupSkill, "TotalDPS"),
+		key("skill.dot_dps", GroupSkill, "TotalDotDPS"),
+		key("skill.total_dps", GroupSkill, "CombinedDPS"),
+		// PoB shows whole costs, but cost efficiency leaves fractions that both compute.
+		key("skill.mana_cost", GroupCost, "ManaCost").hundredths(),
+		key("skill.life_cost", GroupCost, "LifeCost").hundredths(),
 	)
 }
 

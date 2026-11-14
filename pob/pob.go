@@ -110,7 +110,7 @@ func (ms *MainSkill) groups() []Group {
 	if ms == nil {
 		return g
 	}
-	g = append(g, GroupSkill, GroupHitTypes)
+	g = append(g, GroupSkill, GroupCost, GroupHitTypes)
 	if ms.Minion != nil {
 		g = append(g, GroupMinion)
 	}
