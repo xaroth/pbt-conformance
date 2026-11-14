@@ -1037,16 +1037,7 @@
       {"build": "10-duelist-L90-slayer-resolute-technique", "output": "skill.physical_minimum", "ours": 21458.340564038877, "pob": 44875.825834331}
     ]
   },
-  {
-    "id": "dot-area",
-    "kind": "pending",
-    "league": "3.29",
-    "reason": "Righteous Fire's burn is an area effect, which PoB counts as area damage for Concentrated Effect's more Area Damage; the game data does not mark which skill's damage over time is area damage, so the engine counts none. The gear build's energy shield also differs from PoB's (dot-pools-gear-left-out)",
-    "evidence": "PoB's RighteousFire has skill(\"dotIsArea\", true) in its baseMods (Data/Skills/act_int.lua), and CalcOffence.lua drops the Area flag from damage over time modifiers without it; with PoB's skill-layer Life and EnergyShield and Concentrated Effect's 35% more, the engine's formula gives PoB's TotalDotDPS to within 1e-12",
-    "cases": [
-      {"build": "03-marauder-L60-chieftain-righteous-fire", "output": "skill.dot_dps", "ours": 12738.434444736002, "pob": 17648.3294988}
-    ]
-  },
+
   {
     "id": "dot-pools-gear-left-out",
     "kind": "pending",
@@ -1054,7 +1045,8 @@
     "reason": "Righteous Fire burns for a share of maximum life and energy shield, and the gear build's energy shield differs from PoB's (gear-item-stats-left-out); the burn follows it",
     "evidence": "With PoB's skill-layer Life and EnergyShield in place of the engine's, the engine's formula (70% of each per second, times the damage modifier and the Damage over Time Multiplier, against 50% fire resistance) gives PoB's TotalDotDPS to within 1e-12",
     "cases": [
-      {"build": "02-marauder-L35-chieftain-righteous-fire", "output": "skill.dot_dps", "ours": 2213.7493013999992, "pob": 2217.20109345}
+      {"build": "02-marauder-L35-chieftain-righteous-fire", "output": "skill.dot_dps", "ours": 2213.7493013999992, "pob": 2217.20109345},
+      {"build": "03-marauder-L60-chieftain-righteous-fire", "output": "skill.dot_dps", "ours": 17574.158521920002, "pob": 17648.3294988}
     ]
   },
   {
@@ -1066,10 +1058,10 @@
     "cases": [
       {"build": "04-marauder-L80-chieftain-righteous-fire", "output": "skill.dot_dps", "ours": 31934.771192268, "pob": 39830.228489142},
       {"build": "05-marauder-L90-chieftain-righteous-fire", "output": "skill.dot_dps", "ours": 45010.964077464, "pob": 70005.858315918},
-      {"build": "70-templar-L100-hierophant-righteous-fire-of-arcane-devotion", "output": "skill.dot_dps", "ours": 48209.252582400004, "pob": 1090492.3525071},
+      {"build": "70-templar-L100-hierophant-righteous-fire-of-arcane-devotion", "output": "skill.dot_dps", "ours": 50187.068072960006, "pob": 1090492.3525071},
       {"build": "74-duelist-L100-gladiator-corrupting-fever", "output": "skill.dot_dps", "ours": 28701.00132900001, "pob": 773000.7923092},
       {"build": "75-witch-L100-elementalist-corrupting-fever", "output": "skill.dot_dps", "ours": 6868.7540525333325, "pob": 73788.100465333},
-      {"build": "76-witch-L100-elementalist-righteous-fire", "output": "skill.dot_dps", "ours": 71931.23481599998, "pob": 2272192.328982}
+      {"build": "76-witch-L100-elementalist-righteous-fire", "output": "skill.dot_dps", "ours": 121483.86324479998, "pob": 2272192.328982}
     ]
   },
   {
@@ -1093,7 +1085,7 @@
       {"build": "104-shadow-L100-assassin-exsanguinate", "output": "skill.dot_dps", "ours": 22790.24352, "pob": 113605.91088},
       {"build": "47-witch-L100-occultist-essence-drain", "output": "skill.dot_dps", "ours": 137733.12681492, "pob": 793463.22043517},
       {"build": "73-witch-L100-elementalist-reap", "output": "skill.dot_dps", "ours": 13479.076419999998, "pob": 2230244.8874259},
-      {"build": "99-marauder-L100-chieftain-fire-trap", "output": "skill.dot_dps", "ours": 97519.85515345582, "pob": 323502.44718348}
+      {"build": "99-marauder-L100-chieftain-fire-trap", "output": "skill.dot_dps", "ours": 145044.21434346455, "pob": 323502.44718348}
     ]
   },
   {
@@ -1104,9 +1096,9 @@
     "evidence": "02: with PoB's skill-layer Life and EnergyShield the engine's value is PoB's times 1.51 / 1.46, the 5% increased Elemental Damage of Elemental Focus at 10 quality; pob.json's 3.28 skill-layer supports have no quality, the 3.29 ones 10",
     "cases": [
       {"build": "02-marauder-L35-chieftain-righteous-fire", "output": "skill.dot_dps", "ours": 2397.844877399999, "pob": 2146.0088349},
-      {"build": "03-marauder-L60-chieftain-righteous-fire", "output": "skill.dot_dps", "ours": 15299.468140320001, "pob": 19486.5003333},
-      {"build": "04-marauder-L80-chieftain-righteous-fire", "output": "skill.dot_dps", "ours": 37768.41132304242, "pob": 50523.183934532},
-      {"build": "05-marauder-L90-chieftain-righteous-fire", "output": "skill.dot_dps", "ours": 68919.49535887361, "pob": 111394.90688743}
+      {"build": "03-marauder-L60-chieftain-righteous-fire", "output": "skill.dot_dps", "ours": 21117.662966399992, "pob": 19486.5003333},
+      {"build": "04-marauder-L80-chieftain-righteous-fire", "output": "skill.dot_dps", "ours": 38428.698234284406, "pob": 50523.183934532},
+      {"build": "05-marauder-L90-chieftain-righteous-fire", "output": "skill.dot_dps", "ours": 71516.96377692162, "pob": 111394.90688743}
     ]
   },
   {
