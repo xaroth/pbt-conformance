@@ -27,9 +27,9 @@ const (
 )
 
 // Entry accepts the mismatches it matches, for one reason. It matches either by pattern: its
-// league (empty: any), builds by path.Match pattern on the build directory name, one output,
-// for an import or warning output its subject by path.Match pattern, and, when set, our value
-// and PoB's tree-only value; or by its cases, each one exact mismatch. With values set, a
+// league (empty: any), builds by path.Match pattern on the build directory name, one output and
+// its layer, for an import or warning output its subject by path.Match pattern, and, when set,
+// our value and PoB's value of the layer; or by its cases, each one exact mismatch. With values set, a
 // triaged mismatch whose numbers change no longer matches and shows as untriaged; broad pending
 // entries leave them out.
 type Entry struct {
@@ -38,6 +38,7 @@ type Entry struct {
 	League   string   `json:"league,omitempty"`
 	Build    string   `json:"build,omitempty"`
 	Output   string   `json:"output,omitempty"`
+	Layer    string   `json:"layer,omitempty"`
 	Subject  string   `json:"subject,omitempty"`
 	Ours     *float64 `json:"ours,omitempty"`
 	PoB      *float64 `json:"pob,omitempty"`
@@ -46,13 +47,15 @@ type Entry struct {
 	Evidence string   `json:"evidence,omitempty"`
 }
 
-// Case is one mismatch an entry accepts: a build by its exact name, an output, and for an
-// output with values our value and PoB's tree-only value, PoB's left out when PoB gives none;
+// Case is one mismatch an entry accepts: a build by its exact name, an output and its layer, and
+// for an output with values our value and PoB's value of the layer, PoB's left out when PoB
+// gives none;
 // for an import or warning output, which has no values, its exact subject. A case whose values
 // or subject change no longer matches, and a case that matches nothing is stale.
 type Case struct {
 	Build   string   `json:"build"`
 	Output  string   `json:"output"`
+	Layer   string   `json:"layer,omitempty"`
 	Subject string   `json:"subject,omitempty"`
 	Ours    *float64 `json:"ours,omitempty"`
 	PoB     *float64 `json:"pob,omitempty"`
@@ -64,8 +67,14 @@ func isNote(output string) bool {
 	return strings.HasPrefix(output, importPrefix) || strings.HasPrefix(output, warningPrefix)
 }
 
+// onLayer reports whether a triage layer, empty or LayerGear, names m's layer. Empty names the
+// layer an output is compared on first, tree or skill, so only gear mismatches name theirs.
+func onLayer(layer string, m *Mismatch) bool {
+	return (layer == LayerGear) == (m.Layer == LayerGear)
+}
+
 func (c *Case) matches(m *Mismatch) bool {
-	if c.Build != m.Build || c.Output != m.Output {
+	if c.Build != m.Build || c.Output != m.Output || !onLayer(c.Layer, m) {
 		return false
 	}
 	if isNote(c.Output) {
@@ -108,11 +117,18 @@ func ReadTriage(fsys fs.FS) ([]Entry, error) {
 }
 
 var (
-	errBothMatches = errors.New("a build pattern, output, subject or values beside cases")
+	errBothMatches = errors.New("a build pattern, output, layer, subject or values beside cases")
 	errNoOutput    = errors.New("a build pattern without an output")
 	errSubject     = errors.New("an import or warning output needs a subject, other outputs have none")
-	errBadCase     = errors.New("case without build or output, repeated, or without the values or subject it needs")
+	errBadCase     = errors.New("case without build or output, repeated, without the values or subject it needs, or with a layer it cannot have")
+	errLayer       = errors.New("layer other than gear, or on an import or warning output")
 )
+
+// validLayer reports whether layer may be set for output: empty, or gear for an output with
+// values.
+func validLayer(layer, output string) bool {
+	return layer == "" || (layer == LayerGear && !isNote(output))
+}
 
 // checkMatch checks that e matches either by pattern or by cases. A pattern names one output,
 // and for an import or warning output a subject pattern. Each case names one mismatch: our
@@ -121,18 +137,23 @@ func checkMatch(e *Entry) error {
 	if len(e.Cases) == 0 {
 		return checkPattern(e)
 	}
-	if e.Build != "" || e.Output != "" || e.Subject != "" || e.Ours != nil || e.PoB != nil {
+	if e.hasPattern() {
 		return errBothMatches
 	}
 	seen := map[Case]bool{}
 	for _, c := range e.Cases {
-		key := Case{Build: c.Build, Output: c.Output, Subject: c.Subject}
+		key := Case{Build: c.Build, Output: c.Output, Layer: c.Layer, Subject: c.Subject}
 		if !c.valid() || seen[key] {
-			return fmt.Errorf("%w: %s %s %s", errBadCase, c.Build, c.Output, c.Subject)
+			return fmt.Errorf("%w: %s %s %s %s", errBadCase, c.Build, c.Output, c.Layer, c.Subject)
 		}
 		seen[key] = true
 	}
 	return nil
+}
+
+// hasPattern reports whether e sets any field it matches a pattern by.
+func (e *Entry) hasPattern() bool {
+	return e.Build != "" || e.Output != "" || e.Layer != "" || e.Subject != "" || e.Ours != nil || e.PoB != nil
 }
 
 func checkPattern(e *Entry) error {
@@ -145,6 +166,9 @@ func checkPattern(e *Entry) error {
 	if isNote(e.Output) != (e.Subject != "") {
 		return errSubject
 	}
+	if !validLayer(e.Layer, e.Output) {
+		return errLayer
+	}
 	if _, err := path.Match(e.Subject, ""); err != nil {
 		return fmt.Errorf("subject pattern: %w", err)
 	}
@@ -152,9 +176,9 @@ func checkPattern(e *Entry) error {
 }
 
 // valid reports whether c names a build and output, with our value exactly when the output
-// has values and a subject exactly when it has none.
+// has values and a subject exactly when it has none, and a layer it may have.
 func (c *Case) valid() bool {
-	if c.Build == "" || c.Output == "" {
+	if c.Build == "" || c.Output == "" || !validLayer(c.Layer, c.Output) {
 		return false
 	}
 	if isNote(c.Output) {
@@ -164,12 +188,15 @@ func (c *Case) valid() bool {
 }
 
 func (e *Entry) matches(m *Mismatch) bool {
+	if e.League != "" && e.League != m.League {
+		return false
+	}
 	if len(e.Cases) > 0 {
-		return slices.ContainsFunc(e.Cases, func(c Case) bool { return (e.League == "" || e.League == m.League) && c.matches(m) })
+		return slices.ContainsFunc(e.Cases, func(c Case) bool { return c.matches(m) })
 	}
 	ok, _ := path.Match(e.Build, m.Build)
 	subject, _ := path.Match(e.Subject, m.Subject)
-	return ok && subject && (e.League == "" || e.League == m.League) && e.Output == m.Output &&
+	return ok && subject && e.Output == m.Output && onLayer(e.Layer, m) &&
 		sameValue(e.Ours, m.Ours, true) && sameValue(e.PoB, m.PoB, m.HasPoB)
 }
 
@@ -219,5 +246,5 @@ func staleOf(es []Entry, used map[string]bool) []string {
 }
 
 func caseKey(e *Entry, c *Case) string {
-	return strings.TrimSpace(e.ID + ": " + c.Build + " " + c.Output + " " + c.Subject)
+	return e.ID + ": " + strings.Join(slices.DeleteFunc([]string{c.Build, c.Output, c.Layer, c.Subject}, func(s string) bool { return s == "" }), " ")
 }

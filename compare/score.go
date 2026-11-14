@@ -37,6 +37,9 @@ type Scoreboard struct {
 	Groups []GroupRow `json:"groups"`
 	// Kinds count builds passing everything per league and kind of build, then per content.
 	Kinds []KindRow `json:"kinds"`
+	// Outputs count builds per league, layer and output both PoB and the engine give, and how
+	// many agree.
+	Outputs []OutputRow `json:"outputs"`
 	// Missing count builds per output PoB gives and the engine does not, in a group the engine
 	// gives other outputs of.
 	Missing []MissingRow `json:"missing"`
@@ -66,6 +69,16 @@ type KindRow struct {
 	Kind    string `json:"kind"`
 	Builds  int    `json:"builds"`
 	PassAll int    `json:"passAll"`
+}
+
+// OutputRow counts the builds one output is compared for in one league and layer: both PoB and
+// the engine give it.
+type OutputRow struct {
+	League   string `json:"league"`
+	Layer    string `json:"layer"`
+	Output   string `json:"output"`
+	Compared int    `json:"compared"`
+	Agree    int    `json:"agree"`
 }
 
 // MissingRow counts the builds lacking one output of ours.
@@ -141,6 +154,7 @@ func Score(builds []Build, ms []Mismatch, stale []string, hints map[string]strin
 	}
 	s.Groups = groupRows(builds)
 	s.Kinds = kindRows(builds)
+	s.Outputs = outputRows(builds)
 	s.Missing = missingRows(builds)
 	s.Blockers = blockerRows(builds, hints)
 	return s
@@ -291,6 +305,42 @@ func countKinds(rows map[string]*KindRow, b *Build) {
 	}
 }
 
+func outputRows(builds []Build) []OutputRow {
+	var out []OutputRow
+	for _, league := range leaguesOf(builds) {
+		for _, layer := range Layers() {
+			rows := map[string]*OutputRow{}
+			for i := range builds {
+				if b := &builds[i]; b.League == league {
+					countOutputs(rows, layerOf(b, layer))
+				}
+			}
+			for _, o := range pob.Outputs() {
+				if r, ok := rows[o.Name]; ok {
+					r.League = league
+					out = append(out, *r)
+				}
+			}
+		}
+	}
+	return out
+}
+
+// countOutputs counts the outputs l compares in rows, by output.
+func countOutputs(rows map[string]*OutputRow, l Layer) {
+	for _, o := range l.Compared {
+		r, ok := rows[o.Output]
+		if !ok {
+			r = &OutputRow{Layer: l.Name, Output: o.Output}
+			rows[o.Output] = r
+		}
+		r.Compared++
+		if o.Agrees {
+			r.Agree++
+		}
+	}
+}
+
 func missingRows(builds []Build) []MissingRow {
 	counts := map[MissingRow]int{}
 	for _, b := range builds {
@@ -352,7 +402,7 @@ func (s *Scoreboard) WriteJSON(w io.Writer) error {
 }
 
 // WriteText writes the scoreboard's tables after the mismatch list, which the caller writes:
-// builds by status, by kind, the outputs the engine lacks and the blockers.
+// builds by status, by kind, by output compared, the outputs the engine lacks and the blockers.
 func (s *Scoreboard) WriteText(w io.Writer) error {
 	var buf bytes.Buffer
 	const padding = 2
@@ -370,7 +420,8 @@ func (s *Scoreboard) WriteText(w io.Writer) error {
 	return nil
 }
 
-// writeCounts writes the tables of builds by group, by kind and by missing output.
+// writeCounts writes the tables of builds by group, by kind, by output compared and by missing
+// output.
 func (s *Scoreboard) writeCounts(tw io.Writer) {
 	fmt.Fprintln(tw, "\nleague\tlayer\tgroup\tbuilds\tpass\tfail\tmismatch\tincomplete\tnot compared")
 	for _, r := range s.Groups {
@@ -379,6 +430,10 @@ func (s *Scoreboard) writeCounts(tw io.Writer) {
 	fmt.Fprintln(tw, "\nleague\tkind\tbuilds\tpass all")
 	for _, r := range s.Kinds {
 		fmt.Fprintf(tw, "%s\t%s\t%d\t%d\n", r.League, r.Kind, r.Builds, r.PassAll)
+	}
+	fmt.Fprintln(tw, "\nleague\tlayer\toutput\tcompared\tagree\tdiffer")
+	for _, r := range s.Outputs {
+		fmt.Fprintf(tw, "%s\t%s\t%s\t%d\t%d\t%d\n", r.League, r.Layer, r.Output, r.Compared, r.Agree, r.Compared-r.Agree)
 	}
 	fmt.Fprintln(tw, "\nmissing output\tgroup\tbuilds")
 	for _, r := range s.Missing {

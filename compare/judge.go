@@ -39,6 +39,14 @@ type Layer struct {
 	// Groups are the groups recorded for the layer that PoB gives outputs of, in the order of
 	// pob.Groups.
 	Groups []GroupResult `json:"groups"`
+	// Compared are the outputs both PoB and the engine give, in the order of pob.Outputs.
+	Compared []OutputResult `json:"compared,omitempty"`
+}
+
+// OutputResult is whether the engine agrees with PoB on one output.
+type OutputResult struct {
+	Output string `json:"output"`
+	Agrees bool   `json:"agrees"`
 }
 
 // GroupResult is the judgement of one group.
@@ -50,11 +58,12 @@ type GroupResult struct {
 }
 
 // judgeLayers judges each layer of PoB's values v against ours, the party layer only when v has
-// one. The engine gives the tree layer and the skill outputs of the skill and full layers.
+// one. The engine gives the tree and gear layers and the skill outputs of the skill and full
+// layers.
 func judgeLayers(v *pob.Values, o ours) []Layer {
 	ls := []Layer{
 		judgeLayer(LayerTree, v.TreeOnly, o.tree),
-		judgeLayer(LayerGear, v.Gear, nil),
+		judgeLayer(LayerGear, v.Gear, o.gear),
 		judgeLayer(LayerSkill, v.Skill, o.skill),
 		judgeLayer(LayerFull, v.Full, o.full),
 	}
@@ -67,17 +76,20 @@ func judgeLayers(v *pob.Values, o ours) []Layer {
 func judgeLayer(name string, theirs pob.Result, ours map[string]float64) Layer {
 	l := Layer{Name: name}
 	for _, g := range theirs.Groups() {
-		if r, ok := judgeGroup(g, theirs.Outputs, ours); ok {
+		if r, compared, ok := judgeGroup(g, theirs.Outputs, ours); ok {
 			l.Groups = append(l.Groups, r)
+			l.Compared = append(l.Compared, compared...)
 		}
 	}
 	return l
 }
 
-// judgeGroup judges group g, and returns false when PoB gives no output of it.
-func judgeGroup(g pob.Group, theirs, ours map[string]float64) (GroupResult, bool) {
+// judgeGroup judges group g and returns the outputs of it both give, and false when PoB gives no
+// output of it.
+func judgeGroup(g pob.Group, theirs, ours map[string]float64) (GroupResult, []OutputResult, bool) {
 	given, differs := 0, false
 	var missing []string
+	var compared []OutputResult
 	for _, o := range pob.Outputs() {
 		if o.Group != g {
 			continue
@@ -92,14 +104,14 @@ func judgeGroup(g pob.Group, theirs, ours map[string]float64) (GroupResult, bool
 			missing = append(missing, o.Name)
 			continue
 		}
-		if !o.Matches(v, p) {
-			differs = true
-		}
+		agrees := o.Matches(v, p)
+		differs = differs || !agrees
+		compared = append(compared, OutputResult{Output: o.Name, Agrees: agrees})
 	}
 	if given == 0 {
-		return GroupResult{}, false
+		return GroupResult{}, nil, false
 	}
-	return verdictOf(g, given, missing, differs), true
+	return verdictOf(g, given, missing, differs), compared, true
 }
 
 // verdictOf judges a group of which PoB gives given outputs, the engine lacks missing and

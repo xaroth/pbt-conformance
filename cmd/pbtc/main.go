@@ -378,7 +378,7 @@ func report(w io.Writer, ms []compare.Mismatch, stale []string) error {
 	untriaged := 0
 	const padding = 2
 	tw := tabwriter.NewWriter(w, 0, 0, padding, ' ', 0)
-	fmt.Fprintln(tw, "league\tbuild\toutput\tours\tpob layer\tpob full\ttriage")
+	fmt.Fprintln(tw, "league\tbuild\toutput\tlayer\tours\tpob layer\tpob full\ttriage")
 	for _, m := range ms {
 		p := "-"
 		if m.HasPoB {
@@ -390,10 +390,10 @@ func report(w io.Writer, ms []compare.Mismatch, stale []string) error {
 			untriaged++
 		}
 		if m.Detail != "" {
-			fmt.Fprintf(tw, "%s\t%s\t%s\t%s\t\t\t%s\n", m.League, m.Build, m.Output, m.Detail, t)
+			fmt.Fprintf(tw, "%s\t%s\t%s\t\t%s\t\t\t%s\n", m.League, m.Build, m.Output, m.Detail, t)
 			continue
 		}
-		fmt.Fprintf(tw, "%s\t%s\t%s\t%v\t%s\t%v\t%s\n", m.League, m.Build, m.Output, m.Ours, p, m.PoBFull, t)
+		fmt.Fprintf(tw, "%s\t%s\t%s\t%s\t%v\t%s\t%v\t%s\n", m.League, m.Build, m.Output, m.Layer, m.Ours, p, m.PoBFull, t)
 	}
 	if err := tw.Flush(); err != nil {
 		return fmt.Errorf("compare: %w", err)

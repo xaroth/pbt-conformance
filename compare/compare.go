@@ -49,9 +49,12 @@ type Mismatch struct {
 	League string `json:"league"`
 	Build  string `json:"build"`
 	Output string `json:"output"`
-	// Ours is pbt-engine's value; PoB is PoB's for the layer the output is compared on, the
-	// tree-only build for the sheet and defences and the skill build for skill outputs, and
-	// PoBFull PoB's for the full build. HasPoB is false when PoB has no value.
+	// Layer is the layer an output is compared on: tree for the sheet and defences, skill for
+	// the outputs that read skills, gear for the sheet, defences and reservation of the gear
+	// build, and full for the full build's node count. Import and warning mismatches have none.
+	Layer string `json:"layer,omitempty"`
+	// Ours is pbt-engine's value; PoB is PoB's for Layer, and PoBFull PoB's for the full build.
+	// HasPoB is false when PoB has no value.
 	Ours    float64 `json:"ours"`
 	PoB     float64 `json:"pob"`
 	PoBFull float64 `json:"pobFull"`
@@ -221,29 +224,34 @@ func allocatedMismatches(c, full *build.Checked, v *pob.Values, league, name str
 	var out []Mismatch
 	if n := Allocated(c); n != v.TreeOnly.Allocated {
 		out = append(out, Mismatch{
-			League: league, Build: name, Output: allocatedNodes,
+			League: league, Build: name, Output: allocatedNodes, Layer: LayerTree,
 			Ours: float64(n), PoB: float64(v.TreeOnly.Allocated), PoBFull: float64(v.Full.Allocated), HasPoB: true,
 		})
 	}
 	if n := Allocated(full); n != v.Full.Allocated {
 		out = append(out, Mismatch{
-			League: league, Build: name, Output: allocatedNodesFull,
+			League: league, Build: name, Output: allocatedNodesFull, Layer: LayerFull,
 			Ours: float64(n), PoB: float64(v.Full.Allocated), PoBFull: float64(v.Full.Allocated), HasPoB: true,
 		})
 	}
 	return out
 }
 
-// ours holds pbt-engine's values per layer: every output for the tree-only build, and the
-// outputs that read skills (pob.Group.ReadsSkills) for the skill and full builds.
+// ours holds pbt-engine's values per layer: every output for the tree-only and gear builds, and
+// the outputs that read skills (pob.Group.ReadsSkills) for the skill and full builds.
 type ours struct {
-	tree, skill, full map[string]float64
+	tree, gear, skill, full map[string]float64
 }
 
-// oursOf simulates the skill and full builds of the build in dir, the tree-only one st already
-// simulated, while the engine gives skill outputs.
+// oursOf simulates the gear build of the build in dir, the tree-only one st already simulated,
+// and its skill and full builds while the engine gives skill outputs. A build recorded without
+// a gear or skill layer has none to compare.
 func oursOf(dir string, reg *dataset.Registry, sim *simulator.Sim, st *simulator.Stats, full *build.Build) (ours, error) {
 	o := ours{tree: engineValues(sim.Outputs(), st)}
+	var err error
+	if o.gear, err = simulateFile(dir, pob.GearXML, reg, sim, sim.Outputs()); err != nil {
+		return ours{}, err
+	}
 	var skillOutputs []simulator.Output
 	table := pobOutputs()
 	for _, out := range sim.Outputs() {
@@ -254,21 +262,26 @@ func oursOf(dir string, reg *dataset.Registry, sim *simulator.Sim, st *simulator
 	if len(skillOutputs) == 0 {
 		return o, nil
 	}
-	skill, _, err := importFile(dir, pob.SkillXML, reg)
-	switch {
-	case errors.Is(err, fs.ErrNotExist):
-		// A build recorded without a skill layer has none to compare.
-	case err != nil:
+	if o.skill, err = simulateFile(dir, pob.SkillXML, reg, sim, skillOutputs); err != nil {
 		return ours{}, err
-	default:
-		if o.skill, err = simulateValues(sim, skillOutputs, skill); err != nil {
-			return ours{}, err
-		}
 	}
 	if o.full, err = simulateValues(sim, skillOutputs, full); err != nil {
 		return ours{}, err
 	}
 	return o, nil
+}
+
+// simulateFile imports and simulates the layer file of the build in dir, and gives no values
+// when there is no such file.
+func simulateFile(dir, file string, reg *dataset.Registry, sim *simulator.Sim, outputs []simulator.Output) (map[string]float64, error) {
+	b, _, err := importFile(dir, file, reg)
+	switch {
+	case errors.Is(err, fs.ErrNotExist):
+		return map[string]float64{}, nil
+	case err != nil:
+		return nil, err
+	}
+	return simulateValues(sim, outputs, b)
 }
 
 func simulateValues(sim *simulator.Sim, outputs []simulator.Output, b *build.Build) (map[string]float64, error) {
@@ -368,9 +381,10 @@ func warnings(st *simulator.Stats, league, name string) []Mismatch {
 const skillPrefix = "skill."
 
 // compareOutputs compares every catalogue output with PoB's values v: the sheet and defences of
-// the tree-only build, and skill outputs of the skill build once the engine simulates it. A
-// skill output with no PoB key in pob.Outputs is not compared; any other is an error, so a new
-// sheet or defence output cannot go unchecked.
+// the tree-only build, the outputs that read skills of the skill build once the engine simulates
+// it, and the outputs recorded without skills of the gear build. A skill output with no PoB key
+// in pob.Outputs is not compared; any other is an error, so a new sheet or defence output cannot
+// go unchecked.
 func compareOutputs(outputs []simulator.Output, o ours, v *pob.Values, league, name string) ([]Mismatch, error) {
 	var out []Mismatch
 	table := pobOutputs()
@@ -382,22 +396,42 @@ func compareOutputs(outputs []simulator.Output, o ours, v *pob.Values, league, n
 			}
 			return nil, fmt.Errorf("compare: %w %s", errNoKey, so.Key)
 		}
-		values, layer := o.tree, v.TreeOnly
+		compared := []layerValues{{LayerTree, o.tree, v.TreeOnly}}
 		if get.Group.ReadsSkills() {
-			values, layer = o.skill, v.Skill
+			compared = []layerValues{{LayerSkill, o.skill, v.Skill}}
 		}
-		ours, given := values[string(so.Key)]
-		if !given {
-			continue
+		if !get.Group.NeedsSkill() {
+			compared = append(compared, layerValues{LayerGear, o.gear, v.Gear})
 		}
-		p, has := get.Value(layer.Outputs)
-		full, _ := get.Value(v.Full.Outputs)
-		if has && get.Matches(ours, p) {
-			continue
+		for _, l := range compared {
+			if m, differs := compareOutput(get, l, v, league, name); differs {
+				out = append(out, m)
+			}
 		}
-		out = append(out, Mismatch{League: league, Build: name, Output: string(so.Key), Ours: ours, PoB: p, PoBFull: full, HasPoB: has})
 	}
 	return out, nil
+}
+
+// layerValues pairs ours and PoB's values of one layer.
+type layerValues struct {
+	name   string
+	ours   map[string]float64
+	theirs pob.Result
+}
+
+// compareOutput compares output o on layer l, and returns false when it matches or the engine
+// does not give it.
+func compareOutput(o pob.Output, l layerValues, v *pob.Values, league, name string) (Mismatch, bool) {
+	ours, given := l.ours[o.Name]
+	if !given {
+		return Mismatch{}, false
+	}
+	p, has := o.Value(l.theirs.Outputs)
+	if has && o.Matches(ours, p) {
+		return Mismatch{}, false
+	}
+	full, _ := o.Value(v.Full.Outputs)
+	return Mismatch{League: league, Build: name, Output: o.Name, Layer: l.name, Ours: ours, PoB: p, PoBFull: full, HasPoB: has}, true
 }
 
 // Allocated counts the build's nodes as PoB does: PoB always allocates the class start and,
