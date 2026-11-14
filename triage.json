@@ -769,5 +769,163 @@
       {"build": "23-witch-L60-elementalist-elemental-overload", "output": "skill.fire_maximum", "ours": 427.5, "pob": 607.5},
       {"build": "23-witch-L60-elementalist-elemental-overload", "output": "skill.fire_minimum", "ours": 221, "pob": 314.5}
     ]
+  },
+  {
+    "id": "cost-attack-mana-cost-3.28",
+    "kind": "pending",
+    "league": "3.28",
+    "reason": "Reduced Mana Cost of Attacks from tree nodes and items (attack_mana_cost_+%): the engine leaves the stat out on the 3.28 dataset. Builds 08 to 10 also pay part of the cost as life, as in cost-life-instead-of-mana-3.28",
+    "cases": [
+      {"build": "08-duelist-L60-slayer-resolute-technique", "output": "skill.mana_cost", "ours": 36, "pob": 25},
+      {"build": "09-duelist-L80-slayer-resolute-technique", "output": "skill.mana_cost", "ours": 64, "pob": 45},
+      {"build": "10-duelist-L90-slayer-resolute-technique", "output": "skill.mana_cost", "ours": 51, "pob": 33},
+      {"build": "13-ranger-L60-deadeye-ghost-dance", "output": "skill.mana_cost", "ours": 21, "pob": 17},
+      {"build": "14-ranger-L80-deadeye-ghost-dance", "output": "skill.mana_cost", "ours": 26, "pob": 21},
+      {"build": "15-ranger-L90-deadeye-ghost-dance", "output": "skill.mana_cost", "ours": 26, "pob": 21},
+      {"build": "35-scion-L90-ascendant-chaos-inoculation", "output": "skill.mana_cost", "ours": 49, "pob": 36}
+    ]
+  },
+  {
+    "id": "cost-life-instead-of-mana-3.28",
+    "kind": "pending",
+    "league": "3.28",
+    "reason": "Part of the skill's mana cost is paid as life instead (base_skill_cost_life_instead_of_mana_%, the Life and Mana mastery's effect, and base_attack_skill_cost_life_instead_of_mana_% for attacks); the engine leaves the stats out, so it charges the whole cost as mana and none as life. Builds 24 and 25 also have Inspiration, whose quality the engine applies apart, as in cost-inspiration-quality",
+    "cases": [
+      {"build": "08-duelist-L60-slayer-resolute-technique", "output": "skill.life_cost", "ours": 0, "pob": 4},
+      {"build": "09-duelist-L80-slayer-resolute-technique", "output": "skill.life_cost", "ours": 0, "pob": 6},
+      {"build": "10-duelist-L90-slayer-resolute-technique", "output": "skill.life_cost", "ours": 0, "pob": 6},
+      {"build": "24-witch-L80-elementalist-elemental-overload", "output": "skill.life_cost", "ours": 0, "pob": 15},
+      {"build": "24-witch-L80-elementalist-elemental-overload", "output": "skill.mana_cost", "ours": 63, "pob": 51},
+      {"build": "25-witch-L90-elementalist-elemental-overload", "output": "skill.life_cost", "ours": 0, "pob": 15},
+      {"build": "25-witch-L90-elementalist-elemental-overload", "output": "skill.mana_cost", "ours": 63, "pob": 51}
+    ]
+  },
+  {
+    "id": "cost-skill-resolution",
+    "kind": "pending",
+    "league": "3.29",
+    "reason": "The main skill resolves to another gem level or set of supports than PoB's, or has a support at another level or quality, as in spell-hit-skill-resolution: the gem's level sets its base cost, each support's level its cost multiplier, and Inspiration's quality part of its cost reduction; causes in the other cost entries may add to it",
+    "evidence": "pob.json's skill-layer mainSkill has another level, supports, or support level or quality than the engine resolves for every build here",
+    "cases": [
+      {"build": "100-witch-L100-elementalist-glacial-cascade-of-the-fissure", "output": "skill.mana_cost", "ours": 29, "pob": 53},
+      {"build": "102-shadow-L100-assassin-freezing-pulse", "output": "skill.mana_cost", "ours": 28, "pob": 27},
+      {"build": "105-ranger-L100-deadeye-icicle-mine-of-fanning", "output": "skill.mana_cost", "ours": 17, "pob": 16},
+      {"build": "107-shadow-L100-assassin-ice-trap", "output": "skill.mana_cost", "ours": 78, "pob": 90},
+      {"build": "13-ranger-L60-deadeye-ghost-dance", "output": "skill.mana_cost", "ours": 15, "pob": 14.285714285714},
+      {"build": "24-witch-L80-elementalist-elemental-overload", "output": "skill.mana_cost", "ours": 40, "pob": 38},
+      {"build": "25-witch-L90-elementalist-elemental-overload", "output": "skill.mana_cost", "ours": 45, "pob": 55},
+      {"build": "39-templar-L100-inquisitor-penance-brand", "output": "skill.mana_cost", "ours": 41, "pob": 59},
+      {"build": "41-ranger-L100-deadeye-ethereal-knives-of-the-massacre", "output": "skill.mana_cost", "ours": 32.857142857142854, "pob": 30.714285714286},
+      {"build": "42-scion-L100-reliquarian-lightning-tendrils-of-eccentricity", "output": "skill.mana_cost", "ours": 8.823529411764707, "pob": 9.4117647058824},
+      {"build": "46-shadow-L100-assassin-storm-burst-of-repulsion", "output": "skill.mana_cost", "ours": 10, "pob": 9},
+      {"build": "48-witch-L100-elementalist-fireball", "output": "skill.mana_cost", "ours": 11.736842105263158, "pob": 22.921052631579},
+      {"build": "50-scion-L100-luminary-ethereal-knives", "output": "skill.mana_cost", "ours": 52.30769230769231, "pob": 49.230769230769},
+      {"build": "51-marauder-L100-juggernaut-static-strike-of-gathering-lightning", "output": "skill.life_cost", "ours": 91, "pob": 109},
+      {"build": "52-duelist-L100-slayer-flicker-strike", "output": "skill.mana_cost", "ours": 19, "pob": 23},
+      {"build": "65-witch-L100-elementalist-ethereal-knives", "output": "skill.mana_cost", "ours": 62, "pob": 49},
+      {"build": "78-templar-L100-inquisitor-animate-guardian", "output": "skill.mana_cost", "ours": 15.75862068965517, "pob": 19},
+      {"build": "80-witch-L100-occultist-summon-holy-relic-of-conviction", "output": "skill.mana_cost", "ours": 67.6, "pob": 62},
+      {"build": "81-templar-L100-guardian-absolution", "output": "skill.mana_cost", "ours": 99.99999999999999, "pob": 106.36363636364},
+      {"build": "83-witch-L100-necromancer-absolution", "output": "skill.life_cost", "ours": 71, "pob": 181},
+      {"build": "84-witch-L100-necromancer-summon-raging-spirit", "output": "skill.mana_cost", "ours": 90, "pob": 109},
+      {"build": "85-templar-L100-guardian-summon-raging-spirit", "output": "skill.mana_cost", "ours": 81.6, "pob": 127.2},
+      {"build": "87-scion-L100-luminary-animate-guardian-of-smiting", "output": "skill.life_cost", "ours": 52.8, "pob": 129.6},
+      {"build": "89-duelist-L99-gladiator-dominating-blow-of-inspiring", "output": "skill.mana_cost", "ours": 0.2857142857142865, "pob": 18.142857142857},
+      {"build": "91-scion-L100-luminary-animate-weapon-of-ranged-arms", "output": "skill.mana_cost", "ours": 86, "pob": 132},
+      {"build": "93-witch-L99-necromancer-animate-weapon-of-ranged-arms", "output": "skill.mana_cost", "ours": 80.58823529411765, "pob": 97.058823529412},
+      {"build": "96-templar-L100-hierophant-arc", "output": "skill.mana_cost", "ours": 106, "pob": 298},
+      {"build": "97-templar-L100-hierophant-freezing-pulse", "output": "skill.mana_cost", "ours": 83, "pob": 234},
+      {"build": "99-marauder-L100-chieftain-fire-trap", "output": "skill.life_cost", "ours": 100, "pob": 182.4}
+    ]
+  },
+  {
+    "id": "cost-inspiration-quality",
+    "kind": "pending",
+    "league": "3.29",
+    "reason": "Inspiration's quality adds to the same stat as its level (support_inspiration_mana_cost_+%_final), so the game sums them into one less multiplier; the engine applies the quality's part as a separate multiplier",
+    "evidence": "PoB's gem data lists the quality stat as support_inspiration_mana_cost_+%_final, the level's stat, and PoB applies one multiplier",
+    "cases": [
+      {"build": "38-ranger-L100-deadeye-ethereal-knives", "output": "skill.mana_cost", "ours": 43, "pob": 41},
+      {"build": "88-templar-L100-guardian-dominating-blow-of-inspiring", "output": "skill.mana_cost", "ours": 17.603174603174605, "pob": 16.809523809524}
+    ]
+  },
+  {
+    "id": "cost-life-instead-of-mana",
+    "kind": "pending",
+    "league": "3.29",
+    "reason": "Part of the skill's mana cost is paid as life instead (base_skill_cost_life_instead_of_mana_%, the Life and Mana mastery's effect, and base_attack_skill_cost_life_instead_of_mana_% for attacks); the engine leaves the stats out, so it charges the whole cost as mana and none as life",
+    "cases": [
+      {"build": "09-duelist-L80-slayer-resolute-technique", "output": "skill.life_cost", "ours": 0, "pob": 3.6363636363636},
+      {"build": "09-duelist-L80-slayer-resolute-technique", "output": "skill.mana_cost", "ours": 36.36363636363637, "pob": 32},
+      {"build": "10-duelist-L90-slayer-resolute-technique", "output": "skill.life_cost", "ours": 0, "pob": 3.6363636363636},
+      {"build": "10-duelist-L90-slayer-resolute-technique", "output": "skill.mana_cost", "ours": 23.363636363636367, "pob": 21},
+      {"build": "39-templar-L100-inquisitor-penance-brand", "output": "skill.life_cost", "ours": 0, "pob": 18},
+      {"build": "65-witch-L100-elementalist-ethereal-knives", "output": "skill.life_cost", "ours": 0, "pob": 15},
+      {"build": "69-duelist-L100-slayer-cyclone", "output": "skill.life_cost", "ours": 0, "pob": 0.71428571428571},
+      {"build": "78-templar-L100-inquisitor-animate-guardian", "output": "skill.life_cost", "ours": 0, "pob": 4.1379310344828},
+      {"build": "80-witch-L100-occultist-summon-holy-relic-of-conviction", "output": "skill.life_cost", "ours": 0, "pob": 12.8},
+      {"build": "82-scion-L100-luminary-absolution", "output": "skill.life_cost", "ours": 0, "pob": 18},
+      {"build": "82-scion-L100-luminary-absolution", "output": "skill.mana_cost", "ours": 94.53125, "pob": 80},
+      {"build": "86-witch-L100-necromancer-animate-guardian-of-smiting", "output": "skill.life_cost", "ours": 0, "pob": 5},
+      {"build": "86-witch-L100-necromancer-animate-guardian-of-smiting", "output": "skill.mana_cost", "ours": 34, "pob": 28}
+    ]
+  },
+  {
+    "id": "cost-gain-life-of-mana-cost",
+    "kind": "pending",
+    "league": "3.29",
+    "reason": "The skill also costs life equal to part of its mana cost (base_skill_gain_life_cost_%_of_mana_cost); the engine leaves the stat out",
+    "cases": [
+      {"build": "84-witch-L100-necromancer-summon-raging-spirit", "output": "skill.life_cost", "ours": 0, "pob": 109},
+      {"build": "91-scion-L100-luminary-animate-weapon-of-ranged-arms", "output": "skill.life_cost", "ours": 0, "pob": 146},
+      {"build": "93-witch-L99-necromancer-animate-weapon-of-ranged-arms", "output": "skill.life_cost", "ours": 0, "pob": 97.058823529412}
+    ]
+  },
+  {
+    "id": "cost-es-instead",
+    "kind": "pending",
+    "league": "3.29",
+    "reason": "Whispers of Infinity makes skills cost energy shield instead of mana and life (base_skills_cost_es_instead_of_mana_life); the engine leaves the stat out and charges mana",
+    "cases": [
+      {"build": "58-witch-L100-occultist-cyclone", "output": "skill.mana_cost", "ours": 5, "pob": 0},
+      {"build": "62-shadow-L100-assassin-cyclone", "output": "skill.mana_cost", "ours": 5, "pob": 0}
+    ]
+  },
+  {
+    "id": "cost-generals-cry-trigger",
+    "kind": "pending",
+    "league": "3.29",
+    "reason": "The main skill is supported by General's Cry, which uses it through mirage warriors; PoB gives such a skill no cost, the engine gives it its own. The engine also leaves out Autoexertion's mana cost override and the Life and Mana mastery",
+    "cases": [
+      {"build": "63-scion-L97-luminary-lacerate-of-butchering", "output": "skill.life_cost", "ours": 0},
+      {"build": "63-scion-L97-luminary-lacerate-of-butchering", "output": "skill.mana_cost", "ours": 27.757575757575758}
+    ]
+  },
+  {
+    "id": "cost-unnatural-instinct-kalandra",
+    "kind": "pending",
+    "league": "3.29",
+    "reason": "Unnatural Instinct grants the two unallocated Attack Cost Efficiency nodes in its radius, and Kalandra's Touch copies the other ring's flat mana cost reduction; the importer leaves jewels out and the engine does not model Kalandra's Touch",
+    "cases": [
+      {"build": "68-duelist-L100-gladiator-cyclone-of-tumult", "output": "skill.mana_cost", "ours": 10.571428571428571, "pob": 5.1764705882353}
+    ]
+  },
+  {
+    "id": "cost-socketed-attacks-mana-cost",
+    "kind": "pending",
+    "league": "3.29",
+    "reason": "The body armour gives socketed attacks a flat mana cost change (local_display_socketed_attacks_mana_cost_+); the engine leaves the stat out. The build also pays part of the cost as life, as in cost-life-instead-of-mana",
+    "cases": [
+      {"build": "69-duelist-L100-slayer-cyclone", "output": "skill.mana_cost", "ours": 9.285714285714286, "pob": 0}
+    ]
+  },
+  {
+    "id": "cost-reap-blood-charges",
+    "kind": "pending",
+    "league": "3.29",
+    "reason": "Reap costs more life per Blood Charge (blood_scythe_cost_+%_final_per_charge); the engine leaves the stat out",
+    "cases": [
+      {"build": "73-witch-L100-elementalist-reap", "output": "skill.life_cost", "ours": 161, "pob": 450}
+    ]
   }
 ]
