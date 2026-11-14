@@ -81,6 +81,12 @@ const (
 	allocatedNodesFull = "allocated_nodes_full"
 )
 
+// Outputs of the main skill's level and quality on the skill layer.
+const (
+	skillLevel   = "skill_level"
+	skillQuality = "skill_quality"
+)
+
 // fullWarnings are the import warnings a full build may give: what it holds beside its tree.
 func fullWarnings() []build.Code {
 	return []build.Code{
@@ -185,6 +191,7 @@ func compareBuild(dir, league string, reg *dataset.Registry, sim *simulator.Sim)
 	if err != nil {
 		return nil, err
 	}
+	out = append(out, skillMismatches(ours.skillMain, v.Skill.MainSkill, league, name)...)
 	ms, err := compareOutputs(sim.Outputs(), ours, v, league, name)
 	if err != nil {
 		return nil, err
@@ -238,9 +245,11 @@ func allocatedMismatches(c, full *build.Checked, v *pob.Values, league, name str
 }
 
 // ours holds pbt-engine's values per layer: every output for the tree-only and gear builds, and
-// the outputs that read skills (pob.Group.ReadsSkills) for the skill and full builds.
+// the outputs that read skills (pob.Group.ReadsSkills) for the skill and full builds; and the
+// skill build's main skill, if the engine gives one.
 type ours struct {
 	tree, gear, skill, full map[string]float64
+	skillMain               *simulator.MainSkill
 }
 
 // oursOf simulates the gear build of the build in dir, the tree-only one st already simulated,
@@ -249,7 +258,7 @@ type ours struct {
 func oursOf(dir string, reg *dataset.Registry, sim *simulator.Sim, st *simulator.Stats, full *build.Build) (ours, error) {
 	o := ours{tree: engineValues(sim.Outputs(), st)}
 	var err error
-	if o.gear, err = simulateFile(dir, pob.GearXML, reg, sim, sim.Outputs()); err != nil {
+	if o.gear, _, err = simulateFile(dir, pob.GearXML, reg, sim, sim.Outputs()); err != nil {
 		return ours{}, err
 	}
 	var skillOutputs []simulator.Output
@@ -262,7 +271,7 @@ func oursOf(dir string, reg *dataset.Registry, sim *simulator.Sim, st *simulator
 	if len(skillOutputs) == 0 {
 		return o, nil
 	}
-	if o.skill, err = simulateFile(dir, pob.SkillXML, reg, sim, skillOutputs); err != nil {
+	if o.skill, o.skillMain, err = simulateFile(dir, pob.SkillXML, reg, sim, skillOutputs); err != nil {
 		return ours{}, err
 	}
 	if o.full, err = simulateValues(sim, skillOutputs, full); err != nil {
@@ -272,16 +281,23 @@ func oursOf(dir string, reg *dataset.Registry, sim *simulator.Sim, st *simulator
 }
 
 // simulateFile imports and simulates the layer file of the build in dir, and gives no values
-// when there is no such file.
-func simulateFile(dir, file string, reg *dataset.Registry, sim *simulator.Sim, outputs []simulator.Output) (map[string]float64, error) {
+// when there is no such file. It also gives the main skill, nil when the engine gives none.
+func simulateFile(dir, file string, reg *dataset.Registry, sim *simulator.Sim, outputs []simulator.Output) (map[string]float64, *simulator.MainSkill, error) {
 	b, _, err := importFile(dir, file, reg)
 	switch {
 	case errors.Is(err, fs.ErrNotExist):
-		return map[string]float64{}, nil
+		return map[string]float64{}, nil, nil
 	case err != nil:
-		return nil, err
+		return nil, nil, err
 	}
-	return simulateValues(sim, outputs, b)
+	st, err := sim.Simulate(b)
+	if err != nil {
+		return nil, nil, fmt.Errorf("compare: %w", err)
+	}
+	if ms, ok := st.MainSkill(); ok {
+		return engineValues(outputs, st), &ms, nil
+	}
+	return engineValues(outputs, st), nil, nil
 }
 
 func simulateValues(sim *simulator.Sim, outputs []simulator.Output, b *build.Build) (map[string]float64, error) {
@@ -303,6 +319,24 @@ func engineValues(outputs []simulator.Output, st *simulator.Stats) map[string]fl
 		}
 	}
 	return m
+}
+
+// skillMismatches compares the level and quality of the skill build's main skill, ours, with
+// PoB's, theirs, when both take the same skill.
+func skillMismatches(ours *simulator.MainSkill, theirs *pob.MainSkill, league, name string) []Mismatch {
+	if ours == nil || theirs == nil || ours.GrantedEffect != theirs.ID {
+		return nil
+	}
+	var out []Mismatch
+	for _, c := range []struct {
+		output    string
+		ours, pob int
+	}{{skillLevel, ours.Level, theirs.Level}, {skillQuality, ours.Quality, theirs.Quality}} {
+		if c.ours != c.pob {
+			out = append(out, Mismatch{League: league, Build: name, Output: c.output, Ours: float64(c.ours), PoB: float64(c.pob), HasPoB: true})
+		}
+	}
+	return out
 }
 
 func importFile(dir, file string, reg *dataset.Registry) (*build.Build, []build.Warning, error) {

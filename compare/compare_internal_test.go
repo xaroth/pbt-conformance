@@ -118,3 +118,30 @@ func TestEngineValuesLeavesOutMissing(t *testing.T) {
 		t.Errorf("got %v, want player.life alone", got)
 	}
 }
+
+// The main skill's level and quality are compared when the engine and PoB take the same skill.
+func TestSkillMismatches(t *testing.T) {
+	t.Parallel()
+	theirs := &pob.MainSkill{ID: "Fireball", Level: 21, Quality: 30}
+	testCases := []struct {
+		name string
+		ours *simulator.MainSkill
+		want []Mismatch
+	}{
+		{"agrees", &simulator.MainSkill{GrantedEffect: "Fireball", Level: 21, Quality: 30}, nil},
+		{
+			"quality differs", &simulator.MainSkill{GrantedEffect: "Fireball", Level: 21, Quality: 20},
+			[]Mismatch{{League: "3.29", Build: "01-x", Output: skillQuality, Ours: 20, PoB: 30, HasPoB: true}},
+		},
+		{"another skill", &simulator.MainSkill{GrantedEffect: "Arc", Level: 20}, nil},
+		{"no skill", nil, nil},
+	}
+	for _, testCase := range testCases {
+		t.Run(testCase.name, func(t *testing.T) {
+			t.Parallel()
+			if diff := cmp.Diff(testCase.want, skillMismatches(testCase.ours, theirs, "3.29", "01-x")); diff != "" {
+				t.Errorf("mismatches (-want +got):\n%s", diff)
+			}
+		})
+	}
+}
