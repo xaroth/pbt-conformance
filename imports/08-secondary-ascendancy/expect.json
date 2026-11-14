@@ -6,7 +6,6 @@
     "variant": "standard",
     "class": "Metadata/Characters/Str/Str",
     "ascendancy": "Chieftain",
-    "bloodline": "Warlock",
     "level": 90,
     "nodes": [
       1731,
@@ -147,5 +146,10 @@
       "bandits": "kill-all"
     }
   },
-  "warnings": []
+  "warnings": [
+    {
+      "code": "pob-ascendancy-ignored",
+      "subject": "Warlock"
+    }
+  ]
 }
