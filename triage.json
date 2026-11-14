@@ -356,9 +356,9 @@
       {"build": "106-shadow-L100-assassin-icicle-mine-of-fanning", "output": "skill.cold_maximum", "ours": 10532.87, "pob": 84796.8},
       {"build": "106-shadow-L100-assassin-icicle-mine-of-fanning", "output": "skill.cold_minimum", "ours": 7021.71, "pob": 56543.52},
       {"build": "106-shadow-L100-assassin-icicle-mine-of-fanning", "output": "skill.critical_strike_chance", "ours": 21.84, "pob": 71.952384},
-      {"build": "107-shadow-L100-assassin-ice-trap", "output": "skill.average_hit", "ours": 32390.27096928, "pob": 4391623.9415412},
-      {"build": "107-shadow-L100-assassin-ice-trap", "output": "skill.cold_maximum", "ours": 24432.800000000003, "pob": 361763.28},
-      {"build": "107-shadow-L100-assassin-ice-trap", "output": "skill.cold_minimum", "ours": 16287.04, "pob": 241207.2},
+      {"build": "107-shadow-L100-assassin-ice-trap", "output": "skill.average_hit", "ours": 45432.97435488, "pob": 4391623.9415412},
+      {"build": "107-shadow-L100-assassin-ice-trap", "output": "skill.cold_maximum", "ours": 34270.880000000005, "pob": 361763.28},
+      {"build": "107-shadow-L100-assassin-ice-trap", "output": "skill.cold_minimum", "ours": 22845.76, "pob": 241207.2},
       {"build": "107-shadow-L100-assassin-ice-trap", "output": "skill.critical_strike_chance", "ours": 15.715000000000002, "pob": 96.332775}
     ]
   },
@@ -401,12 +401,12 @@
       {"build": "38-ranger-L100-deadeye-ethereal-knives", "output": "skill.lightning_minimum", "ours": 23.5, "pob": 23.958},
       {"build": "38-ranger-L100-deadeye-ethereal-knives", "output": "skill.physical_maximum", "ours": 2809.083793087188, "pob": 44435.6},
       {"build": "38-ranger-L100-deadeye-ethereal-knives", "output": "skill.physical_minimum", "ours": 1878.6799170085346, "pob": 29344.7},
-      {"build": "39-templar-L100-inquisitor-penance-brand", "output": "skill.average_hit", "ours": 15843.374681419316, "pob": 1490932.2500923},
+      {"build": "39-templar-L100-inquisitor-penance-brand", "output": "skill.average_hit", "ours": 23618.0448185883, "pob": 1490932.2500923},
       {"build": "39-templar-L100-inquisitor-penance-brand", "output": "skill.critical_strike_chance", "ours": 17.099999999999998, "pob": 41.22},
       {"build": "39-templar-L100-inquisitor-penance-brand", "output": "skill.lightning_maximum", "ours": 0, "pob": 434061.936},
       {"build": "39-templar-L100-inquisitor-penance-brand", "output": "skill.lightning_minimum", "ours": 0, "pob": 289388.484},
-      {"build": "39-templar-L100-inquisitor-penance-brand", "output": "skill.physical_maximum", "ours": 10503.081397626927, "pob": 79692.728473525},
-      {"build": "39-templar-L100-inquisitor-penance-brand", "output": "skill.physical_minimum", "ours": 7002.612642617719, "pob": 53130.826482173},
+      {"build": "39-templar-L100-inquisitor-penance-brand", "output": "skill.physical_maximum", "ours": 16338.048994340677, "pob": 79692.728473525},
+      {"build": "39-templar-L100-inquisitor-penance-brand", "output": "skill.physical_minimum", "ours": 10892.666657810134, "pob": 53130.826482173},
       {"build": "40-witch-L100-elementalist-ethereal-knives-of-the-massacre", "output": "skill.average_hit", "ours": 3055.73602512652, "pob": 15822.1853909},
       {"build": "40-witch-L100-elementalist-ethereal-knives-of-the-massacre", "output": "skill.chaos_maximum", "ours": 0, "pob": 8289.2},
       {"build": "40-witch-L100-elementalist-ethereal-knives-of-the-massacre", "output": "skill.chaos_minimum", "ours": 0, "pob": 5432.6},
@@ -519,11 +519,11 @@
       {"build": "97-templar-L100-hierophant-freezing-pulse", "output": "skill.cold_maximum", "ours": 1562.82, "pob": 17772.96},
       {"build": "97-templar-L100-hierophant-freezing-pulse", "output": "skill.cold_minimum", "ours": 1041.8799999999999, "pob": 11852.91},
       {"build": "97-templar-L100-hierophant-freezing-pulse", "output": "skill.critical_strike_chance", "ours": 29.625, "pob": 39.375},
-      {"build": "99-marauder-L100-chieftain-fire-trap", "output": "skill.average_hit", "ours": 15386.910839999999, "pob": 38015.47747},
+      {"build": "99-marauder-L100-chieftain-fire-trap", "output": "skill.average_hit", "ours": 21128.313799999996, "pob": 38015.47747},
       {"build": "99-marauder-L100-chieftain-fire-trap", "output": "skill.chaos_maximum", "ours": 0, "pob": 3812.9},
       {"build": "99-marauder-L100-chieftain-fire-trap", "output": "skill.chaos_minimum", "ours": 0, "pob": 2542.4},
-      {"build": "99-marauder-L100-chieftain-fire-trap", "output": "skill.fire_maximum", "ours": 18353.07, "pob": 41530.63},
-      {"build": "99-marauder-L100-chieftain-fire-trap", "output": "skill.fire_minimum", "ours": 12237.21, "pob": 27691.56},
+      {"build": "99-marauder-L100-chieftain-fire-trap", "output": "skill.fire_maximum", "ours": 25200.93, "pob": 41530.63},
+      {"build": "99-marauder-L100-chieftain-fire-trap", "output": "skill.fire_minimum", "ours": 16803.67, "pob": 27691.56},
       {"build": "101-witch-L100-occultist-glacial-cascade-of-the-fissure", "output": "skill.average_hit", "ours": 1078.4447710620304, "pob": 39995.0024584},
       {"build": "101-witch-L100-occultist-glacial-cascade-of-the-fissure", "output": "skill.cold_maximum", "ours": 0, "pob": 22939},
       {"build": "101-witch-L100-occultist-glacial-cascade-of-the-fissure", "output": "skill.cold_minimum", "ours": 0, "pob": 15293.42},
@@ -859,7 +859,7 @@
       {"build": "63-scion-L97-luminary-lacerate-of-butchering", "output": "skill.hits_per_second", "ours": 0.33712000000000003, "pob": 1},
       {"build": "63-scion-L97-luminary-lacerate-of-butchering", "output": "skill.physical_maximum", "ours": 64531.13498126142, "pob": 47035.682031177},
       {"build": "63-scion-L97-luminary-lacerate-of-butchering", "output": "skill.physical_minimum", "ours": 35061.12366635942, "pob": 25555.072438425},
-      {"build": "64-shadow-L97-assassin-rain-of-arrows-of-saturation", "output": "skill.average_hit", "ours": 3.3543537499999996, "pob": 152.45249671},
+      {"build": "64-shadow-L97-assassin-rain-of-arrows-of-saturation", "output": "skill.average_hit", "ours": 4.57411875, "pob": 152.45249671},
       {"build": "64-shadow-L97-assassin-rain-of-arrows-of-saturation", "output": "skill.chaos_maximum", "ours": 0, "pob": 21.56},
       {"build": "64-shadow-L97-assassin-rain-of-arrows-of-saturation", "output": "skill.chaos_minimum", "ours": 0, "pob": 8.47},
       {"build": "64-shadow-L97-assassin-rain-of-arrows-of-saturation", "output": "skill.critical_strike_chance", "ours": 33.81, "pob": 46.806},
@@ -868,8 +868,8 @@
       {"build": "64-shadow-L97-assassin-rain-of-arrows-of-saturation", "output": "skill.hits_per_second", "ours": 1.54, "pob": 1.61},
       {"build": "64-shadow-L97-assassin-rain-of-arrows-of-saturation", "output": "skill.lightning_maximum", "ours": 0, "pob": 5.61},
       {"build": "64-shadow-L97-assassin-rain-of-arrows-of-saturation", "output": "skill.lightning_minimum", "ours": 0, "pob": 2.55},
-      {"build": "64-shadow-L97-assassin-rain-of-arrows-of-saturation", "output": "skill.physical_maximum", "ours": 4, "pob": 27},
-      {"build": "64-shadow-L97-assassin-rain-of-arrows-of-saturation", "output": "skill.physical_minimum", "ours": 1.5, "pob": 11},
+      {"build": "64-shadow-L97-assassin-rain-of-arrows-of-saturation", "output": "skill.physical_maximum", "ours": 5.5, "pob": 27},
+      {"build": "64-shadow-L97-assassin-rain-of-arrows-of-saturation", "output": "skill.physical_minimum", "ours": 2, "pob": 11},
       {"build": "66-duelist-L100-champion-flicker-strike", "output": "skill.average_hit", "ours": 7616.340158197927, "pob": 54496.863355443},
       {"build": "66-duelist-L100-champion-flicker-strike", "output": "skill.critical_strike_chance", "ours": 35.087999999999994, "pob": 34.28992},
       {"build": "66-duelist-L100-champion-flicker-strike", "output": "skill.physical_maximum", "ours": 4306.916077042112, "pob": 39081.032390522},
@@ -1035,6 +1035,82 @@
       {"build": "10-duelist-L90-slayer-resolute-technique", "output": "skill.average_hit", "ours": 68120.48849736877, "pob": 142458.3572214},
       {"build": "10-duelist-L90-slayer-resolute-technique", "output": "skill.physical_maximum", "ours": 114782.63643069868, "pob": 240040.88860848},
       {"build": "10-duelist-L90-slayer-resolute-technique", "output": "skill.physical_minimum", "ours": 21458.340564038877, "pob": 44875.825834331}
+    ]
+  },
+  {
+    "id": "dot-pools-gear-left-out",
+    "kind": "pending",
+    "league": "3.29",
+    "reason": "Righteous Fire burns for a share of maximum life and energy shield, and the gear build's energy shield differs from PoB's (gear-item-stats-left-out); the burn follows it",
+    "evidence": "With PoB's skill-layer Life and EnergyShield in place of the engine's, the engine's formula (70% of each per second, times the damage modifier and the Damage over Time Multiplier, against 50% fire resistance) gives PoB's TotalDotDPS to within 1e-12",
+    "cases": [
+      {"build": "02-marauder-L35-chieftain-righteous-fire", "output": "skill.dot_dps", "ours": 2213.7493013999992, "pob": 2217.20109345},
+      {"build": "03-marauder-L60-chieftain-righteous-fire", "output": "skill.dot_dps", "ours": 17574.158521920002, "pob": 17648.3294988}
+    ]
+  },
+  {
+    "id": "dot-unmodelled-stats",
+    "kind": "pending",
+    "league": "3.29",
+    "reason": "The skill's damage over time differs for another reason, not traced per build yet; the build's simulation leaves out damage, damage over time or pool stats of its gear, tree or skill as unmodelled-stat",
+    "evidence": "Each build's skill-layer simulation warns unmodelled-stat for stats that change its damage over time or the life, energy shield or mana it is a share of, such as elemental_damage_+%_per_lightning_cold_fire_resistance_above_75, physical_damage_+%_if_skill_costs_life, local_display_socketed_gems_damage_over_time_+%_final and supported_active_skill_gem_level_+",
+    "cases": [
+      {"build": "04-marauder-L80-chieftain-righteous-fire", "output": "skill.dot_dps", "ours": 31934.771192268, "pob": 39830.228489142},
+      {"build": "05-marauder-L90-chieftain-righteous-fire", "output": "skill.dot_dps", "ours": 45010.964077464, "pob": 70005.858315918},
+      {"build": "70-templar-L100-hierophant-righteous-fire-of-arcane-devotion", "output": "skill.dot_dps", "ours": 50187.068072960006, "pob": 1090492.3525071},
+      {"build": "74-duelist-L100-gladiator-corrupting-fever", "output": "skill.dot_dps", "ours": 28701.00132900001, "pob": 773000.7923092},
+      {"build": "75-witch-L100-elementalist-corrupting-fever", "output": "skill.dot_dps", "ours": 6868.7540525333325, "pob": 73788.100465333},
+      {"build": "76-witch-L100-elementalist-righteous-fire", "output": "skill.dot_dps", "ours": 121483.86324479998, "pob": 2272192.328982}
+    ]
+  },
+  {
+    "id": "dot-stages",
+    "kind": "pending",
+    "league": "3.29",
+    "reason": "Scorching Ray of Immolation's burn rises in stages while the enemy stays in the beam; PoB's skill part counts its maximum stages, which the engine does not model yet",
+    "evidence": "PoB's ScorchingRayAltX (Data/Skills/act_int.lua) has the skill parts Manual Stages and Maximum Stages and fire_beam_additional_stack_damage_+%_final per stage after the first",
+    "cases": [
+      {"build": "94-marauder-L100-chieftain-scorching-ray-of-immolation", "output": "skill.dot_dps", "ours": 7147.5671904065, "pob": 15211.489148814}
+    ]
+  },
+  {
+    "id": "dot-ailments",
+    "kind": "pending",
+    "league": "3.29",
+    "reason": "PoB's damage over time adds the ailments the skill's hits inflict (ignite, bleed, poison) and, for some skills, more than one instance of the skill's own damage over time; the engine gives one instance of the skill's own damage over time and no ailments yet",
+    "evidence": "Each main skill hits (PoB's skill-layer TotalDPS is above 0), and PoB's TotalDotDPS sums the skill's damage over time with its ailments (CalcOffence.lua)",
+    "cases": [
+      {"build": "103-shadow-L100-trickster-exsanguinate", "output": "skill.dot_dps", "ours": 13562.423200000003, "pob": 75625.6673424},
+      {"build": "104-shadow-L100-assassin-exsanguinate", "output": "skill.dot_dps", "ours": 22790.24352, "pob": 113605.91088},
+      {"build": "47-witch-L100-occultist-essence-drain", "output": "skill.dot_dps", "ours": 137733.12681492, "pob": 793463.22043517},
+      {"build": "73-witch-L100-elementalist-reap", "output": "skill.dot_dps", "ours": 14697.929074999998, "pob": 2230244.8874259},
+      {"build": "99-marauder-L100-chieftain-fire-trap", "output": "skill.dot_dps", "ours": 145044.21434346455, "pob": 323502.44718348}
+    ]
+  },
+  {
+    "id": "dot-unmodelled-stats-3.28",
+    "kind": "pending",
+    "league": "3.28",
+    "reason": "The skill's damage over time differs for another reason, not traced per build yet: the gear build's life and energy shield differ from PoB's (gear-item-stats-left-out-3.28), the engine gives gems the quality of a socket of their own colour, which PoB's 3.28 release does not, and 04 and 05 leave out stats as unmodelled-stat",
+    "evidence": "02: with PoB's skill-layer Life and EnergyShield the engine's value is PoB's times 1.51 / 1.46, the 5% increased Elemental Damage of Elemental Focus at 10 quality; pob.json's 3.28 skill-layer supports have no quality, the 3.29 ones 10",
+    "cases": [
+      {"build": "02-marauder-L35-chieftain-righteous-fire", "output": "skill.dot_dps", "ours": 2397.844877399999, "pob": 2146.0088349},
+      {"build": "03-marauder-L60-chieftain-righteous-fire", "output": "skill.dot_dps", "ours": 21117.662966399992, "pob": 19486.5003333},
+      {"build": "04-marauder-L80-chieftain-righteous-fire", "output": "skill.dot_dps", "ours": 38428.698234284406, "pob": 50523.183934532},
+      {"build": "05-marauder-L90-chieftain-righteous-fire", "output": "skill.dot_dps", "ours": 71516.96377692162, "pob": 111394.90688743}
+    ]
+  },
+  {
+    "id": "dot-ailments-3.28",
+    "kind": "pending",
+    "league": "3.28",
+    "reason": "PoB's damage over time is the poison the skill's hits inflict; the engine gives no ailments yet, and Viper Strike of the Mamba has no damage over time of its own",
+    "evidence": "Each main skill hits (PoB's skill-layer TotalDPS is above 0), and PoB's TotalDotDPS sums the skill's damage over time with its ailments (CalcOffence.lua)",
+    "cases": [
+      {"build": "17-shadow-L35-assassin-chaos-inoculation", "output": "skill.dot_dps", "ours": 0, "pob": 1343.2735672735},
+      {"build": "18-shadow-L60-assassin-chaos-inoculation", "output": "skill.dot_dps", "ours": 0, "pob": 16508.0051136},
+      {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "skill.dot_dps", "ours": 0, "pob": 60201.580824},
+      {"build": "20-shadow-L90-assassin-chaos-inoculation", "output": "skill.dot_dps", "ours": 0, "pob": 78229.62126}
     ]
   },
   {
