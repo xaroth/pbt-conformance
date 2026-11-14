@@ -32,11 +32,32 @@ jobs:
       - uses: actions/setup-go@v7
         with:
           go-version-file: go.mod
+      - run: echo "PBTC_CACHE=$RUNNER_TEMP/pbtc" >> "$GITHUB_ENV"
+      # pins.json pins every input of the cache: the runtime sources, the PoB commits and the
+      # dataset ids. No restore-keys, so an older cache cannot carry unpinned parts forward.
+      - uses: actions/cache@v6
+        with:
+          path: |
+            ${{ env.PBTC_CACHE }}
+            !${{ env.PBTC_CACHE }}/src
+            !${{ env.PBTC_CACHE }}/pob/*/.git
+          key: pbtc-${{ hashFiles('pins.json') }}
+      - name: Build the PoB runtime
+        run: go run ./cmd/pbtc setup --cache "$PBTC_CACHE"
       - name: Pull the pinned datasets
         id: data
-        run: echo "dir=$(go run ./cmd/pbtc data --cache "$RUNNER_TEMP/pbtc")" >> "$GITHUB_OUTPUT"
-      - name: Tests with real datasets
-        run: go test ./...
+        run: echo "dir=$(go run ./cmd/pbtc data --cache "$PBTC_CACHE")" >> "$GITHUB_OUTPUT"
+      # The tests that need the runtime or the datasets skip without them; none may skip here.
+      - name: Tests with the PoB runtime and real datasets
+        # Unlike the default shell, sets pipefail, so a failing test piped into tee fails the step.
+        shell: bash
+        run: |
+          go test -v ./... | tee "$RUNNER_TEMP/test.log"
+          if grep -E 'PBTC_CACHE not set|PBT_DATASETS not set' "$RUNNER_TEMP/test.log"; then
+            echo "::error::tests skipped for want of PBTC_CACHE or PBT_DATASETS"
+            exit 1
+          fi
+          echo "Tests and subtests: $(grep -c -e '--- PASS' "$RUNNER_TEMP/test.log") passed, $(grep -c -e '--- SKIP' "$RUNNER_TEMP/test.log") skipped, none for want of PBTC_CACHE or PBT_DATASETS" | tee -a "$GITHUB_STEP_SUMMARY"
         env:
           PBT_DATASETS: ${{ steps.data.outputs.dir }}
       - name: Compare with the stored PoB values
