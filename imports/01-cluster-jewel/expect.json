@@ -129,7 +129,10 @@
       63447,
       63723,
       64210,
-      64221
+      64221,
+      65537,
+      65538,
+      65539
     ],
     "masteries": {
       "11505": 36313,
@@ -147,10 +150,6 @@
     }
   },
   "warnings": [
-    {
-      "code": "pob-cluster-node-dropped",
-      "subject": "nodes 65537,65538,65539"
-    },
     {
       "code": "pob-jewel-ignored",
       "subject": "node 26725"
