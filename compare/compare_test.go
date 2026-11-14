@@ -106,8 +106,8 @@ Royal Burgonet</Item></Items></PathOfBuilding>`
 	}{
 		{"items only", string(fixture(t)), withItems, nil},
 		{"bandit differs", string(fixture(t)), strings.Replace(withItems, `bandit="None"`, `bandit="Alira"`, 1), nil},
-		{"cluster node in full", string(fixture(t)), strings.Replace(withItems, `nodes="47175,31628"`, `nodes="47175,31628,65601"`, 1),
-			[]string{"import:pob-cluster-node-dropped"}},
+		{"cluster node in full only", string(fixture(t)), strings.Replace(withItems, `nodes="47175,31628"`, `nodes="47175,31628,65601"`, 1),
+			[]string{"import:full-tree"}},
 		{"other tree in full", string(fixture(t)), strings.Replace(withItems, `nodes="47175,31628"`, `nodes="47175"`, 1),
 			[]string{"import:full-tree"}},
 		{"config in tree-only", strings.Replace(string(fixture(t)), "<Tree", `<Config><Input name="usePowerCharges" boolean="true"/></Config><Tree`, 1),

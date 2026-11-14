@@ -24,7 +24,7 @@ func TestBlockers(t *testing.T) {
 	full := []build.Warning{
 		{Code: pobimport.SkillIgnored, Subject: "Envy", Message: "granted by Item:3:Doom Crown; skills an item or the tree grants are not imported"},
 		{Code: pobimport.ItemIgnored, Subject: "Doom Crown", Message: "items are not imported"},
-		{Code: pobimport.ClusterNodeDropped, Subject: "node 65601", Message: "dropped"},
+		{Code: pobimport.SpecIgnored, Subject: "Leveling", Message: "only the active tree is imported"},
 	}
 	want := []Blocker{
 		{BlockerGem, "Cruelty"}, {BlockerGem, "Flame Dash"}, {BlockerGem, "Penance Brand"},

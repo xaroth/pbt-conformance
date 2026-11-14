@@ -72,6 +72,12 @@ const (
 	fullTree = importPrefix + "full-tree"
 )
 
+// Outputs of the allocated node counts of the tree-only and the full build.
+const (
+	allocatedNodes     = "allocated_nodes"
+	allocatedNodesFull = "allocated_nodes_full"
+)
+
 // fullWarnings are the import warnings a full build may give: what it holds beside its tree.
 func fullWarnings() []build.Code {
 	return []build.Code{
@@ -166,7 +172,11 @@ func compareBuild(dir, league string, reg *dataset.Registry, sim *simulator.Sim)
 	if err != nil {
 		return nil, err
 	}
-	out = append(out, allocatedMismatches(c, v, league, name)...)
+	fc, _, err := build.Check(full, s)
+	if err != nil {
+		return nil, fmt.Errorf("compare: %w", err)
+	}
+	out = append(out, allocatedMismatches(c, fc, v, league, name)...)
 	out = append(out, warnings(st, league, name)...)
 	ours, err := oursOf(dir, reg, sim, st, full)
 	if err != nil {
@@ -204,16 +214,24 @@ func importBoth(dir, league, name string, reg *dataset.Registry) (
 	return tree, full, fullWarns, importMismatches(league, name, tree, treeWarnings, full, fullWarns), nil
 }
 
-// allocatedMismatches reports a tree whose node count differs from PoB's.
-func allocatedMismatches(c *build.Checked, v *pob.Values, league, name string) []Mismatch {
-	n := Allocated(c)
-	if v.TreeOnly.Allocated == n {
-		return nil
+// allocatedMismatches reports a tree whose node count differs from PoB's: the tree-only build
+// c's and the full build full's, whose cluster jewels add passives that the tree-only file,
+// without jewels, cannot hold.
+func allocatedMismatches(c, full *build.Checked, v *pob.Values, league, name string) []Mismatch {
+	var out []Mismatch
+	if n := Allocated(c); n != v.TreeOnly.Allocated {
+		out = append(out, Mismatch{
+			League: league, Build: name, Output: allocatedNodes,
+			Ours: float64(n), PoB: float64(v.TreeOnly.Allocated), PoBFull: float64(v.Full.Allocated), HasPoB: true,
+		})
 	}
-	return []Mismatch{{
-		League: league, Build: name, Output: "allocated_nodes",
-		Ours: float64(n), PoB: float64(v.TreeOnly.Allocated), PoBFull: float64(v.Full.Allocated), HasPoB: true,
-	}}
+	if n := Allocated(full); n != v.Full.Allocated {
+		out = append(out, Mismatch{
+			League: league, Build: name, Output: allocatedNodesFull,
+			Ours: float64(n), PoB: float64(v.Full.Allocated), PoBFull: float64(v.Full.Allocated), HasPoB: true,
+		})
+	}
+	return out
 }
 
 // ours holds pbt-engine's values per layer: every output for the tree-only build, and the
@@ -322,10 +340,11 @@ func sameTree(a, b *build.Build) bool {
 		a.Ascendancy == b.Ascendancy && a.Level == b.Level && slices.Equal(a.Nodes, b.Nodes) && maps.Equal(a.Masteries, b.Masteries)
 }
 
-// ignoredByPoB are the check's warnings about choices PoB ignores too: an override on a node
-// that is not allocated, and a mastery effect on a mastery an override replaces.
+// ignoredByPoB are the check's warnings about what PoB ignores too: an override on a node
+// that is not allocated, a mastery effect on a mastery an override replaces, and a passive only
+// a cluster jewel adds, which the tree-only file allocates without its jewel.
 func ignoredByPoB() []build.Code {
-	return []build.Code{build.OverrideNotAllocated, build.MasteryOverridden}
+	return []build.Code{build.OverrideNotAllocated, build.MasteryOverridden, build.NodeNoClusterJewel}
 }
 
 // warnings turns the simulation's warnings into mismatches, except stats left out as not
