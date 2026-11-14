@@ -237,6 +237,20 @@
     ]
   },
   {
+    "id": "skill-part-without-stat-set",
+    "kind": "deviation",
+    "league": "3.29",
+    "reason": "PoB's skill parts are its own list per skill; the engine takes part n as the skill's nth stat set in the game data. These parts are a later part of a skill with one stat set (Blade Blast, Storm Burst of Repulsion), so they have no counterpart: the import warns and keeps the primary set without stages",
+    "evidence": "Game data 3.29.3.6: BladeBlast and StormBurstAltX each list one stat set (GrantedEffects.StatSets)",
+    "cases": [
+      {"build": "45-scion-L100-reliquarian-bladefall-of-trarthus", "output": "import:pob-skill-part-ignored", "subject": "Blade Blast"},
+      {"build": "46-shadow-L100-assassin-storm-burst-of-repulsion", "output": "import:pob-skill-part-ignored", "subject": "Storm Burst of Repulsion"},
+      {"build": "71-witch-L100-occultist-death-aura", "output": "import:pob-skill-part-ignored", "subject": "Storm Burst of Repulsion"},
+      {"build": "72-duelist-L100-gladiator-blade-blast", "output": "import:pob-skill-part-ignored", "subject": "Blade Blast"},
+      {"build": "95-templar-L100-hierophant-storm-burst-of-repulsion", "output": "import:pob-skill-part-ignored", "subject": "Storm Burst of Repulsion"}
+    ]
+  },
+  {
     "id": "mine-cost-as-reservation",
     "kind": "pending",
     "league": "3.29",
