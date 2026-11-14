@@ -208,3 +208,34 @@ func TestScorePartyLayer(t *testing.T) {
 		t.Errorf("kinds (-want +got):\n%s", diff)
 	}
 }
+
+// Each output both give is counted per league and layer, in the order of pob.Outputs.
+func TestScoreOutputs(t *testing.T) {
+	t.Parallel()
+	gear := func(lifeAgrees bool) []compare.Layer {
+		return []compare.Layer{{Name: "gear", Compared: []compare.OutputResult{
+			{Output: "player.strength", Agrees: true}, {Output: "player.life", Agrees: lifeAgrees},
+		}}}
+	}
+	builds := []compare.Build{
+		{League: "3.29", Name: "01-a", Layers: gear(true)},
+		{League: "3.29", Name: "02-b", Layers: gear(false)},
+		{League: "3.29", Name: "03-c", Layers: []compare.Layer{{Name: "tree", Compared: []compare.OutputResult{{Output: "player.life"}}}}},
+	}
+	s := compare.Score(builds, nil, nil, nil)
+	want := []compare.OutputRow{
+		{League: "3.29", Layer: "tree", Output: "player.life", Compared: 1},
+		{League: "3.29", Layer: "gear", Output: "player.strength", Compared: 2, Agree: 2},
+		{League: "3.29", Layer: "gear", Output: "player.life", Compared: 2, Agree: 1},
+	}
+	if diff := cmp.Diff(want, s.Outputs); diff != "" {
+		t.Errorf("outputs (-want +got):\n%s", diff)
+	}
+	var text bytes.Buffer
+	if err := s.WriteText(&text); err != nil {
+		t.Fatal(err)
+	}
+	if line := "3.29    gear   player.life      2         1      1"; !strings.Contains(text.String(), line) {
+		t.Errorf("text lacks %q:\n%s", line, text.String())
+	}
+}

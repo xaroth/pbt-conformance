@@ -11,6 +11,7 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
+	"github.com/google/go-cmp/cmp/cmpopts"
 
 	"github.com/xaroth/pbt-conformance/compare"
 	"github.com/xaroth/pbt-conformance/pins"
@@ -173,8 +174,8 @@ func TestRun(t *testing.T) {
 	if diff := cmp.Diff([]string{"skill.average_hit", "skill.fire_minimum", "skill.fire_maximum"}, outputs); diff != "" {
 		t.Errorf("mismatches (-want +got):\n%s", diff)
 	}
-	// The engine gives the sheet of the tree layer and, of its defences, spell block, reservation,
-	// a skill's costs and a spell's hit; nothing else.
+	// The engine gives the sheet of the tree and gear layers and, of their defences, spell block,
+	// reservation, a skill's costs and a spell's hit; nothing else.
 	skillGroups := []compare.GroupResult{
 		{Group: pob.GroupSheet, Status: compare.StatusNotCompared}, {Group: pob.GroupReservation, Status: compare.StatusPass},
 		{Group: pob.GroupSkill, Status: compare.StatusMismatch, Missing: []string{"skill.hits_per_second", "skill.hit_dps", "skill.dot_dps", "skill.total_dps"}},
@@ -182,24 +183,22 @@ func TestRun(t *testing.T) {
 		{Group: pob.GroupHitTypes, Status: compare.StatusMismatch}, {Group: pob.GroupDefence, Status: compare.StatusNotCompared},
 		{Group: pob.GroupDelivery, Status: compare.StatusNotCompared},
 	}
+	sheetGroups := []compare.GroupResult{
+		{Group: pob.GroupSheet, Status: compare.StatusPass},
+		{Group: pob.GroupReservation, Status: compare.StatusPass},
+		{Group: pob.GroupDefence, Status: compare.StatusIncomplete, Missing: []string{
+			"player.block_chance", "player.spell_suppression_chance",
+			"player.life_regeneration_recovery", "player.energy_shield_regeneration_recovery",
+			"player.life_leech_rate", "player.energy_shield_leech_rate", "player.energy_shield_recharge",
+		}},
+	}
 	want := []compare.Layer{
-		{Name: "tree", Groups: []compare.GroupResult{
-			{Group: pob.GroupSheet, Status: compare.StatusPass},
-			{Group: pob.GroupReservation, Status: compare.StatusPass},
-			{Group: pob.GroupDefence, Status: compare.StatusIncomplete, Missing: []string{
-				"player.block_chance", "player.spell_suppression_chance",
-				"player.life_regeneration_recovery", "player.energy_shield_regeneration_recovery",
-				"player.life_leech_rate", "player.energy_shield_leech_rate", "player.energy_shield_recharge",
-			}},
-		}},
-		{Name: "gear", Groups: []compare.GroupResult{
-			{Group: pob.GroupSheet, Status: compare.StatusNotCompared}, {Group: pob.GroupReservation, Status: compare.StatusNotCompared},
-			{Group: pob.GroupDefence, Status: compare.StatusNotCompared},
-		}},
+		{Name: "tree", Groups: sheetGroups},
+		{Name: "gear", Groups: sheetGroups},
 		{Name: "skill", Groups: skillGroups},
 		{Name: "full", Groups: skillGroups},
 	}
-	if diff := cmp.Diff(want, bs[0].Layers); diff != "" {
+	if diff := cmp.Diff(want, bs[0].Layers, cmpopts.IgnoreFields(compare.Layer{}, "Compared")); diff != "" {
 		t.Errorf("layers (-want +got):\n%s", diff)
 	}
 	// no party file, no party layer

@@ -62,6 +62,9 @@ func TestReadTriage(t *testing.T) {
 		{"bad kind", `[{"id": "mana", "kind": "maybe", "build": "*", "output": "player.mana", "reason": "r"}]`, `kind "maybe"`},
 		{"no reason", `[{"id": "mana", "kind": "pending", "build": "*", "output": "player.mana"}]`, "no reason"},
 		{"bad pattern", `[{"id": "mana", "kind": "pending", "build": "[", "output": "player.mana", "reason": "r"}]`, "build pattern"},
+		{"gear layer", `[{"id": "m", "kind": "pending", "build": "*", "output": "player.mana", "layer": "gear", "reason": "r"}]`, ""},
+		{"other layer", `[{"id": "m", "kind": "pending", "build": "*", "output": "player.mana", "layer": "full", "reason": "r"}]`, "layer"},
+		{"layer on a warning", `[{"id": "m", "kind": "pending", "build": "*", "output": "warning:x", "subject": "s", "layer": "gear", "reason": "r"}]`, "layer"},
 	}
 	for _, testCase := range testCases {
 		t.Run(testCase.name, func(t *testing.T) {
@@ -126,6 +129,10 @@ func TestReadTriageCases(t *testing.T) {
 		{"no build", head + `"cases": [{"output": "player.life", "ours": 1}]}]`, "case"},
 		{"repeated", head + `"cases": [{"build": "40-a", "output": "player.life", "ours": 1},
 			{"build": "40-a", "output": "player.life", "ours": 2}]}]`, "case"},
+		{"gear and tree case", head + `"cases": [{"build": "40-a", "output": "player.life", "ours": 1},
+			{"build": "40-a", "output": "player.life", "layer": "gear", "ours": 1}]}]`, ""},
+		{"other layer", head + `"cases": [{"build": "40-a", "output": "player.life", "layer": "skill", "ours": 1}]}]`, "case"},
+		{"layer beside cases", head + `"layer": "gear", "cases": [{"build": "40-a", "output": "player.life", "ours": 1}]}]`, "beside cases"},
 		{"pattern beside cases", head + `"build": "*", "output": "player.life", "cases": [{"build": "40-a", "output": "player.life", "ours": 1}]}]`, "beside cases"},
 	}
 	for _, testCase := range testCases {
@@ -139,5 +146,39 @@ func TestReadTriageCases(t *testing.T) {
 				t.Errorf("got %v, want %v containing %q", err, compare.ErrTriage, testCase.want)
 			}
 		})
+	}
+}
+
+// An entry or case without a layer names the layer an output is compared on first; only gear
+// mismatches name theirs, so a cause on the tree does not accept the gear build's values.
+func TestApplyLayers(t *testing.T) {
+	t.Parallel()
+	v := func(f float64) *float64 { return &f }
+	ms := []compare.Mismatch{
+		{League: "3.29", Build: "40-a", Output: "player.life", Layer: compare.LayerTree, Ours: 4000, PoB: 4100, HasPoB: true},
+		{League: "3.29", Build: "40-a", Output: "player.life", Layer: compare.LayerGear, Ours: 4000, PoB: 4100, HasPoB: true},
+		{League: "3.29", Build: "40-a", Output: "player.reserved_mana", Layer: compare.LayerSkill, Ours: 10, PoB: 11, HasPoB: true},
+		{League: "3.29", Build: "40-a", Output: "player.reserved_mana", Layer: compare.LayerGear, Ours: 10, PoB: 11, HasPoB: true},
+		{League: "3.29", Build: "41-b", Output: "player.armour", Layer: compare.LayerGear, Ours: 5, PoB: 6, HasPoB: true},
+	}
+	es := []compare.Entry{
+		{ID: "tree", Cases: []compare.Case{
+			{Build: "40-a", Output: "player.life", Ours: v(4000), PoB: v(4100)},
+			{Build: "40-a", Output: "player.reserved_mana", Ours: v(10), PoB: v(11)},
+		}},
+		{ID: "gear", Cases: []compare.Case{{Build: "40-a", Output: "player.life", Layer: compare.LayerGear, Ours: v(4000), PoB: v(4100)}}},
+		{ID: "armour", Build: "*", Output: "player.armour", Layer: compare.LayerGear},
+		{ID: "armour-tree", Build: "*", Output: "player.armour"},
+	}
+	stale := compare.Apply(ms, es)
+	got := make([]string, 0, len(ms))
+	for _, m := range ms {
+		got = append(got, m.Triage)
+	}
+	if diff := cmp.Diff([]string{"tree", "gear", "tree", "", "armour"}, got); diff != "" {
+		t.Errorf("triage (-want +got):\n%s", diff)
+	}
+	if diff := cmp.Diff([]string{"armour-tree"}, stale); diff != "" {
+		t.Errorf("stale (-want +got):\n%s", diff)
 	}
 }
