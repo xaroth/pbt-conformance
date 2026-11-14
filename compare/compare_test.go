@@ -134,7 +134,7 @@ Royal Burgonet</Item></Items></PathOfBuilding>`
 }
 
 // TestRun records PoB's values for the fixture and compares: a Marauder with one life node
-// has no mismatches, and a Spell Totem Fireball in its full file shows as not compared.
+// has no mismatches, and a Spell Totem Fireball in its full file hits as in PoB.
 func TestRun(t *testing.T) {
 	t.Parallel()
 	datasets := env(t, "PBT_DATASETS")
@@ -164,23 +164,16 @@ func TestRun(t *testing.T) {
 	if len(bs) != 1 {
 		t.Fatalf("got %d builds, want 1", len(bs))
 	}
-	// The engine does not apply Spell Totem's 50% less damage yet, so the totem's Fireball hit is
-	// twice PoB's.
-	ms := compare.Mismatches(bs)
-	outputs := make([]string, 0, len(ms))
-	for _, m := range ms {
-		outputs = append(outputs, m.Output)
-	}
-	if diff := cmp.Diff([]string{"skill.average_hit", "skill.fire_minimum", "skill.fire_maximum"}, outputs); diff != "" {
-		t.Errorf("mismatches (-want +got):\n%s", diff)
+	if ms := compare.Mismatches(bs); len(ms) > 0 {
+		t.Errorf("mismatches %+v, want none", ms)
 	}
 	// The engine gives the sheet of the tree and gear layers and, of their defences, spell block,
 	// reservation, a skill's costs and a spell's hit; nothing else.
 	skillGroups := []compare.GroupResult{
 		{Group: pob.GroupSheet, Status: compare.StatusNotCompared}, {Group: pob.GroupReservation, Status: compare.StatusPass},
-		{Group: pob.GroupSkill, Status: compare.StatusMismatch, Missing: []string{"skill.hits_per_second", "skill.hit_dps", "skill.dot_dps", "skill.total_dps"}},
+		{Group: pob.GroupSkill, Status: compare.StatusIncomplete, Missing: []string{"skill.hits_per_second", "skill.hit_dps", "skill.dot_dps", "skill.total_dps"}},
 		{Group: pob.GroupCost, Status: compare.StatusPass},
-		{Group: pob.GroupHitTypes, Status: compare.StatusMismatch}, {Group: pob.GroupDefence, Status: compare.StatusNotCompared},
+		{Group: pob.GroupHitTypes, Status: compare.StatusPass}, {Group: pob.GroupDefence, Status: compare.StatusNotCompared},
 		{Group: pob.GroupDelivery, Status: compare.StatusNotCompared},
 	}
 	sheetGroups := []compare.GroupResult{
