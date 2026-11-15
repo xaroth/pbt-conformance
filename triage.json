@@ -1959,7 +1959,6 @@
       {"build": "68-duelist-L100-gladiator-cyclone-of-tumult", "output": "player.armour", "layer": "gear", "ours": 6850, "pob": 8523},
       {"build": "78-templar-L100-inquisitor-animate-guardian", "output": "player.armour", "layer": "gear", "ours": 1196, "pob": 1609},
       {"build": "81-templar-L100-guardian-absolution", "output": "player.energy_shield", "layer": "gear", "ours": 408, "pob": 394},
-      {"build": "82-scion-L100-luminary-absolution", "output": "player.energy_shield", "layer": "gear", "ours": 0, "pob": 477},
       {"build": "87-scion-L100-luminary-animate-guardian-of-smiting", "output": "player.evasion_rating", "layer": "gear", "ours": 311, "pob": 323},
       {"build": "88-templar-L100-guardian-dominating-blow-of-inspiring", "output": "player.armour", "layer": "gear", "ours": 8260, "pob": 10975},
       {"build": "89-duelist-L99-gladiator-dominating-blow-of-inspiring", "output": "player.evasion_rating", "layer": "gear", "ours": 673, "pob": 678},
@@ -2336,6 +2335,7 @@
       {"build": "68-duelist-L100-gladiator-cyclone-of-tumult", "output": "player.movement_speed", "layer": "gear", "ours": 133, "pob": 132},
       {"build": "68-duelist-L100-gladiator-cyclone-of-tumult", "output": "player.uncapped_chaos_resistance", "layer": "gear", "ours": 20, "pob": 24},
       {"build": "79-witch-L100-necromancer-summon-holy-relic-of-conviction", "output": "player.energy_shield", "layer": "gear", "ours": 915, "pob": 917},
+      {"build": "82-scion-L100-luminary-absolution", "output": "player.energy_shield", "layer": "gear", "ours": 0, "pob": 477},
       {"build": "89-duelist-L99-gladiator-dominating-blow-of-inspiring", "output": "player.mana_regeneration", "layer": "gear", "ours": 21.6, "pob": 21.5},
       {"build": "96-templar-L100-hierophant-arc", "output": "player.mana_regeneration", "layer": "gear", "ours": 145.5, "pob": 172.2}
     ]
