@@ -7,6 +7,7 @@
     "allocated": 84,
     "outputs": {
       "Armour": 10141,
+      "BleedDPS": 57967.988160097,
       "BlockChance": 0,
       "Calcs.MainHand.ChaosMax": 0,
       "Calcs.MainHand.ChaosMin": 0,
@@ -94,6 +95,7 @@
     "allocated": 84,
     "outputs": {
       "Armour": 3029,
+      "BleedDPS": 43873.777591095,
       "BlockChance": 0,
       "Calcs.MainHand.ChaosMax": 0,
       "Calcs.MainHand.ChaosMin": 0,

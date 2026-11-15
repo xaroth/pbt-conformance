@@ -172,7 +172,8 @@ func TestRun(t *testing.T) {
 	skillGroups := []compare.GroupResult{
 		{Group: pob.GroupSheet, Status: compare.StatusNotCompared}, {Group: pob.GroupReservation, Status: compare.StatusPass},
 		{Group: pob.GroupSkill, Status: compare.StatusIncomplete, Missing: []string{
-			"skill.hits_per_second", "skill.hit_dps", "skill.dot_dps", "skill.ignite_dps", "skill.total_dps",
+			"skill.hits_per_second", "skill.hit_dps", "skill.dot_dps", "skill.ignite_dps", "skill.bleed_dps", "skill.poison_dps",
+			"skill.total_dps",
 		}},
 		{Group: pob.GroupCost, Status: compare.StatusPass},
 		{Group: pob.GroupHitTypes, Status: compare.StatusPass}, {Group: pob.GroupDefence, Status: compare.StatusNotCompared},

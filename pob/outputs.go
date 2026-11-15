@@ -170,6 +170,8 @@ func skillOutputs() []Output {
 		key("skill.hit_dps", GroupSkill, "TotalDPS"),
 		key("skill.dot_dps", GroupSkill, "TotalDotDPS"),
 		zeroWith("skill.ignite_dps", GroupSkill, "IgniteDPS", "TotalDotDPS"),
+		zeroWith("skill.bleed_dps", GroupSkill, "BleedDPS", "TotalDotDPS"),
+		zeroWith("skill.poison_dps", GroupSkill, "TotalPoisonDPS", "TotalDotDPS"),
 		key("skill.total_dps", GroupSkill, "CombinedDPS"),
 		// PoB shows whole costs, but cost efficiency leaves fractions that both compute.
 		key("skill.mana_cost", GroupCost, "ManaCost").hundredths(),

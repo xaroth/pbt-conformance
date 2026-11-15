@@ -58,7 +58,8 @@
       "SpellSuppressionChance": 18,
       "Str": 105,
       "TotalDPS": 741001.46006669,
-      "TotalDotDPS": 3918544.6209891
+      "TotalDotDPS": 3918544.6209891,
+      "TotalPoisonDPS": 171547.4501325
     },
     "mainSkill": {
       "group": 3,
@@ -150,7 +151,8 @@
       "SpellSuppressionChance": 8,
       "Str": 105,
       "TotalDPS": 200926.42620429,
-      "TotalDotDPS": 793463.22043517
+      "TotalDotDPS": 793463.22043517,
+      "TotalPoisonDPS": 35092.6884
     },
     "mainSkill": {
       "group": 3,
