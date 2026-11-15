@@ -123,6 +123,10 @@ Requests go to poe.ninja's builds API (the league index, searches, dictionaries 
 
 `imports/<case>/` checks pbt-engine's PoB importer on what the conformance builds lack: cluster jewels, a tattoo, two trees, player config, the layout of older PoB files, the ruthless and alternate trees, a secondary ascendancy and a PoE2 file. Each case holds `pob.xml`, made from a conformance build's `pob-treeonly.xml` with one thing added (its `README.md` says what), and `expect.json`: the build it must import to, which is the source build with only the intended change, and its warnings by code and subject, or the error. `go test ./imports` runs them with `$PBT_DATASETS`, as CI does.
 
+## Explanations
+
+`go test ./explain` imports every build's `pob.xml`, simulates it on its league's pinned dataset and checks that, for every output pbt-engine gives, the value its explanation shows is the value itself. It runs with `$PBT_DATASETS`, as CI does.
+
 ## Develop
 
 Requires Go 1.27.
