@@ -13,6 +13,8 @@ import (
 	"github.com/xaroth/pbt-conformance/pins"
 	"github.com/xaroth/pbt-conformance/pob"
 
+	"github.com/xaroth/pbt-engine/config"
+	"github.com/xaroth/pbt-engine/poe1"
 	"github.com/xaroth/pbt-engine/simulator"
 )
 
@@ -143,5 +145,50 @@ func TestSkillMismatches(t *testing.T) {
 				t.Errorf("mismatches (-want +got):\n%s", diff)
 			}
 		})
+	}
+}
+
+// A condition the engine derives from a build is read as the PoB file ticks it: one the file
+// leaves unticked is set off, one it ticks keeps the file's value.
+func TestSimulateTicked(t *testing.T) {
+	t.Parallel()
+	datasets := os.Getenv("PBT_DATASETS")
+	if datasets == "" {
+		t.Skip("PBT_DATASETS not set")
+	}
+	f, err := pins.Read(os.DirFS(".."))
+	if err != nil {
+		t.Fatal(err)
+	}
+	reg, s, err := openPinned(datasets, "poe1", f.Games["poe1"].Leagues["3.29"].Dataset)
+	if err != nil {
+		t.Fatal(err)
+	}
+	sim, err := simulator.New(s)
+	if err != nil {
+		t.Fatal(err)
+	}
+	b, _, err := importFile(filepath.Join("..", "testdata"), "marauder-life-node.xml", reg)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if err := config.Set(&b.Config, poe1.EnemyShocked, true); err != nil {
+		t.Fatal(err)
+	}
+	st, err := simulateTicked(sim, b)
+	if err != nil {
+		t.Fatal(err)
+	}
+	for _, c := range []struct {
+		key  config.Key[bool]
+		want config.Entry
+	}{
+		{poe1.EnemyShocked, config.Entry{Value: true, Source: config.FromBuild}},
+		{poe1.EnemyChilled, config.Entry{Value: false, Source: config.FromCall}},
+		{poe1.EnemyIgnited, config.Entry{Value: false, Source: config.FromCall}},
+	} {
+		if got, _ := st.Config(c.key); got != c.want {
+			t.Errorf("%s: got %+v, want %+v", c.key.Name(), got, c.want)
+		}
 	}
 }

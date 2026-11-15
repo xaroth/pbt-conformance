@@ -173,9 +173,9 @@ func compareBuild(dir, league string, reg *dataset.Registry, sim *simulator.Sim)
 	if err != nil {
 		return nil, fmt.Errorf("compare: %w", err)
 	}
-	st, err := sim.Simulate(b)
+	st, err := simulateTicked(sim, b)
 	if err != nil {
-		return nil, fmt.Errorf("compare: %w", err)
+		return nil, err
 	}
 	v, err := readValues(dir)
 	if err != nil {
@@ -290,9 +290,9 @@ func simulateFile(dir, file string, reg *dataset.Registry, sim *simulator.Sim, o
 	case err != nil:
 		return nil, nil, err
 	}
-	st, err := sim.Simulate(b)
+	st, err := simulateTicked(sim, b)
 	if err != nil {
-		return nil, nil, fmt.Errorf("compare: %w", err)
+		return nil, nil, err
 	}
 	if ms, ok := st.MainSkill(); ok {
 		return engineValues(outputs, st), &ms, nil
@@ -301,11 +301,32 @@ func simulateFile(dir, file string, reg *dataset.Registry, sim *simulator.Sim, o
 }
 
 func simulateValues(sim *simulator.Sim, outputs []simulator.Output, b *build.Build) (map[string]float64, error) {
-	st, err := sim.Simulate(b)
+	st, err := simulateTicked(sim, b)
+	if err != nil {
+		return nil, err
+	}
+	return engineValues(outputs, st), nil
+}
+
+// simulateTicked simulates b with each condition the engine derives from a build
+// (simulator.ConfigKey.Derived) set off where b's config leaves it unset: PoB counts a
+// condition only when its box is ticked, so the comparison reads them as the file ticks them.
+func simulateTicked(sim *simulator.Sim, b *build.Build) (*simulator.Stats, error) {
+	keys, err := sim.ConfigKeys()
 	if err != nil {
 		return nil, fmt.Errorf("compare: %w", err)
 	}
-	return engineValues(outputs, st), nil
+	var opts []simulator.Option
+	for _, k := range keys {
+		if _, set := b.Config[k.Name]; k.Derived && !set {
+			opts = append(opts, simulator.SetRaw(k.Name, json.RawMessage("false")))
+		}
+	}
+	st, err := sim.Simulate(b, opts...)
+	if err != nil {
+		return nil, fmt.Errorf("compare: %w", err)
+	}
+	return st, nil
 }
 
 // engineValues returns the value of each of outputs st gives. The engine gives some outputs only
