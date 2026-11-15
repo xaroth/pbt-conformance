@@ -1713,15 +1713,25 @@
     "id": "split-personality-attributes",
     "kind": "pending",
     "league": "3.29",
-    "reason": "Split Personality grants its attributes per passive between the jewel and the class's start; the engine reads the jewel's flat stat once, so the attributes are lower, and so is what follows them: life, its regeneration and armour from life on 59, accuracy rating from Intelligence through Shaper's Touch on 60",
-    "evidence": "PoB's breakdown of Strength on 59's gear layer has the two jewels at 91 and 82, the engine's at 5 each; PoB's breakdown of Intelligence on 60's skill layer has them at 72 and 67, and its accuracy rating has Shaper's Touch (\"+2 Accuracy Rating per 2 Intelligence\") at 1170 against the engine's 1002; 59's life gap is its Strength life bonus gap (PoB 1579, the engine 1253) times its increased life, with the Helical Ring's suffix lines at their printed values in PoB's breakdown of Life",
+    "reason": "Split Personality grants its attributes per passive between the jewel and the class's start; the engine reads the jewel's flat stat once, so the attributes are lower, and so is what follows them: life, its regeneration and armour from life on 59, accuracy rating from Intelligence through Shaper's Touch on 60, life and its regeneration on 51 and 60",
+    "evidence": "PoB's breakdown of Strength on 59's gear layer has the two jewels at 91 and 82, the engine's at 5 each; PoB's breakdown of Intelligence on 60's skill layer has them at 72 and 67, and its accuracy rating has Shaper's Touch (\"+2 Accuracy Rating per 2 Intelligence\") at 1170 against the engine's 1002; 59's life gap is its Strength life bonus gap (PoB 1579, the engine 1253) times its increased life, with the Helical Ring's suffix lines at their printed values in PoB's breakdown of Life. On the gear layers of 51, 53 and 60 both jewels sit in jewel sockets a large cluster jewel adds, many passives from the start: with the two jewels taken out of the sockets, PoB's Strength, Intelligence and life equal the engine's on 51 and 60; on 53 the rest of the gap is Righteous Providence (+50 to Strength and Intelligence), which the Forbidden Flame and Flesh in the other cluster jewel's sockets allocate (gear-forbidden-jewels), and with those out too the attributes match. The cluster jewels' own passives add no gap",
     "cases": [
       {"build": "60-templar-L100-inquisitor-lancing-steel-of-spraying", "output": "skill.hit_chance", "ours": 90, "pob": 92},
       {"build": "59-templar-L100-hierophant-frenzy", "output": "player.armour", "layer": "gear", "ours": 7228, "pob": 8004},
       {"build": "59-templar-L100-hierophant-frenzy", "output": "player.strength", "layer": "gear", "ours": 2507, "pob": 3158},
       {"build": "59-templar-L100-hierophant-frenzy", "output": "player.life", "layer": "gear", "ours": 5745, "pob": 6407},
       {"build": "59-templar-L100-hierophant-frenzy", "output": "player.life_regeneration", "layer": "gear", "ours": 252.8, "pob": 281.9},
-      {"build": "59-templar-L100-hierophant-frenzy", "output": "player.unreserved_life", "layer": "gear", "ours": 5745, "pob": 6407}
+      {"build": "59-templar-L100-hierophant-frenzy", "output": "player.unreserved_life", "layer": "gear", "ours": 5745, "pob": 6407},
+      {"build": "51-marauder-L100-juggernaut-static-strike-of-gathering-lightning", "output": "player.life", "layer": "gear", "ours": 7472, "pob": 8145},
+      {"build": "51-marauder-L100-juggernaut-static-strike-of-gathering-lightning", "output": "player.life_regeneration", "layer": "gear", "ours": 340, "pob": 370.6},
+      {"build": "51-marauder-L100-juggernaut-static-strike-of-gathering-lightning", "output": "player.strength", "layer": "gear", "ours": 1778, "pob": 1964},
+      {"build": "51-marauder-L100-juggernaut-static-strike-of-gathering-lightning", "output": "player.unreserved_life", "layer": "gear", "ours": 7472, "pob": 8145},
+      {"build": "53-templar-L100-hierophant-kinetic-blast-of-clustering", "output": "player.intelligence", "layer": "gear", "ours": 929, "pob": 1126},
+      {"build": "53-templar-L100-hierophant-kinetic-blast-of-clustering", "output": "player.strength", "layer": "gear", "ours": 373, "pob": 585},
+      {"build": "60-templar-L100-inquisitor-lancing-steel-of-spraying", "output": "player.intelligence", "layer": "gear", "ours": 1002, "pob": 1170},
+      {"build": "60-templar-L100-inquisitor-lancing-steel-of-spraying", "output": "player.life", "layer": "gear", "ours": 6923, "pob": 7166},
+      {"build": "60-templar-L100-inquisitor-lancing-steel-of-spraying", "output": "player.strength", "layer": "gear", "ours": 939, "pob": 1106},
+      {"build": "60-templar-L100-inquisitor-lancing-steel-of-spraying", "output": "player.unreserved_life", "layer": "gear", "ours": 6923, "pob": 7166}
     ]
   },
   {
@@ -1752,25 +1762,6 @@
       {"build": "79-witch-L100-necromancer-summon-holy-relic-of-conviction", "output": "player.energy_shield", "layer": "gear", "ours": 915, "pob": 917},
       {"build": "82-scion-L100-luminary-absolution", "output": "player.energy_shield", "layer": "gear", "ours": 402, "pob": 477},
       {"build": "89-duelist-L99-gladiator-dominating-blow-of-inspiring", "output": "player.mana_regeneration", "layer": "gear", "ours": 21.6, "pob": 21.5}
-    ]
-  },
-  {
-    "id": "gear-cluster-jewel-attributes",
-    "kind": "pending",
-    "league": "3.29",
-    "reason": "Attributes from the passives large cluster jewels add are lower than PoB's, and life follows strength",
-    "evidence": "removing the cluster jewel alone moves the gap; no warning names the stat",
-    "cases": [
-      {"build": "51-marauder-L100-juggernaut-static-strike-of-gathering-lightning", "output": "player.life", "layer": "gear", "ours": 7472, "pob": 8145},
-      {"build": "51-marauder-L100-juggernaut-static-strike-of-gathering-lightning", "output": "player.life_regeneration", "layer": "gear", "ours": 340, "pob": 370.6},
-      {"build": "51-marauder-L100-juggernaut-static-strike-of-gathering-lightning", "output": "player.strength", "layer": "gear", "ours": 1778, "pob": 1964},
-      {"build": "51-marauder-L100-juggernaut-static-strike-of-gathering-lightning", "output": "player.unreserved_life", "layer": "gear", "ours": 7472, "pob": 8145},
-      {"build": "53-templar-L100-hierophant-kinetic-blast-of-clustering", "output": "player.intelligence", "layer": "gear", "ours": 929, "pob": 1126},
-      {"build": "53-templar-L100-hierophant-kinetic-blast-of-clustering", "output": "player.strength", "layer": "gear", "ours": 373, "pob": 585},
-      {"build": "60-templar-L100-inquisitor-lancing-steel-of-spraying", "output": "player.intelligence", "layer": "gear", "ours": 1002, "pob": 1170},
-      {"build": "60-templar-L100-inquisitor-lancing-steel-of-spraying", "output": "player.life", "layer": "gear", "ours": 6923, "pob": 7166},
-      {"build": "60-templar-L100-inquisitor-lancing-steel-of-spraying", "output": "player.strength", "layer": "gear", "ours": 939, "pob": 1106},
-      {"build": "60-templar-L100-inquisitor-lancing-steel-of-spraying", "output": "player.unreserved_life", "layer": "gear", "ours": 6923, "pob": 7166}
     ]
   },
   {
