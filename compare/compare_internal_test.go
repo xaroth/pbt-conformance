@@ -186,6 +186,7 @@ func TestSimulateTicked(t *testing.T) {
 		{poe1.EnemyShocked, config.Entry{Value: true, Source: config.FromBuild}},
 		{poe1.EnemyChilled, config.Entry{Value: false, Source: config.FromCall}},
 		{poe1.EnemyIgnited, config.Entry{Value: false, Source: config.FromCall}},
+		{poe1.EnemyFireExposure, config.Entry{Value: false, Source: config.Default}},
 	} {
 		if got, _ := st.Config(c.key); got != c.want {
 			t.Errorf("%s: got %+v, want %+v", c.key.Name(), got, c.want)
