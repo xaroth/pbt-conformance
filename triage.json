@@ -511,10 +511,9 @@
       {"build": "44-duelist-L100-gladiator-detonate-dead-of-scavenging", "output": "skill.chaos_minimum", "ours": 0, "pob": 1842.4},
       {"build": "44-duelist-L100-gladiator-detonate-dead-of-scavenging", "output": "skill.fire_maximum", "ours": 0, "pob": 18799},
       {"build": "44-duelist-L100-gladiator-detonate-dead-of-scavenging", "output": "skill.fire_minimum", "ours": 0, "pob": 18799},
-      {"build": "45-scion-L100-reliquarian-bladefall-of-trarthus", "output": "skill.average_hit", "ours": 11114.504043500001, "pob": 69457.108456312},
-      {"build": "45-scion-L100-reliquarian-bladefall-of-trarthus", "output": "skill.critical_strike_chance", "ours": 40.9, "pob": 41.7},
-      {"build": "45-scion-L100-reliquarian-bladefall-of-trarthus", "output": "skill.lightning_maximum", "ours": 6004.9, "pob": 27519.723},
-      {"build": "45-scion-L100-reliquarian-bladefall-of-trarthus", "output": "skill.lightning_minimum", "ours": 3850.0000000000005, "pob": 16967.9895},
+      {"build": "45-scion-L100-reliquarian-bladefall-of-trarthus", "output": "skill.average_hit", "ours": 11562.843490000001, "pob": 69457.108456312},
+      {"build": "45-scion-L100-reliquarian-bladefall-of-trarthus", "output": "skill.lightning_maximum", "ours": 6269.450000000001, "pob": 27519.723},
+      {"build": "45-scion-L100-reliquarian-bladefall-of-trarthus", "output": "skill.lightning_minimum", "ours": 3872.55, "pob": 16967.9895},
       {"build": "46-shadow-L100-assassin-storm-burst-of-repulsion", "output": "skill.average_hit", "ours": 9883.07754837, "pob": 238326.38261362},
       {"build": "46-shadow-L100-assassin-storm-burst-of-repulsion", "output": "skill.critical_strike_chance", "ours": 16.715999999999998, "pob": 30.63775344},
       {"build": "46-shadow-L100-assassin-storm-burst-of-repulsion", "output": "skill.lightning_maximum", "ours": 6726.5, "pob": 97236},
@@ -586,7 +585,7 @@
       {"build": "99-marauder-L100-chieftain-fire-trap", "output": "skill.chaos_minimum", "ours": 1922.1999999999998, "pob": 2542.4},
       {"build": "99-marauder-L100-chieftain-fire-trap", "output": "skill.fire_maximum", "ours": 31407.07, "pob": 41530.63},
       {"build": "99-marauder-L100-chieftain-fire-trap", "output": "skill.fire_minimum", "ours": 20941.3, "pob": 27691.56},
-      {"build": "101-witch-L100-occultist-glacial-cascade-of-the-fissure", "output": "skill.average_hit", "ours": 18779.6652848, "pob": 39995.0024584},
+      {"build": "101-witch-L100-occultist-glacial-cascade-of-the-fissure", "output": "skill.average_hit", "ours": 19040.122330879996, "pob": 39995.0024584},
       {"build": "101-witch-L100-occultist-glacial-cascade-of-the-fissure", "output": "skill.cold_maximum", "ours": 11220.45, "pob": 22939},
       {"build": "101-witch-L100-occultist-glacial-cascade-of-the-fissure", "output": "skill.cold_minimum", "ours": 7479.99, "pob": 15293.42},
       {"build": "101-witch-L100-occultist-glacial-cascade-of-the-fissure", "output": "skill.critical_strike_chance", "ours": 19.68, "pob": 20.88},
@@ -594,7 +593,7 @@
       {"build": "101-witch-L100-occultist-glacial-cascade-of-the-fissure", "output": "skill.fire_minimum", "ours": 1183.8799999999999, "pob": 2105.28},
       {"build": "101-witch-L100-occultist-glacial-cascade-of-the-fissure", "output": "skill.lightning_maximum", "ours": 1441.6, "pob": 2601},
       {"build": "101-witch-L100-occultist-glacial-cascade-of-the-fissure", "output": "skill.lightning_minimum", "ours": 960.8399999999998, "pob": 1734},
-      {"build": "102-shadow-L100-assassin-freezing-pulse", "output": "skill.average_hit", "ours": 21451.840267462496, "pob": 99598.34026104},
+      {"build": "102-shadow-L100-assassin-freezing-pulse", "output": "skill.average_hit", "ours": 22502.119627312495, "pob": 99598.34026104},
       {"build": "102-shadow-L100-assassin-freezing-pulse", "output": "skill.cold_maximum", "ours": 16501.92, "pob": 21276.54},
       {"build": "102-shadow-L100-assassin-freezing-pulse", "output": "skill.cold_minimum", "ours": 10872.63, "pob": 14017.89},
       {"build": "102-shadow-L100-assassin-freezing-pulse", "output": "skill.critical_strike_chance", "ours": 27.404999999999994, "pob": 81.432519},
@@ -929,18 +928,18 @@
       {"build": "53-templar-L100-hierophant-kinetic-blast-of-clustering", "output": "skill.off_hand_lightning_minimum", "ours": 241.2, "pob": 34064.8},
       {"build": "53-templar-L100-hierophant-kinetic-blast-of-clustering", "output": "skill.off_hand_physical_maximum", "ours": 107, "pob": 24709.579800405},
       {"build": "53-templar-L100-hierophant-kinetic-blast-of-clustering", "output": "skill.off_hand_physical_minimum", "ours": 58, "pob": 23107.165330002},
-      {"build": "54-duelist-L100-slayer-earthquake", "output": "skill.average_hit", "ours": 10260.95127388147, "pob": 38885.99003703},
+      {"build": "54-duelist-L100-slayer-earthquake", "output": "skill.average_hit", "ours": 11064.517593691162, "pob": 38885.99003703},
       {"build": "54-duelist-L100-slayer-earthquake", "output": "skill.chaos_maximum", "ours": 348.6, "pob": 578.2},
       {"build": "54-duelist-L100-slayer-earthquake", "output": "skill.chaos_minimum", "ours": 221.2, "pob": 373.8},
       {"build": "54-duelist-L100-slayer-earthquake", "output": "skill.cold_maximum", "ours": 189, "pob": 1399.45},
       {"build": "54-duelist-L100-slayer-earthquake", "output": "skill.cold_minimum", "ours": 109.5, "pob": 739.7},
-      {"build": "54-duelist-L100-slayer-earthquake", "output": "skill.critical_strike_chance", "ours": 25.996787999999995, "pob": 43.711758},
+      {"build": "54-duelist-L100-slayer-earthquake", "output": "skill.critical_strike_chance", "ours": 27.581958, "pob": 43.711758},
       {"build": "54-duelist-L100-slayer-earthquake", "output": "skill.fire_maximum", "ours": 159, "pob": 1599},
       {"build": "54-duelist-L100-slayer-earthquake", "output": "skill.fire_minimum", "ours": 59.5, "pob": 859.3},
-      {"build": "54-duelist-L100-slayer-earthquake", "output": "skill.hit_dps", "ours": 10321.429320689726, "pob": 43160.266511678},
+      {"build": "54-duelist-L100-slayer-earthquake", "output": "skill.hit_dps", "ours": 11808.37404699742, "pob": 43160.266511678},
       {"build": "54-duelist-L100-slayer-earthquake", "output": "skill.hits_per_second", "ours": 1.2266999999999997, "pob": 1.275768},
-      {"build": "54-duelist-L100-slayer-earthquake", "output": "skill.lightning_maximum", "ours": 288.5, "pob": 5177.25},
-      {"build": "54-duelist-L100-slayer-earthquake", "output": "skill.lightning_minimum", "ours": 30, "pob": 479.7},
+      {"build": "54-duelist-L100-slayer-earthquake", "output": "skill.lightning_maximum", "ours": 547.5, "pob": 5177.25},
+      {"build": "54-duelist-L100-slayer-earthquake", "output": "skill.lightning_minimum", "ours": 50, "pob": 479.7},
       {"build": "54-duelist-L100-slayer-earthquake", "output": "skill.physical_maximum", "ours": 5610.804277904287, "pob": 11943.993326712},
       {"build": "54-duelist-L100-slayer-earthquake", "output": "skill.physical_minimum", "ours": 3560.8414038756327, "pob": 7722.2748700716},
       {"build": "55-duelist-L100-champion-void-shockwave", "output": "skill.average_hit", "ours": 52985.068467843324, "pob": 76397.5619375},
@@ -1260,7 +1259,7 @@
       {"build": "70-templar-L100-hierophant-righteous-fire-of-arcane-devotion", "output": "skill.dot_dps", "ours": 75389.67281664, "pob": 1090492.3525071},
       {"build": "74-duelist-L100-gladiator-corrupting-fever", "output": "skill.dot_dps", "ours": 59336.27620211201, "pob": 773000.7923092},
       {"build": "75-witch-L100-elementalist-corrupting-fever", "output": "skill.dot_dps", "ours": 7378.810046533332, "pob": 73788.100465333},
-      {"build": "76-witch-L100-elementalist-righteous-fire", "output": "skill.dot_dps", "ours": 231139.79874467992, "pob": 2272192.328982}
+      {"build": "76-witch-L100-elementalist-righteous-fire", "output": "skill.dot_dps", "ours": 343759.58787491993, "pob": 2272192.328982}
     ]
   },
   {
@@ -1353,8 +1352,8 @@
       {"build": "49-witch-L100-occultist-fireball", "output": "skill.ignite_dps", "ours": 19670.736323645328, "pob": 23119.440233227},
       {"build": "50-scion-L100-luminary-ethereal-knives", "output": "skill.dot_dps", "ours": 1941.4255227781928, "pob": 5390.3688373887},
       {"build": "50-scion-L100-luminary-ethereal-knives", "output": "skill.ignite_dps", "ours": 1941.4255227781928, "pob": 5390.3688373887},
-      {"build": "54-duelist-L100-slayer-earthquake", "output": "skill.dot_dps", "ours": 57.93007272641165, "pob": 666.26107784814},
-      {"build": "54-duelist-L100-slayer-earthquake", "output": "skill.ignite_dps", "ours": 57.93007272641165, "pob": 666.26107784814},
+      {"build": "54-duelist-L100-slayer-earthquake", "output": "skill.dot_dps", "ours": 59.669733015535456, "pob": 666.26107784814},
+      {"build": "54-duelist-L100-slayer-earthquake", "output": "skill.ignite_dps", "ours": 59.669733015535456, "pob": 666.26107784814},
       {"build": "57-scion-L100-ascendant-kinetic-blast", "output": "skill.dot_dps", "ours": 0, "pob": 457.39121208298},
       {"build": "57-scion-L100-ascendant-kinetic-blast", "output": "skill.ignite_dps", "ours": 0, "pob": 457.39121208298},
       {"build": "64-shadow-L97-assassin-rain-of-arrows-of-saturation", "output": "skill.dot_dps", "ours": 0, "pob": 47.909940977229},
@@ -1392,7 +1391,7 @@
       {"build": "42-scion-L100-reliquarian-lightning-tendrils-of-eccentricity", "output": "player.spell_block_chance", "layer": "gear", "ours": 31, "pob": 42},
       {"build": "43-duelist-L100-gladiator-wave-of-conviction-of-trarthus", "output": "player.spell_block_chance", "layer": "gear", "ours": 38, "pob": 54},
       {"build": "44-duelist-L100-gladiator-detonate-dead-of-scavenging", "output": "player.spell_block_chance", "layer": "gear", "ours": 37, "pob": 53},
-      {"build": "45-scion-L100-reliquarian-bladefall-of-trarthus", "output": "player.mana_regeneration", "layer": "gear", "ours": 69.1, "pob": 75.1},
+      {"build": "45-scion-L100-reliquarian-bladefall-of-trarthus", "output": "player.mana_regeneration", "layer": "gear", "ours": 73.5, "pob": 75.1},
       {"build": "45-scion-L100-reliquarian-bladefall-of-trarthus", "output": "player.spell_block_chance", "layer": "gear", "ours": 47, "pob": 53},
       {"build": "48-witch-L100-elementalist-fireball", "output": "player.spell_block_chance", "layer": "gear", "ours": 26, "pob": 41},
       {"build": "49-witch-L100-occultist-fireball", "output": "player.spell_block_chance", "layer": "gear", "ours": 16, "pob": 31},
@@ -1477,28 +1476,19 @@
       {"build": "44-duelist-L100-gladiator-detonate-dead-of-scavenging", "output": "player.life_regeneration", "layer": "gear", "ours": 262.6, "pob": 370.8},
       {"build": "51-marauder-L100-juggernaut-static-strike-of-gathering-lightning", "output": "player.armour", "layer": "gear", "ours": 14529, "pob": 14794},
       {"build": "54-duelist-L100-slayer-earthquake", "output": "player.evasion_rating", "layer": "gear", "ours": 4759, "pob": 5911},
-      {"build": "54-duelist-L100-slayer-earthquake", "output": "player.life", "layer": "gear", "ours": 2840, "pob": 2913},
-      {"build": "54-duelist-L100-slayer-earthquake", "output": "player.life_regeneration", "layer": "gear", "ours": 89.6, "pob": 91.7},
-      {"build": "54-duelist-L100-slayer-earthquake", "output": "player.unreserved_life", "layer": "gear", "ours": 2840, "pob": 2913},
       {"build": "60-templar-L100-inquisitor-lancing-steel-of-spraying", "output": "player.energy_shield", "layer": "gear", "ours": 3948, "pob": 4953},
       {"build": "60-templar-L100-inquisitor-lancing-steel-of-spraying", "output": "player.energy_shield_regeneration", "layer": "gear", "ours": 205.3, "pob": 257.6},
       {"build": "62-shadow-L100-assassin-cyclone", "output": "player.strength", "layer": "gear", "ours": 59, "pob": 50},
       {"build": "66-duelist-L100-champion-flicker-strike", "output": "player.armour", "layer": "gear", "ours": 10698, "pob": 10891},
       {"build": "72-duelist-L100-gladiator-blade-blast", "output": "player.life_regeneration", "layer": "gear", "ours": 188.6, "pob": 272.4},
       {"build": "75-witch-L100-elementalist-corrupting-fever", "output": "player.energy_shield", "layer": "gear", "ours": 1862, "pob": 1874},
-      {"build": "76-witch-L100-elementalist-righteous-fire", "output": "player.life_regeneration", "layer": "gear", "ours": 1301.4, "pob": 1573.4},
+      {"build": "76-witch-L100-elementalist-righteous-fire", "output": "player.life_regeneration", "layer": "gear", "ours": 1565.3, "pob": 1573.4},
       {"build": "81-templar-L100-guardian-absolution", "output": "player.armour", "layer": "gear", "ours": 15454, "pob": 15963},
-      {"build": "84-witch-L100-necromancer-summon-raging-spirit", "output": "player.life", "layer": "gear", "ours": 1743, "pob": 1775},
-      {"build": "84-witch-L100-necromancer-summon-raging-spirit", "output": "player.life_regeneration", "layer": "gear", "ours": 20.9, "pob": 21.3},
-      {"build": "84-witch-L100-necromancer-summon-raging-spirit", "output": "player.unreserved_life", "layer": "gear", "ours": 1743, "pob": 1775},
       {"build": "88-templar-L100-guardian-dominating-blow-of-inspiring", "output": "player.energy_shield", "layer": "gear", "ours": 6217, "pob": 7723},
       {"build": "88-templar-L100-guardian-dominating-blow-of-inspiring", "output": "player.energy_shield_regeneration", "layer": "gear", "ours": 198.9, "pob": 247.1},
       {"build": "88-templar-L100-guardian-dominating-blow-of-inspiring", "output": "player.evasion_rating", "layer": "gear", "ours": 34, "pob": 28},
       {"build": "96-templar-L100-hierophant-arc", "output": "player.energy_shield", "layer": "gear", "ours": 3582, "pob": 4044},
-      {"build": "96-templar-L100-hierophant-arc", "output": "player.energy_shield_regeneration", "layer": "gear", "ours": 35.8, "pob": 40.4},
-      {"build": "81-templar-L100-guardian-absolution", "output": "player.life", "layer": "gear", "ours": 4818, "pob": 4912},
-      {"build": "81-templar-L100-guardian-absolution", "output": "player.life_regeneration", "layer": "gear", "ours": 168.6, "pob": 171.9},
-      {"build": "81-templar-L100-guardian-absolution", "output": "player.unreserved_life", "layer": "gear", "ours": 4818, "pob": 4912}
+      {"build": "96-templar-L100-hierophant-arc", "output": "player.energy_shield_regeneration", "layer": "gear", "ours": 35.8, "pob": 40.4}
     ]
   },
   {
@@ -1599,9 +1589,10 @@
       {"build": "37-witch-L100-elementalist-winter-orb", "output": "player.energy_shield", "layer": "gear", "ours": 3652, "pob": 4408},
       {"build": "42-scion-L100-reliquarian-lightning-tendrils-of-eccentricity", "output": "player.armour", "layer": "gear", "ours": 8282, "pob": 10012},
       {"build": "42-scion-L100-reliquarian-lightning-tendrils-of-eccentricity", "output": "player.energy_shield", "layer": "gear", "ours": 2814, "pob": 3206},
-      {"build": "45-scion-L100-reliquarian-bladefall-of-trarthus", "output": "player.energy_shield", "layer": "gear", "ours": 1384, "pob": 1689},
+      {"build": "45-scion-L100-reliquarian-bladefall-of-trarthus", "output": "player.energy_shield", "layer": "gear", "ours": 1487, "pob": 1689},
       {"build": "47-witch-L100-occultist-essence-drain", "output": "player.energy_shield", "layer": "gear", "ours": 2604, "pob": 2796},
-      {"build": "47-witch-L100-occultist-essence-drain", "output": "player.evasion_rating", "layer": "gear", "ours": 6946, "pob": 10174}
+      {"build": "47-witch-L100-occultist-essence-drain", "output": "player.evasion_rating", "layer": "gear", "ours": 6946, "pob": 10174},
+      {"build": "45-scion-L100-reliquarian-bladefall-of-trarthus", "output": "player.energy_shield_regeneration", "layer": "gear", "ours": 57.9, "pob": 61}
     ]
   },
   {
@@ -1684,7 +1675,6 @@
       {"build": "64-shadow-L97-assassin-rain-of-arrows-of-saturation", "output": "player.energy_shield", "layer": "gear", "ours": 2088, "pob": 2196},
       {"build": "66-duelist-L100-champion-flicker-strike", "output": "player.evasion_rating", "layer": "gear", "ours": 11877, "pob": 12092},
       {"build": "68-duelist-L100-gladiator-cyclone-of-tumult", "output": "player.armour", "layer": "gear", "ours": 7461, "pob": 8523},
-      {"build": "87-scion-L100-luminary-animate-guardian-of-smiting", "output": "player.evasion_rating", "layer": "gear", "ours": 311, "pob": 323},
       {"build": "88-templar-L100-guardian-dominating-blow-of-inspiring", "output": "player.armour", "layer": "gear", "ours": 8260, "pob": 10975},
       {"build": "89-duelist-L99-gladiator-dominating-blow-of-inspiring", "output": "player.evasion_rating", "layer": "gear", "ours": 673, "pob": 678},
       {"build": "90-witch-L100-elementalist-summon-flame-golem-of-hordes", "output": "player.energy_shield", "layer": "gear", "ours": 2159, "pob": 2430},
@@ -1723,12 +1713,15 @@
     "id": "split-personality-attributes",
     "kind": "pending",
     "league": "3.29",
-    "reason": "Split Personality grants its attributes per passive between the jewel and the class's start; the engine reads the jewel's flat stat once, so the attributes are lower, and so is what follows them: armour from life on 59, accuracy rating from Intelligence through Shaper's Touch on 60",
-    "evidence": "PoB's breakdown of Strength on 59's gear layer has the two jewels at 91 and 82, the engine's at 5 each; PoB's breakdown of Intelligence on 60's skill layer has them at 72 and 67, and its accuracy rating has Shaper's Touch (\"+2 Accuracy Rating per 2 Intelligence\") at 1170 against the engine's 1002",
+    "reason": "Split Personality grants its attributes per passive between the jewel and the class's start; the engine reads the jewel's flat stat once, so the attributes are lower, and so is what follows them: life, its regeneration and armour from life on 59, accuracy rating from Intelligence through Shaper's Touch on 60",
+    "evidence": "PoB's breakdown of Strength on 59's gear layer has the two jewels at 91 and 82, the engine's at 5 each; PoB's breakdown of Intelligence on 60's skill layer has them at 72 and 67, and its accuracy rating has Shaper's Touch (\"+2 Accuracy Rating per 2 Intelligence\") at 1170 against the engine's 1002; 59's life gap is its Strength life bonus gap (PoB 1579, the engine 1253) times its increased life, with the Helical Ring's suffix lines at their printed values in PoB's breakdown of Life",
     "cases": [
       {"build": "60-templar-L100-inquisitor-lancing-steel-of-spraying", "output": "skill.hit_chance", "ours": 90, "pob": 92},
       {"build": "59-templar-L100-hierophant-frenzy", "output": "player.armour", "layer": "gear", "ours": 7228, "pob": 8004},
-      {"build": "59-templar-L100-hierophant-frenzy", "output": "player.strength", "layer": "gear", "ours": 2507, "pob": 3158}
+      {"build": "59-templar-L100-hierophant-frenzy", "output": "player.strength", "layer": "gear", "ours": 2507, "pob": 3158},
+      {"build": "59-templar-L100-hierophant-frenzy", "output": "player.life", "layer": "gear", "ours": 5745, "pob": 6407},
+      {"build": "59-templar-L100-hierophant-frenzy", "output": "player.life_regeneration", "layer": "gear", "ours": 252.8, "pob": 281.9},
+      {"build": "59-templar-L100-hierophant-frenzy", "output": "player.unreserved_life", "layer": "gear", "ours": 5745, "pob": 6407}
     ]
   },
   {
@@ -1762,52 +1755,6 @@
     ]
   },
   {
-    "id": "gear-abyss-jewel-effect",
-    "kind": "pending",
-    "league": "3.29",
-    "reason": "Darkness Enthroned: increased effect of socketed abyss jewels is left out",
-    "evidence": "local_socketed_abyss_jewel_effect_+% shows as an unmodelled-stat warning. On 54 the abyss jewel in the belt adds accuracy rating; with the belt's increased effect applied to it by hand, the engine's chance to hit equals PoB's",
-    "cases": [
-      {"build": "45-scion-L100-reliquarian-bladefall-of-trarthus", "output": "player.energy_shield_regeneration", "layer": "gear", "ours": 39.3, "pob": 61},
-      {"build": "45-scion-L100-reliquarian-bladefall-of-trarthus", "output": "player.mana", "layer": "gear", "ours": 1415, "pob": 1506},
-      {"build": "45-scion-L100-reliquarian-bladefall-of-trarthus", "output": "player.unreserved_mana", "layer": "gear", "ours": 1415, "pob": 1506},
-      {"build": "54-duelist-L100-slayer-earthquake", "output": "skill.hit_chance", "ours": 82, "pob": 87},
-      {"build": "86-witch-L100-necromancer-animate-guardian-of-smiting", "output": "player.dexterity", "layer": "gear", "ours": 154, "pob": 163},
-      {"build": "86-witch-L100-necromancer-animate-guardian-of-smiting", "output": "player.evasion_rating", "layer": "gear", "ours": 572, "pob": 581},
-      {"build": "86-witch-L100-necromancer-animate-guardian-of-smiting", "output": "player.life", "layer": "gear", "ours": 3034, "pob": 3094},
-      {"build": "86-witch-L100-necromancer-animate-guardian-of-smiting", "output": "player.life_regeneration", "layer": "gear", "ours": 115.3, "pob": 117.6},
-      {"build": "86-witch-L100-necromancer-animate-guardian-of-smiting", "output": "player.strength", "layer": "gear", "ours": 94, "pob": 103},
-      {"build": "86-witch-L100-necromancer-animate-guardian-of-smiting", "output": "player.unreserved_life", "layer": "gear", "ours": 3034, "pob": 3094},
-      {"build": "93-witch-L99-necromancer-animate-weapon-of-ranged-arms", "output": "player.life", "layer": "gear", "ours": 5399, "pob": 5477},
-      {"build": "93-witch-L99-necromancer-animate-weapon-of-ranged-arms", "output": "player.life_regeneration", "layer": "gear", "ours": 253.1, "pob": 256.7},
-      {"build": "93-witch-L99-necromancer-animate-weapon-of-ranged-arms", "output": "player.unreserved_life", "layer": "gear", "ours": 5399, "pob": 5477}
-    ]
-  },
-  {
-    "id": "gear-adorned-jewel-socket-effect",
-    "kind": "pending",
-    "league": "3.29",
-    "reason": "The Adorned increases the effect of jewel socket passives holding corrupted magic jewels; the engine leaves it out",
-    "evidence": "removing the effect line closes the gap; the stat shows as an unmodelled-stat warning",
-    "cases": [
-      {"build": "76-witch-L100-elementalist-righteous-fire", "output": "player.life", "layer": "gear", "ours": 15846, "pob": 19060},
-      {"build": "76-witch-L100-elementalist-righteous-fire", "output": "player.unreserved_life", "layer": "gear", "ours": 15846, "pob": 19060},
-      {"build": "76-witch-L100-elementalist-righteous-fire", "output": "player.maximum_cold_resistance", "layer": "gear", "ours": 78, "pob": 79},
-      {"build": "76-witch-L100-elementalist-righteous-fire", "output": "player.maximum_fire_resistance", "layer": "gear", "ours": 80, "pob": 81},
-      {"build": "76-witch-L100-elementalist-righteous-fire", "output": "player.maximum_lightning_resistance", "layer": "gear", "ours": 78, "pob": 79},
-      {"build": "79-witch-L100-necromancer-summon-holy-relic-of-conviction", "output": "player.life", "layer": "gear", "ours": 4398, "pob": 4584},
-      {"build": "79-witch-L100-necromancer-summon-holy-relic-of-conviction", "output": "player.life_regeneration", "layer": "gear", "ours": 44, "pob": 45.8},
-      {"build": "79-witch-L100-necromancer-summon-holy-relic-of-conviction", "output": "player.unreserved_life", "layer": "gear", "ours": 4398, "pob": 4584},
-      {"build": "92-scion-L100-luminary-animate-guardian", "output": "player.dexterity", "layer": "gear", "ours": 110, "pob": 120},
-      {"build": "92-scion-L100-luminary-animate-guardian", "output": "player.intelligence", "layer": "gear", "ours": 163, "pob": 173},
-      {"build": "92-scion-L100-luminary-animate-guardian", "output": "player.maximum_cold_resistance", "layer": "gear", "ours": 86, "pob": 90},
-      {"build": "92-scion-L100-luminary-animate-guardian", "output": "player.maximum_fire_resistance", "layer": "gear", "ours": 87, "pob": 90},
-      {"build": "92-scion-L100-luminary-animate-guardian", "output": "player.maximum_lightning_resistance", "layer": "gear", "ours": 86, "pob": 90},
-      {"build": "87-scion-L100-luminary-animate-guardian-of-smiting", "output": "player.fire_resistance", "layer": "gear", "ours": 89, "pob": 90},
-      {"build": "87-scion-L100-luminary-animate-guardian-of-smiting", "output": "player.maximum_fire_resistance", "layer": "gear", "ours": 89, "pob": 90}
-    ]
-  },
-  {
     "id": "gear-cluster-jewel-attributes",
     "kind": "pending",
     "league": "3.29",
@@ -1827,18 +1774,6 @@
     ]
   },
   {
-    "id": "gear-suffix-modifier-effect",
-    "kind": "pending",
-    "league": "3.29",
-    "reason": "Helical Ring's implicit increases the magnitude of its suffix modifiers; the engine's suffix stats on it differ from PoB's",
-    "evidence": "removing a suffix line (strength, chaos resistance) closes the gap; local_suffix_mod_effect_+% shows as an unmodelled-stat warning",
-    "cases": [
-      {"build": "59-templar-L100-hierophant-frenzy", "output": "player.life", "layer": "gear", "ours": 5745, "pob": 6407},
-      {"build": "59-templar-L100-hierophant-frenzy", "output": "player.life_regeneration", "layer": "gear", "ours": 252.8, "pob": 281.9},
-      {"build": "59-templar-L100-hierophant-frenzy", "output": "player.unreserved_life", "layer": "gear", "ours": 5745, "pob": 6407}
-    ]
-  },
-  {
     "id": "gear-reserved-blood-more-life",
     "kind": "pending",
     "league": "3.29",
@@ -1847,27 +1782,12 @@
     "cases": [
       {"build": "106-shadow-L100-assassin-icicle-mine-of-fanning", "output": "player.life", "layer": "gear", "ours": 2461, "pob": 3100},
       {"build": "106-shadow-L100-assassin-icicle-mine-of-fanning", "output": "player.unreserved_life", "layer": "gear", "ours": 2461, "pob": 3100},
-      {"build": "87-scion-L100-luminary-animate-guardian-of-smiting", "output": "player.life", "layer": "gear", "ours": 10886, "pob": 17022},
-      {"build": "87-scion-L100-luminary-animate-guardian-of-smiting", "output": "player.life_regeneration", "layer": "gear", "ours": 285.2, "pob": 446},
-      {"build": "87-scion-L100-luminary-animate-guardian-of-smiting", "output": "player.unreserved_life", "layer": "gear", "ours": 10886, "pob": 17022},
-      {"build": "92-scion-L100-luminary-animate-guardian", "output": "player.life", "layer": "gear", "ours": 14644, "pob": 24398},
-      {"build": "92-scion-L100-luminary-animate-guardian", "output": "player.life_regeneration", "layer": "gear", "ours": 51.3, "pob": 85.4},
-      {"build": "92-scion-L100-luminary-animate-guardian", "output": "player.unreserved_life", "layer": "gear", "ours": 14644, "pob": 24398}
-    ]
-  },
-  {
-    "id": "gear-voices-jewel-sockets",
-    "kind": "pending",
-    "league": "3.29",
-    "reason": "Voices adds jewel socket passives that hold further cluster jewels; the engine does not add them",
-    "evidence": "removing the \"Adds 3 Jewel Socket Passive Skills\" line closes the gap; local_unique_jewel_grants_x_empty_passives shows as an unmodelled-stat warning",
-    "cases": [
-      {"build": "87-scion-L100-luminary-animate-guardian-of-smiting", "output": "player.dexterity", "layer": "gear", "ours": 135, "pob": 160},
-      {"build": "87-scion-L100-luminary-animate-guardian-of-smiting", "output": "player.intelligence", "layer": "gear", "ours": 174, "pob": 181},
-      {"build": "87-scion-L100-luminary-animate-guardian-of-smiting", "output": "player.strength", "layer": "gear", "ours": 301, "pob": 326},
-      {"build": "87-scion-L100-luminary-animate-guardian-of-smiting", "output": "player.uncapped_cold_resistance", "layer": "gear", "ours": 151, "pob": 160},
-      {"build": "87-scion-L100-luminary-animate-guardian-of-smiting", "output": "player.uncapped_fire_resistance", "layer": "gear", "ours": 159, "pob": 168},
-      {"build": "87-scion-L100-luminary-animate-guardian-of-smiting", "output": "player.uncapped_lightning_resistance", "layer": "gear", "ours": 133, "pob": 142}
+      {"build": "87-scion-L100-luminary-animate-guardian-of-smiting", "output": "player.life", "layer": "gear", "ours": 13119, "pob": 17022},
+      {"build": "87-scion-L100-luminary-animate-guardian-of-smiting", "output": "player.life_regeneration", "layer": "gear", "ours": 343.7, "pob": 446},
+      {"build": "87-scion-L100-luminary-animate-guardian-of-smiting", "output": "player.unreserved_life", "layer": "gear", "ours": 13119, "pob": 17022},
+      {"build": "92-scion-L100-luminary-animate-guardian", "output": "player.life", "layer": "gear", "ours": 17955, "pob": 24398},
+      {"build": "92-scion-L100-luminary-animate-guardian", "output": "player.life_regeneration", "layer": "gear", "ours": 62.8, "pob": 85.4},
+      {"build": "92-scion-L100-luminary-animate-guardian", "output": "player.unreserved_life", "layer": "gear", "ours": 17955, "pob": 24398}
     ]
   },
   {
