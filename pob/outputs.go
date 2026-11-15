@@ -169,6 +169,7 @@ func skillOutputs() []Output {
 		key("skill.critical_strike_chance", GroupSkill, "CritChance"),
 		key("skill.hit_dps", GroupSkill, "TotalDPS"),
 		key("skill.dot_dps", GroupSkill, "TotalDotDPS"),
+		zeroWith("skill.ignite_dps", GroupSkill, "IgniteDPS", "TotalDotDPS"),
 		key("skill.total_dps", GroupSkill, "CombinedDPS"),
 		// PoB shows whole costs, but cost efficiency leaves fractions that both compute.
 		key("skill.mana_cost", GroupCost, "ManaCost").hundredths(),
@@ -283,6 +284,18 @@ func reserved(name, pool string) Output {
 			return p - u, true
 		}
 		return 0, p == 0
+	}}
+}
+
+// zeroWith is PoB's k, or 0 when PoB gives none but gives other: PoB leaves k out where the
+// value is 0, such as an ignite DPS without an ignite.
+func zeroWith(name string, g Group, k, other string) Output {
+	return Output{Name: name, Group: g, keys: []string{k, other}, value: func(o map[string]float64) (float64, bool) {
+		if v, ok := o[k]; ok {
+			return v, true
+		}
+		_, ok := o[other]
+		return 0, ok
 	}}
 }
 

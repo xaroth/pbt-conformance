@@ -240,7 +240,8 @@
       {"build": "71-witch-L100-occultist-death-aura", "output": "skill.hits_per_second", "ours": 1.6239999999999999, "pob": 1.18},
       {"build": "71-witch-L100-occultist-death-aura", "output": "skill.hit_dps", "ours": 12.743157728, "pob": 0},
       {"build": "71-witch-L100-occultist-death-aura", "output": "skill.physical_minimum", "ours": 11.75, "pob": 0},
-      {"build": "71-witch-L100-occultist-death-aura", "output": "skill.physical_maximum", "ours": 21.75, "pob": 0}
+      {"build": "71-witch-L100-occultist-death-aura", "output": "skill.physical_maximum", "ours": 21.75, "pob": 0},
+      {"build": "71-witch-L100-occultist-death-aura", "output": "skill.dot_dps", "ours": 0, "pob": 85716.86409216}
     ]
   },
   {
@@ -1383,14 +1384,14 @@
     "id": "dot-ailments",
     "kind": "pending",
     "league": "3.29",
-    "reason": "PoB's damage over time adds the ailments the skill's hits inflict (ignite, bleed, poison) and, for some skills, more than one instance of the skill's own damage over time; the engine gives one instance of the skill's own damage over time and no ailments yet",
-    "evidence": "Each main skill hits (PoB's skill-layer TotalDPS is above 0), and PoB's TotalDotDPS sums the skill's damage over time with its ailments (CalcOffence.lua)",
+    "reason": "PoB's damage over time adds the bleed and poison the skill's hits inflict and, for some skills, more than one instance of the skill's own damage over time; the engine gives one instance of the skill's own damage over time and the ignite, and no bleed or poison yet",
+    "evidence": "Each main skill hits (PoB's skill-layer TotalDPS is above 0), PoB's TotalDotDPS sums the skill's damage over time with its ailments (CalcOffence.lua), and PoB gives no ignite for these builds (IgniteDPS absent) or less than the difference",
     "cases": [
-      {"build": "103-shadow-L100-trickster-exsanguinate", "output": "skill.dot_dps", "ours": 13562.423200000003, "pob": 75625.6673424},
-      {"build": "104-shadow-L100-assassin-exsanguinate", "output": "skill.dot_dps", "ours": 22790.24352, "pob": 113605.91088},
       {"build": "47-witch-L100-occultist-essence-drain", "output": "skill.dot_dps", "ours": 137733.12681492, "pob": 793463.22043517},
-      {"build": "73-witch-L100-elementalist-reap", "output": "skill.dot_dps", "ours": 13479.076419999998, "pob": 2230244.8874259},
-      {"build": "99-marauder-L100-chieftain-fire-trap", "output": "skill.dot_dps", "ours": 145044.21434346455, "pob": 323502.44718348}
+      {"build": "07-duelist-L35-slayer-resolute-technique", "output": "skill.dot_dps", "ours": 0, "pob": 4179.649720245},
+      {"build": "08-duelist-L60-slayer-resolute-technique", "output": "skill.dot_dps", "ours": 0, "pob": 43873.777591095},
+      {"build": "09-duelist-L80-slayer-resolute-technique", "output": "skill.dot_dps", "ours": 0, "pob": 108944.15415426},
+      {"build": "10-duelist-L90-slayer-resolute-technique", "output": "skill.dot_dps", "ours": 0, "pob": 245293.37736406}
     ]
   },
   {
@@ -1410,13 +1411,53 @@
     "id": "dot-ailments-3.28",
     "kind": "pending",
     "league": "3.28",
-    "reason": "PoB's damage over time is the poison the skill's hits inflict; the engine gives no ailments yet, and Viper Strike of the Mamba has no damage over time of its own",
-    "evidence": "Each main skill hits (PoB's skill-layer TotalDPS is above 0), and PoB's TotalDotDPS sums the skill's damage over time with its ailments (CalcOffence.lua)",
+    "reason": "PoB's damage over time is the bleed or poison the skill's hits inflict; the engine gives no bleed or poison yet",
+    "evidence": "Each main skill hits (PoB's skill-layer TotalDPS is above 0), PoB's TotalDotDPS sums the skill's damage over time with its ailments (CalcOffence.lua), and PoB gives no ignite for these builds (IgniteDPS absent)",
     "cases": [
-      {"build": "17-shadow-L35-assassin-chaos-inoculation", "output": "skill.dot_dps", "ours": 0, "pob": 1343.2735672735},
-      {"build": "18-shadow-L60-assassin-chaos-inoculation", "output": "skill.dot_dps", "ours": 0, "pob": 16508.0051136},
-      {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "skill.dot_dps", "ours": 0, "pob": 60201.580824},
-      {"build": "20-shadow-L90-assassin-chaos-inoculation", "output": "skill.dot_dps", "ours": 0, "pob": 78229.62126}
+      {"build": "07-duelist-L35-slayer-resolute-technique", "output": "skill.dot_dps", "ours": 0, "pob": 3413.6455680647},
+      {"build": "08-duelist-L60-slayer-resolute-technique", "output": "skill.dot_dps", "ours": 0, "pob": 40221.061923416},
+      {"build": "09-duelist-L80-slayer-resolute-technique", "output": "skill.dot_dps", "ours": 0, "pob": 157832.1553996},
+      {"build": "10-duelist-L90-slayer-resolute-technique", "output": "skill.dot_dps", "ours": 0, "pob": 494356.17515194}
+    ]
+  },
+  {
+    "id": "ignite-hit-differs",
+    "kind": "pending",
+    "league": "3.29",
+    "reason": "The skill's ignite starts from its hit, whose fire damage, critical strike chance or rate differs from PoB's for the causes triaged on its hit outputs (attack-hit-unmodelled-stats and others); its damage over time is the ignite, and for Reap also the skill's own damage over time, which differs too",
+    "evidence": "Each build's skill-layer hit outputs differ from PoB's and are triaged; PoB's TotalDotDPS equals its IgniteDPS, Reap's apart. Built Path of Building files whose hit agrees give PoB's ignite to within 0.1%",
+    "cases": [
+      {"build": "38-ranger-L100-deadeye-ethereal-knives", "output": "skill.dot_dps", "ours": 19.785922018348625, "pob": 79.15558450499},
+      {"build": "38-ranger-L100-deadeye-ethereal-knives", "output": "skill.ignite_dps", "ours": 19.785922018348625, "pob": 79.15558450499},
+      {"build": "48-witch-L100-elementalist-fireball", "output": "skill.dot_dps", "ours": 28778.782434237728, "pob": 57165.494551739},
+      {"build": "48-witch-L100-elementalist-fireball", "output": "skill.ignite_dps", "ours": 28778.782434237728, "pob": 57165.494551739},
+      {"build": "49-witch-L100-occultist-fireball", "output": "skill.dot_dps", "ours": 12412.14344225723, "pob": 23119.440233227},
+      {"build": "49-witch-L100-occultist-fireball", "output": "skill.ignite_dps", "ours": 12412.14344225723, "pob": 23119.440233227},
+      {"build": "50-scion-L100-luminary-ethereal-knives", "output": "skill.dot_dps", "ours": 1023.5465085884989, "pob": 5390.3688373887},
+      {"build": "50-scion-L100-luminary-ethereal-knives", "output": "skill.ignite_dps", "ours": 1023.5465085884989, "pob": 5390.3688373887},
+      {"build": "54-duelist-L100-slayer-earthquake", "output": "skill.dot_dps", "ours": 43.34165114272596, "pob": 666.26107784814},
+      {"build": "54-duelist-L100-slayer-earthquake", "output": "skill.ignite_dps", "ours": 43.34165114272596, "pob": 666.26107784814},
+      {"build": "57-scion-L100-ascendant-kinetic-blast", "output": "skill.dot_dps", "ours": 0, "pob": 457.39121208298},
+      {"build": "57-scion-L100-ascendant-kinetic-blast", "output": "skill.ignite_dps", "ours": 0, "pob": 457.39121208298},
+      {"build": "64-shadow-L97-assassin-rain-of-arrows-of-saturation", "output": "skill.dot_dps", "ours": 0, "pob": 47.909940977229},
+      {"build": "64-shadow-L97-assassin-rain-of-arrows-of-saturation", "output": "skill.ignite_dps", "ours": 0, "pob": 47.909940977229},
+      {"build": "65-witch-L100-elementalist-ethereal-knives", "output": "skill.dot_dps", "ours": 50667.71518284133, "pob": 112291.8572109},
+      {"build": "65-witch-L100-elementalist-ethereal-knives", "output": "skill.ignite_dps", "ours": 50667.71518284133, "pob": 112291.8572109},
+      {"build": "73-witch-L100-elementalist-reap", "output": "skill.dot_dps", "ours": 148464.01016079998, "pob": 2230244.8874259},
+      {"build": "73-witch-L100-elementalist-reap", "output": "skill.ignite_dps", "ours": 134984.93374079998, "pob": 2132977.5776683}
+    ]
+  },
+  {
+    "id": "ignite-hit-differs-3.28",
+    "kind": "pending",
+    "league": "3.28",
+    "reason": "The skill's ignite starts from its hit, whose fire damage or critical strike chance differs from PoB's for the causes triaged on its hit outputs (attack-hit-unmodelled-stats-3.28); PoB gives 33 no ignite, as its critical strike chance there is 0 and it has no chance to ignite",
+    "evidence": "Each build's skill-layer hit outputs differ from PoB's and are triaged; PoB's TotalDotDPS equals its IgniteDPS",
+    "cases": [
+      {"build": "32-scion-L35-ascendant-chaos-inoculation", "output": "skill.dot_dps", "ours": 7.280780094000001, "pob": 6.471804528},
+      {"build": "32-scion-L35-ascendant-chaos-inoculation", "output": "skill.ignite_dps", "ours": 7.280780094000001, "pob": 6.471804528},
+      {"build": "33-scion-L60-ascendant-chaos-inoculation", "output": "skill.dot_dps", "ours": 60.06665615625, "pob": 0},
+      {"build": "33-scion-L60-ascendant-chaos-inoculation", "output": "skill.ignite_dps", "ours": 60.06665615625, "pob": 0}
     ]
   },
   {
