@@ -1,14 +1,5 @@
 [
   {
-    "id": "unchecked-body-armour-life-mastery",
-    "kind": "pending",
-    "build": "*",
-    "output": "warning:unchecked-condition",
-    "subject": "maximum_life_+%_if_no_life_tags_on_body_armour from *",
-    "reason": "The Life Mastery \"15% increased maximum Life if there are no Life Modifiers on Equipped Body Armour\" (maximum_life_+%_if_no_life_tags_on_body_armour) applies without checking its condition against the equipped body armour; it warns that it is unchecked",
-    "evidence": "pbt-engine #74 applies the mastery; an empty body armour slot meets the condition, verified in game, and the tree-only builds hold no body armour"
-  },
-  {
     "id": "jewel-connected-nodes",
     "kind": "pending",
     "league": "3.29",
@@ -1300,12 +1291,12 @@
     "reason": "The skill's damage over time differs for another reason, not traced per build yet; the build's simulation leaves out damage, damage over time or pool stats of its gear, tree or skill as unmodelled-stat",
     "evidence": "Each build's skill-layer simulation warns unmodelled-stat for stats that change its damage over time or the life, energy shield or mana it is a share of, such as elemental_damage_+%_per_lightning_cold_fire_resistance_above_75, physical_damage_+%_if_skill_costs_life, local_display_socketed_gems_damage_over_time_+%_final and supported_active_skill_gem_level_+",
     "cases": [
-      {"build": "04-marauder-L80-chieftain-righteous-fire", "output": "skill.dot_dps", "ours": 31934.771192268, "pob": 39830.228489142},
-      {"build": "05-marauder-L90-chieftain-righteous-fire", "output": "skill.dot_dps", "ours": 45061.390011022006, "pob": 70005.858315918},
+      {"build": "04-marauder-L80-chieftain-righteous-fire", "output": "skill.dot_dps", "ours": 30321.685879001998, "pob": 39830.228489142},
+      {"build": "05-marauder-L90-chieftain-righteous-fire", "output": "skill.dot_dps", "ours": 42858.164606334, "pob": 70005.858315918},
       {"build": "70-templar-L100-hierophant-righteous-fire-of-arcane-devotion", "output": "skill.dot_dps", "ours": 75389.67281664, "pob": 1090492.3525071},
       {"build": "74-duelist-L100-gladiator-corrupting-fever", "output": "skill.dot_dps", "ours": 55718.210580032, "pob": 773000.7923092},
       {"build": "75-witch-L100-elementalist-corrupting-fever", "output": "skill.dot_dps", "ours": 6868.7540525333325, "pob": 73788.100465333},
-      {"build": "76-witch-L100-elementalist-righteous-fire", "output": "skill.dot_dps", "ours": 214182.18113039996, "pob": 2272192.328982}
+      {"build": "76-witch-L100-elementalist-righteous-fire", "output": "skill.dot_dps", "ours": 205404.57614880003, "pob": 2272192.328982}
     ]
   },
   {
@@ -1357,10 +1348,10 @@
     "id": "dot-unmodelled-stats-3.28",
     "kind": "pending",
     "league": "3.28",
-    "reason": "The skill's damage over time differs for another reason, not traced per build yet: the gear build's life differs from PoB's (gear-body-armour-life-mastery-3.28), the engine gives gems the quality of a socket of their own colour, which PoB's 3.28 release does not, and 04 and 05 leave out stats as unmodelled-stat",
+    "reason": "The skill's damage over time differs for another reason, not traced per build yet: the engine gives gems the quality of a socket of their own colour, which PoB's 3.28 release does not, and 04 and 05 leave out stats as unmodelled-stat",
     "evidence": "02: with PoB's skill-layer Life and EnergyShield the engine's value is PoB's times 1.51 / 1.46, the 5% increased Elemental Damage of Elemental Focus at 10 quality; pob.json's 3.28 skill-layer supports have no quality, the 3.29 ones 10",
     "cases": [
-      {"build": "02-marauder-L35-chieftain-righteous-fire", "output": "skill.dot_dps", "ours": 2400.146072099999, "pob": 2146.0088349},
+      {"build": "02-marauder-L35-chieftain-righteous-fire", "output": "skill.dot_dps", "ours": 2219.502288149999, "pob": 2146.0088349},
       {"build": "03-marauder-L60-chieftain-righteous-fire", "output": "skill.dot_dps", "ours": 21195.842467799997, "pob": 19486.5003333},
       {"build": "04-marauder-L80-chieftain-righteous-fire", "output": "skill.dot_dps", "ours": 38588.57355629641, "pob": 50523.183934532},
       {"build": "05-marauder-L90-chieftain-righteous-fire", "output": "skill.dot_dps", "ours": 71772.38150469634, "pob": 111394.90688743}
@@ -1614,7 +1605,7 @@
       {"build": "62-shadow-L100-assassin-cyclone", "output": "player.strength", "layer": "gear", "ours": 59, "pob": 50},
       {"build": "62-shadow-L100-assassin-cyclone", "output": "player.unreserved_mana", "layer": "gear", "ours": 452, "pob": 412},
       {"build": "66-duelist-L100-champion-flicker-strike", "output": "player.armour", "layer": "gear", "ours": 10698, "pob": 10891},
-      {"build": "72-duelist-L100-gladiator-blade-blast", "output": "player.life_regeneration", "layer": "gear", "ours": 200, "pob": 272.4},
+      {"build": "72-duelist-L100-gladiator-blade-blast", "output": "player.life_regeneration", "layer": "gear", "ours": 188.6, "pob": 272.4},
       {"build": "74-duelist-L100-gladiator-corrupting-fever", "output": "player.life", "layer": "gear", "ours": 4150, "pob": 4114},
       {"build": "74-duelist-L100-gladiator-corrupting-fever", "output": "player.life_regeneration", "layer": "gear", "ours": 251.2, "pob": 249.8},
       {"build": "74-duelist-L100-gladiator-corrupting-fever", "output": "player.mana", "layer": "gear", "ours": 729, "pob": 710},
@@ -1622,7 +1613,7 @@
       {"build": "74-duelist-L100-gladiator-corrupting-fever", "output": "player.unreserved_life", "layer": "gear", "ours": 4150, "pob": 4114},
       {"build": "74-duelist-L100-gladiator-corrupting-fever", "output": "player.unreserved_mana", "layer": "gear", "ours": 729, "pob": 710},
       {"build": "75-witch-L100-elementalist-corrupting-fever", "output": "player.energy_shield", "layer": "gear", "ours": 2019, "pob": 1874},
-      {"build": "76-witch-L100-elementalist-righteous-fire", "output": "player.life_regeneration", "layer": "gear", "ours": 1203.8, "pob": 1573.4},
+      {"build": "76-witch-L100-elementalist-righteous-fire", "output": "player.life_regeneration", "layer": "gear", "ours": 1153.6, "pob": 1573.4},
       {"build": "81-templar-L100-guardian-absolution", "output": "player.armour", "layer": "gear", "ours": 15454, "pob": 15963},
       {"build": "84-witch-L100-necromancer-summon-raging-spirit", "output": "player.life", "layer": "gear", "ours": 1819, "pob": 1775},
       {"build": "84-witch-L100-necromancer-summon-raging-spirit", "output": "player.unreserved_life", "layer": "gear", "ours": 1819, "pob": 1775},
@@ -2016,54 +2007,6 @@
     ]
   },
   {
-    "id": "gear-body-armour-life-mastery",
-    "kind": "pending",
-    "league": "3.29",
-    "reason": "The life mastery \"increased maximum Life if no Life Modifiers on Equipped Body Armour\" is applied without checking the body armour; PoB drops it when the body armour has life",
-    "evidence": "the build gives an unchecked-condition warning for maximum_life_+%_if_no_life_tags_on_body_armour; PoB's life rises when the body armour is removed",
-    "cases": [
-      {"build": "04-marauder-L80-chieftain-righteous-fire", "output": "player.life", "layer": "gear", "ours": 10148, "pob": 9625},
-      {"build": "04-marauder-L80-chieftain-righteous-fire", "output": "player.life_regeneration", "layer": "gear", "ours": 242.5, "pob": 231.6},
-      {"build": "04-marauder-L80-chieftain-righteous-fire", "output": "player.unreserved_life", "layer": "gear", "ours": 10148, "pob": 9625},
-      {"build": "05-marauder-L90-chieftain-righteous-fire", "output": "player.life", "layer": "gear", "ours": 11338, "pob": 10770},
-      {"build": "05-marauder-L90-chieftain-righteous-fire", "output": "player.life_regeneration", "layer": "gear", "ours": 317.4, "pob": 303.1},
-      {"build": "05-marauder-L90-chieftain-righteous-fire", "output": "player.unreserved_life", "layer": "gear", "ours": 11338, "pob": 10770},
-      {"build": "25-witch-L90-elementalist-elemental-overload", "output": "player.life", "layer": "gear", "ours": 3560, "pob": 3298},
-      {"build": "25-witch-L90-elementalist-elemental-overload", "output": "player.unreserved_life", "layer": "gear", "ours": 3560, "pob": 3298},
-      {"build": "40-witch-L100-elementalist-ethereal-knives-of-the-massacre", "output": "player.life", "layer": "gear", "ours": 2165, "pob": 2689},
-      {"build": "40-witch-L100-elementalist-ethereal-knives-of-the-massacre", "output": "player.life_regeneration", "layer": "gear", "ours": 3.2, "pob": 4},
-      {"build": "40-witch-L100-elementalist-ethereal-knives-of-the-massacre", "output": "player.unreserved_life", "layer": "gear", "ours": 2165, "pob": 2689},
-      {"build": "50-scion-L100-luminary-ethereal-knives", "output": "player.life", "layer": "gear", "ours": 2809, "pob": 3227},
-      {"build": "50-scion-L100-luminary-ethereal-knives", "output": "player.unreserved_life", "layer": "gear", "ours": 2809, "pob": 3227},
-      {"build": "72-duelist-L100-gladiator-blade-blast", "output": "player.life", "layer": "gear", "ours": 5555, "pob": 5239},
-      {"build": "72-duelist-L100-gladiator-blade-blast", "output": "player.unreserved_life", "layer": "gear", "ours": 5555, "pob": 5239}
-    ]
-  },
-  {
-    "id": "gear-max-res-if-all-equipment-armour",
-    "kind": "pending",
-    "league": "3.29",
-    "reason": "The armour mastery \"+1% to all maximum Elemental Resistances if all Equipment grants Armour\" is left out",
-    "evidence": "additional_maximum_all_elemental_resistances_%_if_all_equipment_grants_armour shows as an unmodelled-stat warning from node 64",
-    "cases": [
-      {"build": "09-duelist-L80-slayer-resolute-technique", "output": "player.cold_resistance", "layer": "gear", "ours": 75, "pob": 76},
-      {"build": "09-duelist-L80-slayer-resolute-technique", "output": "player.fire_resistance", "layer": "gear", "ours": 76, "pob": 77},
-      {"build": "09-duelist-L80-slayer-resolute-technique", "output": "player.lightning_resistance", "layer": "gear", "ours": 75, "pob": 76},
-      {"build": "09-duelist-L80-slayer-resolute-technique", "output": "player.maximum_cold_resistance", "layer": "gear", "ours": 75, "pob": 76},
-      {"build": "09-duelist-L80-slayer-resolute-technique", "output": "player.maximum_fire_resistance", "layer": "gear", "ours": 76, "pob": 77},
-      {"build": "09-duelist-L80-slayer-resolute-technique", "output": "player.maximum_lightning_resistance", "layer": "gear", "ours": 75, "pob": 76},
-      {"build": "10-duelist-L90-slayer-resolute-technique", "output": "player.cold_resistance", "layer": "gear", "ours": 75, "pob": 76},
-      {"build": "10-duelist-L90-slayer-resolute-technique", "output": "player.fire_resistance", "layer": "gear", "ours": 76, "pob": 77},
-      {"build": "10-duelist-L90-slayer-resolute-technique", "output": "player.lightning_resistance", "layer": "gear", "ours": 75, "pob": 76},
-      {"build": "10-duelist-L90-slayer-resolute-technique", "output": "player.maximum_cold_resistance", "layer": "gear", "ours": 75, "pob": 76},
-      {"build": "10-duelist-L90-slayer-resolute-technique", "output": "player.maximum_fire_resistance", "layer": "gear", "ours": 76, "pob": 77},
-      {"build": "10-duelist-L90-slayer-resolute-technique", "output": "player.maximum_lightning_resistance", "layer": "gear", "ours": 75, "pob": 76},
-      {"build": "76-witch-L100-elementalist-righteous-fire", "output": "player.maximum_cold_resistance", "layer": "gear", "ours": 77, "pob": 79},
-      {"build": "76-witch-L100-elementalist-righteous-fire", "output": "player.maximum_fire_resistance", "layer": "gear", "ours": 79, "pob": 81},
-      {"build": "76-witch-L100-elementalist-righteous-fire", "output": "player.maximum_lightning_resistance", "layer": "gear", "ours": 77, "pob": 79}
-    ]
-  },
-  {
     "id": "gear-untraced",
     "kind": "pending",
     "league": "3.29",
@@ -2112,8 +2055,11 @@
     "reason": "The Adorned increases the effect of jewel socket passives holding corrupted magic jewels; the engine leaves it out",
     "evidence": "removing the effect line closes the gap; the stat shows as an unmodelled-stat warning",
     "cases": [
-      {"build": "76-witch-L100-elementalist-righteous-fire", "output": "player.life", "layer": "gear", "ours": 14658, "pob": 19060},
-      {"build": "76-witch-L100-elementalist-righteous-fire", "output": "player.unreserved_life", "layer": "gear", "ours": 14658, "pob": 19060},
+      {"build": "76-witch-L100-elementalist-righteous-fire", "output": "player.life", "layer": "gear", "ours": 14047, "pob": 19060},
+      {"build": "76-witch-L100-elementalist-righteous-fire", "output": "player.unreserved_life", "layer": "gear", "ours": 14047, "pob": 19060},
+      {"build": "76-witch-L100-elementalist-righteous-fire", "output": "player.maximum_cold_resistance", "layer": "gear", "ours": 78, "pob": 79},
+      {"build": "76-witch-L100-elementalist-righteous-fire", "output": "player.maximum_fire_resistance", "layer": "gear", "ours": 80, "pob": 81},
+      {"build": "76-witch-L100-elementalist-righteous-fire", "output": "player.maximum_lightning_resistance", "layer": "gear", "ours": 78, "pob": 79},
       {"build": "79-witch-L100-necromancer-summon-holy-relic-of-conviction", "output": "player.life", "layer": "gear", "ours": 4398, "pob": 4584},
       {"build": "79-witch-L100-necromancer-summon-holy-relic-of-conviction", "output": "player.life_regeneration", "layer": "gear", "ours": 44, "pob": 45.8},
       {"build": "79-witch-L100-necromancer-summon-holy-relic-of-conviction", "output": "player.unreserved_life", "layer": "gear", "ours": 4398, "pob": 4584},
@@ -2171,12 +2117,12 @@
     "cases": [
       {"build": "106-shadow-L100-assassin-icicle-mine-of-fanning", "output": "player.life", "layer": "gear", "ours": 2461, "pob": 3100},
       {"build": "106-shadow-L100-assassin-icicle-mine-of-fanning", "output": "player.unreserved_life", "layer": "gear", "ours": 2461, "pob": 3100},
-      {"build": "87-scion-L100-luminary-animate-guardian-of-smiting", "output": "player.life", "layer": "gear", "ours": 11379, "pob": 17022},
-      {"build": "87-scion-L100-luminary-animate-guardian-of-smiting", "output": "player.life_regeneration", "layer": "gear", "ours": 298.1, "pob": 446},
-      {"build": "87-scion-L100-luminary-animate-guardian-of-smiting", "output": "player.unreserved_life", "layer": "gear", "ours": 11379, "pob": 17022},
-      {"build": "92-scion-L100-luminary-animate-guardian", "output": "player.life", "layer": "gear", "ours": 14218, "pob": 24398},
-      {"build": "92-scion-L100-luminary-animate-guardian", "output": "player.life_regeneration", "layer": "gear", "ours": 49.8, "pob": 85.4},
-      {"build": "92-scion-L100-luminary-animate-guardian", "output": "player.unreserved_life", "layer": "gear", "ours": 14218, "pob": 24398}
+      {"build": "87-scion-L100-luminary-animate-guardian-of-smiting", "output": "player.life", "layer": "gear", "ours": 10886, "pob": 17022},
+      {"build": "87-scion-L100-luminary-animate-guardian-of-smiting", "output": "player.life_regeneration", "layer": "gear", "ours": 285.2, "pob": 446},
+      {"build": "87-scion-L100-luminary-animate-guardian-of-smiting", "output": "player.unreserved_life", "layer": "gear", "ours": 10886, "pob": 17022},
+      {"build": "92-scion-L100-luminary-animate-guardian", "output": "player.life", "layer": "gear", "ours": 13626, "pob": 24398},
+      {"build": "92-scion-L100-luminary-animate-guardian", "output": "player.life_regeneration", "layer": "gear", "ours": 47.7, "pob": 85.4},
+      {"build": "92-scion-L100-luminary-animate-guardian", "output": "player.unreserved_life", "layer": "gear", "ours": 13626, "pob": 24398}
     ]
   },
   {
@@ -2282,7 +2228,12 @@
     "evidence": "removing the shrine lines moves the gap; the stats show as unmodelled-stat warnings",
     "cases": [
       {"build": "38-ranger-L100-deadeye-ethereal-knives", "output": "player.life", "layer": "gear", "ours": 1857, "pob": 2368},
-      {"build": "38-ranger-L100-deadeye-ethereal-knives", "output": "player.unreserved_life", "layer": "gear", "ours": 1857, "pob": 2368}
+      {"build": "38-ranger-L100-deadeye-ethereal-knives", "output": "player.unreserved_life", "layer": "gear", "ours": 1857, "pob": 2368},
+      {"build": "40-witch-L100-elementalist-ethereal-knives-of-the-massacre", "output": "player.life", "layer": "gear", "ours": 2165, "pob": 2689},
+      {"build": "40-witch-L100-elementalist-ethereal-knives-of-the-massacre", "output": "player.life_regeneration", "layer": "gear", "ours": 3.2, "pob": 4},
+      {"build": "40-witch-L100-elementalist-ethereal-knives-of-the-massacre", "output": "player.unreserved_life", "layer": "gear", "ours": 2165, "pob": 2689},
+      {"build": "50-scion-L100-luminary-ethereal-knives", "output": "player.life", "layer": "gear", "ours": 2809, "pob": 3227},
+      {"build": "50-scion-L100-luminary-ethereal-knives", "output": "player.unreserved_life", "layer": "gear", "ours": 2809, "pob": 3227}
     ]
   },
   {
@@ -2343,18 +2294,6 @@
     "evidence": "removing the line moves the gap; quiver_mod_effect_+% shows as an unmodelled-stat warning",
     "cases": [
       {"build": "64-shadow-L97-assassin-rain-of-arrows-of-saturation", "output": "player.armour", "layer": "gear", "ours": 751, "pob": 3190}
-    ]
-  },
-  {
-    "id": "gear-body-armour-life-mastery-3.28",
-    "kind": "pending",
-    "league": "3.28",
-    "reason": "The life mastery \"increased maximum Life if no Life Modifiers on Equipped Body Armour\" is applied without checking the body armour; PoB drops it when the body armour has life",
-    "evidence": "the build gives an unchecked-condition warning for maximum_life_+%_if_no_life_tags_on_body_armour; PoB's life rises when the body armour is removed",
-    "cases": [
-      {"build": "02-marauder-L35-chieftain-righteous-fire", "output": "player.life", "layer": "gear", "ours": 2063, "pob": 1906},
-      {"build": "02-marauder-L35-chieftain-righteous-fire", "output": "player.life_regeneration", "layer": "gear", "ours": 47.4, "pob": 43.8},
-      {"build": "02-marauder-L35-chieftain-righteous-fire", "output": "player.unreserved_life", "layer": "gear", "ours": 2063, "pob": 1906}
     ]
   },
   {
