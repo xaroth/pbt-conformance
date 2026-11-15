@@ -2,11 +2,7 @@ github.com/google/flatbuffers v25.12.19+incompatible h1:haMV2JRRJCe1998HeW/p0X9U
 github.com/google/flatbuffers v25.12.19+incompatible/go.mod h1:1AeVuKshWv4vARoZatz6mlQ0JxURH0Kv5+zNeJKJCa8=
 github.com/google/go-cmp v0.7.0 h1:wk8382ETsv4JYUZwIsn6YpYiWiBsYLSJiTsyBybVuN8=
 github.com/google/go-cmp v0.7.0/go.mod h1:pXiqmnSA92OHEEa9HXL2W4E7lf9JzCmGVUdgjX3N/iU=
-github.com/xaroth/pbt-engine v0.0.0-20261115072720-04bd208c0b56 h1:H7Xtyq/HjVNEOEHW5fkwirRRD5dsQj+MSLK5jRzkEoE=
-github.com/xaroth/pbt-engine v0.0.0-20261115072720-04bd208c0b56/go.mod h1:kCpvhBR+vGqsXUoMGDMl/oDsrzpZ+c8cWJ870ZHApmA=
-github.com/xaroth/pbt-engine v0.0.0-20261115074057-440ef8cc6b2f h1:d18D3Oy1jcZ2p4rVK2sMzjLmqw4+UvObf6yqodq641c=
-github.com/xaroth/pbt-engine v0.0.0-20261115074057-440ef8cc6b2f/go.mod h1:kCpvhBR+vGqsXUoMGDMl/oDsrzpZ+c8cWJ870ZHApmA=
-github.com/xaroth/pbt-engine v0.0.0-20261115075002-0403db8a8bd5 h1:sdNEt7Ct6ajPFVdbUm6CUnS8JURDHvWKeCAiHTORUgo=
-github.com/xaroth/pbt-engine v0.0.0-20261115075002-0403db8a8bd5/go.mod h1:kCpvhBR+vGqsXUoMGDMl/oDsrzpZ+c8cWJ870ZHApmA=
+github.com/xaroth/pbt-engine v0.0.0-20261115082327-53fc12d97a60 h1:jNbvacy8Yl827ynuuYIg0jLPWMGEF27wle5MBrPM/4U=
+github.com/xaroth/pbt-engine v0.0.0-20261115082327-53fc12d97a60/go.mod h1:kCpvhBR+vGqsXUoMGDMl/oDsrzpZ+c8cWJ870ZHApmA=
 google.golang.org/protobuf v1.36.12 h1:pJOKDDOyeXErUroCihFAd5LQuwXBSpVnKGrj5o/fwxc=
 google.golang.org/protobuf v1.36.12/go.mod h1:HTf+CrKn2C3g5S8VImy6tdcUvCska2kB7j23XfzDpco=
