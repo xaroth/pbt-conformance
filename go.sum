@@ -6,5 +6,7 @@ github.com/xaroth/pbt-engine v0.0.0-20261115150113-75cec818bc73 h1:31Q9cMYNIg+66
 github.com/xaroth/pbt-engine v0.0.0-20261115150113-75cec818bc73/go.mod h1:kCpvhBR+vGqsXUoMGDMl/oDsrzpZ+c8cWJ870ZHApmA=
 github.com/xaroth/pbt-engine v0.0.0-20261115172353-67f0ef7b8d71 h1:FIFMIogefCxXNZZ+VaXlqjXHqhpxHtOD3yPay/2PUGg=
 github.com/xaroth/pbt-engine v0.0.0-20261115172353-67f0ef7b8d71/go.mod h1:kCpvhBR+vGqsXUoMGDMl/oDsrzpZ+c8cWJ870ZHApmA=
+github.com/xaroth/pbt-engine v0.0.0-20261115173052-aef1039c747d h1:BPYSrBO4ZTT8NMShhb2+5TRhPIU2mWmCOBZRJX8j9SY=
+github.com/xaroth/pbt-engine v0.0.0-20261115173052-aef1039c747d/go.mod h1:kCpvhBR+vGqsXUoMGDMl/oDsrzpZ+c8cWJ870ZHApmA=
 google.golang.org/protobuf v1.36.12 h1:pJOKDDOyeXErUroCihFAd5LQuwXBSpVnKGrj5o/fwxc=
 google.golang.org/protobuf v1.36.12/go.mod h1:HTf+CrKn2C3g5S8VImy6tdcUvCska2kB7j23XfzDpco=
