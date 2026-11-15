@@ -355,15 +355,6 @@
     ]
   },
   {
-    "id": "warcry-autoexertion-reservation",
-    "kind": "pending",
-    "league": "3.29",
-    "reason": "General's Cry with Autoexertion in the main group: the skill layer's reserved mana differs from PoB's; the cause is not found yet, and the skill layer's mana pool is not compared",
-    "cases": [
-      {"build": "63-scion-L97-luminary-lacerate-of-butchering", "output": "player.reserved_mana", "ours": 112, "pob": 115}
-    ]
-  },
-  {
     "id": "spell-hit-enemy-resistance-3.28",
     "kind": "pending",
     "league": "3.28",
@@ -778,7 +769,7 @@
     "reason": "Split Personality grants its accuracy rating per passive between the jewel and the class's start, and Summon Ice Golem in the main skill's group grants accuracy rating as a buff; the engine counts neither, so the attack's chance to hit is lower",
     "evidence": "PoB's breakdown of the main skill's accuracy rating has both Split Personality jewels at many times the engine's value and an accuracy rating from Summon Ice Golem; the engine reads the jewels' flat stat once and does not give buffs from other skills yet",
     "cases": [
-      {"build": "59-templar-L100-hierophant-frenzy", "output": "skill.hit_chance", "ours": 70, "pob": 96}
+      {"build": "59-templar-L100-hierophant-frenzy", "output": "skill.hit_chance", "ours": 67, "pob": 96}
     ]
   },
   {
@@ -971,11 +962,11 @@
       {"build": "58-witch-L100-occultist-cyclone", "output": "skill.critical_strike_chance", "ours": 19.028, "pob": 64.61},
       {"build": "58-witch-L100-occultist-cyclone", "output": "skill.physical_maximum", "ours": 53, "pob": 138.6654525},
       {"build": "58-witch-L100-occultist-cyclone", "output": "skill.physical_minimum", "ours": 28, "pob": 73.990395},
-      {"build": "59-templar-L100-hierophant-frenzy", "output": "skill.average_hit", "ours": 56.634515625000006, "pob": 94822.1317888},
+      {"build": "59-templar-L100-hierophant-frenzy", "output": "skill.average_hit", "ours": 56.4091078125, "pob": 94822.1317888},
       {"build": "59-templar-L100-hierophant-frenzy", "output": "skill.chaos_maximum", "ours": 0, "pob": 97326.32},
       {"build": "59-templar-L100-hierophant-frenzy", "output": "skill.chaos_minimum", "ours": 0, "pob": 1216.8},
-      {"build": "59-templar-L100-hierophant-frenzy", "output": "skill.critical_strike_chance", "ours": 20.475, "pob": 46.224},
-      {"build": "59-templar-L100-hierophant-frenzy", "output": "skill.hit_dps", "ours": 105.61204473750001, "pob": 245869.99484309},
+      {"build": "59-templar-L100-hierophant-frenzy", "output": "skill.critical_strike_chance", "ours": 19.5975, "pob": 46.224},
+      {"build": "59-templar-L100-hierophant-frenzy", "output": "skill.hit_dps", "ours": 100.683488352375, "pob": 245869.99484309},
       {"build": "59-templar-L100-hierophant-frenzy", "output": "skill.hits_per_second", "ours": 2.664, "pob": 2.701},
       {"build": "59-templar-L100-hierophant-frenzy", "output": "skill.physical_maximum", "ours": 73.75, "pob": 0},
       {"build": "59-templar-L100-hierophant-frenzy", "output": "skill.physical_minimum", "ours": 29, "pob": 0},
@@ -998,11 +989,11 @@
       {"build": "62-shadow-L100-assassin-cyclone", "output": "skill.critical_strike_chance", "ours": 40.2288, "pob": 80.4576},
       {"build": "62-shadow-L100-assassin-cyclone", "output": "skill.physical_maximum", "ours": 98.5, "pob": 72.5},
       {"build": "62-shadow-L100-assassin-cyclone", "output": "skill.physical_minimum", "ours": 23.75, "pob": 18},
-      {"build": "63-scion-L97-luminary-lacerate-of-butchering", "output": "skill.average_hit", "ours": 49796.12932381042, "pob": 36295.377234801},
-      {"build": "63-scion-L97-luminary-lacerate-of-butchering", "output": "skill.hit_dps", "ours": 16787.271117642973, "pob": 74042.569558994},
+      {"build": "63-scion-L97-luminary-lacerate-of-butchering", "output": "skill.average_hit", "ours": 48569.293338510775, "pob": 36295.377234801},
+      {"build": "63-scion-L97-luminary-lacerate-of-butchering", "output": "skill.hit_dps", "ours": 16373.680170278754, "pob": 74042.569558994},
       {"build": "63-scion-L97-luminary-lacerate-of-butchering", "output": "skill.hits_per_second", "ours": 0.33712000000000003, "pob": 1},
-      {"build": "63-scion-L97-luminary-lacerate-of-butchering", "output": "skill.physical_maximum", "ours": 64531.13498126142, "pob": 47035.682031177},
-      {"build": "63-scion-L97-luminary-lacerate-of-butchering", "output": "skill.physical_minimum", "ours": 35061.12366635942, "pob": 25555.072438425},
+      {"build": "63-scion-L97-luminary-lacerate-of-butchering", "output": "skill.physical_maximum", "ours": 62941.00079627786, "pob": 47035.682031177},
+      {"build": "63-scion-L97-luminary-lacerate-of-butchering", "output": "skill.physical_minimum", "ours": 34197.585880743696, "pob": 25555.072438425},
       {"build": "64-shadow-L97-assassin-rain-of-arrows-of-saturation", "output": "skill.average_hit", "ours": 24.72086907, "pob": 152.45249671},
       {"build": "64-shadow-L97-assassin-rain-of-arrows-of-saturation", "output": "skill.chaos_maximum", "ours": 23.1, "pob": 21.56},
       {"build": "64-shadow-L97-assassin-rain-of-arrows-of-saturation", "output": "skill.critical_strike_chance", "ours": 22.596, "pob": 46.806},
@@ -1563,8 +1554,6 @@
     "reason": "Timeless jewel builds: gaps beside the conquest, from mechanics not traced yet, that the jewel's own gap hid or offset before the engine conquered the passives",
     "evidence": "Path of Building conquers the same allocated passives on these builds as the engine, with the same stats. Setting Supreme Ostentation's attribute flags in a local run leaves these cases as they are, and so does modelling the conquered keystones of timeless-keystone-effects",
     "cases": [
-      {"build": "101-witch-L100-occultist-glacial-cascade-of-the-fissure", "output": "player.life", "layer": "gear", "ours": 1865, "pob": 1905},
-      {"build": "101-witch-L100-occultist-glacial-cascade-of-the-fissure", "output": "player.unreserved_life", "layer": "gear", "ours": 1865, "pob": 1905},
       {"build": "39-templar-L100-inquisitor-penance-brand", "output": "player.life_regeneration", "layer": "gear", "ours": 91, "pob": 89.5},
       {"build": "41-ranger-L100-deadeye-ethereal-knives-of-the-massacre", "output": "player.evasion_rating", "layer": "gear", "ours": 5461, "pob": 4369},
       {"build": "43-duelist-L100-gladiator-wave-of-conviction-of-trarthus", "output": "player.life_regeneration", "layer": "gear", "ours": 827.5, "pob": 963.7},
@@ -1844,8 +1833,8 @@
     "evidence": "PoB's breakdown of Strength on 59's gear layer has the two jewels at 91 and 82, the engine's at 5 each; PoB's breakdown of Intelligence on 60's skill layer has them at 72 and 67, and its accuracy rating has Shaper's Touch (\"+2 Accuracy Rating per 2 Intelligence\") at 1170 against the engine's 1002",
     "cases": [
       {"build": "60-templar-L100-inquisitor-lancing-steel-of-spraying", "output": "skill.hit_chance", "ours": 90, "pob": 92},
-      {"build": "59-templar-L100-hierophant-frenzy", "output": "player.armour", "layer": "gear", "ours": 7107, "pob": 8004},
-      {"build": "59-templar-L100-hierophant-frenzy", "output": "player.strength", "layer": "gear", "ours": 2405, "pob": 3158}
+      {"build": "59-templar-L100-hierophant-frenzy", "output": "player.armour", "layer": "gear", "ours": 7228, "pob": 8004},
+      {"build": "59-templar-L100-hierophant-frenzy", "output": "player.strength", "layer": "gear", "ours": 2507, "pob": 3158}
     ]
   },
   {
@@ -1862,31 +1851,6 @@
     ]
   },
   {
-    "id": "gear-jewel-attribute-conversion",
-    "kind": "pending",
-    "league": "3.29",
-    "reason": "Jewels that convert attributes on passives in their radius (Efficient Training, Inertia, Brute Force Solution) are left out",
-    "evidence": "local_jewel_nearby_passives_* show as unmodelled-stat warnings",
-    "cases": [
-      {"build": "101-witch-L100-occultist-glacial-cascade-of-the-fissure", "output": "player.energy_shield", "layer": "gear", "ours": 1537, "pob": 1484},
-      {"build": "101-witch-L100-occultist-glacial-cascade-of-the-fissure", "output": "player.intelligence", "layer": "gear", "ours": 361, "pob": 301},
-      {"build": "101-witch-L100-occultist-glacial-cascade-of-the-fissure", "output": "player.mana", "layer": "gear", "ours": 1497, "pob": 1448},
-      {"build": "101-witch-L100-occultist-glacial-cascade-of-the-fissure", "output": "player.mana_regeneration", "layer": "gear", "ours": 38.2, "pob": 37},
-      {"build": "101-witch-L100-occultist-glacial-cascade-of-the-fissure", "output": "player.strength", "layer": "gear", "ours": 124, "pob": 184},
-      {"build": "101-witch-L100-occultist-glacial-cascade-of-the-fissure", "output": "player.unreserved_mana", "layer": "gear", "ours": 1497, "pob": 1448},
-      {"build": "59-templar-L100-hierophant-frenzy", "output": "player.dexterity", "layer": "gear", "ours": 245, "pob": 179},
-      {"build": "59-templar-L100-hierophant-frenzy", "output": "player.evasion_rating", "layer": "gear", "ours": 912, "pob": 862},
-      {"build": "63-scion-L97-luminary-lacerate-of-butchering", "output": "player.intelligence", "layer": "gear", "ours": 106, "pob": 156},
-      {"build": "63-scion-L97-luminary-lacerate-of-butchering", "output": "player.life", "layer": "gear", "ours": 3962, "pob": 3907},
-      {"build": "63-scion-L97-luminary-lacerate-of-butchering", "output": "player.life_regeneration", "layer": "gear", "ours": 103, "pob": 101.6},
-      {"build": "63-scion-L97-luminary-lacerate-of-butchering", "output": "player.mana", "layer": "gear", "ours": 734, "pob": 759},
-      {"build": "63-scion-L97-luminary-lacerate-of-butchering", "output": "player.mana_regeneration", "layer": "gear", "ours": 17.9, "pob": 18.4},
-      {"build": "63-scion-L97-luminary-lacerate-of-butchering", "output": "player.strength", "layer": "gear", "ours": 288, "pob": 238},
-      {"build": "63-scion-L97-luminary-lacerate-of-butchering", "output": "player.unreserved_life", "layer": "gear", "ours": 3962, "pob": 3907},
-      {"build": "63-scion-L97-luminary-lacerate-of-butchering", "output": "player.unreserved_mana", "layer": "gear", "ours": 734, "pob": 759}
-    ]
-  },
-  {
     "id": "gear-untraced",
     "kind": "pending",
     "league": "3.29",
@@ -1896,7 +1860,6 @@
       {"build": "41-ranger-L100-deadeye-ethereal-knives-of-the-massacre", "output": "player.life_regeneration", "layer": "gear", "ours": 3.5, "pob": 3.3},
       {"build": "48-witch-L100-elementalist-fireball", "output": "player.energy_shield_regeneration", "layer": "gear", "ours": 269.7, "pob": 485.1},
       {"build": "60-templar-L100-inquisitor-lancing-steel-of-spraying", "output": "player.evasion_rating", "layer": "gear", "ours": 1010, "pob": 1111},
-      {"build": "63-scion-L97-luminary-lacerate-of-butchering", "output": "player.energy_shield", "layer": "gear", "ours": 50, "pob": 52},
       {"build": "68-duelist-L100-gladiator-cyclone-of-tumult", "output": "player.chaos_resistance", "layer": "gear", "ours": 20, "pob": 24},
       {"build": "68-duelist-L100-gladiator-cyclone-of-tumult", "output": "player.movement_speed", "layer": "gear", "ours": 138, "pob": 132},
       {"build": "68-duelist-L100-gladiator-cyclone-of-tumult", "output": "player.uncapped_chaos_resistance", "layer": "gear", "ours": 20, "pob": 24},
@@ -1976,9 +1939,9 @@
     "reason": "Helical Ring's implicit increases the magnitude of its suffix modifiers; the engine's suffix stats on it differ from PoB's",
     "evidence": "removing a suffix line (strength, chaos resistance) closes the gap; local_suffix_mod_effect_+% shows as an unmodelled-stat warning",
     "cases": [
-      {"build": "59-templar-L100-hierophant-frenzy", "output": "player.life", "layer": "gear", "ours": 5641, "pob": 6407},
-      {"build": "59-templar-L100-hierophant-frenzy", "output": "player.life_regeneration", "layer": "gear", "ours": 248.2, "pob": 281.9},
-      {"build": "59-templar-L100-hierophant-frenzy", "output": "player.unreserved_life", "layer": "gear", "ours": 5641, "pob": 6407}
+      {"build": "59-templar-L100-hierophant-frenzy", "output": "player.life", "layer": "gear", "ours": 5745, "pob": 6407},
+      {"build": "59-templar-L100-hierophant-frenzy", "output": "player.life_regeneration", "layer": "gear", "ours": 252.8, "pob": 281.9},
+      {"build": "59-templar-L100-hierophant-frenzy", "output": "player.unreserved_life", "layer": "gear", "ours": 5745, "pob": 6407}
     ]
   },
   {
