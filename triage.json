@@ -1173,8 +1173,8 @@
     "id": "attack-hit-modifiers-3.28",
     "kind": "pending",
     "league": "3.28",
-    "reason": "Modifiers the engine leaves out of an attack's hit: Slayer's more damage at close range, Ruthless's blow averaged into the hit, Cruelty's buff, damage while leeching and Kinetic Blast's spell damage modifiers applied to its attack damage. Against the pinnacle enemy's armour a smaller hit loses more, so these differences grow",
-    "evidence": "PoB's breakdown of the main skill has modifiers the engine reports as not modelled: at close range and Cruelty and damage while leeching on 10, Ruthless on 07. Slayer's more damage against unique enemies now applies; what remains on 08 and 09 is not traced yet",
+    "reason": "The attack's hit differs from PoB's: the engine leaves out Slayer's more damage at close range, Ruthless's blow averaged into the hit and Cruelty's buff, and applies damage while leeching only when the config says the character is leeching. Against the pinnacle enemy's armour a smaller hit loses more, so these differences grow. On 08 the hit is over PoB's, for a cause not traced yet",
+    "evidence": "PoB's breakdown of the main skill has modifiers the engine reports as not modelled: at close range and Cruelty on 10, Ruthless on 07; on 10 PoB also counts damage while leeching, which the skill layer, without config, leaves off. Slayer's more damage against unique enemies now applies; what remains on 08 and 09 is not traced yet",
     "cases": [
       {"build": "07-duelist-L35-slayer-resolute-technique", "output": "skill.average_hit", "ours": 859.875, "pob": 1144.1564621784},
       {"build": "07-duelist-L35-slayer-resolute-technique", "output": "skill.physical_maximum", "ours": 1350.75, "pob": 1797.3186117605},
