@@ -1372,7 +1372,7 @@
     "id": "dot-unmodelled-stats-3.28",
     "kind": "pending",
     "league": "3.28",
-    "reason": "The skill's damage over time differs for another reason, not traced per build yet: the gear build's life and energy shield differ from PoB's (gear-item-defence-line-3.28, gear-body-armour-life-mastery-3.28), the engine gives gems the quality of a socket of their own colour, which PoB's 3.28 release does not, and 04 and 05 leave out stats as unmodelled-stat",
+    "reason": "The skill's damage over time differs for another reason, not traced per build yet: the gear build's life differs from PoB's (gear-body-armour-life-mastery-3.28), the engine gives gems the quality of a socket of their own colour, which PoB's 3.28 release does not, and 04 and 05 leave out stats as unmodelled-stat",
     "evidence": "02: with PoB's skill-layer Life and EnergyShield the engine's value is PoB's times 1.51 / 1.46, the 5% increased Elemental Damage of Elemental Focus at 10 quality; pob.json's 3.28 skill-layer supports have no quality, the 3.29 ones 10",
     "cases": [
       {"build": "02-marauder-L35-chieftain-righteous-fire", "output": "skill.dot_dps", "ours": 2400.146072099999, "pob": 2146.0088349},
@@ -1774,22 +1774,103 @@
     ]
   },
   {
-    "id": "gear-item-defence-line",
+    "id": "gear-defences-from-equipped-item",
     "kind": "pending",
     "league": "3.29",
-    "reason": "The engine takes an item's Armour, Evasion or Energy Shield line as its defence; PoB computes the defence from the base, its roll, quality and the item's local modifiers, so the two differ where the line does not match them",
-    "evidence": "removing the defence line, the quality or a local defence modifier from the item alone closes or moves the gap; where the defence feeds another output (armour from evasion), that output follows",
+    "reason": "Increases to the defences of one equipped item are left out: energy shield from the helmet (energy_shield_from_helmet_+%), defences from the shield or the body armour (body_armour_evasion_rating_+% and the like); energy shield regeneration follows energy shield",
+    "evidence": "Every armour item's own armour, evasion and energy shield is PoB's, item by item; PoB's breakdown gives the named slot a larger increase than the other slots, and the engine's value is short by about that slot's extra share. The stats are status unknown in the semantics table. 42 and 47 also gain energy shield from a conversion",
     "cases": [
-      {"build": "103-shadow-L100-trickster-exsanguinate", "output": "player.energy_shield", "layer": "gear", "ours": 1336, "pob": 2019},
+      {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "player.energy_shield", "layer": "gear", "ours": 2836, "pob": 3098},
+      {"build": "20-shadow-L90-assassin-chaos-inoculation", "output": "player.energy_shield", "layer": "gear", "ours": 4588, "pob": 4987},
+      {"build": "22-witch-L35-elementalist-elemental-overload", "output": "player.energy_shield", "layer": "gear", "ours": 104, "pob": 112},
+      {"build": "23-witch-L60-elementalist-elemental-overload", "output": "player.energy_shield", "layer": "gear", "ours": 692, "pob": 741},
+      {"build": "24-witch-L80-elementalist-elemental-overload", "output": "player.armour", "layer": "gear", "ours": 3009, "pob": 4174},
+      {"build": "24-witch-L80-elementalist-elemental-overload", "output": "player.energy_shield", "layer": "gear", "ours": 808, "pob": 1149},
+      {"build": "25-witch-L90-elementalist-elemental-overload", "output": "player.armour", "layer": "gear", "ours": 5268, "pob": 6604},
+      {"build": "25-witch-L90-elementalist-elemental-overload", "output": "player.energy_shield", "layer": "gear", "ours": 1255, "pob": 1789},
+      {"build": "29-templar-L80-hierophant-ancestral-bond", "output": "player.energy_shield", "layer": "gear", "ours": 1046, "pob": 1087},
+      {"build": "30-templar-L90-hierophant-ancestral-bond", "output": "player.energy_shield", "layer": "gear", "ours": 1046, "pob": 1087},
       {"build": "34-scion-L80-ascendant-chaos-inoculation", "output": "player.energy_shield", "layer": "gear", "ours": 4197, "pob": 4531},
-      {"build": "35-scion-L90-ascendant-chaos-inoculation", "output": "player.armour", "layer": "gear", "ours": 9699, "pob": 12599},
       {"build": "35-scion-L90-ascendant-chaos-inoculation", "output": "player.energy_shield", "layer": "gear", "ours": 5095, "pob": 5582},
       {"build": "37-witch-L100-elementalist-winter-orb", "output": "player.energy_shield", "layer": "gear", "ours": 3652, "pob": 4408},
       {"build": "42-scion-L100-reliquarian-lightning-tendrils-of-eccentricity", "output": "player.armour", "layer": "gear", "ours": 8282, "pob": 10012},
       {"build": "42-scion-L100-reliquarian-lightning-tendrils-of-eccentricity", "output": "player.energy_shield", "layer": "gear", "ours": 2793, "pob": 3206},
       {"build": "45-scion-L100-reliquarian-bladefall-of-trarthus", "output": "player.energy_shield", "layer": "gear", "ours": 1158, "pob": 1689},
       {"build": "47-witch-L100-occultist-essence-drain", "output": "player.energy_shield", "layer": "gear", "ours": 2604, "pob": 2796},
-      {"build": "47-witch-L100-occultist-essence-drain", "output": "player.evasion_rating", "layer": "gear", "ours": 6946, "pob": 10174},
+      {"build": "47-witch-L100-occultist-essence-drain", "output": "player.evasion_rating", "layer": "gear", "ours": 6946, "pob": 10174}
+    ]
+  },
+  {
+    "id": "gear-defences-from-equipped-item-3.28",
+    "kind": "pending",
+    "league": "3.28",
+    "reason": "Increases to the defences of one equipped item are left out: energy shield from the helmet (energy_shield_from_helmet_+%), defences from the shield or the body armour (body_armour_evasion_rating_+% and the like); energy shield regeneration follows energy shield",
+    "evidence": "Every armour item's own armour, evasion and energy shield is PoB's, item by item; PoB's breakdown gives the named slot a larger increase than the other slots, and the engine's value is short by about that slot's extra share. The stats are status unknown in the semantics table",
+    "cases": [
+      {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "player.energy_shield", "layer": "gear", "ours": 2771, "pob": 3033},
+      {"build": "20-shadow-L90-assassin-chaos-inoculation", "output": "player.energy_shield", "layer": "gear", "ours": 4588, "pob": 4987},
+      {"build": "22-witch-L35-elementalist-elemental-overload", "output": "player.energy_shield", "layer": "gear", "ours": 126, "pob": 133},
+      {"build": "23-witch-L60-elementalist-elemental-overload", "output": "player.energy_shield", "layer": "gear", "ours": 774, "pob": 851},
+      {"build": "24-witch-L80-elementalist-elemental-overload", "output": "player.energy_shield", "layer": "gear", "ours": 732, "pob": 805},
+      {"build": "25-witch-L90-elementalist-elemental-overload", "output": "player.energy_shield", "layer": "gear", "ours": 1341, "pob": 1428},
+      {"build": "34-scion-L80-ascendant-chaos-inoculation", "output": "player.energy_shield", "layer": "gear", "ours": 2784, "pob": 3118},
+      {"build": "34-scion-L80-ascendant-chaos-inoculation", "output": "player.energy_shield_regeneration", "layer": "gear", "ours": 27.8, "pob": 31.2},
+      {"build": "35-scion-L90-ascendant-chaos-inoculation", "output": "player.energy_shield", "layer": "gear", "ours": 4121, "pob": 4551},
+      {"build": "35-scion-L90-ascendant-chaos-inoculation", "output": "player.energy_shield_regeneration", "layer": "gear", "ours": 41.2, "pob": 45.5}
+    ]
+  },
+  {
+    "id": "gear-defence-conversion",
+    "kind": "pending",
+    "league": "3.29",
+    "reason": "Armour gained by conversion from another pool is left out",
+    "evidence": "Every armour item's own armour is PoB's; PoB's armour breakdown has a Conversion line beside the slots",
+    "cases": [
+      {"build": "35-scion-L90-ascendant-chaos-inoculation", "output": "player.armour", "layer": "gear", "ours": 9699, "pob": 12599}
+    ]
+  },
+  {
+    "id": "gear-defence-conversion-3.28",
+    "kind": "pending",
+    "league": "3.28",
+    "reason": "Armour gained by conversion from another pool is left out",
+    "evidence": "Every armour item's own armour is PoB's; PoB's armour breakdown has a Conversion line beside the slots",
+    "cases": [
+      {"build": "35-scion-L90-ascendant-chaos-inoculation", "output": "player.armour", "layer": "gear", "ours": 7948, "pob": 12445}
+    ]
+  },
+  {
+    "id": "gear-two-toned-boots-base",
+    "kind": "deviation",
+    "league": "3.29",
+    "reason": "PoB takes a Two-Toned Boots variant by the name the file gives it, or Armour/Energy Shield for the bare name, and by the defences the text prints; the engine takes the variant whose implicit the item has, as the game does",
+    "evidence": "15's boots are named \"Two-Toned Boots\" with the cold and lightning resistance implicit, which is the Evasion/Energy Shield variant's; 19's are named \"(Evasion/Energy Shield)\" with the fire and lightning implicit, which is the Armour/Energy Shield variant's (PoB's own base data pairs them the same way). Neither prints its defences",
+    "cases": [
+      {"build": "15-ranger-L90-deadeye-ghost-dance", "output": "player.armour", "layer": "gear", "ours": 0, "pob": 174},
+      {"build": "15-ranger-L90-deadeye-ghost-dance", "output": "player.evasion_rating", "layer": "gear", "ours": 4565, "pob": 4163},
+      {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "player.armour", "layer": "gear", "ours": 174, "pob": 0},
+      {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "player.evasion_rating", "layer": "gear", "ours": 4594, "pob": 5271}
+    ]
+  },
+  {
+    "id": "gear-two-toned-boots-base-3.28",
+    "kind": "deviation",
+    "league": "3.28",
+    "reason": "PoB takes a Two-Toned Boots variant by the name the file gives it, or Armour/Energy Shield for the bare name, and by the defences the text prints; the engine takes the variant whose implicit the item has, as the game does",
+    "evidence": "19's boots are named \"(Evasion/Energy Shield)\" with the fire and lightning implicit, which is the Armour/Energy Shield variant's (PoB's own base data pairs them the same way); they do not print their defences",
+    "cases": [
+      {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "player.armour", "layer": "gear", "ours": 174, "pob": 0},
+      {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "player.evasion_rating", "layer": "gear", "ours": 4435, "pob": 5089}
+    ]
+  },
+  {
+    "id": "gear-defence-global-increase",
+    "kind": "pending",
+    "league": "3.29",
+    "reason": "The global increase to the defence differs from PoB's; not traced per build yet. Each build has passives or items whose stats the engine leaves out (timeless jewels, Unnatural Instinct, passives without a connection, allocated notables and the like)",
+    "evidence": "Every armour item's own armour, evasion and energy shield is PoB's, item by item, and PoB's breakdown gives every slot the same increase, so the gap is in the global increase",
+    "cases": [
+      {"build": "103-shadow-L100-trickster-exsanguinate", "output": "player.energy_shield", "layer": "gear", "ours": 1336, "pob": 2019},
       {"build": "48-witch-L100-elementalist-fireball", "output": "player.energy_shield", "layer": "gear", "ours": 4887, "pob": 7556},
       {"build": "49-witch-L100-occultist-fireball", "output": "player.energy_shield", "layer": "gear", "ours": 3611, "pob": 5321},
       {"build": "52-duelist-L100-slayer-flicker-strike", "output": "player.armour", "layer": "gear", "ours": 3080, "pob": 4961},
@@ -1999,30 +2080,6 @@
       {"build": "89-duelist-L99-gladiator-dominating-blow-of-inspiring", "output": "player.unreserved_life", "layer": "gear", "ours": 2900, "pob": 3056},
       {"build": "92-scion-L100-luminary-animate-guardian", "output": "player.chaos_resistance", "layer": "gear", "ours": 17, "pob": 78},
       {"build": "92-scion-L100-luminary-animate-guardian", "output": "player.uncapped_chaos_resistance", "layer": "gear", "ours": 17, "pob": 96}
-    ]
-  },
-  {
-    "id": "gear-item-defence-assumed",
-    "kind": "pending",
-    "league": "3.29",
-    "reason": "An item's text gives no value for a defence and the engine takes the base's highest roll",
-    "evidence": "the item gives an item-defence-assumed warning",
-    "cases": [
-      {"build": "15-ranger-L90-deadeye-ghost-dance", "output": "player.armour", "layer": "gear", "ours": 0, "pob": 174},
-      {"build": "15-ranger-L90-deadeye-ghost-dance", "output": "player.evasion_rating", "layer": "gear", "ours": 4565, "pob": 4163},
-      {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "player.armour", "layer": "gear", "ours": 174, "pob": 0},
-      {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "player.energy_shield", "layer": "gear", "ours": 2836, "pob": 3098},
-      {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "player.evasion_rating", "layer": "gear", "ours": 4594, "pob": 5271},
-      {"build": "20-shadow-L90-assassin-chaos-inoculation", "output": "player.energy_shield", "layer": "gear", "ours": 4588, "pob": 4987},
-      {"build": "22-witch-L35-elementalist-elemental-overload", "output": "player.energy_shield", "layer": "gear", "ours": 104, "pob": 112},
-      {"build": "23-witch-L60-elementalist-elemental-overload", "output": "player.energy_shield", "layer": "gear", "ours": 692, "pob": 741},
-      {"build": "24-witch-L80-elementalist-elemental-overload", "output": "player.armour", "layer": "gear", "ours": 3009, "pob": 4174},
-      {"build": "24-witch-L80-elementalist-elemental-overload", "output": "player.energy_shield", "layer": "gear", "ours": 808, "pob": 1149},
-      {"build": "25-witch-L90-elementalist-elemental-overload", "output": "player.armour", "layer": "gear", "ours": 5268, "pob": 6604},
-      {"build": "25-witch-L90-elementalist-elemental-overload", "output": "player.energy_shield", "layer": "gear", "ours": 1255, "pob": 1789},
-      {"build": "25-witch-L90-elementalist-elemental-overload", "output": "player.movement_speed", "layer": "gear", "ours": 121, "pob": 133},
-      {"build": "29-templar-L80-hierophant-ancestral-bond", "output": "player.energy_shield", "layer": "gear", "ours": 1046, "pob": 1087},
-      {"build": "30-templar-L90-hierophant-ancestral-bond", "output": "player.energy_shield", "layer": "gear", "ours": 1046, "pob": 1087}
     ]
   },
   {
@@ -2318,7 +2375,8 @@
       {"build": "106-shadow-L100-assassin-icicle-mine-of-fanning", "output": "player.movement_speed", "layer": "gear", "ours": 105, "pob": 114.99999999999999},
       {"build": "54-duelist-L100-slayer-earthquake", "output": "player.movement_speed", "layer": "gear", "ours": 127, "pob": 138},
       {"build": "64-shadow-L97-assassin-rain-of-arrows-of-saturation", "output": "player.movement_speed", "layer": "gear", "ours": 137, "pob": 147},
-      {"build": "67-duelist-L100-slayer-void-shockwave", "output": "player.movement_speed", "layer": "gear", "ours": 130, "pob": 140}
+      {"build": "67-duelist-L100-slayer-void-shockwave", "output": "player.movement_speed", "layer": "gear", "ours": 130, "pob": 140},
+      {"build": "25-witch-L90-elementalist-elemental-overload", "output": "player.movement_speed", "layer": "gear", "ours": 121, "pob": 133}
     ]
   },
   {
@@ -2402,37 +2460,6 @@
     "evidence": "removing the line moves the gap; quiver_mod_effect_+% shows as an unmodelled-stat warning",
     "cases": [
       {"build": "64-shadow-L97-assassin-rain-of-arrows-of-saturation", "output": "player.armour", "layer": "gear", "ours": 751, "pob": 3190}
-    ]
-  },
-  {
-    "id": "gear-item-defence-line-3.28",
-    "kind": "pending",
-    "league": "3.28",
-    "reason": "The engine takes an item's Armour, Evasion or Energy Shield line as its defence; PoB computes the defence from the base, its roll, quality and the item's local modifiers, so the two differ where the line does not match them",
-    "evidence": "removing the defence line, the quality or a local defence modifier from the item alone closes or moves the gap; where the defence feeds another output (armour from evasion), that output follows",
-    "cases": [
-      {"build": "34-scion-L80-ascendant-chaos-inoculation", "output": "player.energy_shield", "layer": "gear", "ours": 2784, "pob": 3118},
-      {"build": "34-scion-L80-ascendant-chaos-inoculation", "output": "player.energy_shield_regeneration", "layer": "gear", "ours": 27.8, "pob": 31.2}
-    ]
-  },
-  {
-    "id": "gear-item-defence-assumed-3.28",
-    "kind": "pending",
-    "league": "3.28",
-    "reason": "An item's text gives no value for a defence and the engine takes the base's highest roll",
-    "evidence": "the item gives an item-defence-assumed warning",
-    "cases": [
-      {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "player.armour", "layer": "gear", "ours": 174, "pob": 0},
-      {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "player.energy_shield", "layer": "gear", "ours": 2771, "pob": 3033},
-      {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "player.evasion_rating", "layer": "gear", "ours": 4435, "pob": 5089},
-      {"build": "20-shadow-L90-assassin-chaos-inoculation", "output": "player.energy_shield", "layer": "gear", "ours": 4588, "pob": 4987},
-      {"build": "22-witch-L35-elementalist-elemental-overload", "output": "player.energy_shield", "layer": "gear", "ours": 126, "pob": 133},
-      {"build": "23-witch-L60-elementalist-elemental-overload", "output": "player.energy_shield", "layer": "gear", "ours": 774, "pob": 851},
-      {"build": "24-witch-L80-elementalist-elemental-overload", "output": "player.energy_shield", "layer": "gear", "ours": 732, "pob": 805},
-      {"build": "25-witch-L90-elementalist-elemental-overload", "output": "player.energy_shield", "layer": "gear", "ours": 1341, "pob": 1428},
-      {"build": "35-scion-L90-ascendant-chaos-inoculation", "output": "player.armour", "layer": "gear", "ours": 7948, "pob": 12445},
-      {"build": "35-scion-L90-ascendant-chaos-inoculation", "output": "player.energy_shield", "layer": "gear", "ours": 4121, "pob": 4551},
-      {"build": "35-scion-L90-ascendant-chaos-inoculation", "output": "player.energy_shield_regeneration", "layer": "gear", "ours": 41.2, "pob": 45.5}
     ]
   },
   {
