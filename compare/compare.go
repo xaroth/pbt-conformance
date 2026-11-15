@@ -19,6 +19,7 @@ import (
 	"github.com/xaroth/pbt-engine/build"
 	"github.com/xaroth/pbt-engine/dataset"
 	pobimport "github.com/xaroth/pbt-engine/pob"
+	"github.com/xaroth/pbt-engine/poe1"
 	"github.com/xaroth/pbt-engine/simulator"
 )
 
@@ -311,6 +312,7 @@ func simulateValues(sim *simulator.Sim, outputs []simulator.Output, b *build.Bui
 // simulateTicked simulates b with each condition the engine derives from a build
 // (simulator.ConfigKey.Derived) set off where b's config leaves it unset: PoB counts a
 // condition only when its box is ticked, so the comparison reads them as the file ticks them.
+// Exposure is the exception (untickedApplies).
 func simulateTicked(sim *simulator.Sim, b *build.Build) (*simulator.Stats, error) {
 	keys, err := sim.ConfigKeys()
 	if err != nil {
@@ -318,7 +320,7 @@ func simulateTicked(sim *simulator.Sim, b *build.Build) (*simulator.Stats, error
 	}
 	var opts []simulator.Option
 	for _, k := range keys {
-		if _, set := b.Config[k.Name]; k.Derived && !set {
+		if _, set := b.Config[k.Name]; k.Derived && !set && !untickedApplies(k.Name) {
 			opts = append(opts, simulator.SetRaw(k.Name, json.RawMessage("false")))
 		}
 	}
@@ -327,6 +329,14 @@ func simulateTicked(sim *simulator.Sim, b *build.Build) (*simulator.Stats, error
 		return nil, fmt.Errorf("compare: %w", err)
 	}
 	return st, nil
+}
+
+// untickedApplies reports whether PoB applies the derived condition of config key name without
+// its tick: Exposure that a hit inflicts on every hit, with its own magnitude, does. The engine
+// derives the same from the build where the file leaves the tick off, and Exposure inflicted
+// only by chance in neither.
+func untickedApplies(name string) bool {
+	return slices.Contains([]string{poe1.EnemyFireExposure.Name(), poe1.EnemyColdExposure.Name(), poe1.EnemyLightningExposure.Name()}, name)
 }
 
 // engineValues returns the value of each of outputs st gives. The engine gives some outputs only
