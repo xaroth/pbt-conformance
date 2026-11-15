@@ -171,7 +171,7 @@ func TestRun(t *testing.T) {
 	// reservation, a skill's costs and a spell's hit; nothing else.
 	skillGroups := []compare.GroupResult{
 		{Group: pob.GroupSheet, Status: compare.StatusNotCompared}, {Group: pob.GroupReservation, Status: compare.StatusPass},
-		{Group: pob.GroupSkill, Status: compare.StatusIncomplete, Missing: []string{"skill.hits_per_second", "skill.hit_dps", "skill.dot_dps", "skill.total_dps"}},
+		{Group: pob.GroupSkill, Status: compare.StatusIncomplete, Missing: []string{"skill.hits_per_second", "skill.hit_dps", "skill.dot_dps", "skill.ignite_dps", "skill.total_dps"}},
 		{Group: pob.GroupCost, Status: compare.StatusPass},
 		{Group: pob.GroupHitTypes, Status: compare.StatusPass}, {Group: pob.GroupDefence, Status: compare.StatusNotCompared},
 		{Group: pob.GroupDelivery, Status: compare.StatusNotCompared},
