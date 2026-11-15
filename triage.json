@@ -1913,8 +1913,8 @@
     "id": "gear-item-allocates-passive",
     "kind": "pending",
     "league": "3.29",
-    "reason": "Items that allocate a passive (\"Allocates <notable>\", anoints and enchants) are not read",
-    "evidence": "the line shows as an item-line-unread warning",
+    "reason": "Items that allocate a passive (\"Allocates <notable>\", anoints and enchants) are left out",
+    "evidence": "the line reads as a stat holding the passive's node id (local_weapon_passive_tree_granted_passive_hash), which shows as an unmodelled-stat warning",
     "cases": [
       {"build": "41-ranger-L100-deadeye-ethereal-knives-of-the-massacre", "output": "player.mana", "layer": "gear", "ours": 906, "pob": 985},
       {"build": "41-ranger-L100-deadeye-ethereal-knives-of-the-massacre", "output": "player.mana_regeneration", "layer": "gear", "ours": 15.9, "pob": 17.2},
