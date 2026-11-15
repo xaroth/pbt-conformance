@@ -1015,7 +1015,7 @@
     "id": "attack-hit-unmodelled-stats-3.28",
     "kind": "pending",
     "league": "3.28",
-    "reason": "The attack's hit differs for another reason than its conversion, not traced per build yet; the build's skill-layer simulation leaves out damage or speed stats of its gear, tree or skill as unmodelled-stat, and causes in the other 3.28 attack-hit entries may add to it",
+    "reason": "The attack's hit differs for another reason than its conversion, not traced per build yet; the build's skill-layer simulation leaves out damage or speed stats of its gear, tree or skill as unmodelled-stat, and causes in the other 3.28 attack-hit entries may add to it; on 33 the Precise Technique keystone (keystone_precise_technique, left out as unmodelled-stat) is why PoB gives no critical strike chance",
     "evidence": "Each build's skill-layer simulation warns unmodelled-stat for damage or speed stats: Mirage Archer's more damage and attack speed on the Deadeye builds, Ancestral Call's less damage on the Ascendant builds and Multistrike's more damage on 33",
     "cases": [
       {"build": "12-ranger-L35-deadeye-ghost-dance", "output": "skill.lightning_maximum", "ours": 463, "pob": 493.5},
