@@ -1667,10 +1667,10 @@
     ]
   },
   {
-    "id": "supreme-prodigy-attribute-bonuses",
+    "id": "supreme-ostentation-attribute-bonuses",
     "kind": "pending",
     "league": "3.29",
-    "reason": "Supreme Prodigy, the keystone a Caspiro Elegant Hubris makes of the keystones in its radius (keystone_supreme_prodigy: Gain no inherent bonuses from Attributes), is not modelled: the engine keeps the inherent bonuses of Strength, Dexterity and Intelligence to life, mana, evasion rating, energy shield and accuracy rating",
+    "reason": "Supreme Ostentation, the keystone a Caspiro Elegant Hubris makes of the keystones in its radius (keystone_supreme_prodigy: Gain no inherent bonuses from Attributes), is not modelled: the engine keeps the inherent bonuses of Strength, Dexterity and Intelligence to life, mana, evasion rating, energy shield and accuracy rating",
     "evidence": "The engine conquers the same keystone as PoB on every build. With keystone_supreme_prodigy setting no_strength_bonus_to_maximum_life, no_intelligence_bonus_to_maximum_mana, no_dexterity_bonus_to_evasion_rating and no_intelligence_bonus_to_maximum_energy_shield in a local run, every gear case here matches. For the accuracy cases, PoB's breakdown of the main skill's accuracy rating has no Dexterity bonus and its modifier list holds the keystone; without Dexterity's bonus the engine's accuracy rating equals PoB's on 55; on 54 the cluster jewel passives and an abyss jewel in the belt add to the difference",
     "cases": [
       {"build": "38-ranger-L100-deadeye-ethereal-knives", "output": "player.energy_shield", "layer": "gear", "ours": 236, "pob": 219},
@@ -1750,7 +1750,7 @@
     "kind": "pending",
     "league": "3.29",
     "reason": "Elegant Hubris builds: gaps beside the conquest, from mechanics not traced yet, that the jewel's own gap hid or offset before the engine conquered the passives",
-    "evidence": "PoB conquers the same passives on these builds as the engine: the same keystones, notables and small passives by node and name. Setting Supreme Prodigy's attribute flags in a local run leaves these cases as they are",
+    "evidence": "PoB conquers the same passives on these builds as the engine: the same keystones, notables and small passives by node and name. Setting Supreme Ostentation's attribute flags in a local run leaves these cases as they are",
     "cases": [
       {"build": "41-ranger-L100-deadeye-ethereal-knives-of-the-massacre", "output": "player.evasion_rating", "layer": "gear", "ours": 4609, "pob": 4369},
       {"build": "43-duelist-L100-gladiator-wave-of-conviction-of-trarthus", "output": "player.intelligence", "layer": "gear", "ours": 14, "pob": 34},
