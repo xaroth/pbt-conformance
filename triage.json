@@ -236,7 +236,8 @@
       {"build": "71-witch-L100-occultist-death-aura", "output": "skill.hit_dps", "ours": 20.060791295999998, "pob": 0},
       {"build": "71-witch-L100-occultist-death-aura", "output": "skill.physical_minimum", "ours": 17.75, "pob": 0},
       {"build": "71-witch-L100-occultist-death-aura", "output": "skill.physical_maximum", "ours": 32.75, "pob": 0},
-      {"build": "71-witch-L100-occultist-death-aura", "output": "skill.dot_dps", "ours": 0, "pob": 85716.86409216}
+      {"build": "71-witch-L100-occultist-death-aura", "output": "skill.dot_dps", "ours": 76.8761950092387, "pob": 85716.86409216},
+      {"build": "71-witch-L100-occultist-death-aura", "output": "skill.ignite_dps", "ours": 76.8761950092387, "pob": 0}
     ]
   },
   {
@@ -343,15 +344,6 @@
       {"build": "102-shadow-L100-assassin-freezing-pulse", "output": "player.reserved_mana", "ours": 0, "pob": 23},
       {"build": "103-shadow-L100-trickster-exsanguinate", "output": "player.reserved_life", "ours": 0, "pob": 103},
       {"build": "104-shadow-L100-assassin-exsanguinate", "output": "player.reserved_life", "ours": 0, "pob": 125}
-    ]
-  },
-  {
-    "id": "precision-reservation-skill-layer",
-    "kind": "pending",
-    "league": "3.29",
-    "reason": "Precision in the skill layer reserves more mana than in PoB. The cluster jewel's small passives, with their increased Mana Reservation Efficiency of Skills, count; the rest of the gap is not found yet",
-    "cases": [
-      {"build": "78-templar-L100-inquisitor-animate-guardian", "output": "player.reserved_mana", "ours": 58, "pob": 46}
     ]
   },
   {
@@ -1668,8 +1660,7 @@
       {"build": "48-witch-L100-elementalist-fireball", "output": "player.energy_shield", "layer": "gear", "ours": 4887, "pob": 7556},
       {"build": "49-witch-L100-occultist-fireball", "output": "player.energy_shield", "layer": "gear", "ours": 3710, "pob": 5321},
       {"build": "52-duelist-L100-slayer-flicker-strike", "output": "player.armour", "layer": "gear", "ours": 3824, "pob": 4961},
-      {"build": "53-templar-L100-hierophant-kinetic-blast-of-clustering", "output": "player.evasion_rating", "layer": "gear", "ours": 1842, "pob": 4011},
-      {"build": "59-templar-L100-hierophant-frenzy", "output": "player.energy_shield", "layer": "gear", "ours": 305, "pob": 322},
+      {"build": "53-templar-L100-hierophant-kinetic-blast-of-clustering", "output": "player.evasion_rating", "layer": "gear", "ours": 1903, "pob": 4011},
       {"build": "61-shadow-L100-assassin-lancing-steel-of-spraying", "output": "player.energy_shield", "layer": "gear", "ours": 1667, "pob": 2111},
       {"build": "64-shadow-L97-assassin-rain-of-arrows-of-saturation", "output": "player.energy_shield", "layer": "gear", "ours": 2088, "pob": 2196},
       {"build": "66-duelist-L100-champion-flicker-strike", "output": "player.evasion_rating", "layer": "gear", "ours": 11877, "pob": 12092},
@@ -1695,10 +1686,10 @@
       {"build": "52-duelist-L100-slayer-flicker-strike", "output": "player.chaos_resistance", "layer": "gear", "ours": -11, "pob": 75},
       {"build": "52-duelist-L100-slayer-flicker-strike", "output": "player.uncapped_chaos_resistance", "layer": "gear", "ours": -11, "pob": 77},
       {"build": "53-templar-L100-hierophant-kinetic-blast-of-clustering", "output": "player.chaos_resistance", "layer": "gear", "ours": -37, "pob": 75},
-      {"build": "53-templar-L100-hierophant-kinetic-blast-of-clustering", "output": "player.life", "layer": "gear", "ours": 2005, "pob": 1690},
-      {"build": "53-templar-L100-hierophant-kinetic-blast-of-clustering", "output": "player.life_regeneration", "layer": "gear", "ours": 46.1, "pob": 38.9},
+      {"build": "53-templar-L100-hierophant-kinetic-blast-of-clustering", "output": "player.life", "layer": "gear", "ours": 2048, "pob": 1690},
+      {"build": "53-templar-L100-hierophant-kinetic-blast-of-clustering", "output": "player.life_regeneration", "layer": "gear", "ours": 47.1, "pob": 38.9},
       {"build": "53-templar-L100-hierophant-kinetic-blast-of-clustering", "output": "player.uncapped_chaos_resistance", "layer": "gear", "ours": -37, "pob": 75},
-      {"build": "53-templar-L100-hierophant-kinetic-blast-of-clustering", "output": "player.unreserved_life", "layer": "gear", "ours": 2005, "pob": 1690},
+      {"build": "53-templar-L100-hierophant-kinetic-blast-of-clustering", "output": "player.unreserved_life", "layer": "gear", "ours": 2048, "pob": 1690},
       {"build": "62-shadow-L100-assassin-cyclone", "output": "player.energy_shield", "layer": "gear", "ours": 10891, "pob": 14319},
       {"build": "64-shadow-L97-assassin-rain-of-arrows-of-saturation", "output": "player.evasion_rating", "layer": "gear", "ours": 14270, "pob": 22235},
       {"build": "70-templar-L100-hierophant-righteous-fire-of-arcane-devotion", "output": "player.life", "layer": "gear", "ours": 1625, "pob": 1410},
@@ -1712,14 +1703,14 @@
     "id": "gear-strength-bound-by-destiny",
     "kind": "pending",
     "league": "3.29",
-    "reason": "Bound By Destiny's \"15% increased Strength if 2 Warlord Items are Equipped\" is left out, and so is the +50 Strength of Righteous Providence, which the Forbidden Flame and Flesh allocate (gear-forbidden-jewels); so Strength is lower, and so is what follows it: life, its regeneration and armour from life",
-    "evidence": "PoB's breakdown of Strength on 59's gear layer has 1442 base and 119% increased, the engine's 1392 and 104%: the only differences are Righteous Providence (node 53884, +50) and Bound By Destiny (15%), and 1442 times 2.19 is PoB's 3158, 1392 times 2.04 the engine's 2840. Bound By Destiny's strength_+%_if_2_warlord_items shows as an unmodelled-stat warning. Both Split Personality jewels give PoB's 91 and 82",
+    "reason": "Bound By Destiny's \"15% increased Strength if 2 Warlord Items are Equipped\" is left out; so Strength is lower, and so is what follows it: life, its regeneration and armour from life",
+    "evidence": "PoB's breakdown of Strength on 59's gear layer has 1442 base and 119% increased, the engine's 1442 and 104%: the only difference is Bound By Destiny (15%), and 1442 times 2.19 is PoB's 3158, 1442 times 2.04 the engine's 2942. Bound By Destiny's strength_+%_if_2_warlord_items shows as an unmodelled-stat warning. Both Split Personality jewels give PoB's 91 and 82",
     "cases": [
-      {"build": "59-templar-L100-hierophant-frenzy", "output": "player.armour", "layer": "gear", "ours": 7626, "pob": 8004},
-      {"build": "59-templar-L100-hierophant-frenzy", "output": "player.life", "layer": "gear", "ours": 6084, "pob": 6407},
-      {"build": "59-templar-L100-hierophant-frenzy", "output": "player.life_regeneration", "layer": "gear", "ours": 267.7, "pob": 281.9},
-      {"build": "59-templar-L100-hierophant-frenzy", "output": "player.strength", "layer": "gear", "ours": 2840, "pob": 3158},
-      {"build": "59-templar-L100-hierophant-frenzy", "output": "player.unreserved_life", "layer": "gear", "ours": 6084, "pob": 6407}
+      {"build": "59-templar-L100-hierophant-frenzy", "output": "player.armour", "layer": "gear", "ours": 7747, "pob": 8004},
+      {"build": "59-templar-L100-hierophant-frenzy", "output": "player.life", "layer": "gear", "ours": 6187, "pob": 6407},
+      {"build": "59-templar-L100-hierophant-frenzy", "output": "player.life_regeneration", "layer": "gear", "ours": 272.2, "pob": 281.9},
+      {"build": "59-templar-L100-hierophant-frenzy", "output": "player.strength", "layer": "gear", "ours": 2942, "pob": 3158},
+      {"build": "59-templar-L100-hierophant-frenzy", "output": "player.unreserved_life", "layer": "gear", "ours": 6187, "pob": 6407}
     ]
   },
   {
@@ -1789,26 +1780,11 @@
     "reason": "Shavronne's Revelation grants stats by the ring slot it is in (local_left_ring_slot_*, local_right_ring_slot_*); the engine leaves them out",
     "evidence": "removing a \"Right ring slot\" line closes or moves the gap; the stats show as unmodelled-stat warnings",
     "cases": [
-      {"build": "53-templar-L100-hierophant-kinetic-blast-of-clustering", "output": "player.energy_shield", "layer": "gear", "ours": 2938, "pob": 4065},
-      {"build": "53-templar-L100-hierophant-kinetic-blast-of-clustering", "output": "player.energy_shield_regeneration", "layer": "gear", "ours": 58.8, "pob": 325.2},
-      {"build": "53-templar-L100-hierophant-kinetic-blast-of-clustering", "output": "player.mana", "layer": "gear", "ours": 6821, "pob": 10675},
-      {"build": "53-templar-L100-hierophant-kinetic-blast-of-clustering", "output": "player.mana_regeneration", "layer": "gear", "ours": 487.7, "pob": 0},
-      {"build": "53-templar-L100-hierophant-kinetic-blast-of-clustering", "output": "player.unreserved_mana", "layer": "gear", "ours": 6821, "pob": 10675}
-    ]
-  },
-  {
-    "id": "gear-forbidden-jewels",
-    "kind": "pending",
-    "league": "3.29",
-    "reason": "Forbidden Flame and Forbidden Flesh allocate an ascendancy notable when both match; the engine does not read the line",
-    "evidence": "the line shows as an item-line-unread warning; on 53's gear layer the only differences in PoB's breakdowns of Strength and Intelligence are +50 to each from Righteous Providence, which the jewels allocate",
-    "cases": [
-      {"build": "59-templar-L100-hierophant-frenzy", "output": "player.intelligence", "layer": "gear", "ours": 135, "pob": 200},
-      {"build": "59-templar-L100-hierophant-frenzy", "output": "player.mana", "layer": "gear", "ours": 792, "pob": 829},
-      {"build": "59-templar-L100-hierophant-frenzy", "output": "player.mana_regeneration", "layer": "gear", "ours": 24.9, "pob": 26.1},
-      {"build": "59-templar-L100-hierophant-frenzy", "output": "player.unreserved_mana", "layer": "gear", "ours": 792, "pob": 829},
-      {"build": "53-templar-L100-hierophant-kinetic-blast-of-clustering", "output": "player.intelligence", "layer": "gear", "ours": 1062, "pob": 1126},
-      {"build": "53-templar-L100-hierophant-kinetic-blast-of-clustering", "output": "player.strength", "layer": "gear", "ours": 516, "pob": 585}
+      {"build": "53-templar-L100-hierophant-kinetic-blast-of-clustering", "output": "player.energy_shield", "layer": "gear", "ours": 3084, "pob": 4065},
+      {"build": "53-templar-L100-hierophant-kinetic-blast-of-clustering", "output": "player.energy_shield_regeneration", "layer": "gear", "ours": 61.7, "pob": 325.2},
+      {"build": "53-templar-L100-hierophant-kinetic-blast-of-clustering", "output": "player.mana", "layer": "gear", "ours": 7055, "pob": 10675},
+      {"build": "53-templar-L100-hierophant-kinetic-blast-of-clustering", "output": "player.mana_regeneration", "layer": "gear", "ours": 504.4, "pob": 0},
+      {"build": "53-templar-L100-hierophant-kinetic-blast-of-clustering", "output": "player.unreserved_mana", "layer": "gear", "ours": 7055, "pob": 10675}
     ]
   },
   {
