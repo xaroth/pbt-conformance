@@ -162,7 +162,10 @@ func Outputs() []Output {
 
 // skillOutputs returns the outputs of the main skill's damage and costs.
 func skillOutputs() []Output {
-	return append(perHand("skill.", "average_hit", GroupSkill, "", "AverageHit"),
+	out := perHand("skill.", "average_hit", GroupSkill, "", "AverageHit")
+	// PoB gives a spell's accuracy too, which the engine does not.
+	out = append(out, attackPerHand("skill.", "accuracy_rating", GroupSkill, "Accuracy")...)
+	return append(out,
 		key("skill.hit_chance", GroupSkill, "HitChance"),
 		// PoB's hit DPS uses HitSpeed where the skill hits at another rate than it is used.
 		first("skill.hits_per_second", GroupSkill, "HitSpeed", "Speed"),
@@ -186,8 +189,22 @@ func skillOutputs() []Output {
 // one hand's for an attack with one hand, and absent when both hands attack; then the hand
 // outputs give each hand's.
 func perHand(actor, name string, g Group, prefix, k string) []Output {
+	return hands(actor, name, g, prefix, k, true)
+}
+
+// attackPerHand is perHand without PoB's k itself: an attack's value per hand only.
+func attackPerHand(actor, name string, g Group, k string) []Output {
+	return hands(actor, name, g, "", k, false)
+}
+
+// hands is perHand, reading PoB's k itself only when own is set.
+func hands(actor, name string, g Group, prefix, k string, own bool) []Output {
 	mh, oh := prefix+"MainHand."+k, prefix+"OffHand."+k
 	k = prefix + k
+	combinedKeys := []string{mh, oh}
+	if own {
+		combinedKeys = []string{k, mh, oh}
+	}
 	bothHands := func(o map[string]float64) bool {
 		_, ok1 := o[mh]
 		_, ok2 := o[oh]
@@ -200,8 +217,8 @@ func perHand(actor, name string, g Group, prefix, k string) []Output {
 		}}
 	}
 	return []Output{
-		{Name: actor + name, Group: g, keys: []string{k, mh, oh}, value: func(o map[string]float64) (float64, bool) {
-			if v, ok := o[k]; ok {
+		{Name: actor + name, Group: g, keys: combinedKeys, value: func(o map[string]float64) (float64, bool) {
+			if v, ok := o[k]; ok && own {
 				return v, true
 			}
 			if bothHands(o) {

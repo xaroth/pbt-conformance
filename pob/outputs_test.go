@@ -65,6 +65,9 @@ func TestOutputValue(t *testing.T) {
 		{"both hands type", "skill.off_hand_cold_minimum", map[string]float64{"Calcs.MainHand.ColdMin": 10, "Calcs.OffHand.ColdMin": 12}, 12, true},
 		{"both hands: no type", "skill.cold_minimum", map[string]float64{"Calcs.MainHand.ColdMin": 10, "Calcs.OffHand.ColdMin": 12}, 0, false},
 		{"hit chance", "skill.hit_chance", map[string]float64{"HitChance": 85}, 85, true},
+		{"spell: no accuracy", "skill.accuracy_rating", map[string]float64{"Accuracy": 900}, 0, false},
+		{"one hand accuracy", "skill.accuracy_rating", map[string]float64{"MainHand.Accuracy": 1250}, 1250, true},
+		{"both hands accuracy", "skill.off_hand_accuracy_rating", map[string]float64{"MainHand.Accuracy": 1250, "OffHand.Accuracy": 1100}, 1100, true},
 		{"totems", "delivery.total_dps", map[string]float64{"CombinedDPS": 150, "TotalDPS": 100, "TotemsSummoned": 3}, 350, true},
 		{"trap", "delivery.total_dps", map[string]float64{"CombinedDPS": 150, "TotalDPS": 100}, 150, true},
 	}
