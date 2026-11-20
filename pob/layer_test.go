@@ -214,11 +214,11 @@ func TestDeriveInvalid(t *testing.T) {
 	}
 }
 
-// TestDerivedFiles checks that every stored derived XML is what pob derives from its
+// TestDerivedFiles checks that every stored derived XML of a build or case is what pob derives from its
 // build, so a changed pob.xml cannot go unrecorded without the PoB runtime.
 func TestDerivedFiles(t *testing.T) {
 	t.Parallel()
-	fulls, err := filepath.Glob(filepath.Join("..", "builds", "*", "*", pob.FullXML))
+	fulls, err := filepath.Glob(filepath.Join("..", "*", "*", "*", pob.FullXML))
 	if err != nil {
 		t.Fatal(err)
 	}

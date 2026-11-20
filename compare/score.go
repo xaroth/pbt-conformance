@@ -30,9 +30,17 @@ var (
 
 // Scoreboard says how many builds the engine gets right and what blocks the most.
 type Scoreboard struct {
+	Counts
+
 	Mismatches []Mismatch `json:"mismatches"`
 	// Stale are the ids of triage entries that match no mismatch.
 	Stale []string `json:"staleTriage"`
+	// Cases are the counts of the cases, apart from the builds'; nil without cases.
+	Cases *Counts `json:"cases,omitempty"`
+}
+
+// Counts are the scoreboard's tables of a set of builds.
+type Counts struct {
 	// Groups count builds by status per league, layer and group.
 	Groups []GroupRow `json:"groups"`
 	// Kinds count builds passing everything per league and kind of build, then per content.
@@ -152,12 +160,20 @@ func Score(builds []Build, ms []Mismatch, stale []string, hints map[string]strin
 	if s.Stale == nil {
 		s.Stale = []string{}
 	}
-	s.Groups = groupRows(builds)
-	s.Kinds = kindRows(builds)
-	s.Outputs = outputRows(builds)
-	s.Missing = missingRows(builds)
-	s.Blockers = blockerRows(builds, hints)
+	isCase := func(b Build) bool { return b.Case }
+	s.Counts = counts(slices.DeleteFunc(slices.Clone(builds), isCase), hints)
+	if cases := slices.DeleteFunc(slices.Clone(builds), func(b Build) bool { return !b.Case }); len(cases) > 0 {
+		c := counts(cases, hints)
+		s.Cases = &c
+	}
 	return s
+}
+
+func counts(builds []Build, hints map[string]string) Counts {
+	return Counts{
+		Groups: groupRows(builds), Kinds: kindRows(builds), Outputs: outputRows(builds),
+		Missing: missingRows(builds), Blockers: blockerRows(builds, hints),
+	}
 }
 
 // failsChecks reports whether b has a mismatch that is not one of an output.
@@ -402,15 +418,22 @@ func (s *Scoreboard) WriteJSON(w io.Writer) error {
 }
 
 // WriteText writes the scoreboard's tables after the mismatch list, which the caller writes:
-// builds by status, by kind, by output compared, the outputs the engine lacks and the blockers.
+// builds by status, by kind, by output compared, the outputs the engine lacks and the blockers,
+// then the same for the cases under a "cases" heading.
 func (s *Scoreboard) WriteText(w io.Writer) error {
 	var buf bytes.Buffer
 	const padding = 2
 	tw := tabwriter.NewWriter(&buf, 0, 0, padding, ' ', 0)
-	s.writeCounts(tw)
-	s.writeBlockers(tw)
+	s.write(tw)
 	if err := tw.Flush(); err != nil {
 		return fmt.Errorf("scoreboard: %w", err)
+	}
+	if s.Cases != nil {
+		buf.WriteString("\ncases\n")
+		s.Cases.write(tw)
+		if err := tw.Flush(); err != nil {
+			return fmt.Errorf("scoreboard: %w", err)
+		}
 	}
 	for line := range strings.Lines(buf.String()) {
 		if _, err := io.WriteString(w, strings.TrimRight(line, " \n")+"\n"); err != nil {
@@ -420,9 +443,16 @@ func (s *Scoreboard) WriteText(w io.Writer) error {
 	return nil
 }
 
+// write writes the tables of builds by group, by kind, by output compared, by missing output and
+// by blocker.
+func (s *Counts) write(tw io.Writer) {
+	s.writeCounts(tw)
+	s.writeBlockers(tw)
+}
+
 // writeCounts writes the tables of builds by group, by kind, by output compared and by missing
 // output.
-func (s *Scoreboard) writeCounts(tw io.Writer) {
+func (s *Counts) writeCounts(tw io.Writer) {
 	fmt.Fprintln(tw, "\nleague\tlayer\tgroup\tbuilds\tpass\tfail\tmismatch\tincomplete\tnot compared")
 	for _, r := range s.Groups {
 		fmt.Fprintf(tw, "%s\t%s\t%s\t%d\t%d\t%d\t%d\t%d\t%d\n", r.League, r.Layer, r.Group, r.Builds, r.Pass, r.Fail, r.Mismatch, r.Incomplete, r.NotCompared)
@@ -442,7 +472,7 @@ func (s *Scoreboard) writeCounts(tw io.Writer) {
 }
 
 // writeBlockers writes the blockers with their count per league.
-func (s *Scoreboard) writeBlockers(tw io.Writer) {
+func (s *Counts) writeBlockers(tw io.Writer) {
 	leagues := map[string]bool{}
 	for _, r := range s.Blockers {
 		for l := range r.Leagues {

@@ -183,11 +183,11 @@ func TestRecordParty(t *testing.T) {
 	}
 }
 
-// TestSkillLayerMainSkill checks that every build's skill layer calculates the full layer's main
+// TestSkillLayerMainSkill checks that every build's and case's skill layer calculates the full layer's main
 // skill, with the same level, quality and supports; only its group number may differ.
 func TestSkillLayerMainSkill(t *testing.T) {
 	t.Parallel()
-	files, err := filepath.Glob(filepath.Join("..", "builds", "*", "*", pob.ValuesFile))
+	files, err := filepath.Glob(filepath.Join("..", "*", "*", "*", pob.ValuesFile))
 	if err != nil {
 		t.Fatal(err)
 	}

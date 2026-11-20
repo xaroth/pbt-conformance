@@ -40,6 +40,8 @@ func scoreBuilds() []compare.Build {
 			Layers: []compare.Layer{{Name: "tree", Groups: []compare.GroupResult{
 				{Group: pob.GroupSheet, Status: compare.StatusIncomplete, Missing: []string{"player.unreserved_life"}},
 			}}}},
+		{League: "3.29", Name: "one-gem", Case: true, Meta: compare.Meta{Kind: compare.KindSpell},
+			Layers: layers(compare.StatusMismatch), Blockers: []compare.Blocker{stat}},
 	}
 }
 
@@ -79,6 +81,20 @@ func TestScore(t *testing.T) {
 	if diff := cmp.Diff(wantBlockers, s.Blockers); diff != "" {
 		t.Errorf("blockers (-want +got):\n%s", diff)
 	}
+	wantCases := &compare.Counts{
+		Groups: []compare.GroupRow{
+			{League: "3.29", Layer: "tree", Group: pob.GroupSheet, Builds: 1, Pass: 1},
+			{League: "3.29", Layer: "tree", Group: compare.GroupChecks, Builds: 1, Pass: 1},
+			{League: "3.29", Layer: "full", Group: pob.GroupSkill, Builds: 1, Fail: 1, Mismatch: 1},
+		},
+		Kinds:   []compare.KindRow{{League: "3.29", Kind: "spell", Builds: 1}},
+		Missing: []compare.MissingRow{},
+		Blockers: []compare.BlockerRow{{Kind: compare.BlockerStat, Name: "spell_damage_+%", Builds: 1,
+			Leagues: map[string]int{"3.29": 1}, Hint: "Damage, spell"}},
+	}
+	if diff := cmp.Diff(wantCases, s.Cases); diff != "" {
+		t.Errorf("cases (-want +got):\n%s", diff)
+	}
 }
 
 // The text and the JSON hold the same rows, and the text repeats exactly on a second write.
@@ -101,6 +117,8 @@ func TestScoreboardWrite(t *testing.T) {
 		"3.29    contains:cluster-jewel  1       0",
 		"player.unreserved_life  sheet  1",
 		"3       1     2     stat     spell_damage_+%",
+		"\ncases\n\nleague  layer  group   builds",
+		"3.29    full   skill   1       0     1     1         0           0",
 	} {
 		if !strings.Contains(text.String(), want) {
 			t.Errorf("text lacks %q:\n%s", want, text.String())
@@ -179,7 +197,7 @@ func TestScoreboardHintsText(t *testing.T) {
 	if strings.Contains(with, "not a stat") {
 		t.Errorf("hint shown beside a gem:\n%s", with)
 	}
-	if without := text(nil); strings.Replace(with, "  Damage INC Spell (skill stat map)", "", 1) != without {
+	if without := text(nil); strings.ReplaceAll(with, "  Damage INC Spell (skill stat map)", "") != without {
 		t.Errorf("hints change more than the hint column:\n%s\n%s", with, without)
 	}
 }

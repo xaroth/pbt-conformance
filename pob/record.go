@@ -63,9 +63,23 @@ type Party struct {
 // ErrParty marks a malformed party file or one naming no build of its league.
 var ErrParty = errors.New("invalid party file")
 
+// Sets of builds under the repository root, each a directory holding one per league.
+const (
+	// Builds are the builds whose counts the scoreboard reports.
+	Builds = "builds"
+	// Cases are builds made for a test, reported apart from Builds.
+	Cases = "cases"
+)
+
 // BuildDirs returns the build directories of league under root/builds/<league>, sorted.
-func BuildDirs(root, league string) ([]string, error) {
-	dirs, err := filepath.Glob(filepath.Join(root, "builds", league, "*", FullXML))
+func BuildDirs(root, league string) ([]string, error) { return setDirs(root, Builds, league) }
+
+// CaseDirs returns the case directories of league under root/cases/<league>, sorted.
+func CaseDirs(root, league string) ([]string, error) { return setDirs(root, Cases, league) }
+
+// setDirs returns the build directories of league under root/<set>/<league>, sorted.
+func setDirs(root, set, league string) ([]string, error) {
+	dirs, err := filepath.Glob(filepath.Join(root, set, league, "*", FullXML))
 	if err != nil {
 		return nil, fmt.Errorf("pob: %w", err)
 	}
@@ -76,7 +90,7 @@ func BuildDirs(root, league string) ([]string, error) {
 	return dirs, nil
 }
 
-// Record derives each build's XMLs, runs every build of league under root through its
+// Record derives each build's XMLs, runs every build and case of league under root through its
 // pinned PoB in cache and writes each build's values file. With check it writes nothing and
 // fails with ErrStale when a stored derived XML or values file differs from a fresh run, naming
 // the builds.
@@ -86,8 +100,16 @@ func Record(ctx context.Context, root, cache string, f *pins.File, game, league 
 		return fmt.Errorf("pob: %s %s: %w", game, league, errNotPinned)
 	}
 	dirs, err := BuildDirs(root, league)
-	if err != nil || len(dirs) == 0 {
+	if err != nil {
 		return err
+	}
+	cases, err := CaseDirs(root, league)
+	if err != nil {
+		return err
+	}
+	dirs = append(dirs, cases...)
+	if len(dirs) == 0 {
+		return nil
 	}
 	if err := deriveAll(dirs, check); err != nil {
 		return err

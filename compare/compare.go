@@ -100,6 +100,8 @@ func fullWarnings() []build.Code {
 type Build struct {
 	League, Name string
 	Meta         Meta
+	// Case is true for a case (cases/<league>), which the scoreboard counts apart from the builds.
+	Case bool
 	// Mismatches are the build's mismatches, in the order compare lists them.
 	Mismatches []Mismatch
 	// Layers judge each layer's groups of outputs, in the order of Layers().
@@ -108,7 +110,8 @@ type Build struct {
 	Blockers []Blocker
 }
 
-// Run compares every build of league under root, with the pinned dataset under datasets.
+// Run compares every build of league under root, then every case, with the pinned dataset
+// under datasets.
 // A build that cannot be compared at all (unreadable XML, failing build check) is an error.
 func Run(root, datasets string, f *pins.File, game, league string) ([]Build, error) {
 	l, ok := f.Games[game].Leagues[league]
@@ -127,12 +130,17 @@ func Run(root, datasets string, f *pins.File, game, league string) ([]Build, err
 	if err != nil {
 		return nil, fmt.Errorf("compare: %w", err)
 	}
-	out := make([]Build, 0, len(dirs))
-	for _, dir := range dirs {
+	cases, err := pob.CaseDirs(root, league)
+	if err != nil {
+		return nil, fmt.Errorf("compare: %w", err)
+	}
+	out := make([]Build, 0, len(dirs)+len(cases))
+	for i, dir := range append(dirs, cases...) {
 		b, err := compareBuild(dir, league, reg, sim)
 		if err != nil {
 			return nil, fmt.Errorf("compare %s: %w", filepath.Base(dir), err)
 		}
+		b.Case = i >= len(dirs)
 		out = append(out, *b)
 	}
 	return out, nil
