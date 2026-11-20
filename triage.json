@@ -720,17 +720,6 @@
     ]
   },
   {
-    "id": "attack-hit-chance-golem-buff",
-    "kind": "pending",
-    "league": "3.29",
-    "reason": "Summon Ice Golem in the main skill's group grants accuracy rating as a buff; the engine does not give buffs from other skills yet, so the attack's accuracy rating and chance to hit are lower",
-    "evidence": "PoB's breakdown of the main skill's accuracy rating on the skill layer has 546 from Summon Ice Golem, which the engine lacks; its other sources, both Split Personality jewels at 730 and 660 among them, are the engine's",
-    "cases": [
-      {"build": "59-templar-L100-hierophant-frenzy", "output": "skill.accuracy_rating", "ours": 2519, "pob": 3119},
-      {"build": "59-templar-L100-hierophant-frenzy", "output": "skill.hit_chance", "ours": 91, "pob": 96}
-    ]
-  },
-  {
     "id": "attack-hit-unmodelled-stats",
     "kind": "pending",
     "league": "3.29",
@@ -902,7 +891,7 @@
       {"build": "59-templar-L100-hierophant-frenzy", "output": "skill.average_hit", "ours": 0, "pob": 94822.1317888},
       {"build": "59-templar-L100-hierophant-frenzy", "output": "skill.chaos_maximum", "ours": 0, "pob": 97326.32},
       {"build": "59-templar-L100-hierophant-frenzy", "output": "skill.chaos_minimum", "ours": 0, "pob": 1216.8},
-      {"build": "59-templar-L100-hierophant-frenzy", "output": "skill.critical_strike_chance", "ours": 26.6175, "pob": 46.224},
+      {"build": "59-templar-L100-hierophant-frenzy", "output": "skill.critical_strike_chance", "ours": 31.823999999999998, "pob": 46.224},
       {"build": "59-templar-L100-hierophant-frenzy", "output": "skill.hit_dps", "ours": 0, "pob": 245869.99484309},
       {"build": "59-templar-L100-hierophant-frenzy", "output": "skill.hits_per_second", "ours": 2.664, "pob": 2.701},
       {"build": "60-templar-L100-inquisitor-lancing-steel-of-spraying", "output": "skill.critical_strike_chance", "ours": 7.749252, "pob": 66.053148},
