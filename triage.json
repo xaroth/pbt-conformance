@@ -1395,6 +1395,7 @@
       {"build": "89-duelist-L99-gladiator-dominating-blow-of-inspiring", "output": "player.intelligence", "layer": "gear", "ours": 224, "pob": 222},
       {"build": "89-duelist-L99-gladiator-dominating-blow-of-inspiring", "output": "player.lightning_resistance", "layer": "gear", "ours": 65, "pob": 70},
       {"build": "89-duelist-L99-gladiator-dominating-blow-of-inspiring", "output": "player.mana", "layer": "gear", "ours": 880, "pob": 879},
+      {"build": "89-duelist-L99-gladiator-dominating-blow-of-inspiring", "output": "player.mana_regeneration", "layer": "gear", "ours": 21.6, "pob": 21.5},
       {"build": "89-duelist-L99-gladiator-dominating-blow-of-inspiring", "output": "player.strength", "layer": "gear", "ours": 220, "pob": 179},
       {"build": "89-duelist-L99-gladiator-dominating-blow-of-inspiring", "output": "player.uncapped_fire_resistance", "layer": "gear", "ours": 78, "pob": 83},
       {"build": "89-duelist-L99-gladiator-dominating-blow-of-inspiring", "output": "player.uncapped_lightning_resistance", "layer": "gear", "ours": 65, "pob": 70},
@@ -1671,22 +1672,6 @@
     ]
   },
   {
-    "id": "gear-untraced",
-    "kind": "pending",
-    "league": "3.29",
-    "reason": "Causes not found yet: removing the item alone moves the gap, but removing its lines one at a time names no mechanic the output can come from, or no single item moves it",
-    "evidence": "each case's item removal and line removals were run through the engine and PoB; the lines that move the gap are plain flat or reduced stats, so the cause is elsewhere",
-    "cases": [
-      {"build": "48-witch-L100-elementalist-fireball", "output": "player.energy_shield_regeneration", "layer": "gear", "ours": 300.1, "pob": 485.1},
-      {"build": "68-duelist-L100-gladiator-cyclone-of-tumult", "output": "player.chaos_resistance", "layer": "gear", "ours": 20, "pob": 24},
-      {"build": "68-duelist-L100-gladiator-cyclone-of-tumult", "output": "player.movement_speed", "layer": "gear", "ours": 138, "pob": 132},
-      {"build": "68-duelist-L100-gladiator-cyclone-of-tumult", "output": "player.uncapped_chaos_resistance", "layer": "gear", "ours": 20, "pob": 24},
-      {"build": "79-witch-L100-necromancer-summon-holy-relic-of-conviction", "output": "player.energy_shield", "layer": "gear", "ours": 915, "pob": 917},
-      {"build": "82-scion-L100-luminary-absolution", "output": "player.energy_shield", "layer": "gear", "ours": 402, "pob": 477},
-      {"build": "89-duelist-L99-gladiator-dominating-blow-of-inspiring", "output": "player.mana_regeneration", "layer": "gear", "ours": 21.6, "pob": 21.5}
-    ]
-  },
-  {
     "id": "gear-reserved-blood-more-life",
     "kind": "pending",
     "league": "3.29",
@@ -1764,8 +1749,9 @@
     "kind": "pending",
     "league": "3.29",
     "reason": "Energy shield regeneration stats on items (energy_shield_regeneration_rate_per_second, energy_shield_regeneration_rate_per_minute_if_rare_or_unique_enemy_nearby) are left out",
-    "evidence": "removing the \"Regenerate Energy Shield per second\" line closes or moves the gap",
+    "evidence": "removing the \"Regenerate Energy Shield per second\" line closes or moves the gap. On 48, Brimstone Shroud's 162 per second while a rare or unique enemy is nearby is the source the engine leaves out; the rest of its gap is 2% of the maximum energy shield gap in gear-defence-global-increase",
     "cases": [
+      {"build": "48-witch-L100-elementalist-fireball", "output": "player.energy_shield_regeneration", "layer": "gear", "ours": 300.1, "pob": 485.1},
       {"build": "62-shadow-L100-assassin-cyclone", "output": "player.energy_shield_regeneration", "layer": "gear", "ours": 344.4, "pob": 554.3},
       {"build": "82-scion-L100-luminary-absolution", "output": "player.energy_shield_regeneration", "layer": "gear", "ours": 0, "pob": 15},
       {"build": "86-witch-L100-necromancer-animate-guardian-of-smiting", "output": "player.energy_shield_regeneration", "layer": "gear", "ours": 0, "pob": 18}
@@ -1835,6 +1821,29 @@
     "evidence": "removing the line closes the gap; movement_speed_is_%_of_base shows as an unmodelled-stat warning",
     "cases": [
       {"build": "78-templar-L100-inquisitor-animate-guardian", "output": "player.movement_speed", "layer": "gear", "ours": 97, "pob": 180}
+    ]
+  },
+  {
+    "id": "gear-gloves-boots-effect",
+    "kind": "pending",
+    "league": "3.29",
+    "reason": "Runegraft of the Bound scales the bonuses of the equipped gloves (20% increased) and boots (20% reduced); the engine leaves both out",
+    "evidence": "PoB scales each mod of the gloves and boots by EffectOfBonusesFromGloves and EffectOfBonusesFromBoots (CalcSetup.lua): Facebreaker's chaos resistance 26 becomes 31, Demon Spur's 8 becomes 7 and its movement speed 30% becomes 24%. gloves_mod_effect_+% and boots_mod_effect_+% from node 62588 show as unmodelled-stat warnings",
+    "cases": [
+      {"build": "68-duelist-L100-gladiator-cyclone-of-tumult", "output": "player.chaos_resistance", "layer": "gear", "ours": 20, "pob": 24},
+      {"build": "68-duelist-L100-gladiator-cyclone-of-tumult", "output": "player.movement_speed", "layer": "gear", "ours": 138, "pob": 132},
+      {"build": "68-duelist-L100-gladiator-cyclone-of-tumult", "output": "player.uncapped_chaos_resistance", "layer": "gear", "ours": 20, "pob": 24}
+    ]
+  },
+  {
+    "id": "gear-negative-flat-energy-shield",
+    "kind": "deviation",
+    "league": "3.29",
+    "reason": "Flat maximum energy shield from outside the armour slots (rings, jewels) that sums to below zero: PoB leaves the sum out, the engine adds it to the armour slots' energy shield before the global increase, as the game adds every flat source to one base",
+    "evidence": "PoB's CalcDefence.lua adds modDB:Sum(\"BASE\", nil, \"EnergyShield\") only when it is above 0. 79: Kraken Finger -38, Foul Oculus 33, Rational Doctrine 4 sum to -1, so PoB gives 379 x 2.42 = 917 where the engine gives 378 x 2.42 = 915; 82: Torment Finger -48 alone, PoB 304 x 1.57 = 477, engine 256 x 1.57 = 402",
+    "cases": [
+      {"build": "79-witch-L100-necromancer-summon-holy-relic-of-conviction", "output": "player.energy_shield", "layer": "gear", "ours": 915, "pob": 917},
+      {"build": "82-scion-L100-luminary-absolution", "output": "player.energy_shield", "layer": "gear", "ours": 402, "pob": 477}
     ]
   },
   {
