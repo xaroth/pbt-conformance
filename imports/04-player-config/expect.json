@@ -151,7 +151,7 @@
   "warnings": [
     {
       "code": "pob-config-ignored",
-      "subject": "usePowerCharges"
+      "subject": "conditionBeenHitRecently"
     }
   ]
 }

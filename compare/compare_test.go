@@ -111,7 +111,7 @@ Royal Burgonet</Item></Items></PathOfBuilding>`
 			[]string{"import:full-tree"}},
 		{"other tree in full", string(fixture(t)), strings.Replace(withItems, `nodes="47175,31628"`, `nodes="47175"`, 1),
 			[]string{"import:full-tree"}},
-		{"config in tree-only", strings.Replace(string(fixture(t)), "<Tree", `<Config><Input name="usePowerCharges" boolean="true"/></Config><Tree`, 1),
+		{"config in tree-only", strings.Replace(string(fixture(t)), "<Tree", `<Config><Input name="conditionBeenHitRecently" boolean="true"/></Config><Tree`, 1),
 			string(fixture(t)), []string{"import:pob-config-ignored"}},
 	}
 	for _, testCase := range testCases {
