@@ -1902,6 +1902,31 @@
       {"build": "34-scion-L80-ascendant-chaos-inoculation", "output": "skill_quality", "ours": 30, "pob": 20},
       {"build": "35-scion-L90-ascendant-chaos-inoculation", "output": "skill_quality", "ours": 30, "pob": 20}
     ]
+  },
+  {
+    "id": "skill-arc-remaining-chains",
+    "kind": "pending",
+    "league": "3.29",
+    "reason": "Arc deals 15% more damage for each chain remaining (arc_damage_+%_final_for_each_remaining_chain); the engine does not model chains, so it leaves the multiplier out",
+    "evidence": "Ours times 2.05 (15% more for each of the 7 chains of a level 20 Arc) is PoB's on every output; PoB v2.67.2 maps the stat in Data/Skills/act_int.lua to Damage MORE per ChainRemaining, which counts every chain on the first hit",
+    "cases": [
+      {"build": "one-gem-marauder-L90-arc", "output": "skill.average_hit", "ours": 339.9, "pob": 696.795},
+      {"build": "one-gem-marauder-L90-arc", "output": "skill.hit_dps", "ours": 566.5, "pob": 1161.325},
+      {"build": "one-gem-marauder-L90-arc", "output": "skill.lightning_minimum", "ours": 99, "pob": 203},
+      {"build": "one-gem-marauder-L90-arc", "output": "skill.lightning_maximum", "ours": 561, "pob": 1150}
+    ]
+  },
+  {
+    "id": "skill-freezing-pulse-distance",
+    "kind": "pending",
+    "league": "3.29",
+    "reason": "Freezing Pulse deals up to 50% less damage the further its projectile travels; the engine does not model the distance to the enemy, so it leaves the falloff out",
+    "evidence": "PoB v2.67.2 adds Damage MORE -50 ramped over 60 units of travel in the skill's preDamageFunc (Data/Skills/act_int.lua); at the default projectile distance of 40 (Modules/ConfigOptions.lua) that is 33.3% less, and PoB's minimum and maximum hit are ours times 2/3, rounded",
+    "cases": [
+      {"build": "one-gem-marauder-L90-freezing-pulse", "output": "skill.average_hit", "ours": 1075.6281250000002, "pob": 720.803125},
+      {"build": "one-gem-marauder-L90-freezing-pulse", "output": "skill.hit_dps", "ours": 1654.8125000000002, "pob": 1108.9278846154},
+      {"build": "one-gem-marauder-L90-freezing-pulse", "output": "skill.cold_minimum", "ours": 829.5, "pob": 556},
+      {"build": "one-gem-marauder-L90-freezing-pulse", "output": "skill.cold_maximum", "ours": 1244, "pob": 833.5}
+    ]
   }
 ]
-
