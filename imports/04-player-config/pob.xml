@@ -4,7 +4,7 @@
 	<Config activeConfigSet="1">
 		<ConfigSet id="1" title="Default">
 			<Input name="resistancePenalty" number="-30"/>
-			<Input name="usePowerCharges" boolean="true"/>
+			<Input name="conditionBeenHitRecently" boolean="true"/>
 			<Input name="enemyIsBoss" string="Pinnacle"/>
 			<Placeholder name="enemyLevel" number="84"/>
 		</ConfigSet>
