@@ -244,7 +244,6 @@
   {
     "id": "default-attack-hit-types",
     "kind": "pending",
-    "league": "3.29",
     "reason": "PoB records no hit per damage type for the default attack: the runner reads them from PoB's Calcs tab set to the main skill's socket group, and the default attack, which a build without skills uses, has none, so pob.json holds no Calcs values. The engine's per-type hits of the default attack are not compared",
     "evidence": "pob/runner.lua calcsOutput returns nil when the main skill has no socketGroup; the 7 level 1 builds' pob.json skill and full layers hold MainHand.AverageHit, Speed and HitChance but no Calcs.MainHand keys. Their average hit and hits per second agree within 0.1%",
     "cases": [
