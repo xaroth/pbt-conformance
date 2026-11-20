@@ -10,7 +10,7 @@
 // setup builds the PoB runtime every pinned release needs (LuaJIT, lua-utf8, PoB checkouts)
 // into the cache directory, skipping what is already built. It needs git, make and cc.
 //
-// pob derives each build's pob-skill.xml, pob-gear.xml and pob-treeonly.xml from its pob.xml, runs the builds of a league (default:
+// pob derives each build's and case's pob-skill.xml, pob-gear.xml and pob-treeonly.xml from its pob.xml, runs the builds of a league (default:
 // every pinned league) through its pinned PoB and writes each build's pob.json. A build with a
 // party.json is run once more with the party buffs of the ally it names. With --check it
 // writes nothing and fails when a stored derived XML or pob.json differs from a fresh run.
@@ -18,7 +18,7 @@
 // data pulls the pinned dataset of every pinned league by its id from pbt-data's bucket into
 // <cache>/data/<game>/<league> and prints <cache>/data/<game>; a later run fetches nothing.
 //
-// compare computes pbt-engine's sheet for every build of a league (default: every pinned
+// compare computes pbt-engine's sheet for every build and case of a league (default: every pinned
 // league) with the pinned dataset, from --datasets (directories of datasets, one per league or
 // per version) or else pulled into --cache as data does, and
 // compares it with the stored PoB values for the tree-only build, and the skill outputs, once
@@ -28,7 +28,7 @@
 // scoreboard: per league, layer and group of outputs how many builds pass, fail and are not
 // compared, how many of each kind pass everything, the outputs the engine lacks, and the stats,
 // gems and mechanics it leaves out by the number of builds they appear in, each stat with its
-// text from the --hints file if given. --json writes the list and the scoreboard as JSON.
+// text from the --hints file if given; then the same for the cases, apart. --json writes the list and the scoreboard as JSON.
 //
 // ninja picks builds for a league (default: the current one) from poe.ninja's league named by
 // --overview, such as allflame, and adds them to builds/<league> with their origin: for each

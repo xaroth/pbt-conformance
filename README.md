@@ -85,6 +85,8 @@ go run ./cmd/pbtc compare --cache ~/.cache/pbt-conformance --json > scoreboard.j
 - The outputs the engine lacks in groups it gives other outputs of, by the number of builds.
 - What the engine leaves out as not modelled, by the number of builds it appears in, most first: stats with no meaning yet (`unmodelled-stat` warnings of the tree-only simulation), the gems of the full file (imported, not simulated yet) under the mechanic `skills`, the parts of the full file the importer leaves out, and mechanics a known stat waits for (charges, items, a condition). `--hints` names a JSON file mapping a game stat id to a short text, or to an object whose `hint` field is that text (other fields are ignored), shown beside that stat. Without `--hints` the hint column stays empty.
 
+The cases (`cases/`) follow under a `cases` heading with the same tables, so they never change the builds' counts. In `--json` they are under `cases`.
+
 A build's kind and contents come from `build.json` in its directory; a build without one is `untagged`, and a smoke test such as a level 1 start has `{"smoke": true}` alone, no kind and no contents, and shows as `smoke`. A build taken from poe.ninja also names its origin:
 
 ```json
@@ -118,6 +120,12 @@ go run ./cmd/pbtc pob --cache ~/.cache/pbt-conformance
 The pick is deterministic for a given set of responses. In candidate order, one build per main skill and ascendancy, a candidate is picked while its kind is short of its target (`compare.Targets`; the counted builds already in the league count too). Then candidates of any kind are picked in the same order until the league has `compare.Total` (100) counted builds. Then, for each content short of its quota (`compare.Quotas`), the first unpicked candidate with it replaces the last picked candidate that lacks it, holds no content at or under its own quota, and is of the same kind or of a kind above its target. `--dry-run` prints the picks (kind, main skill, ascendancy, level, contents, source), the counts per kind against the targets, the total, the counts per content and the candidates not picked with the reason, and writes nothing; without it the picks are written as `builds/<league>/<NN>-<class>-L<level>-<ascendancy>-<skill>/` with `pob.xml` and `build.json`, numbered after the existing builds, and `pbtc pob` records them.
 
 Requests go to poe.ninja's builds API (the league index, searches, dictionaries and characters) one at a time with a descriptive User-Agent, at least 1.5 s apart, and back off on 429 and 5xx (honouring `Retry-After`, else from 5 s doubling, six attempts). Responses are cached under `<cache>/ninja/http` by their URL, the league's data version included: a 200 response by its body, a 4xx other than 429 by its status, which later runs return as the same failure. A rerun makes none of those requests again; only a 429 or 5xx that outlasted the retries is asked for again. Cache files are written to a temporary file and renamed, so an interrupted run leaves none half written. PoB's results are cached under `<cache>/ninja/pob/<PoB commit>-<runner id>`, the runner id a hash of the runner and the output keys it reads (`pob.RunnerID`). Delete the cache to read a newer snapshot.
+
+## Cases
+
+`cases/<league>/<name>/` holds builds made for a test, laid out and recorded like the builds: `pbtc pob` derives and records them, and `pbtc compare` compares them and lists their mismatches, triaged the same way. The scoreboard counts them apart, and the kind targets and quotas count the builds only.
+
+The one-gem cases (`one-gem-marauder-L90-<skill>`) are a level 90 Marauder with no passives, no items and one level 20 spell gem without quality or supports, so a difference on the skill layer points at the skill's own numbers: Fireball (fire), Freezing Pulse (cold), Arc (lightning) and Ethereal Knives (physical).
 
 ## Import cases
 
