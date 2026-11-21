@@ -412,10 +412,9 @@
     "reason": "The main skill resolves to another gem level than PoB's: PoB has more levels for the builds in skill-level-of-one-gem. Every hit value of the skill follows, and causes listed in the other spell-hit entries may add to it",
     "evidence": "pob.json's skill-layer mainSkill has another level than the engine resolves for every build here",
     "cases": [
-      {"build": "100-witch-L100-elementalist-glacial-cascade-of-the-fissure", "output": "skill.average_hit", "ours": 18561.407069560002, "pob": 32000.51820728},
+      {"build": "100-witch-L100-elementalist-glacial-cascade-of-the-fissure", "output": "skill.average_hit", "ours": 19049.40864796, "pob": 32000.51820728},
       {"build": "100-witch-L100-elementalist-glacial-cascade-of-the-fissure", "output": "skill.cold_maximum", "ours": 12231.36, "pob": 19918.12},
       {"build": "100-witch-L100-elementalist-glacial-cascade-of-the-fissure", "output": "skill.cold_minimum", "ours": 8153, "pob": 13280.4},
-      {"build": "100-witch-L100-elementalist-glacial-cascade-of-the-fissure", "output": "skill.critical_strike_chance", "ours": 30.87, "pob": 32.67},
       {"build": "105-ranger-L100-deadeye-icicle-mine-of-fanning", "output": "skill.average_hit", "ours": 44948.64391416, "pob": 66051.76893},
       {"build": "105-ranger-L100-deadeye-icicle-mine-of-fanning", "output": "skill.cold_maximum", "ours": 23989.56, "pob": 31930.92},
       {"build": "105-ranger-L100-deadeye-icicle-mine-of-fanning", "output": "skill.cold_minimum", "ours": 15992.76, "pob": 21287.28},
@@ -423,10 +422,10 @@
       {"build": "106-shadow-L100-assassin-icicle-mine-of-fanning", "output": "skill.cold_maximum", "ours": 21199.2, "pob": 84796.8},
       {"build": "106-shadow-L100-assassin-icicle-mine-of-fanning", "output": "skill.cold_minimum", "ours": 14132.8, "pob": 56543.52},
       {"build": "106-shadow-L100-assassin-icicle-mine-of-fanning", "output": "skill.critical_strike_chance", "ours": 23.519999999999996, "pob": 71.952384},
-      {"build": "107-shadow-L100-assassin-ice-trap", "output": "skill.average_hit", "ours": 100997.4884805, "pob": 4391623.9415412},
+      {"build": "107-shadow-L100-assassin-ice-trap", "output": "skill.average_hit", "ours": 118763.45570033998, "pob": 4391623.9415412},
       {"build": "107-shadow-L100-assassin-ice-trap", "output": "skill.cold_maximum", "ours": 65617.2, "pob": 361763.28},
       {"build": "107-shadow-L100-assassin-ice-trap", "output": "skill.cold_minimum", "ours": 43741.43999999999, "pob": 241207.2},
-      {"build": "107-shadow-L100-assassin-ice-trap", "output": "skill.critical_strike_chance", "ours": 18.375, "pob": 96.332775}
+      {"build": "107-shadow-L100-assassin-ice-trap", "output": "skill.critical_strike_chance", "ours": 22.154999999999994, "pob": 96.332775}
     ]
   },
   {
@@ -513,9 +512,9 @@
       {"build": "46-shadow-L100-assassin-storm-burst-of-repulsion", "output": "skill.physical_maximum", "ours": 133.70000000000013, "pob": 2647.3043641255},
       {"build": "46-shadow-L100-assassin-storm-burst-of-repulsion", "output": "skill.physical_minimum", "ours": 89.13750000000007, "pob": 1764.8866831691},
       {"build": "46-shadow-L100-assassin-storm-burst-of-repulsion", "output": "skill.hit_dps", "ours": 113325.955887976, "pob": 3686114.7177573},
-      {"build": "97-templar-L100-hierophant-freezing-pulse", "output": "skill.average_hit", "ours": 7641.7186321875, "pob": 31085.869905937},
-      {"build": "97-templar-L100-hierophant-freezing-pulse", "output": "skill.cold_maximum", "ours": 4550.599999999999, "pob": 17772.96},
-      {"build": "97-templar-L100-hierophant-freezing-pulse", "output": "skill.cold_minimum", "ours": 3034.75, "pob": 11852.91},
+      {"build": "97-templar-L100-hierophant-freezing-pulse", "output": "skill.average_hit", "ours": 8787.82279375, "pob": 31085.869905937},
+      {"build": "97-templar-L100-hierophant-freezing-pulse", "output": "skill.cold_maximum", "ours": 5233.19, "pob": 17772.96},
+      {"build": "97-templar-L100-hierophant-freezing-pulse", "output": "skill.cold_minimum", "ours": 3489.81, "pob": 11852.91},
       {"build": "97-templar-L100-hierophant-freezing-pulse", "output": "skill.critical_strike_chance", "ours": 36.375, "pob": 39.375}
     ]
   },
@@ -544,19 +543,20 @@
     "id": "spell-hit-frenzy-charges",
     "kind": "pending",
     "league": "3.29",
-    "reason": "Ralakesh's Impatience counts the player as having maximum frenzy charges and Badge of the Brotherhood sets maximum frenzy charges to maximum power charges (count_as_having_max_frenzy_charges, maximum_frenzy_charges_is_equal_to_maximum_power_charges); the engine leaves both out, so it counts one frenzy charge where PoB counts 11 or 12, and with them the 4% more damage per frenzy charge and Badge of the Brotherhood's damage per frenzy charge",
-    "evidence": "PoB v2.67.2 has FrenzyCharges 11 (build 101) and 12 (build 102) and Damage MORE 44 and 48 from frenzy charges; the engine's frenzy_charges is 1 and both stats warn unmodelled-stat",
+    "reason": "Ralakesh's Impatience counts the player as having maximum frenzy charges and Badge of the Brotherhood sets maximum frenzy charges to maximum power charges (count_as_having_max_frenzy_charges, maximum_frenzy_charges_is_equal_to_maximum_power_charges); the engine leaves both out, so it counts one frenzy charge where PoB counts 11 or 12, and with them Charged Mines' mine throwing speed per frenzy charge (mine_throwing_speed_+%_per_frenzy_charge), the 4% more damage per frenzy charge and Badge of the Brotherhood's damage per frenzy charge",
+    "evidence": "PoB v2.67.2 has FrenzyCharges 11 (build 101) and 12 (build 102) and Damage MORE 44 and 48 from frenzy charges; the engine's frenzy_charges is 1 and both stats warn unmodelled-stat; with PoB's charge counts the engine's mine laying speed gives PoB's hits per second on 101: 92% increased throwing speed with 1 charge is 172% with 11, and 2.72 / 1.92 is PoB's 15.87 over our 11.2",
     "cases": [
-      {"build": "101-witch-L100-occultist-glacial-cascade-of-the-fissure", "output": "skill.average_hit", "ours": 19040.122330879996, "pob": 39995.0024584},
+      {"build": "101-witch-L100-occultist-glacial-cascade-of-the-fissure", "output": "skill.average_hit", "ours": 19467.479790079997, "pob": 39995.0024584},
       {"build": "101-witch-L100-occultist-glacial-cascade-of-the-fissure", "output": "skill.cold_maximum", "ours": 11220.45, "pob": 22939},
       {"build": "101-witch-L100-occultist-glacial-cascade-of-the-fissure", "output": "skill.cold_minimum", "ours": 7479.99, "pob": 15293.42},
-      {"build": "101-witch-L100-occultist-glacial-cascade-of-the-fissure", "output": "skill.critical_strike_chance", "ours": 19.68, "pob": 20.88},
       {"build": "101-witch-L100-occultist-glacial-cascade-of-the-fissure", "output": "skill.fire_maximum", "ours": 1776.16, "pob": 3158.6},
       {"build": "101-witch-L100-occultist-glacial-cascade-of-the-fissure", "output": "skill.fire_minimum", "ours": 1183.8799999999999, "pob": 2105.28},
       {"build": "101-witch-L100-occultist-glacial-cascade-of-the-fissure", "output": "skill.lightning_maximum", "ours": 1441.6, "pob": 2601},
       {"build": "101-witch-L100-occultist-glacial-cascade-of-the-fissure", "output": "skill.lightning_minimum", "ours": 960.8399999999998, "pob": 1734},
       {"build": "102-shadow-L100-assassin-freezing-pulse", "output": "skill.cold_maximum", "ours": 16501.92, "pob": 21276.54},
-      {"build": "102-shadow-L100-assassin-freezing-pulse", "output": "skill.cold_minimum", "ours": 10872.63, "pob": 14017.89}
+      {"build": "102-shadow-L100-assassin-freezing-pulse", "output": "skill.cold_minimum", "ours": 10872.63, "pob": 14017.89},
+      {"build": "101-witch-L100-occultist-glacial-cascade-of-the-fissure", "output": "skill.hits_per_second", "ours": 11.200000000000001, "pob": 15.866666666667},
+      {"build": "102-shadow-L100-assassin-freezing-pulse", "output": "skill.hits_per_second", "ours": 16.615238095238098, "pob": 23.152380952381}
     ]
   },
   {
@@ -724,8 +724,8 @@
     "reason": "Assassin's critical strike notables from Forbidden Flame and Flesh (assassin_critical_strike_chance_+%_final_vs_enemies_not_on_low_life, assassin_critical_strike_multiplier_+_vs_enemies_not_on_low_life) and the bifurcated critical strike bonus (spell_critical_strikes_bifurcate) are left out. High Impact Mine's double damage and frenzy charges (build 102) add to the average hit",
     "evidence": "PoB v2.67.2 applies CritChance MORE 100 from node 21264, CritMultiplier +100 from node 18335 and a bifurcated crit damage bonus of 34.82% and 39.77% more; our critical strike chance is 0.34 of PoB's. The stats warn unmodelled-stat",
     "cases": [
-      {"build": "102-shadow-L100-assassin-freezing-pulse", "output": "skill.average_hit", "ours": 22502.119627312495, "pob": 99598.34026104},
-      {"build": "102-shadow-L100-assassin-freezing-pulse", "output": "skill.critical_strike_chance", "ours": 27.404999999999994, "pob": 81.432519},
+      {"build": "102-shadow-L100-assassin-freezing-pulse", "output": "skill.average_hit", "ours": 22839.853137937498, "pob": 99598.34026104},
+      {"build": "102-shadow-L100-assassin-freezing-pulse", "output": "skill.critical_strike_chance", "ours": 28.455, "pob": 81.432519},
       {"build": "104-shadow-L100-assassin-exsanguinate", "output": "skill.average_hit", "ours": 60855.08203125, "pob": 188152.50444682},
       {"build": "104-shadow-L100-assassin-exsanguinate", "output": "skill.critical_strike_chance", "ours": 25.83, "pob": 76.632444}
     ]
@@ -1117,7 +1117,45 @@
       {"build": "68-duelist-L100-gladiator-cyclone-of-tumult", "output": "skill.hits_per_second", "ours": 8.7696, "pob": 9.0936},
       {"build": "68-duelist-L100-gladiator-cyclone-of-tumult", "output": "skill.hit_dps", "ours": 601203.8926864082, "pob": 1874293.5189279},
       {"build": "69-duelist-L100-slayer-cyclone", "output": "skill.hits_per_second", "ours": 5.3235, "pob": 5.8812},
-      {"build": "69-duelist-L100-slayer-cyclone", "output": "skill.hit_dps", "ours": 437736.21691101266, "pob": 922368.42622865}
+      {"build": "69-duelist-L100-slayer-cyclone", "output": "skill.hit_dps", "ours": 437736.21691101266, "pob": 922368.42622865},
+      {"build": "27-templar-L35-hierophant-ancestral-bond", "output": "skill.average_hit", "ours": 71.117657, "pob": 109.157334},
+      {"build": "27-templar-L35-hierophant-ancestral-bond", "output": "skill.physical_minimum", "ours": 4, "pob": 5.75},
+      {"build": "27-templar-L35-hierophant-ancestral-bond", "output": "skill.physical_maximum", "ours": 10.75, "pob": 16.25},
+      {"build": "27-templar-L35-hierophant-ancestral-bond", "output": "skill.fire_minimum", "ours": 13.5, "pob": 21},
+      {"build": "27-templar-L35-hierophant-ancestral-bond", "output": "skill.fire_maximum", "ours": 28, "pob": 43},
+      {"build": "27-templar-L35-hierophant-ancestral-bond", "output": "skill.cold_minimum", "ours": 10.5, "pob": 16},
+      {"build": "27-templar-L35-hierophant-ancestral-bond", "output": "skill.cold_maximum", "ours": 22.5, "pob": 34.5},
+      {"build": "27-templar-L35-hierophant-ancestral-bond", "output": "skill.lightning_minimum", "ours": 1.5, "pob": 2.5},
+      {"build": "27-templar-L35-hierophant-ancestral-bond", "output": "skill.lightning_maximum", "ours": 49, "pob": 75.5},
+      {"build": "28-templar-L60-hierophant-ancestral-bond", "output": "skill.average_hit", "ours": 490.633059795, "pob": 913.8088431892},
+      {"build": "28-templar-L60-hierophant-ancestral-bond", "output": "skill.physical_minimum", "ours": 10, "pob": 19.25},
+      {"build": "28-templar-L60-hierophant-ancestral-bond", "output": "skill.physical_maximum", "ours": 18.75, "pob": 36},
+      {"build": "28-templar-L60-hierophant-ancestral-bond", "output": "skill.fire_minimum", "ours": 80.24000000000001, "pob": 149.27},
+      {"build": "28-templar-L60-hierophant-ancestral-bond", "output": "skill.fire_maximum", "ours": 160.48000000000002, "pob": 297.95},
+      {"build": "28-templar-L60-hierophant-ancestral-bond", "output": "skill.cold_minimum", "ours": 69.62, "pob": 129.21},
+      {"build": "28-templar-L60-hierophant-ancestral-bond", "output": "skill.cold_maximum", "ours": 138.65, "pob": 258.42},
+      {"build": "28-templar-L60-hierophant-ancestral-bond", "output": "skill.lightning_minimum", "ours": 8.850000000000001, "pob": 16.52},
+      {"build": "28-templar-L60-hierophant-ancestral-bond", "output": "skill.lightning_maximum", "ours": 220.66000000000003, "pob": 410.64},
+      {"build": "29-templar-L80-hierophant-ancestral-bond", "output": "skill.average_hit", "ours": 2747.2590231264794, "pob": 7505.0966297337},
+      {"build": "29-templar-L80-hierophant-ancestral-bond", "output": "skill.physical_minimum", "ours": 15.75, "pob": 58.5},
+      {"build": "29-templar-L80-hierophant-ancestral-bond", "output": "skill.physical_maximum", "ours": 29.25, "pob": 108.5},
+      {"build": "29-templar-L80-hierophant-ancestral-bond", "output": "skill.fire_minimum", "ours": 248.64, "pob": 672.66},
+      {"build": "29-templar-L80-hierophant-ancestral-bond", "output": "skill.fire_maximum", "ours": 441.78, "pob": 1195.84},
+      {"build": "29-templar-L80-hierophant-ancestral-bond", "output": "skill.cold_minimum", "ours": 48.1, "pob": 130.98},
+      {"build": "29-templar-L80-hierophant-ancestral-bond", "output": "skill.cold_maximum", "ours": 89.54, "pob": 242.72},
+      {"build": "29-templar-L80-hierophant-ancestral-bond", "output": "skill.lightning_minimum", "ours": 58.46, "pob": 159.1},
+      {"build": "29-templar-L80-hierophant-ancestral-bond", "output": "skill.lightning_maximum", "ours": 966.44, "pob": 2616.64},
+      {"build": "30-templar-L90-hierophant-ancestral-bond", "output": "skill.average_hit", "ours": 3926.9242207267994, "pob": 11311.754862966},
+      {"build": "30-templar-L90-hierophant-ancestral-bond", "output": "skill.physical_minimum", "ours": 17.75, "pob": 72},
+      {"build": "30-templar-L90-hierophant-ancestral-bond", "output": "skill.physical_maximum", "ours": 33, "pob": 133.5},
+      {"build": "30-templar-L90-hierophant-ancestral-bond", "output": "skill.fire_minimum", "ours": 378.88, "pob": 1120.36},
+      {"build": "30-templar-L90-hierophant-ancestral-bond", "output": "skill.fire_maximum", "ours": 633.4399999999999, "pob": 1870.72},
+      {"build": "30-templar-L90-hierophant-ancestral-bond", "output": "skill.cold_minimum", "ours": 51.8, "pob": 152.44},
+      {"build": "30-templar-L90-hierophant-ancestral-bond", "output": "skill.cold_maximum", "ours": 95.46, "pob": 282.68},
+      {"build": "30-templar-L90-hierophant-ancestral-bond", "output": "skill.lightning_minimum", "ours": 90.28, "pob": 251.6},
+      {"build": "30-templar-L90-hierophant-ancestral-bond", "output": "skill.lightning_maximum", "ours": 1363.82, "pob": 3791.76},
+      {"build": "98-scion-L100-luminary-artillery-ballista", "output": "skill.accuracy_rating", "ours": 2522, "pob": 2519},
+      {"build": "98-scion-L100-luminary-artillery-ballista", "output": "skill.critical_strike_chance", "ours": 30.6397, "pob": 38.3292}
     ]
   },
   {
@@ -1306,7 +1344,46 @@
       {"build": "35-scion-L90-ascendant-chaos-inoculation", "output": "skill.off_hand_fire_maximum", "ours": 868, "pob": 1722.05},
       {"build": "35-scion-L90-ascendant-chaos-inoculation", "output": "skill.off_hand_fire_minimum", "ours": 104.5, "pob": 207.9},
       {"build": "35-scion-L90-ascendant-chaos-inoculation", "output": "skill.off_hand_physical_maximum", "ours": 233.4, "pob": 462.33},
-      {"build": "35-scion-L90-ascendant-chaos-inoculation", "output": "skill.off_hand_physical_minimum", "ours": 28.200000000000003, "pob": 55.77}
+      {"build": "35-scion-L90-ascendant-chaos-inoculation", "output": "skill.off_hand_physical_minimum", "ours": 28.200000000000003, "pob": 55.77},
+      {"build": "27-templar-L35-hierophant-ancestral-bond", "output": "skill.average_hit", "ours": 52.335507, "pob": 91.937314},
+      {"build": "27-templar-L35-hierophant-ancestral-bond", "output": "skill.physical_minimum", "ours": 3, "pob": 5},
+      {"build": "27-templar-L35-hierophant-ancestral-bond", "output": "skill.physical_maximum", "ours": 8.25, "pob": 14},
+      {"build": "27-templar-L35-hierophant-ancestral-bond", "output": "skill.fire_minimum", "ours": 10, "pob": 17.5},
+      {"build": "27-templar-L35-hierophant-ancestral-bond", "output": "skill.fire_maximum", "ours": 20.5, "pob": 36},
+      {"build": "27-templar-L35-hierophant-ancestral-bond", "output": "skill.cold_minimum", "ours": 7.5, "pob": 13.5},
+      {"build": "27-templar-L35-hierophant-ancestral-bond", "output": "skill.cold_maximum", "ours": 16.5, "pob": 29},
+      {"build": "27-templar-L35-hierophant-ancestral-bond", "output": "skill.lightning_minimum", "ours": 1, "pob": 2},
+      {"build": "27-templar-L35-hierophant-ancestral-bond", "output": "skill.lightning_maximum", "ours": 36, "pob": 63.5},
+      {"build": "28-templar-L60-hierophant-ancestral-bond", "output": "skill.average_hit", "ours": 417.80291038760004, "pob": 859.1377960316},
+      {"build": "28-templar-L60-hierophant-ancestral-bond", "output": "skill.critical_strike_chance", "ours": 27.75216, "pob": 32.40336},
+      {"build": "28-templar-L60-hierophant-ancestral-bond", "output": "skill.physical_minimum", "ours": 10.75, "pob": 20},
+      {"build": "28-templar-L60-hierophant-ancestral-bond", "output": "skill.physical_maximum", "ours": 20.25, "pob": 37.25},
+      {"build": "28-templar-L60-hierophant-ancestral-bond", "output": "skill.fire_minimum", "ours": 60.50000000000001, "pob": 118.25},
+      {"build": "28-templar-L60-hierophant-ancestral-bond", "output": "skill.fire_maximum", "ours": 121.00000000000001, "pob": 235.95},
+      {"build": "28-templar-L60-hierophant-ancestral-bond", "output": "skill.cold_minimum", "ours": 52.8, "pob": 102.3},
+      {"build": "28-templar-L60-hierophant-ancestral-bond", "output": "skill.cold_maximum", "ours": 105.05000000000001, "pob": 204.6},
+      {"build": "28-templar-L60-hierophant-ancestral-bond", "output": "skill.lightning_minimum", "ours": 6.6, "pob": 13.2},
+      {"build": "28-templar-L60-hierophant-ancestral-bond", "output": "skill.lightning_maximum", "ours": 167.2, "pob": 325.6},
+      {"build": "29-templar-L80-hierophant-ancestral-bond", "output": "skill.average_hit", "ours": 1933.6724524400001, "pob": 6072.0505125975},
+      {"build": "29-templar-L80-hierophant-ancestral-bond", "output": "skill.critical_strike_chance", "ours": 61.93525, "pob": 68.23375},
+      {"build": "29-templar-L80-hierophant-ancestral-bond", "output": "skill.physical_minimum", "ours": 20.75, "pob": 65.75},
+      {"build": "29-templar-L80-hierophant-ancestral-bond", "output": "skill.physical_maximum", "ours": 38.25, "pob": 122},
+      {"build": "29-templar-L80-hierophant-ancestral-bond", "output": "skill.fire_minimum", "ours": 157.89000000000001, "pob": 467.4},
+      {"build": "29-templar-L80-hierophant-ancestral-bond", "output": "skill.fire_maximum", "ours": 271.32000000000005, "pob": 800.85},
+      {"build": "29-templar-L80-hierophant-ancestral-bond", "output": "skill.cold_minimum", "ours": 144.78000000000003, "pob": 427.5},
+      {"build": "29-templar-L80-hierophant-ancestral-bond", "output": "skill.cold_maximum", "ours": 253.08000000000004, "pob": 747.84},
+      {"build": "29-templar-L80-hierophant-ancestral-bond", "output": "skill.lightning_minimum", "ours": 22.800000000000004, "pob": 66.69},
+      {"build": "29-templar-L80-hierophant-ancestral-bond", "output": "skill.lightning_maximum", "ours": 307.23, "pob": 908.01},
+      {"build": "30-templar-L90-hierophant-ancestral-bond", "output": "skill.average_hit", "ours": 2541.151049134, "pob": 11356.754997511},
+      {"build": "30-templar-L90-hierophant-ancestral-bond", "output": "skill.critical_strike_chance", "ours": 65.74665, "pob": 72.43275},
+      {"build": "30-templar-L90-hierophant-ancestral-bond", "output": "skill.physical_minimum", "ours": 17.5, "pob": 73.75},
+      {"build": "30-templar-L90-hierophant-ancestral-bond", "output": "skill.physical_maximum", "ours": 32.5, "pob": 136.75},
+      {"build": "30-templar-L90-hierophant-ancestral-bond", "output": "skill.fire_minimum", "ours": 210.33, "pob": 885.96},
+      {"build": "30-templar-L90-hierophant-ancestral-bond", "output": "skill.fire_maximum", "ours": 362.5200000000001, "pob": 1526.97},
+      {"build": "30-templar-L90-hierophant-ancestral-bond", "output": "skill.cold_minimum", "ours": 214.89, "pob": 904.59},
+      {"build": "30-templar-L90-hierophant-ancestral-bond", "output": "skill.cold_maximum", "ours": 333.45000000000005, "pob": 1404.15},
+      {"build": "30-templar-L90-hierophant-ancestral-bond", "output": "skill.lightning_minimum", "ours": 22.230000000000004, "pob": 94.53},
+      {"build": "30-templar-L90-hierophant-ancestral-bond", "output": "skill.lightning_maximum", "ours": 304.38000000000005, "pob": 1282.02}
     ]
   },
   {
@@ -2092,9 +2169,9 @@
       {"build": "one-gem-marauder-L90-arc", "output": "skill.hit_dps", "ours": 566.5, "pob": 1161.325},
       {"build": "one-gem-marauder-L90-arc", "output": "skill.lightning_minimum", "ours": 99, "pob": 203},
       {"build": "one-gem-marauder-L90-arc", "output": "skill.lightning_maximum", "ours": 561, "pob": 1150},
-      {"build": "96-templar-L100-hierophant-arc", "output": "skill.average_hit", "ours": 16873.594320000004, "pob": 90209.85984},
-      {"build": "96-templar-L100-hierophant-arc", "output": "skill.lightning_maximum", "ours": 6276, "pob": 31125.6},
-      {"build": "96-templar-L100-hierophant-arc", "output": "skill.lightning_minimum", "ours": 442.8, "pob": 2196.6}
+      {"build": "96-templar-L100-hierophant-arc", "output": "skill.average_hit", "ours": 19911.383760000004, "pob": 90209.85984},
+      {"build": "96-templar-L100-hierophant-arc", "output": "skill.lightning_maximum", "ours": 7405.799999999999, "pob": 31125.6},
+      {"build": "96-templar-L100-hierophant-arc", "output": "skill.lightning_minimum", "ours": 522.6, "pob": 2196.6}
     ]
   },
   {
@@ -2118,6 +2195,72 @@
     "evidence": "Build 23 has Runebinder (node 42343), so two Penance Brands attach to the enemy; hits per second and average hit agree with PoB's, and our hit DPS is twice PoB's less the average hit difference. PoB v2.65.0's CalcPerform.lua computes the attached count without a DPS multiplier; v2.67.2's CalcOffence.lua multiplies dpsMultiplier by AttachedBrandCount",
     "cases": [
       {"build": "23-witch-L60-elementalist-elemental-overload", "output": "skill.hit_dps", "ours": 2991.4500000000003, "pob": 1757.4975}
+    ]
+  },
+  {
+    "id": "delivery-rate",
+    "kind": "pending",
+    "league": "3.29",
+    "reason": "Hits per second of a skill a totem, trap or mine uses differ from PoB's for speed the engine leaves out: Arcane Surge, which the Hierophant's totems grant (gain_arcane_surge_on_spell_hit_by_you_or_your_totems, 95 to 97); Wilma's Requital's cast speed applied to attack speed (unique_helmet_cast_speed_+%_applies_to_attack_speed_at_%_of_original_value, 29 and 30); and attack speed not traced yet (98); mine throwing speed per frenzy charge is under spell-hit-frenzy-charges (101, 102)",
+    "evidence": "The engine's rate follows PoB's CalcOffence.lua: a trap's 0.6 s and a mine's 0.3 s throw at their speeds, a mine slower by a tenth per extra mine, the uses per trap or mine placed, a totem's rate without the character's action speed. Hits per second agree within 0.1% on the trap, mine and totem builds 27, 28, 99, 100 and 103 to 107; each build here warns unmodelled-stat for the stats named, or for speed stats of its tree and items",
+    "cases": [
+      {"build": "29-templar-L80-hierophant-ancestral-bond", "output": "skill.hits_per_second", "ours": 1.72, "pob": 1.78},
+      {"build": "30-templar-L90-hierophant-ancestral-bond", "output": "skill.hits_per_second", "ours": 1.72, "pob": 1.78},
+      {"build": "95-templar-L100-hierophant-storm-burst-of-repulsion", "output": "skill.hits_per_second", "ours": 7.466666666666668, "pob": 7.6666666666667},
+      {"build": "96-templar-L100-hierophant-arc", "output": "skill.hits_per_second", "ours": 1.8166666666666669, "pob": 2.0166666666667},
+      {"build": "97-templar-L100-hierophant-freezing-pulse", "output": "skill.hits_per_second", "ours": 1.4153846153846155, "pob": 2.2},
+      {"build": "98-scion-L100-luminary-artillery-ballista", "output": "skill.hits_per_second", "ours": 1.5295, "pob": 2.251746}
+    ]
+  },
+  {
+    "id": "delivery-dps-follows-hit",
+    "kind": "pending",
+    "league": "3.29",
+    "reason": "A totem, trap or mine skill's hit DPS follows its average hit and hits per second, which differ from PoB's for the causes triaged on those outputs",
+    "evidence": "Hit DPS is average hit times chance to hit times hits per second; where both agree with PoB's (none of these builds) so does hit DPS",
+    "cases": [
+      {"build": "27-templar-L35-hierophant-ancestral-bond", "output": "skill.hit_dps", "ours": 36.69804446806874, "pob": 168.98169313204},
+      {"build": "28-templar-L60-hierophant-ancestral-bond", "output": "skill.hit_dps", "ours": 492.104958974385, "pob": 5499.3016183126},
+      {"build": "29-templar-L80-hierophant-ancestral-bond", "output": "skill.hit_dps", "ours": 4205.504112602014, "pob": 71337.444484945},
+      {"build": "30-templar-L90-hierophant-ancestral-bond", "output": "skill.hit_dps", "ours": 6078.878693685085, "pob": 108728.58774283},
+      {"build": "95-templar-L100-hierophant-storm-burst-of-repulsion", "output": "skill.hit_dps", "ours": 78480.30237465599, "pob": 1088106.5396854},
+      {"build": "96-templar-L100-hierophant-arc", "output": "skill.hit_dps", "ours": 36172.34716400001, "pob": 181923.217344},
+      {"build": "97-templar-L100-hierophant-freezing-pulse", "output": "skill.hit_dps", "ours": 12438.149185, "pob": 68388.913793062},
+      {"build": "98-scion-L100-luminary-artillery-ballista", "output": "skill.hit_dps", "ours": 0, "pob": 81902.591847565},
+      {"build": "99-marauder-L100-chieftain-fire-trap", "output": "skill.hit_dps", "ours": 43122.59491499999, "pob": 57023.216205},
+      {"build": "100-witch-L100-elementalist-glacial-cascade-of-the-fissure", "output": "skill.hit_dps", "ours": 196250.63635007406, "pob": 329675.4339082},
+      {"build": "101-witch-L100-occultist-glacial-cascade-of-the-fissure", "output": "skill.hit_dps", "ours": 218035.773648896, "pob": 634587.37233995},
+      {"build": "102-shadow-L100-assassin-freezing-pulse", "output": "skill.hit_dps", "ours": 379489.59794710256, "pob": 2305938.7159485},
+      {"build": "103-shadow-L100-trickster-exsanguinate", "output": "skill.hit_dps", "ours": 648578.4875387999, "pob": 921440.78223139},
+      {"build": "104-shadow-L100-assassin-exsanguinate", "output": "skill.hit_dps", "ours": 851246.6831752234, "pob": 2631895.1514882},
+      {"build": "105-ranger-L100-deadeye-icicle-mine-of-fanning", "output": "skill.hit_dps", "ours": 584332.3708840802, "pob": 858672.99609},
+      {"build": "106-shadow-L100-assassin-icicle-mine-of-fanning", "output": "skill.hit_dps", "ours": 445765.9612970668, "pob": 4376458.2009308},
+      {"build": "107-shadow-L100-assassin-ice-trap", "output": "skill.hit_dps", "ours": 479709.3502648131, "pob": 17738647.424673}
+    ]
+  },
+  {
+    "id": "artillery-ballista-conversion",
+    "kind": "pending",
+    "league": "3.29",
+    "reason": "Artillery Ballista converts its damage to fire, and Voltaxic Rift converts lightning damage to chaos; the engine's conversion leaves no damage of any type, PoB's leaves chaos damage",
+    "evidence": "The skill-layer explanation of the lightning hit shows skill_damage_converted_to_fire 100 from the gem and damage_converted_to_chaos 100 from Voltaxic Rift, and every damage type's hit is 0; pob.json gives a chaos hit only",
+    "cases": [
+      {"build": "98-scion-L100-luminary-artillery-ballista", "output": "skill.average_hit", "ours": 0, "pob": 39970.248946434},
+      {"build": "98-scion-L100-luminary-artillery-ballista", "output": "skill.chaos_maximum", "ours": 0, "pob": 29648.8998},
+      {"build": "98-scion-L100-luminary-artillery-ballista", "output": "skill.chaos_minimum", "ours": 0, "pob": 150.1578}
+    ]
+  },
+  {
+    "id": "delivery-dps-follows-hit-3.28",
+    "kind": "pending",
+    "league": "3.28",
+    "reason": "A totem, trap or mine skill's hit DPS follows its average hit and hits per second, which differ from PoB's for the causes triaged on those outputs",
+    "evidence": "Hit DPS is average hit times chance to hit times hits per second; where both agree with PoB's (none of these builds) so does hit DPS",
+    "cases": [
+      {"build": "27-templar-L35-hierophant-ancestral-bond", "output": "skill.hit_dps", "ours": 45.42565001079001, "pob": 228.45029539394},
+      {"build": "28-templar-L60-hierophant-ancestral-bond", "output": "skill.hit_dps", "ours": 914.4870102563791, "pob": 6595.4012624648},
+      {"build": "29-templar-L80-hierophant-ancestral-bond", "output": "skill.hit_dps", "ours": 5817.376226267644, "pob": 95346.247718473},
+      {"build": "30-templar-L90-hierophant-ancestral-bond", "output": "skill.hit_dps", "ours": 8039.896981334081, "pob": 217957.92419466}
     ]
   }
 ]

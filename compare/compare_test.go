@@ -134,7 +134,8 @@ Royal Burgonet</Item></Items></PathOfBuilding>`
 }
 
 // TestRun records PoB's values for the fixture and compares: a Marauder with one life node
-// has no mismatches, and a Spell Totem Fireball in its full file hits as in PoB.
+// has no mismatches, and a Spell Totem Fireball in its full file hits as in PoB and its totem
+// has PoB's life.
 func TestRun(t *testing.T) {
 	t.Parallel()
 	datasets := env(t, "PBT_DATASETS")
@@ -168,16 +169,15 @@ func TestRun(t *testing.T) {
 		t.Errorf("mismatches %+v, want none", ms)
 	}
 	// The engine gives the sheet of the tree and gear layers and, of their defences, spell block,
-	// reservation, a skill's costs and a spell's hit; nothing else.
+	// reservation, a skill's costs, a spell's hit and its rate, and totem life; nothing else.
 	skillGroups := []compare.GroupResult{
 		{Group: pob.GroupSheet, Status: compare.StatusNotCompared}, {Group: pob.GroupReservation, Status: compare.StatusPass},
 		{Group: pob.GroupSkill, Status: compare.StatusIncomplete, Missing: []string{
-			"skill.hits_per_second", "skill.hit_dps", "skill.dot_dps", "skill.ignite_dps", "skill.bleed_dps", "skill.poison_dps",
-			"skill.total_dps",
+			"skill.dot_dps", "skill.ignite_dps", "skill.bleed_dps", "skill.poison_dps", "skill.total_dps",
 		}},
 		{Group: pob.GroupCost, Status: compare.StatusPass},
 		{Group: pob.GroupHitTypes, Status: compare.StatusPass}, {Group: pob.GroupDefence, Status: compare.StatusNotCompared},
-		{Group: pob.GroupDelivery, Status: compare.StatusNotCompared},
+		{Group: pob.GroupDelivery, Status: compare.StatusIncomplete, Missing: []string{"delivery.total_dps"}},
 	}
 	sheetGroups := []compare.GroupResult{
 		{Group: pob.GroupSheet, Status: compare.StatusPass},
