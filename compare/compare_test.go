@@ -168,8 +168,8 @@ func TestRun(t *testing.T) {
 	if ms := compare.Mismatches(bs); len(ms) > 0 {
 		t.Errorf("mismatches %+v, want none", ms)
 	}
-	// The engine gives the sheet of the tree and gear layers and, of their defences, spell block,
-	// reservation, a skill's costs, a spell's hit and its rate, and totem life; nothing else.
+	// The engine gives the sheet of the tree and gear layers and, of their defences, block and spell
+	// block, reservation, a skill's costs, a spell's hit and its rate, and totem life; nothing else.
 	skillGroups := []compare.GroupResult{
 		{Group: pob.GroupSheet, Status: compare.StatusNotCompared}, {Group: pob.GroupReservation, Status: compare.StatusPass},
 		{Group: pob.GroupSkill, Status: compare.StatusIncomplete, Missing: []string{
@@ -183,8 +183,7 @@ func TestRun(t *testing.T) {
 		{Group: pob.GroupSheet, Status: compare.StatusPass},
 		{Group: pob.GroupReservation, Status: compare.StatusPass},
 		{Group: pob.GroupDefence, Status: compare.StatusIncomplete, Missing: []string{
-			"player.block_chance", "player.spell_suppression_chance",
-			"player.life_regeneration_recovery", "player.energy_shield_regeneration_recovery",
+			"player.spell_suppression_chance", "player.life_regeneration_recovery", "player.energy_shield_regeneration_recovery",
 			"player.life_leech_rate", "player.energy_shield_leech_rate", "player.energy_shield_recharge",
 		}},
 	}

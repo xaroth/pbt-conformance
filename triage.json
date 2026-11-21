@@ -143,21 +143,6 @@
     ]
   },
   {
-    "id": "spell-block-per-attack-block",
-    "kind": "pending",
-    "league": "3.29",
-    "reason": "The Block Mastery's \"+1% Chance to Block Spell Damage per 5% Chance to Block Attack Damage\" (spell_block_%_per_5_attack_block): chance to block attack damage is not a sheet value yet, so the engine notes the stat as not applied",
-    "evidence": "Each build holds the mastery effect and chance to block attack damage: nodes with +3% Chance to Block Attack Damage (1675, 24538) in builds 43, 44 and 72, Valako Shieldbearer tattoos (+1% each) in builds 44, 65, 79 and 93. Recorded again with the overrides removed, PoB gives 6% chance to block attack damage and 1% chance to block spell damage on the tree-only sheet of builds 43 and 72. In build 93 mana regeneration follows through Mystic Bulwark (18174, 1% increased Mana Regeneration Rate per 1% Chance to Block Spell Damage): the other increases sum to 60%, so 68% with our 8 spell block against 69% with PoB's 9",
-    "cases": [
-      {"build": "43-duelist-L100-gladiator-wave-of-conviction-of-trarthus", "output": "player.spell_block_chance", "ours": 0, "pob": 1},
-      {"build": "44-duelist-L100-gladiator-detonate-dead-of-scavenging", "output": "player.spell_block_chance", "ours": 0, "pob": 2},
-      {"build": "72-duelist-L100-gladiator-blade-blast", "output": "player.spell_block_chance", "ours": 0, "pob": 1},
-      {"build": "65-witch-L100-elementalist-ethereal-knives", "output": "player.spell_block_chance", "ours": 0, "pob": 2},
-      {"build": "79-witch-L100-necromancer-summon-holy-relic-of-conviction", "output": "player.spell_block_chance", "ours": 0, "pob": 1},
-      {"build": "93-witch-L99-necromancer-animate-weapon-of-ranged-arms", "output": "player.spell_block_chance", "ours": 8, "pob": 9}
-    ]
-  },
-  {
     "id": "spell-block-if-cast-spell-recently",
     "kind": "pending",
     "league": "3.29",
@@ -165,6 +150,95 @@
     "evidence": "PoB counts the 25% on the tree-only sheet; the build's other spell block nodes need a staff or shield, which the engine leaves out and PoB does not count",
     "cases": [
       {"build": "81-templar-L100-guardian-absolution", "output": "player.spell_block_chance", "ours": 0, "pob": 25}
+    ]
+  },
+  {
+    "id": "block-if-attacked-recently-3.28",
+    "kind": "pending",
+    "league": "3.28",
+    "reason": "Ascendant's Guardian node (30919): \"If you've Attacked Recently, you and nearby Allies have +10% Chance to Block Attack Damage\"; the engine notes the stat as not applied, since the condition is not set",
+    "evidence": "PoB counts the 10% on the tree-only and gear sheets without a ticked condition; the engine's chance is 10 below PoB's in every case and you_and_allies_additional_block_%_if_have_attacked_recently shows as an unmodelled-stat warning",
+    "cases": [
+      {"build": "34-scion-L80-ascendant-chaos-inoculation", "output": "player.block_chance", "ours": 0, "pob": 10},
+      {"build": "34-scion-L80-ascendant-chaos-inoculation", "output": "player.block_chance", "layer": "gear", "ours": 20, "pob": 30},
+      {"build": "35-scion-L90-ascendant-chaos-inoculation", "output": "player.block_chance", "ours": 0, "pob": 10},
+      {"build": "35-scion-L90-ascendant-chaos-inoculation", "output": "player.block_chance", "layer": "gear", "ours": 20, "pob": 30}
+    ]
+  },
+  {
+    "id": "block-if-attacked-recently",
+    "kind": "pending",
+    "league": "3.29",
+    "reason": "\"If you've Attacked Recently, you and nearby Allies have +10% Chance to Block Attack Damage\" (Guardian 39728, and Ascendant's Guardian node 30919, in 50 through Forbidden Flame); the engine notes the stat as not applied, since the condition is not set",
+    "evidence": "PoB counts the 10% without a ticked condition, 20% in 35 where Glancing Blows doubles it; the engine's chance is that much below PoB's and you_and_allies_additional_block_%_if_have_attacked_recently shows as an unmodelled-stat warning. In 81 Dawnbreaker's attack_block_%_per_200_fire_hit_damage_taken_recently, a condition too, makes up the rest",
+    "cases": [
+      {"build": "34-scion-L80-ascendant-chaos-inoculation", "output": "player.block_chance", "ours": 0, "pob": 10},
+      {"build": "34-scion-L80-ascendant-chaos-inoculation", "output": "player.block_chance", "layer": "gear", "ours": 32, "pob": 42},
+      {"build": "35-scion-L90-ascendant-chaos-inoculation", "output": "player.block_chance", "ours": 0, "pob": 20},
+      {"build": "50-scion-L100-luminary-ethereal-knives", "output": "player.block_chance", "layer": "gear", "ours": 0, "pob": 10},
+      {"build": "81-templar-L100-guardian-absolution", "output": "player.block_chance", "layer": "gear", "ours": 54, "pob": 75}
+    ]
+  },
+  {
+    "id": "gear-block-at-maximum-endurance-charges",
+    "kind": "pending",
+    "league": "3.29",
+    "reason": "\"+10% Chance to Block Attack Damage while at Maximum Endurance Charges\" (attack_block_%_while_at_max_endurance_charges); the engine notes the stat as not applied, since the condition is not set",
+    "evidence": "the engine's chance is 10 below PoB's in 97 and 20 in 96, where Glancing Blows doubles it; the stat shows as an unmodelled-stat warning in both and no other block stat does",
+    "cases": [
+      {"build": "96-templar-L100-hierophant-arc", "output": "player.block_chance", "layer": "gear", "ours": 50, "pob": 70},
+      {"build": "97-templar-L100-hierophant-freezing-pulse", "output": "player.block_chance", "layer": "gear", "ours": 48, "pob": 58}
+    ]
+  },
+  {
+    "id": "gear-block-red-nightmare",
+    "kind": "pending",
+    "league": "3.29",
+    "reason": "The Red Nightmare: \"Passives granting Fire Resistance or all Elemental Resistances in Radius also grant Chance to Block Attack Damage at 50% of its value\" (local_unique_jewel_fire_resistance_also_grants_block_chance_scaled_%) is left out; spell block that follows attack block (the Block Mastery's per 5%) follows it",
+    "evidence": "every case socket The Red Nightmare and its stat shows as an unmodelled-stat warning; the engine's chance is below PoB's in each and no other unmodelled stat adds chance to block",
+    "cases": [
+      {"build": "25-witch-L90-elementalist-elemental-overload", "output": "player.block_chance", "layer": "gear", "ours": 38, "pob": 48},
+      {"build": "25-witch-L90-elementalist-elemental-overload", "output": "player.spell_block_chance", "layer": "gear", "ours": 42, "pob": 44},
+      {"build": "48-witch-L100-elementalist-fireball", "output": "player.block_chance", "layer": "gear", "ours": 49, "pob": 68},
+      {"build": "49-witch-L100-occultist-fireball", "output": "player.block_chance", "layer": "gear", "ours": 54, "pob": 67},
+      {"build": "73-witch-L100-elementalist-reap", "output": "player.block_chance", "layer": "gear", "ours": 45, "pob": 65},
+      {"build": "73-witch-L100-elementalist-reap", "output": "player.spell_block_chance", "layer": "gear", "ours": 49, "pob": 53},
+      {"build": "84-witch-L100-necromancer-summon-raging-spirit", "output": "player.block_chance", "layer": "gear", "ours": 26, "pob": 35},
+      {"build": "88-templar-L100-guardian-dominating-blow-of-inspiring", "output": "player.block_chance", "layer": "gear", "ours": 64, "pob": 76},
+      {"build": "88-templar-L100-guardian-dominating-blow-of-inspiring", "output": "player.spell_block_chance", "layer": "gear", "ours": 48, "pob": 51}
+    ]
+  },
+  {
+    "id": "gear-shield-block-not-replaced",
+    "kind": "pending",
+    "league": "3.29",
+    "reason": "Determined Survivor (Gladiator, 8419): \"Gain 50% Chance to Block from Equipped Shield instead of the Shield's value\"; PoB keeps The Squire's own 28% here, the engine takes 50%",
+    "evidence": "PoB's 34 is the shield's 28 plus 3 each from nodes 1675 and 24538, the engine's 56 the same with 50 for the shield. PoB replaces the shield's value in 43, 44 and 72, which hold the same node; why it does not here is not traced",
+    "cases": [
+      {"build": "89-duelist-L99-gladiator-dominating-blow-of-inspiring", "output": "player.block_chance", "layer": "gear", "ours": 56, "pob": 34}
+    ]
+  },
+  {
+    "id": "gear-block-untraced",
+    "kind": "pending",
+    "league": "3.29",
+    "reason": "Chance to block below PoB's for a cause not yet traced; mana regeneration per 1% chance to block spell damage (Mystic Bulwark) follows spell block",
+    "evidence": "62: the engine's 61 is the shield's 45, 9 from a Block Mastery effect, 4 from node 65890 and 3 from a jewel; PoB gives 62 with no block stat left out. 64: the engine's chance to block attack damage is Rearguard's 22, its spell block 29; PoB gives 75 for both (the maximum) with no block stat left out but spell_block_%_while_at_max_power_charges",
+    "cases": [
+      {"build": "62-shadow-L100-assassin-cyclone", "output": "player.block_chance", "layer": "gear", "ours": 61, "pob": 62},
+      {"build": "64-shadow-L97-assassin-rain-of-arrows-of-saturation", "output": "player.block_chance", "layer": "gear", "ours": 22, "pob": 75},
+      {"build": "64-shadow-L97-assassin-rain-of-arrows-of-saturation", "output": "player.spell_block_chance", "layer": "gear", "ours": 29, "pob": 66},
+      {"build": "64-shadow-L97-assassin-rain-of-arrows-of-saturation", "output": "player.mana_regeneration", "layer": "gear", "ours": 35.4, "pob": 45}
+    ]
+  },
+  {
+    "id": "gear-spell-block-per-power-charge",
+    "kind": "pending",
+    "league": "3.29",
+    "reason": "Willclash's \"+5% Chance to Block Spell Damage per Power Charge\": the engine counts one Power Charge, PoB ten",
+    "evidence": "the engine's 5 comes from the helmet alone; PoB's 50 is ten times 5, and no other item or node of the build has chance to block spell damage",
+    "cases": [
+      {"build": "58-witch-L100-occultist-cyclone", "output": "player.spell_block_chance", "layer": "gear", "ours": 5, "pob": 50}
     ]
   },
   {
@@ -1485,65 +1559,6 @@
     ]
   },
   {
-    "id": "gear-spell-block-with-attack-block",
-    "kind": "pending",
-    "league": "3.29",
-    "reason": "Block from a held shield: the engine gives no chance to block attack damage, so it leaves out the spell block that follows from attack block (spell_block_%_per_5_attack_block and the like); mana regeneration follows spell block through \"increased Mana Regeneration Rate per 1% Chance to Block Spell Damage\"",
-    "evidence": "PoB gives every case a chance to block attacks on the gear layer and none on the tree-only one; the engine's spell block is below PoB's in every case, spell_block_%_per_5_attack_block shows as an unmodelled-stat warning, and no item warning names spell block",
-    "cases": [
-      {"build": "23-witch-L60-elementalist-elemental-overload", "output": "player.spell_block_chance", "layer": "gear", "ours": 42, "pob": 47},
-      {"build": "24-witch-L80-elementalist-elemental-overload", "output": "player.spell_block_chance", "layer": "gear", "ours": 35, "pob": 41},
-      {"build": "25-witch-L90-elementalist-elemental-overload", "output": "player.spell_block_chance", "layer": "gear", "ours": 35, "pob": 44},
-      {"build": "30-templar-L90-hierophant-ancestral-bond", "output": "player.spell_block_chance", "layer": "gear", "ours": 51, "pob": 60},
-      {"build": "42-scion-L100-reliquarian-lightning-tendrils-of-eccentricity", "output": "player.spell_block_chance", "layer": "gear", "ours": 31, "pob": 42},
-      {"build": "43-duelist-L100-gladiator-wave-of-conviction-of-trarthus", "output": "player.spell_block_chance", "layer": "gear", "ours": 38, "pob": 54},
-      {"build": "44-duelist-L100-gladiator-detonate-dead-of-scavenging", "output": "player.spell_block_chance", "layer": "gear", "ours": 37, "pob": 53},
-      {"build": "45-scion-L100-reliquarian-bladefall-of-trarthus", "output": "player.mana_regeneration", "layer": "gear", "ours": 73.5, "pob": 75.1},
-      {"build": "45-scion-L100-reliquarian-bladefall-of-trarthus", "output": "player.spell_block_chance", "layer": "gear", "ours": 47, "pob": 53},
-      {"build": "52-duelist-L100-slayer-flicker-strike", "output": "player.spell_block_chance", "layer": "gear", "ours": 4, "pob": 18},
-      {"build": "54-duelist-L100-slayer-earthquake", "output": "player.spell_block_chance", "layer": "gear", "ours": 8, "pob": 39},
-      {"build": "58-witch-L100-occultist-cyclone", "output": "player.spell_block_chance", "layer": "gear", "ours": 5, "pob": 50},
-      {"build": "62-shadow-L100-assassin-cyclone", "output": "player.spell_block_chance", "layer": "gear", "ours": 31, "pob": 43},
-      {"build": "64-shadow-L97-assassin-rain-of-arrows-of-saturation", "output": "player.mana_regeneration", "layer": "gear", "ours": 35.4, "pob": 45},
-      {"build": "64-shadow-L97-assassin-rain-of-arrows-of-saturation", "output": "player.spell_block_chance", "layer": "gear", "ours": 29, "pob": 66},
-      {"build": "65-witch-L100-elementalist-ethereal-knives", "output": "player.spell_block_chance", "layer": "gear", "ours": 32, "pob": 45},
-      {"build": "67-duelist-L100-slayer-void-shockwave", "output": "player.spell_block_chance", "layer": "gear", "ours": 31, "pob": 35},
-      {"build": "68-duelist-L100-gladiator-cyclone-of-tumult", "output": "player.spell_block_chance", "layer": "gear", "ours": 10, "pob": 68},
-      {"build": "71-witch-L100-occultist-death-aura", "output": "player.spell_block_chance", "layer": "gear", "ours": 22, "pob": 37},
-      {"build": "72-duelist-L100-gladiator-blade-blast", "output": "player.spell_block_chance", "layer": "gear", "ours": 39, "pob": 55},
-      {"build": "73-witch-L100-elementalist-reap", "output": "player.spell_block_chance", "layer": "gear", "ours": 40, "pob": 53},
-      {"build": "74-duelist-L100-gladiator-corrupting-fever", "output": "player.spell_block_chance", "layer": "gear", "ours": 0, "pob": 52},
-      {"build": "75-witch-L100-elementalist-corrupting-fever", "output": "player.spell_block_chance", "layer": "gear", "ours": 33, "pob": 48},
-      {"build": "79-witch-L100-necromancer-summon-holy-relic-of-conviction", "output": "player.spell_block_chance", "layer": "gear", "ours": 17, "pob": 24},
-      {"build": "82-scion-L100-luminary-absolution", "output": "player.spell_block_chance", "layer": "gear", "ours": 38, "pob": 50},
-      {"build": "83-witch-L100-necromancer-absolution", "output": "player.spell_block_chance", "layer": "gear", "ours": 17, "pob": 22},
-      {"build": "85-templar-L100-guardian-summon-raging-spirit", "output": "player.spell_block_chance", "layer": "gear", "ours": 46, "pob": 70},
-      {"build": "88-templar-L100-guardian-dominating-blow-of-inspiring", "output": "player.spell_block_chance", "layer": "gear", "ours": 36, "pob": 51},
-      {"build": "91-scion-L100-luminary-animate-weapon-of-ranged-arms", "output": "player.spell_block_chance", "layer": "gear", "ours": 35, "pob": 46},
-      {"build": "92-scion-L100-luminary-animate-guardian", "output": "player.spell_block_chance", "layer": "gear", "ours": 61, "pob": 76},
-      {"build": "93-witch-L99-necromancer-animate-weapon-of-ranged-arms", "output": "player.spell_block_chance", "layer": "gear", "ours": 29, "pob": 37},
-      {"build": "93-witch-L99-necromancer-animate-weapon-of-ranged-arms", "output": "player.mana_regeneration", "ours": 42.4, "pob": 42.6},
-      {"build": "93-witch-L99-necromancer-animate-weapon-of-ranged-arms", "output": "player.mana_regeneration", "layer": "gear", "ours": 56.9, "pob": 59.4},
-      {"build": "94-marauder-L100-chieftain-scorching-ray-of-immolation", "output": "player.spell_block_chance", "layer": "gear", "ours": 0, "pob": 15},
-      {"build": "99-marauder-L100-chieftain-fire-trap", "output": "player.spell_block_chance", "layer": "gear", "ours": 0, "pob": 12}
-    ]
-  },
-  {
-    "id": "gear-spell-block-with-attack-block-3.28",
-    "kind": "pending",
-    "league": "3.28",
-    "reason": "Block from a held shield: the engine gives no chance to block attack damage, so it leaves out the spell block that follows from attack block (spell_block_%_per_5_attack_block and the like); mana regeneration follows spell block through \"increased Mana Regeneration Rate per 1% Chance to Block Spell Damage\"",
-    "evidence": "PoB gives every case a chance to block attacks on the gear layer and none on the tree-only one; the engine's spell block is below PoB's in every case, spell_block_%_per_5_attack_block shows as an unmodelled-stat warning, and no item warning names spell block",
-    "cases": [
-      {"build": "04-marauder-L80-chieftain-righteous-fire", "output": "player.spell_block_chance", "layer": "gear", "ours": 0, "pob": 30},
-      {"build": "05-marauder-L90-chieftain-righteous-fire", "output": "player.spell_block_chance", "layer": "gear", "ours": 0, "pob": 30},
-      {"build": "23-witch-L60-elementalist-elemental-overload", "output": "player.spell_block_chance", "layer": "gear", "ours": 34, "pob": 39},
-      {"build": "24-witch-L80-elementalist-elemental-overload", "output": "player.spell_block_chance", "layer": "gear", "ours": 43, "pob": 48},
-      {"build": "24-witch-L80-elementalist-elemental-overload", "output": "player.mana_regeneration", "layer": "gear", "ours": 46.8, "pob": 48},
-      {"build": "25-witch-L90-elementalist-elemental-overload", "output": "player.spell_block_chance", "layer": "gear", "ours": 43, "pob": 51}
-    ]
-  },
-  {
     "id": "gear-timeless-jewel",
     "kind": "pending",
     "league": "3.29",
@@ -1813,14 +1828,15 @@
     "id": "gear-strength-bound-by-destiny",
     "kind": "pending",
     "league": "3.29",
-    "reason": "Bound By Destiny's \"15% increased Strength if 2 Warlord Items are Equipped\" is left out; so Strength is lower, and so is what follows it: life, its regeneration and armour from life",
+    "reason": "Bound By Destiny's \"15% increased Strength if 2 Warlord Items are Equipped\" is left out; so Strength is lower, and so is what follows it: life, its regeneration, armour from life and The Iron Fortress's chance to block attack damage per 50 Strength",
     "evidence": "PoB's breakdown of Strength on 59's gear layer has 1442 base and 119% increased, the engine's 1442 and 104%: the only difference is Bound By Destiny (15%), and 1442 times 2.19 is PoB's 3158, 1442 times 2.04 the engine's 2942. Bound By Destiny's strength_+%_if_2_warlord_items shows as an unmodelled-stat warning. Both Split Personality jewels give PoB's 91 and 82",
     "cases": [
       {"build": "59-templar-L100-hierophant-frenzy", "output": "player.armour", "layer": "gear", "ours": 7747, "pob": 8004},
       {"build": "59-templar-L100-hierophant-frenzy", "output": "player.life", "layer": "gear", "ours": 6187, "pob": 6407},
       {"build": "59-templar-L100-hierophant-frenzy", "output": "player.life_regeneration", "layer": "gear", "ours": 272.2, "pob": 281.9},
       {"build": "59-templar-L100-hierophant-frenzy", "output": "player.strength", "layer": "gear", "ours": 2942, "pob": 3158},
-      {"build": "59-templar-L100-hierophant-frenzy", "output": "player.unreserved_life", "layer": "gear", "ours": 6187, "pob": 6407}
+      {"build": "59-templar-L100-hierophant-frenzy", "output": "player.unreserved_life", "layer": "gear", "ours": 6187, "pob": 6407},
+      {"build": "59-templar-L100-hierophant-frenzy", "output": "player.block_chance", "layer": "gear", "ours": 58, "pob": 63}
     ]
   },
   {
@@ -2028,7 +2044,7 @@
     "reason": "With an \"Inflict Exposure on Hit\" implicit on the gloves PoB gives more mana regeneration; the engine gives none from it",
     "evidence": "removing the gloves moves only PoB's mana regeneration",
     "cases": [
-      {"build": "25-witch-L90-elementalist-elemental-overload", "output": "player.mana_regeneration", "layer": "gear", "ours": 52.8, "pob": 86.3}
+      {"build": "25-witch-L90-elementalist-elemental-overload", "output": "player.mana_regeneration", "layer": "gear", "ours": 54.9, "pob": 86.3}
     ]
   },
   {
