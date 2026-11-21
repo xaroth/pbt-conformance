@@ -1475,7 +1475,7 @@
     "kind": "pending",
     "league": "3.29",
     "reason": "Block from a held shield: the engine gives no chance to block attack damage, so it leaves out the spell block that follows from attack block (spell_block_%_per_5_attack_block and the like); mana regeneration follows spell block through \"increased Mana Regeneration Rate per 1% Chance to Block Spell Damage\"",
-    "evidence": "PoB gives every case a chance to block attacks on the gear layer and none on the tree-only one; the engine's spell block is below PoB's in every case, spell_block_%_per_5_attack_block shows as an unmodelled-stat warning, and no item warning names spell block apart from Svalinn and Rearguard on 64 and 65, which give 15 of their gap (item-spell-block-reading)",
+    "evidence": "PoB gives every case a chance to block attacks on the gear layer and none on the tree-only one; the engine's spell block is below PoB's in every case, spell_block_%_per_5_attack_block shows as an unmodelled-stat warning, and no item warning names spell block",
     "cases": [
       {"build": "23-witch-L60-elementalist-elemental-overload", "output": "player.spell_block_chance", "layer": "gear", "ours": 42, "pob": 47},
       {"build": "24-witch-L80-elementalist-elemental-overload", "output": "player.spell_block_chance", "layer": "gear", "ours": 35, "pob": 41},
@@ -1490,9 +1490,9 @@
       {"build": "54-duelist-L100-slayer-earthquake", "output": "player.spell_block_chance", "layer": "gear", "ours": 8, "pob": 39},
       {"build": "58-witch-L100-occultist-cyclone", "output": "player.spell_block_chance", "layer": "gear", "ours": 5, "pob": 50},
       {"build": "62-shadow-L100-assassin-cyclone", "output": "player.spell_block_chance", "layer": "gear", "ours": 31, "pob": 43},
-      {"build": "64-shadow-L97-assassin-rain-of-arrows-of-saturation", "output": "player.mana_regeneration", "layer": "gear", "ours": 31.6, "pob": 45},
-      {"build": "64-shadow-L97-assassin-rain-of-arrows-of-saturation", "output": "player.spell_block_chance", "layer": "gear", "ours": 14, "pob": 66},
-      {"build": "65-witch-L100-elementalist-ethereal-knives", "output": "player.spell_block_chance", "layer": "gear", "ours": 17, "pob": 45},
+      {"build": "64-shadow-L97-assassin-rain-of-arrows-of-saturation", "output": "player.mana_regeneration", "layer": "gear", "ours": 35.4, "pob": 45},
+      {"build": "64-shadow-L97-assassin-rain-of-arrows-of-saturation", "output": "player.spell_block_chance", "layer": "gear", "ours": 29, "pob": 66},
+      {"build": "65-witch-L100-elementalist-ethereal-knives", "output": "player.spell_block_chance", "layer": "gear", "ours": 32, "pob": 45},
       {"build": "67-duelist-L100-slayer-void-shockwave", "output": "player.spell_block_chance", "layer": "gear", "ours": 31, "pob": 35},
       {"build": "68-duelist-L100-gladiator-cyclone-of-tumult", "output": "player.spell_block_chance", "layer": "gear", "ours": 10, "pob": 68},
       {"build": "71-witch-L100-occultist-death-aura", "output": "player.spell_block_chance", "layer": "gear", "ours": 22, "pob": 37},
@@ -1616,7 +1616,7 @@
       {"build": "48-witch-L100-elementalist-fireball", "output": "player.strength", "layer": "gear", "ours": 133, "pob": 144},
       {"build": "48-witch-L100-elementalist-fireball", "output": "player.unreserved_mana", "layer": "gear", "ours": 1113, "pob": 1070},
       {"build": "49-witch-L100-occultist-fireball", "output": "player.mana", "layer": "gear", "ours": 1712, "pob": 1646},
-      {"build": "49-witch-L100-occultist-fireball", "output": "player.mana_regeneration", "layer": "gear", "ours": 89, "pob": 89.9},
+      {"build": "49-witch-L100-occultist-fireball", "output": "player.mana_regeneration", "layer": "gear", "ours": 93.5, "pob": 89.9},
       {"build": "49-witch-L100-occultist-fireball", "output": "player.strength", "layer": "gear", "ours": 170, "pob": 161},
       {"build": "49-witch-L100-occultist-fireball", "output": "player.unreserved_mana", "layer": "gear", "ours": 1712, "pob": 1646},
       {"build": "58-witch-L100-occultist-cyclone", "output": "player.energy_shield_regeneration", "layer": "gear", "ours": 192.3, "pob": 213.6},
@@ -1756,7 +1756,7 @@
     "cases": [
       {"build": "103-shadow-L100-trickster-exsanguinate", "output": "player.energy_shield", "layer": "gear", "ours": 1336, "pob": 2019},
       {"build": "48-witch-L100-elementalist-fireball", "output": "player.energy_shield", "layer": "gear", "ours": 6406, "pob": 7556},
-      {"build": "49-witch-L100-occultist-fireball", "output": "player.energy_shield", "layer": "gear", "ours": 4681, "pob": 5321},
+      {"build": "49-witch-L100-occultist-fireball", "output": "player.energy_shield", "layer": "gear", "ours": 4868, "pob": 5321},
       {"build": "52-duelist-L100-slayer-flicker-strike", "output": "player.armour", "layer": "gear", "ours": 3824, "pob": 4961},
       {"build": "53-templar-L100-hierophant-kinetic-blast-of-clustering", "output": "player.evasion_rating", "layer": "gear", "ours": 1903, "pob": 4011},
       {"build": "61-shadow-L100-assassin-lancing-steel-of-spraying", "output": "player.energy_shield", "layer": "gear", "ours": 1667, "pob": 2111},
@@ -2349,21 +2349,6 @@
       {"build": "79-witch-L100-necromancer-summon-holy-relic-of-conviction", "output": "import:item-line-ambiguous", "subject": "Asenath's Gentle Touch"},
       {"build": "86-witch-L100-necromancer-animate-guardian-of-smiting", "output": "import:item-line-ambiguous", "subject": "Hyrri's Truth"},
       {"build": "89-duelist-L99-gladiator-dominating-blow-of-inspiring", "output": "import:item-line-ambiguous", "subject": "Watcher's Eye"}
-    ]
-  },
-  {
-    "id": "item-spell-block-reading",
-    "kind": "pending",
-    "league": "3.29",
-    "reason": "Svalinn's and Rearguard's \"15% Chance to Block Spell Damage\" reads as old_do_not_use_spell_block_%_from_assumed_block_value, which the engine does not count as spell block; PoB counts it as base spell block",
-    "evidence": "On the gear layer, build 48 with the line removed keeps 26 spell block, and with it read as base_spell_block_% (written \"+15%\") gives 41, PoB's value; the same read gives 31 on build 49 (PoB's) and raises 64 and 65 by 15, the rest of their gap being block from a held shield (gear-spell-block-with-attack-block)",
-    "cases": [
-      {"build": "48-witch-L100-elementalist-fireball", "output": "import:item-line-ambiguous", "subject": "Svalinn"},
-      {"build": "48-witch-L100-elementalist-fireball", "output": "player.spell_block_chance", "layer": "gear", "ours": 26, "pob": 41},
-      {"build": "49-witch-L100-occultist-fireball", "output": "import:item-line-ambiguous", "subject": "Svalinn"},
-      {"build": "49-witch-L100-occultist-fireball", "output": "player.spell_block_chance", "layer": "gear", "ours": 16, "pob": 31},
-      {"build": "64-shadow-L97-assassin-rain-of-arrows-of-saturation", "output": "import:item-line-ambiguous", "subject": "Rearguard"},
-      {"build": "65-witch-L100-elementalist-ethereal-knives", "output": "import:item-line-ambiguous", "subject": "Svalinn"}
     ]
   },
   {
