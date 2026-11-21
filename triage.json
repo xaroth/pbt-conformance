@@ -524,7 +524,7 @@
     "kind": "pending",
     "league": "3.29",
     "reason": "Reap deals more damage per blood charge (blood_scythe_damage_+%_final_per_charge); the engine does not count blood charges, so it leaves the multiplier out",
-    "evidence": "PoB v2.67.2 applies 297% more damage from Reap at 5 blood charges; ours is 0.23 to 0.24 of PoB's on every output, 1/3.97 within the build's rounding",
+    "evidence": "PoB v2.67.2 applies 297% more damage from Reap at 9 blood charges (5, plus 4 from Vaal Reap), 33% each; ours is 0.23 to 0.24 of PoB's on every output, 1/3.97 within the build's rounding",
     "cases": [
       {"build": "73-witch-L100-elementalist-reap", "output": "skill.average_hit", "ours": 4067.445, "pob": 17174.98302151},
       {"build": "73-witch-L100-elementalist-reap", "output": "skill.chaos_maximum", "ours": 193.89999999999998, "pob": 816.9},
