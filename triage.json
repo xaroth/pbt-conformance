@@ -799,7 +799,7 @@
     "id": "cost-life-instead-of-mana-3.28",
     "kind": "pending",
     "league": "3.28",
-    "reason": "Part of the skill's mana cost is paid as life instead (base_skill_cost_life_instead_of_mana_%, the Life and Mana mastery's effect, and base_attack_skill_cost_life_instead_of_mana_% for attacks); the engine leaves the stats out, so it charges the whole cost as mana and none as life. Builds 24 and 25 also have Inspiration, whose quality the engine applies apart, as in cost-inspiration-quality",
+    "reason": "Part of the skill's mana cost is paid as life instead (base_skill_cost_life_instead_of_mana_%, the Life and Mana mastery's effect, and base_attack_skill_cost_life_instead_of_mana_% for attacks); the engine leaves the stats out, so it charges the whole cost as mana and none as life.",
     "cases": [
       {"build": "08-duelist-L60-slayer-resolute-technique", "output": "skill.life_cost", "ours": 0, "pob": 4},
       {"build": "09-duelist-L80-slayer-resolute-technique", "output": "skill.life_cost", "ours": 0, "pob": 6},
