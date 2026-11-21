@@ -222,23 +222,37 @@
     ]
   },
   {
-    "id": "item-granted-main-skill",
+    "id": "tree-granted-skills-not-simulated",
     "kind": "pending",
     "league": "3.29",
-    "reason": "The main skill is granted by an item (Death's Oath); the importer does not take a main skill an item grants, so it uses the first group, which on the skill layer has only supports enabled, and the engine takes the default attack",
-    "evidence": "Full file: the import note. Skill layer: the engine's main skill is the default attack (Melee), PoB's Death Aura",
+    "reason": "The tree-only build holds the skills its allocated passives grant, as PoB's does: Spectral Tiger (35011), Assassin's Mark (48239), Sentinel of Radiance (4494), Elemental Relic (19641), Primal Aegis (4917), Embrace Madness (30061), Summon Abyssal Constructs (16287). None has a hit the sheet gives, so the simulation warns that it leaves them out; minions and Primal Aegis are not simulated",
+    "evidence": "pbt-engine's Check adds a group for each skill an allocated passive grants. The tree-only files hold no skills, and the warning counts exactly those groups: 1 on most builds, 2 on 81 and 85 (4494, 19641), 3 on 88 (with 35011). The tree-only sheet values do not change",
     "cases": [
-      {"build": "71-witch-L100-occultist-death-aura", "output": "import:pob-main-skill-ignored", "subject": "Death Aura"},
-      {"build": "71-witch-L100-occultist-death-aura", "output": "skill.average_hit", "ours": 25.7348, "pob": 0},
-      {"build": "71-witch-L100-occultist-death-aura", "output": "skill.accuracy_rating", "ours": 592},
-      {"build": "71-witch-L100-occultist-death-aura", "output": "skill.hit_chance", "ours": 48, "pob": 100},
-      {"build": "71-witch-L100-occultist-death-aura", "output": "skill.critical_strike_chance", "ours": 3.84, "pob": 0},
-      {"build": "71-witch-L100-occultist-death-aura", "output": "skill.hits_per_second", "ours": 1.6239999999999999, "pob": 1.18},
-      {"build": "71-witch-L100-occultist-death-aura", "output": "skill.hit_dps", "ours": 20.060791295999998, "pob": 0},
-      {"build": "71-witch-L100-occultist-death-aura", "output": "skill.physical_minimum", "ours": 17.75, "pob": 0},
-      {"build": "71-witch-L100-occultist-death-aura", "output": "skill.physical_maximum", "ours": 32.75, "pob": 0},
-      {"build": "71-witch-L100-occultist-death-aura", "output": "skill.dot_dps", "ours": 76.8761950092387, "pob": 85716.86409216},
-      {"build": "71-witch-L100-occultist-death-aura", "output": "skill.ignite_dps", "ours": 76.8761950092387, "pob": 0}
+      {"build": "100-witch-L100-elementalist-glacial-cascade-of-the-fissure", "output": "warning:skills-not-simulated", "subject": "skills"},
+      {"build": "46-shadow-L100-assassin-storm-burst-of-repulsion", "output": "warning:skills-not-simulated", "subject": "skills"},
+      {"build": "53-templar-L100-hierophant-kinetic-blast-of-clustering", "output": "warning:skills-not-simulated", "subject": "skills"},
+      {"build": "55-duelist-L100-champion-void-shockwave", "output": "warning:skills-not-simulated", "subject": "skills"},
+      {"build": "59-templar-L100-hierophant-frenzy", "output": "warning:skills-not-simulated", "subject": "skills"},
+      {"build": "61-shadow-L100-assassin-lancing-steel-of-spraying", "output": "warning:skills-not-simulated", "subject": "skills"},
+      {"build": "62-shadow-L100-assassin-cyclone", "output": "warning:skills-not-simulated", "subject": "skills"},
+      {"build": "64-shadow-L97-assassin-rain-of-arrows-of-saturation", "output": "warning:skills-not-simulated", "subject": "skills"},
+      {"build": "66-duelist-L100-champion-flicker-strike", "output": "warning:skills-not-simulated", "subject": "skills"},
+      {"build": "68-duelist-L100-gladiator-cyclone-of-tumult", "output": "warning:skills-not-simulated", "subject": "skills"},
+      {"build": "80-witch-L100-occultist-summon-holy-relic-of-conviction", "output": "warning:skills-not-simulated", "subject": "skills"},
+      {"build": "81-templar-L100-guardian-absolution", "output": "warning:skills-not-simulated", "subject": "skills"},
+      {"build": "85-templar-L100-guardian-summon-raging-spirit", "output": "warning:skills-not-simulated", "subject": "skills"},
+      {"build": "88-templar-L100-guardian-dominating-blow-of-inspiring", "output": "warning:skills-not-simulated", "subject": "skills"},
+      {"build": "89-duelist-L99-gladiator-dominating-blow-of-inspiring", "output": "warning:skills-not-simulated", "subject": "skills"}
+    ]
+  },
+  {
+    "id": "death-aura-dot",
+    "kind": "pending",
+    "league": "3.29",
+    "reason": "Death Aura, granted by the body armour (Death's Oath) and the main skill, now resolves with the armour's supports; the engine's damage over time is less than half of PoB's",
+    "evidence": "Skill layer: the engine's main skill is DeathAura level 20 with Less Duration, Lifetap, Void Manipulation, Efficacy and Swift Affliction, as PoB lists them, and Concentrated Effect, which PoB leaves off. Not investigated further",
+    "cases": [
+      {"build": "71-witch-L100-occultist-death-aura", "output": "skill.dot_dps", "ours": 36871.83359999999, "pob": 85716.86409216}
     ]
   },
   {
