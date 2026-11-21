@@ -440,7 +440,7 @@
       {"build": "38-ranger-L100-deadeye-ethereal-knives", "output": "skill.chaos_minimum", "ours": 440.2200000000001, "pob": 1662.716},
       {"build": "38-ranger-L100-deadeye-ethereal-knives", "output": "skill.fire_maximum", "ours": 74.77799999999999, "pob": 278.6025},
       {"build": "38-ranger-L100-deadeye-ethereal-knives", "output": "skill.fire_minimum", "ours": 53.361, "pob": 179.1405},
-      {"build": "38-ranger-L100-deadeye-ethereal-knives", "output": "skill.hit_dps", "ours": 67291.36468042636, "pob": 245009.7640188},
+      {"build": "38-ranger-L100-deadeye-ethereal-knives", "output": "skill.hit_dps", "ours": 77619.80670114295, "pob": 245009.7640188},
       {"build": "38-ranger-L100-deadeye-ethereal-knives", "output": "skill.lightning_maximum", "ours": 128.13899999999998, "pob": 191.1195},
       {"build": "38-ranger-L100-deadeye-ethereal-knives", "output": "skill.lightning_minimum", "ours": 15.972000000000001, "pob": 23.958},
       {"build": "38-ranger-L100-deadeye-ethereal-knives", "output": "skill.physical_maximum", "ours": 16748.23321997912, "pob": 44435.6},
@@ -456,7 +456,7 @@
       {"build": "41-ranger-L100-deadeye-ethereal-knives-of-the-massacre", "output": "skill.chaos_minimum", "ours": 63.7, "pob": 88.9},
       {"build": "41-ranger-L100-deadeye-ethereal-knives-of-the-massacre", "output": "skill.cold_maximum", "ours": 99.96, "pob": 467.67},
       {"build": "41-ranger-L100-deadeye-ethereal-knives-of-the-massacre", "output": "skill.cold_minimum", "ours": 76.5, "pob": 309.06},
-      {"build": "41-ranger-L100-deadeye-ethereal-knives-of-the-massacre", "output": "skill.hit_dps", "ours": 16983.24649317009, "pob": 38126.839593913},
+      {"build": "41-ranger-L100-deadeye-ethereal-knives-of-the-massacre", "output": "skill.hit_dps", "ours": 19309.718615522157, "pob": 38126.839593913},
       {"build": "41-ranger-L100-deadeye-ethereal-knives-of-the-massacre", "output": "skill.lightning_maximum", "ours": 3984.63, "pob": 7717.32},
       {"build": "41-ranger-L100-deadeye-ethereal-knives-of-the-massacre", "output": "skill.lightning_minimum", "ours": 2250.12, "pob": 3919.35},
       {"build": "41-ranger-L100-deadeye-ethereal-knives-of-the-massacre", "output": "skill.physical_maximum", "ours": 626.7, "pob": 1101.2},
@@ -476,19 +476,13 @@
     "id": "spell-hit-arcane-surge",
     "kind": "pending",
     "league": "3.29",
-    "reason": "The Arcane Surge support gives more spell damage and cast speed while the player has Arcane Surge (support_arcane_surge_spell_damage_+%_final_while_you_have_arcane_surge, support_arcane_surge_cast_speed_+%); the engine leaves both out. For build 47, Void Manipulation's more chaos damage and Crown of the Inward Eye's mana and energy shield modifiers applying to damage add to the gap",
-    "evidence": "Every build here has the support linked to its main skill and warns unmodelled-stat for both stats. PoB v2.67.2 applies the support's more damage (34% to 42%) and cast speed as Arcane Surge is on by default; our hits per second are 0.74 to 0.91 of PoB's. Build 47: PoB has Void Manipulation's 34% more chaos damage and 24% and 40% increased damage (Transfiguration of Mind and Soul), which the engine warns unmodelled-stat for",
+    "reason": "The Arcane Surge support gives more spell damage while the player has Arcane Surge (support_arcane_surge_spell_damage_+%_final_while_you_have_arcane_surge); the engine gives Arcane Surge's cast speed but leaves the more damage out. Void Manipulation's more chaos damage and Crown of the Inward Eye's mana and energy shield modifiers applying to damage add to the gap",
+    "evidence": "The build has the support linked to its main skill and warns unmodelled-stat for the stat; its hits per second agree with PoB v2.67.2's, which has Arcane Surge on. PoB has Void Manipulation's 34% more chaos damage and 24% and 40% increased damage (Transfiguration of Mind and Soul), which the engine warns unmodelled-stat for",
     "cases": [
-      {"build": "38-ranger-L100-deadeye-ethereal-knives", "output": "skill.hits_per_second", "ours": 3.8700000000000006, "pob": 4.464},
-      {"build": "39-templar-L100-inquisitor-penance-brand", "output": "skill.hits_per_second", "ours": 1.47, "pob": 1.62},
-      {"build": "41-ranger-L100-deadeye-ethereal-knives-of-the-massacre", "output": "skill.hits_per_second", "ours": 2.1024, "pob": 2.3904},
-      {"build": "42-scion-L100-reliquarian-lightning-tendrils-of-eccentricity", "output": "skill.hits_per_second", "ours": 10.349999999999998, "pob": 11.35},
-      {"build": "46-shadow-L100-assassin-storm-burst-of-repulsion", "output": "skill.hits_per_second", "ours": 11.466666666666667, "pob": 15.466666666667},
       {"build": "47-witch-L100-occultist-essence-drain", "output": "skill.average_hit", "ours": 24470.949999999997, "pob": 61959.6909},
       {"build": "47-witch-L100-occultist-essence-drain", "output": "skill.chaos_maximum", "ours": 29189.999999999996, "pob": 73908},
       {"build": "47-witch-L100-occultist-essence-drain", "output": "skill.chaos_minimum", "ours": 19460, "pob": 49272.3},
-      {"build": "47-witch-L100-occultist-essence-drain", "output": "skill.hit_dps", "ours": 72364.095, "pob": 200926.42620429},
-      {"build": "47-witch-L100-occultist-essence-drain", "output": "skill.hits_per_second", "ours": 2.9571428571428573, "pob": 3.2428571428571}
+      {"build": "47-witch-L100-occultist-essence-drain", "output": "skill.hit_dps", "ours": 79355.795, "pob": 200926.42620429}
     ]
   },
   {
@@ -504,14 +498,14 @@
       {"build": "39-templar-L100-inquisitor-penance-brand", "output": "skill.lightning_minimum", "ours": 27059.76, "pob": 289388.484},
       {"build": "39-templar-L100-inquisitor-penance-brand", "output": "skill.physical_maximum", "ours": 3941.9333266279045, "pob": 79692.728473525},
       {"build": "39-templar-L100-inquisitor-penance-brand", "output": "skill.physical_minimum", "ours": 2628.088564981665, "pob": 53130.826482173},
-      {"build": "39-templar-L100-inquisitor-penance-brand", "output": "skill.hit_dps", "ours": 216600.23770926628, "pob": 4830620.490299},
+      {"build": "39-templar-L100-inquisitor-penance-brand", "output": "skill.hit_dps", "ours": 238702.3027816404, "pob": 4830620.490299},
       {"build": "46-shadow-L100-assassin-storm-burst-of-repulsion", "output": "skill.average_hit", "ours": 9883.07754837, "pob": 238326.38261362},
       {"build": "46-shadow-L100-assassin-storm-burst-of-repulsion", "output": "skill.critical_strike_chance", "ours": 16.715999999999998, "pob": 30.63775344},
       {"build": "46-shadow-L100-assassin-storm-burst-of-repulsion", "output": "skill.lightning_maximum", "ours": 6726.5, "pob": 97236},
       {"build": "46-shadow-L100-assassin-storm-burst-of-repulsion", "output": "skill.lightning_minimum", "ours": 4484, "pob": 64824},
       {"build": "46-shadow-L100-assassin-storm-burst-of-repulsion", "output": "skill.physical_maximum", "ours": 133.70000000000013, "pob": 2647.3043641255},
       {"build": "46-shadow-L100-assassin-storm-burst-of-repulsion", "output": "skill.physical_minimum", "ours": 89.13750000000007, "pob": 1764.8866831691},
-      {"build": "46-shadow-L100-assassin-storm-burst-of-repulsion", "output": "skill.hit_dps", "ours": 113325.955887976, "pob": 3686114.7177573},
+      {"build": "46-shadow-L100-assassin-storm-burst-of-repulsion", "output": "skill.hit_dps", "ours": 126503.39261913601, "pob": 3686114.7177573},
       {"build": "97-templar-L100-hierophant-freezing-pulse", "output": "skill.average_hit", "ours": 8787.82279375, "pob": 31085.869905937},
       {"build": "97-templar-L100-hierophant-freezing-pulse", "output": "skill.cold_maximum", "ours": 5233.19, "pob": 17772.96},
       {"build": "97-templar-L100-hierophant-freezing-pulse", "output": "skill.cold_minimum", "ours": 3489.81, "pob": 11852.91},
@@ -543,8 +537,8 @@
     "id": "spell-hit-frenzy-charges",
     "kind": "pending",
     "league": "3.29",
-    "reason": "Ralakesh's Impatience counts the player as having maximum frenzy charges and Badge of the Brotherhood sets maximum frenzy charges to maximum power charges (count_as_having_max_frenzy_charges, maximum_frenzy_charges_is_equal_to_maximum_power_charges); the engine leaves both out, so it counts one frenzy charge where PoB counts 11 or 12, and with them Charged Mines' mine throwing speed per frenzy charge (mine_throwing_speed_+%_per_frenzy_charge), the 4% more damage per frenzy charge and Badge of the Brotherhood's damage per frenzy charge",
-    "evidence": "PoB v2.67.2 has FrenzyCharges 11 (build 101) and 12 (build 102) and Damage MORE 44 and 48 from frenzy charges; the engine's frenzy_charges is 1 and both stats warn unmodelled-stat; with PoB's charge counts the engine's mine laying speed gives PoB's hits per second on 101: 92% increased throwing speed with 1 charge is 172% with 11, and 2.72 / 1.92 is PoB's 15.87 over our 11.2",
+    "reason": "Ralakesh's Impatience counts the player as having maximum frenzy charges and Badge of the Brotherhood sets maximum frenzy charges to maximum power charges (count_as_having_max_frenzy_charges, maximum_frenzy_charges_is_equal_to_maximum_power_charges); the engine leaves both out, so it counts one frenzy charge where PoB counts 11 or 12, and with them Charged Mines' mine throwing speed per frenzy charge (mine_throwing_speed_+%_per_frenzy_charge), the 4% more damage per frenzy charge and Badge of the Brotherhood's damage per frenzy charge; on 46, the 4% increased cast speed per frenzy charge with the 10 charges PoB counts",
+    "evidence": "PoB v2.67.2 has FrenzyCharges 11 (build 101) and 12 (build 102) and Damage MORE 44 and 48 from frenzy charges; the engine's frenzy_charges is 1 and both stats warn unmodelled-stat; with PoB's charge counts the engine's mine laying speed gives PoB's hits per second on 101: 92% increased throwing speed with 1 charge is 172% with 11, and 2.72 / 1.92 is PoB's 15.87 over our 11.2. Build 46: PoB's cast speed has 40% from 10 frenzy charges that ours lacks, 132% against our 92%, and 2.32 / 1.92 is PoB's 15.47 over our 12.8",
     "cases": [
       {"build": "101-witch-L100-occultist-glacial-cascade-of-the-fissure", "output": "skill.average_hit", "ours": 19467.479790079997, "pob": 39995.0024584},
       {"build": "101-witch-L100-occultist-glacial-cascade-of-the-fissure", "output": "skill.cold_maximum", "ours": 11220.45, "pob": 22939},
@@ -556,7 +550,8 @@
       {"build": "102-shadow-L100-assassin-freezing-pulse", "output": "skill.cold_maximum", "ours": 16501.92, "pob": 21276.54},
       {"build": "102-shadow-L100-assassin-freezing-pulse", "output": "skill.cold_minimum", "ours": 10872.63, "pob": 14017.89},
       {"build": "101-witch-L100-occultist-glacial-cascade-of-the-fissure", "output": "skill.hits_per_second", "ours": 11.200000000000001, "pob": 15.866666666667},
-      {"build": "102-shadow-L100-assassin-freezing-pulse", "output": "skill.hits_per_second", "ours": 16.615238095238098, "pob": 23.152380952381}
+      {"build": "102-shadow-L100-assassin-freezing-pulse", "output": "skill.hits_per_second", "ours": 16.615238095238098, "pob": 23.152380952381},
+      {"build": "46-shadow-L100-assassin-storm-burst-of-repulsion", "output": "skill.hits_per_second", "ours": 12.8, "pob": 15.466666666667}
     ]
   },
   {
@@ -583,7 +578,7 @@
       {"build": "48-witch-L100-elementalist-fireball", "output": "skill.chaos_minimum", "ours": 1652.6999999999998, "pob": 2109.1},
       {"build": "48-witch-L100-elementalist-fireball", "output": "skill.fire_maximum", "ours": 82328.25, "pob": 186417},
       {"build": "48-witch-L100-elementalist-fireball", "output": "skill.fire_minimum", "ours": 54892.32, "pob": 124292.85},
-      {"build": "48-witch-L100-elementalist-fireball", "output": "skill.hit_dps", "ours": 457562.207131952, "pob": 1291788.0511512},
+      {"build": "48-witch-L100-elementalist-fireball", "output": "skill.hit_dps", "ours": 564326.7221294075, "pob": 1291788.0511512},
       {"build": "99-marauder-L100-chieftain-fire-trap", "output": "skill.average_hit", "ours": 28748.396609999996, "pob": 38015.47747},
       {"build": "99-marauder-L100-chieftain-fire-trap", "output": "skill.chaos_maximum", "ours": 2883.3, "pob": 3812.9},
       {"build": "99-marauder-L100-chieftain-fire-trap", "output": "skill.chaos_minimum", "ours": 1922.1999999999998, "pob": 2542.4},
@@ -634,7 +629,7 @@
       {"build": "42-scion-L100-reliquarian-lightning-tendrils-of-eccentricity", "output": "skill.critical_strike_chance", "ours": 1.8408000000000004, "pob": 21.47264},
       {"build": "42-scion-L100-reliquarian-lightning-tendrils-of-eccentricity", "output": "skill.lightning_maximum", "ours": 10449.936000000002, "pob": 626767.1025},
       {"build": "42-scion-L100-reliquarian-lightning-tendrils-of-eccentricity", "output": "skill.lightning_minimum", "ours": 221.08800000000002, "pob": 13249.635},
-      {"build": "42-scion-L100-reliquarian-lightning-tendrils-of-eccentricity", "output": "skill.hit_dps", "ours": 60152.752125516956, "pob": 7414642.3864854}
+      {"build": "42-scion-L100-reliquarian-lightning-tendrils-of-eccentricity", "output": "skill.hit_dps", "ours": 65964.61223426257, "pob": 7414642.3864854}
     ]
   },
   {
@@ -768,16 +763,6 @@
     "cases": [
       {"build": "104-shadow-L100-assassin-exsanguinate", "output": "skill.cold_maximum", "ours": 42186.6, "pob": 45545.76},
       {"build": "104-shadow-L100-assassin-exsanguinate", "output": "skill.cold_minimum", "ours": 28125.9, "pob": 30365.712}
-    ]
-  },
-  {
-    "id": "spell-hit-elemental-skill-speed",
-    "kind": "pending",
-    "league": "3.29",
-    "reason": "Attack and cast speed with elemental skills from the build's cluster jewel passives (attack_and_cast_speed_+%_with_elemental_skills) is left out",
-    "evidence": "Fourteen cluster passives warn unmodelled-stat for the stat; our hits per second are 0.81 of PoB v2.67.2's",
-    "cases": [
-      {"build": "48-witch-L100-elementalist-fireball", "output": "skill.hits_per_second", "ours": 5.2, "pob": 6.4133333333333}
     ]
   },
   {
@@ -1072,11 +1057,9 @@
       {"build": "59-templar-L100-hierophant-frenzy", "output": "skill.chaos_minimum", "ours": 0, "pob": 1216.8},
       {"build": "59-templar-L100-hierophant-frenzy", "output": "skill.critical_strike_chance", "ours": 31.823999999999998, "pob": 46.224},
       {"build": "59-templar-L100-hierophant-frenzy", "output": "skill.hit_dps", "ours": 0, "pob": 245869.99484309},
-      {"build": "59-templar-L100-hierophant-frenzy", "output": "skill.hits_per_second", "ours": 2.664, "pob": 2.701},
       {"build": "60-templar-L100-inquisitor-lancing-steel-of-spraying", "output": "skill.critical_strike_chance", "ours": 7.749252, "pob": 66.053148},
       {"build": "61-shadow-L100-assassin-lancing-steel-of-spraying", "output": "skill.average_hit", "ours": 806.7690405637501, "pob": 914.19571371186},
-      {"build": "61-shadow-L100-assassin-lancing-steel-of-spraying", "output": "skill.hit_dps", "ours": 1485.7587734068509, "pob": 1708.4782040476},
-      {"build": "61-shadow-L100-assassin-lancing-steel-of-spraying", "output": "skill.hits_per_second", "ours": 1.841616, "pob": 1.868832},
+      {"build": "61-shadow-L100-assassin-lancing-steel-of-spraying", "output": "skill.hit_dps", "ours": 1507.7157996148344, "pob": 1708.4782040476},
       {"build": "61-shadow-L100-assassin-lancing-steel-of-spraying", "output": "skill.lightning_maximum", "ours": 405, "pob": 420.7693635},
       {"build": "61-shadow-L100-assassin-lancing-steel-of-spraying", "output": "skill.lightning_minimum", "ours": 17.5, "pob": 18.18139225},
       {"build": "61-shadow-L100-assassin-lancing-steel-of-spraying", "output": "skill.physical_maximum", "ours": 150, "pob": 129.8670875},
@@ -1111,10 +1094,9 @@
       {"build": "69-duelist-L100-slayer-cyclone", "output": "skill.average_hit", "ours": 97889.46068219814, "pob": 186706.3949997},
       {"build": "69-duelist-L100-slayer-cyclone", "output": "skill.physical_maximum", "ours": 32156.661696458505, "pob": 74391.899754362},
       {"build": "69-duelist-L100-slayer-cyclone", "output": "skill.physical_minimum", "ours": 15706.342353231812, "pob": 36335.037476723},
-      {"build": "58-witch-L100-occultist-cyclone", "output": "skill.hits_per_second", "ours": 8.439, "pob": 9.1605},
-      {"build": "58-witch-L100-occultist-cyclone", "output": "skill.hit_dps", "ours": 444.51646280565, "pob": 87269.385566411},
-      {"build": "62-shadow-L100-assassin-cyclone", "output": "skill.hits_per_second", "ours": 7.265999999999999, "pob": 7.434},
-      {"build": "62-shadow-L100-assassin-cyclone", "output": "skill.hit_dps", "ours": 928.0608406969199, "pob": 5602.0405231708},
+      {"build": "58-witch-L100-occultist-cyclone", "output": "skill.hits_per_second", "ours": 8.5695, "pob": 9.1605},
+      {"build": "58-witch-L100-occultist-cyclone", "output": "skill.hit_dps", "ours": 451.39042872532497, "pob": 87269.385566411},
+      {"build": "62-shadow-L100-assassin-cyclone", "output": "skill.hit_dps", "ours": 949.51889481708, "pob": 5602.0405231708},
       {"build": "68-duelist-L100-gladiator-cyclone-of-tumult", "output": "skill.hits_per_second", "ours": 8.7696, "pob": 9.0936},
       {"build": "68-duelist-L100-gladiator-cyclone-of-tumult", "output": "skill.hit_dps", "ours": 601203.8926864082, "pob": 1874293.5189279},
       {"build": "69-duelist-L100-slayer-cyclone", "output": "skill.hits_per_second", "ours": 5.3235, "pob": 5.8812},
@@ -1460,7 +1442,7 @@
     "reason": "PoB's damage over time for Essence Drain adds more than one instance of the skill's own damage over time; the engine gives one. Its poison, which the total adds too, starts from a hit that differs (poison-hit-differs)",
     "evidence": "PoB's TotalDotDPS sums the skill's damage over time with its ailments (CalcOffence.lua), and its poison (TotalPoisonDPS) is less than the difference",
     "cases": [
-      {"build": "47-witch-L100-occultist-essence-drain", "output": "skill.dot_dps", "ours": 244761.73051499858, "pob": 793463.22043517}
+      {"build": "47-witch-L100-occultist-essence-drain", "output": "skill.dot_dps", "ours": 249990.86994323856, "pob": 793463.22043517}
     ]
   },
   {
@@ -1485,7 +1467,7 @@
     "reason": "Essence Drain's poison starts from its hit, whose chaos damage and rate differ from PoB's for the causes triaged on its hit outputs (spell-hit-unmodelled-stats)",
     "evidence": "The build's skill-layer hit outputs differ from PoB's and are triaged",
     "cases": [
-      {"build": "47-witch-L100-occultist-essence-drain", "output": "skill.poison_dps", "ours": 54121.593082283995, "pob": 35092.6884}
+      {"build": "47-witch-L100-occultist-essence-drain", "output": "skill.poison_dps", "ours": 59350.732510524, "pob": 35092.6884}
     ]
   },
   {
@@ -1545,10 +1527,10 @@
     "reason": "The skill's ignite starts from its hit, whose fire damage, critical strike chance or rate differs from PoB's for the causes triaged on its hit outputs (attack-hit-unmodelled-stats and others); its damage over time is the ignite, and for Reap also the skill's own damage over time, which differs too",
     "evidence": "Each build's skill-layer hit outputs differ from PoB's and are triaged; PoB's TotalDotDPS equals its IgniteDPS, Reap's apart. Built Path of Building files whose hit agrees give PoB's ignite to within 0.1%",
     "cases": [
-      {"build": "38-ranger-L100-deadeye-ethereal-knives", "output": "skill.dot_dps", "ours": 23.139413782604283, "pob": 79.15558450499},
-      {"build": "38-ranger-L100-deadeye-ethereal-knives", "output": "skill.ignite_dps", "ours": 23.139413782604283, "pob": 79.15558450499},
-      {"build": "48-witch-L100-elementalist-fireball", "output": "skill.dot_dps", "ours": 60823.95975008505, "pob": 57165.494551739},
-      {"build": "48-witch-L100-elementalist-fireball", "output": "skill.ignite_dps", "ours": 60823.95975008505, "pob": 57165.494551739},
+      {"build": "38-ranger-L100-deadeye-ethereal-knives", "output": "skill.dot_dps", "ours": 23.325285641436587, "pob": 79.15558450499},
+      {"build": "38-ranger-L100-deadeye-ethereal-knives", "output": "skill.ignite_dps", "ours": 23.325285641436587, "pob": 79.15558450499},
+      {"build": "48-witch-L100-elementalist-fireball", "output": "skill.dot_dps", "ours": 61515.32725222826, "pob": 57165.494551739},
+      {"build": "48-witch-L100-elementalist-fireball", "output": "skill.ignite_dps", "ours": 61515.32725222826, "pob": 57165.494551739},
       {"build": "50-scion-L100-luminary-ethereal-knives", "output": "skill.dot_dps", "ours": 4478.274698688409, "pob": 5390.3688373887},
       {"build": "50-scion-L100-luminary-ethereal-knives", "output": "skill.ignite_dps", "ours": 4478.274698688409, "pob": 5390.3688373887},
       {"build": "54-duelist-L100-slayer-earthquake", "output": "skill.dot_dps", "ours": 60.276069310285486, "pob": 666.26107784814},
@@ -2211,14 +2193,14 @@
     "id": "delivery-rate",
     "kind": "pending",
     "league": "3.29",
-    "reason": "Hits per second of a skill a totem, trap or mine uses differ from PoB's for speed the engine leaves out: Arcane Surge, which the Hierophant's totems grant (gain_arcane_surge_on_spell_hit_by_you_or_your_totems, 95 to 97); Wilma's Requital's cast speed applied to attack speed (unique_helmet_cast_speed_+%_applies_to_attack_speed_at_%_of_original_value, 29 and 30); and attack speed not traced yet (98); mine throwing speed per frenzy charge is under spell-hit-frenzy-charges (101, 102)",
-    "evidence": "The engine's rate follows PoB's CalcOffence.lua: a trap's 0.6 s and a mine's 0.3 s throw at their speeds, a mine slower by a tenth per extra mine, the uses per trap or mine placed, a totem's rate without the character's action speed. Hits per second agree within 0.1% on the trap, mine and totem builds 27, 28, 99, 100 and 103 to 107; each build here warns unmodelled-stat for the stats named, or for speed stats of its tree and items",
+    "reason": "Hits per second of a skill a totem, trap or mine uses differ from PoB's for speed the engine leaves out: Wilma's Requital's cast speed applied to attack speed (unique_helmet_cast_speed_+%_applies_to_attack_speed_at_%_of_original_value, 29 and 30); cast speed with lightning skills (cast_speed_for_lightning_skills_+%, 95); Onslaught while a totem was summoned recently (has_onslaught_if_totem_summoned_recently, 96 and 97) and attack and cast speed on placing a totem (attack_and_cast_speed_+%_on_placing_totem, 97); and attack speed not traced yet (98); mine throwing speed per frenzy charge is under spell-hit-frenzy-charges (101, 102)",
+    "evidence": "The engine's rate follows PoB's CalcOffence.lua: a trap's 0.6 s and a mine's 0.3 s throw at their speeds, a mine slower by a tenth per extra mine, the uses per trap or mine placed, a totem's rate without the character's action speed. Hits per second agree within 0.1% on the trap, mine and totem builds 27, 28, 99, 100 and 103 to 107; each build here warns unmodelled-stat for the stats named, or for speed stats of its tree and items. PoB v2.67.2's cast speed of the main skill on 95 to 97 has those stats and no Arcane Surge, as a totem's spell hits do not grant it there: 95 has 5% from tree node 30225 more than ours (1.91 / 1.86 is PoB's 7.67 over our 7.47), 96 20% from Onslaught, 97 20% from Onslaught and 10% from node 66578",
     "cases": [
       {"build": "29-templar-L80-hierophant-ancestral-bond", "output": "skill.hits_per_second", "ours": 1.72, "pob": 1.78},
       {"build": "30-templar-L90-hierophant-ancestral-bond", "output": "skill.hits_per_second", "ours": 1.72, "pob": 1.78},
       {"build": "95-templar-L100-hierophant-storm-burst-of-repulsion", "output": "skill.hits_per_second", "ours": 7.466666666666668, "pob": 7.6666666666667},
       {"build": "96-templar-L100-hierophant-arc", "output": "skill.hits_per_second", "ours": 1.8166666666666669, "pob": 2.0166666666667},
-      {"build": "97-templar-L100-hierophant-freezing-pulse", "output": "skill.hits_per_second", "ours": 1.4153846153846155, "pob": 2.2},
+      {"build": "97-templar-L100-hierophant-freezing-pulse", "output": "skill.hits_per_second", "ours": 1.923076923076923, "pob": 2.2},
       {"build": "98-scion-L100-luminary-artillery-ballista", "output": "skill.hits_per_second", "ours": 1.5295, "pob": 2.251746}
     ]
   },
@@ -2235,7 +2217,7 @@
       {"build": "30-templar-L90-hierophant-ancestral-bond", "output": "skill.hit_dps", "ours": 6078.878693685085, "pob": 108728.58774283},
       {"build": "95-templar-L100-hierophant-storm-burst-of-repulsion", "output": "skill.hit_dps", "ours": 78480.30237465599, "pob": 1088106.5396854},
       {"build": "96-templar-L100-hierophant-arc", "output": "skill.hit_dps", "ours": 36172.34716400001, "pob": 181923.217344},
-      {"build": "97-templar-L100-hierophant-freezing-pulse", "output": "skill.hit_dps", "ours": 12438.149185, "pob": 68388.913793062},
+      {"build": "97-templar-L100-hierophant-freezing-pulse", "output": "skill.hit_dps", "ours": 16899.65921875, "pob": 68388.913793062},
       {"build": "98-scion-L100-luminary-artillery-ballista", "output": "skill.hit_dps", "ours": 0, "pob": 81902.591847565},
       {"build": "99-marauder-L100-chieftain-fire-trap", "output": "skill.hit_dps", "ours": 43122.59491499999, "pob": 57023.216205},
       {"build": "100-witch-L100-elementalist-glacial-cascade-of-the-fissure", "output": "skill.hit_dps", "ours": 196250.63635007406, "pob": 329675.4339082},
