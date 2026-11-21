@@ -2459,17 +2459,26 @@
     ]
   },
   {
-    "id": "minion-stats-not-reaching",
+    "id": "minion-absolution-enemy-resistance",
     "kind": "pending",
     "league": "3.29",
-    "reason": "The engine gives a minion's hit from its base damage and its own skill only. What else reaches the minion is not applied yet: minion stats on the character's items and passives, the supports linked to the minion gem, the summoning gem's own stats that apply to its minion (Absolution's physical damage converted to lightning), and the minion's monster mods, which the dataset lacks (Raging Spirit's fire conversion, added physical damage and 40% more attack speed)",
-    "evidence": "The minion's chance to hit matches PoB for each case (100). With a gem at level 20 alone on a level 90 Marauder without passives or items, the engine's minion average hit and hit DPS equal PoB's for Raise Zombie, Summon Skeletons, Summon Chaos Golem and Summon Ice Golem, whose minions have no such mods; PoB's breakdown for Absolution alone shows half its physical damage as lightning (Minion.MainHand.LightningHitAverage 272, PhysicalHitAverage 135.9375)",
+    "reason": "The Sentinel's lightning damage meets an enemy whose lightning resistance is the character's (\"Nearby Enemies have Lightning Resistance equal to yours\", -200% here), which the engine does not model; and minion damage that holds if you have used a minion skill recently, a condition PoB sets whenever the main skill is a minion skill and the engine leaves out. 81's gem is also 3 levels short (skill-level-of-one-gem)",
+    "evidence": "PoB's breakdown of the minion's lightning hit on the skill layer shows x3.000 (\"Enemy resistance: -200% (Your Lightning Resistance)\") for all three. For 82 the engine's base damage (1537 to 2301 physical), conversion (100% to lightning, 29% gained) and more multiplier (1.39) equal PoB's; its increased damage is 6.02 against PoB's 7.03, the difference being minion_damage_+%_if_have_used_a_minion_skill_recently, which the engine leaves unmodelled",
     "cases": [
-      {"build": "81-templar-L100-guardian-absolution", "output": "minion.average_hit", "ours": 579.4381249999999, "pob": 218519.559056},
-      {"build": "82-scion-L100-luminary-absolution", "output": "minion.average_hit", "ours": 469.4375, "pob": 117892.6900128},
-      {"build": "83-witch-L100-necromancer-absolution", "output": "minion.average_hit", "ours": 643.25625, "pob": 267909.27},
-      {"build": "84-witch-L100-necromancer-summon-raging-spirit", "output": "minion.average_hit", "ours": 102.76875, "pob": 32637.0688749},
-      {"build": "85-templar-L100-guardian-summon-raging-spirit", "output": "minion.average_hit", "ours": 67.4975, "pob": 14060.776527}
+      {"build": "81-templar-L100-guardian-absolution", "output": "minion.average_hit", "ours": 24346.334014950004, "pob": 218519.559056},
+      {"build": "82-scion-L100-luminary-absolution", "output": "minion.average_hit", "ours": 15578.064087499999, "pob": 117892.6900128},
+      {"build": "83-witch-L100-necromancer-absolution", "output": "minion.average_hit", "ours": 36738.098, "pob": 267909.27}
+    ]
+  },
+  {
+    "id": "minion-raging-spirit-monster-mods",
+    "kind": "pending",
+    "league": "3.29",
+    "reason": "Raging Spirit's monster mods, which the dataset lacks: its fire conversion, added physical damage and 40% more attack speed; and minion damage that holds if you have used a minion skill recently, which the engine leaves out",
+    "evidence": "The minion's chance to hit matches PoB for each case (100). The supports linked to the gem, the character's minion stats and auras reach the minion: Raise Zombie with Minion Damage and Melee Physical Damage, Raise Zombie with Anger, and Absolution alone each equal PoB's average hit and hit damage per second (pbt-engine TestMinionHitReached)",
+    "cases": [
+      {"build": "84-witch-L100-necromancer-summon-raging-spirit", "output": "minion.average_hit", "ours": 14994.057690918735, "pob": 32637.0688749},
+      {"build": "85-templar-L100-guardian-summon-raging-spirit", "output": "minion.average_hit", "ours": 8093.03145, "pob": 14060.776527}
     ]
   }
 ]
