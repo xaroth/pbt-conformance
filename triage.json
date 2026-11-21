@@ -1050,6 +1050,7 @@
       {"build": "54-duelist-L100-slayer-earthquake", "output": "skill.physical_minimum", "ours": 3560.8414038756327, "pob": 7722.2748700716},
       {"build": "55-duelist-L100-champion-void-shockwave", "output": "skill.average_hit", "ours": 52985.068467843324, "pob": 76397.5619375},
       {"build": "55-duelist-L100-champion-void-shockwave", "output": "skill.critical_strike_chance", "ours": 3.2375, "pob": 4.1625},
+      {"build": "55-duelist-L100-champion-void-shockwave", "output": "skill.hit_dps", "ours": 6672.928458051099, "pob": 9621.4929964252},
       {"build": "55-duelist-L100-champion-void-shockwave", "output": "skill.physical_maximum", "ours": 57781.17723298689, "pob": 81478},
       {"build": "55-duelist-L100-champion-void-shockwave", "output": "skill.physical_minimum", "ours": 34516.43278079622, "pob": 48672},
       {"build": "57-scion-L100-ascendant-kinetic-blast", "output": "skill.average_hit", "ours": 4058.1110442729787, "pob": 10269.015723264},
@@ -1156,6 +1157,17 @@
       {"build": "30-templar-L90-hierophant-ancestral-bond", "output": "skill.lightning_maximum", "ours": 1363.82, "pob": 3791.76},
       {"build": "98-scion-L100-luminary-artillery-ballista", "output": "skill.accuracy_rating", "ours": 2522, "pob": 2519},
       {"build": "98-scion-L100-luminary-artillery-ballista", "output": "skill.critical_strike_chance", "ours": 30.6397, "pob": 38.3292}
+    ]
+  },
+  {
+    "id": "trigger-source-rate",
+    "kind": "pending",
+    "league": "3.29",
+    "reason": "Void Shockwave is triggered by the hits of Cyclone of Tumult, its rate follows Cyclone's, and the engine gives Cyclone fewer hits per second than PoB for speed it leaves out, as on the Cyclone builds under attack-hit-unmodelled-stats; its hit DPS also follows the average hit there",
+    "evidence": "With Cyclone of Tumult as main skill, PoB v2.67.2 gives it 13.7898 hits per second and a 93% chance to hit; the engine gives 12.0294 and 93%. The engine's trigger rate from PoB's 13.7898 and 93% with Void Shockwave's 0.5 s cooldown is 1.8023464162514, PoB's. The skill-layer simulation warns unmodelled-stat for attack_speed_+%_while_leeching (nodes 65642, 65706) and attack_cast_and_movement_speed_+%_during_onslaught (Viper Span). Build 55, triggered by Earthshatter of Prominence, agrees on hits per second",
+    "cases": [
+      {"build": "67-duelist-L100-slayer-void-shockwave", "output": "skill.hits_per_second", "ours": 1.7607369688204517, "pob": 1.8023464162514},
+      {"build": "67-duelist-L100-slayer-void-shockwave", "output": "skill.hit_dps", "ours": 348136.1714735402, "pob": 559034.64986176}
     ]
   },
   {
