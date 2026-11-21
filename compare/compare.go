@@ -450,13 +450,16 @@ func warnings(st *simulator.Stats, league, name string) []Mismatch {
 	return out
 }
 
-// skillPrefix marks the engine's outputs of the main skill, which pob.Outputs maps only in part.
-const skillPrefix = "skill."
+// skillOutput reports whether engine output k is of the main skill or its minion, which
+// pob.Outputs maps only in part.
+func skillOutput(k string) bool {
+	return strings.HasPrefix(k, "skill.") || strings.HasPrefix(k, "minion.")
+}
 
 // compareOutputs compares every catalogue output with PoB's values v: the sheet and defences of
 // the tree-only build, the outputs that read skills of the skill build once the engine simulates
-// it, and the outputs recorded without skills of the gear build. A skill output with no PoB key
-// in pob.Outputs is not compared; any other is an error, so a new sheet or defence output cannot
+// it, and the outputs recorded without skills of the gear build. A skill or minion output with
+// no PoB key in pob.Outputs is not compared; any other is an error, so a new sheet or defence output cannot
 // go unchecked.
 func compareOutputs(outputs []simulator.Output, o ours, v *pob.Values, league, name string) ([]Mismatch, error) {
 	var out []Mismatch
@@ -464,7 +467,7 @@ func compareOutputs(outputs []simulator.Output, o ours, v *pob.Values, league, n
 	for _, so := range outputs {
 		get, ok := table[string(so.Key)]
 		if !ok {
-			if strings.HasPrefix(string(so.Key), skillPrefix) {
+			if skillOutput(string(so.Key)) {
 				continue
 			}
 			return nil, fmt.Errorf("compare: %w %s", errNoKey, so.Key)
