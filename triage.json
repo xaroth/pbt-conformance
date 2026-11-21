@@ -2457,5 +2457,19 @@
     "cases": [
       {"build": "90-witch-L100-elementalist-summon-flame-golem-of-hordes", "output": "import:item-roll-out-of-range", "subject": "The Burden of Truth"}
     ]
+  },
+  {
+    "id": "minion-stats-not-reaching",
+    "kind": "pending",
+    "league": "3.29",
+    "reason": "The engine gives a minion's hit from its base damage and its own skill only. What else reaches the minion is not applied yet: minion stats on the character's items and passives, the supports linked to the minion gem, the summoning gem's own stats that apply to its minion (Absolution's physical damage converted to lightning), and the minion's monster mods, which the dataset lacks (Raging Spirit's fire conversion, added physical damage and 40% more attack speed)",
+    "evidence": "The minion's chance to hit matches PoB for each case (100). With a gem at level 20 alone on a level 90 Marauder without passives or items, the engine's minion average hit and hit DPS equal PoB's for Raise Zombie, Summon Skeletons, Summon Chaos Golem and Summon Ice Golem, whose minions have no such mods; PoB's breakdown for Absolution alone shows half its physical damage as lightning (Minion.MainHand.LightningHitAverage 272, PhysicalHitAverage 135.9375)",
+    "cases": [
+      {"build": "81-templar-L100-guardian-absolution", "output": "minion.average_hit", "ours": 579.4381249999999, "pob": 218519.559056},
+      {"build": "82-scion-L100-luminary-absolution", "output": "minion.average_hit", "ours": 469.4375, "pob": 117892.6900128},
+      {"build": "83-witch-L100-necromancer-absolution", "output": "minion.average_hit", "ours": 643.25625, "pob": 267909.27},
+      {"build": "84-witch-L100-necromancer-summon-raging-spirit", "output": "minion.average_hit", "ours": 102.76875, "pob": 32637.0688749},
+      {"build": "85-templar-L100-guardian-summon-raging-spirit", "output": "minion.average_hit", "ours": 67.4975, "pob": 14060.776527}
+    ]
   }
 ]
