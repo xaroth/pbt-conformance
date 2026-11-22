@@ -183,6 +183,49 @@ func TestRecordParty(t *testing.T) {
 	}
 }
 
+// Recording a build after others gives what it gives alone: PoB keeps state between the builds
+// it loads. 106 changes how PoB calculates 86's Animate Guardian when both run in one process.
+func TestRecordBuildsAreIsolated(t *testing.T) {
+	t.Parallel()
+	cache := os.Getenv("PBTC_CACHE")
+	if cache == "" {
+		t.Skip("PBTC_CACHE not set")
+	}
+	f, err := pins.Read(os.DirFS(".."))
+	if err != nil {
+		t.Fatal(err)
+	}
+	root := t.TempDir()
+	const after = "86-witch-L100-necromancer-animate-guardian-of-smiting"
+	for _, name := range []string{"106-shadow-L100-assassin-icicle-mine-of-fanning", after} {
+		xml, err := os.ReadFile(filepath.Join("..", "builds", "3.29", name, pob.FullXML))
+		if err != nil {
+			t.Fatal(err)
+		}
+		dir := filepath.Join(root, "builds", "3.29", name)
+		if err := os.MkdirAll(dir, 0o755); err != nil {
+			t.Fatal(err)
+		}
+		if err := os.WriteFile(filepath.Join(dir, pob.FullXML), xml, 0o600); err != nil {
+			t.Fatal(err)
+		}
+	}
+	if err := pob.Record(context.Background(), root, cache, f, "poe1", "3.29", false); err != nil {
+		t.Fatal(err)
+	}
+	got, err := os.ReadFile(filepath.Join(root, "builds", "3.29", after, pob.ValuesFile))
+	if err != nil {
+		t.Fatal(err)
+	}
+	want, err := os.ReadFile(filepath.Join("..", "builds", "3.29", after, pob.ValuesFile))
+	if err != nil {
+		t.Fatal(err)
+	}
+	if string(got) != string(want) {
+		t.Errorf("%s recorded after another build differs from its stored record", after)
+	}
+}
+
 // TestSkillLayerMainSkill checks that every build's and case's skill layer calculates the full layer's main
 // skill, with the same level, quality and supports; only its group number may differ.
 func TestSkillLayerMainSkill(t *testing.T) {
