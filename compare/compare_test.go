@@ -170,10 +170,11 @@ func TestRun(t *testing.T) {
 	}
 	// The engine gives the sheet of the tree and gear layers and, of their defences, block and spell
 	// block, reservation, a skill's costs, a spell's hit and its rate, and totem life; nothing else.
+	// The build counts no group in full DPS, so it has none.
 	skillGroups := []compare.GroupResult{
 		{Group: pob.GroupSheet, Status: compare.StatusNotCompared}, {Group: pob.GroupReservation, Status: compare.StatusPass},
 		{Group: pob.GroupSkill, Status: compare.StatusIncomplete, Missing: []string{
-			"skill.dot_dps", "skill.ignite_dps", "skill.bleed_dps", "skill.poison_dps", "skill.total_dps",
+			"skill.dot_dps", "skill.ignite_dps", "skill.bleed_dps", "skill.poison_dps", "skill.total_dps", "dps.total",
 		}},
 		{Group: pob.GroupCost, Status: compare.StatusPass},
 		{Group: pob.GroupHitTypes, Status: compare.StatusPass}, {Group: pob.GroupDefence, Status: compare.StatusNotCompared},

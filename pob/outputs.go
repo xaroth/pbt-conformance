@@ -176,6 +176,9 @@ func skillOutputs() []Output {
 		zeroWith("skill.bleed_dps", GroupSkill, "BleedDPS", "TotalDotDPS"),
 		zeroWith("skill.poison_dps", GroupSkill, "TotalPoisonDPS", "TotalDotDPS"),
 		key("skill.total_dps", GroupSkill, "CombinedDPS"),
+		// Over the groups the file counts in full DPS, not the main skill alone; the engine gives
+		// none where no group is counted.
+		key("dps.total", GroupSkill, "FullDPS"),
 		// PoB shows whole costs, but cost efficiency leaves fractions that both compute.
 		key("skill.mana_cost", GroupCost, "ManaCost").hundredths(),
 		key("skill.life_cost", GroupCost, "LifeCost").hundredths(),

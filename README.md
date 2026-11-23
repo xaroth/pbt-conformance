@@ -41,7 +41,7 @@ go run ./cmd/pbtc pob --cache ~/.cache/pbt-conformance --check    # fail if a st
 | `sheet` | attributes, life, mana, energy shield, armour, evasion, the resistances and their maximums, life, mana and energy shield regeneration, unreserved life and mana, movement speed | all |
 | `reservation` | the life and mana every skill reserves: PoB's pool less its unreserved part | all |
 | `defence` | block, spell block, spell suppression, life and energy shield regeneration recovery, life and energy shield leech rates, life and energy shield recharge | all |
-| `skill` | the main skill's average hit, an attack's accuracy rating, chance to hit, hits per second, critical strike chance, hit, damage over time, ignite, bleed, poison and total damage per second; PoB gives no ignite, bleed or poison where there is none, read as 0 | skill, full |
+| `skill` | the main skill's average hit, an attack's accuracy rating, chance to hit, hits per second, critical strike chance, hit, damage over time, ignite, bleed, poison and total damage per second; PoB gives no ignite, bleed or poison where there is none, read as 0; and full DPS over the groups the file counts in it (PoB's `FullDPS`), compared where the engine gives it, which it does only when a group is counted | skill, full |
 | `cost` | the main skill's mana and life cost (PoB's `ManaCost` and `LifeCost`) | skill, full |
 | `hit-types` | the main skill's hit damage per damage type (physical, lightning, cold, fire, chaos), minimum and maximum | skill, full |
 | `minion` | the main skill's minion's life, and its own main skill's average hit, chance to hit and total damage per second, when the main skill has a minion | skill, full |
