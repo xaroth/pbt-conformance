@@ -171,17 +171,6 @@ func RunJobs(ctx context.Context, p runtime.Paths, jobs []Job) ([]Result, error)
 	return res, nil
 }
 
-// RunEach runs each file through PoB at p in one process and returns the results in file
-// order, with the error PoB raised for each file or nil; a file PoB fails on does not stop the
-// others.
-func RunEach(ctx context.Context, p runtime.Paths, files []string) ([]Result, []error, error) {
-	jobs := make([]Job, len(files))
-	for i, f := range files {
-		jobs[i] = Job{File: f}
-	}
-	return runJobs(ctx, p, jobs)
-}
-
 func runJobs(ctx context.Context, p runtime.Paths, jobs []Job) ([]Result, []error, error) {
 	script, err := os.CreateTemp("", "pbtc-runner-*.lua")
 	if err != nil {

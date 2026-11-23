@@ -14,9 +14,11 @@ import (
 	"os"
 	"path/filepath"
 	"regexp"
+	goruntime "runtime"
 	"slices"
 	"strconv"
 	"strings"
+	"sync"
 
 	"github.com/xaroth/pbt-conformance/compare"
 	"github.com/xaroth/pbt-conformance/pob"
@@ -163,8 +165,8 @@ type classified struct {
 }
 
 // Classify runs each candidate's build through PoB at p and sets its kind, main skill,
-// ascendancy and contents, or its error when PoB fails on it. Results are cached under dir by
-// the XML's hash, so a rerun runs PoB on new builds only.
+// ascendancy and contents, or its error when PoB fails on it. Each runs in a PoB process of its
+// own. Results are cached under dir by the XML's hash, so a rerun runs PoB on new builds only.
 func Classify(ctx context.Context, p runtime.Paths, dir string, cands []Candidate) error {
 	if err := os.MkdirAll(dir, dirPerm); err != nil {
 		return fmt.Errorf("ninja: %w", err)
@@ -218,37 +220,51 @@ func readClassified(base string) (classified, bool, error) {
 	return r, true, nil
 }
 
-// runClassify runs the candidates todo through PoB in one process and caches and sets their
-// results in res.
+// maxProcs caps the PoB processes runClassify runs at once; each holds a loaded PoB.
+const maxProcs = 8
+
+// runClassify runs the candidates todo through PoB, each in a process of its own, and caches
+// and sets their results in res. PoB keeps state between the builds it loads, so a build run
+// after others can give other values than the same build alone, and whether it is picked would
+// depend on the candidates before it.
 func runClassify(ctx context.Context, p runtime.Paths, dir string, cands []Candidate, todo []int, res []*classified) error {
-	if len(todo) == 0 {
-		return nil
-	}
-	files := make([]string, len(todo))
+	errs := make([]error, len(todo))
+	sem := make(chan struct{}, min(goruntime.NumCPU(), maxProcs))
+	var wg sync.WaitGroup
 	for k, i := range todo {
-		files[k] = classFile(dir, cands[i].XML) + ".xml"
-		if err := writeAtomic(files[k], cands[i].XML); err != nil {
-			return err
-		}
+		wg.Add(1)
+		sem <- struct{}{}
+		go func() {
+			defer func() { <-sem; wg.Done() }()
+			res[i], errs[k] = classifyOne(ctx, p, dir, cands[i].XML)
+		}()
 	}
-	out, errs, err := pob.RunEach(ctx, p, files)
+	wg.Wait()
+	return errors.Join(errs...)
+}
+
+// classifyOne runs a build XML through PoB alone and caches its result, or the error PoB
+// raised for it.
+func classifyOne(ctx context.Context, p runtime.Paths, dir string, x []byte) (*classified, error) {
+	base := classFile(dir, x)
+	if err := writeAtomic(base+".xml", x); err != nil {
+		return nil, err
+	}
+	out, err := pob.Run(ctx, p, []string{base + ".xml"})
+	r := &classified{}
+	switch {
+	case errors.Is(err, pob.ErrBuild):
+		r.Error = err.Error()
+	case err != nil:
+		return nil, fmt.Errorf("ninja: %w", err)
+	default:
+		r.Result = out[0]
+	}
+	b, err := json.Marshal(r)
 	if err != nil {
-		return fmt.Errorf("ninja: %w", err)
+		return nil, fmt.Errorf("ninja: %w", err)
 	}
-	for k, i := range todo {
-		res[i] = &classified{Result: out[k]}
-		if errs[k] != nil {
-			res[i] = &classified{Error: errs[k].Error()}
-		}
-		b, err := json.Marshal(res[i])
-		if err != nil {
-			return fmt.Errorf("ninja: %w", err)
-		}
-		if err := writeAtomic(strings.TrimSuffix(files[k], ".xml")+".json", b); err != nil {
-			return err
-		}
-	}
-	return nil
+	return r, writeAtomic(base+".json", b)
 }
 
 // Reasons a candidate is not picked.
