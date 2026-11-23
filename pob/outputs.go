@@ -153,6 +153,8 @@ func Outputs() []Output {
 	out = append(out, perHand("minion.", "average_hit", GroupMinion, minionPrefix, "AverageHit")...)
 	return append(out,
 		key("minion.hit_chance", GroupMinion, minionPrefix+"HitChance"),
+		first("minion.hits_per_second", GroupMinion, minionPrefix+"HitSpeed", minionPrefix+"Speed"),
+		key("minion.hit_dps", GroupMinion, minionPrefix+"TotalDPS"),
 		key("minion.total_dps", GroupMinion, minionPrefix+"CombinedDPS"),
 
 		key("delivery.totem_life", GroupDelivery, "TotemLife"),

@@ -80,7 +80,7 @@ func TestRunMainSkill(t *testing.T) {
 		}
 	}
 	wantKeys := [][]string{
-		{"Life", "Minion.Life", "Minion.MainHand.AverageHit", "Minion.HitChance", "Minion.CombinedDPS"},
+		{"Life", "Minion.Life", "Minion.MainHand.AverageHit", "Minion.HitChance", "Minion.Speed", "Minion.TotalDPS", "Minion.CombinedDPS"},
 		{"TotemLife", "TotemsSummoned", "AverageHit", "HitChance", "TotalDPS", "CombinedDPS", "Calcs.FireMin", "Calcs.FireMax"},
 	}
 	for i, keys := range wantKeys {
