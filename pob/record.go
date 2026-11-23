@@ -134,24 +134,50 @@ func Record(ctx context.Context, root, cache string, f *pins.File, game, league 
 func runBuilds(ctx context.Context, p runtime.Paths, dirs []string) ([][]Result, error) {
 	res := make([][]Result, len(dirs))
 	errs := make([]error, len(dirs))
-	sem := make(chan struct{}, min(goruntime.NumCPU(), maxProcs))
-	var wg sync.WaitGroup
-	for i, d := range dirs {
-		wg.Add(1)
-		sem <- struct{}{}
-		go func() {
-			defer func() { <-sem; wg.Done() }()
-			var jobs []Job
-			if jobs, errs[i] = jobsOf(d); errs[i] == nil {
-				res[i], errs[i] = RunJobs(ctx, p, jobs)
-			}
-		}()
-	}
-	wg.Wait()
+	each(len(dirs), func(i int) {
+		var jobs []Job
+		if jobs, errs[i] = jobsOf(dirs[i]); errs[i] == nil {
+			res[i], errs[i] = RunJobs(ctx, p, jobs)
+		}
+	})
 	if err := errors.Join(errs...); err != nil {
 		return nil, err
 	}
 	return res, nil
+}
+
+// RunAlone runs each file through PoB at p in a process of its own, several at once, and
+// returns the results in file order with, per file, the error PoB raised on it or nil.
+func RunAlone(ctx context.Context, p runtime.Paths, files []string) ([]Result, []error, error) {
+	res := make([]Result, len(files))
+	fileErrs := make([]error, len(files))
+	errs := make([]error, len(files))
+	each(len(files), func(i int) {
+		var r []Result
+		var fe []error
+		if r, fe, errs[i] = runJobs(ctx, p, []Job{{File: files[i]}}); errs[i] == nil {
+			res[i], fileErrs[i] = r[0], fe[0]
+		}
+	})
+	if err := errors.Join(errs...); err != nil {
+		return nil, nil, err
+	}
+	return res, fileErrs, nil
+}
+
+// each calls f for 0 to n-1, up to maxProcs at once, and returns when all have returned.
+func each(n int, f func(i int)) {
+	sem := make(chan struct{}, min(goruntime.NumCPU(), maxProcs))
+	var wg sync.WaitGroup
+	for i := range n {
+		wg.Add(1)
+		sem <- struct{}{}
+		go func() {
+			defer func() { <-sem; wg.Done() }()
+			f(i)
+		}()
+	}
+	wg.Wait()
 }
 
 // jobsOf returns the jobs of a build directory: its XMLs, in the order of xmlNames, then, with
@@ -240,11 +266,11 @@ func storeAll(dirs []string, r pins.Release, res [][]Result, check bool) error {
 	var stale []string
 	for i, d := range dirs {
 		v := Values{
-			PoB: r, Full: res[i][0].restrict(true), Skill: res[i][1].restrict(true),
-			Gear: res[i][2].restrict(false), TreeOnly: res[i][3].restrict(false),
+			PoB: r, Full: res[i][0].Restrict(true), Skill: res[i][1].Restrict(true),
+			Gear: res[i][2].Restrict(false), TreeOnly: res[i][3].Restrict(false),
 		}
 		if len(res[i]) > len(xmlNames()) {
-			p := res[i][len(xmlNames())].restrict(true)
+			p := res[i][len(xmlNames())].Restrict(true)
 			v.Party = &p
 		}
 		same, err := store(d, v, check)

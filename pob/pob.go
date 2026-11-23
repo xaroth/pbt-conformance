@@ -120,9 +120,9 @@ func (ms *MainSkill) groups() []Group {
 	return g
 }
 
-// restrict returns r as recorded for a layer: with withSkill its main skill and the outputs of
+// Restrict returns r as recorded for a layer: with withSkill its main skill and the outputs of
 // the groups that apply to it, else the sheet and defences only.
-func (r Result) restrict(withSkill bool) Result {
+func (r Result) Restrict(withSkill bool) Result {
 	if !withSkill {
 		r.MainSkill = nil
 	}

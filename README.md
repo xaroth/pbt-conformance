@@ -135,6 +135,16 @@ The one-gem cases (`one-gem-marauder-L90-<skill>`) are a level 90 Marauder with 
 
 `go test ./explain` imports every build's `pob.xml`, simulates it on its league's pinned dataset and checks that, for every output pbt-engine gives, the value its explanation shows is the value itself. It runs with `$PBT_DATASETS`, as CI does.
 
+## Export
+
+`pbtc export` checks that Path of Building reads pbt-engine's export of a build as it reads the build's own file. For each build and case of a league, it imports each of the four recorded files (`pob.xml`, `pob-skill.xml`, `pob-gear.xml`, `pob-treeonly.xml`) with `pob.FromXML`, writes it again with `pob.ToXML`, runs the export through the league's pinned PoB, each file in a process of its own, and compares PoB's values with the build's `pob.json` for that layer: the allocated nodes, the main skill as recorded, and every output of the layer's groups within 0.1% of the record.
+
+```sh
+go run ./cmd/pbtc export --cache ~/.cache/pbt-conformance [--datasets <dir>] [--league 3.29]
+```
+
+It lists each layer that differs, with PoB's error or the outputs that differ, followed by the engine's warnings on importing the file and on exporting it, which name what each leaves out; then how many builds match per layer and on every layer. It fails when a layer of any build differs. The full layer differs wherever the import leaves out something the build uses (config inputs the engine does not read, flasks, the pantheon, skill parts), so the skill, gear and tree-only layers are the ones that show what the export itself loses.
+
 ## Develop
 
 Requires Go 1.27.

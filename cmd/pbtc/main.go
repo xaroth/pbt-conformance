@@ -4,6 +4,7 @@
 //	pbtc pob --cache <dir> [--league <league>] [--check]
 //	pbtc data --cache <dir>
 //	pbtc compare (--cache <dir> | --datasets <dir>) [--league <league>] [--scoreboard] [--json] [--hints <file>]
+//	pbtc export --cache <dir> [--datasets <dir>] [--league <league>]
 //	pbtc ninja --cache <dir> --overview <league> [--variant <league>] [--league <league>] [--skills <n>] [--mercenaries <n>]
 //	           [--per-skill <n>] [--variant-rows <n>] [--dry-run]
 //
@@ -30,6 +31,12 @@
 // gems and mechanics it leaves out by the number of builds they appear in, each stat with its
 // text from the --hints file if given; then the same for the cases, apart. --json writes the list and the scoreboard as JSON.
 //
+// export imports each recorded file of every build and case of a league (default: every pinned
+// league) with pbt-engine, exports it again, runs the export through the league's pinned PoB and
+// compares PoB's values with the build's record of that file, within 0.1%. It lists each file
+// that differs with the outputs that differ and the engine's import and export warnings, then
+// how many builds match per layer, and fails when any differs.
+//
 // ninja picks builds for a league (default: the current one) from poe.ninja's league named by
 // --overview, such as allflame, and adds them to builds/<league> with their origin: for each
 // kind, from the most popular main skills, one build per main skill and ascendancy until the
@@ -45,6 +52,7 @@
 package main
 
 import (
+	"cmp"
 	"context"
 	"errors"
 	"flag"
@@ -58,11 +66,13 @@ import (
 	"text/tabwriter"
 
 	"github.com/xaroth/pbt-conformance/compare"
+	"github.com/xaroth/pbt-conformance/export"
 	"github.com/xaroth/pbt-conformance/ninja"
 	"github.com/xaroth/pbt-conformance/pins"
 	"github.com/xaroth/pbt-conformance/pob"
 	"github.com/xaroth/pbt-conformance/runtime"
 
+	"github.com/xaroth/pbt-engine/build"
 	"github.com/xaroth/pbt-engine/dataset/remote"
 	"github.com/xaroth/pbt-engine/dataset/remote/httpfetch"
 )
@@ -72,9 +82,11 @@ const game = "poe1"
 var (
 	errUsage = errors.New("usage: pbtc setup --cache <dir> | pbtc pob --cache <dir> [--league <league>] [--check] | " +
 		"pbtc data --cache <dir> | pbtc compare (--cache <dir> | --datasets <dir>) [--league <league>] " +
-		"[--scoreboard] [--json] [--hints <file>] | pbtc ninja --cache <dir> --overview <league> [--variant <league>] " +
+		"[--scoreboard] [--json] [--hints <file>] | pbtc export --cache <dir> [--datasets <dir>] [--league <league>] | " +
+		"pbtc ninja --cache <dir> --overview <league> [--variant <league>] " +
 		"[--league <league>] [--skills <n>] [--mercenaries <n>] [--per-skill <n>] [--variant-rows <n>] [--dry-run]")
-	errMismatch = errors.New("untriaged mismatches or stale triage entries")
+	errMismatch      = errors.New("untriaged mismatches or stale triage entries")
+	errExportDiffers = errors.New("PoB reads an export otherwise than the build's own file")
 )
 
 func main() {
@@ -92,9 +104,9 @@ func run(ctx context.Context, args []string) error {
 		return errUsage
 	}
 	fs := flag.NewFlagSet(args[0], flag.ContinueOnError)
-	cache := fs.String("cache", "", "cache directory for the PoB runtime and pulled datasets (setup, pob, data, compare)")
-	datasets := fs.String("datasets", "", "directory of datasets to compare with instead of pulling them (compare)")
-	league := fs.String("league", "", "league to run (pob, compare; default all pinned)")
+	cache := fs.String("cache", "", "cache directory for the PoB runtime and pulled datasets (setup, pob, data, compare, export)")
+	datasets := fs.String("datasets", "", "directory of datasets to compare with instead of pulling them (compare, export)")
+	league := fs.String("league", "", "league to run (pob, compare, export; default all pinned)")
 	check := fs.Bool("check", false, "fail on stored values that differ instead of writing (pob)")
 	var out output
 	fs.BoolVar(&out.scoreboard, "scoreboard", false, "follow the mismatches with the scoreboard (compare)")
@@ -239,6 +251,7 @@ func dispatch(ctx context.Context, cmd, cache, datasets, league string, check bo
 		"pob":     {cache != "", func() error { return runPoB(ctx, f, cache, league, check) }},
 		"data":    {cache != "", func() error { return runData(ctx, os.Stdout, f, cache) }},
 		"compare": {datasets != "" || cache != "", func() error { return runCompareFrom(ctx, f, cache, datasets, league, out) }},
+		"export":  {cache != "", func() error { return runExport(ctx, os.Stdout, f, cache, datasets, league) }},
 	}
 	c, ok := commands[cmd]
 	if !ok || !c.ready {
@@ -416,4 +429,80 @@ func runPoB(ctx context.Context, f *pins.File, cache, league string, check bool)
 		}
 	}
 	return nil
+}
+
+// runExport checks that PoB reads the engine's export of every layer of every build of league
+// (default: every pinned league) as the layer's own file, with the datasets under datasets or
+// else pulled into cache, and fails when it does not for any.
+func runExport(ctx context.Context, w io.Writer, f *pins.File, cache, datasets, league string) error {
+	if datasets == "" {
+		var err error
+		if datasets, err = pullData(ctx, os.Stderr, f, cache); err != nil {
+			return err
+		}
+	}
+	var builds []export.Build
+	for _, l := range leagues(f, league) {
+		bs, err := export.Run(ctx, ".", cache, datasets, f, game, l)
+		if err != nil {
+			return fmt.Errorf("export %s: %w", l, err)
+		}
+		builds = append(builds, bs...)
+	}
+	return reportExport(w, builds)
+}
+
+// reportExport lists, per layer of a build that PoB does not read the export of as the layer's
+// own file, PoB's error or the outputs that differ, then the warnings of the engine's import and
+// export as the likely causes; then per layer the builds that match. It fails when any does not.
+func reportExport(w io.Writer, builds []export.Build) error {
+	const padding = 2
+	tw := tabwriter.NewWriter(w, 0, 0, padding, ' ', 0)
+	fmt.Fprintln(tw, "league\tbuild\tlayer\toutput\texport\trecord")
+	matched := map[string]int{}
+	all := 0
+	for _, b := range builds {
+		ok := true
+		for _, c := range b.Layers {
+			if c.Matches() {
+				matched[c.Layer]++
+				continue
+			}
+			ok = false
+			writeCheck(tw, b, c)
+		}
+		if ok {
+			all++
+		}
+	}
+	if err := tw.Flush(); err != nil {
+		return fmt.Errorf("export: %w", err)
+	}
+	for _, l := range export.Layers() {
+		fmt.Fprintf(w, "%s: %d of %d builds match\n", l.Name, matched[l.Name], len(builds))
+	}
+	fmt.Fprintf(w, "every layer: %d of %d builds match\n", all, len(builds))
+	if all < len(builds) {
+		return errExportDiffers
+	}
+	return nil
+}
+
+// writeCheck writes the rows of a layer of b that differs: PoB's error or the outputs, then the
+// engine's import and export warnings.
+func writeCheck(tw io.Writer, b export.Build, c export.Check) {
+	if c.Error != nil {
+		fmt.Fprintf(tw, "%s\t%s\t%s\terror\t%v\t\n", b.League, b.Name, c.Layer, c.Error)
+	}
+	for _, d := range c.Diffs {
+		fmt.Fprintf(tw, "%s\t%s\t%s\t%s\t%s\t%s\n", b.League, b.Name, c.Layer, d.Output, cmp.Or(d.Export, "-"), cmp.Or(d.Record, "-"))
+	}
+	for _, step := range []struct {
+		name string
+		ws   []build.Warning
+	}{{"import", c.Import}, {"export", c.Export}} {
+		for _, wn := range step.ws {
+			fmt.Fprintf(tw, "%s\t%s\t%s\t%s:%s\t%s\t\n", b.League, b.Name, c.Layer, step.name, wn.Code, wn.Subject)
+		}
+	}
 }

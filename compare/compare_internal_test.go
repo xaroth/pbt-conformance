@@ -99,7 +99,7 @@ func TestEngineValuesLeavesOutMissing(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	reg, s, err := openPinned(datasets, "poe1", f.Games["poe1"].Leagues["3.29"].Dataset)
+	reg, s, err := OpenPinned(datasets, "poe1", f.Games["poe1"].Leagues["3.29"].Dataset)
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -160,7 +160,7 @@ func TestSimulateTicked(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	reg, s, err := openPinned(datasets, "poe1", f.Games["poe1"].Leagues["3.29"].Dataset)
+	reg, s, err := OpenPinned(datasets, "poe1", f.Games["poe1"].Leagues["3.29"].Dataset)
 	if err != nil {
 		t.Fatal(err)
 	}

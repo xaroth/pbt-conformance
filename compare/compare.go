@@ -118,7 +118,7 @@ func Run(root, datasets string, f *pins.File, game, league string) ([]Build, err
 	if !ok {
 		return nil, fmt.Errorf("compare: %s %s: %w", game, league, ErrDataset)
 	}
-	reg, s, err := openPinned(datasets, game, l.Dataset)
+	reg, s, err := OpenPinned(datasets, game, l.Dataset)
 	if err != nil {
 		return nil, err
 	}
@@ -155,8 +155,9 @@ func Mismatches(builds []Build) []Mismatch {
 	return out
 }
 
-// openPinned opens the datasets and the pinned one among them, checking its id.
-func openPinned(datasets, game string, d pins.Dataset) (*dataset.Registry, *dataset.Store, error) {
+// OpenPinned opens the datasets in the directory datasets and the pinned one among them,
+// checking its id.
+func OpenPinned(datasets, game string, d pins.Dataset) (*dataset.Registry, *dataset.Store, error) {
 	reg, s, err := openVersion(datasets, game, d.Version)
 	if err != nil {
 		return nil, nil, fmt.Errorf("compare: %w: %w", ErrDataset, err)
