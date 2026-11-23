@@ -340,11 +340,15 @@ func simulateTicked(sim *simulator.Sim, b *build.Build) (*simulator.Stats, error
 }
 
 // untickedApplies reports whether PoB applies the derived condition of config key name without
-// its tick: Exposure that a hit inflicts on every hit, with its own magnitude, does. The engine
-// derives the same from the build where the file leaves the tick off, and Exposure inflicted
-// only by chance in neither.
+// its tick: Exposure that a hit inflicts on every hit, with its own magnitude, does, and so does
+// having used a Minion Skill Recently while the main skill summons minions that do not stay
+// (CalcPerform.lua UsedMinionSkillRecently). The engine derives the same from the build where
+// the file leaves the tick off, and Exposure inflicted only by chance in neither.
 func untickedApplies(name string) bool {
-	return slices.Contains([]string{poe1.EnemyFireExposure.Name(), poe1.EnemyColdExposure.Name(), poe1.EnemyLightningExposure.Name()}, name)
+	return slices.Contains([]string{
+		poe1.EnemyFireExposure.Name(), poe1.EnemyColdExposure.Name(), poe1.EnemyLightningExposure.Name(),
+		poe1.UsedMinionSkillRecently.Name(),
+	}, name)
 }
 
 // engineValues returns the value of each of outputs st gives. The engine gives some outputs only
