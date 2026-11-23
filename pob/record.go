@@ -10,7 +10,9 @@ import (
 	"maps"
 	"os"
 	"path/filepath"
+	goruntime "runtime"
 	"slices"
+	"sync"
 
 	"github.com/xaroth/pbt-conformance/pins"
 	"github.com/xaroth/pbt-conformance/runtime"
@@ -34,6 +36,9 @@ const (
 	// recorded with too.
 	PartyFile = "party.json"
 )
+
+// maxProcs caps the PoB processes Record runs at once; each holds a loaded PoB.
+const maxProcs = 8
 
 // ErrStale marks a stored values file that differs from a fresh PoB run.
 var ErrStale = errors.New("stored pob files differ from a fresh run")
@@ -114,44 +119,57 @@ func Record(ctx context.Context, root, cache string, f *pins.File, game, league 
 	if err := deriveAll(dirs, check); err != nil {
 		return err
 	}
-	jobs, allies, err := jobsOf(dirs)
+	paths := runtime.Locate(cache, f.Runtime, l.PoB)
+	res, err := runBuilds(ctx, paths, dirs)
 	if err != nil {
 		return err
 	}
-	res, err := RunJobs(ctx, runtime.Locate(cache, f.Runtime, l.PoB), jobs)
-	if err != nil {
-		return err
-	}
-	return storeAll(dirs, allies, l.PoB, res, check)
+	return storeAll(dirs, l.PoB, res, check)
 }
 
-// jobsOf returns the jobs of the build directories: their XMLs, in order, then each full XML
-// with its ally's, in order of the builds with an ally. allies holds whether each build has one.
-func jobsOf(dirs []string) (jobs []Job, allies []bool, err error) {
-	files, err := xmlFiles(dirs)
-	if err != nil {
-		return nil, nil, err
-	}
-	for _, f := range files {
-		jobs = append(jobs, Job{File: f})
-	}
-	allies = make([]bool, len(dirs))
+// runBuilds runs each build directory's XMLs through PoB, each build in a process of its own,
+// and returns each build's results in the order of jobsOf. PoB keeps state between the builds
+// it loads (shared tables, caches), so a build run after others can give other values than the
+// same build alone.
+func runBuilds(ctx context.Context, p runtime.Paths, dirs []string) ([][]Result, error) {
+	res := make([][]Result, len(dirs))
+	errs := make([]error, len(dirs))
+	sem := make(chan struct{}, min(goruntime.NumCPU(), maxProcs))
+	var wg sync.WaitGroup
 	for i, d := range dirs {
-		ally, err := allyOf(d)
-		if err != nil {
-			return nil, nil, err
-		}
-		if ally == "" {
-			continue
-		}
-		full, err := filepath.Abs(filepath.Join(d, FullXML))
-		if err != nil {
-			return nil, nil, fmt.Errorf("pob: %w", err)
-		}
-		jobs = append(jobs, Job{File: full, Ally: ally})
-		allies[i] = true
+		wg.Add(1)
+		sem <- struct{}{}
+		go func() {
+			defer func() { <-sem; wg.Done() }()
+			var jobs []Job
+			if jobs, errs[i] = jobsOf(d); errs[i] == nil {
+				res[i], errs[i] = RunJobs(ctx, p, jobs)
+			}
+		}()
 	}
-	return jobs, allies, nil
+	wg.Wait()
+	if err := errors.Join(errs...); err != nil {
+		return nil, err
+	}
+	return res, nil
+}
+
+// jobsOf returns the jobs of a build directory: its XMLs, in the order of xmlNames, then, with
+// a party file, its full XML with the ally's.
+func jobsOf(dir string) ([]Job, error) {
+	jobs := make([]Job, 0, len(xmlNames())+1)
+	for _, name := range xmlNames() {
+		p, err := filepath.Abs(filepath.Join(dir, name))
+		if err != nil {
+			return nil, fmt.Errorf("pob: %w", err)
+		}
+		jobs = append(jobs, Job{File: p})
+	}
+	ally, err := allyOf(dir)
+	if err != nil || ally == "" {
+		return jobs, err
+	}
+	return append(jobs, Job{File: jobs[0].File, Ally: ally}), nil
 }
 
 // allyOf returns the absolute path of the full XML of the ally that dir's party file names,
@@ -217,27 +235,24 @@ func deriveAll(dirs []string, check bool) error {
 	return nil
 }
 
-// storeAll stores each build's results, as they lie in res in the order of jobsOf.
-func storeAll(dirs []string, allies []bool, r pins.Release, res []Result, check bool) error {
+// storeAll stores each build's results, res[i] being those of dirs[i] as jobsOf orders them.
+func storeAll(dirs []string, r pins.Release, res [][]Result, check bool) error {
 	var stale []string
-	party := res[len(xmlNames())*len(dirs):]
 	for i, d := range dirs {
 		v := Values{
-			PoB: r, Full: res[0].restrict(true), Skill: res[1].restrict(true),
-			Gear: res[2].restrict(false), TreeOnly: res[3].restrict(false),
+			PoB: r, Full: res[i][0].restrict(true), Skill: res[i][1].restrict(true),
+			Gear: res[i][2].restrict(false), TreeOnly: res[i][3].restrict(false),
 		}
-		res = res[len(xmlNames()):]
-		if allies[i] {
-			p := party[0].restrict(true)
+		if len(res[i]) > len(xmlNames()) {
+			p := res[i][len(xmlNames())].restrict(true)
 			v.Party = &p
-			party = party[1:]
 		}
 		same, err := store(d, v, check)
 		if err != nil {
 			return err
 		}
 		if !same {
-			stale = append(stale, dirs[i])
+			stale = append(stale, d)
 		}
 	}
 	if check && len(stale) > 0 {
@@ -249,22 +264,6 @@ func storeAll(dirs []string, allies []bool, r pins.Release, res []Result, check 
 // xmlNames returns the XMLs run per build, in the order storeAll reads their results.
 func xmlNames() []string {
 	return []string{FullXML, SkillXML, GearXML, TreeOnlyXML}
-}
-
-// xmlFiles returns the XMLs of each build directory, absolute, in order.
-func xmlFiles(dirs []string) ([]string, error) {
-	names := xmlNames()
-	files := make([]string, 0, len(names)*len(dirs))
-	for _, d := range dirs {
-		for _, name := range names {
-			p, err := filepath.Abs(filepath.Join(d, name))
-			if err != nil {
-				return nil, fmt.Errorf("pob: %w", err)
-			}
-			files = append(files, p)
-		}
-	}
-	return files, nil
 }
 
 // store writes v as dir's values file, or with check only compares; it reports whether the
