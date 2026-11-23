@@ -2467,26 +2467,24 @@
     ]
   },
   {
-    "id": "minion-animated-guardian-template-and-enemy",
+    "id": "minion-animated-guardian-intimidate",
     "kind": "pending",
     "league": "3.29",
-    "reason": "The Animated Guardian attacks with its gear's weapon as PoB has it, but lacks its variety's template stat \"main hand adds 2 to 6 physical damage\", which the dataset does not carry yet; and on 77 the Ascendant's Champion's permanent Intimidate, which reaches the enemy in PoB only: the enemy takes 10% increased attack damage",
-    "evidence": "PoB's breakdown of the minion's main hand on the skill layer. Weapon base, increased and more damage, critical strike chance and multiplier and hits per second equal the engine's for all three; the physical base is 2 to 6 higher in PoB (\"Minion:Animated Guardian\" PhysicalMin 2, PhysicalMax 6): 78 592 to 808 against 589 to 798, 92 472 to 643 against 470 to 637, 77 23 to 70 against 20 to 61 after increases. 77: both damage types x1.10 \"increased/reduced damage taken\"; PoB's enemy has Condition:Intimidated and DamageTaken INC 10, both from Tree:39598 (Champion, \"Your Hits permanently Intimidate Enemies that are on Full Life\", on by PoB's default config); the guardian's Dying Breath gives the enemy only CurseEffectOnSelf INC 18, which no curse on the skill layer reads",
+    "reason": "On 77 the Ascendant's Champion's permanent Intimidate reaches the enemy in PoB only: the enemy takes 10% increased attack damage",
+    "evidence": "PoB's breakdown of the minion's main hand on the skill layer: weapon base, increased and more damage, critical strike chance and multiplier and hits per second equal the engine's. Both damage types x1.10 \"increased/reduced damage taken\"; PoB's enemy has Condition:Intimidated and DamageTaken INC 10, both from Tree:39598 (Champion, \"Your Hits permanently Intimidate Enemies that are on Full Life\", on by PoB's default config); the guardian's Dying Breath gives the enemy only CurseEffectOnSelf INC 18, which no curse on the skill layer reads. The engine's average hit times 1.10 is PoB's",
     "cases": [
-      {"build": "77-scion-L100-ascendant-animate-guardian", "output": "minion.average_hit", "ours": 68.91115, "pob": 77.489885},
-      {"build": "78-templar-L100-inquisitor-animate-guardian", "output": "minion.average_hit", "ours": 238.30164248749998, "pob": 239.9781883},
-      {"build": "92-scion-L100-luminary-animate-guardian", "output": "minion.average_hit", "ours": 266.95814499999994, "pob": 268.232895}
+      {"build": "77-scion-L100-ascendant-animate-guardian", "output": "minion.average_hit", "ours": 70.44535, "pob": 77.489885}
     ]
   },
   {
     "id": "minion-animate-guardian-smite",
     "kind": "pending",
     "league": "3.29",
-    "reason": "Animate Guardian of Smiting attacks with Smite, the skill its group picks, as PoB has it. On 86 the template's 2 to 6 added physical damage, Ancient Skull's minion damage, critical strike chance and attack speed and the minion buffs (Flesh Offering, Feeding Frenzy, Meat Shield) are missing. On 87 most of PoB's hit comes from stats of the guardian's gear that read the player's maximum life, which the engine does not give the minion: The Grey Wind's \"Attacks with this Weapon have Added Fire Damage equal to 12% of Player's Maximum Life\" (the importer also warns the line is out of range) and Rathpith Globe's increased damage per 100 of the player's maximum life. 87's guardian also attacks faster in PoB: Replica Maata's Teaching's \"Non-Spectre Minions' Base Attack Time is equal to the Attack Time of your Main Hand Weapon\", the Minion Speed support that Pearl of Tsoatha, a ring, grants to skills socketed in the gloves, Rift Fingers' attack speed while a Pinnacle Atlas Boss is in your presence and more action speed, none of which the engine gives the minion",
+    "reason": "Animate Guardian of Smiting attacks with Smite, the skill its group picks, as PoB has it. On 86 Ancient Skull's minion damage, critical strike chance and attack speed and the minion buffs (Flesh Offering, Feeding Frenzy, Meat Shield) are missing. On 87 most of PoB's hit comes from stats of the guardian's gear that read the player's maximum life, which the engine does not give the minion: The Grey Wind's \"Attacks with this Weapon have Added Fire Damage equal to 12% of Player's Maximum Life\" (the importer also warns the line is out of range) and Rathpith Globe's increased damage per 100 of the player's maximum life. 87's guardian also attacks faster in PoB: Replica Maata's Teaching's \"Non-Spectre Minions' Base Attack Time is equal to the Attack Time of your Main Hand Weapon\", the Minion Speed support that Pearl of Tsoatha, a ring, grants to skills socketed in the gloves, Rift Fingers' attack speed while a Pinnacle Atlas Boss is in your presence and more action speed, none of which the engine gives the minion",
     "evidence": "PoB's breakdown on the skill layer: minion main skill AnimateGuardianSmite, \"x 3.25 (base damage multiplier)\" and \"x 3.25 (damage effectiveness)\", as the engine's. 86: the engine's weapon has PoB's 5.25% critical strike chance and, like PoB's, deals chaos damage only (20150 to 26360 after 30% resistance in PoB). Increased damage x5.64 in PoB against x4.55 in the engine, the difference Ancient Skull's 50% and its 300% increased critical strike chance. 87: PoB's fire hit is 2043 to 2043 added damage (12% of the player's 17022 maximum life, \"Item:40:The Grey Wind\"), x3.25 damage effectiveness, increased x12.87 of which 1020% is Rathpith Globe's (\"Item:36:Rathpith Globe\"), more x4.99, x0.84 after 50% resistance and 34% penetration: 357922, 98% of the hit. The engine's guardian has no fire hit from the weapon and none of Rathpith Globe's increase. Hits per second: 86's weapon rate is 1.57 in both, with 175% increased speed in PoB against 125% in the engine, the 50% being \"Item:12:Ancient Skull\". 87: PoB's rate is 2.37 base (the player's main hand Tomahawk, flag NonSpectreMinionsUseParentMainHandAttackTime from \"Item:35:Replica Maata's Teaching\") x1.88 increased x1.55 more x1.23 action speed; the engine's is 1.30 (The Grey Wind) x1.34 increased x1.55 more x1.15 action speed, without Minion Speed (34%, \"Skill:SupportMinionSpeed\", from Pearl of Tsoatha's \"Skills Socketed in your Gloves are Supported by level 20 Minion Speed\") and Rift Fingers' conditional 20%",
     "cases": [
       {"build": "86-witch-L100-necromancer-animate-guardian-of-smiting", "output": "minion.average_hit", "ours": 20572.118104999998, "pob": 29958.187665},
-      {"build": "87-scion-L100-luminary-animate-guardian-of-smiting", "output": "minion.average_hit", "ours": 515.8103125, "pob": 367732.921675},
+      {"build": "87-scion-L100-luminary-animate-guardian-of-smiting", "output": "minion.average_hit", "ours": 550.510625, "pob": 367732.921675},
       {"build": "86-witch-L100-necromancer-animate-guardian-of-smiting", "output": "minion.hits_per_second", "ours": 3.5325, "pob": 4.3175},
       {"build": "87-scion-L100-luminary-animate-guardian-of-smiting", "output": "minion.hits_per_second", "ours": 3.1096, "pob": 8.482941}
     ]
@@ -2507,19 +2505,17 @@
     "kind": "pending",
     "league": "3.29",
     "reason": "A minion's hit DPS follows its average hit and hits per second, which differ from PoB's for the causes triaged on those outputs",
-    "evidence": "Hit DPS is average hit times chance to hit times hits per second. The minion's chance to hit matches PoB's on all twelve, and for each the ratio of the engine's hit DPS to PoB's equals the ratio of its average hit times that of its hits per second, to within float rounding",
+    "evidence": "Hit DPS is average hit times chance to hit times hits per second. The minion's chance to hit matches PoB's on all ten, and for each the ratio of the engine's hit DPS to PoB's equals the ratio of its average hit times that of its hits per second, to within float rounding",
     "cases": [
-      {"build": "77-scion-L100-ascendant-animate-guardian", "output": "minion.hit_dps", "ours": 89.58449500000002, "pob": 100.7368505},
-      {"build": "78-templar-L100-inquisitor-animate-guardian", "output": "minion.hit_dps", "ours": 411.9997096966387, "pob": 414.89828975187},
+      {"build": "77-scion-L100-ascendant-animate-guardian", "output": "minion.hit_dps", "ours": 91.57895500000001, "pob": 100.7368505},
       {"build": "81-templar-L100-guardian-absolution", "output": "minion.hit_dps", "ours": 58472.81930086283, "pob": 524820.47944219},
       {"build": "82-scion-L100-luminary-absolution", "output": "minion.hit_dps", "ours": 25430.85675822649, "pob": 192457.29737132},
       {"build": "83-witch-L100-necromancer-absolution", "output": "minion.hit_dps", "ours": 87920.23452991452, "pob": 641150.38974359},
       {"build": "84-witch-L100-necromancer-summon-raging-spirit", "output": "minion.hit_dps", "ours": 128547.27284236382, "pob": 318354.5665692},
       {"build": "85-templar-L100-guardian-summon-raging-spirit", "output": "minion.hit_dps", "ours": 44014.73244736842, "pob": 107059.24583716},
       {"build": "86-witch-L100-necromancer-animate-guardian-of-smiting", "output": "minion.hit_dps", "ours": 72671.0072059125, "pob": 129344.47524364},
-      {"build": "87-scion-L100-luminary-animate-guardian-of-smiting", "output": "minion.hit_dps", "ours": 1603.96374775, "pob": 3119456.6783266},
+      {"build": "87-scion-L100-luminary-animate-guardian-of-smiting", "output": "minion.hit_dps", "ours": 1711.8678395, "pob": 3119456.6783266},
       {"build": "91-scion-L100-luminary-animate-weapon-of-ranged-arms", "output": "minion.hit_dps", "ours": 54677.352384027654, "pob": 56403.721922672},
-      {"build": "92-scion-L100-luminary-animate-guardian", "output": "minion.hit_dps", "ours": 415.20000291849993, "pob": 417.1826215935},
       {"build": "93-witch-L99-necromancer-animate-weapon-of-ranged-arms", "output": "minion.hit_dps", "ours": 32927.728183950276, "pob": 74303.14508683}
     ]
   },
