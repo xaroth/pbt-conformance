@@ -155,6 +155,7 @@ func Outputs() []Output {
 		key("minion.hit_chance", GroupMinion, minionPrefix+"HitChance"),
 		first("minion.hits_per_second", GroupMinion, minionPrefix+"HitSpeed", minionPrefix+"Speed"),
 		key("minion.hit_dps", GroupMinion, minionPrefix+"TotalDPS"),
+		zeroWith("minion.ignite_dps", GroupMinion, minionPrefix+"IgniteDPS", minionPrefix+"TotalDotDPS"),
 		key("minion.total_dps", GroupMinion, minionPrefix+"CombinedDPS"),
 
 		key("delivery.totem_life", GroupDelivery, "TotemLife"),
