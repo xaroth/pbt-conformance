@@ -2484,12 +2484,12 @@
     "id": "minion-animated-guardian-template-and-enemy",
     "kind": "pending",
     "league": "3.29",
-    "reason": "The Animated Guardian attacks with its gear's weapon as PoB has it, but lacks its variety's template stat \"main hand adds 2 to 6 physical damage\", which the dataset does not carry yet; and three things that reach the enemy or the minion in PoB only: on 77 its staff Dying Breath's \"enemies take 10% increased damage\", on 78 and 92 the character's Crown of the Tyrant's -10% to enemy resistances, which the minion's enemy does not take, and on 92 the minion's Strength from its gear giving 2% increased physical damage",
-    "evidence": "PoB's breakdown of the minion's main hand on the skill layer. Weapon base, increased and more damage, critical strike chance and multiplier and hits per second equal the engine's for all three; the physical base is 2 to 6 higher in PoB (\"Minion:Animated Guardian\" PhysicalMin 2, PhysicalMax 6): 78 592 to 808 against 589 to 798, 92 472 to 643 against 470 to 637, 77 23 to 70 against 20 to 61 after increases. 77: both damage types x1.10 \"increased/reduced damage taken\" from Dying Breath's EnemyModifier. 78 and 92: enemy resistance 40% (enemy ElementalResist -10 from Crown of the Tyrant) against the engine's 50%. 92: PhysicalDamage INC 2 from Strength",
+    "reason": "The Animated Guardian attacks with its gear's weapon as PoB has it, but lacks its variety's template stat \"main hand adds 2 to 6 physical damage\", which the dataset does not carry yet; and two things that reach the enemy in PoB only: on 77 its staff Dying Breath's \"enemies take 10% increased damage\", on 78 and 92 the character's Crown of the Tyrant's -10% to enemy resistances, which the minion's enemy does not take",
+    "evidence": "PoB's breakdown of the minion's main hand on the skill layer. Weapon base, increased and more damage, critical strike chance and multiplier and hits per second equal the engine's for all three; the physical base is 2 to 6 higher in PoB (\"Minion:Animated Guardian\" PhysicalMin 2, PhysicalMax 6): 78 592 to 808 against 589 to 798, 92 472 to 643 against 470 to 637, 77 23 to 70 against 20 to 61 after increases. 77: both damage types x1.10 \"increased/reduced damage taken\" from Dying Breath's EnemyModifier. 78 and 92: enemy resistance 40% (enemy ElementalResist -10 from Crown of the Tyrant) against the engine's 50%",
     "cases": [
       {"build": "77-scion-L100-ascendant-animate-guardian", "output": "minion.average_hit", "ours": 68.91115, "pob": 77.489885},
       {"build": "78-templar-L100-inquisitor-animate-guardian", "output": "minion.average_hit", "ours": 228.39712568749997, "pob": 239.9781883},
-      {"build": "92-scion-L100-luminary-animate-guardian", "output": "minion.average_hit", "ours": 251.63564999999997, "pob": 268.232895}
+      {"build": "92-scion-L100-luminary-animate-guardian", "output": "minion.average_hit", "ours": 255.58737499999998, "pob": 268.232895}
     ]
   },
   {

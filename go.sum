@@ -2,7 +2,7 @@ github.com/google/flatbuffers v25.12.19+incompatible h1:haMV2JRRJCe1998HeW/p0X9U
 github.com/google/flatbuffers v25.12.19+incompatible/go.mod h1:1AeVuKshWv4vARoZatz6mlQ0JxURH0Kv5+zNeJKJCa8=
 github.com/google/go-cmp v0.7.0 h1:wk8382ETsv4JYUZwIsn6YpYiWiBsYLSJiTsyBybVuN8=
 github.com/google/go-cmp v0.7.0/go.mod h1:pXiqmnSA92OHEEa9HXL2W4E7lf9JzCmGVUdgjX3N/iU=
-github.com/xaroth/pbt-engine v0.0.0-20261123140136-a42abc862bdf h1:Q/L3DK0m7Rz2NqA9wHtgrpGTcTWXwChVHGenUUNYttY=
-github.com/xaroth/pbt-engine v0.0.0-20261123140136-a42abc862bdf/go.mod h1:kCpvhBR+vGqsXUoMGDMl/oDsrzpZ+c8cWJ870ZHApmA=
+github.com/xaroth/pbt-engine v0.0.0-20261123143634-7fbf80ec0529 h1:FBOkl8SUvUlvSfni2AB6Oo8kVwtT1GvTIRS21+LLaGA=
+github.com/xaroth/pbt-engine v0.0.0-20261123143634-7fbf80ec0529/go.mod h1:kCpvhBR+vGqsXUoMGDMl/oDsrzpZ+c8cWJ870ZHApmA=
 google.golang.org/protobuf v1.36.12 h1:pJOKDDOyeXErUroCihFAd5LQuwXBSpVnKGrj5o/fwxc=
 google.golang.org/protobuf v1.36.12/go.mod h1:HTf+CrKn2C3g5S8VImy6tdcUvCska2kB7j23XfzDpco=
