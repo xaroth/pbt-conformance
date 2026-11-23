@@ -299,24 +299,18 @@
     "id": "tree-granted-skills-not-simulated",
     "kind": "pending",
     "league": "3.29",
-    "reason": "The tree-only build holds the skills its allocated passives grant, as PoB's does: Spectral Tiger (35011), Assassin's Mark (48239), Sentinel of Radiance (4494), Elemental Relic (19641), Primal Aegis (4917), Embrace Madness (30061), Summon Abyssal Constructs (16287). None has a hit the sheet gives, so the simulation warns that it leaves them out; minions and Primal Aegis are not simulated",
-    "evidence": "pbt-engine's Check adds a group for each skill an allocated passive grants. The tree-only files hold no skills, and the warning counts exactly those groups: 1 on most builds, 2 on 81 and 85 (4494, 19641), 3 on 88 (with 35011). The tree-only sheet values do not change",
+    "reason": "The tree-only build holds the skills its allocated passives grant, as PoB's does: Spectral Tiger (35011), Assassin's Mark (48239), Sentinel of Radiance (4494), Elemental Relic (19641), Primal Aegis (4917), Embrace Madness (30061), Summon Abyssal Constructs (16287). The sheet gives the hit of none of these groups, so the simulation warns that it leaves them out; minions with no hit the sheet gives and Primal Aegis are not simulated. A Spectral Tiger that is the main skill is not among them: its minion's hit is given",
+    "evidence": "pbt-engine's Check adds a group for each skill an allocated passive grants. The tree-only files hold no skills, and the warning counts exactly the groups whose skill and minion have no hit the sheet gives: 1 on most builds, 2 on 81 and 85 (4494, 19641), 3 on 88 (4494, 19641 and the Tiger 35011, which is not its main skill). Builds 46, 53, 55, 59, 68 and 89 have the Tiger alone, as their main skill, and no longer warn. The tree-only sheet values do not change",
     "cases": [
       {"build": "100-witch-L100-elementalist-glacial-cascade-of-the-fissure", "output": "warning:skills-not-simulated", "subject": "skills"},
-      {"build": "46-shadow-L100-assassin-storm-burst-of-repulsion", "output": "warning:skills-not-simulated", "subject": "skills"},
-      {"build": "53-templar-L100-hierophant-kinetic-blast-of-clustering", "output": "warning:skills-not-simulated", "subject": "skills"},
-      {"build": "55-duelist-L100-champion-void-shockwave", "output": "warning:skills-not-simulated", "subject": "skills"},
-      {"build": "59-templar-L100-hierophant-frenzy", "output": "warning:skills-not-simulated", "subject": "skills"},
       {"build": "61-shadow-L100-assassin-lancing-steel-of-spraying", "output": "warning:skills-not-simulated", "subject": "skills"},
       {"build": "62-shadow-L100-assassin-cyclone", "output": "warning:skills-not-simulated", "subject": "skills"},
       {"build": "64-shadow-L97-assassin-rain-of-arrows-of-saturation", "output": "warning:skills-not-simulated", "subject": "skills"},
       {"build": "66-duelist-L100-champion-flicker-strike", "output": "warning:skills-not-simulated", "subject": "skills"},
-      {"build": "68-duelist-L100-gladiator-cyclone-of-tumult", "output": "warning:skills-not-simulated", "subject": "skills"},
       {"build": "80-witch-L100-occultist-summon-holy-relic-of-conviction", "output": "warning:skills-not-simulated", "subject": "skills"},
       {"build": "81-templar-L100-guardian-absolution", "output": "warning:skills-not-simulated", "subject": "skills"},
       {"build": "85-templar-L100-guardian-summon-raging-spirit", "output": "warning:skills-not-simulated", "subject": "skills"},
-      {"build": "88-templar-L100-guardian-dominating-blow-of-inspiring", "output": "warning:skills-not-simulated", "subject": "skills"},
-      {"build": "89-duelist-L99-gladiator-dominating-blow-of-inspiring", "output": "warning:skills-not-simulated", "subject": "skills"}
+      {"build": "88-templar-L100-guardian-dominating-blow-of-inspiring", "output": "warning:skills-not-simulated", "subject": "skills"}
     ]
   },
   {
