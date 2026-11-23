@@ -326,7 +326,7 @@
     "reason": "Death Aura, granted by the body armour (Death's Oath) and the main skill, now resolves with the armour's supports; the engine's damage over time is under a third of PoB's",
     "evidence": "Skill layer: the engine's main skill is DeathAura level 20 with Less Duration, Lifetap, Void Manipulation, Efficacy and Swift Affliction, and Concentrated Effect, as PoB lists them. Not investigated further",
     "cases": [
-      {"build": "71-witch-L100-occultist-death-aura", "output": "skill.dot_dps", "ours": 36871.83359999999, "pob": 120867.30980352}
+      {"build": "71-witch-L100-occultist-death-aura", "output": "skill.dot_dps", "ours": 49408.25702399999, "pob": 120867.30980352}
     ]
   },
   {
@@ -564,13 +564,13 @@
     "id": "spell-hit-arcane-surge",
     "kind": "pending",
     "league": "3.29",
-    "reason": "The Arcane Surge support gives more spell damage while the player has Arcane Surge (support_arcane_surge_spell_damage_+%_final_while_you_have_arcane_surge); the engine gives Arcane Surge's cast speed but leaves the more damage out. Void Manipulation's more chaos damage and Crown of the Inward Eye's mana and energy shield modifiers applying to damage add to the gap",
-    "evidence": "The build has the support linked to its main skill and warns unmodelled-stat for the stat; its hits per second agree with PoB v2.67.2's, which has Arcane Surge on. PoB has Void Manipulation's 34% more chaos damage and 24% and 40% increased damage (Transfiguration of Mind and Soul), which the engine warns unmodelled-stat for",
+    "reason": "The Arcane Surge support gives more spell damage while the player has Arcane Surge (support_arcane_surge_spell_damage_+%_final_while_you_have_arcane_surge); the engine gives Arcane Surge's cast speed but leaves the more damage out. Crown of the Inward Eye's mana and energy shield modifiers applying to damage add to the gap",
+    "evidence": "The build has the support linked to its main skill and warns unmodelled-stat for the stat; its hits per second agree with PoB v2.67.2's, which has Arcane Surge on. PoB has 24% and 40% increased damage (Transfiguration of Mind and Soul), which the engine warns unmodelled-stat for; Void Manipulation's 34% more chaos damage is in both",
     "cases": [
-      {"build": "47-witch-L100-occultist-essence-drain", "output": "skill.average_hit", "ours": 24470.949999999997, "pob": 61959.6909},
-      {"build": "47-witch-L100-occultist-essence-drain", "output": "skill.chaos_maximum", "ours": 29189.999999999996, "pob": 73908},
-      {"build": "47-witch-L100-occultist-essence-drain", "output": "skill.chaos_minimum", "ours": 19460, "pob": 49272.3},
-      {"build": "47-witch-L100-occultist-essence-drain", "output": "skill.hit_dps", "ours": 79355.795, "pob": 200926.42620429}
+      {"build": "47-witch-L100-occultist-essence-drain", "output": "skill.average_hit", "ours": 32791.073, "pob": 61959.6909},
+      {"build": "47-witch-L100-occultist-essence-drain", "output": "skill.chaos_maximum", "ours": 39114.6, "pob": 73908},
+      {"build": "47-witch-L100-occultist-essence-drain", "output": "skill.chaos_minimum", "ours": 26076.4, "pob": 49272.3},
+      {"build": "47-witch-L100-occultist-essence-drain", "output": "skill.hit_dps", "ours": 106336.76529999998, "pob": 200926.42620429}
     ]
   },
   {
@@ -880,7 +880,7 @@
     "id": "attack-hit-unmodelled-stats",
     "kind": "pending",
     "league": "3.29",
-    "reason": "The main attack resolves to PoB's gem level, quality and supports, so the hit differs for another reason, not traced per build yet; the build's simulation leaves out damage, critical strike, speed or cost stats of its gear, tree or skill as unmodelled-stat, and causes in the other attack-hit entries may add to it",
+    "reason": "The main attack resolves to PoB's gem level, quality and supports, so the hit differs for another reason, not traced per build yet; the build's simulation leaves out damage, critical strike, speed or cost stats of its gear, tree or skill as unmodelled-stat, and causes in the other attack-hit entries may add to it. On 19 and 20 the average hit is above PoB's while the hit per damage type is below it: their tree has Perfect Agony (node 23407, keystone_ailment_crit, warned unmodelled-stat), whose \"Critical Strikes do not deal extra Damage\" PoB applies (NoCritMultiplier, critical strike multiplier 1), while the engine applies the full critical strike multiplier to critical strikes",
     "evidence": "skill_level and skill_quality agree with pob.json's skill-layer mainSkill, and so do the supports it records with their levels and qualities, apart from supports an item grants for a line PoB reads as a modifier of its socketed gems instead (\"Socketed Gems deal 30% more Elemental Damage\", \"Socketed Spells have +3% to Critical Strike Chance\"); each build's skill-layer simulation warns unmodelled-stat for at least four damage, critical strike, speed or cost stats from its items, tree or skill; on the builds attacking with both hands (17 to 20) each hand's hit per damage type is PoB's divided by the same factor on both hands within 1%, so what is missing applies to both; on 53 PoB's smallest and largest hit of each type are within 7% of each other on both hands and the engine's nearly 2 to 1, a flat damage the engine leaves out",
     "cases": [
       {"build": "09-duelist-L80-slayer-resolute-technique", "output": "skill.average_hit", "ours": 99819.49804294753, "pob": 143224.04403183},
@@ -917,43 +917,35 @@
       {"build": "15-ranger-L90-deadeye-ghost-dance", "output": "skill.physical_maximum", "ours": 82.75, "pob": 114.625},
       {"build": "15-ranger-L90-deadeye-ghost-dance", "output": "skill.physical_minimum", "ours": 20.625, "pob": 28.625},
       {"build": "17-shadow-L35-assassin-chaos-inoculation", "output": "skill.critical_strike_chance", "ours": 15.376499999999998, "pob": 30.753},
-      {"build": "17-shadow-L35-assassin-chaos-inoculation", "output": "skill.hit_dps", "ours": 283.58521798436453, "pob": 426.69067687738},
-      {"build": "17-shadow-L35-assassin-chaos-inoculation", "output": "skill.main_hand_average_hit", "ours": 223.32925974499997, "pob": 335.99639382},
-      {"build": "17-shadow-L35-assassin-chaos-inoculation", "output": "skill.main_hand_chaos_maximum", "ours": 227.49999999999997, "pob": 284.9},
-      {"build": "17-shadow-L35-assassin-chaos-inoculation", "output": "skill.main_hand_chaos_minimum", "ours": 103.6, "pob": 129.5},
-      {"build": "17-shadow-L35-assassin-chaos-inoculation", "output": "skill.off_hand_average_hit", "ours": 193.093157435, "pob": 290.56504798},
-      {"build": "17-shadow-L35-assassin-chaos-inoculation", "output": "skill.off_hand_chaos_maximum", "ours": 194.6, "pob": 243.6},
-      {"build": "17-shadow-L35-assassin-chaos-inoculation", "output": "skill.off_hand_chaos_minimum", "ours": 88.9, "pob": 112},
+      {"build": "17-shadow-L35-assassin-chaos-inoculation", "output": "skill.hit_dps", "ours": 348.6223237617704, "pob": 426.69067687738},
+      {"build": "17-shadow-L35-assassin-chaos-inoculation", "output": "skill.main_hand_average_hit", "ours": 274.5216849975, "pob": 335.99639382},
+      {"build": "17-shadow-L35-assassin-chaos-inoculation", "output": "skill.off_hand_average_hit", "ours": 237.40256752749997, "pob": 290.56504798},
       {"build": "18-shadow-L60-assassin-chaos-inoculation", "output": "skill.critical_strike_chance", "ours": 35.226, "pob": 75.1032},
-      {"build": "18-shadow-L60-assassin-chaos-inoculation", "output": "skill.hit_dps", "ours": 2852.8315269337795, "pob": 5634.9749325843},
-      {"build": "18-shadow-L60-assassin-chaos-inoculation", "output": "skill.main_hand_average_hit", "ours": 1314.6942325999999, "pob": 2597.618401472},
-      {"build": "18-shadow-L60-assassin-chaos-inoculation", "output": "skill.main_hand_chaos_maximum", "ours": 948.4999999999999, "pob": 1241.8},
-      {"build": "18-shadow-L60-assassin-chaos-inoculation", "output": "skill.main_hand_chaos_minimum", "ours": 503.29999999999995, "pob": 659.4},
-      {"build": "18-shadow-L60-assassin-chaos-inoculation", "output": "skill.off_hand_average_hit", "ours": 1180.93321836, "pob": 2331.799264612},
-      {"build": "18-shadow-L60-assassin-chaos-inoculation", "output": "skill.off_hand_chaos_maximum", "ours": 844.9, "pob": 1106},
-      {"build": "18-shadow-L60-assassin-chaos-inoculation", "output": "skill.off_hand_chaos_minimum", "ours": 452.9, "pob": 594.3},
+      {"build": "18-shadow-L60-assassin-chaos-inoculation", "output": "skill.hit_dps", "ours": 3679.3609711573154, "pob": 5634.9749325843},
+      {"build": "18-shadow-L60-assassin-chaos-inoculation", "output": "skill.main_hand_average_hit", "ours": 1696.1168201599999, "pob": 2597.618401472},
+      {"build": "18-shadow-L60-assassin-chaos-inoculation", "output": "skill.off_hand_average_hit", "ours": 1522.55002186, "pob": 2331.799264612},
       {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "skill.critical_strike_chance", "ours": 41.87796, "pob": 80},
-      {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "skill.hit_dps", "ours": 1185.834002394998, "pob": 1003.9822978723},
-      {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "skill.main_hand_average_hit", "ours": 797.6485203679999, "pob": 649.5},
-      {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "skill.main_hand_chaos_maximum", "ours": 429.79999999999995, "pob": 755.3},
-      {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "skill.main_hand_chaos_minimum", "ours": 214.2, "pob": 376.6},
+      {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "skill.hit_dps", "ours": 1521.9408209323574, "pob": 1003.9822978723},
+      {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "skill.main_hand_average_hit", "ours": 1024.2038623600001, "pob": 649.5},
+      {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "skill.main_hand_chaos_maximum", "ours": 576.0999999999999, "pob": 755.3},
+      {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "skill.main_hand_chaos_minimum", "ours": 287, "pob": 376.6},
       {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "skill.main_hand_physical_maximum", "ours": 85, "pob": 111.5},
       {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "skill.main_hand_physical_minimum", "ours": 42.400000000000006, "pob": 55.6},
-      {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "skill.off_hand_average_hit", "ours": 253.6756392, "pob": 240.6},
-      {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "skill.off_hand_chaos_maximum", "ours": 181.3, "pob": 317.8},
-      {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "skill.off_hand_chaos_minimum", "ours": 57.4, "pob": 101.5},
+      {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "skill.off_hand_average_hit", "ours": 325.1023232, "pob": 240.6},
+      {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "skill.off_hand_chaos_maximum", "ours": 242.2, "pob": 317.8},
+      {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "skill.off_hand_chaos_minimum", "ours": 77, "pob": 101.5},
       {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "skill.off_hand_physical_maximum", "ours": 35.800000000000004, "pob": 46.9},
       {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "skill.off_hand_physical_minimum", "ours": 11.4, "pob": 15},
       {"build": "20-shadow-L90-assassin-chaos-inoculation", "output": "skill.critical_strike_chance", "ours": 50.176475999999994, "pob": 84},
-      {"build": "20-shadow-L90-assassin-chaos-inoculation", "output": "skill.hit_dps", "ours": 1698.2491778510114, "pob": 1275.249696},
-      {"build": "20-shadow-L90-assassin-chaos-inoculation", "output": "skill.main_hand_average_hit", "ours": 1028.9640183068798, "pob": 737.75},
-      {"build": "20-shadow-L90-assassin-chaos-inoculation", "output": "skill.main_hand_chaos_maximum", "ours": 487.9, "pob": 857.5},
-      {"build": "20-shadow-L90-assassin-chaos-inoculation", "output": "skill.main_hand_chaos_minimum", "ours": 242.89999999999998, "pob": 427.7},
+      {"build": "20-shadow-L90-assassin-chaos-inoculation", "output": "skill.hit_dps", "ours": 2179.2250505607103, "pob": 1275.249696},
+      {"build": "20-shadow-L90-assassin-chaos-inoculation", "output": "skill.main_hand_average_hit", "ours": 1320.06720786784, "pob": 737.75},
+      {"build": "20-shadow-L90-assassin-chaos-inoculation", "output": "skill.main_hand_chaos_maximum", "ours": 653.0999999999999, "pob": 857.5},
+      {"build": "20-shadow-L90-assassin-chaos-inoculation", "output": "skill.main_hand_chaos_minimum", "ours": 325.5, "pob": 427.7},
       {"build": "20-shadow-L90-assassin-chaos-inoculation", "output": "skill.main_hand_physical_maximum", "ours": 96.80000000000001, "pob": 127},
       {"build": "20-shadow-L90-assassin-chaos-inoculation", "output": "skill.main_hand_physical_minimum", "ours": 48.3, "pob": 63.3},
-      {"build": "20-shadow-L90-assassin-chaos-inoculation", "output": "skill.off_hand_average_hit", "ours": 348.5457784639999, "pob": 296.65},
-      {"build": "20-shadow-L90-assassin-chaos-inoculation", "output": "skill.off_hand_chaos_maximum", "ours": 218.39999999999998, "pob": 383.6},
-      {"build": "20-shadow-L90-assassin-chaos-inoculation", "output": "skill.off_hand_chaos_minimum", "ours": 75.6, "pob": 133},
+      {"build": "20-shadow-L90-assassin-chaos-inoculation", "output": "skill.off_hand_average_hit", "ours": 447.57908083199993, "pob": 296.65},
+      {"build": "20-shadow-L90-assassin-chaos-inoculation", "output": "skill.off_hand_chaos_maximum", "ours": 292.59999999999997, "pob": 383.6},
+      {"build": "20-shadow-L90-assassin-chaos-inoculation", "output": "skill.off_hand_chaos_minimum", "ours": 101.5, "pob": 133},
       {"build": "20-shadow-L90-assassin-chaos-inoculation", "output": "skill.off_hand_physical_maximum", "ours": 43.3, "pob": 56.9},
       {"build": "20-shadow-L90-assassin-chaos-inoculation", "output": "skill.off_hand_physical_minimum", "ours": 15, "pob": 19.8},
       {"build": "32-scion-L35-ascendant-chaos-inoculation", "output": "skill.average_hit", "ours": 184.38537499999998, "pob": 220.2733125},
@@ -1167,10 +1159,10 @@
     "reason": "An attack with both hands has one average hit in the engine: the hands' average when the skill alternates them, their sum when it hits with both at once. PoB gives the average hit per hand only (MainHand.AverageHit, OffHand.AverageHit), so there is nothing to compare it with; the hands' values are compared as main_hand_average_hit and off_hand_average_hit",
     "evidence": "PoB's CalcOffence.lua combines the hands' average damage and DPS (combineStat DPS) but not AverageHit, which it computes per hand only; pob.json holds no AverageHit for these builds",
     "cases": [
-      {"build": "17-shadow-L35-assassin-chaos-inoculation", "output": "skill.average_hit", "ours": 416.42241717999997},
-      {"build": "18-shadow-L60-assassin-chaos-inoculation", "output": "skill.average_hit", "ours": 2495.62745096},
-      {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "skill.average_hit", "ours": 1051.324159568},
-      {"build": "20-shadow-L90-assassin-chaos-inoculation", "output": "skill.average_hit", "ours": 1377.5097967708798},
+      {"build": "17-shadow-L35-assassin-chaos-inoculation", "output": "skill.average_hit", "ours": 511.924252525},
+      {"build": "18-shadow-L60-assassin-chaos-inoculation", "output": "skill.average_hit", "ours": 3218.66684202},
+      {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "skill.average_hit", "ours": 1349.3061855600001},
+      {"build": "20-shadow-L90-assassin-chaos-inoculation", "output": "skill.average_hit", "ours": 1767.6462886998397},
       {"build": "53-templar-L100-hierophant-kinetic-blast-of-clustering", "output": "skill.average_hit", "ours": 2804.954623888}
     ]
   },
@@ -1226,7 +1218,7 @@
     "id": "attack-hit-unmodelled-stats-3.28",
     "kind": "pending",
     "league": "3.28",
-    "reason": "The attack's hit differs for another reason than its conversion, not traced per build yet; the build's skill-layer simulation leaves out damage or speed stats of its gear, tree or skill as unmodelled-stat, and causes in the other 3.28 attack-hit entries may add to it; on 18 to 20 the chance to hit differs too while each hand's accuracy rating is PoB's: their simulation leaves out accuracy_rating_+%_final_vs_unique_enemies_from_mastery, which PoB applies to the accuracy rating against the enemy only (CalcOffence.lua AccuracyVsEnemy)",
+    "reason": "The attack's hit differs for another reason than its conversion, not traced per build yet; the build's skill-layer simulation leaves out damage or speed stats of its gear, tree or skill as unmodelled-stat, and causes in the other 3.28 attack-hit entries may add to it; on 18 to 20 the chance to hit differs too while each hand's accuracy rating is PoB's: their simulation leaves out accuracy_rating_+%_final_vs_unique_enemies_from_mastery, which PoB applies to the accuracy rating against the enemy only (CalcOffence.lua AccuracyVsEnemy). On 19 and 20 the average hit is above PoB's while the hit per damage type is below it: their tree has Perfect Agony (node 23407, keystone_ailment_crit, warned unmodelled-stat), whose \"Critical Strikes do not deal extra Damage\" PoB applies (NoCritMultiplier, critical strike multiplier 1), while the engine applies the full critical strike multiplier to critical strikes",
     "evidence": "Each build's skill-layer simulation warns unmodelled-stat for damage or speed stats: Mirage Archer's more damage and attack speed on the Deadeye builds, Ancestral Call's less damage on the Ascendant builds and Multistrike's more damage on 33; on the builds attacking with both hands (17 to 20, 34, 35) each hand's hit per damage type is PoB's divided by the same factor on both hands within 1%",
     "cases": [
       {"build": "13-ranger-L60-deadeye-ghost-dance", "output": "skill.average_hit", "ours": 1738.8130655555, "pob": 2150.7609950915},
@@ -1250,46 +1242,38 @@
       {"build": "15-ranger-L90-deadeye-ghost-dance", "output": "skill.physical_maximum", "ours": 178.53750000000002, "pob": 255.75},
       {"build": "15-ranger-L90-deadeye-ghost-dance", "output": "skill.physical_minimum", "ours": 76.05000000000001, "pob": 108.9375},
       {"build": "17-shadow-L35-assassin-chaos-inoculation", "output": "skill.critical_strike_chance", "ours": 13.1648, "pob": 32.6128},
-      {"build": "17-shadow-L35-assassin-chaos-inoculation", "output": "skill.hit_dps", "ours": 277.6136515415677, "pob": 492.82149925376},
-      {"build": "17-shadow-L35-assassin-chaos-inoculation", "output": "skill.main_hand_average_hit", "ours": 223.466928384, "pob": 397.308897552},
-      {"build": "17-shadow-L35-assassin-chaos-inoculation", "output": "skill.main_hand_chaos_maximum", "ours": 242.2, "pob": 303.1},
-      {"build": "17-shadow-L35-assassin-chaos-inoculation", "output": "skill.main_hand_chaos_minimum", "ours": 109.9, "pob": 137.9},
-      {"build": "17-shadow-L35-assassin-chaos-inoculation", "output": "skill.off_hand_average_hit", "ours": 193.45157232, "pob": 342.807445584},
-      {"build": "17-shadow-L35-assassin-chaos-inoculation", "output": "skill.off_hand_chaos_maximum", "ours": 206.5, "pob": 259},
-      {"build": "17-shadow-L35-assassin-chaos-inoculation", "output": "skill.off_hand_chaos_minimum", "ours": 95.19999999999999, "pob": 118.3},
+      {"build": "17-shadow-L35-assassin-chaos-inoculation", "output": "skill.hit_dps", "ours": 340.9614746496103, "pob": 492.82149925376},
+      {"build": "17-shadow-L35-assassin-chaos-inoculation", "output": "skill.main_hand_average_hit", "ours": 274.880515168, "pob": 397.308897552},
+      {"build": "17-shadow-L35-assassin-chaos-inoculation", "output": "skill.off_hand_average_hit", "ours": 237.173362656, "pob": 342.807445584},
       {"build": "18-shadow-L60-assassin-chaos-inoculation", "output": "skill.critical_strike_chance", "ours": 36.6165, "pob": 88},
       {"build": "18-shadow-L60-assassin-chaos-inoculation", "output": "skill.hit_chance", "ours": 79, "pob": 88},
-      {"build": "18-shadow-L60-assassin-chaos-inoculation", "output": "skill.hit_dps", "ours": 3440.056865100266, "pob": 10058.447293439},
-      {"build": "18-shadow-L60-assassin-chaos-inoculation", "output": "skill.main_hand_average_hit", "ours": 1397.8591793449998, "pob": 3670.245},
-      {"build": "18-shadow-L60-assassin-chaos-inoculation", "output": "skill.main_hand_chaos_maximum", "ours": 991.9, "pob": 1299.9},
-      {"build": "18-shadow-L60-assassin-chaos-inoculation", "output": "skill.main_hand_chaos_minimum", "ours": 530.6, "pob": 694.4},
-      {"build": "18-shadow-L60-assassin-chaos-inoculation", "output": "skill.off_hand_average_hit", "ours": 1253.9073702299997, "pob": 3290.3286},
-      {"build": "18-shadow-L60-assassin-chaos-inoculation", "output": "skill.off_hand_chaos_maximum", "ours": 882, "pob": 1155.7},
-      {"build": "18-shadow-L60-assassin-chaos-inoculation", "output": "skill.off_hand_chaos_minimum", "ours": 477.4, "pob": 625.8},
+      {"build": "18-shadow-L60-assassin-chaos-inoculation", "output": "skill.hit_dps", "ours": 4440.241230594861, "pob": 10058.447293439},
+      {"build": "18-shadow-L60-assassin-chaos-inoculation", "output": "skill.main_hand_average_hit", "ours": 1804.7882598750002, "pob": 3670.245},
+      {"build": "18-shadow-L60-assassin-chaos-inoculation", "output": "skill.off_hand_average_hit", "ours": 1617.9700342649999, "pob": 3290.3286},
       {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "skill.critical_strike_chance", "ours": 45.558339000000004, "pob": 91},
       {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "skill.hit_chance", "ours": 82, "pob": 91},
-      {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "skill.hit_dps", "ours": 1405.9400185212423, "pob": 1245.4361068085},
-      {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "skill.main_hand_average_hit", "ours": 840.445823095, "pob": 644},
-      {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "skill.main_hand_chaos_maximum", "ours": 433.29999999999995, "pob": 746.9},
-      {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "skill.main_hand_chaos_minimum", "ours": 215.6, "pob": 372.4},
+      {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "skill.hit_dps", "ours": 1805.0271940446817, "pob": 1245.4361068085},
+      {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "skill.main_hand_average_hit", "ours": 1078.797339484, "pob": 644},
+      {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "skill.main_hand_chaos_maximum", "ours": 580.3, "pob": 746.9},
+      {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "skill.main_hand_chaos_minimum", "ours": 289.09999999999997, "pob": 372.4},
       {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "skill.main_hand_physical_maximum", "ours": 85.80000000000001, "pob": 112.6},
       {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "skill.main_hand_physical_minimum", "ours": 42.8, "pob": 56.1},
-      {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "skill.off_hand_average_hit", "ours": 265.06497234, "pob": 238.45},
-      {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "skill.off_hand_chaos_maximum", "ours": 182, "pob": 314.3},
-      {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "skill.off_hand_chaos_minimum", "ours": 58.099999999999994, "pob": 100.1},
+      {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "skill.off_hand_average_hit", "ours": 340.52142431999994, "pob": 238.45},
+      {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "skill.off_hand_chaos_maximum", "ours": 244.3, "pob": 314.3},
+      {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "skill.off_hand_chaos_minimum", "ours": 77.69999999999999, "pob": 100.1},
       {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "skill.off_hand_physical_maximum", "ours": 36.1, "pob": 47.4},
       {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "skill.off_hand_physical_minimum", "ours": 11.5, "pob": 15.1},
       {"build": "20-shadow-L90-assassin-chaos-inoculation", "output": "skill.critical_strike_chance", "ours": 57.280314, "pob": 98},
       {"build": "20-shadow-L90-assassin-chaos-inoculation", "output": "skill.hit_chance", "ours": 91, "pob": 98},
-      {"build": "20-shadow-L90-assassin-chaos-inoculation", "output": "skill.hit_dps", "ours": 2270.5150521633796, "pob": 1677.5584248889},
-      {"build": "20-shadow-L90-assassin-chaos-inoculation", "output": "skill.main_hand_average_hit", "ours": 1158.87622942704, "pob": 757.1},
-      {"build": "20-shadow-L90-assassin-chaos-inoculation", "output": "skill.main_hand_chaos_maximum", "ours": 507.49999999999994, "pob": 877.1},
-      {"build": "20-shadow-L90-assassin-chaos-inoculation", "output": "skill.main_hand_chaos_minimum", "ours": 252.7, "pob": 437.5},
+      {"build": "20-shadow-L90-assassin-chaos-inoculation", "output": "skill.hit_dps", "ours": 2912.5359989505337, "pob": 1677.5584248889},
+      {"build": "20-shadow-L90-assassin-chaos-inoculation", "output": "skill.main_hand_average_hit", "ours": 1486.9894926748796, "pob": 757.1},
+      {"build": "20-shadow-L90-assassin-chaos-inoculation", "output": "skill.main_hand_chaos_maximum", "ours": 679.7, "pob": 877.1},
+      {"build": "20-shadow-L90-assassin-chaos-inoculation", "output": "skill.main_hand_chaos_minimum", "ours": 338.79999999999995, "pob": 437.5},
       {"build": "20-shadow-L90-assassin-chaos-inoculation", "output": "skill.main_hand_physical_maximum", "ours": 101.5, "pob": 133.2},
       {"build": "20-shadow-L90-assassin-chaos-inoculation", "output": "skill.main_hand_physical_minimum", "ours": 50.6, "pob": 66.4},
-      {"build": "20-shadow-L90-assassin-chaos-inoculation", "output": "skill.off_hand_average_hit", "ours": 389.36173065599996, "pob": 305.1},
-      {"build": "20-shadow-L90-assassin-chaos-inoculation", "output": "skill.off_hand_chaos_maximum", "ours": 227.49999999999997, "pob": 393.4},
-      {"build": "20-shadow-L90-assassin-chaos-inoculation", "output": "skill.off_hand_chaos_minimum", "ours": 79.1, "pob": 136.5},
+      {"build": "20-shadow-L90-assassin-chaos-inoculation", "output": "skill.off_hand_average_hit", "ours": 499.035127328, "pob": 305.1},
+      {"build": "20-shadow-L90-assassin-chaos-inoculation", "output": "skill.off_hand_chaos_maximum", "ours": 304.5, "pob": 393.4},
+      {"build": "20-shadow-L90-assassin-chaos-inoculation", "output": "skill.off_hand_chaos_minimum", "ours": 105.69999999999999, "pob": 136.5},
       {"build": "20-shadow-L90-assassin-chaos-inoculation", "output": "skill.off_hand_physical_maximum", "ours": 45.400000000000006, "pob": 59.6},
       {"build": "20-shadow-L90-assassin-chaos-inoculation", "output": "skill.off_hand_physical_minimum", "ours": 15.8, "pob": 20.7},
       {"build": "32-scion-L35-ascendant-chaos-inoculation", "output": "skill.average_hit", "ours": 126.582075, "pob": 112.466625},
@@ -1395,10 +1379,10 @@
     "reason": "An attack with both hands has one average hit in the engine: the hands' average when the skill alternates them, their sum when it hits with both at once. PoB gives the average hit per hand only (MainHand.AverageHit, OffHand.AverageHit), so there is nothing to compare it with; the hands' values are compared as main_hand_average_hit and off_hand_average_hit",
     "evidence": "PoB's CalcOffence.lua combines the hands' average damage and DPS (combineStat DPS) but not AverageHit, which it computes per hand only; pob.json holds no AverageHit for these builds",
     "cases": [
-      {"build": "17-shadow-L35-assassin-chaos-inoculation", "output": "skill.average_hit", "ours": 416.918500704},
-      {"build": "18-shadow-L60-assassin-chaos-inoculation", "output": "skill.average_hit", "ours": 2651.7665495749998},
-      {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "skill.average_hit", "ours": 1105.510795435},
-      {"build": "20-shadow-L90-assassin-chaos-inoculation", "output": "skill.average_hit", "ours": 1548.23796008304},
+      {"build": "17-shadow-L35-assassin-chaos-inoculation", "output": "skill.average_hit", "ours": 512.053877824},
+      {"build": "18-shadow-L60-assassin-chaos-inoculation", "output": "skill.average_hit", "ours": 3422.75829414},
+      {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "skill.average_hit", "ours": 1419.318763804},
+      {"build": "20-shadow-L90-assassin-chaos-inoculation", "output": "skill.average_hit", "ours": 1986.0246200028796},
       {"build": "34-scion-L80-ascendant-chaos-inoculation", "output": "skill.average_hit", "ours": 495.175},
       {"build": "35-scion-L90-ascendant-chaos-inoculation", "output": "skill.average_hit", "ours": 687.2249999999999}
     ]
@@ -1435,7 +1419,7 @@
     "reason": "PoB's damage over time for Essence Drain adds more than one instance of the skill's own damage over time; the engine gives one. Its poison, which the total adds too, starts from a hit that differs (poison-hit-differs)",
     "evidence": "PoB's TotalDotDPS sums the skill's damage over time with its ailments (CalcOffence.lua), and its poison (TotalPoisonDPS) is less than the difference",
     "cases": [
-      {"build": "47-witch-L100-occultist-essence-drain", "output": "skill.dot_dps", "ours": 249990.86994323856, "pob": 793463.22043517}
+      {"build": "47-witch-L100-occultist-essence-drain", "output": "skill.dot_dps", "ours": 334988.6009477216, "pob": 793463.22043517}
     ]
   },
   {
@@ -1460,7 +1444,7 @@
     "reason": "Essence Drain's poison starts from its hit, whose chaos damage and rate differ from PoB's for the causes triaged on its hit outputs (spell-hit-unmodelled-stats)",
     "evidence": "The build's skill-layer hit outputs differ from PoB's and are triaged",
     "cases": [
-      {"build": "47-witch-L100-occultist-essence-drain", "output": "skill.poison_dps", "ours": 59350.732510524, "pob": 35092.6884}
+      {"build": "47-witch-L100-occultist-essence-drain", "output": "skill.poison_dps", "ours": 79530.81678788402, "pob": 35092.6884}
     ]
   },
   {
@@ -2476,7 +2460,7 @@
     "reason": "Raging Spirit's monster mods, which the dataset lacks: its fire conversion, added physical damage and 40% more attack speed; and minion damage that holds if you have used a minion skill recently, which the engine leaves out",
     "evidence": "The minion's chance to hit matches PoB for each case (100). The supports linked to the gem, the character's minion stats and auras reach the minion: Raise Zombie with Minion Damage and Melee Physical Damage, Raise Zombie with Anger, and Absolution alone each equal PoB's average hit and hit damage per second (pbt-engine TestMinionHitReached)",
     "cases": [
-      {"build": "84-witch-L100-necromancer-summon-raging-spirit", "output": "minion.average_hit", "ours": 14994.057690918735, "pob": 32637.0688749},
+      {"build": "84-witch-L100-necromancer-summon-raging-spirit", "output": "minion.average_hit", "ours": 18456.409450918734, "pob": 32637.0688749},
       {"build": "85-templar-L100-guardian-summon-raging-spirit", "output": "minion.average_hit", "ours": 8093.03145, "pob": 14060.776527}
     ]
   },
@@ -2507,11 +2491,11 @@
     "id": "minion-animate-weapon-ranged-arms",
     "kind": "pending",
     "league": "3.29",
-    "reason": "Animate Weapon of Ranged Arms attacks with its gear's weapon (444 to 602 on 91, as PoB), but its damage differs: the gem's added physical damage that PoB passes to the minion (statMap MinionModifier) and the conversion and enemy effects of its supports (Withering Touch, Void Manipulation, Added Chaos Damage) do not all reach the minion as PoB has them",
-    "evidence": "PoB's breakdown on the skill layer. 91: PoB physical 4140 to 5719 at x0.46 and chaos 6422 to 9448; the engine 6744 to 9144 physical and 8443 to 12425 chaos before mitigation. 93: PoB converts all physical damage to chaos (\"100% to Chaos\", hit 15639 to 22384, chaos only); the engine keeps 4322 to 5846 physical beside 3690 to 5530 chaos. Weapon, hits per second and critical strike chance equal PoB's on both",
+    "reason": "Animate Weapon of Ranged Arms' minion gets the gem's added damage and its supports' conversion and more damage as PoB has them; the rest of the gap is minion stats on the character the engine leaves out: minion damage that holds if you have used a minion skill recently (both builds), and on 93 Unholy Might's conversion of all physical damage to chaos (Necromancer's Unnatural Strength) and Gravepact's 8% chance for minions to deal double damage",
+    "evidence": "PoB's breakdown on the skill layer. 91: base damage (582 to 804 physical, 420 to 633 chaos), more multipliers (x1.97) and 29% of physical gained as chaos equal the engine's; PoB's increased damage is 20% higher, from Hollow Prism's \"Minions deal 20% increased Damage if you've used a Minion Skill Recently\", and with it the engine's hit and armour mitigation (x0.462) equal PoB's. 93: base damage (611 to 844 physical, 451 to 676 chaos) and the more multipliers, Void Manipulation's x1.35 on chaos with them, equal the engine's; PoB converts 100% of physical damage to chaos (source Unholy Might, from node 65153), adds 183% increased damage from the used-a-minion-skill-recently lines on its abyss jewels and Enduring Bond, and x1.08 from Gravepact's double damage. Weapon, hits per second and critical strike chance equal PoB's on both",
     "cases": [
-      {"build": "91-scion-L100-luminary-animate-weapon-of-ranged-arms", "output": "minion.average_hit", "ours": 10667.090194994185, "pob": 13193.853081327},
-      {"build": "93-witch-L99-necromancer-animate-weapon-of-ranged-arms", "output": "minion.average_hit", "ours": 4487.744008307405, "pob": 19407.8999835}
+      {"build": "91-scion-L100-luminary-animate-weapon-of-ranged-arms", "output": "minion.average_hit", "ours": 12790.023949480152, "pob": 13193.853081327},
+      {"build": "93-witch-L99-necromancer-animate-weapon-of-ranged-arms", "output": "minion.average_hit", "ours": 8600.6864787646, "pob": 19407.8999835}
     ]
   },
   {
@@ -2549,10 +2533,10 @@
     "reason": "Full DPS leaves out the poison of Viper Strike of the Mamba, the counted skill: an attack with both hands, whose poison the engine does not give per skill, so ours is the skill's hit DPS alone, which differs as triaged under the attack-hit entries",
     "evidence": "PoB's FullDPS on these builds equals the skill's CombinedDPS, its TotalDPS plus its TotalPoisonDPS; ours equals our skill.hit_dps for the same build",
     "cases": [
-      {"build": "17-shadow-L35-assassin-chaos-inoculation", "output": "dps.total", "ours": 283.58521798436453, "pob": 2324.0106366174},
-      {"build": "18-shadow-L60-assassin-chaos-inoculation", "output": "dps.total", "ours": 2852.8315269337795, "pob": 25519.680980667},
-      {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "dps.total", "ours": 1185.834002394998, "pob": 72870.950728884},
-      {"build": "20-shadow-L90-assassin-chaos-inoculation", "output": "dps.total", "ours": 1698.2491778510114, "pob": 90999.446040036}
+      {"build": "17-shadow-L35-assassin-chaos-inoculation", "output": "dps.total", "ours": 348.6223237617704, "pob": 2324.0106366174},
+      {"build": "18-shadow-L60-assassin-chaos-inoculation", "output": "dps.total", "ours": 3679.3609711573154, "pob": 25519.680980667},
+      {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "dps.total", "ours": 1521.9408209323574, "pob": 72870.950728884},
+      {"build": "20-shadow-L90-assassin-chaos-inoculation", "output": "dps.total", "ours": 2179.2250505607103, "pob": 90999.446040036}
     ]
   },
   {
@@ -2575,10 +2559,10 @@
     "reason": "Full DPS leaves out the poison of Viper Strike of the Mamba, the counted skill: an attack with both hands, whose poison the engine does not give per skill, so ours is the skill's hit DPS alone, which differs as triaged under the attack-hit entries",
     "evidence": "PoB's FullDPS on these builds equals the skill's CombinedDPS, its TotalDPS plus its TotalPoisonDPS; ours equals our skill.hit_dps for the same build",
     "cases": [
-      {"build": "17-shadow-L35-assassin-chaos-inoculation", "output": "dps.total", "ours": 277.6136515415677, "pob": 1879.5361629852},
-      {"build": "18-shadow-L60-assassin-chaos-inoculation", "output": "dps.total", "ours": 3440.056865100266, "pob": 29365.88844836},
-      {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "dps.total", "ours": 1405.9400185212423, "pob": 68021.831771339},
-      {"build": "20-shadow-L90-assassin-chaos-inoculation", "output": "dps.total", "ours": 2270.5150521633796, "pob": 88765.301317882}
+      {"build": "17-shadow-L35-assassin-chaos-inoculation", "output": "dps.total", "ours": 340.9614746496103, "pob": 1879.5361629852},
+      {"build": "18-shadow-L60-assassin-chaos-inoculation", "output": "dps.total", "ours": 4440.241230594861, "pob": 29365.88844836},
+      {"build": "19-shadow-L80-assassin-chaos-inoculation", "output": "dps.total", "ours": 1805.0271940446817, "pob": 68021.831771339},
+      {"build": "20-shadow-L90-assassin-chaos-inoculation", "output": "dps.total", "ours": 2912.5359989505337, "pob": 88765.301317882}
     ]
   }
 ]
