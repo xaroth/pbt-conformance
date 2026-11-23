@@ -2500,6 +2500,16 @@
     ]
   },
   {
+    "id": "minion-fire-shocks-not-ignites",
+    "kind": "pending",
+    "league": "3.29",
+    "reason": "Crown of Eyes on 87's guardian has the implicit \"Your Fire Damage can Shock but not Ignite\" (unique_fire_damage_shocks), which the engine does not model: the guardian's fire hit from The Grey Wind ignites in the engine and not in PoB",
+    "evidence": "PoB's ModParser.lua reads the line as flags FireCanShock and FireCannotIgnite; the {vestigial} marker on it in the build is display only (Item.lua) and the line applies. The guardian's only fire damage is The Grey Wind's added fire equal to 12% of the player's maximum life; PoB gives the guardian no ignite (0), the engine 23290.605 ignite DPS from that fire hit. The engine's table has no entry for unique_fire_damage_shocks",
+    "cases": [
+      {"build": "87-scion-L100-luminary-animate-guardian-of-smiting", "output": "minion.ignite_dps", "ours": 23290.605, "pob": 0}
+    ]
+  },
+  {
     "id": "minion-item-set-readings",
     "kind": "deviation",
     "league": "3.29",
