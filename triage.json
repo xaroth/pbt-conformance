@@ -323,10 +323,10 @@
     "id": "death-aura-dot",
     "kind": "pending",
     "league": "3.29",
-    "reason": "Death Aura, granted by the body armour (Death's Oath) and the main skill, now resolves with the armour's supports; the engine's damage over time is less than half of PoB's",
-    "evidence": "Skill layer: the engine's main skill is DeathAura level 20 with Less Duration, Lifetap, Void Manipulation, Efficacy and Swift Affliction, as PoB lists them, and Concentrated Effect, which PoB leaves off. Not investigated further",
+    "reason": "Death Aura, granted by the body armour (Death's Oath) and the main skill, now resolves with the armour's supports; the engine's damage over time is under a third of PoB's",
+    "evidence": "Skill layer: the engine's main skill is DeathAura level 20 with Less Duration, Lifetap, Void Manipulation, Efficacy and Swift Affliction, and Concentrated Effect, as PoB lists them. Not investigated further",
     "cases": [
-      {"build": "71-witch-L100-occultist-death-aura", "output": "skill.dot_dps", "ours": 36871.83359999999, "pob": 85716.86409216}
+      {"build": "71-witch-L100-occultist-death-aura", "output": "skill.dot_dps", "ours": 36871.83359999999, "pob": 120867.30980352}
     ]
   },
   {
