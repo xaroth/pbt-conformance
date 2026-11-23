@@ -4,7 +4,7 @@ go 1.27
 
 require (
 	github.com/google/go-cmp v0.7.0
-	github.com/xaroth/pbt-engine v0.0.0-20261123182406-0ca5fbc0dcfa
+	github.com/xaroth/pbt-engine v0.0.0-20261123191726-9439f082873e
 	google.golang.org/protobuf v1.36.12
 )
 
