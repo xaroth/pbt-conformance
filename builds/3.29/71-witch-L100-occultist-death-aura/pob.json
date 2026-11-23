@@ -23,7 +23,7 @@
       "ChaosResistTotal": 52,
       "ColdResist": 75,
       "ColdResistTotal": 106,
-      "CombinedDPS": 381672.76680927,
+      "CombinedDPS": 537431.07469528,
       "CritChance": 0,
       "Dex": 197,
       "EnergyShield": 93,
@@ -58,7 +58,7 @@
       "SpellSuppressionChance": 0,
       "Str": 314,
       "TotalDPS": 0,
-      "TotalDotDPS": 381672.76680927
+      "TotalDotDPS": 537431.07469528
     },
     "mainSkill": {
       "group": 10,
@@ -66,6 +66,11 @@
       "name": "Death Aura",
       "level": 20,
       "supports": [
+        {
+          "id": "SupportConcentratedEffect",
+          "level": 20,
+          "quality": 20
+        },
         {
           "id": "SupportEfficacy",
           "level": 20,
@@ -114,7 +119,7 @@
       "ChaosResistTotal": 52,
       "ColdResist": 75,
       "ColdResistTotal": 91,
-      "CombinedDPS": 85716.86409216,
+      "CombinedDPS": 120867.30980352,
       "CritChance": 0,
       "Dex": 197,
       "EnergyShield": 93,
@@ -149,7 +154,7 @@
       "SpellSuppressionChance": 0,
       "Str": 314,
       "TotalDPS": 0,
-      "TotalDotDPS": 85716.86409216
+      "TotalDotDPS": 120867.30980352
     },
     "mainSkill": {
       "group": 10,
@@ -157,6 +162,11 @@
       "name": "Death Aura",
       "level": 20,
       "supports": [
+        {
+          "id": "SupportConcentratedEffect",
+          "level": 20,
+          "quality": 20
+        },
         {
           "id": "SupportEfficacy",
           "level": 20,
