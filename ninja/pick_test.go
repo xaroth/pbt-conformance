@@ -16,6 +16,7 @@ import (
 
 	"github.com/xaroth/pbt-conformance/compare"
 	"github.com/xaroth/pbt-conformance/ninja"
+	"github.com/xaroth/pbt-conformance/pins"
 	"github.com/xaroth/pbt-conformance/pob"
 	"github.com/xaroth/pbt-conformance/runtime"
 )
@@ -153,6 +154,61 @@ func TestClassifyCached(t *testing.T) {
 	for i, want := range []error{ninja.ErrNoDamage, ninja.ErrNoDamage, ninja.ErrLoad} {
 		if !errors.Is(cands[i+1].Err, want) {
 			t.Errorf("candidate %d: got %v, want %v", i+1, cands[i+1].Err, want)
+		}
+	}
+}
+
+// A candidate classified after others gets the values it has alone: PoB keeps state between
+// the builds it loads. 106 changes how PoB calculates 86's Animate Guardian when both run in
+// one process.
+func TestClassifyCandidatesAreIsolated(t *testing.T) {
+	t.Parallel()
+	cache := os.Getenv("PBTC_CACHE")
+	if cache == "" {
+		t.Skip("PBTC_CACHE not set")
+	}
+	f, err := pins.Read(os.DirFS(".."))
+	if err != nil {
+		t.Fatal(err)
+	}
+	g := f.Games["poe1"]
+	p := runtime.Locate(cache, f.Runtime, g.Leagues["3.29"].PoB)
+	read := func(name, file string) []byte {
+		t.Helper()
+		b, err := os.ReadFile(filepath.Join("..", "builds", "3.29", name, file))
+		if err != nil {
+			t.Fatal(err)
+		}
+		return b
+	}
+	const after = "86-witch-L100-necromancer-animate-guardian-of-smiting"
+	names := []string{"106-shadow-L100-assassin-icicle-mine-of-fanning", after}
+	cands := make([]ninja.Candidate, len(names))
+	for i, name := range names {
+		cands[i] = ninja.Candidate{XML: read(name, pob.FullXML), Char: ninja.Character{Class: "Necromancer"}}
+	}
+	dir := t.TempDir()
+	if err := ninja.Classify(t.Context(), p, dir, cands); err != nil {
+		t.Fatal(err)
+	}
+	var alone pob.Values
+	if err := json.Unmarshal(read(after, pob.ValuesFile), &alone); err != nil {
+		t.Fatal(err)
+	}
+	sum := sha256.Sum256(cands[1].XML)
+	b, err := os.ReadFile(filepath.Join(dir, hex.EncodeToString(sum[:])+".json"))
+	if err != nil {
+		t.Fatal(err)
+	}
+	var got struct {
+		Result pob.Result `json:"result"`
+	}
+	if err := json.Unmarshal(b, &got); err != nil {
+		t.Fatal(err)
+	}
+	for k, want := range alone.Full.Outputs {
+		if got.Result.Outputs[k] != want {
+			t.Errorf("%s: %v, want %v alone", k, got.Result.Outputs[k], want)
 		}
 	}
 }

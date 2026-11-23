@@ -189,21 +189,6 @@ func TestRunMissingFile(t *testing.T) {
 	}
 }
 
-// RunEach gives the error for a file PoB fails on and still runs the others.
-func TestRunEach(t *testing.T) {
-	t.Parallel()
-	res, errs, err := pob.RunEach(context.Background(), paths(t), []string{abs(t, "missing.xml"), abs(t, "marauder-totem.xml")})
-	if err != nil {
-		t.Fatal(err)
-	}
-	if !errors.Is(errs[0], pob.ErrBuild) || errs[1] != nil {
-		t.Errorf("errors %v, want %v then nil", errs, pob.ErrBuild)
-	}
-	if res[1].MainSkill == nil || res[1].MainSkill.Name != "Fireball" {
-		t.Errorf("second result %+v", res[1])
-	}
-}
-
 // TestRunTimelessJewel runs a build with a timeless jewel, whose tables PoB must decompress.
 func TestRunTimelessJewel(t *testing.T) {
 	t.Parallel()

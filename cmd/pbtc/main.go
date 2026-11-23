@@ -175,7 +175,8 @@ func planNinja(ctx context.Context, cache, league string, p runtime.Paths, commi
 		return ninja.Plan{}, nil, fmt.Errorf("pick: %w", err)
 	}
 	fmt.Fprintf(os.Stderr, "pbtc: %d candidates, %d requests made\n", len(cands), api.Client.Requests)
-	dir := filepath.Join(cache, "ninja", "pob", commit+"-"+pob.RunnerID()[:16])
+	// "alone" keeps out results classified several to a process, which differ from a build's own.
+	dir := filepath.Join(cache, "ninja", "pob", commit+"-"+pob.RunnerID()[:16]+"-alone")
 	if err := ninja.Classify(ctx, p, dir, cands); err != nil {
 		return ninja.Plan{}, nil, fmt.Errorf("pick: %w", err)
 	}
